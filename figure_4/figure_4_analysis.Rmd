@@ -1,0 +1,167 @@
+---
+title: "Figure 4: Computational Efficiency and Generalizability of RAD"
+author: "CMV"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+library(data.table)
+library(ggpubr)
+library(ggplot2)
+library(dplyr)
+library(readr)
+library(magick)
+library(jsonlite)
+library(rad)
+```
+
+# Load Figure 4 Workspace
+
+```{r load-workspace}
+load("figure_4_workspace.RData")
+```
+
+# Source project-specific scripts
+
+```{r source-scripts}
+source("~/Desktop/rad_paper/project_specific_scripts/comparing_visium_data.R")
+```
+
+# Panels 4A-4B: Speed and Memory Benchmarking (scMixology2)
+
+```{r panel-4a-4b}
+# Benchmarking RAD, Flexiplex, and BLAZE on scmixology2 dataset (25M reads)
+# Single-threaded, triplicate runs
+# Data from timing logs:
+# /Volumes/CMV_SSD_2/results/rad/demultiplexed/scmixology2/102125_scmix_timing_run_r1/scmix2_timing.csv
+# /Volumes/CMV_SSD_2/results/rad/demultiplexed/scmixology2/102425_scmix_timing_run_r2/
+# /Volumes/CMV_SSD_2/results/rad/demultiplexed/scmixology2/102525_scmix_timing_run_r3/
+
+# (Prism tables: "Run speed, single-threaded, scmixology2, user + system time")
+# (Prism tables: "Memory utilization, single-threaded, scmixology2")
+```
+
+# Panel 4C: Large Dataset Speed Benchmark (117M Reads)
+
+```{r panel-4c}
+# RAD and BLAZE benchmarked on 117M reads with 24 cores on HPC
+# Timing data from execution logs
+```
+
+# Panel 4D: Split-Seq Barcode Detection
+
+```{r panel-4d}
+# RAD detection of 3 barcodes per read in LR-Splitpipe dataset
+
+# splitseq_headers: per-read header data with 3-barcode assignments
+# splitseq_read_cts: read counts per barcode combination
+# splitseq_umi_cts: UMI counts
+# tabulated_splitseq_data: compiled results
+# final_splitseq_cts: final barcode counts
+
+# Data processing from project script:
+# Split-seq extracted headers from SSD:
+# /Volumes/CMV_SSD_2/results/rad/demultiplexed/splitseq/100325_rad_splitseq/extracted_headers_new.csv
+
+# (Prism tables: "Split-Seq tabulation (barcodes recovered)")
+```
+
+# Panel 4E: UMI Count Correlations (Long-read vs Short-read)
+
+```{r panel-4e}
+# UMI counts per cell compared across 3 cell types:
+# MB = myoblasts (cells and nuclei), MT = myotube nuclei
+# P-values indicate if slope is significantly non-zero
+# Red lines represent identity (x = y)
+
+# (Prism tables: "dedup UMIs per MB_Nuclei", "dedup UMIs per MB_Cells", "dedup UMIs per MT_Nuclei")
+# (Prism tables: "rank per MB_nuclei", "rank per MB_cells", "rank per MT_nuclei")
+```
+
+# Panel 4F: With/Without Whitelist Correlation (TBD)
+
+```{r panel-4f}
+# Correlation of read counts between RAD runs with/without short-read whitelists
+# Data from /Volumes/CMV_SSD_2/results/rad/demultiplexed/sans_wl/
+# *_barcode_counts_sans_vs_wl.csv files
+# NOTE: This panel is still marked TBD in the manuscript
+```
+
+# Panels 4G-4H: Read Length and Count Distributions
+
+```{r panel-4g-4h}
+# Distribution of read lengths and counts per barcode across different modalities
+# Data prepared using readcountlengthviolinprep.R
+
+# Read length/count processing script (from figure_4/readcountlengthviolinprep.R):
+# Reads extracted_headers CSVs for 4 datasets (splitseq, scmix2, nbc, rsq)
+# Counts barcode occurrences, downsamples to 100K read lengths (seed=123)
+
+# scmixology_all_read_lengths from CSV
+if (exists("scmixology_all_read_lengths")) head(scmixology_all_read_lengths)
+
+# (Prism tables in "read count per barcode violin.prism":
+#  "read.count", "read.lengths", "split_seq_final_barcode_counts")
+```
+
+# Panels 4I-4K: Visium Spatial Barcode Validation
+
+Section 12 of tonsil tissue from Engblom et al.
+
+```{r panel-4i-spatial-setup}
+# Spatial data loading and classification (from comparing_visium_data.R)
+# sct12: merged RAD + SpaceRanger data for section 12
+# spaceranger_section_12: SpaceRanger ground truth
+# rad_section_12: RAD barcode results
+
+# Classification: TP/FP/TN/FN based on in_tissue metadata
+# sct12[, class := fcase(
+#   final_barcode &  in_tissue, "TP",
+#   final_barcode & !in_tissue, "FP",
+#   !final_barcode & !in_tissue, "TN",
+#   !final_barcode &  in_tissue, "FN"
+# )]
+```
+
+```{r panel-4i-spaceranger-barcodes}
+# 4I: Visualization of valid barcode spots determined by SpaceRanger
+# "in_tissue" metadata from gene expression output
+# (Prism table: "visium data compiled--section 12 full data")
+```
+
+```{r panel-4j-rad-barcodes}
+# 4J: RAD high-confidence barcodes from long-read data
+# Without paired short-read information
+# Overlay of x-y coordinates from CellRanger whitelist (Visium_v1)
+# (Prism table: "visium data final barcodes")
+```
+
+```{r panel-4k-classification-overlay}
+# 4K: Classification overlay on spatial plot
+# TN/TP/FP/FN classifications compared to SpaceRanger ground truth
+
+# Spatial plot with H&E background image
+# he_img <- magick::image_read("tissue_hires_image.png")
+# he_rast <- as.raster(he_img)
+# info <- image_info(he_img)
+
+# p <- ggplot(sct12, aes(x = y_pix_scaled, y = x_pix_scaled)) +
+#   annotation_raster(he_rast, xmin = 0, xmax = img_w, ymin = 0, ymax = img_h) +
+#   geom_point(aes(fill = class), alpha = 0.2, size = 1.5, shape = 21,
+#              color = "black", stroke = 0.5) +
+#   scale_fill_manual(values = c(
+#     "TP" = "#009A00", "FP" = "#000000",
+#     "TN" = "grey70",  "FN" = "#66CC66"
+#   )) +
+#   coord_equal() + scale_y_reverse() + theme_pubr()
+
+# (Prism tables: "visium data classification heatmap", "visium data classification")
+```
+
+# Session Info
+
+```{r session-info}
+sessionInfo()
+```

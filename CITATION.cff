@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the manuscript below."
+title: "RAD manuscript — figure generation code"
+authors:
+  - family-names: "Vaidya"
+    given-names: "Chinmay M."
+    email: "chinmay.m.vaidya.gr@dartmouth.edu"
+    affiliation: "Geisel School of Medicine at Dartmouth"
+repository-code: "https://github.com/indianewok/rad-manuscript"
+license: MIT
+preferred-citation:
+  type: article
+  title: "RAD: Rapid Amplicon Demultiplexing for long-read single-cell sequencing"
+  authors:
+    - family-names: "Vaidya"
+      given-names: "Chinmay M."
+  year: 2026
+  status: "in preparation"
+  # journal:
+  # doi:
+  # volume:
+  # issue:
+  # start:
+  # end:

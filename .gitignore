@@ -1,0 +1,46 @@
+# =============================================================================
+# RAD manuscript repo — files that should never be tracked
+# =============================================================================
+
+# --- R workspaces (hosted on Zenodo — see data/README.md) ---
+*.RData
+*.Rdata
+*.rda
+*.rds
+
+# --- R session / build artifacts ---
+.Rhistory
+.Rapp.history
+.RData
+.Ruserdata
+*.Rproj.user/
+*_cache/
+*_files/
+
+# --- knitr / rmarkdown intermediates ---
+*.knit.md
+*.utf8.md
+figure_*/figure_*_files/
+
+# --- Harness runtime manifests (regenerated on each run) ---
+**/.last_demux_paths.txt
+
+# --- macOS cruft ---
+.DS_Store
+**/.DS_Store
+
+# --- Editor / IDE ---
+.vscode/
+.idea/
+*.swp
+*~
+
+# --- OS / build ---
+build/
+*.o
+*.so
+*.dylib
+
+# --- Local-only notes (don't commit ad-hoc TODOs) ---
+to_fix.txt
+NOTES.local.md

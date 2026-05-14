@@ -1,0 +1,127 @@
+---
+title: "Figure 3: Benchmarking RAD Performance on Real Immune Receptor Data"
+author: "CMV"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+library(data.table)
+library(ggpubr)
+library(ggplot2)
+library(dplyr)
+library(rad)
+```
+
+# Load Figure 3 Workspace
+
+```{r load-workspace}
+load("figure_3_workspace.RData")
+```
+
+# Source project-specific scripts
+
+```{r source-scripts}
+source("~/Desktop/rad_paper/project_specific_scripts/process_extracted_headers.R")
+source("~/Desktop/rad_paper/project_specific_scripts/graphing_barcode_entropy.R")
+source("~/Desktop/rad_paper/project_specific_scripts/graphing_bcr_rad_blaze_counts.R")
+```
+
+# Panel 3A: Experimental Design
+
+Schematic panel - data from long-read sequencing used to generate barcode whitelists
+by RAD and BLAZE, benchmarked against barcodes from paired short-read data.
+
+# Panel 3B: Performance Characteristics (Barcode Discovery)
+
+```{r panel-3b}
+# Performance of RAD and BLAZE in barcode discovery using full or filtered
+# barcode lists from short-read data as ground truth
+# tablated_rsq_data_prec_sens contains precision/sensitivity data
+
+head(tablated_rsq_data_prec_sens)
+
+# total_rageseq_comparison_data loaded from CSV
+head(total_rageseq_comparison_data)
+
+# (Prism table: "Figure 3B, performance parameters")
+```
+
+# Panels 3C-3E: False Positive Characterization ("Off-list")
+
+```{r panel-3c-3e}
+# "Off-list" barcodes provided as whitelist to assess incorrect assignment rate
+# 3C: Schematic of off-list approach
+# 3D: Total read count assigned to false positive barcode list
+# 3E: Read count per false positive barcode
+
+# rad_incorrect, blaze_incorrect contain off-list results
+# false_positive_wrong_cts, total_data_wrong_cts for read counts
+
+# (Prism tables: "Figure 3D, Off-list total counts", "Figure 3E...")
+```
+
+# Panels 3F-3H: Cell Type Recovery
+
+```{r panel-3f-3h}
+# Mixed pool of immune cells (Jurkat, Ramos, Monocytes)
+# 3F: Composition of input cells
+# 3G: Total cells (barcodes) recovered by each tool
+# 3H: Number and identity of each cell type recovered
+
+# mapping_results contains cell type mapping data
+
+# RAD RAGEseq processing
+# rad_rageseq_headers: per-read barcode assignments from RAD
+# blaze_rageseq_headers: per-read barcode assignments from BLAZE
+# rageseq_true: ground truth barcodes from short-read data
+
+# shared_bcs: barcodes found by both methods
+# subset_bcs: filtered barcode subsets
+
+# (Prism tables: "Figure 3F...", "Figure 3 total cells")
+```
+
+# Panels 3I-3K: Immune Receptor Read Mapping
+
+```{r panel-3i-3k}
+# 3I: Total BCR and TCR reads mapped by each tool
+# 3J: Reads with native/corrected barcodes mapped to each cell population
+# 3K: Read counts per barcode by tool
+
+# UMI analysis objects
+# umi_barcode_counts: UMI counts per barcode
+# umi_dat: raw UMI data
+# decode_umis: UMI decoding results
+# umi_matched_cts_rsq_corr/native/tot: UMI matching statistics
+
+# rad_rsq: RAD results on RAGEseq data
+# rad_rsq_counts: per-barcode counts from RAD
+# blaze_rsq_counts: per-barcode counts from BLAZE
+# rad_rsq_full: full RAD output
+
+# (Prism tables: "Figure 3G total mapped reads", "Figure 3G-H...")
+```
+
+# RAGEseq Barcode Entropy Analysis
+
+```{r entropy-analysis}
+# Barcode correction entropy (from graphing_barcode_entropy.R)
+# Shannon entropy and Gini index per final barcode
+# Measures diversity of source barcodes corrected to each final barcode
+```
+
+# RAD vs BLAZE Count Comparison
+
+```{r count-comparison}
+# From graphing_bcr_rad_blaze_counts.R
+# Scatter plots comparing total counts per cell between RAD and BLAZE
+# rad_matching_umis, blaze_correct_umis for UMI-level comparison
+```
+
+# Session Info
+
+```{r session-info}
+sessionInfo()
+```
