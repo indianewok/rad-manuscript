@@ -63,13 +63,7 @@ if [ -n "${RAW_FQ:-}" ]; then
   : "${SPLITSEQ_FQ:=${RAW_FQ}/splitseq.fq.gz}"
   : "${NBC_BCR_FQ:=${RAW_FQ}/nbc_bcr_data.fq.gz}"
   : "${SPATIAL_FQ:=${RAW_FQ}/spatial_tonsil_data/compiled_spatial_renamed.fq.gz}"
-  : "${LA1_FQ:=${RAW_FQ}/la1.fq.gz}"
-  : "${LA2_FQ:=${RAW_FQ}/la2.fq.gz}"
-  : "${LA3_FQ:=${RAW_FQ}/la3.fq.gz}"
-  : "${LA1MEM_FQ:=${RAW_FQ}/la1mem.fastq.gz}"
-  : "${LA3MEM_FQ:=${RAW_FQ}/la3mem.fq.gz}"
   export SCTAGGER_SIM SCTAGGER_TRUTH RAGESEQ_FQ SCMIX2_FQ SPLITSEQ_FQ NBC_BCR_FQ SPATIAL_FQ
-  export LA1_FQ LA2_FQ LA3_FQ LA1MEM_FQ LA3MEM_FQ
 fi
 
 if [ -n "${WL_DIR:-}" ]; then
@@ -84,8 +78,7 @@ fi
 
 if [ -n "${WL_DETECTION_RESULTS:-}" ]; then
   : "${VISIUM_WL_DIR:=${WL_DETECTION_RESULTS}/120525_visium_data_results}"
-  : "${LEENA_WL_DIR:=${WL_DETECTION_RESULTS}/leena_data}"
-  export VISIUM_WL_DIR LEENA_WL_DIR
+  export VISIUM_WL_DIR
 fi
 
 if [ -n "${PROJECT_SCRIPTS:-}" ]; then

@@ -10,7 +10,6 @@
 #   - NBC BCR (sans WL + with WL)                  — Panel 4F, 4G-4H
 #   - 10X Visium HD mouse brain (qualitative)      — Panels 4I-4K
 #                                                   (rendered by figures/figure_4/overview_panels_bare.R)
-#   - LA1/LA2/LA3 sans/with WL                     — Panel 4F (supplemental)
 # =============================================================================
 set -euo pipefail
 
@@ -20,7 +19,6 @@ source "${SCRIPT_DIR}/_lib.sh"
 
 DEMUX_MODE="${1:-full}"      # "full" or "analysis"
 SKIP_TIMING="${2:-false}"    # "true" to skip scmix timing runs (expensive)
-SKIP_LA="${3:-false}"        # "true" to skip LA benchmark runs (very expensive)
 
 if [ "$DEMUX_MODE" = "full" ]; then
   require_env RAD_BIN RAW_FQ WL_DIR RESULTS_BASE
@@ -109,67 +107,6 @@ if [ "$DEMUX_MODE" = "full" ]; then
   # It reads RAD per-sample counts from figures/supp_figure_1/raw_data/ and
   # the Seurat RDS from $HD_MAPPING_DIR. See figures/figure_4/README.md.
   # -------------------------------------------------------------------------
-
-  # -------------------------------------------------------------------------
-  # Sans-WL / With-WL benchmarks on LA datasets (optional, very large)
-  # -------------------------------------------------------------------------
-  if [ "$SKIP_LA" != "true" ]; then
-    require_env LEENA_WL_DIR
-
-    get_la_fq() {
-      case "$1" in
-        la1)    echo "$LA1_FQ" ;;
-        la2)    echo "$LA2_FQ" ;;
-        la3)    echo "$LA3_FQ" ;;
-        la1mem) echo "$LA1MEM_FQ" ;;
-        la3mem) echo "$LA3MEM_FQ" ;;
-      esac
-    }
-    get_la_wl() {
-      case "$1" in
-        la1)    echo "" ;;
-        la2)    echo "${LEENA_WL_DIR}/la2.txt" ;;
-        la3)    echo "${LEENA_WL_DIR}/la3.txt" ;;
-        la1mem) echo "${LEENA_WL_DIR}/la1_mem.txt" ;;
-        la3mem) echo "${LEENA_WL_DIR}/la3_mem.txt" ;;
-      esac
-    }
-
-    for ds in la1 la2 la3 la1mem la3mem; do
-      fq="$(get_la_fq "$ds")"
-
-      sans_out="${RESULTS_BASE}/sans_wl/${STAMP}_${ds}_sans"
-      ensure_dir "$sans_out"
-      echo ">> ${ds} sans whitelist..."
-      "$RAD_BIN" demux \
-        -l three_prime \
-        -q "$fq" \
-        -t "$RAD_THREADS" \
-        -d "$sans_out" \
-        -o "${ds}_sans" \
-        -v \
-        -F "${sans_out}/${ds}_sans_rad.log"
-
-      wl="$(get_la_wl "$ds")"
-      if [ -n "$wl" ] && [ -f "$wl" ]; then
-        wl_out="${RESULTS_BASE}/sans_wl/${STAMP}_${ds}_wl"
-        ensure_dir "$wl_out"
-        echo ">> ${ds} with whitelist..."
-        "$RAD_BIN" demux \
-          -l three_prime \
-          -k 10x_3v3 \
-          -c "$wl" \
-          -q "$fq" \
-          -t "$RAD_THREADS" \
-          -d "$wl_out" \
-          -o "${ds}_wl" \
-          -v \
-          -F "${wl_out}/${ds}_wl_rad.log"
-      fi
-    done
-  else
-    echo ">> Skipping LA benchmark runs (SKIP_LA=true)"
-  fi
 
   log_done "Figure 4 — RAD demux"
 

@@ -98,9 +98,6 @@ cat(sprintf("  ScTagger ED1 = %d\n", ed1$sctagger))
 cat(sprintf("  Mean reps    = %.2f ;  ScTagger/Mean_rep = %.2fx\n", mean(c(ed1$rep1,ed1$rep2,ed1$rep3)), ed1$sctagger/mean(c(ed1$rep1,ed1$rep2,ed1$rep3))))
 cat(sprintf("  rep1         = %d ;  ScTagger/rep1     = %.2fx  (claim 8.57)  %s\n", ed1$rep1, ed1$sctagger/ed1$rep1, ok(abs(ed1$sctagger/ed1$rep1-8.57)<0.1)))
 
-cat(sprintf("\nClaim: 5x more likely vs LA1\n"))
-cat(sprintf("  ScTagger/LA1 = %d/%d = %.2fx  %s\n", ed1$sctagger, ed1$la1, ed1$sctagger/ed1$la1, ok(ed1$sctagger/ed1$la1==5)))
-
 cat("\n--- PARA 6: Edit distance ED_final<=ED_true (Supplemental S3) ---\n")
 shared_incorrect <- intersect(venn_overlap$rad, venn_overlap$BLAZE)
 cat(sprintf("Claim: shared set of reads ~97k\n"))

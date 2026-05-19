@@ -95,8 +95,6 @@ export RAD_PAPER_DIR=/path/to/rad_paper                    # parent of per-run b
 
 # === required for Figure 4 ===
 export WL_DETECTION_RESULTS=/path/to/results/whitelist_detection
-# Optional fallback if not set: derived from WL_DETECTION_RESULTS
-# export LEENA_WL_DIR="${WL_DETECTION_RESULTS}/leena_data"          # LA-dataset whitelists
 
 # === required for Figure 4 (panels 4I-4K) AND Supplementary Figure 1 ===
 # Both use the same 10X Visium HD mouse brain dataset.
@@ -161,7 +159,7 @@ See [`scripts/README.md`](scripts/README.md) for the full per-script flag refere
 |--------|----------|-----------|
 | **2** | ScTagger long-read simulations (S, M, L; 100K/250K/500K downsampled) | Ebrahimi *et al.* (ScTagger) |
 | **3** | RAGEseq (real BCR/TCR mix) + off-list false-positive controls | Singh *et al.* |
-| **4** | scMixology2, Split-seq (LR-Splitpipe), NBC BCR, LA1–LA3, 10X Visium HD mouse brain (panels 4I-4K, overview triptych) | Tian *et al.*; Rosenberg *et al.*; 10X public dataset |
+| **4** | scMixology2, Split-seq (LR-Splitpipe), NBC BCR, 10X Visium HD mouse brain (panels 4I-4K, overview triptych) | Tian *et al.*; Rosenberg *et al.*; 10X public dataset |
 | **5** | NBC BCR + Engblom *et al.* Visium tonsil spatial (panels 5E + 5G) | Engblom *et al.* |
 | **Supp. 1** | 10X Visium HD mouse brain — deep dive on the same dataset as Figure 4 panels I/J/K | 10X public dataset |
 
