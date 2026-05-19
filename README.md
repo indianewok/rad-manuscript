@@ -46,8 +46,6 @@ Each `figures/figure_N/` directory has its own `README.md` with the panel breakd
 | **pigz** | `2.8` | [zlib.net/pigz](https://zlib.net/pigz/) — `brew install pigz` |
 | **minimap2** | `2.30-r1287` (Figure 5 chr14 depth only) | [github.com/lh3/minimap2](https://github.com/lh3/minimap2) — `brew install minimap2` |
 | **IgBLAST** | NCBI 1.22+ (Figure 5 clonotyping only) | [ncbi.nlm.nih.gov/igblast](https://ncbi.nlm.nih.gov/igblast/) |
-| **Ghostscript** | `10.03.1` (only for figure PDF compression) | `brew install ghostscript` |
-| **Poppler (pdftoppm)** | `25.12.0` (only for PNG previews) | `brew install poppler` |
 | **R** | `4.5.2` | [cran.r-project.org](https://cran.r-project.org/) |
 
 ### 2. R packages
