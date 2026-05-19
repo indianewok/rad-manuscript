@@ -80,7 +80,7 @@ Use `./run_all_figures.sh 2 3` to run only specific figures. Use `./run_all_figu
 | Figure | Datasets | Reference |
 |--------|----------|-----------|
 | **2** | ScTagger long-read simulations (S, M, L; 100K/250K/500K downsampled) | Ebrahimi *et al.* (ScTagger) |
-| **3** | RAGEseq (real BCR/TCR mix) + off-list false-positive controls | this manuscript |
+| **3** | RAGEseq (real BCR/TCR mix) + off-list false-positive controls | Singh *et al.* |
 | **4** | scMixology2, Split-seq (LR-Splitpipe), NBC BCR, Visium spatial tonsil, LA1–LA3 | Tian *et al.*; Rosenberg *et al.*; Engblom *et al.* |
 | **5** | NBC BCR + Visium spatial tonsil (downstream of Figure 4 demux) | Engblom *et al.* |
 
