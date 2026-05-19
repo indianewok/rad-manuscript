@@ -15,6 +15,7 @@ Open items for the RAD manuscript repository. Granular figure-polish notes (alig
 
 ## Manuscript / data
 
+- [ ] **Upload the Visium HD mapping bundle to Zenodo** (or extend the existing draft). The supp_figure_1 scripts depend on `visium_hd_mouse_brain_016um_seurat.rds` (384 MB) + `tissue_positions_16um.csv` (full grid) at `$HD_MAPPING_DIR`; neither is in the repo. Document the download path in `data/README.md`.
 - [ ] **Publish the Zenodo deposit** ([10.5281/zenodo.20189813](https://doi.org/10.5281/zenodo.20189813)) on manuscript acceptance — the DOI is reserved but the deposit is still a private draft.
 - [ ] **Fill in `CITATION.cff`** post-acceptance: journal, DOI, volume/issue, year, `status: published`.
 - [ ] **Flip the GitHub repo to public** on acceptance.

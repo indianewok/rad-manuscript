@@ -23,7 +23,8 @@ The RAD tool itself lives at **[github.com/indianewok/rad](https://github.com/in
 │   ├── figure_2/         ← Figure 2: ScTagger synthetic benchmark
 │   ├── figure_3/         ← Figure 3: RAGEseq real-data benchmark
 │   ├── figure_4/         ← Figure 4: multi-platform efficiency
-│   └── figure_5/         ← Figure 5: isotype-resolved B-cell clonotypes
+│   ├── figure_5/         ← Figure 5: isotype-resolved B-cell clonotypes
+│   └── supp_figure_1/    ← Supp. Fig. 1: RAD on 10X Visium HD mouse brain
 ├── data/                 ← Zenodo DOI + SHA-256 checksums for the .RData workspaces
 └── misc/                 ← manuscript color palette + every rad demux command
 ```
@@ -101,6 +102,9 @@ export SWEDISH_TONSIL_DIR=/path/to/swedish_tonsil_spatial  # Engblom et al. Visi
 
 # === required for Figure 5 ===
 export NBC_DEPTH_DIR=/path/to/nbc_chr14_depth_csvs         # IGH locus depth CSVs
+
+# === required for Supplementary Figure 1 (10X Visium HD mouse brain) ===
+export HD_MAPPING_DIR=/path/to/visium_hd_mapping           # Seurat RDS + tissue_positions_16um.csv
 
 # === optional ===
 export BLAZE_BIN=/path/to/blaze                            # if regenerating BLAZE benchmarks

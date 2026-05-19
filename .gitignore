@@ -43,6 +43,11 @@ build/
 *.so
 *.dylib
 
+# --- Python bytecode ---
+__pycache__/
+*.pyc
+*.pyo
+
 # --- Local-only notes (don't commit ad-hoc TODOs) ---
 to_fix.txt
 NOTES.local.md
