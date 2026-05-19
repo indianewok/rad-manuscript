@@ -16,41 +16,58 @@
 | 4F | Read counts with/without short-read whitelist (correlation) |
 | 4G | Read-length distributions across modalities |
 | 4H | Counts per barcode across modalities |
-| 4I | Visium SpaceRanger ground-truth `in_tissue` spots |
-| 4J | RAD high-confidence barcodes overlaid on Visium coordinates |
-| 4K | TP / FP / TN / FN classification overlay vs SpaceRanger ground truth |
+| 4I | 10X Visium HD mouse brain — SpaceRanger `in_tissue` bin mask (PBC44593, 16 µm) |
+| 4J | 10X Visium HD mouse brain — Percula/Seurat `log1p(ncpm)` (PBC44593, plasma scale) |
+| 4K | 10X Visium HD mouse brain — RAD `log1p(ncpm)` (PBC44593, shared plasma scale) |
+
+Panels 4I-4K share a single grid bounding box and color scale; they're an *overview* triptych on one representative section. The deep-dive supplement covering all four samples (PBC44593, PBC44760, PBC49262, PBC52788) with violins, correlation heatmap, and per-bin classification is **[Supplementary Figure 1](../supp_figure_1/README.md)**.
 
 ## Inputs
 
-- **Workspace:** `figure_4_workspace.RData` — see [`../data/README.md`](../data/README.md)
-- **Demultiplexed FASTQs (full pipeline)** — paths relative to `${RESULTS_BASE}` (env var, see [../../README.md](../../README.md) → Setup):
-  - `scmixology2/*_scmix_timing_run_r{1,2,3}/`
-  - `splitseq/*_splitseq/`
-  - `sans_wl/*_nbc_{sans,wl}/`
-  - `visium_data/*_pt0{72,86}_bc*/` (8 sections)
-  - `sans_wl/*_la{1,2,3,1mem,3mem}_{sans,wl}/`
-- **Visium H&E:** `tissue_hires_image.png` (Engblom *et al.*, section 12)
+- **Workspace:** `figure_4_workspace.RData` (panels A–H) — see [`../../data/README.md`](../../data/README.md)
+- **Demultiplexed FASTQs (full pipeline)** — paths relative to `${RESULTS_BASE}` (env var, see [`../../README.md`](../../README.md) → Setup):
+  - `scmixology2/*_scmix_timing_run_r{1,2,3}/` — panels 4A/4B
+  - `splitseq/*_splitseq/` — panel 4D
+  - `sans_wl/*_nbc_{sans,wl}/` — panel 4F + part of 4G/4H
+  - `sans_wl/*_la{1,2,3,1mem,3mem}_{sans,wl}/` — panel 4F supplement
+- **Visium HD inputs (panels 4I-4K)**:
+  - `${HD_MAPPING_DIR}/tissue_positions_16um.csv` — full bin grid
+  - `${HD_MAPPING_DIR}/visium_hd_mouse_brain_016um_seurat.rds` — Percula/Seurat counts (384 MB; not in repo)
+  - `../supp_figure_1/raw_data/sample_bin_matrix_16um.csv.gz` — RAD per-sample bin counts (shared with Supp Fig 1)
 
 ## Scripts in this directory
 
 | File | Purpose |
 |------|---------|
-| `figure_4_analysis.Rmd` | Master notebook |
-| `comparing_visium_data.R` | Merge RAD vs SpaceRanger spot tables, classify TP/FP/TN/FN |
-| `readcountlengthviolinprep.R` | Build per-modality read-length / count tables (downsampled to 100K, seed 123) |
+| `figure_4_analysis.Rmd` | Master notebook for panels A–H (loads `figure_4_workspace.RData`) |
+| `readcountlengthviolinprep.R` | Build per-modality read-length / count tables (downsampled to 100K, seed 123) for 4G/4H |
+| `overview_panels_bare.R` | Render the Visium HD triptych (panels 4I-4K + colorbars) |
 | `verify_fig4.R` | Sanity check: workspace + Rmd objects match expected schema |
 
 ## How to regenerate
 
 ```bash
-./scripts/run_figure_4.sh analysis                # workspace-only
+# Workspace-only (panels A–H render from figure_4_workspace.RData):
+./scripts/run_figure_4.sh analysis
+
+# Full pipeline (re-runs rad demux on every dataset, then renders):
 ./scripts/run_figure_4.sh                         # everything
 ./scripts/run_figure_4.sh full true               # skip scmix timing runs (expensive)
 ./scripts/run_figure_4.sh full true true          # also skip LA benchmark runs (very expensive)
 ```
 
-Output: `figure_4_analysis.html`.
+The Visium HD triptych (4I-4K) is generated separately — outputs are *not* committed:
+
+```bash
+export HD_MAPPING_DIR=/path/to/visium_hd_mapping
+cd figures/figure_4
+Rscript overview_panels_bare.R
+# writes: overview_panel{1,2,3}_*_bare.png, overview_triptych_bare.png,
+#         overview_colorbar_plasma{,_ncpm}.png, overview_panels_bare_color_limits.csv
+```
+
+The bare PNGs are then composited into the final figure outside the harness (PowerPoint / Illustrator / Prism). Output of the main Rmd render: `figure_4_analysis.html`.
 
 ## Key workspace objects
 
-`splitseq_headers`, `splitseq_read_cts`, `splitseq_umi_cts`, `tabulated_splitseq_data`, `final_splitseq_cts`, `scmixology_all_read_lengths`, `sct12` (RAD + SpaceRanger merged Visium section 12), `spaceranger_section_12`, `rad_section_12`.
+`splitseq_headers`, `splitseq_read_cts`, `splitseq_umi_cts`, `tabulated_splitseq_data`, `final_splitseq_cts`, `scmixology_all_read_lengths`.

@@ -4,7 +4,7 @@
 # =============================================================================
 # Panels: 5A-5G
 #
-# Figure 5 uses NBC BCR + Visium spatial demultiplexed data from Figure 4.
+# Figure 5 uses NBC BCR + Engblom Visium tonsil spatial demultiplexed data.
 # Downstream clonotyping is done via IgBLAST and custom R pipelines.
 # =============================================================================
 set -euo pipefail
@@ -29,10 +29,14 @@ IGBLAST_SCRIPT="${PROJECT_SCRIPTS:-/PLACEHOLDER}/rnabloom_to_igblast.sh"
 IG_MAPPING_SCRIPT="${PROJECT_SCRIPTS:-/PLACEHOLDER}/generate_ig_mappings.sh"
 
 # =============================================================================
-# STEP 1: (Optional) RAD DEMUX — NBC BCR data
+# STEP 1: (Optional) RAD DEMUX — NBC BCR + Engblom Visium tonsil
 # =============================================================================
+# The Visium tonsil 8-section demux used to live in run_figure_4.sh when 4I-K
+# were tonsil panels. After the Visium HD reshuffle, the only consumer of the
+# tonsil demux output is Figure 5's spatial clone maps (panels 5E + 5G), so
+# the loop now lives here.
 if [ "$DEMUX_MODE" = "full" ]; then
-  log_start "Figure 5 — RAD demux (NBC BCR)"
+  log_start "Figure 5 — RAD demux (NBC BCR + Engblom Visium tonsil)"
 
   NBC_OUT="${RESULTS_BASE}/sans_wl/${STAMP}_nbc_wl_fig5"
   ensure_dir "$NBC_OUT"
@@ -49,6 +53,37 @@ if [ "$DEMUX_MODE" = "full" ]; then
     -F "${NBC_OUT}/nbc_wl_rad.log"
 
   NBC_DEMUX_DIR="$NBC_OUT"
+
+  # ---------------------------------------------------------------------------
+  # Engblom et al. tonsil Visium spatial — 8 sections × 2 patients (pt072, pt086)
+  # Used by Figure 5 for the spatial clone maps; required for panels 5E + 5G.
+  # ---------------------------------------------------------------------------
+  require_env VISIUM_WL_DIR
+  VISIUM_SAMPLES=(
+    "pt072_bc1009" "pt072_bc1010" "pt072_bc1018" "pt072_bc1020"
+    "pt086_bc1011" "pt086_bc1016" "pt086_bc1018" "pt086_bc1020"
+  )
+
+  for sample in "${VISIUM_SAMPLES[@]}"; do
+    vis_out="${RESULTS_BASE}/visium_data/${STAMP}_${sample}"
+    patient="${sample%%_*}"
+    barcode="${sample##*_}"
+    vis_wl="${VISIUM_WL_DIR}/${patient}_demultiplex_${barcode}.txt"
+
+    ensure_dir "$vis_out"
+    echo ">> Visium ${sample}..."
+    "$RAD_BIN" demux \
+      -l visium \
+      -k 10x_Vis_V1 \
+      -c "$vis_wl" \
+      -q "$SPATIAL_FQ" \
+      -t "$RAD_THREADS" \
+      -d "$vis_out" \
+      -o "$sample" \
+      -v \
+      -F "${vis_out}/${sample}_rad.log"
+  done
+
   log_done "Figure 5 — RAD demux"
 fi
 

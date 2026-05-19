@@ -113,7 +113,39 @@ All paths below use environment variables documented in [../README.md](../README
   -o nbc
 ```
 
-### Visium Spatial Data (8 Barcodes)
+### Visium HD Mouse Brain (panels 4I-4K + Supplementary Figure 1)
+
+Public 10X Visium HD murine brain dataset, four replicate sections at 16 µm bin
+resolution: `PBC44593`, `PBC44760`, `PBC49262`, `PBC52788`. Run per-sample:
+
+```bash
+"${RAD_BIN}" demux \
+  -l "${RAD_RESOURCES}/read_layout/visium_hd_read_layout.csv" \
+  -k 10x_3v3 \
+  -q /path/to/{SAMPLE}.fq.gz \
+  -t "$RAD_THREADS" \
+  -d "${RESULTS_BASE}/visium_hd/{SAMPLE}" \
+  -o {SAMPLE} \
+  -v \
+  -F "${RESULTS_BASE}/visium_hd/{SAMPLE}/{SAMPLE}_rad.log"
+```
+
+> *TODO:* the production command set used to generate
+> `figures/supp_figure_1/raw_data/sample_bin_matrix_16um.csv.gz` (the source for
+> both panels 4I-4K and Supplementary Figure 1) is not yet captured here.
+> Backfill from the figure_4_visium working dir / conversation history.
+
+---
+
+## Figure 5: Clonal Analysis (NBC BCR + Engblom Tonsil Spatial)
+
+Figure 5 uses the NBC BCR demultiplexed output (above) plus an 8-section Engblom
+*et al.* Visium tonsil spatial dataset for the spatial clone maps in panels
+5E + 5G. Downstream clonotyping is via IgBLAST and custom R pipelines (see
+`${PROJECT_SCRIPTS}/rnabloom_to_igblast.sh`, `${PROJECT_SCRIPTS}/generate_ig_mappings.sh`).
+
+### Engblom Visium tonsil spatial — 8 sections × 2 patients
+
 ```bash
 # Location: ${RESULTS_BASE}/visium_data/
 # Samples: pt072_bc1009, pt072_bc1010, pt072_bc1018, pt072_bc1020
@@ -121,24 +153,9 @@ All paths below use environment variables documented in [../README.md](../README
 # Layout: Standard Visium (22bp primer + 16bp barcode + 10bp UMI + poly-T + read + 23bp rev primer)
 # Per-barcode whitelists from: ${VISIUM_WL_DIR}/
 # Example: pt072_demultiplex_bc1009.txt
+#
+# Driven by scripts/run_figure_5.sh in the 8-section loop.
 ```
-
-### Visium HD
-```bash
-"${RAD_BIN}" demux \
-  -l "${RAD_RESOURCES}/read_layout/visium_hd_read_layout.csv" \
-  -n 1000000 \
-  -v \
-  -o /path/to/output/visium_hd_test_run \
-  -t 4 \
-  -q /path/to/input/022026_10XHD_rsq.fq.gz
-```
-
----
-
-## Figure 5: Clonal Analysis (Tonsil Data)
-
-Figure 5 uses the NBC BCR and Visium spatial demultiplexed data (see Figure 4 commands above). Downstream clonotyping was done via IgBLAST and custom R pipelines (see `${PROJECT_SCRIPTS}/rnabloom_to_igblast.sh`, `${PROJECT_SCRIPTS}/generate_ig_mappings.sh`).
 
 ---
 

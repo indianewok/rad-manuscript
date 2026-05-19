@@ -8,7 +8,8 @@
 #   - scMixology2 (3 timing replicates)          — Panels 4A-4B
 #   - Split-seq                                    — Panel 4D
 #   - NBC BCR (sans WL + with WL)                  — Panel 4F, 4G-4H
-#   - Visium spatial (8 barcodes × 2 patients)     — Panels 4I-4K
+#   - 10X Visium HD mouse brain (qualitative)      — Panels 4I-4K
+#                                                   (rendered by figures/figure_4/overview_panels_bare.R)
 #   - LA1/LA2/LA3 sans/with WL                     — Panel 4F (supplemental)
 # =============================================================================
 set -euo pipefail
@@ -103,33 +104,11 @@ if [ "$DEMUX_MODE" = "full" ]; then
     -F "${NBC_WL_OUT}/nbc_wl_rad.log"
 
   # -------------------------------------------------------------------------
-  # 4I-4K: Visium spatial (8 sections)
+  # 4I-4K Visium HD mouse brain overview triptych is generated separately:
+  #   Rscript figures/figure_4/overview_panels_bare.R
+  # It reads RAD per-sample counts from figures/supp_figure_1/raw_data/ and
+  # the Seurat RDS from $HD_MAPPING_DIR. See figures/figure_4/README.md.
   # -------------------------------------------------------------------------
-  require_env VISIUM_WL_DIR
-  VISIUM_SAMPLES=(
-    "pt072_bc1009" "pt072_bc1010" "pt072_bc1018" "pt072_bc1020"
-    "pt086_bc1011" "pt086_bc1016" "pt086_bc1018" "pt086_bc1020"
-  )
-
-  for sample in "${VISIUM_SAMPLES[@]}"; do
-    vis_out="${RESULTS_BASE}/visium_data/${STAMP}_${sample}"
-    patient="${sample%%_*}"
-    barcode="${sample##*_}"
-    vis_wl="${VISIUM_WL_DIR}/${patient}_demultiplex_${barcode}.txt"
-
-    ensure_dir "$vis_out"
-    echo ">> Visium ${sample}..."
-    "$RAD_BIN" demux \
-      -l visium \
-      -k 10x_Vis_V1 \
-      -c "$vis_wl" \
-      -q "$SPATIAL_FQ" \
-      -t "$RAD_THREADS" \
-      -d "$vis_out" \
-      -o "$sample" \
-      -v \
-      -F "${vis_out}/${sample}_rad.log"
-  done
 
   # -------------------------------------------------------------------------
   # Sans-WL / With-WL benchmarks on LA datasets (optional, very large)

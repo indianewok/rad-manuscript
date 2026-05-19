@@ -95,16 +95,17 @@ export RAD_PAPER_DIR=/path/to/rad_paper                    # parent of per-run b
 
 # === required for Figure 4 ===
 export WL_DETECTION_RESULTS=/path/to/results/whitelist_detection
-export SWEDISH_TONSIL_DIR=/path/to/swedish_tonsil_spatial  # Engblom et al. Visium data
 # Optional fallback if not set: derived from WL_DETECTION_RESULTS
-# export VISIUM_WL_DIR="${WL_DETECTION_RESULTS}/120525_visium_data_results"
-# export LEENA_WL_DIR="${WL_DETECTION_RESULTS}/leena_data"
+# export LEENA_WL_DIR="${WL_DETECTION_RESULTS}/leena_data"          # LA-dataset whitelists
+
+# === required for Figure 4 (panels 4I-4K) AND Supplementary Figure 1 ===
+# Both use the same 10X Visium HD mouse brain dataset.
+export HD_MAPPING_DIR=/path/to/visium_hd_mapping           # Seurat RDS + tissue_positions_16um.csv
 
 # === required for Figure 5 ===
-export NBC_DEPTH_DIR=/path/to/nbc_chr14_depth_csvs         # IGH locus depth CSVs
-
-# === required for Supplementary Figure 1 (10X Visium HD mouse brain) ===
-export HD_MAPPING_DIR=/path/to/visium_hd_mapping           # Seurat RDS + tissue_positions_16um.csv
+export NBC_DEPTH_DIR=/path/to/nbc_chr14_depth_csvs         # IGH locus depth CSVs (panel 5A)
+# Figure 5's spatial clone maps (5E + 5G) also use the Engblom Visium tonsil demux:
+# export VISIUM_WL_DIR="${WL_DETECTION_RESULTS}/120525_visium_data_results"  # auto-derived
 
 # === optional ===
 export BLAZE_BIN=/path/to/blaze                            # if regenerating BLAZE benchmarks
@@ -160,8 +161,9 @@ See [`scripts/README.md`](scripts/README.md) for the full per-script flag refere
 |--------|----------|-----------|
 | **2** | ScTagger long-read simulations (S, M, L; 100K/250K/500K downsampled) | Ebrahimi *et al.* (ScTagger) |
 | **3** | RAGEseq (real BCR/TCR mix) + off-list false-positive controls | Singh *et al.* |
-| **4** | scMixology2, Split-seq (LR-Splitpipe), NBC BCR, Visium spatial tonsil, LA1–LA3 | Tian *et al.*; Rosenberg *et al.*; Engblom *et al.* |
-| **5** | NBC BCR + Visium spatial tonsil (downstream of Figure 4 demux) | Engblom *et al.* |
+| **4** | scMixology2, Split-seq (LR-Splitpipe), NBC BCR, LA1–LA3, 10X Visium HD mouse brain (panels 4I-4K, overview triptych) | Tian *et al.*; Rosenberg *et al.*; 10X public dataset |
+| **5** | NBC BCR + Engblom *et al.* Visium tonsil spatial (panels 5E + 5G) | Engblom *et al.* |
+| **Supp. 1** | 10X Visium HD mouse brain — deep dive on the same dataset as Figure 4 panels I/J/K | 10X public dataset |
 
 Full provenance — every `rad demux` invocation, every whitelist used — is in [`misc/rad_demux_commands.md`](misc/rad_demux_commands.md).
 
