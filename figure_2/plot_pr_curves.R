@@ -7,8 +7,14 @@ library(ggpubr)
 # ============================================================================
 
 # --- Load ground truth ---
+sctagger_truth <- Sys.getenv("SCTAGGER_TRUTH",
+                             unset = file.path(Sys.getenv("RAW_FQ"), "sctagger_sim/truth"))
+if (!dir.exists(sctagger_truth)) {
+  stop("SCTAGGER_TRUTH not found at: ", sctagger_truth,
+       " — set SCTAGGER_TRUTH (or RAW_FQ) in config.local.sh")
+}
 truth <- fread(
-  cmd = "gzip -dc /Volumes/CMV_SSD_2/raw_fqs/sctagger_sim/truth/L.truth.tsv.gz",
+  cmd = sprintf("gzip -dc %s", shQuote(file.path(sctagger_truth, "L.truth.tsv.gz"))),
   header = FALSE, col.names = c("read_idx", "barcode")
 )
 truth_bcs <- unique(truth$barcode)

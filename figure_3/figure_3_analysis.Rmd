@@ -23,9 +23,16 @@ load("figure_3_workspace.RData")
 # Source project-specific scripts
 
 ```{r source-scripts}
-source("~/Desktop/rad_paper/project_specific_scripts/process_extracted_headers.R")
-source("~/Desktop/rad_paper/project_specific_scripts/graphing_barcode_entropy.R")
-source("~/Desktop/rad_paper/project_specific_scripts/graphing_bcr_rad_blaze_counts.R")
+# PROJECT_SCRIPTS is exported by config.sh / config.local.sh.
+project_scripts <- Sys.getenv("PROJECT_SCRIPTS", unset = "../project_specific_scripts")
+if (!dir.exists(project_scripts)) {
+  stop("PROJECT_SCRIPTS not found: ", project_scripts,
+       " — set the PROJECT_SCRIPTS env var (see config.local.sh) ",
+       "or place the scripts in ../project_specific_scripts/")
+}
+source(file.path(project_scripts, "process_extracted_headers.R"))
+source(file.path(project_scripts, "graphing_barcode_entropy.R"))
+source(file.path(project_scripts, "graphing_bcr_rad_blaze_counts.R"))
 ```
 
 # Panel 3A: Experimental Design

@@ -26,8 +26,15 @@ load("figure_5_workspace.RData")
 # Source project-specific scripts
 
 ```{r source-scripts}
-source("~/Desktop/rad_paper/project_specific_scripts/reformat_igblast_genes.R")
-source("~/Desktop/rad_paper/project_specific_scripts/consensus_ig_generator.R")
+# PROJECT_SCRIPTS is exported by config.sh / config.local.sh.
+project_scripts <- Sys.getenv("PROJECT_SCRIPTS", unset = "../project_specific_scripts")
+if (!dir.exists(project_scripts)) {
+  stop("PROJECT_SCRIPTS not found: ", project_scripts,
+       " — set the PROJECT_SCRIPTS env var (see config.local.sh) ",
+       "or place the scripts in ../project_specific_scripts/")
+}
+source(file.path(project_scripts, "reformat_igblast_genes.R"))
+source(file.path(project_scripts, "consensus_ig_generator.R"))
 ```
 
 # Panel 5A: Per-Barcode Isotype Read Counts (Visium Tonsil Spatial)
@@ -58,7 +65,8 @@ p <- ggplot(ig_locus_res,
 
 ```{r panel-5a-nbc-depth}
 # NBC (Nojima B-cell culture) depth
-# nbc_depth <- data.table::fread("/Users/cmv/Desktop/030426_nbc/nbc_chr14_t2t_mapont.depth.csv")
+# nbc_depth <- data.table::fread(file.path(Sys.getenv("NBC_DEPTH_DIR"),
+#                                          "nbc_chr14_t2t_mapont.depth.csv"))
 # setnames(nbc_depth, old = 'depth', new = 'nbc_depth')
 
 q <- ggplot(ig_locus_res,
@@ -72,7 +80,8 @@ q <- ggplot(ig_locus_res,
 
 ```{r panel-5a-rageseq-depth}
 # RAGEseq depth
-# rsq_depth <- data.table::fread("/Users/cmv/Desktop/030426_nbc/rsq_chr14_t2t_mapont.depth.csv")
+# rsq_depth <- data.table::fread(file.path(Sys.getenv("NBC_DEPTH_DIR"),
+#                                          "rsq_chr14_t2t_mapont.depth.csv"))
 # rsq_ig <- rsq_depth[pos >= 99839968 & pos <= 100127783,]
 # ig_locus_res <- dplyr::left_join(ig_locus_res, rsq_ig[,c('pos','rsq_depth')], by = 'pos')
 
@@ -308,24 +317,25 @@ p <- ggscatter(
   coord_fixed()
 
 p
-# ggsave("~/Desktop/clone_spatial_plot.svg", plot = p, width = 12, height = 8)
+# ggsave("clone_spatial_plot.svg", plot = p, width = 12, height = 8)
 ```
 
 # Data Export for Figure 5
 
 ```{r data-export}
-# Heatmap raw data exports
-# fwrite(clone_2277_heatmap, "~/Desktop/manuscripts/figures/figure_5/heatmap_raw_data/clone_2277_heatmap_raw_data.csv")
-# fwrite(clone_86_heatmap, "~/Desktop/manuscripts/figures/figure_5/heatmap_raw_data/clone_86_heatmap_raw_data.csv")
-# fwrite(clone_5725_heatmap, "~/Desktop/manuscripts/figures/figure_5/heatmap_raw_data/clone_5725_heatmap_raw_data.csv")
-# fwrite(clone_7445_heatmap, "~/Desktop/manuscripts/figures/figure_5/heatmap_raw_data/clone_7445_heatmap_raw_data.csv")
+# Heatmap raw data exports — written to figure_5/heatmap_raw_data/ by the harness.
+# fwrite(clone_2277_heatmap, "heatmap_raw_data/clone_2277_heatmap_raw_data.csv")
+# fwrite(clone_86_heatmap,   "heatmap_raw_data/clone_86_heatmap_raw_data.csv")
+# fwrite(clone_5725_heatmap, "heatmap_raw_data/clone_5725_heatmap_raw_data.csv")
+# fwrite(clone_7445_heatmap, "heatmap_raw_data/clone_7445_heatmap_raw_data.csv")
 
 # Isotype per clone data
-# fwrite(per_clone_id_spots, "~/Desktop/manuscripts/figures/figure_5/heatmap_raw_data/isotypes_per_clone_id.csv")
-# fwrite(per_clone_id_spots[switching == "TRUE",], "~/Desktop/manuscripts/figures/figure_5/heatmap_raw_data/class_switching_clones.csv")
+# fwrite(per_clone_id_spots, "heatmap_raw_data/isotypes_per_clone_id.csv")
+# fwrite(per_clone_id_spots[switching == "TRUE",],
+#        "heatmap_raw_data/class_switching_clones.csv")
 
 # Combined spatial + clone data
-# fwrite(clones_to_plot_dedup, "~/Desktop/manuscripts/figures/figure_5/clones_and_isotypes_spatial_data.csv")
+# fwrite(clones_to_plot_dedup, "clones_and_isotypes_spatial_data.csv")
 ```
 
 # Session Info

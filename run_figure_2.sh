@@ -26,9 +26,9 @@ check_rad
 STAMP=$(timestamp)
 DEMUX_MODE="${1:-full}"   # "full" = rerun WL gen + demux + analysis; "analysis" = Rmd only
 
-# --- Binaries / scripts ---
-GEN_WL_BIN="/Users/cmv/Desktop/rad/build/generate_whitelist"
-EXTRACT_HEADERS="${PROJECT_SCRIPTS}/extract_rad_headers_new.sh"
+# --- Binaries / scripts (GEN_WL_BIN + EXTRACT_HEADERS come from config.sh) ---
+: "${GEN_WL_BIN:?GEN_WL_BIN must be set in config.sh / config.local.sh}"
+: "${EXTRACT_HEADERS:?EXTRACT_HEADERS must be set in config.sh / config.local.sh}"
 
 # --- ScTagger layout parameters (from sctagger_sim_read_layout.csv) ---
 SCTAGGER_PRIMER="CTACACGACGCTCTTCCGATCT"   # 22bp forward primer
@@ -45,7 +45,7 @@ if [ "$DEMUX_MODE" = "full" ]; then
 
   if [ ! -x "$GEN_WL_BIN" ]; then
     echo "ERROR: generate_whitelist not found at $GEN_WL_BIN"
-    echo "Build it: cd ~/Desktop/rad/build && cmake --build ."
+    echo "Build the RAD repo (https://github.com/indianewok/rad) and set GEN_WL_BIN in config.local.sh."
     exit 1
   fi
 

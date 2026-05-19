@@ -23,9 +23,16 @@ load("figure_2_workspace.RData")
 # Source project-specific scripts
 
 ```{r source-scripts}
-# Header processing functions for RAD and BLAZE outputs
-source("~/Desktop/rad_paper/project_specific_scripts/process_extracted_headers.R")
-source("~/Desktop/rad_paper/project_specific_scripts/generate_sctagger_ids.R")
+# PROJECT_SCRIPTS is exported by config.sh / config.local.sh.
+# Falls back to a sibling project_specific_scripts/ directory if unset.
+project_scripts <- Sys.getenv("PROJECT_SCRIPTS", unset = "../project_specific_scripts")
+if (!dir.exists(project_scripts)) {
+  stop("PROJECT_SCRIPTS not found: ", project_scripts,
+       " — set the PROJECT_SCRIPTS env var (see config.local.sh) ",
+       "or place the scripts in ../project_specific_scripts/")
+}
+source(file.path(project_scripts, "process_extracted_headers.R"))
+source(file.path(project_scripts, "generate_sctagger_ids.R"))
 ```
 
 # Panel 2B: True Positive Barcodes (RAD vs BLAZE)
@@ -67,13 +74,15 @@ head(compiled_precision_statistics)
 
 # Processing extracted headers from RAD
 # rad_sctagger_headers <- process_extracted_rad_headers(
-#   path = "/Volumes/CMV_SSD_2/results/rad/demultiplexed/synthetic_data/100725_rad_sctagger_wl/extracted_headers.csv",
+#   path = file.path(Sys.getenv("RESULTS_BASE"),
+#                    "synthetic_data/100725_rad_sctagger_wl/extracted_headers.csv"),
 #   mode = "synth"
 # )
 
 # Processing extracted headers from BLAZE
 # blaze_sctagger_headers <- process_extracted_blaze_headers(
-#   path = "/Volumes/CMV_SSD_2/results/blaze/sctagger/100725_blaze_sctagger_wl/extracted_headers.csv"
+#   path = file.path(Sys.getenv("BLAZE_RESULTS"),
+#                    "sctagger/100725_blaze_sctagger_wl/extracted_headers.csv")
 # )
 
 # (Prism tables: "Figure 2E TP read", "Figure 2F FP read")
@@ -108,7 +117,7 @@ head(barcode_sctagger_dist)
 ```{r supplemental-downsampling}
 # Downsampling analysis across simulation sizes (S, M, L)
 # Data from RAD whitelist detection results at different read depths
-# /Volumes/CMV_SSD_2/results/rad/whitelist_detection/synthetic_data/
+# ${WL_DETECTION_RESULTS}/synthetic_data/
 
 # Downsampling results: 100K, 250K, 500K, and full dataset
 # (Prism tables: "sctagger downsampling raw data, rad", "sctagger downsampling raw data, blaze")

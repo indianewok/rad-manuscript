@@ -21,12 +21,12 @@ Headline claim: RAD is faster and lighter than BLAZE / Flexiplex on a standard s
 ## Inputs
 
 - **Workspace:** `figure_4_workspace.RData` — see [`../data/README.md`](../data/README.md)
-- **Demultiplexed FASTQs (full pipeline):**
-  - `/Volumes/CMV_SSD_2/results/rad/demultiplexed/scmixology2/*_scmix_timing_run_r{1,2,3}/`
-  - `/Volumes/CMV_SSD_2/results/rad/demultiplexed/splitseq/*_splitseq/`
-  - `/Volumes/CMV_SSD_2/results/rad/demultiplexed/sans_wl/*_nbc_{sans,wl}/`
-  - `/Volumes/CMV_SSD_2/results/rad/demultiplexed/visium_data/*_pt0{72,86}_bc*/` (8 sections)
-  - `/Volumes/CMV_SSD_2/results/rad/demultiplexed/sans_wl/*_la{1,2,3,1mem,3mem}_{sans,wl}/`
+- **Demultiplexed FASTQs (full pipeline)** — paths relative to `${RESULTS_BASE}` (see `config.local.sh`):
+  - `scmixology2/*_scmix_timing_run_r{1,2,3}/`
+  - `splitseq/*_splitseq/`
+  - `sans_wl/*_nbc_{sans,wl}/`
+  - `visium_data/*_pt0{72,86}_bc*/` (8 sections)
+  - `sans_wl/*_la{1,2,3,1mem,3mem}_{sans,wl}/`
 - **Visium H&E:** `tissue_hires_image.png` (Engblom *et al.*, section 12)
 
 ## Scripts in this directory

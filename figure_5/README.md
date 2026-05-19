@@ -17,7 +17,7 @@ Headline claim: RAD-demultiplexed long-read data resolve full IGH constant regio
 ## Inputs
 
 - **Workspace:** `figure_5_workspace.RData` — see [`../data/README.md`](../data/README.md)
-- **Demultiplexed FASTQs (full pipeline):** reuses Figure 4 NBC + Visium output at `/Volumes/CMV_SSD_2/results/rad/demultiplexed/sans_wl/nbc_wl/` and `.../visium_data/`
+- **Demultiplexed FASTQs (full pipeline):** reuses Figure 4 NBC + Visium output at `${RESULTS_BASE}/sans_wl/nbc_wl/` and `${RESULTS_BASE}/visium_data/`
 - **IgBLAST clonotyping:** driven by `project_specific_scripts/rnabloom_to_igblast.sh` and `generate_ig_mappings.sh`
 - **Reference:** T2T chr14 BAM depth files (`nbc_chr14_t2t_mapont.depth.csv`, `rsq_chr14_t2t_mapont.depth.csv`)
 

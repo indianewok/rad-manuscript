@@ -1,5 +1,5 @@
 suppressMessages({library(data.table)})
-setwd("/Users/cmv/Desktop/manuscripts/rad/per_figure/figure_2")
+# Run this script from its own directory (figure_2/), or `cd figure_2/ && Rscript verify_fig2.R`.
 load("figure_2_workspace.RData")
 rad <- rad_sctagger_headers; blaze <- blaze_sctagger_headers
 

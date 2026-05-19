@@ -26,7 +26,14 @@ load("figure_4_workspace.RData")
 # Source project-specific scripts
 
 ```{r source-scripts}
-source("~/Desktop/rad_paper/project_specific_scripts/comparing_visium_data.R")
+# PROJECT_SCRIPTS is exported by config.sh / config.local.sh.
+project_scripts <- Sys.getenv("PROJECT_SCRIPTS", unset = "../project_specific_scripts")
+if (!dir.exists(project_scripts)) {
+  stop("PROJECT_SCRIPTS not found: ", project_scripts,
+       " — set the PROJECT_SCRIPTS env var (see config.local.sh) ",
+       "or place the scripts in ../project_specific_scripts/")
+}
+source(file.path(project_scripts, "comparing_visium_data.R"))
 ```
 
 # Panels 4A-4B: Speed and Memory Benchmarking (scMixology2)
@@ -34,10 +41,10 @@ source("~/Desktop/rad_paper/project_specific_scripts/comparing_visium_data.R")
 ```{r panel-4a-4b}
 # Benchmarking RAD, Flexiplex, and BLAZE on scmixology2 dataset (25M reads)
 # Single-threaded, triplicate runs
-# Data from timing logs:
-# /Volumes/CMV_SSD_2/results/rad/demultiplexed/scmixology2/102125_scmix_timing_run_r1/scmix2_timing.csv
-# /Volumes/CMV_SSD_2/results/rad/demultiplexed/scmixology2/102425_scmix_timing_run_r2/
-# /Volumes/CMV_SSD_2/results/rad/demultiplexed/scmixology2/102525_scmix_timing_run_r3/
+# Data from timing logs (paths relative to ${RESULTS_BASE}):
+#   scmixology2/102125_scmix_timing_run_r1/scmix2_timing.csv
+#   scmixology2/102425_scmix_timing_run_r2/
+#   scmixology2/102525_scmix_timing_run_r3/
 
 # (Prism tables: "Run speed, single-threaded, scmixology2, user + system time")
 # (Prism tables: "Memory utilization, single-threaded, scmixology2")
@@ -62,8 +69,8 @@ source("~/Desktop/rad_paper/project_specific_scripts/comparing_visium_data.R")
 # final_splitseq_cts: final barcode counts
 
 # Data processing from project script:
-# Split-seq extracted headers from SSD:
-# /Volumes/CMV_SSD_2/results/rad/demultiplexed/splitseq/100325_rad_splitseq/extracted_headers_new.csv
+# Split-seq extracted headers at:
+#   ${RESULTS_BASE}/splitseq/100325_rad_splitseq/extracted_headers_new.csv
 
 # (Prism tables: "Split-Seq tabulation (barcodes recovered)")
 ```
@@ -84,8 +91,7 @@ source("~/Desktop/rad_paper/project_specific_scripts/comparing_visium_data.R")
 
 ```{r panel-4f}
 # Correlation of read counts between RAD runs with/without short-read whitelists
-# Data from /Volumes/CMV_SSD_2/results/rad/demultiplexed/sans_wl/
-# *_barcode_counts_sans_vs_wl.csv files
+# Data from ${RESULTS_BASE}/sans_wl/*_barcode_counts_sans_vs_wl.csv
 # NOTE: This panel is still marked TBD in the manuscript
 ```
 

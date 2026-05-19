@@ -2,31 +2,33 @@
 
 Date: 2026-03-16
 
+All paths below reference variables defined in [`../config.sh`](../config.sh) (or your local override in `config.local.sh`).
+
 ## Software Versions
 
 - **RAD**: commit `2a37ac9e01a453b5d6c1423f1f1b6b7023b8276f` (2026-03-13)
-  - Binary: `/Users/cmv/Desktop/rad/build/rad` (symlinked at `/Users/cmv/Desktop/tools/rad`)
-  - `generate_whitelist`: `/Users/cmv/Desktop/rad/build/generate_whitelist`
+  - Binary: `${RAD_BIN}` (built from the RAD repo)
+  - Whitelist generator: `${GEN_WL_BIN}`
   - Note: `generate_whitelist` was patched in this session to support bitlist-encoded
     whitelists (10x kit keys like `10x_3v3`). The fix wires `check_if_bitlist()` +
     `int64_seq::bits_to_sequence()` into the `read_whitelist()` function in
     `src/whitelist_generator.cpp`.
-- **BLAZE**: v0.10.1 (pip package `blaze`, installed at `/Users/cmv/miniconda3/bin/blaze`)
+- **BLAZE**: v0.10.1 (pip package `blaze`, accessible as `${BLAZE_BIN}`)
 
 ## Input Data
 
-ScTagger synthetic long-read simulations (Sharpington et al.):
+ScTagger synthetic long-read simulations (Sharpington et al.). Paths relative to `${SCTAGGER_SIM}` (= `${RAW_FQ}/sctagger_sim/long-reads`):
 
 | Dataset | FASTQ | True barcodes |
 |---------|-------|---------------|
-| S | `/Volumes/CMV_SSD_2/raw_fqs/sctagger_sim/long-reads/shuffled_S_lr_synth.fq.gz` | 50 |
-| M | `/Volumes/CMV_SSD_2/raw_fqs/sctagger_sim/long-reads/shuffled_M_lr_synth.fq.gz` | 500 |
-| L | `/Volumes/CMV_SSD_2/raw_fqs/sctagger_sim/long-reads/shuffled_L_lr_synth.fq.gz` | 5,000 |
-| 100K | `/Volumes/CMV_SSD_2/raw_fqs/sctagger_sim/long-reads/100K_downsampled_L_lr_synth.fq.gz` | 5,000 |
-| 250K | `/Volumes/CMV_SSD_2/raw_fqs/sctagger_sim/long-reads/250K_downsampled_L_lr_synth.fq.gz` | 5,000 |
-| 500K | `/Volumes/CMV_SSD_2/raw_fqs/sctagger_sim/long-reads/500K_downsampled_L_lr_synth.fq.gz` | 5,000 |
+| S | `shuffled_S_lr_synth.fq.gz` | 50 |
+| M | `shuffled_M_lr_synth.fq.gz` | 500 |
+| L | `shuffled_L_lr_synth.fq.gz` | 5,000 |
+| 100K | `100K_downsampled_L_lr_synth.fq.gz` | 5,000 |
+| 250K | `250K_downsampled_L_lr_synth.fq.gz` | 5,000 |
+| 500K | `500K_downsampled_L_lr_synth.fq.gz` | 5,000 |
 
-Truth files: `/Volumes/CMV_SSD_2/raw_fqs/sctagger_sim/truth/{S,M,L}.truth.tsv.gz`
+Truth files: `${SCTAGGER_TRUTH}/{S,M,L}.truth.tsv.gz`
 
 ScTagger read layout (from `rad list`, key: `sctagger`):
 - Primer: `CTACACGACGCTCTTCCGATCT` (22bp)
@@ -41,7 +43,7 @@ All runs used `-e 0.3` (max edit distance ratio for adapter search) and `-w 10x_
 
 ```bash
 # Template command (substitute {TAG} and {FASTQ}):
-/Users/cmv/Desktop/rad/build/generate_whitelist \
+"${GEN_WL_BIN}" \
   -i {FASTQ} \
   -o /tmp/test_wl_{TAG} \
   -p CTACACGACGCTCTTCCGATCT \
@@ -51,57 +53,25 @@ All runs used `-e 0.3` (max edit distance ratio for adapter search) and `-w 10x_
   -t 4
 ```
 
-Exact commands run:
+Exact commands run (for each `{TAG} ∈ {S, M, L, 100K, 250K, 500K}` against `${SCTAGGER_SIM}/{shuffled,…}_lr_synth.fq.gz`):
 
 ```bash
-# S
-/Users/cmv/Desktop/rad/build/generate_whitelist \
-  -i /Volumes/CMV_SSD_2/raw_fqs/sctagger_sim/long-reads/shuffled_S_lr_synth.fq.gz \
-  -o /tmp/test_wl_S -p CTACACGACGCTCTTCCGATCT -n 16 -w 10x_3v3 -e 0.3 -t 4
-
-# M
-/Users/cmv/Desktop/rad/build/generate_whitelist \
-  -i /Volumes/CMV_SSD_2/raw_fqs/sctagger_sim/long-reads/shuffled_M_lr_synth.fq.gz \
-  -o /tmp/test_wl_M -p CTACACGACGCTCTTCCGATCT -n 16 -w 10x_3v3 -e 0.3 -t 4
-
-# L
-/Users/cmv/Desktop/rad/build/generate_whitelist \
-  -i /Volumes/CMV_SSD_2/raw_fqs/sctagger_sim/long-reads/shuffled_L_lr_synth.fq.gz \
-  -o /tmp/test_wl_L -p CTACACGACGCTCTTCCGATCT -n 16 -w 10x_3v3 -e 0.3 -t 4
-
-# 100K (downsampled from L)
-/Users/cmv/Desktop/rad/build/generate_whitelist \
-  -i /Volumes/CMV_SSD_2/raw_fqs/sctagger_sim/long-reads/100K_downsampled_L_lr_synth.fq.gz \
-  -o /tmp/test_wl_100K -p CTACACGACGCTCTTCCGATCT -n 16 -w 10x_3v3 -e 0.3 -t 4
-
-# 250K (downsampled from L)
-/Users/cmv/Desktop/rad/build/generate_whitelist \
-  -i /Volumes/CMV_SSD_2/raw_fqs/sctagger_sim/long-reads/250K_downsampled_L_lr_synth.fq.gz \
-  -o /tmp/test_wl_250K -p CTACACGACGCTCTTCCGATCT -n 16 -w 10x_3v3 -e 0.3 -t 4
-
-# 500K (downsampled from L)
-/Users/cmv/Desktop/rad/build/generate_whitelist \
-  -i /Volumes/CMV_SSD_2/raw_fqs/sctagger_sim/long-reads/500K_downsampled_L_lr_synth.fq.gz \
-  -o /tmp/test_wl_500K -p CTACACGACGCTCTTCCGATCT -n 16 -w 10x_3v3 -e 0.3 -t 4
+for TAG in S M L 100K 250K 500K; do
+  case "$TAG" in
+    S|M|L) FQ="${SCTAGGER_SIM}/shuffled_${TAG}_lr_synth.fq.gz" ;;
+    *)     FQ="${SCTAGGER_SIM}/${TAG}_downsampled_L_lr_synth.fq.gz" ;;
+  esac
+  "${GEN_WL_BIN}" -i "$FQ" -o "/tmp/test_wl_${TAG}" \
+    -p CTACACGACGCTCTTCCGATCT -n 16 -w 10x_3v3 -e 0.3 -t 4
+done
 ```
 
 ## BLAZE Commands
 
 ```bash
-# L dataset (whitelist detection only, no demultiplexing)
-mkdir -p /tmp/blaze_test_L
-blaze \
-  --expect-cells 5000 \
-  --10x-kit-version 3v3 \
-  --threads 4 \
-  --no-demultiplexing \
-  --overwrite \
-  --output-prefix /tmp/blaze_test_L/ \
-  /Volumes/CMV_SSD_2/raw_fqs/sctagger_sim/long-reads/shuffled_L_lr_synth.fq.gz
-
-# Template command for all datasets (substitute {TAG} and {FASTQ}):
+# Template (substitute {TAG} and {FASTQ}):
 mkdir -p /tmp/blaze_test_{TAG}
-blaze \
+"${BLAZE_BIN}" \
   --expect-cells 5000 \
   --10x-kit-version 3v3 \
   --threads 4 \
@@ -109,36 +79,19 @@ blaze \
   --overwrite \
   --output-prefix /tmp/blaze_test_{TAG}/ \
   {FASTQ}
+```
 
-# S
-blaze --expect-cells 5000 --10x-kit-version 3v3 --threads 4 --no-demultiplexing --overwrite \
-  --output-prefix /tmp/blaze_test_S/ \
-  /Volumes/CMV_SSD_2/raw_fqs/sctagger_sim/long-reads/shuffled_S_lr_synth.fq.gz
-
-# M
-blaze --expect-cells 5000 --10x-kit-version 3v3 --threads 4 --no-demultiplexing --overwrite \
-  --output-prefix /tmp/blaze_test_M/ \
-  /Volumes/CMV_SSD_2/raw_fqs/sctagger_sim/long-reads/shuffled_M_lr_synth.fq.gz
-
-# L
-blaze --expect-cells 5000 --10x-kit-version 3v3 --threads 4 --no-demultiplexing --overwrite \
-  --output-prefix /tmp/blaze_test_L/ \
-  /Volumes/CMV_SSD_2/raw_fqs/sctagger_sim/long-reads/shuffled_L_lr_synth.fq.gz
-
-# 100K (downsampled from L)
-blaze --expect-cells 5000 --10x-kit-version 3v3 --threads 4 --no-demultiplexing --overwrite \
-  --output-prefix /tmp/blaze_test_100K/ \
-  /Volumes/CMV_SSD_2/raw_fqs/sctagger_sim/long-reads/100K_downsampled_L_lr_synth.fq.gz
-
-# 250K (downsampled from L)
-blaze --expect-cells 5000 --10x-kit-version 3v3 --threads 4 --no-demultiplexing --overwrite \
-  --output-prefix /tmp/blaze_test_250K/ \
-  /Volumes/CMV_SSD_2/raw_fqs/sctagger_sim/long-reads/250K_downsampled_L_lr_synth.fq.gz
-
-# 500K (downsampled from L)
-blaze --expect-cells 5000 --10x-kit-version 3v3 --threads 4 --no-demultiplexing --overwrite \
-  --output-prefix /tmp/blaze_test_500K/ \
-  /Volumes/CMV_SSD_2/raw_fqs/sctagger_sim/long-reads/500K_downsampled_L_lr_synth.fq.gz
+```bash
+for TAG in S M L 100K 250K 500K; do
+  case "$TAG" in
+    S|M|L) FQ="${SCTAGGER_SIM}/shuffled_${TAG}_lr_synth.fq.gz" ;;
+    *)     FQ="${SCTAGGER_SIM}/${TAG}_downsampled_L_lr_synth.fq.gz" ;;
+  esac
+  mkdir -p "/tmp/blaze_test_${TAG}"
+  "${BLAZE_BIN}" --expect-cells 5000 --10x-kit-version 3v3 --threads 4 \
+    --no-demultiplexing --overwrite \
+    --output-prefix "/tmp/blaze_test_${TAG}/" "$FQ"
+done
 ```
 
 ## Results: RAD generate_whitelist
@@ -178,8 +131,8 @@ putative barcode counting is interrupted mid-run).
 
 ## Output Locations
 
-RAD whitelist outputs: `/tmp/test_wl_{S,M,L,100K,250K,500K}.{csv,txt}`
-BLAZE outputs: `/tmp/blaze_test_{S,L}/`
+- RAD whitelist outputs: `/tmp/test_wl_{S,M,L,100K,250K,500K}.{csv,txt}`
+- BLAZE outputs: `/tmp/blaze_test_{S,M,L,100K,250K,500K}/`
 
 ## Notes
 

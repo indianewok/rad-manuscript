@@ -1,7 +1,9 @@
 suppressMessages(library(data.table))
 b1 <- fread("/tmp/b1_whitelist.csv", header=FALSE)$V1
 b2 <- fread("/tmp/b2_whitelist.csv", header=FALSE)$V1
-full_wl <- fread("/Users/cmv/Desktop/rad_paper/barcode_whitelists/rageseq_full_bcs.csv")$barcode
+wl_dir <- Sys.getenv("WL_DIR")
+if (wl_dir == "") stop("WL_DIR env var not set — see config.local.sh")
+full_wl <- fread(file.path(wl_dir, "rageseq_full_bcs.csv"))$barcode
 b1_tp <- sum(b1 %in% full_wl); b1_fp <- length(b1) - b1_tp
 b2_tp <- sum(b2 %in% full_wl); b2_fp <- length(b2) - b2_tp
 cat(sprintf("BLAZE B1 (default): n=%d  TP=%d  FP=%d\n", length(b1), b1_tp, b1_fp))

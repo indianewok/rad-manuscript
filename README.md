@@ -52,9 +52,11 @@ git clone https://github.com/indianewok/rad-manuscript.git
 cd rad-manuscript
 
 # 2. download the .RData workspaces from Zenodo into figure_2/ ... figure_5/
-#    (see data/README.md for DOIs + sha256 checksums)
+#    (see data/README.md for the DOI + sha256 checksums)
 
-# 3. render analysis-only mode (no rad demux required)
+# 3. set local paths once: cp config.local.sh.example config.local.sh and edit
+
+# 4. render analysis-only mode (no rad demux required)
 ./run_all_figures.sh analysis
 ```
 
@@ -66,7 +68,8 @@ If you have the raw long-read FASTQs (see [`rad_demux_commands.md`](rad_demux_co
 
 ```bash
 # 1. build the RAD binary (see github.com/indianewok/rad)
-# 2. edit config.sh — update RAD_BIN, RAW_FQ, WL_DIR, RESULTS_BASE
+# 2. cp config.local.sh.example config.local.sh
+#    and fill in RAD_BIN, RAW_FQ, RESULTS_BASE, WL_DIR, PROJECT_SCRIPTS, …
 # 3. run end-to-end
 ./run_all_figures.sh
 ```

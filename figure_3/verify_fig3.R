@@ -1,26 +1,37 @@
 #!/usr/bin/env Rscript
 # Figure 3 manuscript claim verification (v2)
-# Compares fresh RAD/BLAZE/Flexiplex vs saved workspace + manuscript claims
-# RAD autogen WL built by taking top-N barcodes by total_count from global WL
+# Compares fresh RAD/BLAZE/Flexiplex vs saved workspace + manuscript claims.
+# RAD autogen WL built by taking top-N barcodes by total_count from global WL.
+#
+# Run from this script's directory: `cd figure_3/ && Rscript verify_fig3.R`.
+# Path inputs are resolved from these env vars (set in config.sh / config.local.sh):
+#   PROJECT_SCRIPTS, RAGESEQ_FULL_WL, RESULTS_BASE, FLEXIPLEX_RESULTS
 
 suppressMessages({
   library(data.table)
   library(rad)
 })
 
-setwd("/Users/cmv/Desktop/manuscripts/rad/per_figure/figure_3")
+env_required <- function(name) {
+  val <- Sys.getenv(name)
+  if (val == "") stop(name, " env var not set — see config.local.sh")
+  val
+}
+
 cat("Loading figure_3_workspace.RData...\n")
 load("figure_3_workspace.RData")
-source("/Users/cmv/Desktop/rad_paper/project_specific_scripts/process_extracted_headers.R")
+source(file.path(env_required("PROJECT_SCRIPTS"), "process_extracted_headers.R"))
 
 # --- TRUTH SOURCES ---
-full_wl   <- fread("/Users/cmv/Desktop/rad_paper/barcode_whitelists/rageseq_full_bcs.csv")$barcode
+full_wl   <- fread(Sys.getenv("RAGESEQ_FULL_WL",
+                              unset = file.path(env_required("WL_DIR"), "rageseq_full_bcs.csv")))$barcode
 filt_wl   <- rageseq_true$barcode
 
 # --- FRESH RAD R1 WL (autogen, knee-thresholded) ---
 # In original workflow, rad_rsq_counts had 4036 BCs — use top-N=4036 as the autogen WL
 cat("\n=== RAD R1 autogen WL (top-4036 by count) ===\n")
-rad_global <- fread("/Volumes/CMV_SSD_2/results/rad/demultiplexed/rageseq/regen_260420/r1_autogen/rsq_whitelist_global.csv")
+rad_global <- fread(file.path(env_required("RESULTS_BASE"),
+                              "rageseq/regen_260420/r1_autogen/rsq_whitelist_global.csv"))
 setorder(rad_global, -total_count)
 rad_fresh_wl_4036 <- rad_global[1:4036, true_barcode]
 cat("RAD fresh WL (top-4036): n =", length(rad_fresh_wl_4036), "\n")
@@ -41,7 +52,8 @@ if (file.exists("/tmp/b2_whitelist.csv") && file.size("/tmp/b2_whitelist.csv") >
 }
 
 # --- Flexiplex F1 WL ---
-flex_f1_file <- "/Volumes/CMV_SSD_2/results/flexiplex/rageseq/regen_260420/f1_autogen/rsq_filtered_whitelist.txt"
+flex_f1_file <- file.path(env_required("FLEXIPLEX_RESULTS"),
+                          "rageseq/regen_260420/f1_autogen/rsq_filtered_whitelist.txt")
 flex_lines <- readLines(flex_f1_file)
 flex_f1_wl <- character(0)
 for (ln in flex_lines) {

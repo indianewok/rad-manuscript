@@ -1,17 +1,30 @@
 
+# Paths resolved from env vars (see config.sh / config.local.sh):
+#   SWEDISH_TONSIL_DIR — Engblom et al. spatial tonsil dataset root
+#   WL_DETECTION_RESULTS — RAD whitelist-detection outputs
+swedish_tonsil_dir <- Sys.getenv("SWEDISH_TONSIL_DIR")
+wl_detection_dir   <- Sys.getenv("WL_DETECTION_RESULTS")
+if (swedish_tonsil_dir == "") stop("SWEDISH_TONSIL_DIR env var not set — see config.local.sh")
+if (wl_detection_dir == "")   stop("WL_DETECTION_RESULTS env var not set — see config.local.sh")
+
+spaceranger_root <- file.path(swedish_tonsil_dir, "data/tonsil/5_spatial_GEX/spaceranger_output")
+visium_wl_csvs   <- file.path(wl_detection_dir,   "120525_visium_data_results")
+
 metadata<-data.table::fread(
-  "/Volumes/PostRot/swedish_tonsil_spatial/EGAD00001011062_metadata/study_experiment_run_sample.csv", header = TRUE
+  file.path(swedish_tonsil_dir, "EGAD00001011062_metadata/study_experiment_run_sample.csv"),
+  header = TRUE
   )
 sample_metadata<-data.table::fread(
-  "/Volumes/PostRot/swedish_tonsil_spatial/EGAD00001011062_metadata/sample_file.csv", header = TRUE
+  file.path(swedish_tonsil_dir, "EGAD00001011062_metadata/sample_file.csv"),
+  header = TRUE
   )
 LR_metadata<-metadata[grep(pattern = "demultiplex", x = sample_alias),]
 LR_metadata<-sample_metadata[,c('sample_alias','file_accession_id')][LR_metadata, on = 'sample_alias']
 
 spaceranger_output<-list.files(
-  path = "/Volumes/PostRot/swedish_tonsil_spatial/data/tonsil/5_spatial_GEX/spaceranger_output/", 
-  recursive = TRUE, 
-  pattern = "csv", 
+  path = spaceranger_root,
+  recursive = TRUE,
+  pattern = "csv",
   full.names = TRUE
 ) %>% {sapply(., FUN = function(X){
     data.table::fread(X) %>% 
@@ -29,9 +42,9 @@ names(spaceranger_output)[2]<-"tonsil2_LR-SpatialVDJ_section16"
 names(spaceranger_output)[1]<-"tonsil2_LR-SpatialVDJ_section12"
 
 spaceranger_mappings<-list.files(
-  path = "/Volumes/PostRot/swedish_tonsil_spatial/data/tonsil/5_spatial_GEX/spaceranger_output/", 
-  recursive = TRUE, 
-  pattern = "csv", 
+  path = spaceranger_root,
+  recursive = TRUE,
+  pattern = "csv",
   full.names = TRUE
   ) %>% dirname %>% dirname %>% dirname %>% basename
 spaceranger_mappings<-data.table(sample_short = spaceranger_mappings, full_sample_name = names(spaceranger_output))
@@ -41,12 +54,12 @@ spaceranger_results<-spaceranger_results[grep(
   pattern = "tonsil1", x = sample_title, invert = TRUE),][,in_tissue := as.logical(in_tissue)]
 
 rad_barcode_results<-lapply(
-  list.files(path = "/Volumes/CMV_SSD_2/results/rad/whitelist_detection/120525_visium_data_results/", pattern = ".csv", 
+  list.files(path = visium_wl_csvs, pattern = ".csv",
              recursive = FALSE, full.names = TRUE),
   FUN = function(X){fread(X)
 })
 names(rad_barcode_results)<-tools::file_path_sans_ext(basename(
-  list.files(path = "/Volumes/CMV_SSD_2/results/rad/whitelist_detection/120525_visium_data_results/", pattern = ".csv", 
+  list.files(path = visium_wl_csvs, pattern = ".csv",
              recursive = FALSE, full.names = TRUE)
   )
 )
@@ -80,13 +93,9 @@ total_samples<-lapply(
     spaceranger_section<-spaceranger_results[sample_title == sample,]
   }
   merged_section<-rad_section[spaceranger_section[,c('barcode','in_tissue','x_coord_pix','y_coord_pix')], on = 'barcode']
-  print(paste0("/Volumes/PostRot/swedish_tonsil_spatial/data/tonsil/5_spatial_GEX/spaceranger_output/",
-               space_sample,
-               "/outs/spatial/scalefactors_json.json"))
-  scales<-jsonlite::fromJSON(txt =paste0("/Volumes/PostRot/swedish_tonsil_spatial/data/tonsil/5_spatial_GEX/spaceranger_output/",
-           space_sample,
-           "/outs/spatial/scalefactors_json.json")
-    )
+  scales_path <- file.path(spaceranger_root, space_sample, "outs/spatial/scalefactors_json.json")
+  print(scales_path)
+  scales<-jsonlite::fromJSON(txt = scales_path)
   merged_section[,y_pix_scaled := y_coord_pix*scales$tissue_hires_scalef][,x_pix_scaled := x_coord_pix*scales$tissue_hires_scalef]
 
   merged_section[is.na(final_bc_annotation), 
@@ -115,7 +124,7 @@ total_samples<-lapply(
 })
 
 
-scales<-jsonlite::fromJSON("/Volumes/PostRot/swedish_tonsil_spatial/data/tonsil/5_spatial_GEX/spaceranger_output/V10T03-276_C1/outs/spatial/scalefactors_json.json")
+scales<-jsonlite::fromJSON(file.path(spaceranger_root, "V10T03-276_C1/outs/spatial/scalefactors_json.json"))
 sct12[,y_pix_scaled := y_coord_pix*scales$tissue_hires_scalef][,x_pix_scaled := x_coord_pix*scales$tissue_hires_scalef]
 
 sct12[, class :=
@@ -142,7 +151,7 @@ sct12[is.na(ztpois_percentile),
 sct12[is.na(sample_title), sample_title := "tonsil2_LR-SpatialVDJ_section12"]
 
 he_img<-magick::image_read(
-  "/Volumes/PostRot/swedish_tonsil_spatial/data/tonsil/5_spatial_GEX/spaceranger_output/V10T03-276_C1/outs/spatial/tissue_hires_image.png"
+  file.path(spaceranger_root, "V10T03-276_C1/outs/spatial/tissue_hires_image.png")
   )
 he_rast<-as.raster(he_img)
 info<-image_info(he_img)

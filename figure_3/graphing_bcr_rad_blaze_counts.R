@@ -1,12 +1,16 @@
 ####
+# Per-run benchmark output directories live under ${RAD_PAPER_DIR}.
+rad_paper_dir <- Sys.getenv("RAD_PAPER_DIR")
+if (rad_paper_dir == "") stop("RAD_PAPER_DIR env var not set — see config.local.sh")
+
 blaze_bcr<-data.table::fread(
-  "/Users/cmv/Desktop/rad_paper/061125_blaze_bcr_full_timing/extracted_headers.csv")
+  file.path(rad_paper_dir, "061125_blaze_bcr_full_timing/extracted_headers.csv"))
 
 rad_barcode_counts<-data.table::fread(
-  "/Users/cmv/Desktop/rad_paper/061025_rad_nbc_full_timing/nbc_whitelist_true.csv")
+  file.path(rad_paper_dir, "061025_rad_nbc_full_timing/nbc_whitelist_true.csv"))
 
 raw_blaze_data<-data.table::fread(
-  "/Users/cmv/Desktop/rad_paper/061125_blaze_bcr_full_timing/putative_bc.csv", na.strings = "")
+  file.path(rad_paper_dir, "061125_blaze_bcr_full_timing/putative_bc.csv"), na.strings = "")
 
 raw_blaze_bcs<-raw_blaze_data[,.N,by = 'putative_bc']
 processed_blaze_bcs<-blaze_bcr[,.N,by = 'barcode']

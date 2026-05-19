@@ -2,8 +2,9 @@
 
 The four `.RData` workspace files referenced by the figure analyses are too large for GitHub (5.8 GB total). They are hosted on Zenodo with a citable DOI.
 
-> **Zenodo record:** _(TODO: replace with DOI after upload)_
-> `https://doi.org/10.5281/zenodo.XXXXXXX`
+> **Zenodo record:** [`10.5281/zenodo.20189813`](https://doi.org/10.5281/zenodo.20189813)
+>
+> _Note: the deposit is currently held as a private draft on Zenodo pending manuscript acceptance. The DOI above is reserved and will resolve to the public record on publication._
 
 ---
 
@@ -26,7 +27,7 @@ After cloning this repo, download each `.RData` into its figure directory:
 
 ```bash
 # from the repo root
-ZENODO_BASE="https://zenodo.org/records/XXXXXXX/files"  # TODO: replace
+ZENODO_BASE="https://zenodo.org/records/20189813/files"
 
 curl -L -o figure_2/figure_2_workspace.RData "${ZENODO_BASE}/figure_2_workspace.RData"
 curl -L -o figure_3/figure_3_workspace.RData "${ZENODO_BASE}/figure_3_workspace.RData"

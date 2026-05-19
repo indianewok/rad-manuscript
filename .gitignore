@@ -21,6 +21,8 @@
 *.knit.md
 *.utf8.md
 figure_*/figure_*_files/
+figure_*/figure_*_analysis.html
+figure_*/figure_*_analysis_regen.html
 
 # --- Harness runtime manifests (regenerated on each run) ---
 **/.last_demux_paths.txt
@@ -44,3 +46,6 @@ build/
 # --- Local-only notes (don't commit ad-hoc TODOs) ---
 to_fix.txt
 NOTES.local.md
+
+# --- Machine-specific overrides (see config.local.sh.example) ---
+config.local.sh

@@ -1,7 +1,7 @@
 #!/usr/bin/env Rscript
 # Figure 4 — manuscript claim verification
+# Run from this script's directory: `cd figure_4/ && Rscript verify_fig4.R`.
 suppressMessages(library(data.table))
-setwd("/Users/cmv/Desktop/manuscripts/rad/per_figure/figure_4")
 cat("Loading figure_4_workspace.RData...\n")
 load("figure_4_workspace.RData")
 
