@@ -17,7 +17,8 @@ The RAD tool itself lives at **[github.com/indianewok/rad](https://github.com/in
 ├── INSTALL.md                 ← dependency setup (R packages, RAD binary, seqkit)
 ├── LICENSE                    ← MIT
 ├── CITATION.cff               ← how to cite this repo
-├── config.sh                  ← single source of truth for paths (edit for your machine)
+├── config.sh                  ← public default paths (placeholders)
+├── config.local.sh.example    ← template — cp to config.local.sh and edit
 ├── manuscript_colors.txt      ← official manuscript color palette
 ├── rad_demux_commands.md      ← every rad demux command used, organized by figure
 │
