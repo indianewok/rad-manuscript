@@ -60,7 +60,7 @@ cd rad-manuscript
 
 This produces `figure_N/figure_N_analysis.html` for each figure. No external SSD required.
 
-### 2. Full re-run from raw FASTQs (slow — full pipeline)
+### 2. Full re-run from raw FASTQs (full pipeline)
 
 If you have the raw long-read FASTQs (see [`rad_demux_commands.md`](rad_demux_commands.md) for sources) and want to regenerate every intermediate:
 
