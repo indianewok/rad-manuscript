@@ -4,7 +4,7 @@
 # RAD autogen WL built by taking top-N barcodes by total_count from global WL.
 #
 # Run from this script's directory: `cd figure_3/ && Rscript verify_fig3.R`.
-# Path inputs are resolved from these env vars (set in config.sh / config.local.sh):
+# Path inputs are resolved from these env vars (documented in README.md → Setup):
 #   PROJECT_SCRIPTS, RAGESEQ_FULL_WL, RESULTS_BASE, FLEXIPLEX_RESULTS
 
 suppressMessages({
@@ -14,7 +14,7 @@ suppressMessages({
 
 env_required <- function(name) {
   val <- Sys.getenv(name)
-  if (val == "") stop(name, " env var not set — see config.local.sh")
+  if (val == "") stop(name, " env var not set — see README.md → Setup")
   val
 }
 

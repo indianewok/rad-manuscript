@@ -2,7 +2,7 @@
 
 Date: 2026-03-16
 
-All paths below reference variables defined in [`../config.sh`](../config.sh) (or your local override in `config.local.sh`).
+All paths below reference environment variables documented in [../../README.md](../../README.md) → Setup.
 
 ## Software Versions
 

@@ -16,27 +16,26 @@
 #   4. Renders figure_2_analysis.Rmd
 # =============================================================================
 set -euo pipefail
+
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
-source "${REPO_ROOT}/config.sh"
+source "${SCRIPT_DIR}/_lib.sh"
 
-check_ssd
-check_rad
-
-# --- Configuration ---
-STAMP=$(timestamp)
 DEMUX_MODE="${1:-full}"   # "full" = rerun WL gen + demux + analysis; "analysis" = Rmd only
 
-# --- Binaries / scripts (GEN_WL_BIN + EXTRACT_HEADERS come from config.sh) ---
-: "${GEN_WL_BIN:?GEN_WL_BIN must be set in config.sh / config.local.sh}"
-: "${EXTRACT_HEADERS:?EXTRACT_HEADERS must be set in config.sh / config.local.sh}"
+if [ "$DEMUX_MODE" = "full" ]; then
+  require_env RAD_BIN GEN_WL_BIN EXTRACT_HEADERS RAW_FQ RESULTS_BASE SCTAGGER_SIM
+  require_file_executable "$RAD_BIN" "rad binary"
+  require_file_executable "$GEN_WL_BIN" "generate_whitelist binary"
+fi
+
+STAMP=$(timestamp)
 
 # --- ScTagger layout parameters (from sctagger_sim_read_layout.csv) ---
 SCTAGGER_PRIMER="CTACACGACGCTCTTCCGATCT"   # 22bp forward primer
 SCTAGGER_BC_LEN=16
 
-# --- Output directories ---
-FIG2_DEMUX_BASE="${RESULTS_BASE}/synthetic_data"
+FIG2_DEMUX_BASE="${RESULTS_BASE:-/PLACEHOLDER}/synthetic_data"
 
 # =============================================================================
 # STEP 1: GENERATE WHITELISTS + RAD DEMUX + EXTRACT HEADERS per simulation
@@ -44,14 +43,9 @@ FIG2_DEMUX_BASE="${RESULTS_BASE}/synthetic_data"
 if [ "$DEMUX_MODE" = "full" ]; then
   log_start "Figure 2 — Whitelist generation + RAD demux on ScTagger data"
 
-  if [ ! -x "$GEN_WL_BIN" ]; then
-    echo "ERROR: generate_whitelist not found at $GEN_WL_BIN"
-    echo "Build the RAD repo (https://github.com/indianewok/rad) and set GEN_WL_BIN in config.local.sh."
-    exit 1
-  fi
-
   if [ ! -f "$EXTRACT_HEADERS" ]; then
     echo "ERROR: extract_rad_headers_new.sh not found at $EXTRACT_HEADERS"
+    echo "Set EXTRACT_HEADERS (or PROJECT_SCRIPTS) — see README.md → Setup."
     exit 1
   fi
 
@@ -85,7 +79,6 @@ if [ "$DEMUX_MODE" = "full" ]; then
       -t "$RAD_THREADS" \
       -v
 
-    # Use the .txt file (final barcodes only), NOT the .csv (all candidates)
     generated_wl="${wl_prefix}.txt"
     if [ ! -f "$generated_wl" ]; then
       echo "WARNING: No whitelist .txt generated for ${sim_tag}, skipping demux"
@@ -125,7 +118,7 @@ if [ "$DEMUX_MODE" = "full" ]; then
   log_done "Figure 2 — Whitelist generation + RAD demux + header extraction"
 
   # Write manifest so the Rmd knows where to find results
-  cat > "${REPO_ROOT}/figure_2/.last_demux_paths.txt" <<MANIFEST
+  cat > "${REPO_ROOT}/figures/figure_2/.last_demux_paths.txt" <<MANIFEST
 timestamp=${STAMP}
 sctagger_S=${FIG2_DEMUX_BASE}/${STAMP}_sctagger_S
 sctagger_M=${FIG2_DEMUX_BASE}/${STAMP}_sctagger_M
@@ -141,8 +134,8 @@ fi
 # =============================================================================
 log_start "Figure 2 — R analysis"
 
-cd "${REPO_ROOT}/figure_2"
+cd "${REPO_ROOT}/figures/figure_2"
 Rscript -e "rmarkdown::render('figure_2_analysis.Rmd', output_dir = '.')"
 
 log_done "Figure 2 — Complete"
-echo "Output: ${REPO_ROOT}/figure_2/figure_2_analysis.html"
+echo "Output: ${REPO_ROOT}/figures/figure_2/figure_2_analysis.html"

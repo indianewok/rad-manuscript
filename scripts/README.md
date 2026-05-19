@@ -1,6 +1,6 @@
 # scripts/
 
-Shell drivers that wire `rad demux` + `Rscript ::: rmarkdown::render` together for each figure. All scripts source [`../config.sh`](../config.sh) (which in turn sources `../config.local.sh` for your machine-specific paths) before doing anything, so you only set paths once.
+Shell drivers that wire `rad demux` + `Rscript ::: rmarkdown::render` together for each figure. Every path is resolved from environment variables — see [`../README.md`](../README.md) → Setup for the full list of vars to export before running anything. `_lib.sh` (sourced by every driver) collects shared helpers and the env-var validation that fails fast on missing config.
 
 | Script | Purpose |
 |--------|---------|
@@ -47,7 +47,7 @@ Shell drivers that wire `rad demux` + `Rscript ::: rmarkdown::render` together f
 
 | Side effect | Where |
 |-------------|-------|
-| Demux output | `${RESULTS_BASE}/...` (set in `config.local.sh`) |
-| Latest demux paths manifest | `figure_N/.last_demux_paths.txt` (gitignored) |
-| Rendered figure HTML | `figure_N/figure_N_analysis.html` (gitignored) |
-| Figure-5 raw data CSVs | `figure_5/{heatmap,histogram,scatterplot}_raw_data/` |
+| Demux output | `${RESULTS_BASE}/...` (env var) |
+| Latest demux paths manifest | `figures/figure_N/.last_demux_paths.txt` (gitignored) |
+| Rendered figure HTML | `figures/figure_N/figure_N_analysis.html` (gitignored) |
+| Figure-5 raw data CSVs | `figures/figure_5/{heatmap,histogram,scatterplot}_raw_data/` |

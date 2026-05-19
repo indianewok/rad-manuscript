@@ -11,7 +11,7 @@ sctagger_truth <- Sys.getenv("SCTAGGER_TRUTH",
                              unset = file.path(Sys.getenv("RAW_FQ"), "sctagger_sim/truth"))
 if (!dir.exists(sctagger_truth)) {
   stop("SCTAGGER_TRUTH not found at: ", sctagger_truth,
-       " — set SCTAGGER_TRUTH (or RAW_FQ) in config.local.sh")
+       " — set SCTAGGER_TRUTH (or RAW_FQ) in your shell env (see README.md → Setup)")
 }
 truth <- fread(
   cmd = sprintf("gzip -dc %s", shQuote(file.path(sctagger_truth, "L.truth.tsv.gz"))),

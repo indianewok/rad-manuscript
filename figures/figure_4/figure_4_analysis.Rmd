@@ -26,11 +26,11 @@ load("figure_4_workspace.RData")
 # Source project-specific scripts
 
 ```{r source-scripts}
-# PROJECT_SCRIPTS is exported by config.sh / config.local.sh.
+# PROJECT_SCRIPTS is exported per README.md → Setup.
 project_scripts <- Sys.getenv("PROJECT_SCRIPTS", unset = "../project_specific_scripts")
 if (!dir.exists(project_scripts)) {
   stop("PROJECT_SCRIPTS not found: ", project_scripts,
-       " — set the PROJECT_SCRIPTS env var (see config.local.sh) ",
+       " — set the PROJECT_SCRIPTS env var (see README.md → Setup) ",
        "or place the scripts in ../project_specific_scripts/")
 }
 source(file.path(project_scripts, "comparing_visium_data.R"))

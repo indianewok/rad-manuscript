@@ -2,7 +2,7 @@
 
 This document catalogs the `rad demux` commands used to generate the demultiplexed data for the RAD paper, organized by dataset and figure.
 
-All paths below use variables defined in [`config.sh`](config.sh) (or your local override in `config.local.sh`). Key vars:
+All paths below use environment variables documented in [../README.md](../README.md) → Setup. Key vars:
 - `${RAD_BIN}`, `${GEN_WL_BIN}` — RAD binaries
 - `${RAW_FQ}` — root of raw input FASTQs
 - `${WL_DIR}` — barcode whitelist directory

@@ -10,29 +10,23 @@
 #   - NBC BCR (sans WL + with WL)                  — Panel 4F, 4G-4H
 #   - Visium spatial (8 barcodes × 2 patients)     — Panels 4I-4K
 #   - LA1/LA2/LA3 sans/with WL                     — Panel 4F (supplemental)
-#   - Read length/count data (splitseq, scmix2, nbc, rsq) — Panel 4G-4H
-#
-# What this does:
-#   1. Runs rad demux on scMixology2 (×3 replicates for timing)
-#   2. Runs rad demux on Split-seq
-#   3. Runs rad demux on NBC BCR (sans WL + with WL)
-#   4. Runs rad demux on 8 Visium sections
-#   5. Runs sans-WL/with-WL benchmarks on LA datasets
-#   6. Renders figure_4_analysis.Rmd
 # =============================================================================
 set -euo pipefail
+
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
-source "${REPO_ROOT}/config.sh"
+source "${SCRIPT_DIR}/_lib.sh"
 
-check_ssd
-check_rad
+DEMUX_MODE="${1:-full}"      # "full" or "analysis"
+SKIP_TIMING="${2:-false}"    # "true" to skip scmix timing runs (expensive)
+SKIP_LA="${3:-false}"        # "true" to skip LA benchmark runs (very expensive)
 
-# --- Configuration ---
+if [ "$DEMUX_MODE" = "full" ]; then
+  require_env RAD_BIN RAW_FQ WL_DIR RESULTS_BASE
+  require_file_executable "$RAD_BIN" "rad binary"
+fi
+
 STAMP=$(timestamp)
-DEMUX_MODE="${1:-full}"       # "full" or "analysis"
-SKIP_TIMING="${2:-false}"     # "true" to skip scmix timing runs (expensive)
-SKIP_LA="${3:-false}"         # "true" to skip LA benchmark runs (very expensive)
 
 # =============================================================================
 # STEP 1: RAD DEMUX
@@ -111,21 +105,14 @@ if [ "$DEMUX_MODE" = "full" ]; then
   # -------------------------------------------------------------------------
   # 4I-4K: Visium spatial (8 sections)
   # -------------------------------------------------------------------------
+  require_env VISIUM_WL_DIR
   VISIUM_SAMPLES=(
-    "pt072_bc1009"
-    "pt072_bc1010"
-    "pt072_bc1018"
-    "pt072_bc1020"
-    "pt086_bc1011"
-    "pt086_bc1016"
-    "pt086_bc1018"
-    "pt086_bc1020"
+    "pt072_bc1009" "pt072_bc1010" "pt072_bc1018" "pt072_bc1020"
+    "pt086_bc1011" "pt086_bc1016" "pt086_bc1018" "pt086_bc1020"
   )
 
   for sample in "${VISIUM_SAMPLES[@]}"; do
     vis_out="${RESULTS_BASE}/visium_data/${STAMP}_${sample}"
-    vis_wl="${VISIUM_WL_DIR}/${sample//_/_demultiplex_}.txt"
-    # Derive patient/barcode from sample name for WL file lookup
     patient="${sample%%_*}"
     barcode="${sample##*_}"
     vis_wl="${VISIUM_WL_DIR}/${patient}_demultiplex_${barcode}.txt"
@@ -148,7 +135,8 @@ if [ "$DEMUX_MODE" = "full" ]; then
   # Sans-WL / With-WL benchmarks on LA datasets (optional, very large)
   # -------------------------------------------------------------------------
   if [ "$SKIP_LA" != "true" ]; then
-    # Bash 3.2 compatible: map dataset to FASTQ and whitelist paths
+    require_env LEENA_WL_DIR
+
     get_la_fq() {
       case "$1" in
         la1)    echo "$LA1_FQ" ;;
@@ -171,7 +159,6 @@ if [ "$DEMUX_MODE" = "full" ]; then
     for ds in la1 la2 la3 la1mem la3mem; do
       fq="$(get_la_fq "$ds")"
 
-      # Sans whitelist
       sans_out="${RESULTS_BASE}/sans_wl/${STAMP}_${ds}_sans"
       ensure_dir "$sans_out"
       echo ">> ${ds} sans whitelist..."
@@ -184,7 +171,6 @@ if [ "$DEMUX_MODE" = "full" ]; then
         -v \
         -F "${sans_out}/${ds}_sans_rad.log"
 
-      # With whitelist (if available)
       wl="$(get_la_wl "$ds")"
       if [ -n "$wl" ] && [ -f "$wl" ]; then
         wl_out="${RESULTS_BASE}/sans_wl/${STAMP}_${ds}_wl"
@@ -208,8 +194,7 @@ if [ "$DEMUX_MODE" = "full" ]; then
 
   log_done "Figure 4 — RAD demux"
 
-  # Write manifest
-  cat > "${REPO_ROOT}/figure_4/.last_demux_paths.txt" <<MANIFEST
+  cat > "${REPO_ROOT}/figures/figure_4/.last_demux_paths.txt" <<MANIFEST
 splitseq=${SPLITSEQ_OUT}
 nbc_sans=${NBC_SANS_OUT}
 nbc_wl=${NBC_WL_OUT}
@@ -222,14 +207,12 @@ fi
 # =============================================================================
 log_start "Figure 4 — R analysis"
 
-cd "${REPO_ROOT}/figure_4"
+cd "${REPO_ROOT}/figures/figure_4"
 
-# Run the read length/count data prep first
 echo ">> Preparing read length/count data..."
 Rscript readcountlengthviolinprep.R
 
-# Render the main analysis
 Rscript -e "rmarkdown::render('figure_4_analysis.Rmd', output_dir = '.')"
 
 log_done "Figure 4 — Complete"
-echo "Output: ${REPO_ROOT}/figure_4/figure_4_analysis.html"
+echo "Output: ${REPO_ROOT}/figures/figure_4/figure_4_analysis.html"

@@ -23,7 +23,7 @@
 ## Inputs
 
 - **Workspace:** `figure_4_workspace.RData` — see [`../data/README.md`](../data/README.md)
-- **Demultiplexed FASTQs (full pipeline)** — paths relative to `${RESULTS_BASE}` (see `config.local.sh`):
+- **Demultiplexed FASTQs (full pipeline)** — paths relative to `${RESULTS_BASE}` (env var, see [../../README.md](../../README.md) → Setup):
   - `scmixology2/*_scmix_timing_run_r{1,2,3}/`
   - `splitseq/*_splitseq/`
   - `sans_wl/*_nbc_{sans,wl}/`

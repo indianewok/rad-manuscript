@@ -1,7 +1,7 @@
 ####
 # Per-run benchmark output directories live under ${RAD_PAPER_DIR}.
 rad_paper_dir <- Sys.getenv("RAD_PAPER_DIR")
-if (rad_paper_dir == "") stop("RAD_PAPER_DIR env var not set — see config.local.sh")
+if (rad_paper_dir == "") stop("RAD_PAPER_DIR env var not set — see README.md → Setup")
 
 blaze_bcr<-data.table::fread(
   file.path(rad_paper_dir, "061125_blaze_bcr_full_timing/extracted_headers.csv"))

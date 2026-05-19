@@ -2,19 +2,19 @@
 # =============================================================================
 # RAD Manuscript — Run All Figure Harnesses
 # =============================================================================
-# Usage (from the repo root):
+# Usage (from the repo root, after exporting the env vars listed in README.md):
 #   ./scripts/run_all_figures.sh                  # Full pipeline (demux + analysis)
 #   ./scripts/run_all_figures.sh analysis         # R analysis only (skip demux)
 #   ./scripts/run_all_figures.sh 2 3              # Only figures 2 and 3
 #   ./scripts/run_all_figures.sh analysis 4 5     # Analysis-only for figures 4 and 5
 # =============================================================================
 set -euo pipefail
-SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
-source "${REPO_ROOT}/config.sh"
 
-check_ssd
-check_rad
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+source "${SCRIPT_DIR}/_lib.sh"
+
+require_env RAD_BIN RAW_FQ RESULTS_BASE WL_DIR PROJECT_SCRIPTS
+require_file_executable "$RAD_BIN" "rad binary"
 
 # Parse arguments
 MODE="full"
@@ -34,7 +34,7 @@ fi
 
 echo "============================================"
 echo " RAD Manuscript Figure Generation"
-echo " Mode: ${MODE}"
+echo " Mode:    ${MODE}"
 echo " Figures: ${FIGURES[*]}"
 echo " Started: $(date)"
 echo "============================================"

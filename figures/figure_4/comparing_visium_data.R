@@ -1,11 +1,11 @@
 
-# Paths resolved from env vars (see config.sh / config.local.sh):
+# Paths resolved from env vars (see README.md → Setup):
 #   SWEDISH_TONSIL_DIR — Engblom et al. spatial tonsil dataset root
 #   WL_DETECTION_RESULTS — RAD whitelist-detection outputs
 swedish_tonsil_dir <- Sys.getenv("SWEDISH_TONSIL_DIR")
 wl_detection_dir   <- Sys.getenv("WL_DETECTION_RESULTS")
-if (swedish_tonsil_dir == "") stop("SWEDISH_TONSIL_DIR env var not set — see config.local.sh")
-if (wl_detection_dir == "")   stop("WL_DETECTION_RESULTS env var not set — see config.local.sh")
+if (swedish_tonsil_dir == "") stop("SWEDISH_TONSIL_DIR env var not set — see README.md → Setup")
+if (wl_detection_dir == "")   stop("WL_DETECTION_RESULTS env var not set — see README.md → Setup")
 
 spaceranger_root <- file.path(swedish_tonsil_dir, "data/tonsil/5_spatial_GEX/spaceranger_output")
 visium_wl_csvs   <- file.path(wl_detection_dir,   "120525_visium_data_results")

@@ -23,7 +23,7 @@
 ## Inputs
 
 - **Workspace:** `figure_3_workspace.RData` — see [`../data/README.md`](../data/README.md)
-- **Demultiplexed FASTQs (full pipeline)** — paths relative to `${RESULTS_BASE}` (see `config.local.sh`):
+- **Demultiplexed FASTQs (full pipeline)** — paths relative to `${RESULTS_BASE}` (env var, see [../../README.md](../../README.md) → Setup):
   - `rageseq/*_rsq_tot_and_analysis/`
   - `rageseq/*_rsq_global_wl/`
   - `false_positive_wl/*_rad_fp{1,2,3}/`
