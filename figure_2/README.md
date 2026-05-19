@@ -1,6 +1,8 @@
 # Figure 2 — Benchmarking RAD on Synthetic (ScTagger) Data
 
-Headline claim: on ScTagger long-read simulations RAD recovers more true-positive barcodes than BLAZE with fewer false positives, and the advantage holds across read-depth downsamples.
+![Figure 2](figure_2.png)
+
+> Reference render — full resolution: [`figure_2.pdf`](figure_2.pdf)
 
 ## Panels
 
@@ -37,10 +39,10 @@ Headline claim: on ScTagger long-read simulations RAD recovers more true-positiv
 
 ```bash
 # from repo root — analysis only (workspace already on disk)
-./run_figure_2.sh analysis
+./scripts/run_figure_2.sh analysis
 
 # full pipeline (regenerates whitelists + reruns rad demux + renders)
-./run_figure_2.sh
+./scripts/run_figure_2.sh
 ```
 
 Output: `figure_2_analysis.html` (gitignored — produced fresh by each render).

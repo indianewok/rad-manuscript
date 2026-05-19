@@ -2,15 +2,16 @@
 # =============================================================================
 # RAD Manuscript — Run All Figure Harnesses
 # =============================================================================
-# Usage:
-#   ./run_all_figures.sh                  # Full pipeline (demux + analysis)
-#   ./run_all_figures.sh analysis         # R analysis only (skip demux)
-#   ./run_all_figures.sh 2 3              # Only figures 2 and 3
-#   ./run_all_figures.sh analysis 4 5     # Analysis-only for figures 4 and 5
+# Usage (from the repo root):
+#   ./scripts/run_all_figures.sh                  # Full pipeline (demux + analysis)
+#   ./scripts/run_all_figures.sh analysis         # R analysis only (skip demux)
+#   ./scripts/run_all_figures.sh 2 3              # Only figures 2 and 3
+#   ./scripts/run_all_figures.sh analysis 4 5     # Analysis-only for figures 4 and 5
 # =============================================================================
 set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-source "${SCRIPT_DIR}/config.sh"
+REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
+source "${REPO_ROOT}/config.sh"
 
 check_ssd
 check_rad

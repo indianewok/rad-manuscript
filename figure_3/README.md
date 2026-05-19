@@ -1,6 +1,8 @@
 # Figure 3 — Benchmarking RAD on Real Immune Receptor Data (RAGEseq)
 
-Headline claim: on a real BCR/TCR long-read dataset (RAGEseq) RAD's barcode discovery, false-positive resistance, and cell-type recovery match or exceed BLAZE — and an "off-list" stress test isolates how each tool behaves when forced to assign reads to garbage barcodes.
+![Figure 3](figure_3.png)
+
+> Reference render — full resolution: [`figure_3.pdf`](figure_3.pdf)
 
 ## Panels
 
@@ -42,8 +44,8 @@ Headline claim: on a real BCR/TCR long-read dataset (RAGEseq) RAD's barcode disc
 ## How to regenerate
 
 ```bash
-./run_figure_3.sh analysis     # workspace-only
-./run_figure_3.sh              # full pipeline (rad demux + render)
+./scripts/run_figure_3.sh analysis     # workspace-only
+./scripts/run_figure_3.sh              # full pipeline (rad demux + render)
 ```
 
 Output: `figure_3_analysis.html`.

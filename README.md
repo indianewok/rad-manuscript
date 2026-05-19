@@ -22,19 +22,21 @@ The RAD tool itself lives at **[github.com/indianewok/rad](https://github.com/in
 ├── manuscript_colors.txt      ← official manuscript color palette
 ├── rad_demux_commands.md      ← every rad demux command used, organized by figure
 │
-├── run_all_figures.sh         ← top-level driver (full pipeline or analysis only)
-├── run_figure_2.sh            ← Figure 2: ScTagger synthetic benchmark
-├── run_figure_3.sh            ← Figure 3: RAGEseq real-data benchmark
-├── run_figure_4.sh            ← Figure 4: multi-platform efficiency + generalizability
-├── run_figure_5.sh            ← Figure 5: isotype-resolved B-cell clonotypes
+├── scripts/                   ← shell drivers
+│   ├── run_all_figures.sh     ← top-level driver (full pipeline or analysis only)
+│   ├── run_figure_2.sh        ← Figure 2: ScTagger synthetic benchmark
+│   ├── run_figure_3.sh        ← Figure 3: RAGEseq real-data benchmark
+│   ├── run_figure_4.sh        ← Figure 4: multi-platform efficiency + generalizability
+│   └── run_figure_5.sh        ← Figure 5: isotype-resolved B-cell clonotypes
 │
-├── figure_2/                  ← analysis Rmd + helper R scripts + figure outputs
+├── figure_2/                  ← analysis Rmd + helper R scripts + reference PDF/PNG
 ├── figure_3/
 ├── figure_4/
 ├── figure_5/
 │
+├── TODO.md                    ← open items (repo plumbing, manuscript, figure polish)
 └── data/
-    └── README.md              ← Zenodo links + checksums for the .RData workspaces
+    └── README.md              ← Zenodo link + checksums for the .RData workspaces
 ```
 
 Each `figure_N/` directory has its own `README.md` explaining which panels it produces and which inputs it consumes.
@@ -58,7 +60,7 @@ cd rad-manuscript
 # 3. set local paths once: cp config.local.sh.example config.local.sh and edit
 
 # 4. render analysis-only mode (no rad demux required)
-./run_all_figures.sh analysis
+./scripts/run_all_figures.sh analysis
 ```
 
 This produces `figure_N/figure_N_analysis.html` for each figure. No external SSD required.
@@ -72,10 +74,10 @@ If you have the raw long-read FASTQs (see [`rad_demux_commands.md`](rad_demux_co
 # 2. cp config.local.sh.example config.local.sh
 #    and fill in RAD_BIN, RAW_FQ, RESULTS_BASE, WL_DIR, PROJECT_SCRIPTS, …
 # 3. run end-to-end
-./run_all_figures.sh
+./scripts/run_all_figures.sh
 ```
 
-Use `./run_all_figures.sh 2 3` to run only specific figures. Use `./run_all_figures.sh analysis 4 5` to skip demux and only re-render figures 4 and 5.
+Use `./scripts/run_all_figures.sh 2 3` to run only specific figures. Use `./scripts/run_all_figures.sh analysis 4 5` to skip demux and only re-render figures 4 and 5.
 
 ---
 

@@ -22,7 +22,8 @@
 # =============================================================================
 set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-source "${SCRIPT_DIR}/config.sh"
+REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
+source "${REPO_ROOT}/config.sh"
 
 check_ssd
 check_rad
@@ -208,7 +209,7 @@ if [ "$DEMUX_MODE" = "full" ]; then
   log_done "Figure 4 — RAD demux"
 
   # Write manifest
-  cat > "${SCRIPT_DIR}/figure_4/.last_demux_paths.txt" <<MANIFEST
+  cat > "${REPO_ROOT}/figure_4/.last_demux_paths.txt" <<MANIFEST
 splitseq=${SPLITSEQ_OUT}
 nbc_sans=${NBC_SANS_OUT}
 nbc_wl=${NBC_WL_OUT}
@@ -221,7 +222,7 @@ fi
 # =============================================================================
 log_start "Figure 4 — R analysis"
 
-cd "${SCRIPT_DIR}/figure_4"
+cd "${REPO_ROOT}/figure_4"
 
 # Run the read length/count data prep first
 echo ">> Preparing read length/count data..."
@@ -231,4 +232,4 @@ Rscript readcountlengthviolinprep.R
 Rscript -e "rmarkdown::render('figure_4_analysis.Rmd', output_dir = '.')"
 
 log_done "Figure 4 — Complete"
-echo "Output: ${SCRIPT_DIR}/figure_4/figure_4_analysis.html"
+echo "Output: ${REPO_ROOT}/figure_4/figure_4_analysis.html"

@@ -1,6 +1,8 @@
 # Figure 4 — Computational Efficiency and Generalizability
 
-Headline claim: RAD is faster and lighter than BLAZE / Flexiplex on a standard scRNA-seq dataset, scales to 117M reads on HPC, supports non-10x chemistries (Split-seq, Visium), and detects high-confidence spatial barcodes without paired short-read data.
+![Figure 4](figure_4.png)
+
+> Reference render — full resolution: [`figure_4.pdf`](figure_4.pdf)
 
 ## Panels
 
@@ -41,10 +43,10 @@ Headline claim: RAD is faster and lighter than BLAZE / Flexiplex on a standard s
 ## How to regenerate
 
 ```bash
-./run_figure_4.sh analysis                # workspace-only
-./run_figure_4.sh                         # everything
-./run_figure_4.sh full true               # skip scmix timing runs (expensive)
-./run_figure_4.sh full true true          # also skip LA benchmark runs (very expensive)
+./scripts/run_figure_4.sh analysis                # workspace-only
+./scripts/run_figure_4.sh                         # everything
+./scripts/run_figure_4.sh full true               # skip scmix timing runs (expensive)
+./scripts/run_figure_4.sh full true true          # also skip LA benchmark runs (very expensive)
 ```
 
 Output: `figure_4_analysis.html`.

@@ -1,6 +1,8 @@
 # Figure 5 — Isotype-Resolved B-cell Clonotype Analysis
 
-Headline claim: RAD-demultiplexed long-read data resolve full IGH constant regions per barcode, enabling per-clone isotype composition and spatial mapping of class-switching events on Visium tonsil — neither of which is achievable from short-read scRNA-seq alone.
+![Figure 5](figure_5.png)
+
+> Reference render — full resolution: [`figure_5.pdf`](figure_5.pdf)
 
 ## Panels
 
@@ -33,9 +35,9 @@ Headline claim: RAD-demultiplexed long-read data resolve full IGH constant regio
 ## How to regenerate
 
 ```bash
-./run_figure_5.sh analysis     # Rmd only (default)
-./run_figure_5.sh igblast      # rerun IgBLAST clonotyping then render
-./run_figure_5.sh full         # rerun NBC demux + IgBLAST + render
+./scripts/run_figure_5.sh analysis     # Rmd only (default)
+./scripts/run_figure_5.sh igblast      # rerun IgBLAST clonotyping then render
+./scripts/run_figure_5.sh full         # rerun NBC demux + IgBLAST + render
 ```
 
 Output: `figure_5_analysis.html`.

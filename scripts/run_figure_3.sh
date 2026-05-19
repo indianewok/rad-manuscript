@@ -16,7 +16,8 @@
 # =============================================================================
 set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-source "${SCRIPT_DIR}/config.sh"
+REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
+source "${REPO_ROOT}/config.sh"
 
 check_ssd
 check_rad
@@ -87,7 +88,7 @@ if [ "$DEMUX_MODE" = "full" ]; then
   log_done "Figure 3 — RAD demux"
 
   # Write manifest
-  cat > "${SCRIPT_DIR}/figure_3/.last_demux_paths.txt" <<MANIFEST
+  cat > "${REPO_ROOT}/figure_3/.last_demux_paths.txt" <<MANIFEST
 rsq_tot=${RSQ_TOT_OUT}
 rsq_global_wl=${RSQ_GLOBAL_WL_OUT}
 fp_rep1=${FP_BASE}/${STAMP}_rad_fp1
@@ -101,8 +102,8 @@ fi
 # =============================================================================
 log_start "Figure 3 — R analysis"
 
-cd "${SCRIPT_DIR}/figure_3"
+cd "${REPO_ROOT}/figure_3"
 Rscript -e "rmarkdown::render('figure_3_analysis.Rmd', output_dir = '.')"
 
 log_done "Figure 3 — Complete"
-echo "Output: ${SCRIPT_DIR}/figure_3/figure_3_analysis.html"
+echo "Output: ${REPO_ROOT}/figure_3/figure_3_analysis.html"

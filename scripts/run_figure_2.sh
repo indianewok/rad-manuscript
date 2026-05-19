@@ -17,7 +17,8 @@
 # =============================================================================
 set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-source "${SCRIPT_DIR}/config.sh"
+REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
+source "${REPO_ROOT}/config.sh"
 
 check_ssd
 check_rad
@@ -124,7 +125,7 @@ if [ "$DEMUX_MODE" = "full" ]; then
   log_done "Figure 2 — Whitelist generation + RAD demux + header extraction"
 
   # Write manifest so the Rmd knows where to find results
-  cat > "${SCRIPT_DIR}/figure_2/.last_demux_paths.txt" <<MANIFEST
+  cat > "${REPO_ROOT}/figure_2/.last_demux_paths.txt" <<MANIFEST
 timestamp=${STAMP}
 sctagger_S=${FIG2_DEMUX_BASE}/${STAMP}_sctagger_S
 sctagger_M=${FIG2_DEMUX_BASE}/${STAMP}_sctagger_M
@@ -140,8 +141,8 @@ fi
 # =============================================================================
 log_start "Figure 2 — R analysis"
 
-cd "${SCRIPT_DIR}/figure_2"
+cd "${REPO_ROOT}/figure_2"
 Rscript -e "rmarkdown::render('figure_2_analysis.Rmd', output_dir = '.')"
 
 log_done "Figure 2 — Complete"
-echo "Output: ${SCRIPT_DIR}/figure_2/figure_2_analysis.html"
+echo "Output: ${REPO_ROOT}/figure_2/figure_2_analysis.html"

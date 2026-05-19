@@ -95,7 +95,7 @@ Smoke test:
 bash -c 'source ./config.sh && check_paths && check_rad'
 ```
 
-If both checks pass, you're configured. (You can also just run `./run_figure_2.sh analysis` and it'll error loudly on the first missing path.)
+If both checks pass, you're configured. (You can also just run `./scripts/run_figure_2.sh analysis` and it'll error loudly on the first missing path.)
 
 ---
 
@@ -112,7 +112,7 @@ Raw FASTQs are not redistributed here; sources for each dataset are documented i
 Render a single figure end-to-end (analysis only, no demux required):
 
 ```bash
-./run_figure_2.sh analysis
+./scripts/run_figure_2.sh analysis
 open figure_2/figure_2_analysis.html
 ```
 

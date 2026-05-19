@@ -16,7 +16,8 @@
 # =============================================================================
 set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-source "${SCRIPT_DIR}/config.sh"
+REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
+source "${REPO_ROOT}/config.sh"
 
 check_ssd
 check_rad
@@ -85,20 +86,20 @@ fi
 # =============================================================================
 log_start "Figure 5 — R analysis"
 
-cd "${SCRIPT_DIR}/figure_5"
+cd "${REPO_ROOT}/figure_5"
 Rscript -e "rmarkdown::render('figure_5_analysis.Rmd', output_dir = '.')"
 
 log_done "Figure 5 — Complete"
-echo "Output: ${SCRIPT_DIR}/figure_5/figure_5_analysis.html"
+echo "Output: ${REPO_ROOT}/figure_5/figure_5_analysis.html"
 
 # =============================================================================
 # STEP 4: Export raw data for Prism / PowerPoint
 # =============================================================================
 echo ""
 echo "Exported data locations:"
-echo "  Heatmap raw data:     ${SCRIPT_DIR}/figure_5/heatmap_raw_data/"
-echo "  Histogram raw data:   ${SCRIPT_DIR}/figure_5/histogram_raw_data/"
-echo "  Scatterplot raw data: ${SCRIPT_DIR}/figure_5/scatterplot_raw_data/"
+echo "  Heatmap raw data:     ${REPO_ROOT}/figure_5/heatmap_raw_data/"
+echo "  Histogram raw data:   ${REPO_ROOT}/figure_5/histogram_raw_data/"
+echo "  Scatterplot raw data: ${REPO_ROOT}/figure_5/scatterplot_raw_data/"
 echo ""
 echo "To assemble final figure, open in Prism or PowerPoint from:"
 echo "  ${FIGURES_DIR}/figure_5/"
