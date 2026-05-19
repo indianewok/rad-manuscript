@@ -2,7 +2,7 @@
 
 Code and analysis to regenerate every figure in the RAD manuscript:
 
-> **RAD: Rapid Amplicon Demultiplexing for long-read single-cell sequencing.**
+> **RAD: A Read-structure Agnostic Demultiplexer for Single-Cell Long-Read Sequencing and Analysis.**
 > Chinmay M. Vaidya *et al.*, 2026. *(manuscript in preparation)*
 
 The RAD tool itself lives at **[github.com/indianewok/rad](https://github.com/indianewok/rad)**. This repo is the analysis layer: shell harnesses that drive `rad demux` over the manuscript datasets, R Markdown notebooks that consume the demultiplexed output, and the helper scripts used to produce each panel.
