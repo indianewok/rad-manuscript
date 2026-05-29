@@ -8,13 +8,11 @@
 
 | Panel | What it shows |
 |-------|---------------|
-| 5A | Per-locus read-depth histograms across the IGH locus (chr14: 99,839,968–100,127,783) for Visium tonsil, NBC, and RAGEseq |
-| 5B | NBC per-barcode read-count distributions by isotype |
-| 5C | Ramos cell line read distributions (IgM-dominated) |
-| 5D | Hierarchically clustered isotype heatmaps — all clones (left) vs class-switching clones (right) |
-| 5E | Spatial tonsil section: tissue regions (left) + RAD-recovered barcodes (right) |
-| 5F | Per-clone isotype heatmaps for four representative clones (2277, 86, 5725, 7445) |
-| 5G | Spatial maps of the same four clones overlaid on Visium coordinates |
+| 5A | Read-count histograms across the IGH locus (chr14: 99,839,968–100,127,783) for Ramos, NBC (Nojima B-cell culture), and Visium tonsil; dots colored by positional annotation |
+| 5B | Isotype-composition heatmaps — all recovered clones (top) and the class-switching subset (bottom) |
+| 5C | Spatial tonsil section: tissue microenvironment regions (left) + RAD-recovered barcodes colored by secretion status (right) |
+| 5D | Per-clone isotype heatmaps for three representative class-switching clones (2277, 7445, 5725); first row secretion status, subsequent rows per-isotype read counts per spot |
+| 5E | Spatial maps of the same three clones, spots colored by RAD-detected constant-region gene; annotated with VDJ usage + CDR3 aa sequence |
 
 ## Inputs
 
@@ -48,7 +46,7 @@ Per-panel raw data is also exported to `heatmap_raw_data/`, `histogram_raw_data/
 
 `ig_locus_res`, `chr14_depth`, `nbc_depth`, `rsq_depth`, `rsq_ig`, `plot_dt`, `plot_dt_ordered`, `plot_mat`, `constant_clones`, `multiple_clones`, `mult_iso_mat`, `clone_2277_data`, `clone_5725`, `clone_7445`, `clone_86`, `clones_to_plot_dedup`, `bg`, `bg_plot`, `int_tonsil`, `int_tonsil_meta`, `per_clone_id_spots`.
 
-## Isotype color palette (5G)
+## Isotype color palette (5E)
 
 ```
 IGHM  #8B7A7A    IGHD  #6A1F00    IGHG3 #19A83E    IGHG1 #2B7DC6

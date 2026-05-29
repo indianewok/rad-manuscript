@@ -37,10 +37,11 @@ source(file.path(project_scripts, "reformat_igblast_genes.R"))
 source(file.path(project_scripts, "consensus_ig_generator.R"))
 ```
 
-# Panel 5A: Per-Barcode Isotype Read Counts (Visium Tonsil Spatial)
+# Panel 5A: Read-Count Histograms Across the IGH Locus
 
-Strip plot showing per-barcode Log10(read counts) for each immunoglobulin heavy chain locus gene
-in a 10x Visium tonsil spatial transcriptomics dataset (Engblom et al.).
+Read-count histograms across the IGH locus (chr14: 99,839,968–100,127,783) for the
+Ramos, NBC (Nojima B-cell culture), and Visium tonsil datasets; positions colored by
+IGH gene/segment annotation.
 
 ```{r panel-5a-data-prep}
 # IGH locus depth analysis (chr14: 99839968-100127783)
@@ -79,7 +80,7 @@ q <- ggplot(ig_locus_res,
 ```
 
 ```{r panel-5a-rageseq-depth}
-# RAGEseq depth
+# RAGEseq (Ramos) depth
 # rsq_depth <- data.table::fread(file.path(Sys.getenv("NBC_DEPTH_DIR"),
 #                                          "rsq_chr14_t2t_mapont.depth.csv"))
 # rsq_ig <- rsq_depth[pos >= 99839968 & pos <= 100127783,]
@@ -94,26 +95,11 @@ r <- ggplot(ig_locus_res,
   theme_pubclean() + scale_x_reverse()
 ```
 
-# Panel 5B: NBC Per-Barcode Read Count Distributions
-
-```{r panel-5b}
-# Per-barcode read count distributions in NBC cells
-# Reads span multiple isotypes: IgM, IgD, switched classes (IgG, IgA)
-# ggbarplot(df[,uniqueN(barcode), by = 'isotype'],
-#   x = 'isotype', y = 'V1', fill = 'isotype', sort.val = 'desc')
-```
-
-# Panel 5C: Ramos Cell Line Read Count Distributions
-
-```{r panel-5c}
-# Ramos B-cell lymphoma line: dominated by IgM reads
-```
-
-# Panel 5D: Hierarchically Clustered Isotype Heatmaps (All Clones)
+# Panel 5B: Hierarchically Clustered Isotype Heatmaps (All Clones)
 
 Left: all recovered clones. Right: class-switching clones (>1 constant region gene).
 
-```{r panel-5d-data-prep}
+```{r panel-5b-data-prep}
 # Clone-isotype matrix preparation
 ig_cols <- c("IGHM", "IGHD", "IGHG3", "IGHG1", "IGHA1", "IGHG2", "IGHG4", "IGHA2")
 
@@ -127,7 +113,7 @@ ig_cols <- c("IGHM", "IGHD", "IGHG3", "IGHG1", "IGHA1", "IGHG2", "IGHG4", "IGHA2
 # rownames(plot_mat) <- plot_dt_ordered$clone_id
 ```
 
-```{r panel-5d-all-clones-heatmap}
+```{r panel-5b-all-clones-heatmap}
 # All clones heatmap
 if (exists("plot_mat")) {
   pheatmap::pheatmap(
@@ -142,7 +128,7 @@ if (exists("plot_mat")) {
 }
 ```
 
-```{r panel-5d-switching-clones-heatmap}
+```{r panel-5b-switching-clones-heatmap}
 # Class-switching clones only
 if (exists("mult_iso_mat")) {
   pheatmap::pheatmap(
@@ -156,9 +142,9 @@ if (exists("mult_iso_mat")) {
 }
 ```
 
-# Panel 5E: Spatial Visualization of Tonsil Tissue
+# Panel 5C: Spatial Visualization of Tonsil Tissue
 
-```{r panel-5e-tissue-regions}
+```{r panel-5c-tissue-regions}
 # Left: tissue microenvironmental regions
 # Right: RAD-recovered barcode positions
 
@@ -176,11 +162,11 @@ location_palette <- c(
 # bg_plot <- bg_plot[int_tonsil_meta[,c('barcode','clustergroup')], on = 'barcode']
 ```
 
-# Panel 5F: Per-Clone Isotype Heatmaps (4 Representative Clones)
+# Panel 5D: Per-Clone Isotype Heatmaps (3 Representative Clones)
 
-Clones 2277, 86, 5725, 7445.
+Clones 2277, 5725, 7445.
 
-```{r panel-5f-clone-2277}
+```{r panel-5d-clone-2277}
 # Clone 2277: VDJ: IGHV1-18/IGHD5-24/IGHJ4
 clone_2277_heatmap <- clone_2277_data[,.N, by = c('c_gene','barcode')] %>%
   dcast(barcode ~ c_gene, fill = 0)
@@ -206,7 +192,7 @@ pheatmap::pheatmap(
 )
 ```
 
-```{r panel-5f-clone-5725}
+```{r panel-5d-clone-5725}
 # Clone 5725
 clone_5725_heatmap <- clone_5725[,.N, by = c('c_gene','barcode')] %>%
   dcast(barcode ~ c_gene, fill = 0)
@@ -226,7 +212,7 @@ pheatmap::pheatmap(
 )
 ```
 
-```{r panel-5f-clone-7445}
+```{r panel-5d-clone-7445}
 # Clone 7445
 clone_7445_heatmap <- clone_7445[,.N, by = c('c_gene','barcode')] %>%
   dcast(barcode ~ c_gene, fill = 0)
@@ -246,29 +232,9 @@ pheatmap::pheatmap(
 )
 ```
 
-```{r panel-5f-clone-86}
-# Clone 86
-clone_86_heatmap <- clone_86[,.N, by = c('c_gene','barcode')] %>%
-  dcast(barcode ~ c_gene, fill = 0)
+# Panel 5E: Spatial Maps of Representative Clones
 
-mat <- as.matrix(clone_86_heatmap[, -1])
-rownames(mat) <- clone_86_heatmap$barcode
-
-pheatmap::pheatmap(
-  mat,
-  cluster_cols = FALSE,
-  scale = "none",
-  main = "Clone 86",
-  show_rownames = FALSE,
-  border_color = NA,
-  display_numbers = TRUE,
-  number_color = "black"
-)
-```
-
-# Panel 5G: Spatial Maps of Representative Clones
-
-```{r panel-5g-isotype-colors}
+```{r panel-5e-isotype-colors}
 isotype_cols <- c(
   IGHM  = "#8B7A7A",
   IGHD  = "#6A1F00",
@@ -282,7 +248,7 @@ isotype_cols <- c(
 )
 ```
 
-```{r panel-5g-clone-labels}
+```{r panel-5e-clone-labels}
 # Clone labels with VDJ genes and CDR3/junction_aa
 clone_labels <- unique(
   clones_to_plot_dedup[, .(clone_id, vdj_genes, junction_aa)]
@@ -291,8 +257,8 @@ clone_labels[, label := paste0(vdj_genes, "\nCDR3: ", junction_aa)]
 clone_labeller <- setNames(clone_labels$label, clone_labels$clone_id)
 ```
 
-```{r panel-5g-spatial-plot, fig.width=12, fig.height=8}
-# Final spatial plot of 4 clones on tonsil tissue (section 12 / sample_id == 1)
+```{r panel-5e-spatial-plot, fig.width=12, fig.height=8}
+# Final spatial plot of 3 clones on tonsil tissue (section 12 / sample_id == 1)
 p <- ggscatter(
   bg_plot[sample_id == 1],
   x = "x_pix_scaled",
@@ -325,7 +291,6 @@ p
 ```{r data-export}
 # Heatmap raw data exports — written to figure_5/heatmap_raw_data/ by the harness.
 # fwrite(clone_2277_heatmap, "heatmap_raw_data/clone_2277_heatmap_raw_data.csv")
-# fwrite(clone_86_heatmap,   "heatmap_raw_data/clone_86_heatmap_raw_data.csv")
 # fwrite(clone_5725_heatmap, "heatmap_raw_data/clone_5725_heatmap_raw_data.csv")
 # fwrite(clone_7445_heatmap, "heatmap_raw_data/clone_7445_heatmap_raw_data.csv")
 

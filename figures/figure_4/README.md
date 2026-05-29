@@ -1,6 +1,8 @@
 # Figure 4 — Computational Efficiency and Generalizability
 
-> _Reference render (`figure_4.png` / `figure_4.pdf`) pending re-export — the prior render still showed the dropped LA panel._
+![Figure 4](figure_4.png)
+
+> Reference render — full resolution: [`figure_4.pdf`](figure_4.pdf)
 
 ## Panels
 
@@ -11,12 +13,12 @@
 | 4C | 24-core HPC runtime on 117M reads (RAD vs BLAZE) |
 | 4D | Split-seq — RAD correctly recovers all three barcodes per read |
 | 4E | UMI counts per cell, long-read vs short-read (MB cells, MB nuclei, MT nuclei) |
-| 4F | Read counts with/without short-read whitelist (correlation) |
-| 4G | Read-length distributions across modalities |
-| 4H | Counts per barcode across modalities |
+| 4F | Read-length distributions across modalities (NBC, scMix2, RAGEseq, Split-seq) |
+| 4G | Read counts per barcode across modalities |
+| 4H | Read counts for short-read-matched cells, with (+) vs without (−) the short-read whitelist |
 | 4I | 10X Visium HD mouse brain — SpaceRanger `in_tissue` bin mask (PBC44593, 16 µm) |
-| 4J | 10X Visium HD mouse brain — Percula/Seurat `log1p(ncpm)` (PBC44593, plasma scale) |
-| 4K | 10X Visium HD mouse brain — RAD `log1p(ncpm)` (PBC44593, shared plasma scale) |
+| 4J | 10X Visium HD mouse brain — Percula/Seurat `log10(ncpm)` (PBC44593, plasma scale) |
+| 4K | 10X Visium HD mouse brain — RAD `log10(ncpm)` (PBC44593, shared plasma scale) |
 
 Panels 4I-4K share a single grid bounding box and color scale; they're an *overview* triptych on one representative section.
 

@@ -10,10 +10,22 @@ repository-code: "https://github.com/indianewok/rad-manuscript"
 license: MIT
 preferred-citation:
   type: article
-  title: "RAD: Rapid Amplicon Demultiplexing for long-read single-cell sequencing"
+  title: "RAD: A Read-structure Agnostic Demultiplexer for Single-Cell Long-Read Sequencing and Analysis"
   authors:
     - family-names: "Vaidya"
       given-names: "Chinmay M."
+    - family-names: "Carpenter"
+      given-names: "Margaret C."
+    - family-names: "Abdullah"
+      given-names: "Leena"
+    - family-names: "Kolling"
+      given-names: "Fred W."
+    - family-names: "Huang"
+      given-names: "Yina H."
+    - family-names: "Song"
+      given-names: "Li"
+    - family-names: "Ackerman"
+      given-names: "Margaret E."
   year: 2026
   status: "in preparation"
   # journal:
