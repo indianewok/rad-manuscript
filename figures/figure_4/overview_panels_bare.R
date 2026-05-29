@@ -37,7 +37,7 @@ total_seu <- sum(seu_dt$seurat_count)
 seu_dt[, seurat_log1p_ncpm := log1p(seurat_count * (1e6 / total_seu))]
 
 # RAD log1p_ncpm (rep sample only)
-wide  <- fread("../supp_figure_1/raw_data/sample_bin_matrix_16um.csv.gz")
+wide  <- fread("sample_bin_matrix_16um.csv.gz")
 ccol  <- paste0(REP_SAMPLE, "_count")
 total <- sum(wide[[ccol]])
 wide[, (paste0(REP_SAMPLE, "_log1p_ncpm")) := log1p(get(ccol) * (1e6 / total))]

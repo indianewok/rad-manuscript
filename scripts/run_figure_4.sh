@@ -104,8 +104,8 @@ if [ "$DEMUX_MODE" = "full" ]; then
   # -------------------------------------------------------------------------
   # 4I-4K Visium HD mouse brain overview triptych is generated separately:
   #   Rscript figures/figure_4/overview_panels_bare.R
-  # It reads RAD per-sample counts from figures/supp_figure_1/raw_data/ and
-  # the Seurat RDS from $HD_MAPPING_DIR. See figures/figure_4/README.md.
+  # It reads RAD per-sample counts from figures/figure_4/sample_bin_matrix_16um.csv.gz
+  # and the Seurat RDS from $HD_MAPPING_DIR. See figures/figure_4/README.md.
   # -------------------------------------------------------------------------
 
   log_done "Figure 4 — RAD demux"

@@ -1,8 +1,6 @@
 # Figure 4 — Computational Efficiency and Generalizability
 
-![Figure 4](figure_4.png)
-
-> Reference render — full resolution: [`figure_4.pdf`](figure_4.pdf)
+> _Reference render (`figure_4.png` / `figure_4.pdf`) pending re-export — the prior render still showed the dropped LA panel._
 
 ## Panels
 
@@ -20,7 +18,7 @@
 | 4J | 10X Visium HD mouse brain — Percula/Seurat `log1p(ncpm)` (PBC44593, plasma scale) |
 | 4K | 10X Visium HD mouse brain — RAD `log1p(ncpm)` (PBC44593, shared plasma scale) |
 
-Panels 4I-4K share a single grid bounding box and color scale; they're an *overview* triptych on one representative section. The deep-dive supplement covering all four samples (PBC44593, PBC44760, PBC49262, PBC52788) with violins, correlation heatmap, and per-bin classification is **[Supplementary Figure 1](../supp_figure_1/README.md)**.
+Panels 4I-4K share a single grid bounding box and color scale; they're an *overview* triptych on one representative section.
 
 ## Inputs
 
@@ -29,11 +27,10 @@ Panels 4I-4K share a single grid bounding box and color scale; they're an *overv
   - `scmixology2/*_scmix_timing_run_r{1,2,3}/` — panels 4A/4B
   - `splitseq/*_splitseq/` — panel 4D
   - `sans_wl/*_nbc_{sans,wl}/` — panel 4F + part of 4G/4H
-  - `sans_wl/*_la{1,2,3,1mem,3mem}_{sans,wl}/` — panel 4F supplement
 - **Visium HD inputs (panels 4I-4K)**:
   - `${HD_MAPPING_DIR}/tissue_positions_16um.csv` — full bin grid
   - `${HD_MAPPING_DIR}/visium_hd_mouse_brain_016um_seurat.rds` — Percula/Seurat counts (384 MB; not in repo)
-  - `../supp_figure_1/raw_data/sample_bin_matrix_16um.csv.gz` — RAD per-sample bin counts (shared with Supp Fig 1)
+  - `sample_bin_matrix_16um.csv.gz` — RAD per-sample bin counts
 
 ## Scripts in this directory
 
@@ -53,7 +50,6 @@ Panels 4I-4K share a single grid bounding box and color scale; they're an *overv
 # Full pipeline (re-runs rad demux on every dataset, then renders):
 ./scripts/run_figure_4.sh                         # everything
 ./scripts/run_figure_4.sh full true               # skip scmix timing runs (expensive)
-./scripts/run_figure_4.sh full true true          # also skip LA benchmark runs (very expensive)
 ```
 
 The Visium HD triptych (4I-4K) is generated separately — outputs are *not* committed:

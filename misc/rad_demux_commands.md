@@ -113,7 +113,7 @@ All paths below use environment variables documented in [../README.md](../README
   -o nbc
 ```
 
-### Visium HD Mouse Brain (panels 4I-4K + Supplementary Figure 1)
+### Visium HD Mouse Brain (panels 4I-4K)
 
 Public 10X Visium HD murine brain dataset, four replicate sections at 16 µm bin
 resolution: `PBC44593`, `PBC44760`, `PBC49262`, `PBC52788`. Run per-sample:
@@ -131,8 +131,8 @@ resolution: `PBC44593`, `PBC44760`, `PBC49262`, `PBC52788`. Run per-sample:
 ```
 
 > *TODO:* the production command set used to generate
-> `figures/supp_figure_1/raw_data/sample_bin_matrix_16um.csv.gz` (the source for
-> both panels 4I-4K and Supplementary Figure 1) is not yet captured here.
+> `figures/figure_4/sample_bin_matrix_16um.csv.gz` (the source for
+> panels 4I-4K) is not yet captured here.
 > Backfill from the figure_4_visium working dir / conversation history.
 
 ---

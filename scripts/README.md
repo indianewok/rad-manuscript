@@ -7,7 +7,7 @@ Shell drivers that wire `rad demux` + `Rscript ::: rmarkdown::render` together f
 | `run_all_figures.sh` | Top-level driver — runs any subset of figures 2-5 in either full or analysis-only mode |
 | `run_figure_2.sh` | Figure 2: ScTagger synthetic benchmark (whitelist gen + demux + R render) |
 | `run_figure_3.sh` | Figure 3: RAGEseq real-data benchmark (RAD demux + off-list FP tests + R render) |
-| `run_figure_4.sh` | Figure 4: multi-platform efficiency (scMixology2, Split-seq, NBC, Visium, LA) |
+| `run_figure_4.sh` | Figure 4: multi-platform efficiency (scMixology2, Split-seq, NBC, Visium) |
 | `run_figure_5.sh` | Figure 5: isotype-resolved B-cell clonotypes (NBC + Visium + IgBLAST + R render) |
 
 ## Usage (from the repo root)
@@ -28,11 +28,10 @@ Shell drivers that wire `rad demux` + `Rscript ::: rmarkdown::render` together f
 ./scripts/run_figure_3.sh analysis  # render only
 ```
 
-`run_figure_4.sh` accepts two extra flags to skip the expensive scMix triplicate timing runs and the large LA benchmark runs:
+`run_figure_4.sh` accepts one extra flag to skip the expensive scMix triplicate timing runs:
 
 ```bash
 ./scripts/run_figure_4.sh full true       # skip scmix timing
-./scripts/run_figure_4.sh full true true  # also skip LA benchmarks
 ```
 
 `run_figure_5.sh` defaults to analysis-only because the IgBLAST clonotyping is the expensive part:

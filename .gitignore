@@ -51,6 +51,3 @@ __pycache__/
 # --- Local-only notes (don't commit ad-hoc TODOs) ---
 to_fix.txt
 NOTES.local.md
-
-# --- Machine-specific overrides (see config.local.sh.example) ---
-config.local.sh
