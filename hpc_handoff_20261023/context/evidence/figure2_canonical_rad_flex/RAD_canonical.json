@@ -1,0 +1,31 @@
+{
+  "tool": "RAD",
+  "contract": "RAD24d5ce47 adapter-calibration repair; exact5000truth supplied as both global and custom lists; offensive M2/m2; reject every original ID with more than one emitted record; native=emptyCR correction tag.",
+  "source": "/Volumes/rad_data/reviewer_comment_data/sctagger_L_rad_fixed5000_adapter_fix_20260817/independent_validation/record_audit.tsv.gz",
+  "selected_barcodes": 5000,
+  "truth_selected": 5000,
+  "false_selected": 0,
+  "counts": {
+    "native_correct": 667965,
+    "corrected_correct": 1944306,
+    "native_incorrect": 571,
+    "corrected_incorrect": 191519,
+    "all_incorrect": 192090,
+    "ambiguous": 9048,
+    "assigned_unambiguous": 2804361,
+    "unassigned": 2180396,
+    "input_reads": 4993805,
+    "observed_input_ids": 2813409,
+    "audit_records": 2822457,
+    "correct_total": 2612271
+  },
+  "five_state_pie_order": [
+    "native_correct",
+    "corrected_correct",
+    "all_incorrect",
+    "ambiguous",
+    "unassigned"
+  ],
+  "array_zero_policy": "Every selected target retained, including zero counts. Unselected truth targets blank in aligned table.",
+  "validation": "PASS; source scalar categories and exhaustive partition match exactly."
+}

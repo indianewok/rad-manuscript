@@ -1,0 +1,38 @@
+[
+  {
+    "file": "scripts/_lib.sh",
+    "check": "bash -n (syntax only; pipeline not executed)",
+    "returncode": 0,
+    "stderr": ""
+  },
+  {
+    "file": "scripts/run_all_figures.sh",
+    "check": "bash -n (syntax only; pipeline not executed)",
+    "returncode": 0,
+    "stderr": ""
+  },
+  {
+    "file": "scripts/run_figure_2.sh",
+    "check": "bash -n (syntax only; pipeline not executed)",
+    "returncode": 0,
+    "stderr": ""
+  },
+  {
+    "file": "scripts/run_figure_3.sh",
+    "check": "bash -n (syntax only; pipeline not executed)",
+    "returncode": 0,
+    "stderr": ""
+  },
+  {
+    "file": "scripts/run_figure_4.sh",
+    "check": "bash -n (syntax only; pipeline not executed)",
+    "returncode": 0,
+    "stderr": ""
+  },
+  {
+    "file": "scripts/run_figure_5.sh",
+    "check": "bash -n (syntax only; pipeline not executed)",
+    "returncode": 0,
+    "stderr": ""
+  }
+]

@@ -1,0 +1,531 @@
+[
+  {
+    "id": "F3-01",
+    "priority": "P0",
+    "panels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G"
+    ],
+    "purpose": "Freeze the intended historical/replacement scope before any regeneration.",
+    "inputs": [
+      "/Volumes/rad_data/reviewer_comment_data/paper_revision_20261022/extracted/figure_images/paragraph_4_image3.png",
+      "/Volumes/rad_data/reviewer_comment_data/paper_revision_20261022/github_audit/figure3_measured_categories/Figure3_measured_failure_modes_20261022.png",
+      "/Volumes/rad_data/reviewer_comment_data/paper_revision_20261022/evidence/failure_modes_manuscript_audit.md",
+      "/Volumes/rad_data/reviewer_comment_data/rageseq_false_whitelist_manuscript_era_20260817/README.md",
+      "/Volumes/rad_data/reviewer_comment_data/sctagger_L_false_whitelist_20260813/README.md",
+      "/Volumes/rad_data/reviewer_comment_data/longbench_sc_ont_false_whitelist_20260813/README.md",
+      "/Volumes/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/longbench_rad_4acbe00_raw_prism_20260827/prism/archive_closure_all_records.json"
+    ],
+    "scripts": [],
+    "checkpoints": [
+      "figure3_scope.json: panel, input_id, experiment_id, tool_version, evidence_policy, count_unit, target_universe, source_archive/table/series, intended_statistical_unit",
+      "author_decisions.md"
+    ],
+    "actions": [
+      "Record whether A-C retain historical RAGE results, add a distinctly labeled replacement, replace all three cohorts with a new version-matched protocol, or omit the unrecoverable arm.",
+      "Record versions as measured: ScTagger/LongBench off-list RAD cd0582b; historical RAGE RAD unknown manuscript-era build/Flexiplex 1.02.5/BLAZE settings unknown; D-G RAD 4acbe00/BLAZE 2.5.0/Flexiplex 1.02.6.",
+      "Preserve measured Failure Mode numbering and approved D-G per-target denominator; do not bring back ambient-RNA or missed-cell labels.",
+      "Choose which native Prism archive/layout is authoritative for current A-C and D-G; current DOCX artwork alone is not a runnable source."
+    ],
+    "validation": [
+      "No historical metric is silently relabeled as a new version or strict read count.",
+      "All panels have a defined source and unit; no pending biological interpretation substituted for measured membership."
+    ],
+    "dependencies": [],
+    "decision_needed": "Author must select historical replay versus a new matched replacement and approve any changed analysis/statistical design. The measured definitions and per-target denominator already approved by the user do not require reconfirmation.",
+    "public_outputs": [
+      "figure3_scope.json",
+      "author_decisions.md"
+    ],
+    "availability_notes": [
+      "This handoff does not execute or publish any run. Historical and replacement outputs must occupy separate experiment IDs."
+    ]
+  },
+  {
+    "id": "F3-02",
+    "priority": "P0",
+    "panels": [
+      "B",
+      "C"
+    ],
+    "purpose": "Recover or explicitly bound the historical RAGE-seq replay.",
+    "inputs": [
+      "/Volumes/rad_data/reviewer_comment_data/rageseq_false_whitelist_manuscript_era_20260817",
+      "/Volumes/rad_data/reviewer_comment_data/rageseq_false_whitelist_manuscript_era_20260817/results/read_level_totals.csv",
+      "/Volumes/rad_data/reviewer_comment_data/rageseq_false_whitelist_manuscript_era_20260817/results/false_target_assigned_reads_long.tsv",
+      "/Volumes/rad_data/reviewer_comment_data/rageseq_false_whitelist_manuscript_era_20260817/whitelists/dummy_bcs_v1_reconstructed.txt",
+      "/Volumes/rad_data/reviewer_comment_data/rageseq_false_whitelist_manuscript_era_20260817/whitelists/dummy_bcs_v2_reconstructed.txt",
+      "/Volumes/rad_data/reviewer_comment_data/rageseq_false_whitelist_manuscript_era_20260817/whitelists/dummy_bcs_v3_reconstructed.txt",
+      "/Volumes/rad_data/reviewer_comment_data/paper_revision_20261022/evidence/figure2_native_tables/969A7A49-AD72-4F65-A725-A8B9E0A0CEC8.csv",
+      "/Volumes/rad_data/reviewer_comment_data/paper_revision_20261022/evidence/figure2_native_tables/F0694302-5FC9-439B-9C62-B69220EEE154.csv"
+    ],
+    "scripts": [
+      "/Volumes/rad_data/reviewer_comment_data/rageseq_false_whitelist_manuscript_era_20260817/scripts/assemble_rage_pkg.py",
+      "/Volumes/rad_data/reviewer_comment_data/rageseq_false_whitelist_manuscript_era_20260817/scripts/flex_offlist_tab.py",
+      "/Volumes/rad_data/reviewer_comment_data/rageseq_false_whitelist_manuscript_era_20260817/scripts/flex_strict.py",
+      "/Volumes/rad_data/reviewer_comment_data/rageseq_false_whitelist_manuscript_era_20260817/scripts/flex_rules.py"
+    ],
+    "checkpoints": [
+      "historical_source_inventory.tsv: source artifact, recorded location, staged location, bytes, SHA256, recovered/inferred/unavailable status",
+      "historical_table_rows.tsv: original archive, table, column, replicate, row_index, value, barcode_if_proven, identity_status",
+      "historical_totals_reconciliation.tsv: tool, replicate, metric, unit, value, source, explanation_status",
+      "historical_barcode_order_ambiguity.tsv: replicate, RAD_count, tied_rows, barcode_set, permitted_use"
+    ],
+    "actions": [
+      "Stage original RAD extracted_headers.csv for 082825_rad_fp1/2/3 and original Flexiplex offlist_v1/v2/v3 assignment/FASTQ and logs from the explicitly recorded archives; do not broad-search cloud roots.",
+      "Recover 041026_Figure_3_CMV.prism, original unlabelled 3E data and corresponding 3D totals, plus current plotted archive. Preserve all versions unchanged.",
+      "Recover original dummy lists, sampling script/seed, selected-reference/exclusion list, input FASTQ identity, tool binaries/commits and BLAZE read-level outputs if available; otherwise record each as unavailable.",
+      "Port hardcoded tmp/Dropbox assembly paths into explicit CLI inputs. Restore missing upstream RAD/BLAZE per-barcode extraction scripts or write a provenance-marked table importer.",
+      "Do not assign a unique BLAZE barcode identity from RAD count-vector agreement; keep row indexes unless a labeled export or original exporter proves the ordering.",
+      "Do not force mismatched historical BLAZE totals to agree by adding/subtracting inferred records."
+    ],
+    "validation": [
+      "Record-count totals RAD 49,816 / 49,942 / 49,232; BLAZE table 1,355,389 / 1,403,176 / 1,357,996 versus headline 1,354,508 / 1,402,306 / 1,357,281; Flex records 1,597,157 / 1,679,710 / 1,647,416 versus log 1,591,111 / 1,672,992 / 1,640,883 and strict counts 1,584,869 / 1,666,073 / 1,634,153.",
+      "Three reconstructed sets have 4,505 targets each; union 13,426. Treat completeness as a package assertion until original list provenance is recovered.",
+      "RAD count ties affect 4,498 / 4,496 / 4,492 of 4,505 rows; counts alone cannot identify BLAZE rows within ties.",
+      "Historical replay may pass aggregate/unpaired-distribution checks while failing identity-level/read-level reproducibility; explicitly separate these outcomes.",
+      "Unresolved barcode identities are a validation blocker for paired cross-tool barcode analysis. Aggregate totals and unpaired count distributions remain usable with their historical units and limitations stated."
+    ],
+    "dependencies": [
+      "F3-01"
+    ],
+    "decision_needed": "If missing originals cannot be recovered, author chooses whether a limited historical figure remains, a replacement is added, or the historical arm is removed. Do not claim a fully reproducible matched experiment.",
+    "public_outputs": [
+      "historical_source_inventory.tsv",
+      "historical_totals_reconciliation.tsv",
+      "historical_table_rows.tsv",
+      "historical_barcode_order_ambiguity.tsv",
+      "replay_historical_rage.py"
+    ],
+    "availability_notes": [
+      "Compact lists/results and four scripts are present on the drive. Original lists/seeds and BLAZE raw runs are not in the package. Original RAD/Flex files are only referenced at old Dropbox paths; no drive mirror was established during this scoped audit.",
+      "assemble_rage_pkg.py requires absent private/tmp JSON intermediates; RAD/BLAZE upstream extraction is not shipped. README row-identity proof is insufficient within equal-count ties."
+    ]
+  },
+  {
+    "id": "F3-03",
+    "priority": "P0",
+    "panels": [
+      "A",
+      "B",
+      "C"
+    ],
+    "purpose": "Restore portable, pinned ScTagger/LongBench off-list execution and aggregation.",
+    "inputs": [
+      "/Volumes/rad_data/reviewer_comment_data/sctagger_L_false_whitelist_20260813",
+      "/Volumes/rad_data/reviewer_comment_data/longbench_sc_ont_false_whitelist_20260813",
+      "/Volumes/rad_data/reviewer_comment_data/wl_scan/20260731_sctagger_badread_quality_full/inputs/L/flatQ20.fq.gz",
+      "/Volumes/rad_data/reviewer_comment_data/sctagger_L_false_whitelist_20260813/provenance/whitelist_generation.json",
+      "/Volumes/rad_data/reviewer_comment_data/longbench_sc_ont_false_whitelist_20260813/provenance/source_manifest.tsv",
+      "/Volumes/rad_data/reviewer_comment_data/longbench_sc_ont_false_whitelist_20260813/provenance/whitelist_manifest.tsv",
+      "/Volumes/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/three_tool_phase_benchmark_20260902_parallel_epyc7543/provenance/input_manifest.tsv"
+    ],
+    "scripts": [
+      "/Volumes/rad_data/reviewer_comment_data/sctagger_L_false_whitelist_20260813/scripts/generate_sctagger_false_whitelists.py",
+      "/Volumes/rad_data/reviewer_comment_data/sctagger_L_false_whitelist_20260813/scripts/run_sctagger_false_rad.sh",
+      "/Volumes/rad_data/reviewer_comment_data/sctagger_L_false_whitelist_20260813/scripts/run_sctagger_false_blaze.sh",
+      "/Volumes/rad_data/reviewer_comment_data/sctagger_L_false_whitelist_20260813/scripts/run_sctagger_false_flexiplex.sh",
+      "/Volumes/rad_data/reviewer_comment_data/sctagger_L_false_whitelist_20260813/scripts/aggregate_sctagger_false_results.py",
+      "/Volumes/rad_data/reviewer_comment_data/sctagger_L_false_whitelist_20260813/scripts/independent_audit_sctagger_false.py",
+      "/Volumes/rad_data/reviewer_comment_data/longbench_sc_ont_false_whitelist_20260813/scripts/generate_false_whitelists.py"
+    ],
+    "checkpoints": [
+      "input_manifest.tsv: dataset, accession/source, compression hash, decoded-ID/sequence hash, records, quality condition",
+      "replicate_whitelist.tsv: dataset, replicate, seed, catalog_hash, excluded_set_hash, rank, target_barcode",
+      "tool_run_manifest.json: executable/source/container hashes, command, dependency versions, thread/order/hash seed, layout, input/list hashes, exit status",
+      "raw_assignment_rows.parquet + parser provenance"
+    ],
+    "actions": [
+      "Make staged roots configurable; remove hardcoded user/scratch/Slurm identifiers from portable wrappers.",
+      "Recover build_longbench_sc_ont_false_package.py and full LongBench run/sample wrappers from pinned project history or reconstruct from exact recorded commands, with a new provenance label. They are not in the durable package scripts directory or the two checked source snapshots.",
+      "Locate/restore the exact 10-million-read SeqKit input or regenerate using SeqKit 2.8.2 sample -2 -n10000000 -s2026081326 from the validated canonical input. Compare the expected hash and decoded record IDs.",
+      "Reproduce fixed lists before any expensive job: ScTagger seeds 20260813, 20260814 and 20260815, with 5,000 targets; LongBench seeds 2026081301, 2026081302 and 2026081303, with 5,211 targets.",
+      "Freeze historical binaries for replay; execute a new tool version only as a separately identified replacement run."
+    ],
+    "validation": [
+      "ScTagger input 4,993,805 records, flat Q20, recorded SHA-256 6f7385468b607cf86c91449b095c2968ee2a5d25ab473901102b87d141543090.",
+      "LongBench 10-million-read compressed SHA-256 ecb19387e6cad1f7095ea95b183b5c30d3ac83c9ced67df53fddde885398689a.",
+      "Each list unique, lexically ordered, composed of full-catalog members and disjoint from exclusion set; exact same list/hash across tools; zero targets retained.",
+      "All nine arms per dataset have successful exit/logs and complete input coverage; expected numerical historical checks belong only to the pinned replay."
+    ],
+    "dependencies": [
+      "F3-01"
+    ],
+    "decision_needed": null,
+    "public_outputs": [
+      "run_offlist.py",
+      "build_offlist_tables.py",
+      "environment lock/container recipe",
+      "input_manifest.tsv",
+      "replicate_whitelist.tsv",
+      "tool_run_manifest.json"
+    ],
+    "availability_notes": [
+      "ScTagger flatQ20 input present, 3.07 GB by stat only. All 18 ScTagger/LongBench output FASTQs and BLAZE extraction tables, Flex sidecars, supplied lists, logs and metadata are present.",
+      "LongBench inputs/SC_ONT.fastq.gz is a dangling symlink on this mount; expected durable raw_fastq_datasets/longbench/raw_fastq paths were absent. HPC existence is not established by this local check.",
+      "ScTagger off-list RAD commit cd0582b2440cde0f35725dc557fa47307d74d374, version 1.0.2, binary SHA-256 80a573fe05fa1a236751240fad7da17ca00e2d55a95259ca997584a8a5e0e67c; LongBench uses same binary hash. Neither is the later adapter-repaired build.",
+      "The independent Figure 1 inventory confirms preserved metadata for full LongBench inputs at historical /scratch-nfs/f005f43/rad_longbench_20260726/data/sc_sn/raw_fastq/ paths. Corresponding local raw FASTQ leaves are absent, and the exact 10-million-read sample was not located."
+    ]
+  },
+  {
+    "id": "F3-04",
+    "priority": "P0",
+    "panels": [
+      "B",
+      "C"
+    ],
+    "purpose": "Build an auditable strict physical-read ledger and off-list checkpoint tables.",
+    "inputs": [
+      "/Volumes/rad_data/reviewer_comment_data/sctagger_L_false_whitelist_20260813/runs",
+      "/Volumes/rad_data/reviewer_comment_data/longbench_sc_ont_false_whitelist_20260813/runs",
+      "/Volumes/rad_data/reviewer_comment_data/sctagger_L_false_whitelist_20260813/summaries/per_run_summary.tsv",
+      "/Volumes/rad_data/reviewer_comment_data/longbench_sc_ont_false_whitelist_20260813/summaries/per_run_summary.tsv"
+    ],
+    "scripts": [
+      "/Volumes/rad_data/reviewer_comment_data/sctagger_L_false_whitelist_20260813/scripts/aggregate_sctagger_false_results.py",
+      "/Volumes/rad_data/reviewer_comment_data/sctagger_L_false_whitelist_20260813/scripts/independent_audit_sctagger_false.py",
+      "/Volumes/rad_data/reviewer_comment_data/sctagger_L_false_whitelist_20260813/scripts/validate_sctagger_false_whitelists.py"
+    ],
+    "checkpoints": [
+      "offlist_assignment_rows: experiment, dataset, replicate, tool, physical_read_id, record_id, source_barcode, target_barcode, source_evidence, emitted_fastq, normalization_rule",
+      "offlist_read_fate: original_id, n_assignment_rows, n_targets, status(strict_assigned/ambiguous/unassigned), target_if_strict",
+      "offlist_per_target: dataset, replicate, tool, barcode, rank, n_strict, n_native, n_corrected, n_raw_unavailable, n_excluded_records",
+      "offlist_run_totals: input_reads, strict_assigned, ambiguous_ids, unassigned, assignment_rows, sidecar_only_rows, FASTQ_rows",
+      "figure3_B_totals.tsv and figure3_C_per_target.tsv"
+    ],
+    "actions": [
+      "Stream preserved outputs without rerunning demultiplexing first; BLAZE source join from putative_bc.csv; Flex assignment sidecar authoritative.",
+      "Normalize tool suffixes before grouping. Exclude every assignment from any physical ID with more than one assignment row, even duplicate same-target rows.",
+      "Retain Flex sidecar-only valid assignments with empty trimmed sequence and separately report FASTQ subset checks.",
+      "Keep target identity in the primary table. Export the legacy nine numeric columns only as a derived presentation table; row rank pairs tools within one replicate only."
+    ],
+    "validation": [
+      "input_reads = strict_assigned + ambiguous_ids + unassigned; assignment_rows = strict_assigned + ambiguous_assignment_rows when all rows valid.",
+      "Per-target sums match per-run strict totals and every supplied target appears once, including zero counts.",
+      "LongBench Flex sidecar-only rows 4 / 1 / 0; FASTQ-only rows 0; shared-ID group mismatches 0.",
+      "ScTagger strict totals RAD 48,997 / 49,004 / 49,292; BLAZE 294,175 / 304,701 / 299,332; Flex 462,690 / 465,375 / 458,773. LongBench strict totals RAD 46,487 / 46,961 / 46,568; BLAZE 1,005,393 / 1,024,563 / 1,097,594; Flex 1,364,364 / 1,370,330 / 1,422,565.",
+      "Do not call unassigned_by_unique_id from the old ScTagger summary a complete strict denominator without adding ambiguous IDs; it counts no observed assignment separately."
+    ],
+    "dependencies": [
+      "F3-03"
+    ],
+    "decision_needed": null,
+    "public_outputs": [
+      "identity-bearing per-target tables",
+      "run/read-fate summary tables",
+      "small normalized assignment test fixtures",
+      "validation_offlist.json"
+    ],
+    "availability_notes": [
+      "Existing summaries permit exact aggregate comparison; no heavy read audit was run for this handoff. Historical RAGE retains a distinct record-count contract unless author-approved replacement is executed."
+    ]
+  },
+  {
+    "id": "F3-05",
+    "priority": "P1",
+    "panels": [
+      "A",
+      "B",
+      "C"
+    ],
+    "purpose": "Conditional new RAGE-seq matched off-list experiment, explicitly separate from historical replay.",
+    "inputs": [
+      "/Volumes/rad_data/reviewer_comment_data/rageseq_false_whitelist_manuscript_era_20260817/README.md",
+      "/Volumes/rad_data/reviewer_comment_data/rageseq_false_whitelist_manuscript_era_20260817/whitelists",
+      "/Volumes/rad_data/reviewer_comment_data/sctagger_L_false_whitelist_20260813/scripts/generate_sctagger_false_whitelists.py",
+      "/Volumes/rad_data/reviewer_comment_data/longbench_sc_ont_false_whitelist_20260813/scripts/generate_false_whitelists.py"
+    ],
+    "scripts": [
+      "/Volumes/rad_data/reviewer_comment_data/sctagger_L_false_whitelist_20260813/scripts/run_sctagger_false_rad.sh",
+      "/Volumes/rad_data/reviewer_comment_data/sctagger_L_false_whitelist_20260813/scripts/run_sctagger_false_blaze.sh",
+      "/Volumes/rad_data/reviewer_comment_data/sctagger_L_false_whitelist_20260813/scripts/run_sctagger_false_flexiplex.sh"
+    ],
+    "checkpoints": [
+      "replacement_rage_design.json",
+      "three seeded target lists with catalog/exclusion hashes",
+      "tool_run_manifest",
+      "strict assignment/read-fate/per-target tables",
+      "historical_vs_replacement_comparison.tsv"
+    ],
+    "actions": [
+      "Only after recorded author decision, select the exact RAGE input/accession and completeness scope (likely the cell-line mixture, but verify original experiment identity before claiming a replay).",
+      "Choose either preserved reconstructed historical lists with an honest reconstruction label, or new seed-generated catalog lists excluding the approved matched reference. New lists require explicit seeds and sampling algorithm.",
+      "Choose a common tool-version policy, quality settings, input read scope and strict physical-read counting contract. Apply the same list/input to all tools.",
+      "If using new RAD/current builds, designate new experiments for the other cohorts as needed; do not imply historical source totals validate current code.",
+      "Preserve all historical files unchanged and state that a replacement does not reconstruct missing BLAZE events."
+    ],
+    "validation": [
+      "Same input/list hashes across tools and all denominator checks from F3-04.",
+      "Reference membership is an operational negative proxy in biological RAGE data, not proven biological absence.",
+      "No requirement to match historical counts; require reproducibility of the new run and separate comparison of versions/settings/scopes."
+    ],
+    "dependencies": [
+      "F3-01",
+      "F3-02",
+      "F3-03",
+      "F3-04"
+    ],
+    "decision_needed": "Required: author authorization of replacement dataset/input scope, version policy, target-list source or new seed plan, and whether the replacement supersedes or accompanies historical panels.",
+    "public_outputs": [
+      "replacement_rage_design.json",
+      "target_lists",
+      "complete command/log/manifest bundle",
+      "replacement Figure 3B/C tables"
+    ],
+    "availability_notes": [
+      "This is a proposed task, not an executed experiment. Original RAGE seed and BLAZE run environment cannot be inferred from the recovered Prism counts."
+    ]
+  },
+  {
+    "id": "F3-06",
+    "priority": "P0",
+    "panels": [
+      "D",
+      "E",
+      "F",
+      "G"
+    ],
+    "purpose": "Restore all 12 LongBench assignment/source-evidence contracts with version and CT scope pinned.",
+    "inputs": [
+      "/Volumes/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/longbench_rad_4acbe00_raw_prism_20260827/inputs",
+      "/Volumes/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/longbench_rad_4acbe00_raw_prism_20260827/tools",
+      "/Volumes/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/longbench_rad_4acbe00_raw_prism_20260827/runs",
+      "/Volumes/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/longbench_rad_4acbe00_raw_prism_20260827/fast_rad_raw_audit_validation_report.json",
+      "/Volumes/rad_data/reviewer_comment_data/LongBench_comps/full_A_to_B_audit_20260731/RAW_INPUTS.tsv",
+      "/Volumes/rad_data/reviewer_comment_data/LongBench_comps/full_A_to_B_audit_20260731/SOURCE_MANIFEST.tsv",
+      "/Volumes/rad_data/reviewer_comment_data/LongBench_comps/full_A_to_B_audit_20260731/provenance/producers",
+      "/Volumes/rad_data/reviewer_comment_data/LongBench_comps/full_A_to_B_audit_20260731/references"
+    ],
+    "scripts": [
+      "/Volumes/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/longbench_rad_4acbe00_raw_prism_20260827/scripts/run_one_arm.sh",
+      "/Volumes/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/longbench_rad_4acbe00_raw_prism_20260827/scripts/run_one_audit_all.sh",
+      "/Volumes/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/longbench_rad_4acbe00_raw_prism_20260827/scripts/fast_rad_raw_audit.cpp",
+      "/Volumes/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/longbench_rad_4acbe00_raw_prism_20260827/scripts/validate_fast_rad_raw_audit.py",
+      "/Volumes/rad_data/reviewer_comment_data/LongBench_comps/full_A_to_B_audit_20260731/provenance/scripts/run_analyzer_one.sh",
+      "/Volumes/rad_data/reviewer_comment_data/LongBench_comps/full_A_to_B_audit_20260731/provenance/scripts/run_flex_v1026_audit_one.sh",
+      "/Volumes/rad_data/reviewer_comment_data/LongBench_comps/full_A_to_B_audit_20260731/provenance/scripts/orchestrate_full_audit.sh"
+    ],
+    "checkpoints": [
+      "longbench_arm_manifest: dataset, tool, exact source commit, binary hash, input hash, selected/cellranger/catalog hashes, layout, CT policy, producer path, status",
+      "normalized_assignment_rows with exact source_evidence and physical_read_id",
+      "producer_recovery.tsv"
+    ],
+    "actions": [
+      "Keep D-G RAD 4acbe00 raw all-record results, including -CT records; do not substitute earlier RAD 920adda or CT-excluded tables.",
+      "Map expected full raw inputs of 117,002,380 / 119,016,231 / 195,242,482 / 161,917,662 records for SC_ONT / SN_ONT / SC_PB / SN_PB to actual HPC files and hash manifest.",
+      "Stage or recover RAD emitted FASTQs (not present in the inspected preserved demux folders), BLAZE full putative+emitted assignment streams and Flex output-only RawCellBarcode sidecars. If lost, record the required new producer job with its precise historical or replacement identity.",
+      "Freeze tool-selected whitelist files, matched Cell Ranger lists, chemistry catalog and suffix/orientation rules. Rebuild catalog cache with hash/version metadata.",
+      "Preserve BLAZE historical output if available: producer recorded PYTHONHASHSEED=UNSET, so regenerated tie assignments may differ. Record deterministic iteration/hash seed for new runs without claiming bitwise historical replay.",
+      "Restore pinned tools/containers and the reporting-only Flex modification with byte-equivalence validation; skip deprecated failing 1.01 arms."
+    ],
+    "validation": [
+      "All 12 arm records complete, all outputs tied to producer evidence, all references/content hashes verified.",
+      "RAD binary and source commit 4acbe004ba11b150d6832395452632f367a6e6c1 pinned. Included CT counts and group nonreentry prove no suffix-derived record loss.",
+      "Flex audit modification preserves pristine FASTQ/standard sidecar on fixture; existing 20,000-read hash evidence is available in README.audit.md.",
+      "Raw file size 21 recorded in one BLAZE producer metadata is a symlink-size artifact, not proof of raw input; validate target bytes/content."
+    ],
+    "dependencies": [
+      "F3-01"
+    ],
+    "decision_needed": null,
+    "public_outputs": [
+      "longbench_arm_manifest.tsv",
+      "portable producer/source parser wrappers",
+      "tool/source/container provenance",
+      "assignment schema and small test fixtures"
+    ],
+    "availability_notes": [
+      "All 12 compact per-target/summary result sets exist. RAD selected lists/layouts/catalog and Linux binaries are preserved. Full RAD emitted FASTQs are absent from the inspected mount package.",
+      "Competitor full assignment streams are outside the compact package at recorded scratch paths; this handoff has not established their current availability.",
+      "Original Bash submit scripts contain hardcoded paths/job IDs and some target CT-excluded results; do not run unchanged."
+    ]
+  },
+  {
+    "id": "F3-07",
+    "priority": "P0",
+    "panels": [
+      "D",
+      "E",
+      "F",
+      "G"
+    ],
+    "purpose": "Regenerate measured barcode-category checkpoints with exact pair-level grouping.",
+    "inputs": [
+      "/Volumes/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/longbench_rad_4acbe00_raw_prism_20260827/runs",
+      "/Volumes/rad_data/reviewer_comment_data/LongBench_comps/full_A_to_B_audit_20260731/results/arms/blaze",
+      "/Volumes/rad_data/reviewer_comment_data/LongBench_comps/full_A_to_B_audit_20260731/results/arms/flex_v1026",
+      "/Volumes/rad_data/reviewer_comment_data/paper_revision_20261022/evidence/failure_modes_manuscript_audit.md"
+    ],
+    "scripts": [
+      "/Volumes/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/longbench_rad_4acbe00_raw_prism_20260827/scripts/analyze_correction_events.py",
+      "/Volumes/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/longbench_rad_4acbe00_raw_prism_20260827/scripts/fast_rad_raw_audit.cpp",
+      "/Volumes/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/longbench_rad_4acbe00_raw_prism_20260827/scripts/validate_fast_rad_raw_audit.py",
+      "/Volumes/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/longbench_rad_4acbe00_raw_prism_20260827/scripts/summarize_fast_rad_validation.py",
+      "/Volumes/rad_data/reviewer_comment_data/LongBench_comps/full_A_to_B_audit_20260731/provenance/scripts/analyze_correction_events.executed.py"
+    ],
+    "checkpoints": [
+      "read_target_ledger: dataset, tool, physical_id, target, source_set, source_evidence_set, assignment_record_count, class_flags, conflicting_sources, CT_records",
+      "longbench_per_target: dataset, tool, barcode, selected, unique_read_target_assignments_O, native_exact, all_corrected, noncatalog_to_selected, catalog_noncell_to_selected_A, cellranger_to_different_cellranger_K",
+      "longbench_run_summary + invariants + class_overlap_counts",
+      "figure3_E_totals.tsv, figure3_F_counts.tsv, figure3_G_percentages.tsv"
+    ],
+    "actions": [
+      "Use exact observed source a, target b, catalog C, Cell Ranger set R and selected set S. Corrected off-list: a outside C, b in S, a != b; Failure Mode 1: a in C but not R, b in S, a != b; Failure Mode 2: a in R, b in both R and S, a != b. Missing source cannot be inferred from edit-distance zero.",
+      "RAD source = CR with orientation normalization; empty CR = native target; BLAZE joins full putative source to emitted assignment; Flex uses RawCellBarcode.",
+      "Collapse repeated (physical_id, target) pairs within category; allow one physical read assigned to different targets to contribute to both. Track multiple source sequences and overlapping class flags per pair.",
+      "Prove read groups do not re-enter using SQLite/exact grouping. Preserve classes as audit subsets, not an exhaustive/additive outcome pie.",
+      "Join targets by barcode identity across tools; retain selected_by flags and explicit zeros for absent tool-target combinations; retain null percentages for zero O."
+    ],
+    "validation": [
+      "Per-target marginals reproduce summary class totals; unique-read-target grouping checked independently.",
+      "All per-class counts <= O per target, no negative counts, percentages = 100*n/O; undefined at O = 0 stays blank/null, not zero.",
+      "RAD fast_all_exact tables agree with fast_all by bytes and with recorded Python/noCT parity evidence; all 4 current RAD Failure Mode 1 / Failure Mode 2 totals are 0.",
+      "BLAZE/Flex summaries compared to saved complete-input results and all 12 checks emitted.",
+      "Category overlap counts explain why sums may exceed distinct pairs; do not force exclusive partition identities."
+    ],
+    "dependencies": [
+      "F3-06"
+    ],
+    "decision_needed": null,
+    "public_outputs": [
+      "identity-bearing LongBench per-target and summary tables",
+      "class_overlap_counts.tsv",
+      "invariants.tsv",
+      "small parser/grouping fixtures",
+      "validation_longbench.json"
+    ],
+    "availability_notes": [
+      "Canonical all-record RAD checkpoints for all 4 arms are runs/{arm}/audit_raw_all_fast_exact/{summary,per_target,invariants}.tsv; audit_raw_all is incomplete for SC_ONT and SC_PB.",
+      "Old category aliases contain words like putativeproperlycorrected or noncell; public labels must use the approved measured descriptions."
+    ]
+  },
+  {
+    "id": "F3-08",
+    "priority": "P0",
+    "panels": [
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G"
+    ],
+    "purpose": "Produce explicit graph bindings and defensible statistics from identity-bearing source data.",
+    "inputs": [
+      "/Volumes/rad_data/reviewer_comment_data/paper_revision_20261022/evidence/figure2_prism_inventory.json",
+      "/Volumes/rad_data/reviewer_comment_data/paper_revision_20261022/evidence/figure2_native_tables",
+      "/Volumes/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/longbench_rad_4acbe00_raw_prism_20260827/prism/081926_rebuttal_RAD4acbe_rawLongBench_updated_20260827.prism",
+      "/Volumes/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/longbench_rad_4acbe00_raw_prism_20260827/prism/archive_closure_all_records.json",
+      "/Volumes/rad_data/reviewer_comment_data/paper_revision_20261022/github_audit/figure3_measured_categories/Figure3_measured_failure_modes_20261022.pdf"
+    ],
+    "scripts": [
+      "/Volumes/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/longbench_rad_4acbe00_raw_prism_20260827/scripts/update_raw_longbench_prism.py",
+      "/Volumes/rad_data/reviewer_comment_data/paper_revision_20261022/scripts/update_figure3_failure_modes_docx.py"
+    ],
+    "checkpoints": [
+      "figure3_panel_data_manifest: panel, archive/table/column/row, dataset, replicate, tool, metric, unit, denominator, excluded_rows, graph_binding",
+      "statistics_plan.json and results with input hashes",
+      "plotting-source tables, PDF/SVG and finalPNG"
+    ],
+    "actions": [
+      "Export present Prism tables/graph bindings before editing; explicitly reconcile source headline and per-target RAGE counts.",
+      "Check whether C intentionally displays only replicate 1 (current saved graph binds replicate 1), all replicates, or averaged per-target data; different replicate lists cannot be paired by rank across replicates.",
+      "Predeclare analysis using three whitelist draws as technical experiment replicates; barcode counts are not independent biological replicates. Select paired/blocked comparison only where identity is established.",
+      "Keep Figure 3G approved denominator O (all unique read-target pairs for same tool/target); do not use the separate error-composition total of three categories.",
+      "Parameterize the Prism updater or replace it with a reproducible plotting script; its existing default audit_raw_noct is not current all-record scope, and prism_tool.py is an external hardcoded dependency.",
+      "Invalidate/recompute affected saved stats after any unit/data/binding change. Preserve D measured schematic and all source originals."
+    ],
+    "validation": [
+      "Every plotted point traced to checkpoint key; table sums and graph bindings checked independently.",
+      "No per-barcode paired RAGE BLAZE test while row identities remain inferred.",
+      "All statistics state sampling unit, n, matching, multiple-comparison method and exact input hashes.",
+      "Native archive table metadata/dimensions/bounds valid; no stale cached analysis results; PDF/PNG figures visually checked at publication size.",
+      "Source originals unchanged; changes explicitly versioned; vector panel D and caption match Failure Mode numbering."
+    ],
+    "dependencies": [
+      "F3-02",
+      "F3-04",
+      "F3-07"
+    ],
+    "decision_needed": "Author/statistical decision required for any alteration of historical RAGE retention, C replicate presentation, or inferential design; no decision needed to preserve already approved measured class definitions.",
+    "public_outputs": [
+      "figure3_panel_data_manifest.tsv",
+      "statistics code/results",
+      "figure3 plot script",
+      "figure3.pdf",
+      "figure3.svg",
+      "figure3.png",
+      "versioned native Prism plus verification report"
+    ],
+    "availability_notes": [
+      "Current evidence copy of Figure 2 V18 carries the off-list tables; its B headline RAGE values differ from its per-target table. Do not assume saved source titles equal current panel letters.",
+      "D-G Prism update only updates RAD; comparator provenance must still be included in a complete build."
+    ]
+  },
+  {
+    "id": "F3-09",
+    "priority": "P1",
+    "panels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G"
+    ],
+    "purpose": "Package a releasable raw-to-figure workflow with a small independent smoke test.",
+    "inputs": [
+      "/Volumes/rad_data/reviewer_comment_data/paper_revision_20261022/hpc_handoff_20261023/components/figure_3.md",
+      "/Volumes/rad_data/reviewer_comment_data/paper_revision_20261022/hpc_handoff_20261023/components/figure_3_tasks.json"
+    ],
+    "scripts": [],
+    "checkpoints": [
+      "README command map + dependency lock",
+      "schema/data dictionary",
+      "checksums and licenses",
+      "tiny synthetic fixtures with hand-computable expected outputs",
+      "release_manifest.json"
+    ],
+    "actions": [
+      "Package stages input check, list generation, producer run, normalized assignments, counting, statistics and plotting as separate restartable commands with atomic completion markers and hash-based freshness.",
+      "Ship measured lists and compact checkpoints, paired row identities where proven, original-read normalization rules, parser/build source and version metadata; list public accessions instead of duplicating licensed third-party raw data indiscriminately.",
+      "Test missing inputs, duplicate/read re-entry, same-target duplicates, multitarget pairs, source unavailable, reverse orientation, empty Flex transcript, CT retention, zero target and zero denominator.",
+      "Document exact historical limitations and optional replacement branch. Keep unrecovered byte-identical historical replay failures visible.",
+      "Hand off to root for repository/Zenodo integration; do not publish here."
+    ],
+    "validation": [
+      "One clean-environment smoke-test command generates expected tables and figure with no user-specific absolute path assumptions.",
+      "Every public table has schema, units, denominator, source manifest and hash; all runtime dependencies pinned.",
+      "No automatic submission/publishing and no raw input alteration."
+    ],
+    "dependencies": [
+      "F3-01",
+      "F3-02",
+      "F3-03",
+      "F3-04",
+      "F3-06",
+      "F3-07",
+      "F3-08"
+    ],
+    "decision_needed": null,
+    "public_outputs": [
+      "Figure 3 README",
+      "portable scripts",
+      "environment/container definition",
+      "fixtures",
+      "schemas",
+      "source-data tables",
+      "checksums",
+      "release_manifest.json"
+    ],
+    "availability_notes": [
+      "Historical scripts are useful provenance, not a complete portable pipeline. Root owns repository and deposition decisions."
+    ]
+  }
+]

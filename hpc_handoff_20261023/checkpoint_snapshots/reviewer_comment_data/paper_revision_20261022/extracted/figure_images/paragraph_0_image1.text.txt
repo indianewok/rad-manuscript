@@ -1,0 +1,51 @@
+41664 41664
+1.4
+1.6
+1.8
+2.0
+2.2
+2.4
+Maximum 
+Resident Set Size (GB)
+RAD
+Flexiplex
+BLAZE
+A B C
+D
+Threads
+41664 41664
+0
+10
+20
+30
+40
+Total time (hrs)
+log10 ncpm
+Spaceranger In-Tissue Seurat RAD
+Y coordinate
+X coordinate
+single nuclei
+ONT
+single cell
+PB
+single nuclei
+ONT
+single cell
+PB
+Whitelist generated de novo from dataset,Whitelist defined by user.
+Heuristic use of static elements to define boundaries ofvariable elements:
+Commonly defined elements across datasets:Adapters, Forward& Reverse primers, Barcodes, UMI, TSO, Captured Read, polyA/T
+5’Static elements: Forward & Reverse primers, polyA/T
+Variable elements: Barcodes, Captured Read, UMI
+Read Structure Annotation
+Position Mapping
+Barcode CorrectionFor each detected barcode, sequence can be corrected using:
+5’
+Adapter-based alignment and extraction:Use adjacent adapters to rapidly detect and count matching barcodes
+Barcode Detection
+Saddle-point algorithm separates barcodesfrom background:
+Filtering and SelectionLog-normalized counts per million
+Density
+DemultiplexingWhitelist Scan
+1051n = 7 million barcodes
+Subsequent Analysis

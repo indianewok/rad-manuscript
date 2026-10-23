@@ -1,0 +1,30 @@
+field	value
+global_catalog_path	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/cellranger_whitelists/3M-february-2018-3v3.txt
+global_catalog_sha256	843a6f7038db8cb3c06f3dc21cc69d04139ffa10689780518d7a9e42dc2e819b
+global_catalog_rows	6794880
+matched_path	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/raw_fastq_datasets/longbench/truth/count_matrix_barcodes/ill_sc_barcodes.tsv.gz
+matched_sha256	3492fa9dde1af8a2a6e3a687a0fdf26f66ca733f1e828660ea1b37adfdc32e11
+matched_rows	5211
+matched_normalization	strip terminal -1
+eligible_rows	6789669
+sample_size_N	5211
+sampling_method	random.Random(seed).sample(eligible, N), then lexical sort
+replicate_seeds	2026081301,2026081302,2026081303
+rep1_seed	2026081301
+rep1_rows	5211
+rep1_unique	5211
+rep1_overlap_matched	0
+rep1_sha256	8e781537ba42209f9f56a63d42d52841b7f82531ff1b41f57235a9c8a7dd7b2e
+rep2_seed	2026081302
+rep2_rows	5211
+rep2_unique	5211
+rep2_overlap_matched	0
+rep2_sha256	2c670807ee263cc61b20f0d11ce231f52b4e1d52741df042520f18aefc4bf7d6
+rep3_seed	2026081303
+rep3_rows	5211
+rep3_unique	5211
+rep3_overlap_matched	0
+rep3_sha256	1737b92a5ca3e3a95cfe79346fc2ac204a67d9fbd50b2237eef9deb49f21a5cd
+pairwise_rep1_rep2	4
+pairwise_rep1_rep3	6
+pairwise_rep2_rep3	6

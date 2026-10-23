@@ -1,0 +1,90 @@
+{
+  "source_prism": "/Volumes/rad_data/reviewer_comment_data/paper_revision_20261022/evidence/092126_Figure_4_CMV_V1.prism",
+  "sha256": "8d3d1b1c4dca8cfcccf7e34f5d195ebd758a6a9fd7a7a57fc66d143762bfc38b",
+  "source_sheet": {
+    "@class": "DataSheet",
+    "$id": "sheets/data_sheet/data_sheet.schema.json",
+    "uid": "25C36598-E266-51BB-B350-2807CF182B3F",
+    "fenID": 19,
+    "title": "SeqKit stats (all reads)",
+    "isCustomTitle": true,
+    "table": {
+      "@class": "DataTable",
+      "$id": "sheets/data_sheet/data_table/data_table.schema.json",
+      "uid": "3503036B-4EA6-5554-B401-9CEECB8B40A7",
+      "format": "grouped",
+      "dataFormat": "y_single",
+      "rowTitlesDataSet": "04D3DF88-8CA2-5361-8D3B-74D1129D6D1F",
+      "dataSets": [
+        "05BFCDBC-034B-5A3F-A45B-7A558B4CD7C3",
+        "DCD1509F-842B-57EA-A85B-478D7F59770B",
+        "09D445AE-EB61-5FF8-9222-4BFFC1EECDFD",
+        "955C341A-AA82-5624-B0BD-DBBB5CE0D877",
+        "B8E9B4F4-FDFD-5AAB-B1B8-689857646EC6",
+        "BFBF8B4E-DB25-5460-A341-A6376A78E307",
+        "7685768C-4E44-52F2-A6BA-4F1F1A9D2946",
+        "66802B25-4C33-50FC-8F27-478C5210B56C",
+        "A6585300-8A58-5D54-9C36-FC83D3FD22B1",
+        "1C06A143-D66D-5033-8A16-440525F17106",
+        "C6B7A4C5-8FC3-5EEE-9384-1BC2B05D5D33",
+        "EE02A797-7511-5409-BE4C-92F597F2E8CE",
+        "A1EBFC1C-CD37-5470-86A0-F8C74DDE3E06",
+        "AFBA5CFB-E0A4-511F-9C50-3E3F5FF64033",
+        "F36F4326-BA43-513D-A723-1E30E7C96B85"
+      ]
+    },
+    "font": {
+      "family": "Arial",
+      "size": 11.0
+    },
+    "titleWidth": 52,
+    "xSubColWidth": 52,
+    "maxDataSets": 2048,
+    "maxRow": 500000,
+    "selectionRange": {
+      "startCell": {
+        "row": -3,
+        "column": 8,
+        "subcolumn": -1
+      },
+      "endCell": {
+        "row": 1073741823,
+        "column": 8,
+        "subcolumn": -1
+      }
+    },
+    "anchorRow": 0,
+    "anchorColumn": 0,
+    "firstSubColumn": 0,
+    "userSetColumnWidth": true,
+    "horizontal dpi": 72,
+    "widthOfColumns": [
+      {
+        "columns": "0~14",
+        "width": 120.0
+      }
+    ],
+    "rowTitlesWidth": 175,
+    "subColumnTitleType": "default"
+  },
+  "column_names": [
+    "dataset",
+    "num_seqs",
+    "sum_len",
+    "min_len",
+    "avg_len",
+    "max_len",
+    "Q1",
+    "Q2",
+    "Q3",
+    "sum_gap",
+    "N50",
+    "N50_num",
+    "Q20(%)",
+    "Q30(%)",
+    "AvgQual",
+    "GC(%)"
+  ],
+  "rows": 37,
+  "note": "Read-only extraction of saved data; no statistics calculated."
+}

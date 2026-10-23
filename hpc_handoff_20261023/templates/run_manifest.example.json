@@ -1,0 +1,42 @@
+{
+  "example_only": true,
+  "run_id": null,
+  "task_id": null,
+  "stage": null,
+  "experiment_id": null,
+  "mode": "render | resume | raw",
+  "input_assets": [],
+  "parent_checkpoints": [],
+  "code": {
+    "repository": null,
+    "commit": null,
+    "patch_sha256": null
+  },
+  "software": [],
+  "reference_assets": [],
+  "command_argv": [],
+  "working_directory": null,
+  "config_sha256": null,
+  "randomness": {
+    "selected_seed": null,
+    "effective_seeds": {},
+    "historical_path_key": null
+  },
+  "resources": {
+    "scheduler_job_id": null,
+    "host": null,
+    "threads": null,
+    "memory_requested_bytes": null,
+    "wall_seconds": null,
+    "max_rss_bytes": null,
+    "rss_definition": null
+  },
+  "started_at": null,
+  "finished_at": null,
+  "exit_status": null,
+  "logs": {},
+  "outputs": [],
+  "validators": [],
+  "status": "planned",
+  "comparison_to_canonical": null
+}

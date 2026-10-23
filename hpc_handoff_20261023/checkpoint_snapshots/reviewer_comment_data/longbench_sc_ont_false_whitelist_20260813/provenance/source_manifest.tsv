@@ -1,0 +1,21 @@
+field	value
+canonical_input	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/raw_fastq_datasets/longbench/raw_fastq/SC_ONT.fastq.gz
+canonical_input_sha256	4c18dc2fab3a5bda29b4ade6fb5d27f65d9ce6f87e110d7dad8f5de6d61ddade
+canonical_input_bytes	88257731285
+canonical_input_physical_records	117002380
+sample_input	/scratch/f005f43/longbench_sc_ont_false_whitelist_20260813/fastq/SC_ONT_10M_seqkit_seed2026081326.fastq.gz
+sample_input_sha256	ecb19387e6cad1f7095ea95b183b5c30d3ac83c9ced67df53fddde885398689a
+sample_input_bytes	7710293823
+sample_input_physical_records	10000000
+sample_seed	2026081326
+sample_method	SeqKit v2.8.2 sample -2 -n 10000000 -s 2026081326
+matched_source	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/raw_fastq_datasets/longbench/truth/count_matrix_barcodes/ill_sc_barcodes.tsv.gz
+matched_source_sha256	3492fa9dde1af8a2a6e3a687a0fdf26f66ca733f1e828660ea1b37adfdc32e11
+matched_source_rows	5211
+global_catalog	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/cellranger_whitelists/3M-february-2018-3v3.txt
+global_catalog_sha256	843a6f7038db8cb3c06f3dc21cc69d04139ffa10689780518d7a9e42dc2e819b
+global_catalog_rows	6794880
+global_rad_bitlist	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/sctagger_L_false_whitelist_20260813/provenance/global_chemistry_10x3v3_bitlist.csv.gz
+global_rad_bitlist_sha256	02f771363a95e786ab1a6ab1e554c770e58cdff2fb30f2d7a9fb50a97762d452
+sample_gzip_test	PASS
+status	PASS

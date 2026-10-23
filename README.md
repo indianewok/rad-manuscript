@@ -1,5 +1,11 @@
 # RAD Manuscript — Figure Generation Repository
 
+## Current revision: HPC handoff
+
+The 23 October 2026 revision audit and 36-task regeneration plan are in **[hpc_handoff_20261023](hpc_handoff_20261023/README.md)**. The HPC agent should begin with **[AGENT_START_HERE.md](hpc_handoff_20261023/AGENT_START_HERE.md)**. This includes source and code snapshots, checkpoint requirements, validation criteria, author decisions and recovery requests for current Figures 1–7.
+
+The figure layout and run instructions below describe the older manuscript baseline. Consult the handoff before running them; the current revision has additional workflows and unresolved provenance/statistical items.
+
 Code and analysis to regenerate every figure in the RAD manuscript:
 
 > **RAD: A Read-structure Agnostic Demultiplexer Long-Read Sequencing.**

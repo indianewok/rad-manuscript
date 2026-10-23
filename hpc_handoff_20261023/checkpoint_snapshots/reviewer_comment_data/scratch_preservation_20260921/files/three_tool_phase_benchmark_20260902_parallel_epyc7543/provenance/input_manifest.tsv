@@ -1,0 +1,3 @@
+dataset	raw_fastq	size_bytes	read_count_contract	sha256_preverified	pinned_node
+SN_ONT	/scratch-nfs/f005f43/rad_longbench_20260726/data/sc_sn/raw_fastq/SN_ONT.fastq.gz	90056019300	119016231	62e75b222c7046cfa0297ca59f56a26fdb923e3307edda0bb69701713719801a	a02
+SC_PB	/scratch-nfs/f005f43/rad_longbench_20260726/data/sc_sn/raw_fastq/SC_PB.fastq.gz	79878370809	195242483	68e818fdd9d329e56fd159ac90befba8350d30a4eaa959610fe03fd4484d07d4	t02

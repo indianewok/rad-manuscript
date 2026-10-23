@@ -1,0 +1,24 @@
+{
+  "task_count": 36,
+  "priority_counts": {
+    "P0": 19,
+    "P1": 14,
+    "P2": 2,
+    "DEFERRED": 1
+  },
+  "task_required_fields": "passed",
+  "task_ids_unique": "passed",
+  "dependency_references": "passed",
+  "dependency_graph_acyclic": "passed",
+  "named_asset_count": 212,
+  "asset_status_counts": {
+    "present_metadata_only": 208,
+    "missing_at_checked_path": 3,
+    "external_restore_required": 1
+  },
+  "code_files_snapshotted": 77,
+  "compact_checkpoint_files_snapshotted": 71,
+  "project_analysis_execution": "not performed",
+  "large_asset_hashing": "not performed; metadata checks only unless a prior evidence report states otherwise",
+  "additional_restore_requests": 4
+}

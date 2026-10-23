@@ -1,0 +1,27 @@
+check	status	observed	expected
+required_core_files	PASS	21	21
+deprecated_filtered_marker_clarity_absent	PASS	False	False
+all_per_contrast_deg_tables	PASS	14	14
+all_figures_pdf_and_png	PASS	22	22
+deg_summary_contrast_keys	PASS	14	14
+deg_summary_count_hierarchy	PASS	True	True
+universe_rows	PASS	7	7
+native_full_named_positive_depth_cohorts	PASS	{'RAD': 9404, 'BLAZE': 6478, 'Flexiplex': 7125}	{'RAD': 9404, 'BLAZE': 6478, 'Flexiplex': 7125}
+illumina_substrate_exact_label_overlaps	PASS	{'RAD': 9239, 'BLAZE': 6469, 'Flexiplex': 7070, 'Illumina_reference': 5782}	{'RAD': 9239, 'BLAZE': 6469, 'Flexiplex': 7070, 'Illumina_reference': 5782}
+fixed_common_illumina_gene_universe	PASS	[13916]	one identical tested-gene count
+reference_marker_panel_50_per_line	PASS	{'H146': 50, 'H526': 50}	{'H146': 50, 'H526': 50}
+exact50_cell_score_rows	PASS	14	14
+exact50_full_matrix_gene_rows	PASS	{'rows': 700, 'groups': 14, 'per_group': [50]}	700 rows; 14 groups; 50 per group
+exact50_full_matrix_gene_values	PASS	True	True
+exact50_marker_clarity_rows	PASS	14	14
+panel_deg_universe_retention_rows	PASS	14	14
+effect_overlap_union_unique_and_valid	PASS	4308	4308
+effect_overlap_counts_reconcile	PASS	55	55
+RAD_only_reference_supported_positive_rows	PASS	{'rows': 55, 'groups': [('illumina_substrate', 'H146'), ('illumina_substrate', 'H526'), ('native', 'H146'), ('native', 'H526')]}	unique rows and all four mode/line groups
+cohort_composition_exact_expected	PASS	{('RAD', 'H146'): (709, 167, 3, 0, 515, 24, 492, 1, 22), ('RAD', 'H526'): (419, 159, 3, 0, 247, 10, 183, 0, 64), ('BLAZE', 'H146'): (234, 73, 2, 0, 158, 1, 152, 0, 6), ('BLAZE', 'H526'): (185, 90, 1, 0, 94, 0, 73, 0, 21), ('Flexiplex', 'H146'): (290, 87, 2, 0, 194, 7, 189, 0, 5), ('Flexiplex', 'H526'): (219, 100, 2, 0, 116, 1, 88, 0, 28)}	{('RAD', 'H146'): (709, 167, 3, 0, 515, 24, 492, 1, 22), ('RAD', 'H526'): (419, 159, 3, 0, 247, 10, 183, 0, 64), ('BLAZE', 'H146'): (234, 73, 2, 0, 158, 1, 152, 0, 6), ('BLAZE', 'H526'): (185, 90, 1, 0, 94, 0, 73, 0, 21), ('Flexiplex', 'H146'): (290, 87, 2, 0, 194, 7, 189, 0, 5), ('Flexiplex', 'H526'): (219, 100, 2, 0, 116, 1, 88, 0, 28)}
+cohort_composition_per_cell_closure	PASS	{'rows': 2056, 'unique_keys': 2056}	{'rows': 2056, 'unique_keys': 2056}
+key_results_rows	PASS	{'rows': 56, 'unique_keys': 56}	{'rows': 56, 'unique_keys': 56}
+all_deg_unique_keys	PASS	207540	207540
+all_deg_finite_core_statistics	PASS	True	True
+all_deg_bounded_probabilities	PASS	True	True
+all_deg_boolean_flags	PASS	True	True

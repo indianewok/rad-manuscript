@@ -1,0 +1,25 @@
+{
+  "condition": "nanopore2023 native unadjusted; new deterministic cached-table assignment replay on2026-10-22",
+  "per_target_csv": "/Volumes/rad_data/reviewer_comment_data/paper_revision_20261022/prism/blaze2023_assignment_replay/BLAZE_selected_per_barcode.csv",
+  "totals": {
+    "native_correct": 640957,
+    "corrected_correct": 1881358,
+    "all_incorrect": 133838,
+    "ambiguous": 0,
+    "unassigned": 2337652
+  },
+  "selected_whitelist": "/Volumes/rad_data/reviewer_comment_data/paper_revision_20261022/prism/blaze2023_assignment_replay/matcher_whitelist_iteration_order.txt",
+  "exclusions_convention": "ambiguous=0 denotes no separately excluded multiple output assignments. Native matcher ambiguity returns no assignment and is included in unassigned.",
+  "provenance": "/Volumes/rad_data/reviewer_comment_data/paper_revision_20261022/prism/blaze2023_assignment_replay/provenance.json",
+  "four_way_totals": {
+    "native_correct": 640957,
+    "corrected_correct": 1881358,
+    "native_incorrect": 764,
+    "corrected_incorrect": 133074
+  },
+  "correction_only_plot": {
+    "correct": 1881358,
+    "incorrect": 133074,
+    "total": 2014432
+  }
+}

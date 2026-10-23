@@ -1,0 +1,3722 @@
+{
+  "audited_utc": "2026-10-22T11:38:06.991059+00:00",
+  "auditor": "evidence_inventory independent audit; no writer implementation or writer validation assertions reused",
+  "source": "/Volumes/rad_data/reviewer_comment_data/paper_revision_20261022/evidence/092126_Figure_2_CMV_V18.prism",
+  "source_sha256": "d8cc036cdca79d607be863fd15a9bc4721c4e86d09721ea4b368401fa9b3a10c",
+  "corrected": "/Volumes/rad_data/reviewer_comment_data/paper_revision_20261022/prism/Figure2_corrected_20261022.prism",
+  "corrected_sha256": "dded389f9d8214278f93d2669c64e704bbf2208c47db96bf57a4ce4c77d6d016",
+  "status": "PASS_SAVED_DATA_AND_STRUCTURE_NATIVE_REVIEW_PENDING",
+  "checks_passed": 499,
+  "checks_total": 499,
+  "failures": [],
+  "canonical_totals": {
+    "RAD": {
+      "native_correct": 667965,
+      "corrected_correct": 1944306,
+      "all_incorrect": 192090,
+      "ambiguous": 9048,
+      "unassigned": 2180396
+    },
+    "Flexiplex": {
+      "native_correct": 463613,
+      "corrected_correct": 1398700,
+      "all_incorrect": 282077,
+      "ambiguous": 364,
+      "unassigned": 2849051
+    },
+    "BLAZE": {
+      "native_correct": 640957,
+      "corrected_correct": 1881358,
+      "all_incorrect": 133838,
+      "ambiguous": 0,
+      "unassigned": 2337652
+    }
+  },
+  "six_state_totals": {
+    "RAD": {
+      "native_correct": 667965,
+      "corrected_correct": 1944306,
+      "all_incorrect": 192090,
+      "ambiguous": 9048,
+      "unassigned": 2180396,
+      "native_incorrect": 571,
+      "corrected_incorrect": 191519
+    },
+    "Flexiplex": {
+      "native_correct": 463613,
+      "corrected_correct": 1398700,
+      "all_incorrect": 282077,
+      "ambiguous": 364,
+      "unassigned": 2849051,
+      "native_incorrect": 381,
+      "corrected_incorrect": 281696
+    },
+    "BLAZE": {
+      "native_correct": 640957,
+      "corrected_correct": 1881358,
+      "all_incorrect": 133838,
+      "ambiguous": 0,
+      "unassigned": 2337652,
+      "native_incorrect": 764,
+      "corrected_incorrect": 133074
+    }
+  },
+  "correction_only_denominators": {
+    "RAD": 2135825,
+    "Flexiplex": 1680396,
+    "BLAZE": 2014432
+  },
+  "per_barcode_truth_target_sums": {
+    "native_correct": {
+      "BLAZE": 640957,
+      "RAD": 667965,
+      "Flexiplex": 463613
+    },
+    "corrected_correct": {
+      "BLAZE": 1881358,
+      "RAD": 1944306,
+      "Flexiplex": 1398700
+    },
+    "corrected_incorrect": {
+      "BLAZE": 132166,
+      "RAD": 191519,
+      "Flexiplex": 281696
+    }
+  },
+  "BLAZE_extra_target_assignments": 1091,
+  "BLAZE_truth_target_all_incorrect": 132747,
+  "BLAZE_truth_target_corrected_incorrect": 132166,
+  "archive_changes": {
+    "changed": 189,
+    "removed": 28,
+    "added": 0
+  },
+  "graph_intent_reference": "/Volumes/rad_data/reviewer_comment_data/paper_revision_20261022/extracted/figure_images/paragraph_2_image2.png",
+  "graph_intent": "Source Figure2 F is Correction totals within Error-corrected barcodes; D shows selected-list native correct counts plus the explicit Flex fixed5000 reference increment. Independently viewed image confirms this.",
+  "limitations": [
+    "Native Prism opening, recalculation, saving and visual rendering were not performed because the user is using Prism.",
+    "Data and saved graph dataset bindings are verified. Pie dataset EXCLUDED metadata is checked to show only corrected correct/incorrect states. Binary plot caches, displayed labels, significance annotations, legends, and other native row selections still require visual review.",
+    "Six existing analyses are marked uncalculated and old result caches cleared. No new statistical test was approved or computed.",
+    "BLAZE assignment is a new deterministic cached-table replay performed on 2026-10-22, not a previously saved 2023 assignment run.",
+    "RAD assignment uses the preserved exact5000-global/custom adapter-fix contract; global-chemistry-whitelist equivalence was not tested."
+  ],
+  "input_artifact_hashes": {
+    "/Volumes/rad_data/reviewer_comment_data/paper_revision_20261022/evidence/figure2_canonical_rad_flex/RAD_truth5000_aligned_per_barcode.csv": "d3276aa273958e11d6de4283a3cd3cc55ea704949bc4336476198339a6e9d026",
+    "/Volumes/rad_data/reviewer_comment_data/paper_revision_20261022/evidence/figure2_canonical_rad_flex/Flexiplex_truth5000_aligned_per_barcode.csv": "2084ba636d5d3111f411a7a4c14ae701d6d7b1b1e40272761bf59d399fbf8518",
+    "/Volumes/rad_data/reviewer_comment_data/paper_revision_20261022/evidence/figure2_canonical_rad_flex/canonical_results.json": "16d3cce8964e1a49e6b6ca8df1ebd7b806e0a39f779f0927a1659278dc6f7da8",
+    "/Volumes/rad_data/reviewer_comment_data/paper_revision_20261022/prism/blaze2023_assignment_replay/per_barcode.tsv": "a57b6d80f1a9a48a7fe5340f130f5b26c59c1bc05e0935c7681e7ae3f1e1b066",
+    "/Volumes/rad_data/reviewer_comment_data/paper_revision_20261022/prism/blaze2023_assignment_replay/provenance.json": "a430ab23e5371af02c19efb0cb6998be8600cfad577eadcf8bbaf5239875963a"
+  },
+  "checks": [
+    {
+      "check": "Pinned corrected archive",
+      "pass": true,
+      "details": "dded389f9d8214278f93d2669c64e704bbf2208c47db96bf57a4ce4c77d6d016"
+    },
+    {
+      "check": "Evidence source unchanged",
+      "pass": true,
+      "details": "d8cc036cdca79d607be863fd15a9bc4721c4e86d09721ea4b368401fa9b3a10c"
+    },
+    {
+      "check": "Original Dropbox source unchanged",
+      "pass": true
+    },
+    {
+      "check": "ZIP CRC integrity",
+      "pass": true
+    },
+    {
+      "check": "No duplicate ZIP names",
+      "pass": true
+    },
+    {
+      "check": "All JSON documents parse",
+      "pass": true,
+      "details": 658
+    },
+    {
+      "check": "Changed member inventory exact",
+      "pass": true
+    },
+    {
+      "check": "Removed member inventory exact",
+      "pass": true
+    },
+    {
+      "check": "No undocumented new members",
+      "pass": true,
+      "details": []
+    },
+    {
+      "check": "Member hashes: data/tables/454FDFB2-AEAA-4BE0-B7FD-78208EC7D650/data.csv",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/454FDFB2-AEAA-4BE0-B7FD-78208EC7D650/data.dt",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/454FDFB2-AEAA-4BE0-B7FD-78208EC7D650/content.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/D69FD8F1-32EA-4E92-AD25-C43FF84775C9.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/55733904-0FA1-4462-9987-5CDECF83A340.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/B7A95E01-DCE4-4964-ADD1-71CF919FE6DE.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/8C506AC1-3D51-473C-A40B-39448CBDE59D.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/7A817AB2-8B3F-4B5F-85FB-0984A7A35D99.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/365F4A1A-9C12-456C-B7E6-6C2296A826E3.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sheets/63D81234-28AC-46E8-8332-CB1AE2FC1AFF/sheet.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/9B38C59C-7023-4935-BC85-6E5F22DE25C4/data.csv",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/9B38C59C-7023-4935-BC85-6E5F22DE25C4/data.dt",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/9B38C59C-7023-4935-BC85-6E5F22DE25C4/content.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/DE2FD62C-2702-4527-B5CE-11D8C9FE1F33.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/25C79583-B71F-4587-A42E-2C295A006D14.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/FF40BBC9-474C-49EC-85C5-707493619F18.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/197C841C-A1D9-4BF7-AF25-60A713172056.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/33CFF86A-A5F5-4454-B030-E0492F0A9B49.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/69914275-8015-4D28-BC42-DA5324C12274.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sheets/66EF3D96-C86B-4FA9-ACE5-53621808DA50/sheet.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/8761666A-E513-4EA1-ADC3-E148DD37108C/data.csv",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/8761666A-E513-4EA1-ADC3-E148DD37108C/data.dt",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/8761666A-E513-4EA1-ADC3-E148DD37108C/content.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/A6625B7E-CCF3-4027-A38B-36689B2F9D63.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/9EAF2EAD-1268-45DD-A97B-95FB03243A40.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/BA645DAC-CA07-4E30-82F8-81C9505CB8BF.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/594B2375-BAC7-43FF-8B3D-89B48CF0526B.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/06A86DEC-700A-4815-A53A-023C6531060E.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/6D3A1C79-1223-46FF-9280-23BED90EA394.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sheets/98505F94-3866-4F00-A8CD-E076CF542357/sheet.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/E08A0F0A-75E3-44CA-BF8E-CB690D1C0A91/data.csv",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/E08A0F0A-75E3-44CA-BF8E-CB690D1C0A91/data.dt",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/E08A0F0A-75E3-44CA-BF8E-CB690D1C0A91/content.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/845328CC-77BC-42B5-8DB1-6DE1BB1F2762.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/5899B71B-5140-4B29-8ACB-66A10FE326CA.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/0583284F-FA5D-4595-9271-A33EA079B985.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/4A7FD196-4A8E-4406-9A36-D5633CFF61BF.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/D0790FF1-5979-4FD5-B956-10763F8BC5E6/data.dt",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/D0790FF1-5979-4FD5-B956-10763F8BC5E6/content.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/3EA062AF-88A0-4ABF-8EFF-F69B5304EF7E.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/0661C145-C284-4452-A11F-55F36957DB16.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/C3315E5D-F7F8-4884-8D0C-FC3AE5913F10.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/0A873469-3E04-45D9-81F5-C453BDC05823.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/CE3D7FD6-8ACC-4B97-84D5-6EEE2AB4A102/data.csv",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/CE3D7FD6-8ACC-4B97-84D5-6EEE2AB4A102/data.dt",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/CE3D7FD6-8ACC-4B97-84D5-6EEE2AB4A102/content.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/052BD524-F829-49D2-86D9-8E02856C2613.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/85525CC1-D7E7-4A81-BF79-EE1D9C72D847.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/8FE5C23D-5F73-4A59-9A7F-03E865E01EC9.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/754B30BA-FF5E-48ED-8C15-DD098CF4CD39.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/92CE0261-97A9-4BCE-99FC-A4E702B1998F/data.csv",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/92CE0261-97A9-4BCE-99FC-A4E702B1998F/data.dt",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/92CE0261-97A9-4BCE-99FC-A4E702B1998F/content.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/3B86318A-0C05-4452-AA61-700A1E4EFDBD.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/700126D9-9081-420B-AEBE-0478DF9E05D0.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/8C41625F-7FB1-4756-B0EB-316B79CCCC4C.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/31DBA219-6188-4047-9A24-0E82F6D58C2C.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/70311713-1025-4B40-B9D9-CC7B3CBC9BF8/data.csv",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/70311713-1025-4B40-B9D9-CC7B3CBC9BF8/data.dt",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/70311713-1025-4B40-B9D9-CC7B3CBC9BF8/content.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/73DA2EA8-3D2F-458E-8C14-274DBA6EAFFF.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/A2450760-0863-4BE8-B201-DE6642926388.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/3277E002-ED70-4194-9032-2F6FFD50298B.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/DFB263B8-C9E9-419C-8EFE-8A69F02F2B70.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/093A3BA0-9F25-4C37-B935-E378FE60AD30.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/FF0183A4-5F15-44A4-BCAE-E22E4A483693.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sheets/4B8EFB7D-5961-4D1B-84F1-D6FA39AF32C7/sheet.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/4C59180B-2209-4E8A-9FCB-2917582E05B2/data.csv",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/4C59180B-2209-4E8A-9FCB-2917582E05B2/data.dt",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/4C59180B-2209-4E8A-9FCB-2917582E05B2/content.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/F455E46D-6D17-4D45-B65C-71C0EDBEC92C.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/C6E76C67-E097-4FA9-BB38-1AE89C82E289.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/032750CF-62B1-4EB3-9B5E-57EA1EF1C5AE.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/FB98DF82-DE8F-4BB1-90A8-2FAB2D639034.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/AE2B9DA9-50CC-4EC6-B6FA-D6D49640351E.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/23C8D96F-4761-4E7B-AE54-459158AAF941.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sheets/37772031-416B-47A5-AAEF-0FF64BCA23FC/sheet.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/8DCF6CC1-F58F-4F14-AFA9-249161E0D372/data.csv",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/8DCF6CC1-F58F-4F14-AFA9-249161E0D372/data.dt",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/8DCF6CC1-F58F-4F14-AFA9-249161E0D372/content.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/606E40FC-B890-4A7B-B5AC-B130171E1A88.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/79DD18D6-354B-4110-9F5A-D349EF6622E1.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/85AEE557-0B12-4586-8DB7-D58EC7FC0971.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/CA3A1BAD-B431-4D54-B864-7A7BB2022637.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sheets/448995F1-96AC-4614-A785-176A654CEC8E/sheet.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/82615148-3FF0-4EDF-BCCA-F47899BF5811/data.dt",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/82615148-3FF0-4EDF-BCCA-F47899BF5811/content.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/E88A6AB7-DECA-4513-9630-8AD8D801175D.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/F30C8954-13B5-46F7-BCBA-EEC9DD7E33D5.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/D7D15A65-3DD3-478E-9CB5-AEF2303DD1B5.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/0B2B8C61-DDC4-4FC0-B596-DB28EFD05910.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/900BB7D4-A65D-434D-9C2D-7B4A1CC8800A.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/EFAED2CA-67E6-4F6B-AFB7-59FFD42F05AA.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/EDC440C0-C713-40A5-AC33-73A95411CE2E/data.csv",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/EDC440C0-C713-40A5-AC33-73A95411CE2E/data.dt",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/EDC440C0-C713-40A5-AC33-73A95411CE2E/content.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/21DFC431-D854-459B-A036-727B8465104F.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/D04CFFD2-0F43-4B3C-904E-F53104501E1F.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/A0775A52-5575-468C-B3F2-2033771B89DE.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/502B58B9-AAFE-4238-9825-376A9D7E310A.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/89A15B49-540A-4D7B-9D69-EA4E1A349F16.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/CBB0F788-8E26-4BCD-9A66-B79BDFC9AE8E.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/0643E8AA-3F9E-4A32-AA8A-56F641173D19/data.csv",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/0643E8AA-3F9E-4A32-AA8A-56F641173D19/data.dt",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/0643E8AA-3F9E-4A32-AA8A-56F641173D19/content.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/36749FE2-9A7B-4D79-86E1-E8E1149425A1.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/C6574975-F36F-4700-8299-2959589B59C6.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/C90EB296-8A51-4C8D-A9B7-1935E09D6DD5.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/A4B69827-9391-48F6-9047-A33F1B8A6E83.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/113C8BA4-EC2B-4443-AC01-1280153AADD6/data.csv",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/113C8BA4-EC2B-4443-AC01-1280153AADD6/data.dt",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/113C8BA4-EC2B-4443-AC01-1280153AADD6/content.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/09618612-644E-48AE-AA83-A9B07BD56B49.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/6E5976F2-8B48-498F-9E9F-DDACB3FFBD55.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sheets/B3E0F44C-855D-4363-A355-2267133BA781/sheet.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/98BC0307-47D8-45B3-9757-E23EC8FAB3BD/data.csv",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/98BC0307-47D8-45B3-9757-E23EC8FAB3BD/data.dt",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/98BC0307-47D8-45B3-9757-E23EC8FAB3BD/content.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/89C71C0A-1821-4BDE-9647-20EDF5A59643.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/AA6A1AFC-5317-47BF-95D4-24A0267B3F55.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sheets/6A891CCF-953F-4BA6-B06C-DA6B6693C7FE/sheet.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/37BF21A8-3FD8-49A0-9992-04F21FB67171/data.csv",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/37BF21A8-3FD8-49A0-9992-04F21FB67171/data.dt",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/37BF21A8-3FD8-49A0-9992-04F21FB67171/content.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/05D0A5D1-A9E1-4832-BCD2-AC99C1999439.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/7D5ACCC3-061A-455F-90B4-F671A6F901BC.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sheets/28DC41C5-EC81-4A2B-87F9-2D94E2314B62/sheet.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/C2B37D7B-9826-4819-80BA-AF35B9B9A323/data.csv",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/C2B37D7B-9826-4819-80BA-AF35B9B9A323/data.dt",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/C2B37D7B-9826-4819-80BA-AF35B9B9A323/content.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/228B39F0-E3A8-410A-B9EA-34101629DD0B.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/5D208A5C-090D-4B8A-B647-A697A7E50650.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/66839602-84C7-4825-8895-8CFE384C8325.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/7AFE6FA4-CB9F-4EC5-B9B4-EA0E34C52560.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/08872FCF-859A-42AB-AD43-40839625E78E.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/28F9DC03-6A37-4CC9-BF1D-4B669EED1ABF.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/EB7730EE-A41F-43C0-8D60-23CD65A2DD54/data.csv",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/EB7730EE-A41F-43C0-8D60-23CD65A2DD54/data.dt",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/EB7730EE-A41F-43C0-8D60-23CD65A2DD54/content.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/0CE3F9CF-90D6-4637-8617-3530448B5B0F.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/C349CD26-456A-4AD7-AA8D-EF9F2E58FD28.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/61A6594E-8067-4A4E-8E2D-6F1870BCA5B1.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/93A8B9E3-651E-49A8-90B0-7E440CE5A67A.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/8FC99E5C-51C0-4F72-977E-04AFF05F254E.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/6BF20A58-C094-4A02-94C6-EA142EACB68B/data.csv",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/6BF20A58-C094-4A02-94C6-EA142EACB68B/data.dt",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/6BF20A58-C094-4A02-94C6-EA142EACB68B/content.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/A69E4515-0403-4A78-845F-11F51153DE2E.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/E21C01D7-D35A-455A-997F-FA57CB7FAD4C.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/736AD257-1018-404D-89A6-2EB9FA136FEC.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/BDE92AF7-347E-4776-8FD2-25A155B73045.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/9AC516EE-72F7-4A6F-A655-2451076A34A2.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sheets/143E6D76-C580-4FB0-B793-B6F41DB235A9/sheet.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/AA42E87E-93AA-4873-9956-514E9CF03EB6/data.csv",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/AA42E87E-93AA-4873-9956-514E9CF03EB6/data.dt",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/tables/AA42E87E-93AA-4873-9956-514E9CF03EB6/content.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/020D8D3C-6899-4FB2-922A-6847AD313E19.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/C165F3C3-EDD1-47D1-A9DC-6A426697CB8F.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/4CA21BF0-8C83-49F9-8FF0-AD1451C19272.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/41248C5C-3CDB-4F92-B268-D33078AC7A83.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/12030428-D476-41AD-BCF5-D5A9C3840ADB.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: data/sets/0BEA0BF9-DC24-4C62-B3DB-A37559CB1EA5.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: analyses/E2C721DC-CF0D-45D4-A198-0E9955653EDC/result_sheets/CD03556F-73C8-4B50-92B5-C6D0084D475E.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: analyses/E2C721DC-CF0D-45D4-A198-0E9955653EDC/result_sheets/882D8017-70AC-4CA0-BD35-540975B85CE3.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: analyses/E2C721DC-CF0D-45D4-A198-0E9955653EDC/result_sheets/ECC695CD-81E0-4342-97D7-038EEBEE7332.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: analyses/E2C721DC-CF0D-45D4-A198-0E9955653EDC/sheet.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: analyses/E2C721DC-CF0D-45D4-A198-0E9955653EDC/results.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: analyses/1692D0EE-34B0-47E1-AA9A-B1A96AD55A39/result_sheets/2B00C999-7498-4A8F-807A-6CA76DCA13DB.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: analyses/1692D0EE-34B0-47E1-AA9A-B1A96AD55A39/sheet.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: analyses/1692D0EE-34B0-47E1-AA9A-B1A96AD55A39/results.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: analyses/BB4EB3C9-1C4C-4843-B4D5-72F9942D120C/result_sheets/9B0AEB4D-7444-4D81-B969-82DDB6FC67DE.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: analyses/BB4EB3C9-1C4C-4843-B4D5-72F9942D120C/result_sheets/94315404-6B7A-4B7F-A4EC-729D9D36ABB7.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: analyses/BB4EB3C9-1C4C-4843-B4D5-72F9942D120C/sheet.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: analyses/BB4EB3C9-1C4C-4843-B4D5-72F9942D120C/results.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: analyses/6868ACFE-05E0-455D-B273-BCB0856BE80B/result_sheets/52481BBD-B3AD-4F8B-8D58-DA032A0FF22A.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: analyses/6868ACFE-05E0-455D-B273-BCB0856BE80B/result_sheets/F957E4BC-82A1-453C-9185-23F7BBC79DC8.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: analyses/6868ACFE-05E0-455D-B273-BCB0856BE80B/sheet.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: analyses/6868ACFE-05E0-455D-B273-BCB0856BE80B/results.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: analyses/5BD85BDF-0140-4146-8921-64C4ABC643C5/result_sheets/379BC1ED-FE3F-4807-8D36-8A93EFDCC181.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: analyses/5BD85BDF-0140-4146-8921-64C4ABC643C5/result_sheets/156BC014-8AF9-4533-8C3C-5A08912EE6AB.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: analyses/5BD85BDF-0140-4146-8921-64C4ABC643C5/sheet.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: analyses/5BD85BDF-0140-4146-8921-64C4ABC643C5/results.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: analyses/AA4C6237-DB10-425A-866F-F7E130BDA8F1/result_sheets/5F44B418-BAF5-4EB5-AC4C-080C16A277B2.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: analyses/AA4C6237-DB10-425A-866F-F7E130BDA8F1/sheet.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: analyses/AA4C6237-DB10-425A-866F-F7E130BDA8F1/results.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: graphs/83474767-C51C-4BC1-B6AB-E18E9B70436B/data.bin",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: graphs/B966F8E8-0320-49B2-ACD2-68E5E5FF8904/data.bin",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: layouts/4B74E124-3EC5-4749-A164-AA426B306E0C/sheet.json",
+      "pass": true
+    },
+    {
+      "check": "Member hashes: document.json",
+      "pass": true
+    },
+    {
+      "check": "Only two approved binary annotations changed",
+      "pass": true
+    },
+    {
+      "check": "Exact equal-length percentage replacement: graphs/83474767-C51C-4BC1-B6AB-E18E9B70436B/data.bin",
+      "pass": true
+    },
+    {
+      "check": "Exact equal-length percentage replacement: graphs/B966F8E8-0320-49B2-ACD2-68E5E5FF8904/data.bin",
+      "pass": true
+    },
+    {
+      "check": "Flex pie percentage annotation remains exactly unchanged and rounds correctly",
+      "pass": true
+    },
+    {
+      "check": "All layout binaries and embedded media unchanged",
+      "pass": true
+    },
+    {
+      "check": "Canonical truth universe contains 5000 unique rows",
+      "pass": true
+    },
+    {
+      "check": "Canonical RF barcode alignment identical",
+      "pass": true
+    },
+    {
+      "check": "BLAZE selected targets 5015 unique, all 5000 truth plus 15 extras",
+      "pass": true
+    },
+    {
+      "check": "Flex selected list 3004 unique truth targets",
+      "pass": true
+    },
+    {
+      "check": "RAD canonical array sums agree with raw audit tabulation: native_correct",
+      "pass": true
+    },
+    {
+      "check": "RAD canonical array sums agree with raw audit tabulation: corrected_correct",
+      "pass": true
+    },
+    {
+      "check": "RAD canonical array sums agree with raw audit tabulation: all_incorrect",
+      "pass": true
+    },
+    {
+      "check": "Flexiplex canonical array sums agree with raw audit tabulation: native_correct",
+      "pass": true
+    },
+    {
+      "check": "Flexiplex canonical array sums agree with raw audit tabulation: corrected_correct",
+      "pass": true
+    },
+    {
+      "check": "Flexiplex canonical array sums agree with raw audit tabulation: all_incorrect",
+      "pass": true
+    },
+    {
+      "check": "RAD exhaustive denominator",
+      "pass": true,
+      "details": {
+        "native_correct": 667965,
+        "corrected_correct": 1944306,
+        "all_incorrect": 192090,
+        "ambiguous": 9048,
+        "unassigned": 2180396
+      }
+    },
+    {
+      "check": "Flexiplex exhaustive denominator",
+      "pass": true,
+      "details": {
+        "native_correct": 463613,
+        "corrected_correct": 1398700,
+        "all_incorrect": 282077,
+        "ambiguous": 364,
+        "unassigned": 2849051
+      }
+    },
+    {
+      "check": "BLAZE exhaustive denominator",
+      "pass": true,
+      "details": {
+        "native_correct": 640957,
+        "corrected_correct": 1881358,
+        "all_incorrect": 133838,
+        "ambiguous": 0,
+        "unassigned": 2337652
+      }
+    },
+    {
+      "check": "BLAZE row state partition",
+      "pass": true
+    },
+    {
+      "check": "BLAZE all-target versus truth-target partition",
+      "pass": true
+    },
+    {
+      "check": "BLAZE extra native/corrected incorrect",
+      "pass": true
+    },
+    {
+      "check": "native_correct exact 5000 row barcode order",
+      "pass": true
+    },
+    {
+      "check": "native_correct six CSV columns",
+      "pass": true
+    },
+    {
+      "check": "native_correct exact BLAZE cells",
+      "pass": true
+    },
+    {
+      "check": "native_correct exact RAD cells",
+      "pass": true
+    },
+    {
+      "check": "native_correct exact selected Flex cells",
+      "pass": true
+    },
+    {
+      "check": "native_correct exactly 1996 missing Flex values",
+      "pass": true
+    },
+    {
+      "check": "native_correct mirrored graph-bound Flex D equals selected C including blanks",
+      "pass": true
+    },
+    {
+      "check": "corrected_correct exact 5000 row barcode order",
+      "pass": true
+    },
+    {
+      "check": "corrected_correct six CSV columns",
+      "pass": true
+    },
+    {
+      "check": "corrected_correct exact BLAZE cells",
+      "pass": true
+    },
+    {
+      "check": "corrected_correct exact RAD cells",
+      "pass": true
+    },
+    {
+      "check": "corrected_correct exact selected Flex cells",
+      "pass": true
+    },
+    {
+      "check": "corrected_correct exactly 1996 missing Flex values",
+      "pass": true
+    },
+    {
+      "check": "corrected_correct mirrored graph-bound Flex D equals selected C including blanks",
+      "pass": true
+    },
+    {
+      "check": "corrected_incorrect exact 5000 row barcode order",
+      "pass": true
+    },
+    {
+      "check": "corrected_incorrect six CSV columns",
+      "pass": true
+    },
+    {
+      "check": "corrected_incorrect exact BLAZE cells",
+      "pass": true
+    },
+    {
+      "check": "corrected_incorrect exact RAD cells",
+      "pass": true
+    },
+    {
+      "check": "corrected_incorrect exact selected Flex cells",
+      "pass": true
+    },
+    {
+      "check": "corrected_incorrect exactly 1996 missing Flex values",
+      "pass": true
+    },
+    {
+      "check": "RAD all incorrect partition by correction state",
+      "pass": true
+    },
+    {
+      "check": "RAD six states exhaustive",
+      "pass": true
+    },
+    {
+      "check": "Flexiplex all incorrect partition by correction state",
+      "pass": true
+    },
+    {
+      "check": "Flexiplex six states exhaustive",
+      "pass": true
+    },
+    {
+      "check": "BLAZE all incorrect partition by correction state",
+      "pass": true
+    },
+    {
+      "check": "BLAZE six states exhaustive",
+      "pass": true
+    },
+    {
+      "check": "Exact correction-only denominators",
+      "pass": true
+    },
+    {
+      "check": "RAD six exact pie states",
+      "pass": true
+    },
+    {
+      "check": "RAD pie includes only correction states, excludes native/multiple/unassigned: 09618612-644E-48AE-AA83-A9B07BD56B49",
+      "pass": true,
+      "details": [
+        {
+          "rows": "0",
+          "attributes": [
+            "EXCLUDED"
+          ]
+        },
+        {
+          "rows": "3~5",
+          "attributes": [
+            "EXCLUDED"
+          ]
+        }
+      ]
+    },
+    {
+      "check": "RAD pie metadata spans all six rows: 09618612-644E-48AE-AA83-A9B07BD56B49",
+      "pass": true
+    },
+    {
+      "check": "RAD pie includes only correction states, excludes native/multiple/unassigned: 6E5976F2-8B48-498F-9E9F-DDACB3FFBD55",
+      "pass": true,
+      "details": [
+        {
+          "rows": "0",
+          "attributes": [
+            "EXCLUDED"
+          ]
+        },
+        {
+          "rows": "3~5",
+          "attributes": [
+            "EXCLUDED"
+          ]
+        }
+      ]
+    },
+    {
+      "check": "RAD pie metadata spans all six rows: 6E5976F2-8B48-498F-9E9F-DDACB3FFBD55",
+      "pass": true
+    },
+    {
+      "check": "BLAZE six exact pie states",
+      "pass": true
+    },
+    {
+      "check": "BLAZE pie includes only correction states, excludes native/multiple/unassigned: 89C71C0A-1821-4BDE-9647-20EDF5A59643",
+      "pass": true,
+      "details": [
+        {
+          "rows": "0",
+          "attributes": [
+            "EXCLUDED"
+          ]
+        },
+        {
+          "rows": "3~5",
+          "attributes": [
+            "EXCLUDED"
+          ]
+        }
+      ]
+    },
+    {
+      "check": "BLAZE pie metadata spans all six rows: 89C71C0A-1821-4BDE-9647-20EDF5A59643",
+      "pass": true
+    },
+    {
+      "check": "BLAZE pie includes only correction states, excludes native/multiple/unassigned: AA6A1AFC-5317-47BF-95D4-24A0267B3F55",
+      "pass": true,
+      "details": [
+        {
+          "rows": "0",
+          "attributes": [
+            "EXCLUDED"
+          ]
+        },
+        {
+          "rows": "3~5",
+          "attributes": [
+            "EXCLUDED"
+          ]
+        }
+      ]
+    },
+    {
+      "check": "BLAZE pie metadata spans all six rows: AA6A1AFC-5317-47BF-95D4-24A0267B3F55",
+      "pass": true
+    },
+    {
+      "check": "Flexiplex six exact pie states",
+      "pass": true
+    },
+    {
+      "check": "Flexiplex pie includes only correction states, excludes native/multiple/unassigned: 05D0A5D1-A9E1-4832-BCD2-AC99C1999439",
+      "pass": true,
+      "details": [
+        {
+          "rows": "0",
+          "attributes": [
+            "EXCLUDED"
+          ]
+        },
+        {
+          "rows": "3~5",
+          "attributes": [
+            "EXCLUDED"
+          ]
+        }
+      ]
+    },
+    {
+      "check": "Flexiplex pie metadata spans all six rows: 05D0A5D1-A9E1-4832-BCD2-AC99C1999439",
+      "pass": true
+    },
+    {
+      "check": "Flexiplex pie includes only correction states, excludes native/multiple/unassigned: 7D5ACCC3-061A-455F-90B4-F671A6F901BC",
+      "pass": true,
+      "details": [
+        {
+          "rows": "0",
+          "attributes": [
+            "EXCLUDED"
+          ]
+        },
+        {
+          "rows": "3~5",
+          "attributes": [
+            "EXCLUDED"
+          ]
+        }
+      ]
+    },
+    {
+      "check": "Flexiplex pie metadata spans all six rows: 7D5ACCC3-061A-455F-90B4-F671A6F901BC",
+      "pass": true
+    },
+    {
+      "check": "Whitelist TP exact cells",
+      "pass": true
+    },
+    {
+      "check": "Whitelist FP exact cells",
+      "pass": true
+    },
+    {
+      "check": "Stacked discovery exact TP FP FN cells",
+      "pass": true
+    },
+    {
+      "check": "Discovery F1 sensitivity precision full precision",
+      "pass": true
+    },
+    {
+      "check": "Raw count headline corrected_correct",
+      "pass": true
+    },
+    {
+      "check": "Raw count headline native_correct",
+      "pass": true
+    },
+    {
+      "check": "Raw count headline all_incorrect",
+      "pass": true
+    },
+    {
+      "check": "Raw count headline ambiguous",
+      "pass": true
+    },
+    {
+      "check": "Headline selected tools corrected_correct",
+      "pass": true
+    },
+    {
+      "check": "Headline selected tools corrected_incorrect",
+      "pass": true
+    },
+    {
+      "check": "Headline selected tools ambiguous",
+      "pass": true
+    },
+    {
+      "check": "Flex reference overlay unchanged from preserved source control",
+      "pass": true
+    },
+    {
+      "check": "Historical original CSV preserved: 048B406C-BE30-4A2E-97F9-A72753A121D3.csv",
+      "pass": true
+    },
+    {
+      "check": "Historical original CSV preserved: 143E6D76-C580-4FB0-B793-B6F41DB235A9.csv",
+      "pass": true
+    },
+    {
+      "check": "Historical original CSV preserved: 28DC41C5-EC81-4A2B-87F9-2D94E2314B62.csv",
+      "pass": true
+    },
+    {
+      "check": "Historical original CSV preserved: 34E8AE1E-2DCD-4259-95B3-F86294E8E563.csv",
+      "pass": true
+    },
+    {
+      "check": "Historical original CSV preserved: 37772031-416B-47A5-AAEF-0FF64BCA23FC.csv",
+      "pass": true
+    },
+    {
+      "check": "Historical original CSV preserved: 448995F1-96AC-4614-A785-176A654CEC8E.csv",
+      "pass": true
+    },
+    {
+      "check": "Historical original CSV preserved: 4B8EFB7D-5961-4D1B-84F1-D6FA39AF32C7.csv",
+      "pass": true
+    },
+    {
+      "check": "Historical original CSV preserved: 52A2C540-4929-4698-BB41-5176D0B18C1B.csv",
+      "pass": true
+    },
+    {
+      "check": "Historical original CSV preserved: 63D81234-28AC-46E8-8332-CB1AE2FC1AFF.csv",
+      "pass": true
+    },
+    {
+      "check": "Historical original CSV preserved: 63ED301E-0F74-4D3A-886D-F7F9631B3309.csv",
+      "pass": true
+    },
+    {
+      "check": "Historical original CSV preserved: 66EF3D96-C86B-4FA9-ACE5-53621808DA50.csv",
+      "pass": true
+    },
+    {
+      "check": "Historical original CSV preserved: 6A891CCF-953F-4BA6-B06C-DA6B6693C7FE.csv",
+      "pass": true
+    },
+    {
+      "check": "Historical original CSV preserved: 9100E66C-33E7-4AEE-B921-BC107610957C.csv",
+      "pass": true
+    },
+    {
+      "check": "Historical original CSV preserved: 98505F94-3866-4F00-A8CD-E076CF542357.csv",
+      "pass": true
+    },
+    {
+      "check": "Historical original CSV preserved: 9FA3BE17-60E1-4F42-8084-62CD9B3AE250.csv",
+      "pass": true
+    },
+    {
+      "check": "Historical original CSV preserved: B3E0F44C-855D-4363-A355-2267133BA781.csv",
+      "pass": true
+    },
+    {
+      "check": "Historical original CSV preserved: CB101D25-303A-4F5F-B259-277B87F4834A.csv",
+      "pass": true
+    },
+    {
+      "check": "Historical original CSV preserved: DCE67226-5717-4515-B51D-5C0D69C5E5B5.csv",
+      "pass": true
+    },
+    {
+      "check": "Historical original CSV preserved: F6376CA6-885E-415C-9035-E11EB49F448B.csv",
+      "pass": true
+    },
+    {
+      "check": "Historical original CSV preserved: F77BA3D7-5161-4287-947E-F87AF98DADAF.csv",
+      "pass": true
+    },
+    {
+      "check": "Main native-count plot and fixed5K overlay",
+      "pass": true
+    },
+    {
+      "check": "Native scalar alternate table",
+      "pass": true
+    },
+    {
+      "check": "FP target scalar table",
+      "pass": true
+    },
+    {
+      "check": "15 exact BLAZE FP target count cells",
+      "pass": true
+    },
+    {
+      "check": "Transposed count cache current selected tools",
+      "pass": true
+    },
+    {
+      "check": "CSV rectangular and metadata dimensions: data/tables/0643E8AA-3F9E-4A32-AA8A-56F641173D19/data.csv",
+      "pass": true,
+      "details": {
+        "rows": 15,
+        "widths": [
+          4
+        ],
+        "metadata": {
+          "$id": "sheets/data_sheet/data_table/data_table_storage.schema.json",
+          "numberOfColumns": 4,
+          "numberOfRows": 15,
+          "version": 1
+        }
+      }
+    },
+    {
+      "check": "Table SHA256 prefix .dt: data/tables/0643E8AA-3F9E-4A32-AA8A-56F641173D19/data.csv",
+      "pass": true
+    },
+    {
+      "check": "CSV rectangular and metadata dimensions: data/tables/113C8BA4-EC2B-4443-AC01-1280153AADD6/data.csv",
+      "pass": true,
+      "details": {
+        "rows": 6,
+        "widths": [
+          2
+        ],
+        "metadata": {
+          "$id": "sheets/data_sheet/data_table/data_table_storage.schema.json",
+          "numberOfColumns": 2,
+          "numberOfRows": 6,
+          "version": 1
+        }
+      }
+    },
+    {
+      "check": "Table SHA256 prefix .dt: data/tables/113C8BA4-EC2B-4443-AC01-1280153AADD6/data.csv",
+      "pass": true
+    },
+    {
+      "check": "CSV rectangular and metadata dimensions: data/tables/37BF21A8-3FD8-49A0-9992-04F21FB67171/data.csv",
+      "pass": true,
+      "details": {
+        "rows": 6,
+        "widths": [
+          2
+        ],
+        "metadata": {
+          "$id": "sheets/data_sheet/data_table/data_table_storage.schema.json",
+          "numberOfColumns": 2,
+          "numberOfRows": 6,
+          "version": 1
+        }
+      }
+    },
+    {
+      "check": "Table SHA256 prefix .dt: data/tables/37BF21A8-3FD8-49A0-9992-04F21FB67171/data.csv",
+      "pass": true
+    },
+    {
+      "check": "CSV rectangular and metadata dimensions: data/tables/454FDFB2-AEAA-4BE0-B7FD-78208EC7D650/data.csv",
+      "pass": true,
+      "details": {
+        "rows": 5000,
+        "widths": [
+          6
+        ],
+        "metadata": {
+          "$id": "sheets/data_sheet/data_table/data_table_storage.schema.json",
+          "numberOfColumns": 6,
+          "numberOfRows": 5000,
+          "version": 1
+        }
+      }
+    },
+    {
+      "check": "Table SHA256 prefix .dt: data/tables/454FDFB2-AEAA-4BE0-B7FD-78208EC7D650/data.csv",
+      "pass": true
+    },
+    {
+      "check": "CSV rectangular and metadata dimensions: data/tables/4C59180B-2209-4E8A-9FCB-2917582E05B2/data.csv",
+      "pass": true,
+      "details": {
+        "rows": 7,
+        "widths": [
+          6
+        ],
+        "metadata": {
+          "$id": "sheets/data_sheet/data_table/data_table_storage.schema.json",
+          "numberOfColumns": 6,
+          "numberOfRows": 7,
+          "version": 1
+        }
+      }
+    },
+    {
+      "check": "Table SHA256 prefix .dt: data/tables/4C59180B-2209-4E8A-9FCB-2917582E05B2/data.csv",
+      "pass": true
+    },
+    {
+      "check": "CSV rectangular and metadata dimensions: data/tables/6BF20A58-C094-4A02-94C6-EA142EACB68B/data.csv",
+      "pass": true,
+      "details": {
+        "rows": 7,
+        "widths": [
+          5
+        ],
+        "metadata": {
+          "$id": "sheets/data_sheet/data_table/data_table_storage.schema.json",
+          "numberOfColumns": 5,
+          "numberOfRows": 7,
+          "version": 1
+        }
+      }
+    },
+    {
+      "check": "Table SHA256 prefix .dt: data/tables/6BF20A58-C094-4A02-94C6-EA142EACB68B/data.csv",
+      "pass": true
+    },
+    {
+      "check": "CSV rectangular and metadata dimensions: data/tables/70311713-1025-4B40-B9D9-CC7B3CBC9BF8/data.csv",
+      "pass": true,
+      "details": {
+        "rows": 7,
+        "widths": [
+          6
+        ],
+        "metadata": {
+          "$id": "sheets/data_sheet/data_table/data_table_storage.schema.json",
+          "numberOfColumns": 6,
+          "numberOfRows": 7,
+          "version": 1
+        }
+      }
+    },
+    {
+      "check": "Table SHA256 prefix .dt: data/tables/70311713-1025-4B40-B9D9-CC7B3CBC9BF8/data.csv",
+      "pass": true
+    },
+    {
+      "check": "CSV rectangular and metadata dimensions: data/tables/8761666A-E513-4EA1-ADC3-E148DD37108C/data.csv",
+      "pass": true,
+      "details": {
+        "rows": 5000,
+        "widths": [
+          6
+        ],
+        "metadata": {
+          "$id": "sheets/data_sheet/data_table/data_table_storage.schema.json",
+          "numberOfColumns": 6,
+          "numberOfRows": 5000,
+          "version": 1
+        }
+      }
+    },
+    {
+      "check": "Table SHA256 prefix .dt: data/tables/8761666A-E513-4EA1-ADC3-E148DD37108C/data.csv",
+      "pass": true
+    },
+    {
+      "check": "CSV rectangular and metadata dimensions: data/tables/8DCF6CC1-F58F-4F14-AFA9-249161E0D372/data.csv",
+      "pass": true,
+      "details": {
+        "rows": 5,
+        "widths": [
+          4
+        ],
+        "metadata": {
+          "$id": "sheets/data_sheet/data_table/data_table_storage.schema.json",
+          "numberOfColumns": 4,
+          "numberOfRows": 5,
+          "version": 1
+        }
+      }
+    },
+    {
+      "check": "Table SHA256 prefix .dt: data/tables/8DCF6CC1-F58F-4F14-AFA9-249161E0D372/data.csv",
+      "pass": true
+    },
+    {
+      "check": "CSV rectangular and metadata dimensions: data/tables/92CE0261-97A9-4BCE-99FC-A4E702B1998F/data.csv",
+      "pass": true,
+      "details": {
+        "rows": 3,
+        "widths": [
+          4
+        ],
+        "metadata": {
+          "$id": "sheets/data_sheet/data_table/data_table_storage.schema.json",
+          "numberOfColumns": 4,
+          "numberOfRows": 3,
+          "version": 1
+        }
+      }
+    },
+    {
+      "check": "Table SHA256 prefix .dt: data/tables/92CE0261-97A9-4BCE-99FC-A4E702B1998F/data.csv",
+      "pass": true
+    },
+    {
+      "check": "CSV rectangular and metadata dimensions: data/tables/98BC0307-47D8-45B3-9757-E23EC8FAB3BD/data.csv",
+      "pass": true,
+      "details": {
+        "rows": 6,
+        "widths": [
+          2
+        ],
+        "metadata": {
+          "$id": "sheets/data_sheet/data_table/data_table_storage.schema.json",
+          "numberOfColumns": 2,
+          "numberOfRows": 6,
+          "version": 1
+        }
+      }
+    },
+    {
+      "check": "Table SHA256 prefix .dt: data/tables/98BC0307-47D8-45B3-9757-E23EC8FAB3BD/data.csv",
+      "pass": true
+    },
+    {
+      "check": "CSV rectangular and metadata dimensions: data/tables/9B38C59C-7023-4935-BC85-6E5F22DE25C4/data.csv",
+      "pass": true,
+      "details": {
+        "rows": 5000,
+        "widths": [
+          6
+        ],
+        "metadata": {
+          "$id": "sheets/data_sheet/data_table/data_table_storage.schema.json",
+          "numberOfColumns": 6,
+          "numberOfRows": 5000,
+          "version": 1
+        }
+      }
+    },
+    {
+      "check": "Table SHA256 prefix .dt: data/tables/9B38C59C-7023-4935-BC85-6E5F22DE25C4/data.csv",
+      "pass": true
+    },
+    {
+      "check": "CSV rectangular and metadata dimensions: data/tables/AA42E87E-93AA-4873-9956-514E9CF03EB6/data.csv",
+      "pass": true,
+      "details": {
+        "rows": 7,
+        "widths": [
+          6
+        ],
+        "metadata": {
+          "$id": "sheets/data_sheet/data_table/data_table_storage.schema.json",
+          "numberOfColumns": 6,
+          "numberOfRows": 7,
+          "version": 1
+        }
+      }
+    },
+    {
+      "check": "Table SHA256 prefix .dt: data/tables/AA42E87E-93AA-4873-9956-514E9CF03EB6/data.csv",
+      "pass": true
+    },
+    {
+      "check": "CSV rectangular and metadata dimensions: data/tables/C2B37D7B-9826-4819-80BA-AF35B9B9A323/data.csv",
+      "pass": true,
+      "details": {
+        "rows": 4,
+        "widths": [
+          6
+        ],
+        "metadata": {
+          "$id": "sheets/data_sheet/data_table/data_table_storage.schema.json",
+          "numberOfColumns": 6,
+          "numberOfRows": 4,
+          "version": 1
+        }
+      }
+    },
+    {
+      "check": "Table SHA256 prefix .dt: data/tables/C2B37D7B-9826-4819-80BA-AF35B9B9A323/data.csv",
+      "pass": true
+    },
+    {
+      "check": "CSV rectangular and metadata dimensions: data/tables/CE3D7FD6-8ACC-4B97-84D5-6EEE2AB4A102/data.csv",
+      "pass": true,
+      "details": {
+        "rows": 3,
+        "widths": [
+          4
+        ],
+        "metadata": {
+          "$id": "sheets/data_sheet/data_table/data_table_storage.schema.json",
+          "numberOfColumns": 4,
+          "numberOfRows": 3,
+          "version": 1
+        }
+      }
+    },
+    {
+      "check": "Table SHA256 prefix .dt: data/tables/CE3D7FD6-8ACC-4B97-84D5-6EEE2AB4A102/data.csv",
+      "pass": true
+    },
+    {
+      "check": "CSV rectangular and metadata dimensions: data/tables/E08A0F0A-75E3-44CA-BF8E-CB690D1C0A91/data.csv",
+      "pass": true,
+      "details": {
+        "rows": 5,
+        "widths": [
+          4
+        ],
+        "metadata": {
+          "$id": "sheets/data_sheet/data_table/data_table_storage.schema.json",
+          "numberOfColumns": 4,
+          "numberOfRows": 5,
+          "version": 1
+        }
+      }
+    },
+    {
+      "check": "Table SHA256 prefix .dt: data/tables/E08A0F0A-75E3-44CA-BF8E-CB690D1C0A91/data.csv",
+      "pass": true
+    },
+    {
+      "check": "CSV rectangular and metadata dimensions: data/tables/EB7730EE-A41F-43C0-8D60-23CD65A2DD54/data.csv",
+      "pass": true,
+      "details": {
+        "rows": 5,
+        "widths": [
+          5
+        ],
+        "metadata": {
+          "$id": "sheets/data_sheet/data_table/data_table_storage.schema.json",
+          "numberOfColumns": 5,
+          "numberOfRows": 5,
+          "version": 1
+        }
+      }
+    },
+    {
+      "check": "Table SHA256 prefix .dt: data/tables/EB7730EE-A41F-43C0-8D60-23CD65A2DD54/data.csv",
+      "pass": true
+    },
+    {
+      "check": "CSV rectangular and metadata dimensions: data/tables/EDC440C0-C713-40A5-AC33-73A95411CE2E/data.csv",
+      "pass": true,
+      "details": {
+        "rows": 5,
+        "widths": [
+          6
+        ],
+        "metadata": {
+          "$id": "sheets/data_sheet/data_table/data_table_storage.schema.json",
+          "numberOfColumns": 6,
+          "numberOfRows": 5,
+          "version": 1
+        }
+      }
+    },
+    {
+      "check": "Table SHA256 prefix .dt: data/tables/EDC440C0-C713-40A5-AC33-73A95411CE2E/data.csv",
+      "pass": true
+    },
+    {
+      "check": "Changed table dataset bounds: 09618612-644E-48AE-AA83-A9B07BD56B49",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "string",
+          "commonAttributes": [
+            "NUMERIC"
+          ],
+          "decimalsLength": 15,
+          "significantDigitsCount": 7,
+          "cellAttributes": [
+            {
+              "rows": "0",
+              "attributes": [
+                "EXCLUDED"
+              ]
+            },
+            {
+              "rows": "3~5",
+              "attributes": [
+                "EXCLUDED"
+              ]
+            }
+          ],
+          "firstRow": 0,
+          "lastRow": 5
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 6E5976F2-8B48-498F-9E9F-DDACB3FFBD55",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC"
+          ],
+          "significantDigitsCount": 7,
+          "cellAttributes": [
+            {
+              "rows": "0",
+              "attributes": [
+                "EXCLUDED"
+              ]
+            },
+            {
+              "rows": "3~5",
+              "attributes": [
+                "EXCLUDED"
+              ]
+            }
+          ],
+          "firstRow": 0,
+          "lastRow": 5
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 3B86318A-0C05-4452-AA61-700A1E4EFDBD",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "string",
+          "commonAttributes": [
+            "NUMERIC"
+          ],
+          "decimalsLength": 15,
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 2
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 700126D9-9081-420B-AEBE-0478DF9E05D0",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC",
+            "USER"
+          ],
+          "decimalsLength": 9,
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 2
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 8C41625F-7FB1-4756-B0EB-316B79CCCC4C",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC",
+            "USER"
+          ],
+          "decimalsLength": 9,
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 2
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 31DBA219-6188-4047-9A24-0E82F6D58C2C",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC",
+            "USER"
+          ],
+          "decimalsLength": 9,
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 2
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 05D0A5D1-A9E1-4832-BCD2-AC99C1999439",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "string",
+          "commonAttributes": [
+            "NUMERIC"
+          ],
+          "decimalsLength": 15,
+          "significantDigitsCount": 7,
+          "cellAttributes": [
+            {
+              "rows": "0",
+              "attributes": [
+                "EXCLUDED"
+              ]
+            },
+            {
+              "rows": "3~5",
+              "attributes": [
+                "EXCLUDED"
+              ]
+            }
+          ],
+          "firstRow": 0,
+          "lastRow": 5
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 7D5ACCC3-061A-455F-90B4-F671A6F901BC",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC"
+          ],
+          "significantDigitsCount": 7,
+          "cellAttributes": [
+            {
+              "rows": "0",
+              "attributes": [
+                "EXCLUDED"
+              ]
+            },
+            {
+              "rows": "3~5",
+              "attributes": [
+                "EXCLUDED"
+              ]
+            }
+          ],
+          "firstRow": 0,
+          "lastRow": 5
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 73DA2EA8-3D2F-458E-8C14-274DBA6EAFFF",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "string",
+          "commonAttributes": [
+            "NUMERIC"
+          ],
+          "decimalsLength": 15,
+          "significantDigitsCount": 7
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: A2450760-0863-4BE8-B201-DE6642926388",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC",
+            "USER"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 0
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 3277E002-ED70-4194-9032-2F6FFD50298B",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC",
+            "USER"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 0
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: DFB263B8-C9E9-419C-8EFE-8A69F02F2B70",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC",
+            "USER"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 0
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 093A3BA0-9F25-4C37-B935-E378FE60AD30",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC",
+            "USER"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 0
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: FF0183A4-5F15-44A4-BCAE-E22E4A483693",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC",
+            "USER"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 0
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: A69E4515-0403-4A78-845F-11F51153DE2E",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "string",
+          "commonAttributes": [
+            "NUMERIC"
+          ],
+          "decimalsLength": 15,
+          "significantDigitsCount": 7
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: E21C01D7-D35A-455A-997F-FA57CB7FAD4C",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC",
+            "USER"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 0
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 736AD257-1018-404D-89A6-2EB9FA136FEC",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC",
+            "USER"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 0
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: BDE92AF7-347E-4776-8FD2-25A155B73045",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC",
+            "USER"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 0
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 9AC516EE-72F7-4A6F-A655-2451076A34A2",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC",
+            "USER"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 0
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 228B39F0-E3A8-410A-B9EA-34101629DD0B",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "string",
+          "commonAttributes": [
+            "NUMERIC"
+          ],
+          "decimalsLength": 15,
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 3
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 5D208A5C-090D-4B8A-B647-A697A7E50650",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC",
+            "USER"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 3
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 66839602-84C7-4825-8895-8CFE384C8325",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC",
+            "USER"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 3
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 7AFE6FA4-CB9F-4EC5-B9B4-EA0E34C52560",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC",
+            "USER"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 3
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 08872FCF-859A-42AB-AD43-40839625E78E",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC",
+            "USER"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 3
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 28F9DC03-6A37-4CC9-BF1D-4B669EED1ABF",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC",
+            "USER"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 3
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 845328CC-77BC-42B5-8DB1-6DE1BB1F2762",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "string",
+          "commonAttributes": [
+            "NUMERIC"
+          ],
+          "decimalsLength": 15,
+          "significantDigitsCount": 7,
+          "cellTextFormats": {
+            "0": [
+              {
+                "range": "0~5",
+                "attributes": {
+                  "horizontalAlignment": "left"
+                }
+              }
+            ],
+            "1": [
+              {
+                "range": "0~9",
+                "attributes": {
+                  "horizontalAlignment": "left"
+                }
+              }
+            ],
+            "2": [
+              {
+                "range": "0~3",
+                "attributes": {
+                  "horizontalAlignment": "left"
+                }
+              }
+            ]
+          },
+          "firstRow": 0,
+          "lastRow": 2
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 5899B71B-5140-4B29-8ACB-66A10FE326CA",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC",
+            "USER"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 2
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 0583284F-FA5D-4595-9271-A33EA079B985",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC",
+            "USER"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 2
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 4A7FD196-4A8E-4406-9A36-D5633CFF61BF",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC",
+            "USER"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 2
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: D69FD8F1-32EA-4E92-AD25-C43FF84775C9",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "string",
+          "commonAttributes": [
+            "NUMERIC"
+          ],
+          "decimalsLength": 15,
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 4999
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 55733904-0FA1-4462-9987-5CDECF83A340",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 4999
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: B7A95E01-DCE4-4964-ADD1-71CF919FE6DE",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 4999
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 8C506AC1-3D51-473C-A40B-39448CBDE59D",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 19,
+          "lastRow": 4999
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 7A817AB2-8B3F-4B5F-85FB-0984A7A35D99",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 19,
+          "lastRow": 4999
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 365F4A1A-9C12-456C-B7E6-6C2296A826E3",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 4999
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: DE2FD62C-2702-4527-B5CE-11D8C9FE1F33",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "string",
+          "commonAttributes": [
+            "NUMERIC"
+          ],
+          "decimalsLength": 15,
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 4999
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 25C79583-B71F-4587-A42E-2C295A006D14",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 4999
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: FF40BBC9-474C-49EC-85C5-707493619F18",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 4999
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 197C841C-A1D9-4BF7-AF25-60A713172056",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 19,
+          "lastRow": 4999
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 33CFF86A-A5F5-4454-B030-E0492F0A9B49",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 19,
+          "lastRow": 4999
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 69914275-8015-4D28-BC42-DA5324C12274",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 4999
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 606E40FC-B890-4A7B-B5AC-B130171E1A88",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "string",
+          "commonAttributes": [
+            "NUMERIC"
+          ],
+          "decimalsLength": 15,
+          "significantDigitsCount": 7,
+          "cellTextFormats": {
+            "1": [
+              {
+                "range": "0~9",
+                "attributes": {
+                  "horizontalAlignment": "left"
+                }
+              }
+            ],
+            "2": [
+              {
+                "range": "0~3",
+                "attributes": {
+                  "horizontalAlignment": "left"
+                }
+              }
+            ]
+          },
+          "firstRow": 0,
+          "lastRow": 2
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 79DD18D6-354B-4110-9F5A-D349EF6622E1",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC",
+            "USER"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 2
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 85AEE557-0B12-4586-8DB7-D58EC7FC0971",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC",
+            "USER"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 2
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: CA3A1BAD-B431-4D54-B864-7A7BB2022637",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC"
+          ],
+          "significantDigitsCount": 7,
+          "cellAttributes": [
+            {
+              "rows": "0",
+              "attributes": [
+                "FLOAT",
+                "POSITIVE",
+                "NUMERIC"
+              ]
+            }
+          ],
+          "firstRow": 0,
+          "lastRow": 2
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 21DFC431-D854-459B-A036-727B8465104F",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "string",
+          "commonAttributes": [
+            "NUMERIC"
+          ],
+          "decimalsLength": 15,
+          "significantDigitsCount": 7
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: D04CFFD2-0F43-4B3C-904E-F53104501E1F",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC",
+            "USER"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 0
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: A0775A52-5575-468C-B3F2-2033771B89DE",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC",
+            "USER"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 1,
+          "lastRow": 1
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 502B58B9-AAFE-4238-9825-376A9D7E310A",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC",
+            "USER"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 2,
+          "lastRow": 2
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 89A15B49-540A-4D7B-9D69-EA4E1A349F16",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC",
+            "USER"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 3,
+          "lastRow": 3
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: CBB0F788-8E26-4BCD-9A66-B79BDFC9AE8E",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC",
+            "USER"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 4,
+          "lastRow": 4
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 020D8D3C-6899-4FB2-922A-6847AD313E19",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "string",
+          "commonAttributes": [
+            "NUMERIC"
+          ],
+          "decimalsLength": 15,
+          "significantDigitsCount": 7,
+          "cellTextFormats": {
+            "0": [
+              {
+                "range": "0~5",
+                "attributes": {
+                  "horizontalAlignment": "left"
+                }
+              }
+            ],
+            "2": [
+              {
+                "range": "0~9",
+                "attributes": {
+                  "horizontalAlignment": "left"
+                }
+              }
+            ]
+          },
+          "firstRow": 0,
+          "lastRow": 2
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: C165F3C3-EDD1-47D1-A9DC-6A426697CB8F",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC",
+            "USER"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 2
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 4CA21BF0-8C83-49F9-8FF0-AD1451C19272",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC",
+            "USER"
+          ],
+          "significantDigitsCount": 7,
+          "cellAttributes": [
+            {
+              "rows": "2",
+              "attributes": [
+                "FLOAT",
+                "POSITIVE",
+                "NUMERIC"
+              ]
+            }
+          ],
+          "firstRow": 0,
+          "lastRow": 2
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 41248C5C-3CDB-4F92-B268-D33078AC7A83",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC",
+            "USER"
+          ],
+          "significantDigitsCount": 7
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 12030428-D476-41AD-BCF5-D5A9C3840ADB",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC",
+            "USER"
+          ],
+          "significantDigitsCount": 7,
+          "cellAttributes": [
+            {
+              "rows": "0",
+              "attributes": [
+                "EXCLUDED"
+              ]
+            }
+          ],
+          "firstRow": 0,
+          "lastRow": 0
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 0BEA0BF9-DC24-4C62-B3DB-A37559CB1EA5",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC",
+            "USER"
+          ],
+          "significantDigitsCount": 7,
+          "cellAttributes": [
+            {
+              "rows": "0",
+              "attributes": [
+                "EXCLUDED"
+              ]
+            }
+          ],
+          "firstRow": 0,
+          "lastRow": 0
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: A6625B7E-CCF3-4027-A38B-36689B2F9D63",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "string",
+          "commonAttributes": [
+            "NUMERIC"
+          ],
+          "decimalsLength": 15,
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 4999
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 9EAF2EAD-1268-45DD-A97B-95FB03243A40",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 4999
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: BA645DAC-CA07-4E30-82F8-81C9505CB8BF",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 4999
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 594B2375-BAC7-43FF-8B3D-89B48CF0526B",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 19,
+          "lastRow": 4999
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 06A86DEC-700A-4815-A53A-023C6531060E",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 4999
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 6D3A1C79-1223-46FF-9280-23BED90EA394",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 4999
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 89C71C0A-1821-4BDE-9647-20EDF5A59643",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "string",
+          "commonAttributes": [
+            "NUMERIC"
+          ],
+          "decimalsLength": 15,
+          "significantDigitsCount": 7,
+          "cellAttributes": [
+            {
+              "rows": "0",
+              "attributes": [
+                "EXCLUDED"
+              ]
+            },
+            {
+              "rows": "3~5",
+              "attributes": [
+                "EXCLUDED"
+              ]
+            }
+          ],
+          "firstRow": 0,
+          "lastRow": 5
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: AA6A1AFC-5317-47BF-95D4-24A0267B3F55",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC"
+          ],
+          "significantDigitsCount": 7,
+          "cellAttributes": [
+            {
+              "rows": "0",
+              "attributes": [
+                "EXCLUDED"
+              ]
+            },
+            {
+              "rows": "3~5",
+              "attributes": [
+                "EXCLUDED"
+              ]
+            }
+          ],
+          "firstRow": 0,
+          "lastRow": 5
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 36749FE2-9A7B-4D79-86E1-E8E1149425A1",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "string",
+          "commonAttributes": [
+            "NUMERIC"
+          ],
+          "decimalsLength": 15,
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 14
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: C6574975-F36F-4700-8299-2959589B59C6",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 14
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: C90EB296-8A51-4C8D-A9B7-1935E09D6DD5",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC"
+          ],
+          "significantDigitsCount": 7
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: A4B69827-9391-48F6-9047-A33F1B8A6E83",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC"
+          ],
+          "significantDigitsCount": 7
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 0CE3F9CF-90D6-4637-8617-3530448B5B0F",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "string",
+          "commonAttributes": [
+            "NUMERIC"
+          ],
+          "decimalsLength": 15,
+          "significantDigitsCount": 7,
+          "cellAlignments": [
+            {
+              "rows": "0~4",
+              "attributes": "left"
+            }
+          ],
+          "cellTextFormats": {
+            "0": [
+              {
+                "range": "0~5",
+                "attributes": {
+                  "horizontalAlignment": "left"
+                }
+              }
+            ],
+            "1": [
+              {
+                "range": "0~3",
+                "attributes": {
+                  "horizontalAlignment": "left"
+                }
+              }
+            ],
+            "2": [
+              {
+                "range": "0~9",
+                "attributes": {
+                  "horizontalAlignment": "left"
+                }
+              }
+            ],
+            "3": [
+              {
+                "range": "0~12",
+                "attributes": {
+                  "horizontalAlignment": "left"
+                }
+              }
+            ],
+            "4": [
+              {
+                "range": "0~8",
+                "attributes": {
+                  "horizontalAlignment": "left"
+                }
+              }
+            ]
+          },
+          "firstRow": 0,
+          "lastRow": 4
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: C349CD26-456A-4AD7-AA8D-EF9F2E58FD28",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC"
+          ],
+          "decimalsLength": 3,
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 4
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 61A6594E-8067-4A4E-8E2D-6F1870BCA5B1",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC"
+          ],
+          "decimalsLength": 3,
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 4
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 93A8B9E3-651E-49A8-90B0-7E440CE5A67A",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC"
+          ],
+          "decimalsLength": 3,
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 4
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 8FC99E5C-51C0-4F72-977E-04AFF05F254E",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC"
+          ],
+          "decimalsLength": 3,
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 4
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 052BD524-F829-49D2-86D9-8E02856C2613",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "string",
+          "commonAttributes": [
+            "NUMERIC"
+          ],
+          "decimalsLength": 15,
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 2
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 85525CC1-D7E7-4A81-BF79-EE1D9C72D847",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC",
+            "USER"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 0
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 8FE5C23D-5F73-4A59-9A7F-03E865E01EC9",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC",
+            "USER"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 1,
+          "lastRow": 1
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 754B30BA-FF5E-48ED-8C15-DD098CF4CD39",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC",
+            "USER"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 2,
+          "lastRow": 2
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: F455E46D-6D17-4D45-B65C-71C0EDBEC92C",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "string",
+          "commonAttributes": [
+            "NUMERIC"
+          ],
+          "decimalsLength": 15,
+          "significantDigitsCount": 7
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: C6E76C67-E097-4FA9-BB38-1AE89C82E289",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC",
+            "USER"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 0
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 032750CF-62B1-4EB3-9B5E-57EA1EF1C5AE",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC",
+            "USER"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 0
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: FB98DF82-DE8F-4BB1-90A8-2FAB2D639034",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC",
+            "USER"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 0
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: AE2B9DA9-50CC-4EC6-B6FA-D6D49640351E",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC",
+            "USER"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 0
+        }
+      ]
+    },
+    {
+      "check": "Changed table dataset bounds: 23C8D96F-4761-4E7B-AE54-459158AAF941",
+      "pass": true,
+      "details": [
+        {
+          "@class": "DriverReplicate",
+          "valueType": "real",
+          "commonAttributes": [
+            "NUMERIC",
+            "USER"
+          ],
+          "significantDigitsCount": 7,
+          "firstRow": 0,
+          "lastRow": 0
+        }
+      ]
+    },
+    {
+      "check": "Main per-barcode graph selected-list bindings: C7434C91-4E18-4805-93E3-FCBE8777D387",
+      "pass": true
+    },
+    {
+      "check": "Main per-barcode graph selected-list bindings: 618D16ED-954A-44DD-B5C8-FA74FF1CD274",
+      "pass": true
+    },
+    {
+      "check": "Main per-barcode graph selected-list bindings: 3568D2DE-F40D-46FE-B8F5-7C7BB63AA49F",
+      "pass": true
+    },
+    {
+      "check": "Graph declared dataset links resolve: 12E82135-C157-4871-8731-941CD0793F3D",
+      "pass": true
+    },
+    {
+      "check": "Graph declared dataset links resolve: F865645E-456D-47FD-8044-D25160387EBA",
+      "pass": true
+    },
+    {
+      "check": "Graph declared dataset links resolve: D7B64015-4ACF-44CE-96E6-77C159D95DA6",
+      "pass": true
+    },
+    {
+      "check": "Graph declared dataset links resolve: 2DA077CB-95AE-40D8-AEDB-D86BA89FAACE",
+      "pass": true
+    },
+    {
+      "check": "Graph declared dataset links resolve: 98FF29A5-EA42-4F66-9919-ABA4DD8B11C4",
+      "pass": true
+    },
+    {
+      "check": "Graph declared dataset links resolve: 3568D2DE-F40D-46FE-B8F5-7C7BB63AA49F",
+      "pass": true
+    },
+    {
+      "check": "Graph declared dataset links resolve: D2003F54-2657-4528-A17D-4E1954BA0D68",
+      "pass": true
+    },
+    {
+      "check": "Graph declared dataset links resolve: 58B6A55B-8EEE-4B63-989E-DEFE2BFF24E8",
+      "pass": true
+    },
+    {
+      "check": "Graph declared dataset links resolve: A0D6A66E-2445-4805-BBE0-5435516A8B63",
+      "pass": true
+    },
+    {
+      "check": "Graph declared dataset links resolve: 5FFBEDEB-B49E-4C4B-BC0C-A5D6FD405261",
+      "pass": true
+    },
+    {
+      "check": "Graph declared dataset links resolve: CCC99229-C750-407F-9452-0CB23A5118C7",
+      "pass": true
+    },
+    {
+      "check": "Graph declared dataset links resolve: 73F311BA-849B-4232-BD38-50F2D99FD8C6",
+      "pass": true
+    },
+    {
+      "check": "Graph declared dataset links resolve: 0416174E-A451-4CBA-9CB5-C1A776AB5A54",
+      "pass": true
+    },
+    {
+      "check": "Graph declared dataset links resolve: 9A0D5D0E-B780-4199-AAF8-56675BF66D01",
+      "pass": true
+    },
+    {
+      "check": "Graph declared dataset links resolve: E22AB3AC-A89D-438B-993A-5B3237840AF2",
+      "pass": true
+    },
+    {
+      "check": "Graph declared dataset links resolve: 495871A7-0114-4AB2-8DAD-925A9A783E4F",
+      "pass": true
+    },
+    {
+      "check": "Graph declared dataset links resolve: 83474767-C51C-4BC1-B6AB-E18E9B70436B",
+      "pass": true
+    },
+    {
+      "check": "Graph declared dataset links resolve: B1B9DD97-D8A6-4176-986D-F1FFE06CC16D",
+      "pass": true
+    },
+    {
+      "check": "Graph declared dataset links resolve: 103FFB7D-F9AB-491C-BCBD-4D4490EE876D",
+      "pass": true
+    },
+    {
+      "check": "Graph declared dataset links resolve: 422E99D9-D641-4DBA-A664-527A57EFDCF9",
+      "pass": true
+    },
+    {
+      "check": "Graph declared dataset links resolve: 17728C0A-8C6C-4D5A-BAC6-63B332668E47",
+      "pass": true
+    },
+    {
+      "check": "Graph declared dataset links resolve: F16035AF-FF48-4DE7-A6B9-9DEFEA927B8F",
+      "pass": true
+    },
+    {
+      "check": "Graph declared dataset links resolve: 9FBD8A1B-6C80-49A9-8535-027AC0CF3104",
+      "pass": true
+    },
+    {
+      "check": "Graph declared dataset links resolve: 122822C9-4B03-4D27-B2BE-010D9D86EC90",
+      "pass": true
+    },
+    {
+      "check": "Graph declared dataset links resolve: 110DDB2E-7E9A-42F9-9ECF-5E8AC62D36C6",
+      "pass": true
+    },
+    {
+      "check": "Graph declared dataset links resolve: C7434C91-4E18-4805-93E3-FCBE8777D387",
+      "pass": true
+    },
+    {
+      "check": "Graph declared dataset links resolve: 618D16ED-954A-44DD-B5C8-FA74FF1CD274",
+      "pass": true
+    },
+    {
+      "check": "Graph declared dataset links resolve: B966F8E8-0320-49B2-ACD2-68E5E5FF8904",
+      "pass": true
+    },
+    {
+      "check": "Graph declared dataset links resolve: 5BC6DA00-312B-4E5D-9FF3-A7E0DD67B4CD",
+      "pass": true
+    },
+    {
+      "check": "Graph declared dataset links resolve: A17A93E3-DAB9-48A9-8D96-1334F969C7E9",
+      "pass": true
+    },
+    {
+      "check": "Graph declared dataset links resolve: C8C4CAC9-EC1F-467A-82EF-0949D836B061",
+      "pass": true
+    },
+    {
+      "check": "Graph declared dataset links resolve: 78ED1972-AE8E-4FF9-A806-A4C01F8685AE",
+      "pass": true
+    },
+    {
+      "check": "Graph declared dataset links resolve: 19B4CE3F-EE28-42B5-AFCE-6C63F163FAAB",
+      "pass": true
+    },
+    {
+      "check": "Analysis explicitly uncalculated: E2C721DC-CF0D-45D4-A198-0E9955653EDC",
+      "pass": true
+    },
+    {
+      "check": "Analysis aggregate result cleared: E2C721DC-CF0D-45D4-A198-0E9955653EDC",
+      "pass": true
+    },
+    {
+      "check": "Analysis result title flagged stale: CD03556F-73C8-4B50-92B5-C6D0084D475E",
+      "pass": true
+    },
+    {
+      "check": "Analysis text cache cleared: CD03556F-73C8-4B50-92B5-C6D0084D475E",
+      "pass": true
+    },
+    {
+      "check": "Analysis numeric cache empty or removed: CD03556F-73C8-4B50-92B5-C6D0084D475E",
+      "pass": true
+    },
+    {
+      "check": "Analysis result title flagged stale: 882D8017-70AC-4CA0-BD35-540975B85CE3",
+      "pass": true
+    },
+    {
+      "check": "Analysis text cache cleared: 882D8017-70AC-4CA0-BD35-540975B85CE3",
+      "pass": true
+    },
+    {
+      "check": "Analysis numeric cache empty or removed: 882D8017-70AC-4CA0-BD35-540975B85CE3",
+      "pass": true
+    },
+    {
+      "check": "Analysis result title flagged stale: ECC695CD-81E0-4342-97D7-038EEBEE7332",
+      "pass": true
+    },
+    {
+      "check": "Analysis text cache cleared: ECC695CD-81E0-4342-97D7-038EEBEE7332",
+      "pass": true
+    },
+    {
+      "check": "Analysis numeric cache empty or removed: ECC695CD-81E0-4342-97D7-038EEBEE7332",
+      "pass": true
+    },
+    {
+      "check": "Analysis explicitly uncalculated: 1692D0EE-34B0-47E1-AA9A-B1A96AD55A39",
+      "pass": true
+    },
+    {
+      "check": "Analysis aggregate result cleared: 1692D0EE-34B0-47E1-AA9A-B1A96AD55A39",
+      "pass": true
+    },
+    {
+      "check": "Analysis result title flagged stale: 2B00C999-7498-4A8F-807A-6CA76DCA13DB",
+      "pass": true
+    },
+    {
+      "check": "Analysis text cache cleared: 2B00C999-7498-4A8F-807A-6CA76DCA13DB",
+      "pass": true
+    },
+    {
+      "check": "Analysis numeric cache empty or removed: 2B00C999-7498-4A8F-807A-6CA76DCA13DB",
+      "pass": true
+    },
+    {
+      "check": "Analysis explicitly uncalculated: BB4EB3C9-1C4C-4843-B4D5-72F9942D120C",
+      "pass": true
+    },
+    {
+      "check": "Analysis aggregate result cleared: BB4EB3C9-1C4C-4843-B4D5-72F9942D120C",
+      "pass": true
+    },
+    {
+      "check": "Analysis result title flagged stale: 9B0AEB4D-7444-4D81-B969-82DDB6FC67DE",
+      "pass": true
+    },
+    {
+      "check": "Analysis text cache cleared: 9B0AEB4D-7444-4D81-B969-82DDB6FC67DE",
+      "pass": true
+    },
+    {
+      "check": "Analysis numeric cache empty or removed: 9B0AEB4D-7444-4D81-B969-82DDB6FC67DE",
+      "pass": true
+    },
+    {
+      "check": "Analysis result title flagged stale: 94315404-6B7A-4B7F-A4EC-729D9D36ABB7",
+      "pass": true
+    },
+    {
+      "check": "Analysis text cache cleared: 94315404-6B7A-4B7F-A4EC-729D9D36ABB7",
+      "pass": true
+    },
+    {
+      "check": "Analysis numeric cache empty or removed: 94315404-6B7A-4B7F-A4EC-729D9D36ABB7",
+      "pass": true
+    },
+    {
+      "check": "Analysis explicitly uncalculated: 6868ACFE-05E0-455D-B273-BCB0856BE80B",
+      "pass": true
+    },
+    {
+      "check": "Analysis aggregate result cleared: 6868ACFE-05E0-455D-B273-BCB0856BE80B",
+      "pass": true
+    },
+    {
+      "check": "Analysis result title flagged stale: 52481BBD-B3AD-4F8B-8D58-DA032A0FF22A",
+      "pass": true
+    },
+    {
+      "check": "Analysis text cache cleared: 52481BBD-B3AD-4F8B-8D58-DA032A0FF22A",
+      "pass": true
+    },
+    {
+      "check": "Analysis numeric cache empty or removed: 52481BBD-B3AD-4F8B-8D58-DA032A0FF22A",
+      "pass": true
+    },
+    {
+      "check": "Analysis result title flagged stale: F957E4BC-82A1-453C-9185-23F7BBC79DC8",
+      "pass": true
+    },
+    {
+      "check": "Analysis text cache cleared: F957E4BC-82A1-453C-9185-23F7BBC79DC8",
+      "pass": true
+    },
+    {
+      "check": "Analysis numeric cache empty or removed: F957E4BC-82A1-453C-9185-23F7BBC79DC8",
+      "pass": true
+    },
+    {
+      "check": "Analysis explicitly uncalculated: 5BD85BDF-0140-4146-8921-64C4ABC643C5",
+      "pass": true
+    },
+    {
+      "check": "Analysis aggregate result cleared: 5BD85BDF-0140-4146-8921-64C4ABC643C5",
+      "pass": true
+    },
+    {
+      "check": "Analysis result title flagged stale: 379BC1ED-FE3F-4807-8D36-8A93EFDCC181",
+      "pass": true
+    },
+    {
+      "check": "Analysis text cache cleared: 379BC1ED-FE3F-4807-8D36-8A93EFDCC181",
+      "pass": true
+    },
+    {
+      "check": "Analysis numeric cache empty or removed: 379BC1ED-FE3F-4807-8D36-8A93EFDCC181",
+      "pass": true
+    },
+    {
+      "check": "Analysis result title flagged stale: 156BC014-8AF9-4533-8C3C-5A08912EE6AB",
+      "pass": true
+    },
+    {
+      "check": "Analysis text cache cleared: 156BC014-8AF9-4533-8C3C-5A08912EE6AB",
+      "pass": true
+    },
+    {
+      "check": "Analysis numeric cache empty or removed: 156BC014-8AF9-4533-8C3C-5A08912EE6AB",
+      "pass": true
+    },
+    {
+      "check": "Analysis explicitly uncalculated: AA4C6237-DB10-425A-866F-F7E130BDA8F1",
+      "pass": true
+    },
+    {
+      "check": "Analysis aggregate result cleared: AA4C6237-DB10-425A-866F-F7E130BDA8F1",
+      "pass": true
+    },
+    {
+      "check": "Analysis result title flagged stale: 5F44B418-BAF5-4EB5-AC4C-080C16A277B2",
+      "pass": true
+    },
+    {
+      "check": "Analysis text cache cleared: 5F44B418-BAF5-4EB5-AC4C-080C16A277B2",
+      "pass": true
+    },
+    {
+      "check": "Analysis numeric cache empty or removed: 5F44B418-BAF5-4EB5-AC4C-080C16A277B2",
+      "pass": true
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "a0ea331d-98b3-4497-b037-0373bcea5361",
+    "key": "figure_2_workspace.RData",
+    "size": 507559669,
+    "checksum": "md5:06d145b074b05fbfdde13724f1bf4ed2",
+    "links": {
+      "self": "https://zenodo.org/api/records/20189813/files/figure_2_workspace.RData/content"
+    }
+  },
+  {
+    "id": "a9935171-184e-48ad-a0b6-131db27b21b6",
+    "key": "figure_3_workspace.RData",
+    "size": 2159314542,
+    "checksum": "md5:385e7d3f4c558d5ea4320ff5cef3b7c2",
+    "links": {
+      "self": "https://zenodo.org/api/records/20189813/files/figure_3_workspace.RData/content"
+    }
+  },
+  {
+    "id": "2991dba3-917a-40cf-9a38-06555397bd8a",
+    "key": "figure_4_workspace.RData",
+    "size": 465251189,
+    "checksum": "md5:69cb1f8316678bebddb5917f9f2143bb",
+    "links": {
+      "self": "https://zenodo.org/api/records/20189813/files/figure_4_workspace.RData/content"
+    }
+  },
+  {
+    "id": "a0b3006c-8c1e-4687-8114-c57a38857b30",
+    "key": "figure_5_workspace.RData",
+    "size": 3062509018,
+    "checksum": "md5:312b2d42e54baab630c5522a2693ed0d",
+    "links": {
+      "self": "https://zenodo.org/api/records/20189813/files/figure_5_workspace.RData/content"
+    }
+  }
+]

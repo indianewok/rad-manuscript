@@ -1,0 +1,37 @@
+[
+  {
+    "source": "/Users/cmv/Desktop/RAD_paper_revision_2026-10-22/sources/Manuscript.docx",
+    "exists": true,
+    "snapshot": "context/manuscript_documents/sources/Manuscript.docx",
+    "bytes": 9286599,
+    "sha256": "3f5f1f5930967dbb22f6539b1b7f9a3fbafe4d31cadec5b38fae1586a18742c8"
+  },
+  {
+    "source": "/Users/cmv/Desktop/RAD_paper_revision_2026-10-22/sources/101326_CMV_Review_letter_YH_LS.docx",
+    "exists": true,
+    "snapshot": "context/manuscript_documents/sources/101326_CMV_Review_letter_YH_LS.docx",
+    "bytes": 1054782,
+    "sha256": "392c6f58bb33f5b7efdb485ec973b66ba6e17e823733416c091e1612bc4ea9ae"
+  },
+  {
+    "source": "/Users/cmv/Desktop/RAD_paper_revision_2026-10-22/sources/RAD R1 figures and legends.docx",
+    "exists": true,
+    "snapshot": "context/manuscript_documents/sources/RAD R1 figures and legends.docx",
+    "bytes": 46530060,
+    "sha256": "0f72f07d3cfce6cd797eb33547afdd501a468598501853ee7ee727af390365ed"
+  },
+  {
+    "source": "/Users/cmv/Desktop/RAD_paper_revision_2026-10-22/working/Manuscript_methods_working_2026-10-22_v3.docx",
+    "exists": true,
+    "snapshot": "context/manuscript_documents/working/Manuscript_methods_working_2026-10-22_v3.docx",
+    "bytes": 6127264,
+    "sha256": "293ecd873db0511bbe301e98a5d00d240116c29ca2d68434d256112cdf7b0cb6"
+  },
+  {
+    "source": "/Users/cmv/Desktop/RAD_paper_revision_2026-10-22/working/RAD_R1_figures_and_legends_failure_modes_2026-10-22.docx",
+    "exists": true,
+    "snapshot": "context/manuscript_documents/working/RAD_R1_figures_and_legends_failure_modes_2026-10-22.docx",
+    "bytes": 46916644,
+    "sha256": "4eac4648a46cd2c5ae62d6cd385bd5788fc438c28877cf12c25550cd5892df2e"
+  }
+]

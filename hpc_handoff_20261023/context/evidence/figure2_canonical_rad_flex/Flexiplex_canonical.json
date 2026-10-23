@@ -1,0 +1,31 @@
+{
+  "tool": "Flexiplex",
+  "contract": "Flexiplex1.02.6 raw-to-assigned audit; native own-selected3004 list; f8/e2; duplicate same-final assignments collapse to first raw observation; different-final original IDs excluded; native=RawCellBarcode equals CellBarcode.",
+  "source": "/Volumes/rad_data/reviewer_comment_data/sctagger_flexiplex_audit_20260812/L_flatQ20_audit_reads_barcodes.txt",
+  "selected_barcodes": 3004,
+  "truth_selected": 3004,
+  "false_selected": 0,
+  "counts": {
+    "native_correct": 463613,
+    "corrected_correct": 1398700,
+    "native_incorrect": 381,
+    "corrected_incorrect": 281696,
+    "all_incorrect": 282077,
+    "ambiguous": 364,
+    "assigned_unambiguous": 2144390,
+    "unassigned": 2849051,
+    "input_reads": 4993805,
+    "observed_input_ids": 2144754,
+    "audit_records": 2145119,
+    "correct_total": 1862313
+  },
+  "five_state_pie_order": [
+    "native_correct",
+    "corrected_correct",
+    "all_incorrect",
+    "ambiguous",
+    "unassigned"
+  ],
+  "array_zero_policy": "Every selected target retained, including zero counts. Unselected truth targets blank in aligned table.",
+  "validation": "PASS; source scalar categories and exhaustive partition match exactly."
+}

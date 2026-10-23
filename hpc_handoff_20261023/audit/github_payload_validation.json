@@ -1,0 +1,17 @@
+{
+  "task_count": 36,
+  "unique_ids_and_acyclic_dependencies": "passed",
+  "top_level_markdown_links": "passed",
+  "link_count": 26,
+  "unchanged_source_files_matching_original_hashes": 243,
+  "edited_transport_documents": [
+    "AGENT_START_HERE.md",
+    "HPC_HANDOFF.md",
+    "README.md",
+    "REPOSITORY_AUDIT.md"
+  ],
+  "new_payload_record": "audit/github_edition.json",
+  "individual_files_under_50_MiB": true,
+  "credential_scan": "Independent read-only review found no obvious credentials in selected text files",
+  "analysis_execution": "not performed; this commit transfers the handoff only"
+}

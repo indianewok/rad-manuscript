@@ -1,0 +1,17 @@
+{
+  "correction_4acbe00_vs_cb699170": {
+    "byte_identical": true,
+    "characters": 41652,
+    "sha256": "5216c5731fc3a28e15e4ad82c6afebce6a8ec278a32e63629eec13864eeccbd9",
+    "begin": "namespace barcode_correction {",
+    "end_exclusive": "struct sigalign_run_stats"
+  },
+  "selector_24d5ce_vs_cb699170": {
+    "byte_identical": true,
+    "characters": 97480,
+    "sha256": "7179131cc3bbde2034a8c6c7588f96ec2c65fc497ae9472d21a9c666ee79e5c0",
+    "begin": "// Barcode statistics structure",
+    "end_exclusive": "void usage_scan_wl"
+  },
+  "whitelist_4acbe00_full_source_verified": false
+}

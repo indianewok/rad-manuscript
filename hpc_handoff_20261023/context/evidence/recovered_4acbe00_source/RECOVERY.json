@@ -1,0 +1,23 @@
+{
+  "source_commit": "4acbe004ba11b150d6832395452632f367a6e6c1",
+  "method": "Reverse exact preserved diagnostic patch on copies of patched files; compare reconstructed Git blob to original patch index",
+  "diagnostic_source": "/Volumes/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/sc_ont_rad_filter_audit_20260827/source",
+  "files": [
+    {
+      "path": "include/rad/sigstring.hpp",
+      "bytes": 207450,
+      "sha256": "46aba3cdeecd0e16555138e93cc48530ead22977ef453bdb471fe088891694af",
+      "git_blob": "791a01c84fdd5f2d80e975c7e1dbef370d1424c8",
+      "patch_expected_prefix": "791a01c",
+      "matches": true
+    },
+    {
+      "path": "src/main.cpp",
+      "bytes": 80192,
+      "sha256": "0e953bafc5ea36155dcfdeb1d1dee352d0ef99e141ef2519c1e7317cd32bea28",
+      "git_blob": "317cf2bb23c92241afeee6d9b77ea55d5117710e",
+      "patch_expected_prefix": "317cf2b",
+      "matches": true
+    }
+  ]
+}

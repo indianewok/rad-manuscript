@@ -1,0 +1,56 @@
+[
+  {
+    "path": "/Volumes/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/longbench_snont_postdemux_vireo_20260803/align/RAD/align2genome.bam",
+    "exists": true,
+    "bytes": 28219388685,
+    "check": "filesystem metadata only; content not read"
+  },
+  {
+    "path": "/Volumes/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/longbench_snont_postdemux_vireo_20260803/align/Flexiplex/align2genome.bam",
+    "exists": true,
+    "bytes": 49036591237,
+    "check": "filesystem metadata only; content not read"
+  },
+  {
+    "path": "/Volumes/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/longbench_full_demux_20260730/runs/flames2.0.1_longbench_published/SN_ONT/align2genome.bam",
+    "exists": true,
+    "bytes": 36413849035,
+    "check": "filesystem metadata only; content not read"
+  },
+  {
+    "path": "/Volumes/rad_data/reviewer_comment_data/LongBench_comps/SN_ONT_RAD_bulk_cellline_bundle_20260803/RAD/cellsnp/cellSNP.tag.AD.mtx",
+    "exists": true,
+    "bytes": 53882353,
+    "check": "filesystem metadata only; content not read"
+  },
+  {
+    "path": "/Volumes/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/longbench_snont_postdemux_vireo_20260803/cellsnp/Flexiplex/cellSNP.tag.AD.mtx",
+    "exists": true,
+    "bytes": 89752186,
+    "check": "filesystem metadata only; content not read"
+  },
+  {
+    "path": "/Volumes/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/longbench_snont_postdemux_vireo_20260803/rebuilds/BLAZE_rebuilt_bulk_panel_tool_postdemux_20260804T135956Z/cellsnp/cellSNP.tag.AD.mtx",
+    "exists": true,
+    "bytes": 69111693,
+    "check": "filesystem metadata only; content not read"
+  },
+  {
+    "path": "/Volumes/rad_data/reviewer_comment_data/LongBench_comps/SN_ONT_RAD_bulk_cellline_bundle_20260803/bulk_donor_panel/final/fixed_8line_bulk_illumina_donor_panel.vcf.gz",
+    "exists": true,
+    "bytes": 18128667,
+    "check": "filesystem metadata only; content not read"
+  },
+  {
+    "path": "/Volumes/rad_data/reviewer_comment_data/LongBench_comps/SN_ONT_H146_H526_fullcohort_DEG_20260822/RERUN.sh",
+    "exists": true,
+    "bytes": 876,
+    "check": "filesystem metadata only; content not read"
+  },
+  {
+    "path": "/Volumes/rad_data/reviewer_comment_data/LongBench_comps/SN_ONT_H146_H526_fullcohort_DEG_20260822/results/VALIDATION.tsv",
+    "exists": true,
+    "bytes": 2519,
+    "check": "filesystem metadata only; content not read"
+  }
+]
