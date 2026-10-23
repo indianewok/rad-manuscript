@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "RAD": {
+    "source_commit": "cd0582b2440cde0f35725dc557fa47307d74d374",
+    "files_compared": 119,
+    "modified_source_files": [],
+    "source_archive_sha256": "54b75ec87ccec03c173d6107aae232a592770b9f4419ddd066ce9c2c4157a182",
+    "build_command": "cmake -S checkpoints/figure_03/rage_matched/tools/rad_cd0582_source -B checkpoints/figure_03/rage_matched/tools/rad_cd0582_build -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF; cmake --build checkpoints/figure_03/rage_matched/tools/rad_cd0582_build -j4",
+    "CXX": "GCC8.5.0",
+    "CXX_FLAGS": "-O3 -DNDEBUG -std=gnu++17 -fopenmp",
+    "Boost": "1.74.0",
+    "zlib": "1.2.11",
+    "CMake": "3.26",
+    "diagnostic_patch": "none",
+    "binary_sha256": "fc424779c1aba3f112930b4ec8c0dc874b421a217bd53ce6f227e719489a2b2d"
+  },
+  "BLAZE": {
+    "version": "2.6.0a0",
+    "source_commit": "af8d2cc9f6374caf4d1006d5f8a0e99097211646",
+    "source_module_comparison": "validation/figure_3_blaze_source_identity.json",
+    "installed_source_archive_sha256": "4e12f90fd2f6bac444f533570c035b25206b402cb9e06fdc11f05382285d8d23",
+    "Python": "3.9.16",
+    "dependency_lock": "environments/figure_3_blaze_2.6.0a0.txt"
+  }
+}

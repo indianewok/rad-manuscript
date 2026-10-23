@@ -1,0 +1,25 @@
+{
+  "identifier_files": {
+    "encoding": "UTF-8 inside gzip; no header",
+    "record": "one sorted unique 16nt ACGT identifier per line",
+    "normalization": "terminal -1 suffix removal only; named-column/membership extraction documented per source",
+    "unit": "distinct barcode identifier; no read sequences or genomic loci"
+  },
+  "identifier_manifest.tsv": {
+    "unit": "one selected canonical input/tool row",
+    "rows": 111,
+    "public_recomputed_rows": 87,
+    "controlled_aggregate_only_rows": 24,
+    "columns": {
+      "canonical_id": "Exact selected input key",
+      "tool": "RAD, BLAZE or Flexiplex",
+      "status": "public-identifiers-recomputed or aggregate-only-controlled-access",
+      "callset_path": "Repository-relative gzip selected identifier file; empty for controlled row",
+      "reference_path": "Repository-relative gzip matched reference identifier file; empty for controlled row",
+      "callset_sha256": "SHA256 of deposited compressed bytes",
+      "reference_sha256": "SHA256 of deposited compressed bytes",
+      "reason": "Selection origin or explicit exclusion reason"
+    }
+  },
+  "source_lineage": "../../validation/figures_124_public_identifier_export.json"
+}

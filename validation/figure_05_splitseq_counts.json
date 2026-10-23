@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "tool": "RAD",
+      "paired_cells": 568,
+      "read_counts_equal": 568,
+      "umi_counts_equal": 568,
+      "report_sha256": "e12999b2291a83748c807515afd495ca683cf40e63a6fca14f42476c6f87f437"
+    },
+    {
+      "tool": "Component Flexiplex polyT",
+      "paired_cells": 568,
+      "read_counts_equal": 568,
+      "umi_counts_equal": 568,
+      "report_sha256": "cad124d87f815294cf47f3fe6b8fab7e6130800c94b8f81f4cf13010925ce009"
+    }
+  ],
+  "integer_counts_compared": 2272,
+  "raw_demultiplexing_rerun": false,
+  "code_sha256": "e0de428bed3389eea4124bad2d1252d9bfb26b9fe23d0bd7c9f6954be0234818",
+  "expected_sha256": "3dacbb07802efd1f8e98d537d0c09a414b8ffc17974464b2747b1de0352bc341",
+  "summary_sha256": "a30c32a2ebf7d68ddc14b776ca8b11eab5d1af0b868896727ba101efbb3de2a3",
+  "counting": "Within-cell distinct original-read IDs; within-cell distinct exact UMI strings. Sums are read-cell or cell-UMI pairs, not globally unique reads.",
+  "displayed_23p35_status": "not reproduced: selected full-input unique-read and assignment-row fractions are reported separately; no silent replacement annotation"
+}

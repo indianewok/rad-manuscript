@@ -1,0 +1,37 @@
+{
+  "status": "completed aggregation; compare with selected checkpoint",
+  "tool": "component",
+  "summary": {
+    "assignment_rows": 1345255,
+    "published_assignment_rows": 1157117,
+    "published_full_10nt_umi_rows": 1124976,
+    "outside_published_cells": 188138,
+    "published_other_umi_length_rows": 32141,
+    "unique_source_reads": 1338285,
+    "published_cells": 568,
+    "published_cells_with_reads": 568,
+    "published_unique_source_reads": 1152260,
+    "read_cell_pairs": 1156252,
+    "cell_umi_pairs": 1050292,
+    "median_reads": 1102.5,
+    "median_umis": 1042.0
+  },
+  "code_sha256": "2a7f30b54767cc7cda4f59ae3361b7f701d40b7a745412b1fd3437e76faf843e",
+  "inputs": [
+    {
+      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_05/component_polyT_assignments.tsv.gz",
+      "sha256": "0fb4ad499c04d57f72552f06ce5b2a2e0c124649fd1bb63ce8971627260e5588"
+    },
+    {
+      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/data/figure_05/splitseq_cells.tsv",
+      "sha256": "585013438bef94f2c78c771b002417a290d48ab68fb50b2ffed36757f2ec8907"
+    },
+    {
+      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/data/figure_05/rt_primer_well_map.csv",
+      "sha256": "e8981cdbe674e3e51b46c12736cbb6e4233eeca9d4b7b286a99a0864d4920aa1"
+    }
+  ],
+  "output_sha256": "dc4455ab963abc3e87095f60d90fa89e0b0c69ec4db6debbc51ac9eafc34ae38",
+  "raw_demultiplexing_rerun": false,
+  "unit": "distinct read IDs and exact UMI strings within each canonical cell; sums are cell pairs"
+}

@@ -1,0 +1,7 @@
+step	role	description	code_anchor
+Read structure annotation	demultiplexing	Define static elements and variable barcode, UMI and captured-read elements.	pinned source audit; layout parsing
+Position mapping	demultiplexing	Locate static elements and extract variable sequences with strand normalization.	sigstring.hpp:1265-1271
+Identity and correction	demultiplexing	Check correctly oriented exact catalog/selected identities; apply staged candidate and running-count checks.	sigstring.hpp:1320-1343,1399-1430; barcode_correction.hpp:2393-2437
+Selected-cell output	demultiplexing	With a nonempty selected list, emit permitted selected barcode elements; strict mode requires every component.	sigstring.hpp:3293-3389,3440-3471,4881-4884
+Adapter-based discovery	whitelist discovery	Extract candidate barcodes and count catalog identities using the declared all-extraction denominator.	whitelist_generator.hpp:3029-3087
+Adaptive selection	whitelist discovery	Use density/saddle selection, conditional fallback, adaptive floor and final hazard review.	whitelist_generator.hpp:3197-3269,3352-3448

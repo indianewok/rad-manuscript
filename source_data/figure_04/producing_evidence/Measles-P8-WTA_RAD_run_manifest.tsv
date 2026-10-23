@@ -1,0 +1,20 @@
+field	value
+input_accession	SRR28349078
+input_scope	P8 MBC whole transcriptome
+input_fastq	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/raw_fastq_datasets/complex_outsourced_datasets/measles_wgs/mmr_p8_raw_data/SRR28349078.fastq.gz
+input_bytes	195102153386
+input_reads	270994675
+chemistry	10x Chromium Next GEM Single Cell 3-prime v3.1
+adapter	CTACACGACGCTCTTCCGATCT
+cell_barcode_nt	16
+umi_nt	12
+global_design	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/cellranger_whitelists/3M-february-2018-3v3.txt
+global_design_barcodes	6794880
+scoring_truth	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/barcode_whitelists/mmr_p8_sc_bcs.txt
+scoring_truth_barcodes	10299
+rad_commit	b02ff24110fe45873811d5389d2e58c338045f05
+blaze_version	2.6.0a0
+blaze_selector	expect-cells=10299;minQ=15;kit=3v3;max_edit_distance=2
+flexiplex_version	1.02.6
+flexiplex_selector	10x3v3;f=8;edit_distance=2
+scope	complete FASTQ; de novo whitelist selection and full demultiplexing

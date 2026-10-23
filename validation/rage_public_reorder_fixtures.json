@@ -1,0 +1,91 @@
+{
+  "status": "passed",
+  "scope": "Explicitly synthetic code-behavior fixtures (three-read edge cases and 5000-read external merge); not biological evidence",
+  "implementation": "scripts/figure_03/reorder_public_fastq.py",
+  "implementation_sha256": "bd328ce80257f4de4cc03cce58290b37e180b478754e41514c7d048703d2a987",
+  "independent_identity_script_sha256": "d73c3c13e92cbea49d11f8a89f3013531a33d79fed2c949fe77a1373da01cc9c",
+  "fixture_script_sha256": "9067479ee151c8075f035b2ea338d1b4757567ff572ef8d260183b5721206951",
+  "checks": [
+    {
+      "case": "reversed_order",
+      "status": "passed",
+      "expected_acceptance": true,
+      "rejection_reason": null
+    },
+    {
+      "case": "different_metadata",
+      "status": "passed",
+      "expected_acceptance": true,
+      "rejection_reason": null
+    },
+    {
+      "case": "duplicate_public_ID",
+      "status": "passed",
+      "expected_acceptance": false,
+      "rejection_reason": "Duplicate public ID or ID outside selected order: b'fixture-A'"
+    },
+    {
+      "case": "missing_public_ID",
+      "status": "passed",
+      "expected_acceptance": false,
+      "rejection_reason": "Public FASTQ is missing 1 selected IDs"
+    },
+    {
+      "case": "extra_public_ID",
+      "status": "passed",
+      "expected_acceptance": false,
+      "rejection_reason": "Duplicate public ID or ID outside selected order: b'fixture-extra'"
+    },
+    {
+      "case": "changed_sequence",
+      "status": "passed",
+      "expected_acceptance": false,
+      "rejection_reason": "Reconstructed selected identity mismatch: canonical_record_sha256"
+    },
+    {
+      "case": "changed_quality",
+      "status": "passed",
+      "expected_acceptance": false,
+      "rejection_reason": "Reconstructed selected identity mismatch: canonical_record_sha256"
+    },
+    {
+      "case": "malformed_record",
+      "status": "passed",
+      "expected_acceptance": false,
+      "rejection_reason": "Malformed four-line FASTQ record 3"
+    },
+    {
+      "case": "verify_only_complete",
+      "status": "passed",
+      "expected_acceptance": true,
+      "full_fastq_written": false,
+      "rejection_reason": null
+    },
+    {
+      "case": "verify_only_changed_quality",
+      "status": "passed",
+      "expected_acceptance": false,
+      "full_fastq_written": false,
+      "rejection_reason": "Reconstructed selected identity mismatch: canonical_record_sha256"
+    },
+    {
+      "case": "duplicate_order_ID",
+      "status": "passed",
+      "expected_acceptance": false,
+      "rejection_reason": "Duplicate selected-order ID: b'fixture-A'"
+    },
+    {
+      "case": "changed_order_hash",
+      "status": "passed",
+      "expected_acceptance": false,
+      "rejection_reason": "Selected-order compressed SHA-256 differs from its identity receipt"
+    },
+    {
+      "case": "external_merge_5000_synthetic_reads",
+      "status": "passed",
+      "expected_acceptance": true,
+      "sort_buffer": "1M",
+      "encoded_input_bytes_at_least": 4000000
+    }
+  ]
+}

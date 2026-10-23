@@ -1,0 +1,1 @@
+10 assignment rows; 10 physical IDs; 0 ambiguous IDs excluded; 10 strict reads to requested targets

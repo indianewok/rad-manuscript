@@ -1,0 +1,169 @@
+{
+  "files": {
+    "immune_reference_annotation_example.tsv": {
+      "rows": 5,
+      "columns": {
+        "barcode": {
+          "units_or_semantics": "nucleotide barcode identity"
+        },
+        "in_deposited_shortread_list": {
+          "units_or_semantics": "literal source boolean True/False; membership in named deposited/selected set"
+        },
+        "deposited_label": {
+          "units_or_semantics": "public deposited short-read cell-type label; blank means absent/unlabeled, not numeric zero"
+        },
+        "called_RAD": {
+          "units_or_semantics": "literal source boolean True/False; membership in named deposited/selected set"
+        },
+        "called_BLAZE_2.6.0a0_expect10433": {
+          "units_or_semantics": "literal source boolean True/False; membership in named deposited/selected set"
+        },
+        "called_Flexiplex_f8": {
+          "units_or_semantics": "literal source boolean True/False; membership in named deposited/selected set"
+        }
+      },
+      "scope": "bounded actual input or its deterministic transformation; not a full scientific dataset"
+    },
+    "immune_reference_example_counts.tsv": {
+      "rows": 3,
+      "columns": {
+        "tool": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "input_annotation_rows": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "reference_n": {
+          "units_or_semantics": "distinct barcode identities"
+        },
+        "calls": {
+          "units_or_semantics": "distinct barcode identities"
+        },
+        "tp": {
+          "units_or_semantics": "distinct barcode identities"
+        },
+        "fp": {
+          "units_or_semantics": "distinct barcode identities"
+        },
+        "fn": {
+          "units_or_semantics": "distinct barcode identities"
+        }
+      },
+      "scope": "bounded actual input or its deterministic transformation; not a full scientific dataset"
+    },
+    "three_input_metrics_example.tsv": {
+      "rows": 9,
+      "columns": {
+        "score_panel": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "display_dataset": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "canonical_id": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "dataset_family": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "tool": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "calls": {
+          "units_or_semantics": "distinct barcode identities"
+        },
+        "reference_n": {
+          "units_or_semantics": "distinct barcode identities"
+        },
+        "tp": {
+          "units_or_semantics": "distinct barcode identities"
+        },
+        "fp": {
+          "units_or_semantics": "distinct barcode identities"
+        },
+        "fn": {
+          "units_or_semantics": "distinct barcode identities"
+        },
+        "precision": {
+          "units_or_semantics": "fraction 0..1"
+        },
+        "recall": {
+          "units_or_semantics": "fraction 0..1"
+        },
+        "f1": {
+          "units_or_semantics": "fraction 0..1"
+        },
+        "reference_type": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "reference_description": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "validation_tier": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "source_path": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "source_method": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "input_status": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "paired_input_id": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "inferential_status": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        }
+      },
+      "scope": "bounded actual input or its deterministic transformation; not a full scientific dataset"
+    },
+    "three_input_metrics_recomputed.tsv": {
+      "rows": 9,
+      "columns": {
+        "canonical_id": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "tool": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "input_status": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "reference_type": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "calls": {
+          "units_or_semantics": "distinct barcode identities"
+        },
+        "reference_n": {
+          "units_or_semantics": "distinct barcode identities"
+        },
+        "tp": {
+          "units_or_semantics": "distinct barcode identities"
+        },
+        "fp": {
+          "units_or_semantics": "distinct barcode identities"
+        },
+        "fn": {
+          "units_or_semantics": "distinct barcode identities"
+        },
+        "precision": {
+          "units_or_semantics": "fraction 0..1"
+        },
+        "recall": {
+          "units_or_semantics": "fraction 0..1"
+        },
+        "f1": {
+          "units_or_semantics": "fraction 0..1"
+        }
+      },
+      "scope": "bounded actual input or its deterministic transformation; not a full scientific dataset"
+    }
+  },
+  "source_lineage": "provenance.json; original TSV/CSV header excluded from 1-based data-row numbering",
+  "output_tables": "derived examples are produced by exact commands in docs/figure_04.md",
+  "empty_files": "No empty records are imputed."
+}

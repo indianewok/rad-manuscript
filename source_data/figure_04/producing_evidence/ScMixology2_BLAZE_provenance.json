@@ -1,0 +1,32 @@
+{
+  "authentic_native_callset_available": false,
+  "dataset": "scMixology2",
+  "design_barcodes": 6794880,
+  "elapsed_seconds_before_source_hashing": 39.19697022438049,
+  "expectation_grid": [
+    250,
+    500,
+    1000
+  ],
+  "installed_design_whitelist": "/scratch/f005f43/blaze2_250_probe_20260727/venv/lib/python3.9/site-packages/blaze/10X_bc/3M-february-2018.zip",
+  "min_q": 15,
+  "preserved_and_installed_design_sets_identical": true,
+  "preserved_cellranger_reference": "/scratch/f005f43/blaze_analysis_data_20335203/data/scmixology/cellranger/whitelist.tsv",
+  "preserved_design_whitelist": "/scratch/f005f43/blaze_analysis_data_20335203/data/3M-february-2018.txt.gz",
+  "preserved_raw_bc": "/scratch/f005f43/blaze_analysis_data_20335203/data/scmixology/blaze/raw_bc.csv.gz",
+  "primary_validated_package_eligible": false,
+  "published_analysis_commit": "90e4cebcbf8dedb787272be0f2ded4c5bb21e468",
+  "published_center_call_count": 188,
+  "published_center_count_reproduced": true,
+  "published_center_expectation": 500,
+  "published_notebook": "https://github.com/youyupei/bc_whitelist_analysis/blob/90e4cebcbf8dedb787272be0f2ded4c5bb21e468/script/scmixology_data_analysis.ipynb",
+  "published_selector_semantics": "Q>=15; restrict to 10x design; threshold=95th percentile of top N counts /20; select counts >= threshold; N=500",
+  "q15_nonmissing_rows": 8946430,
+  "raw_bc_data_rows": 25164948,
+  "reference_barcodes": 248,
+  "selector_library_module": "/scratch/f005f43/blaze2_250_probe_20260727/venv/lib/python3.9/site-packages/blaze/main.py",
+  "selector_library_version_for_cross_check": "2.5.0",
+  "status": "EXPLORATORY_RECONSTRUCTION_NO_AUTHENTIC_NATIVE_CALLSET",
+  "unique_q15_design_barcodes": 86926,
+  "unique_q15_raw_barcodes": 237682
+}

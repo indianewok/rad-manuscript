@@ -1,0 +1,63 @@
+{
+  "status": "passed",
+  "source": "/tmp/Manuscript_methods_working_2026-10-22_v3.paragraphs.json",
+  "source_sha256": "80468a1367dfa263676b3a913b5b25afb052c2ff4049e61e52520dbbd186392f",
+  "source_paragraph_range_zero_based": [
+    59,
+    121
+  ],
+  "core_algorithm_range_zero_based": [
+    60,
+    78
+  ],
+  "core_algorithm_exact": true,
+  "statistical_paragraph_121_exact": true,
+  "output_json": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/rad_manuscript_recovery_20261023/current_revision/Methods_current.paragraphs.json",
+  "output_sha256": "6b2ace9b9bc9d2debcb2a9414a84f7f579b61594590a4c3a4a25bd35e8c5373e",
+  "output_paragraphs": 71,
+  "changes": [
+    {
+      "source_paragraph": 83,
+      "action": "add verified memory units"
+    },
+    {
+      "source_paragraph": 95,
+      "action": "clarify observed correction-pair categories, overlap and undefined percentages from current Figure3 contract"
+    },
+    {
+      "source_paragraphs": [
+        91
+      ],
+      "action": "integrate completed matched RAGE raw experiment and normalized metric"
+    },
+    {
+      "source_paragraphs": [
+        104,
+        105,
+        108
+      ],
+      "action": "selected Split-seq producers, 568 keyed cells, preserved paired t; explicit receptor and depth-matched UMI source holds"
+    },
+    {
+      "source_paragraphs": [
+        110,
+        111,
+        112
+      ],
+      "action": "exact genotype producers; VCF records/duplicates; separate Figure6C denominator; inspected SCT/UMAP recipe"
+    },
+    {
+      "source_paragraphs": [
+        114,
+        116,
+        117,
+        118,
+        119
+      ],
+      "action": "selected4acbe00 segments and exact molecule contract; pair-only8135; log2(1+CP10K); retained tests; F7C hold"
+    }
+  ],
+  "draft_sha256": "726ffefe9975e750b7fe4fa170246356c3635ac1eb8a923cbfaa800aadfe12ce",
+  "figure3_draft_sha256": "44443475b3b3c60773288d028bdad4006b448126e76d339d7855d3463c4ae8f2",
+  "limitation": "Methods-only author-review text; remaining scientific source gates and native Word/pagination QA remain pending"
+}

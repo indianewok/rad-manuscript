@@ -1,0 +1,12 @@
+{
+  "analysis_uid": "F616A250-536B-42B0-B4E6-23C2BF786E46",
+  "test": "two-sided paired t test",
+  "n": 568,
+  "t": 14.959474687143327,
+  "df": 567,
+  "p_value": 6.890554214980993e-43,
+  "alpha": 0.05,
+  "source": "saved native Prism values; procedure and annotations not replaced",
+  "difference": "RAD minus component polyT; swapDirection=true in native settings",
+  "artwork_scope": "native dataset binding verified; final exported panel/annotation appearance still requires artwork QA"
+}

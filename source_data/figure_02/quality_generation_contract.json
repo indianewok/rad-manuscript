@@ -1,0 +1,20 @@
+{
+  "changed_generator": false,
+  "effective_quality_tape_seeds": {
+    "nanopore2018_L": 11835179057691093796,
+    "nanopore2018_S": 16211358332209865628,
+    "nanopore2023_L": 6475178776901811265
+  },
+  "literal_model_paths": {
+    "nanopore2018": "/scratch/f005f43/rad_sctagger_badread_quality_20260727/models/nanopore2018.gz",
+    "nanopore2023": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/LongBench_comps/ScTagger_nanopore2023_Q15_Q20_20260819/models/nanopore2023.gz"
+  },
+  "raw_input_content_validation": "full passed; validation/figures_124_fastq_identity.json",
+  "raw_rerun": "not run",
+  "rng_contract": "stable_seed(str(args.model), args.seed, \"quality-tape\"); pathname is part of historical RNG identity",
+  "seeds": {
+    "nanopore2018_L": 20260731,
+    "nanopore2018_S": 20260727,
+    "nanopore2023_L": 20260731
+  }
+}

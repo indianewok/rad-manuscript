@@ -1,0 +1,165 @@
+{
+	"@class": "AnalysisResults",
+	"$id": "analyses/two_sample_tests/results.schema.json",
+	"version": "0.0.0",
+	"content": {
+		"status": {
+			"error": "VALID",
+			"warning": []
+		},
+		"pairedTTestModel": {
+			"status": "VALID",
+			"pairedTTest": {
+				"status": "VALID",
+				"t": 14.959474687143327,
+				"df": 567.0,
+				"pValue": {
+					"value": 6.890554214980993e-43,
+					"level": 0.05,
+					"isSignificant": true,
+					"state": "P_VALUE_EQUAL"
+				}
+			},
+			"meanOfDifferences": {
+				"mean": 1623.0968309859154,
+				"stdDeviationOfDifferences": 2585.843603600707,
+				"stdErrorOfDifferences": 108.49958738062233,
+				"confidenceIntervalOfDifferences": {
+					"lower": 1409.9866418818192,
+					"upper": 1836.2070200900116,
+					"level": 95.0
+				},
+				"rSquared": 0.28299175257186077
+			},
+			"pearsonTest": {
+				"status": "VALID",
+				"r": 0.9504811065309922,
+				"pValue": {
+					"value": 9.474866369657186e-290,
+					"level": 0.05,
+					"isSignificant": true,
+					"state": "P_VALUE_EQUAL"
+				},
+				"pValueOneTailed": {
+					"value": 9.474866369657186e-290,
+					"level": 0.05,
+					"isSignificant": true,
+					"state": "P_VALUE_EQUAL"
+				}
+			}
+		},
+		"descriptiveStatistics": {
+			"sample1": {
+				"id": {
+					"col": {
+						"uid": "78E665E3-EBF0-457E-A910-329F284AFF93",
+						"title": "RAD",
+						"idx": 4
+					}
+				},
+				"value": {
+					"n": 568,
+					"mean": 3658.7517605633802,
+					"sd": 5070.5248189938075,
+					"meanSE": 212.75449524401486,
+					"meanCI": {
+						"lower": 3240.868597974541,
+						"upper": 4076.6349231522195,
+						"level": 95.0
+					},
+					"minimum": 18.0,
+					"firstQuartile": 997.5,
+					"median": 1979.5,
+					"thirdQuartile": 4656.75,
+					"maximum": 60941.0
+				}
+			},
+			"sample2": {
+				"id": {
+					"col": {
+						"uid": "E8D73FB7-3C6F-4B6D-8E37-E80BFB83E643",
+						"title": "Default Flexiplex Layout (2/26)",
+						"idx": 1
+					}
+				},
+				"value": {
+					"n": 568,
+					"mean": 2035.6549295774648,
+					"sd": 2769.231165743138,
+					"meanSE": 116.19435855529251,
+					"meanCI": {
+						"lower": 1807.431004285653,
+						"upper": 2263.8788548692764,
+						"level": 95.0
+					},
+					"minimum": 7.0,
+					"firstQuartile": 518.75,
+					"median": 1102.5,
+					"thirdQuartile": 2650.25,
+					"maximum": 33603.0
+				}
+			},
+			"differences": {
+				"id": [
+					{
+						"col": {
+							"uid": "78E665E3-EBF0-457E-A910-329F284AFF93",
+							"title": "RAD",
+							"idx": 4
+						}
+					},
+					{
+						"col": {
+							"uid": "E8D73FB7-3C6F-4B6D-8E37-E80BFB83E643",
+							"title": "Default Flexiplex Layout (2/26)",
+							"idx": 1
+						}
+					}
+				],
+				"value": {
+					"n": 568,
+					"mean": 1623.0968309859154,
+					"sd": 2585.843603600707,
+					"meanSE": 108.49958738062233,
+					"meanCI": {
+						"lower": 1409.9866418818192,
+						"upper": 1836.2070200900116,
+						"level": 95.0
+					},
+					"minimum": 11.0,
+					"firstQuartile": 380.0,
+					"median": 812.0,
+					"thirdQuartile": 1839.75,
+					"maximum": 27338.0
+				}
+			}
+		},
+		"compactLetterDisplay": {
+			"status": "VALID",
+			"letterCount": 2,
+			"sampleCount": 2,
+			"samples": {
+				"4b8657ab-91a9-5d36-bc73-225b71c4f301": {
+					"id": {
+						"col": {
+							"uid": "78E665E3-EBF0-457E-A910-329F284AFF93",
+							"title": "RAD",
+							"idx": 4
+						}
+					},
+					"value": "A"
+				},
+				"c6e28c98-27f0-5b2c-958a-cd566493c742": {
+					"id": {
+						"col": {
+							"uid": "E8D73FB7-3C6F-4B6D-8E37-E80BFB83E643",
+							"title": "Default Flexiplex Layout (2/26)",
+							"idx": 1
+						}
+					},
+					"value": "B"
+				}
+			}
+		}
+	}
+}

@@ -1,5 +1,0 @@
-dataset	durable_raw_fastq	size_bytes	sha256	note
-SC_ONT	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/raw_fastq_datasets/longbench/raw_fastq/SC_ONT.fastq.gz	88257731285	NOT_RECOMPUTED_THIS_EXPORT	Raw FASTQ remains in the durable LongBench data tree and is not duplicated.
-SC_PB	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/raw_fastq_datasets/longbench/raw_fastq/SC_PB.fastq.gz	79878370809	NOT_RECOMPUTED_THIS_EXPORT	Raw FASTQ remains in the durable LongBench data tree and is not duplicated.
-SN_ONT	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/raw_fastq_datasets/longbench/raw_fastq/SN_ONT.fastq.gz	90056019300	NOT_RECOMPUTED_THIS_EXPORT	Raw FASTQ remains in the durable LongBench data tree and is not duplicated.
-SN_PB	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/raw_fastq_datasets/longbench/raw_fastq/SN_PB.fastq.gz	69255302528	NOT_RECOMPUTED_THIS_EXPORT	Raw FASTQ remains in the durable LongBench data tree and is not duplicated.

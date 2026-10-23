@@ -1,0 +1,24 @@
+{
+  "status": "passed reconstructed plotting-required grid",
+  "grid_rows": 175561,
+  "in_tissue_rows": 123658,
+  "source": [
+    {
+      "path": "source_data/figure_01/hd_RAD_bins.tsv",
+      "sha256": "9b5a6cabd67a310ad99e090082e7de3a7e137568be1924891b5d7d251477f3ab"
+    },
+    {
+      "path": "source_data/figure_01/hd_16um_raw_barcodes.tsv.gz",
+      "sha256": "698632251d45ea1dd2eace39f1af98aeef3566fcd323c477501b20c5c165c787"
+    },
+    {
+      "path": "source_data/figure_01/hd_16um_filtered_barcodes.tsv.gz",
+      "sha256": "2e0e370954261e4c19a46d4a74f345b51e2f0852881572d238580324c31f60d8"
+    }
+  ],
+  "output": {
+    "path": "/tmp/fig1_tissue_positions_16um_reconstructed.csv",
+    "sha256": "12fccf3db188719033a38bd0a51a97ecf6090f96821f8d6a734d8bfb2a672c74"
+  },
+  "limitations": "Original named tissue_positions CSV not recovered. Only required barcode/array_row/array_col/in_tissue columns reconstructed exactly from deposited wide-derived data; no pixel coordinates or Seurat expression imputed."
+}

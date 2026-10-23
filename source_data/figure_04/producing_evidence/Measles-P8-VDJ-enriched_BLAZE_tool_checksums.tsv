@@ -1,0 +1,3 @@
+tool	version	path	sha256
+Flexiplex	1.02.6	/scratch/f005f43/measles_p7_p8_four_tool_20260730/tools/flexiplex-v1.02.6/flexiplex-linux	6eee3a7113044d45e106dc74a541b9a53475311449bf49bd91cc912ba911c40e
+Flexiplex-diagnostic	1.02.6+d84c8ae_raw_barcode_audit	/scratch/f005f43/measles_p7_p8_four_tool_20260730/tools/flexiplex-v1.02.6/flexiplex-audit	38dccd37f1747e5105b62eacde572b7e4c5206fb925dc1fdbe8210ffe8b1e8c4

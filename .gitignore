@@ -2,7 +2,7 @@
 # RAD manuscript repo — files that should never be tracked
 # =============================================================================
 
-# --- R workspaces (hosted on Zenodo — see data/README.md) ---
+# --- Large workspaces/checkpoints (distributed separately) ---
 *.RData
 *.Rdata
 *.rda
@@ -51,3 +51,20 @@ __pycache__/
 # --- Local-only notes (don't commit ad-hoc TODOs) ---
 to_fix.txt
 NOTES.local.md
+
+# Full current checkpoints and release bundles are distributed separately.
+/checkpoints/
+/release_staging/
+/release_archives/
+/config/project.local.json
+/.validation-work/
+/.venv/
+
+# Local scheduler logs are summarized by the checked-in validation receipts.
+validation/*_job_*.log
+validation/*_recount_*.out
+validation/*_recount_*.err
+validation/*_flexparity_*.out
+validation/*_flexparity_*.err
+validation/*_[0-9]*.out
+validation/*_[0-9]*.err

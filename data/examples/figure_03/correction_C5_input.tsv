@@ -1,0 +1,4 @@
+tool	target_barcode	target_consensus_label	assignment_records	unique_read_target_assignments_O	native_exact	all_corrected	missed_cellranger_to_selected	cellranger_to_different_cellranger_K	consensus_same_line_different_cell	consensus_cross_line_X	consensus_label_incomplete	catalog_noncell_to_selected_A	noncatalog_to_selected	raw_source_unavailable	K_over_O	X_over_O	K_plus_A_over_O	X_excess_over_guarded	K_excess_over_guarded	K_plus_A_excess_over_guarded
+RAD	GTATTGGAGACGATAT	UNLABELED	12148	12060	11062	1017	0	0	0	0	0	0	1017	0	0	0	0	0	0	0
+BLAZE	GTATTGGAGACGATAT	UNLABELED	13809	13809	10714	3095	1861	1861	0	0	1861	231	1003	0	0.134767180824	0	0.15149540155	0	0.155758285906	0.178543995903
+Flexiplex	GTATTGGAGACGATAT	UNLABELED	12988	12899	11578	1341	0	0	0	0	0	236	1105	0	0	0	0.0182959919374	0	0	0.0186369738609

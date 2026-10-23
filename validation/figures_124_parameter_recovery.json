@@ -1,0 +1,14 @@
+{
+  "figure_counts": {
+    "01": 112,
+    "02": 114,
+    "04": 111
+  },
+  "no_global_version_imputation": true,
+  "producing_runs": 337,
+  "source_master": {
+    "path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/master_native_comparison_20260811/tables/master_native_comparison_long.tsv",
+    "sha256": "56d5ce4508c6b6905b97d1037ec60f9573d0d9aa00bff3fe3348f1cf3fa5ecd0"
+  },
+  "status": "recorded with explicit unresolved identities"
+}

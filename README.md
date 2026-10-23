@@ -1,147 +1,81 @@
-# RAD Manuscript — Figure Generation Repository
+# RAD manuscript: from data to figures
 
-## Current revision: HPC handoff
+This repository explains the selected analyses for **Figures 1–7** of the RAD
+manuscript. Open a figure below to see **the exact RAD, BLAZE and Flexiplex
+versions and parameters first**, then inspect the input records, follow each
+transformation, and compare its output with the figure.
 
-The 23 October 2026 revision audit and 36-task regeneration plan are in **[hpc_handoff_20261023](hpc_handoff_20261023/README.md)**. The HPC agent should begin with **[AGENT_START_HERE.md](hpc_handoff_20261023/AGENT_START_HERE.md)**. This includes source and code snapshots, checkpoint requirements, validation criteria, author decisions and recovery requests for current Figures 1–7.
+| Figure | Start here | What the walkthrough follows |
+|---|---|---|
+| 1 | [Workflow, computational efficiency and Visium HD](docs/figure_01.md) | Executed commands and resource logs → phase timings → summaries; spatial count lineage |
+| 2 | [ScTagger synthetic benchmark](docs/figure_02.md) | Read sequence/truth and quality models → selected barcodes → assignment categories |
+| 3 | [Off-list assignments and measured correction modes](docs/figure_03.md) | Supplied lists and assignment records → physical-read ledger or read–target pairs → per-target metrics |
+| 4 | [All 37 benchmark inputs](docs/figure_04.md) | Each tool's selected list and the matched reference → TP/FP/FN → paired input-level metrics |
+| 5 | [Receptor and LR-Split-seq analyses](docs/figure_05.md) | Selected assignment ledgers → 568 paired cells → read/UMI counts; receptor and depth-matched UMI source gaps remain explicit |
+| 6 | [Genotype comparison](docs/figure_06.md) | Alignment/CellSNP/VCF records → per-cell genotype states → recall and fixed-coordinate overlays |
+| 7 | [Expression comparison](docs/figure_07.md) | Sparse molecule matrices and cohorts → common 8,135-gene statistics → directional recovery and threshold grids |
 
-The figure layout and run instructions below describe the older manuscript baseline. Consult the handoff before running them; the current revision has additional workflows and unresolved provenance/statistical items.
+**Figure 7 contains A–D.** Panel E was removed by the author. The current build
+has no Figure 8. Superseded analysis outputs and old figure releases are not part
+of this working tree.
 
-Code and analysis to regenerate every figure in the RAD manuscript:
+## Inspect the data without running anything
 
-> **RAD: A Read-structure Agnostic Demultiplexer Long-Read Sequencing.**
+Each walkthrough includes a small, explicitly labeled excerpt of the actual
+input, a column dictionary, and linked intermediate/output tables. Excerpt
+manifests give the source hash and the selection rule; examples are not presented
+as full datasets. PNG proofs render directly on GitHub, with editable SVG/PDF
+exports alongside them.
 
-The RAD tool itself lives at **[github.com/indianewok/rad](https://github.com/indianewok/rad)**. This repo is the analysis layer: shell harnesses that drive `rad demux` over the manuscript datasets, R Markdown notebooks that consume the demultiplexed output, and the helper scripts used to produce each panel.
+- [Dataset identities, accessions and access status](manifests/datasets.tsv):
+  37 Figure 4 inputs plus Visium HD and LR-Split-seq.
+- [Data guide](data/README.md): formats, identifiers, missing values and how to
+  move from a readable excerpt to its full source.
+- [Small data examples](data/examples/): bounded records used in the walkthroughs.
+- [Complete public Figure 4 inputs](data/figure_04/README.md): all 87 tool/reference
+  comparisons for the 29 public inputs can be rescored from the deposited lists.
+- [Complete plotting tables](source_data/): the values used by the scripted proofs.
+- [File hashes and table columns](manifests/data_files.tsv): byte identity and schema index.
+- [Current validation and unresolved dependencies](docs/validation.md): which
+  steps were rerun, resumed or only inspected.
 
----
+## Versions and parameters belong to the producing run
 
-## Repository layout
+The figure walkthroughs specify versions **per experiment**, not one global
+version for the whole paper. This matters: Figure 6 genotype alignments and
+Figure 7 expression counts use different RAD and alignment producers. A version
+string without its source/patch and command is insufficient. Unrecovered settings
+are labeled explicitly.
 
-```
-.
-├── README.md             ← this file (setup + usage)
-├── LICENSE
-├── CITATION.cff
-│
-├── scripts/              ← shell drivers — run_all_figures.sh + run_figure_{2..5}.sh
-├── figures/              ← per-figure analysis (Rmd + helpers + reference PDF/PNG)
-│   ├── figure_2/         ← Figure 2: ScTagger synthetic benchmark
-│   ├── figure_3/         ← Figure 3: RAGEseq real-data benchmark
-│   ├── figure_4/         ← Figure 4: multi-platform efficiency
-│   └── figure_5/         ← Figure 5: isotype-resolved B-cell clonotypes
-├── data/                 ← Zenodo DOI + SHA-256 checksums for the .RData workspaces
-└── misc/                 ← manuscript color palette + every rad demux command
-```
+The custom Flexiplex build is provided in
+[**vendor/flexiplex-audit/**](vendor/flexiplex-audit/README.md), with the upstream
+commit, exact patch, pre-correction `RawCellBarcode` table schema, source and
+binary hashes, build instructions, licenses and a working equivalence test.
 
-Each `figures/figure_N/` directory has its own `README.md` with the panel breakdown, an inline PNG render of the published figure, and a high-res PDF.
+## Follow one step at a time
 
----
+Start with the short scripts linked in the chosen figure walkthrough. Each step
+names its input columns, transformation, output and checks. The examples are
+small enough to inspect before execution. Full checkpoint rebuild commands are
+provided separately; no single master runner is required to understand the work.
 
-## Setup
+[SETUP.md](SETUP.md) describes the environment and where full checkpoints belong.
+The scripts distinguish three levels: rendering from source tables, resuming
+from retained analysis records/matrices, and rerunning producers from raw reads.
+A successful render does not establish a raw rerun.
 
-### 1. External tools (pin these versions)
+## Scope and manuscript decisions
 
-| Tool | Version | Source |
-|------|---------|--------|
-| **RAD** | commit `2a37ac9` (2026-03-13) for the published benchmark; current head `a8cea3a` for new runs | [github.com/indianewok/rad](https://github.com/indianewok/rad) — `git clone`, `cd build && cmake .. && cmake --build .` |
-| **BLAZE** | `v0.10.1` (used for the published benchmark) | [pypi.org/project/blaze](https://pypi.org/project/blaze/0.10.1/) — `pip install blaze==0.10.1` |
-| **Flexiplex** | `v1.02.5` | [github.com/DavidsonGroup/flexiplex](https://github.com/DavidsonGroup/flexiplex) |
-| **seqkit** | `v2.8.2` | [bioinf.shenwei.me/seqkit](https://bioinf.shenwei.me/seqkit/download/) — `brew install seqkit` |
-| **csvtk** | `v0.31.0` | [bioinf.shenwei.me/csvtk](https://bioinf.shenwei.me/csvtk/download/) — `brew install csvtk` |
-| **pigz** | `2.8` | [zlib.net/pigz](https://zlib.net/pigz/) — `brew install pigz` |
-| **minimap2** | `2.30-r1287` (Figure 5 chr14 depth only) | [github.com/lh3/minimap2](https://github.com/lh3/minimap2) — `brew install minimap2` |
-| **IgBLAST** | NCBI 1.22+ (Figure 5 clonotyping only) | [ncbi.nlm.nih.gov/igblast](https://ncbi.nlm.nih.gov/igblast/) |
-| **R** | `4.5.2` | [cran.r-project.org](https://cran.r-project.org/) |
+Existing statistical choices and annotations are preserved at the author's
+request. Source-verification plots are labeled as such and are not substitutes
+for native statistical recalculation. The selected scientific definitions,
+current author decisions, and remaining evidence gaps are recorded in
+[docs/decisions.md](docs/decisions.md).
 
-### 2. R packages
+Evidence-linked manuscript drafts cover [Figures 1, 2 and 4](docs/manuscript_figures_124.md),
+[Figure 3](docs/manuscript_figure_03.md), [Figures 5–7](docs/manuscript_figures_567.md)
+and the [current legends](docs/current_figure_legends.md).
 
-Versions used for the published renders:
-
-```r
-install.packages(c(
-  "data.table",  # 1.18.2.1
-  "dplyr",       # 1.2.0
-  "ggplot2",     # 4.0.2
-  "ggpubr",      # 0.6.2
-  "magrittr",    # 2.0.4
-  "magick",      # 2.9.0
-  "jsonlite",    # 2.0.0
-  "readr",       # 2.1.6
-  "pheatmap",    # 1.0.13
-  "rmarkdown",   # 2.30
-  "knitr",       # 1.51
-  "Seurat"       # 5.4.0
-))
-# rad R package (Rcpp wrapper around the RAD binary):
-remotes::install_github("indianewok/rad_dev")
-```
-
-### 3. Configure paths via environment variables
-
-The figure scripts read every path from the environment — no config file to edit. See **[SETUP.md](SETUP.md)** for the full block to paste into your shell; at minimum set the four required paths (`RAD_BIN`, `RAW_FQ`, `RESULTS_BASE`, `WL_DIR`). Scripts fail fast and tell you exactly which variable is missing.
-
-### 4. Data
-
-The `.RData` workspaces (5.8 GB total) are on Zenodo, reserved DOI **[10.5281/zenodo.20189813](https://doi.org/10.5281/zenodo.20189813)** (private draft until manuscript acceptance). Download paths + SHA-256 checksums are in [`data/README.md`](data/README.md). Place each `figure_N_workspace.RData` inside its matching `figures/figure_N/` directory.
-
-Raw FASTQs are not redistributed here; their accessions are documented in [`misc/rad_demux_commands.md`](misc/rad_demux_commands.md).
-
----
-
-## Usage
-
-Two modes, both invoked from the repo root after exporting the env vars above.
-
-### Re-render only (uses cached workspaces)
-
-```bash
-./scripts/run_all_figures.sh analysis
-```
-
-Renders `figures/figure_N/figure_N_analysis.html` for every figure using the cached `.RData` workspaces. Doesn't require the raw FASTQs or `RAD_BIN`.
-
-### Full re-run (raw FASTQs → demux → render)
-
-```bash
-./scripts/run_all_figures.sh
-```
-
-Or per-figure:
-
-```bash
-./scripts/run_figure_2.sh                # full
-./scripts/run_figure_3.sh analysis       # render only
-./scripts/run_figure_4.sh full true      # full, skip scmix timing runs
-./scripts/run_figure_5.sh igblast        # rerun IgBLAST clonotyping then render
-```
-
-See [`scripts/README.md`](scripts/README.md) for the full per-script flag reference.
-
----
-
-## Datasets used per figure
-
-| Figure | Datasets | Reference |
-|--------|----------|-----------|
-| **2** | ScTagger long-read simulations (S, M, L; 100K/250K/500K downsampled) | Ebrahimi *et al.* (ScTagger) |
-| **3** | RAGEseq (real BCR/TCR mix) + off-list false-positive controls | Singh *et al.* |
-| **4** | scMixology2, Split-seq (C2C12, LR-Splitpipe), NBC BCR, 10X Visium HD mouse brain (panels 4I-4K, overview triptych) | Tian *et al.*; Rebboah *et al.*; 10X public dataset |
-| **5** | NBC BCR + Engblom *et al.* Visium tonsil spatial (panels 5C + 5E) | Engblom *et al.* |
-
-Full provenance — every `rad demux` invocation, every whitelist used — is in [`misc/rad_demux_commands.md`](misc/rad_demux_commands.md).
-
----
-
-## Versioning
-
-- **Manuscript:** v9 (pre-submission)
-- **RAD binary:** see release notes at [github.com/indianewok/rad/releases](https://github.com/indianewok/rad/releases)
-- **Figures:** v7
-
-## License
-
-MIT. See [LICENSE](LICENSE).
-
-## Contact
-
-Chinmay M. Vaidya — `chinmay.m.vaidya.gr@dartmouth.edu`
-Geisel School of Medicine at Dartmouth
+The RAD implementation is at [indianewok/rad](https://github.com/indianewok/rad).
+This repository contains the manuscript analysis and its readable data trail.
+The versioned public data package will be linked here after release approval.

@@ -1,0 +1,23 @@
+	Command being timed: "/usr/local/bin/Rscript /Users/cmv/Desktop/rad/benchmarks/lr_splitseq_no_polyt/run_component_no_polyt.R /Volumes/CMV_SSD_2/benchmarks/flamesv2_splitseq_20260728/FLAMES /Volumes/CMV_SSD_2/raw_fqs/splitseq.fq.gz /Volumes/CMV_SSD_2/benchmarks/flamesv2_splitseq_20260728/component_polyt_paired_t4 4 /Volumes/CMV_SSD_2/benchmarks/flamesv2_splitseq_20260728/inputs/local_whitelists/bc_8nt_v1.csv /Volumes/CMV_SSD_2/benchmarks/flamesv2_splitseq_20260728/inputs/local_whitelists/bc_8nt_v2.csv include"
+	User time (seconds): 422.93
+	System time (seconds): 3.35
+	Percent of CPU this job got: 429%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:39.31
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 218624
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 33
+	Minor (reclaiming a frame) page faults: 143589
+	Voluntary context switches: 199
+	Involuntary context switches: 296157
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 16384
+	Exit status: 0

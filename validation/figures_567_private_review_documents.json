@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "documents": [
+    {
+      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/rad_manuscript_recovery_20261023/current_revision/Current_Figure_Legends_20261023.docx",
+      "bytes": 5403,
+      "sha256": "2a887a9d491369ead903e8267a44eda102f1110716c5b637ec9f51bebb40ac36",
+      "images": 0,
+      "drawings": 0,
+      "fig8_and_7e_absent": true
+    },
+    {
+      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/rad_manuscript_recovery_20261023/current_revision/Methods_current.docx",
+      "bytes": 13739,
+      "sha256": "d11c07f092494767aa9d0113bcc29ff319215e381fa720e7da8740df23fcb9e2",
+      "images": 0,
+      "drawings": 0,
+      "fig8_and_7e_absent": true
+    }
+  ],
+  "originals_modified": false,
+  "methods_algorithm_paragraphs_60_to_78_exact": true,
+  "methods_statistical_paragraph_121_exact": true,
+  "legend_F2_F3_F5_F6_F4_statements_retained": true,
+  "limitation": "text-only author-review drafts; no final artwork or native Word rendering QA; final matched RAGE Methods insertion pending",
+  "Methods_C2_source_hold_updated": true
+}

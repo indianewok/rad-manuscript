@@ -1,0 +1,2622 @@
+{
+  "aggregate_only_rows": 24,
+  "checks": [
+    {
+      "callset": {
+        "content_sha256": "d474f2519ac91167a07f4c5deea165f135c8e2be8c0b71b102392bd9fc0e308f",
+        "identifiers": 53,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260731_sctagger_badread_quality_full/runs/rad/S/flatQ20/output/scanwl.txt",
+        "original_source_sha256": "bd57457b4e60089bd0ea63b4b61d6a6e164abf9b58774c227649267eab12b4c1",
+        "path": "data/figure_04/identifier_sets/ScTagger-S_flatQ20.RAD.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "bc36bbebe30cccaae2059cc5f46f7384a67a01a4fb9f7624162e4f9c45353b74"
+      },
+      "canonical_id": "ScTagger-S_flatQ20",
+      "counts": {
+        "calls": 53,
+        "fn": 0,
+        "fp": 3,
+        "reference_n": 50,
+        "tp": 50
+      },
+      "reference": {
+        "content_sha256": "2c3f78089eb43144120f80b89d2e51ce0fc95244b7110c56fbef48e03f1bc8eb",
+        "identifiers": 50,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260731_sctagger_badread_quality_full/truth/S_barcodes.txt",
+        "original_source_sha256": "2c3f78089eb43144120f80b89d2e51ce0fc95244b7110c56fbef48e03f1bc8eb",
+        "path": "data/figure_04/identifier_sets/ScTagger-S_flatQ20.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "4559dfdb77ddfae47c46e33a6cd287caf15409460dcc86a3b0fc55d9dcaa3f29"
+      },
+      "status": "passed",
+      "tool": "RAD"
+    },
+    {
+      "callset": {
+        "content_sha256": "fbecc8ea9f204d10acb90bb88ca521e6a356a0e79cf0b3c8bcdaa5039df99ec6",
+        "identifiers": 56,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260731_sctagger_badread_quality_full/runs/blaze/S/flatQ20/output/whitelist.csv",
+        "original_source_sha256": "d6d84520d0129232bb75c6af387deecf813fd29d29eeba08ffb9ea9c4e9214bf",
+        "path": "data/figure_04/identifier_sets/ScTagger-S_flatQ20.BLAZE.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "3a2d5910b191fd2ab80558dbbc92450239579cc299df4336d9467f677f00cf78"
+      },
+      "canonical_id": "ScTagger-S_flatQ20",
+      "counts": {
+        "calls": 56,
+        "fn": 0,
+        "fp": 6,
+        "reference_n": 50,
+        "tp": 50
+      },
+      "reference": {
+        "content_sha256": "2c3f78089eb43144120f80b89d2e51ce0fc95244b7110c56fbef48e03f1bc8eb",
+        "identifiers": 50,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260731_sctagger_badread_quality_full/truth/S_barcodes.txt",
+        "original_source_sha256": "2c3f78089eb43144120f80b89d2e51ce0fc95244b7110c56fbef48e03f1bc8eb",
+        "path": "data/figure_04/identifier_sets/ScTagger-S_flatQ20.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "4559dfdb77ddfae47c46e33a6cd287caf15409460dcc86a3b0fc55d9dcaa3f29"
+      },
+      "status": "passed",
+      "tool": "BLAZE"
+    },
+    {
+      "callset": {
+        "content_sha256": "2c3f78089eb43144120f80b89d2e51ce0fc95244b7110c56fbef48e03f1bc8eb",
+        "identifiers": 50,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260731_sctagger_badread_quality_full/runs/flexiplex/S/flatQ20/output/S_flatQ20_barcodes_final.txt",
+        "original_source_sha256": "cdb75887a44bd681d7820e0201bf226d9dc4cd5c0624c3c77780576c4809c603",
+        "path": "data/figure_04/identifier_sets/ScTagger-S_flatQ20.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "4559dfdb77ddfae47c46e33a6cd287caf15409460dcc86a3b0fc55d9dcaa3f29"
+      },
+      "canonical_id": "ScTagger-S_flatQ20",
+      "counts": {
+        "calls": 50,
+        "fn": 0,
+        "fp": 0,
+        "reference_n": 50,
+        "tp": 50
+      },
+      "reference": {
+        "content_sha256": "2c3f78089eb43144120f80b89d2e51ce0fc95244b7110c56fbef48e03f1bc8eb",
+        "identifiers": 50,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260731_sctagger_badread_quality_full/truth/S_barcodes.txt",
+        "original_source_sha256": "2c3f78089eb43144120f80b89d2e51ce0fc95244b7110c56fbef48e03f1bc8eb",
+        "path": "data/figure_04/identifier_sets/ScTagger-S_flatQ20.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "4559dfdb77ddfae47c46e33a6cd287caf15409460dcc86a3b0fc55d9dcaa3f29"
+      },
+      "status": "passed",
+      "tool": "Flexiplex"
+    },
+    {
+      "callset": {
+        "content_sha256": "2418b849f88ce6f28cf8c702acab795e4b483f6b2da17953675fce96b405899e",
+        "identifiers": 5000,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260731_sctagger_badread_quality_full/runs/rad/L/flatQ20/output/scanwl.txt",
+        "original_source_sha256": "8d1b3e389312672e79752f98898792e2005fcbb04918b5daddbcf7d359de0d0b",
+        "path": "data/figure_04/identifier_sets/ScTagger-L_flatQ20.RAD.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "bca6f83ffd0316fb6127d25d7003136a82148a573b3c9d7f1778a2bac4911f1b"
+      },
+      "canonical_id": "ScTagger-L_flatQ20",
+      "counts": {
+        "calls": 5000,
+        "fn": 0,
+        "fp": 0,
+        "reference_n": 5000,
+        "tp": 5000
+      },
+      "reference": {
+        "content_sha256": "2418b849f88ce6f28cf8c702acab795e4b483f6b2da17953675fce96b405899e",
+        "identifiers": 5000,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260731_sctagger_badread_quality_full/truth/L_barcodes.txt",
+        "original_source_sha256": "2418b849f88ce6f28cf8c702acab795e4b483f6b2da17953675fce96b405899e",
+        "path": "data/figure_04/identifier_sets/ScTagger-L_flatQ20.RAD.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "bca6f83ffd0316fb6127d25d7003136a82148a573b3c9d7f1778a2bac4911f1b"
+      },
+      "status": "passed",
+      "tool": "RAD"
+    },
+    {
+      "callset": {
+        "content_sha256": "32dcc2af31c6fcbb7d91e627636dd0330cea525a68fc632637b5d20622dd24f6",
+        "identifiers": 5607,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260731_sctagger_badread_quality_full/runs/blaze/L/flatQ20/output/whitelist.csv",
+        "original_source_sha256": "c94660afc4ae0550310b6ab68c6d0fc60325a1a85be0a1f4b145cc2bc2e9bcfe",
+        "path": "data/figure_04/identifier_sets/ScTagger-L_flatQ20.BLAZE.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "f3b1d4a2c57de812f16ba3c634a3e7d669044ac97ddb0217665bf95240f820cb"
+      },
+      "canonical_id": "ScTagger-L_flatQ20",
+      "counts": {
+        "calls": 5607,
+        "fn": 0,
+        "fp": 607,
+        "reference_n": 5000,
+        "tp": 5000
+      },
+      "reference": {
+        "content_sha256": "2418b849f88ce6f28cf8c702acab795e4b483f6b2da17953675fce96b405899e",
+        "identifiers": 5000,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260731_sctagger_badread_quality_full/truth/L_barcodes.txt",
+        "original_source_sha256": "2418b849f88ce6f28cf8c702acab795e4b483f6b2da17953675fce96b405899e",
+        "path": "data/figure_04/identifier_sets/ScTagger-L_flatQ20.RAD.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "bca6f83ffd0316fb6127d25d7003136a82148a573b3c9d7f1778a2bac4911f1b"
+      },
+      "status": "passed",
+      "tool": "BLAZE"
+    },
+    {
+      "callset": {
+        "content_sha256": "c0423c9e7f5a721c2bdaa0da8607eb772dfa93e508825dc6d3984294a6843718",
+        "identifiers": 3004,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260731_sctagger_badread_quality_full/runs/flexiplex/L/flatQ20/output/L_flatQ20_barcodes_final.txt",
+        "original_source_sha256": "8577c1e0371f182f39ff87b7baad2ee1e9802b27060110807dcc1437e5d60b98",
+        "path": "data/figure_04/identifier_sets/ScTagger-L_flatQ20.Flexiplex.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "1e828103118e68716e96595649710977d26377183692e1ddad10762e178e8c45"
+      },
+      "canonical_id": "ScTagger-L_flatQ20",
+      "counts": {
+        "calls": 3004,
+        "fn": 1996,
+        "fp": 0,
+        "reference_n": 5000,
+        "tp": 3004
+      },
+      "reference": {
+        "content_sha256": "2418b849f88ce6f28cf8c702acab795e4b483f6b2da17953675fce96b405899e",
+        "identifiers": 5000,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260731_sctagger_badread_quality_full/truth/L_barcodes.txt",
+        "original_source_sha256": "2418b849f88ce6f28cf8c702acab795e4b483f6b2da17953675fce96b405899e",
+        "path": "data/figure_04/identifier_sets/ScTagger-L_flatQ20.RAD.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "bca6f83ffd0316fb6127d25d7003136a82148a573b3c9d7f1778a2bac4911f1b"
+      },
+      "status": "passed",
+      "tool": "Flexiplex"
+    },
+    {
+      "callset": {
+        "content_sha256": "bdbe8c76b027bff0d805fef3a5c29a8ecbe0b6006cba980dbe976109c8efb1a6",
+        "identifiers": 940,
+        "original_source": "/scratch/f005f43/measles_p7_p8_four_tool_20260730/input_links/p7_rad_scanwl.txt",
+        "original_source_sha256": "cf9bdc35523580b1d2fc978daee0dd3905fd9d25b08dfefa4ea425c4bc22b101",
+        "path": "data/figure_04/identifier_sets/Measles-P7.RAD.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "02e14d89444d135ffcda798354c168b5589895336409faf93533c208c64586d9"
+      },
+      "canonical_id": "Measles-P7",
+      "counts": {
+        "calls": 940,
+        "fn": 48,
+        "fp": 24,
+        "reference_n": 964,
+        "tp": 916
+      },
+      "reference": {
+        "content_sha256": "a88779c92cc35d142dc7d805a005c964248cb4b8fe3d100626acadec6a943b37",
+        "identifiers": 964,
+        "original_source": "/scratch/f005f43/measles_p7_p8_four_tool_20260730/input_links/p7_shortread_cells.txt",
+        "original_source_sha256": "a88779c92cc35d142dc7d805a005c964248cb4b8fe3d100626acadec6a943b37",
+        "path": "data/figure_04/identifier_sets/Measles-P7.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "60bf6564c479d670541e9b2d711796159a67af3b937788ac59f095c8c6e30a61"
+      },
+      "status": "passed",
+      "tool": "RAD"
+    },
+    {
+      "callset": {
+        "content_sha256": "d2060c685c2a57f61a647a65d3d8a6ae38b4778f73d8d5dfb9ab627021d1e939",
+        "identifiers": 846,
+        "original_source": "/scratch/f005f43/measles_p7_p8_four_tool_20260730/runs/p7/blaze/whitelist.csv",
+        "original_source_sha256": "53ba9a11784e6a640a7eefdc37da3026a124981939a5250663fad0adff214000",
+        "path": "data/figure_04/identifier_sets/Measles-P7.BLAZE.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "b0f980b68032ff63ac7b88f6f116ebca1ef891fd044932366686e3fd91f5c75e"
+      },
+      "canonical_id": "Measles-P7",
+      "counts": {
+        "calls": 846,
+        "fn": 120,
+        "fp": 2,
+        "reference_n": 964,
+        "tp": 844
+      },
+      "reference": {
+        "content_sha256": "a88779c92cc35d142dc7d805a005c964248cb4b8fe3d100626acadec6a943b37",
+        "identifiers": 964,
+        "original_source": "/scratch/f005f43/measles_p7_p8_four_tool_20260730/input_links/p7_shortread_cells.txt",
+        "original_source_sha256": "a88779c92cc35d142dc7d805a005c964248cb4b8fe3d100626acadec6a943b37",
+        "path": "data/figure_04/identifier_sets/Measles-P7.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "60bf6564c479d670541e9b2d711796159a67af3b937788ac59f095c8c6e30a61"
+      },
+      "status": "passed",
+      "tool": "BLAZE"
+    },
+    {
+      "callset": {
+        "content_sha256": "5199d4ab1c3013ef44dd1209250eb1b56b8494a917ebdc557e6dd42febaf7b12",
+        "identifiers": 817,
+        "original_source": "/scratch/f005f43/measles_p7_p8_four_tool_20260730/runs/p7/flexiplex/detection/selected.tsv",
+        "original_source_sha256": "1f6fdc8a9edef3f3fa844acfea88dd347303432528f4fba66cb9ffe14bff0fb2",
+        "path": "data/figure_04/identifier_sets/Measles-P7.Flexiplex.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "5d79894e658f78aca0be3aa9ec91f4f05176bb25e26d8bb0281c16eba3438395"
+      },
+      "canonical_id": "Measles-P7",
+      "counts": {
+        "calls": 817,
+        "fn": 148,
+        "fp": 1,
+        "reference_n": 964,
+        "tp": 816
+      },
+      "reference": {
+        "content_sha256": "a88779c92cc35d142dc7d805a005c964248cb4b8fe3d100626acadec6a943b37",
+        "identifiers": 964,
+        "original_source": "/scratch/f005f43/measles_p7_p8_four_tool_20260730/input_links/p7_shortread_cells.txt",
+        "original_source_sha256": "a88779c92cc35d142dc7d805a005c964248cb4b8fe3d100626acadec6a943b37",
+        "path": "data/figure_04/identifier_sets/Measles-P7.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "60bf6564c479d670541e9b2d711796159a67af3b937788ac59f095c8c6e30a61"
+      },
+      "status": "passed",
+      "tool": "Flexiplex"
+    },
+    {
+      "callset": {
+        "content_sha256": "80232ae3d903af29801a432ae956fe2bcf992a2388b5235aa8629840ca4a818a",
+        "identifiers": 9490,
+        "original_source": "/scratch/f005f43/measles_p7_p8_four_tool_20260730/input_links/p8_rad_scanwl.txt",
+        "original_source_sha256": "38ff8cdb588c0407b8fda6023d15fe9b48375147f664c7852b90d65a29908292",
+        "path": "data/figure_04/identifier_sets/Measles-P8-VDJ-enriched.RAD.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "a8ff887b6a0d8f473a1200942dba725a15a174864d5a0313d5fa8f1d68dce9ae"
+      },
+      "canonical_id": "Measles-P8-VDJ-enriched",
+      "counts": {
+        "calls": 9490,
+        "fn": 857,
+        "fp": 48,
+        "reference_n": 10299,
+        "tp": 9442
+      },
+      "reference": {
+        "content_sha256": "89fb0507741f155b077180758f1cd2356199584f8c7f2af47eea6abae5558c54",
+        "identifiers": 10299,
+        "original_source": "/scratch/f005f43/measles_p7_p8_four_tool_20260730/input_links/p8_shortread_cells.txt",
+        "original_source_sha256": "89fb0507741f155b077180758f1cd2356199584f8c7f2af47eea6abae5558c54",
+        "path": "data/figure_04/identifier_sets/Measles-P8-VDJ-enriched.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "8ff0d70fd2e341993c4275e346181804399b234efb0f0d31cffb1a30fbc4a60b"
+      },
+      "status": "passed",
+      "tool": "RAD"
+    },
+    {
+      "callset": {
+        "content_sha256": "3efdc6231ea0a16a5200b0cd19e526aae7160b15554b7be11c22e49ea9e8edfa",
+        "identifiers": 9531,
+        "original_source": "/scratch/f005f43/measles_p7_p8_four_tool_20260730/runs/p8/blaze/whitelist.csv",
+        "original_source_sha256": "b4bf0f6a58d7c4ed314dcb8084f2e4e0a7cfc2bdbc221949cbbbba4833de00d5",
+        "path": "data/figure_04/identifier_sets/Measles-P8-VDJ-enriched.BLAZE.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "335d99b686343b81114b9710a2b2e688608892d03fe0e1ca1388741fc792133e"
+      },
+      "canonical_id": "Measles-P8-VDJ-enriched",
+      "counts": {
+        "calls": 9531,
+        "fn": 803,
+        "fp": 35,
+        "reference_n": 10299,
+        "tp": 9496
+      },
+      "reference": {
+        "content_sha256": "89fb0507741f155b077180758f1cd2356199584f8c7f2af47eea6abae5558c54",
+        "identifiers": 10299,
+        "original_source": "/scratch/f005f43/measles_p7_p8_four_tool_20260730/input_links/p8_shortread_cells.txt",
+        "original_source_sha256": "89fb0507741f155b077180758f1cd2356199584f8c7f2af47eea6abae5558c54",
+        "path": "data/figure_04/identifier_sets/Measles-P8-VDJ-enriched.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "8ff0d70fd2e341993c4275e346181804399b234efb0f0d31cffb1a30fbc4a60b"
+      },
+      "status": "passed",
+      "tool": "BLAZE"
+    },
+    {
+      "callset": {
+        "content_sha256": "6e14e824f89bd89f3f8d249c5273b5e048509e10ed3a29af4be017b1721c0bd2",
+        "identifiers": 9452,
+        "original_source": "/scratch/f005f43/measles_p7_p8_four_tool_20260730/runs/p8/flexiplex/detection/selected.tsv",
+        "original_source_sha256": "84a93ad656b61e003a6e48b8aa45c2b62a70176880554100f3685c9de91cd2d6",
+        "path": "data/figure_04/identifier_sets/Measles-P8-VDJ-enriched.Flexiplex.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "b90ccc91a057f6cfa460b09588be0361dcc57aa543787a9bf99aa87aff3c6e14"
+      },
+      "canonical_id": "Measles-P8-VDJ-enriched",
+      "counts": {
+        "calls": 9452,
+        "fn": 895,
+        "fp": 48,
+        "reference_n": 10299,
+        "tp": 9404
+      },
+      "reference": {
+        "content_sha256": "89fb0507741f155b077180758f1cd2356199584f8c7f2af47eea6abae5558c54",
+        "identifiers": 10299,
+        "original_source": "/scratch/f005f43/measles_p7_p8_four_tool_20260730/input_links/p8_shortread_cells.txt",
+        "original_source_sha256": "89fb0507741f155b077180758f1cd2356199584f8c7f2af47eea6abae5558c54",
+        "path": "data/figure_04/identifier_sets/Measles-P8-VDJ-enriched.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "8ff0d70fd2e341993c4275e346181804399b234efb0f0d31cffb1a30fbc4a60b"
+      },
+      "status": "passed",
+      "tool": "Flexiplex"
+    },
+    {
+      "callset": {
+        "content_sha256": "88ae6a26d89a33d3b04d745ba0718bc7dd7a3da8984a36dd77b0dd8d5d3b5780",
+        "identifiers": 10100,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/measles_p8_whole_three_tool_20260801/runs/rad/scanwl/scanwl.txt",
+        "original_source_sha256": "117dbe1ae272d72c056a6425ee7dbf6f55d4d488b9829b5e379369108677a77b",
+        "path": "data/figure_04/identifier_sets/Measles-P8-WTA.RAD.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "c277558f3febc0c3aa21f498dbacd068bb12bea9fabf72c545ef07f75fac1ba9"
+      },
+      "canonical_id": "Measles-P8-WTA",
+      "counts": {
+        "calls": 10100,
+        "fn": 321,
+        "fp": 122,
+        "reference_n": 10299,
+        "tp": 9978
+      },
+      "reference": {
+        "content_sha256": "89fb0507741f155b077180758f1cd2356199584f8c7f2af47eea6abae5558c54",
+        "identifiers": 10299,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/barcode_whitelists/mmr_p8_sc_bcs.txt",
+        "original_source_sha256": "89fb0507741f155b077180758f1cd2356199584f8c7f2af47eea6abae5558c54",
+        "path": "data/figure_04/identifier_sets/Measles-P8-VDJ-enriched.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "8ff0d70fd2e341993c4275e346181804399b234efb0f0d31cffb1a30fbc4a60b"
+      },
+      "status": "passed",
+      "tool": "RAD"
+    },
+    {
+      "callset": {
+        "content_sha256": "1dde961385783715af90aaf83de2c7b419ac1ca6a756e06df923db6ae84bcca4",
+        "identifiers": 10640,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/measles_p8_whole_three_tool_20260801/runs/blaze/whitelist.csv",
+        "original_source_sha256": "79b126f95b9141616e1c4e81ab577826175bba1d6625d7c6ddd3dda07897d744",
+        "path": "data/figure_04/identifier_sets/Measles-P8-WTA.BLAZE.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "0d26a5be42644d720f90bb58ac9ffafbb10cbc14fd2cdc3a40d05c3a9355e6ed"
+      },
+      "canonical_id": "Measles-P8-WTA",
+      "counts": {
+        "calls": 10640,
+        "fn": 171,
+        "fp": 512,
+        "reference_n": 10299,
+        "tp": 10128
+      },
+      "reference": {
+        "content_sha256": "89fb0507741f155b077180758f1cd2356199584f8c7f2af47eea6abae5558c54",
+        "identifiers": 10299,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/barcode_whitelists/mmr_p8_sc_bcs.txt",
+        "original_source_sha256": "89fb0507741f155b077180758f1cd2356199584f8c7f2af47eea6abae5558c54",
+        "path": "data/figure_04/identifier_sets/Measles-P8-VDJ-enriched.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "8ff0d70fd2e341993c4275e346181804399b234efb0f0d31cffb1a30fbc4a60b"
+      },
+      "status": "passed",
+      "tool": "BLAZE"
+    },
+    {
+      "callset": {
+        "content_sha256": "2d8e5644a57522fc3c65369352d2452ee9af39befd0aa68e0fe04828fcfac85e",
+        "identifiers": 9553,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/measles_p8_whole_three_tool_20260801/runs/flexiplex/discovery/selected.tsv",
+        "original_source_sha256": "2061ac0a23c67b01a5a2576a487221e27c70d4bf64b8b4690780dae17f7ff6db",
+        "path": "data/figure_04/identifier_sets/Measles-P8-WTA.Flexiplex.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "aedb047cb022545d7ec5aa06a17a7e28984f9124378b9ba3c04ddfd02137ce39"
+      },
+      "canonical_id": "Measles-P8-WTA",
+      "counts": {
+        "calls": 9553,
+        "fn": 750,
+        "fp": 4,
+        "reference_n": 10299,
+        "tp": 9549
+      },
+      "reference": {
+        "content_sha256": "89fb0507741f155b077180758f1cd2356199584f8c7f2af47eea6abae5558c54",
+        "identifiers": 10299,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/barcode_whitelists/mmr_p8_sc_bcs.txt",
+        "original_source_sha256": "89fb0507741f155b077180758f1cd2356199584f8c7f2af47eea6abae5558c54",
+        "path": "data/figure_04/identifier_sets/Measles-P8-VDJ-enriched.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "8ff0d70fd2e341993c4275e346181804399b234efb0f0d31cffb1a30fbc4a60b"
+      },
+      "status": "passed",
+      "tool": "Flexiplex"
+    },
+    {
+      "callset": {
+        "content_sha256": "cc6d10aee61a3830804907a5aab5feef25f3d9b929d02372530573a03f431def",
+        "identifiers": 907,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260730_promethion_four_tool_benchmark/results/rad_scan_e01/promethion.txt",
+        "original_source_sha256": "4d2eb8dcd2a7f21f1712e89a2e8f5980fd135035b4f8d0e1e7d6e43c9e45a99d",
+        "path": "data/figure_04/identifier_sets/PromethION_iPSC.RAD.txt.gz",
+        "selection": "first token, terminal -1 removal; Reference = saved cellranger_filtered membership, 1022 identifiers",
+        "sha256": "5e5d4c115ca441868e60c8157488282660fea79e8bd56c974786c6c5cb5d93de"
+      },
+      "canonical_id": "PromethION_iPSC",
+      "counts": {
+        "calls": 907,
+        "fn": 174,
+        "fp": 59,
+        "reference_n": 1022,
+        "tp": 848
+      },
+      "reference": {
+        "content_sha256": "4599106cee0f2dcf33ae35584509c55c405ea1676f2387bfc5f1152884f3c7c5",
+        "identifiers": 1022,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260730_promethion_four_tool_benchmark/analysis/barcode_level_annotations.tsv",
+        "original_source_sha256": "d581f7747c854a7682b9918bf6bbada370582eb16c7f3b913002b8c406e27ec9",
+        "path": "data/figure_04/identifier_sets/PromethION_iPSC.reference.txt.gz",
+        "selection": "column barcode; Reference = saved cellranger_filtered membership, 1022 identifiers",
+        "sha256": "835f9f7b778d80374e2b0a589fc2226d46f2ab2cd184c0324b0bc3873504f1c3"
+      },
+      "status": "passed",
+      "tool": "RAD"
+    },
+    {
+      "callset": {
+        "content_sha256": "ff7d72db006a0195941e1a4780eefc8daa5351205d774b6076a91f37965abcae",
+        "identifiers": 804,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260730_promethion_four_tool_benchmark/results/blaze_expect500/whitelist.csv",
+        "original_source_sha256": "a6692206adb47414ac195f60f2960b759497482a6e537c88312d95450348beb1",
+        "path": "data/figure_04/identifier_sets/PromethION_iPSC.BLAZE.txt.gz",
+        "selection": "first token, terminal -1 removal; Reference = saved cellranger_filtered membership, 1022 identifiers",
+        "sha256": "fcfbf98890858f16e45517ee5b531ae3bd308c6915c566391f4ae8401a6a84f6"
+      },
+      "canonical_id": "PromethION_iPSC",
+      "counts": {
+        "calls": 804,
+        "fn": 223,
+        "fp": 5,
+        "reference_n": 1022,
+        "tp": 799
+      },
+      "reference": {
+        "content_sha256": "4599106cee0f2dcf33ae35584509c55c405ea1676f2387bfc5f1152884f3c7c5",
+        "identifiers": 1022,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260730_promethion_four_tool_benchmark/analysis/barcode_level_annotations.tsv",
+        "original_source_sha256": "d581f7747c854a7682b9918bf6bbada370582eb16c7f3b913002b8c406e27ec9",
+        "path": "data/figure_04/identifier_sets/PromethION_iPSC.reference.txt.gz",
+        "selection": "column barcode; Reference = saved cellranger_filtered membership, 1022 identifiers",
+        "sha256": "835f9f7b778d80374e2b0a589fc2226d46f2ab2cd184c0324b0bc3873504f1c3"
+      },
+      "status": "passed",
+      "tool": "BLAZE"
+    },
+    {
+      "callset": {
+        "content_sha256": "1c51f805cb24f7ddd20f948e7093702eb560470a0fa195a1600bd9120c80e970",
+        "identifiers": 801,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260730_promethion_four_tool_benchmark/results/flexiplex_f8/flexiplex_barcodes_final.txt",
+        "original_source_sha256": "bce493ed50c2914d7fb346cb3a23988d87459054f094f85b811d28682914e608",
+        "path": "data/figure_04/identifier_sets/PromethION_iPSC.Flexiplex.txt.gz",
+        "selection": "first token, terminal -1 removal; Reference = saved cellranger_filtered membership, 1022 identifiers",
+        "sha256": "9a26b1a8cf37a191b76740951d7c6234a83f83f3d3ceec4547469abbaf4ad4c7"
+      },
+      "canonical_id": "PromethION_iPSC",
+      "counts": {
+        "calls": 801,
+        "fn": 224,
+        "fp": 3,
+        "reference_n": 1022,
+        "tp": 798
+      },
+      "reference": {
+        "content_sha256": "4599106cee0f2dcf33ae35584509c55c405ea1676f2387bfc5f1152884f3c7c5",
+        "identifiers": 1022,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260730_promethion_four_tool_benchmark/analysis/barcode_level_annotations.tsv",
+        "original_source_sha256": "d581f7747c854a7682b9918bf6bbada370582eb16c7f3b913002b8c406e27ec9",
+        "path": "data/figure_04/identifier_sets/PromethION_iPSC.reference.txt.gz",
+        "selection": "column barcode; Reference = saved cellranger_filtered membership, 1022 identifiers",
+        "sha256": "835f9f7b778d80374e2b0a589fc2226d46f2ab2cd184c0324b0bc3873504f1c3"
+      },
+      "status": "passed",
+      "tool": "Flexiplex"
+    },
+    {
+      "callset": {
+        "content_sha256": "aee6ec7d0d42eb732b7c4a554283544bdee8fa511f43b2d04fe61914afc20885",
+        "identifiers": 3864,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260730_rageseq_ERR3268991_cellline_control/runs/rad/scan/rageseq.txt",
+        "original_source_sha256": "d24ad5a1aab704b33f618c41c82c5543c2a47880d801a6ca0056251430da609f",
+        "path": "data/figure_04/identifier_sets/RAGEseq-cell-line.RAD.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "91cf0e26c826227acac6b042a878093762aabe782cfe32caa6b3e3d8ca274951"
+      },
+      "canonical_id": "RAGEseq-cell-line",
+      "counts": {
+        "calls": 3864,
+        "fn": 651,
+        "fp": 10,
+        "reference_n": 4505,
+        "tp": 3854
+      },
+      "reference": {
+        "content_sha256": "93f7551ec70c57d5f9e6d8e77f4041d19c99acc9b771e16ce1acf26dfac5ba54",
+        "identifiers": 4505,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260730_rageseq_ERR3268991_cellline_control/input/cellranger_filtered_barcodes.txt",
+        "original_source_sha256": "93f7551ec70c57d5f9e6d8e77f4041d19c99acc9b771e16ce1acf26dfac5ba54",
+        "path": "data/figure_04/identifier_sets/RAGEseq-cell-line.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "f9d2b3f9be2e1aeb18438c577234f7eef710e486bf515389e171a6ce77847049"
+      },
+      "status": "passed",
+      "tool": "RAD"
+    },
+    {
+      "callset": {
+        "content_sha256": "ea67934e67112bd6cf9d50fd5df09dfb28d858372c81674ace6e615c2075b170",
+        "identifiers": 2955,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260730_rageseq_ERR3268991_cellline_control/runs/blaze/whitelist.csv",
+        "original_source_sha256": "768115e2b83d9e9eba09756514eb14c26051a1a9a06d227356d30fe24f65b75f",
+        "path": "data/figure_04/identifier_sets/RAGEseq-cell-line.BLAZE.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "570c39080b7a5b47d84f8f48813a80b2a48f1efd1afb66c7b38965e1bea839c5"
+      },
+      "canonical_id": "RAGEseq-cell-line",
+      "counts": {
+        "calls": 2955,
+        "fn": 1641,
+        "fp": 91,
+        "reference_n": 4505,
+        "tp": 2864
+      },
+      "reference": {
+        "content_sha256": "93f7551ec70c57d5f9e6d8e77f4041d19c99acc9b771e16ce1acf26dfac5ba54",
+        "identifiers": 4505,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260730_rageseq_ERR3268991_cellline_control/input/cellranger_filtered_barcodes.txt",
+        "original_source_sha256": "93f7551ec70c57d5f9e6d8e77f4041d19c99acc9b771e16ce1acf26dfac5ba54",
+        "path": "data/figure_04/identifier_sets/RAGEseq-cell-line.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "f9d2b3f9be2e1aeb18438c577234f7eef710e486bf515389e171a6ce77847049"
+      },
+      "status": "passed",
+      "tool": "BLAZE"
+    },
+    {
+      "callset": {
+        "content_sha256": "2870493ccef023c15bfd73cf6eb9ef71eba5b55b2cfe83403e28c9cb6c42d4a8",
+        "identifiers": 3259,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260730_rageseq_ERR3268991_cellline_control/runs/flexiplex/f8_detection/selected.tsv",
+        "original_source_sha256": "6efd9352872b06db447e540457757c3a5e50b00d654bfcd7c6e658e8786a41b9",
+        "path": "data/figure_04/identifier_sets/RAGEseq-cell-line.Flexiplex.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "40bf7802bc68bda55cc529181e842a488696aea3ae1b35e5e3e749f1c43bb6c4"
+      },
+      "canonical_id": "RAGEseq-cell-line",
+      "counts": {
+        "calls": 3259,
+        "fn": 1246,
+        "fp": 0,
+        "reference_n": 4505,
+        "tp": 3259
+      },
+      "reference": {
+        "content_sha256": "93f7551ec70c57d5f9e6d8e77f4041d19c99acc9b771e16ce1acf26dfac5ba54",
+        "identifiers": 4505,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260730_rageseq_ERR3268991_cellline_control/input/cellranger_filtered_barcodes.txt",
+        "original_source_sha256": "93f7551ec70c57d5f9e6d8e77f4041d19c99acc9b771e16ce1acf26dfac5ba54",
+        "path": "data/figure_04/identifier_sets/RAGEseq-cell-line.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "f9d2b3f9be2e1aeb18438c577234f7eef710e486bf515389e171a6ce77847049"
+      },
+      "status": "passed",
+      "tool": "Flexiplex"
+    },
+    {
+      "callset": {
+        "content_sha256": "30cceb07d5bdcfe23f3b2bca14e2b07330cce7b11f36292d7f00468d4866176e",
+        "identifiers": 5605,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260730_rageseq_ERR3268990_tnbc_lymphnode_four_tool/analysis/barcode_level_annotations.tsv",
+        "original_source_sha256": "aa01982ec5eefb365a4ad5a2fc7899b4d5ecaa24e2be0ef308df5530840f955c",
+        "path": "data/figure_04/identifier_sets/RAGEseq-TNBC-LN.RAD.txt.gz",
+        "selection": "column barcode; Call membership uses called_RAD; reference = deposited named T_cell/B_cell/T_B_doublet membership",
+        "sha256": "fe0681d58c2921fb3653e22fe0f2c5058bd7ccfaa727d47a89060dac075cd389"
+      },
+      "canonical_id": "RAGEseq-TNBC-LN",
+      "counts": {
+        "calls": 5605,
+        "fn": 488,
+        "fp": 115,
+        "reference_n": 5978,
+        "tp": 5490
+      },
+      "reference": {
+        "content_sha256": "6b858038b0807a61acce0ad66a9f920df42cf140582040d07fa0d9dc99595f70",
+        "identifiers": 5978,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260730_rageseq_ERR3268990_tnbc_lymphnode_four_tool/analysis/barcode_level_annotations.tsv",
+        "original_source_sha256": "aa01982ec5eefb365a4ad5a2fc7899b4d5ecaa24e2be0ef308df5530840f955c",
+        "path": "data/figure_04/identifier_sets/RAGEseq-TNBC-LN.reference.txt.gz",
+        "selection": "column barcode; Call membership uses called_RAD; reference = deposited named T_cell/B_cell/T_B_doublet membership",
+        "sha256": "95e4d81c69b55a673aeaea8955693ab27e6b8b53fc95a29355fc6f13fd4be898"
+      },
+      "status": "passed",
+      "tool": "RAD"
+    },
+    {
+      "callset": {
+        "content_sha256": "cecac3938f07adde6ee85e0f8a6b5860cfd8afad6cdf969c05c96e90f30884e3",
+        "identifiers": 4474,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260730_rageseq_ERR3268990_tnbc_lymphnode_four_tool/analysis/barcode_level_annotations.tsv",
+        "original_source_sha256": "aa01982ec5eefb365a4ad5a2fc7899b4d5ecaa24e2be0ef308df5530840f955c",
+        "path": "data/figure_04/identifier_sets/RAGEseq-TNBC-LN.BLAZE.txt.gz",
+        "selection": "column barcode; Call membership uses called_BLAZE_2.6.0a0_expect10433; reference = deposited named T_cell/B_cell/T_B_doublet membership",
+        "sha256": "ba701487754bced84df6fb9cf532601e3c54d8489070a6a413dd990be23a2256"
+      },
+      "canonical_id": "RAGEseq-TNBC-LN",
+      "counts": {
+        "calls": 4474,
+        "fn": 2070,
+        "fp": 566,
+        "reference_n": 5978,
+        "tp": 3908
+      },
+      "reference": {
+        "content_sha256": "6b858038b0807a61acce0ad66a9f920df42cf140582040d07fa0d9dc99595f70",
+        "identifiers": 5978,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260730_rageseq_ERR3268990_tnbc_lymphnode_four_tool/analysis/barcode_level_annotations.tsv",
+        "original_source_sha256": "aa01982ec5eefb365a4ad5a2fc7899b4d5ecaa24e2be0ef308df5530840f955c",
+        "path": "data/figure_04/identifier_sets/RAGEseq-TNBC-LN.reference.txt.gz",
+        "selection": "column barcode; Call membership uses called_BLAZE_2.6.0a0_expect10433; reference = deposited named T_cell/B_cell/T_B_doublet membership",
+        "sha256": "95e4d81c69b55a673aeaea8955693ab27e6b8b53fc95a29355fc6f13fd4be898"
+      },
+      "status": "passed",
+      "tool": "BLAZE"
+    },
+    {
+      "callset": {
+        "content_sha256": "328bd3e35f65fded1ff099d02df12270c1bedde5e7cd01ac5f7d55b1282cf68d",
+        "identifiers": 3707,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260730_rageseq_ERR3268990_tnbc_lymphnode_four_tool/analysis/barcode_level_annotations.tsv",
+        "original_source_sha256": "aa01982ec5eefb365a4ad5a2fc7899b4d5ecaa24e2be0ef308df5530840f955c",
+        "path": "data/figure_04/identifier_sets/RAGEseq-TNBC-LN.Flexiplex.txt.gz",
+        "selection": "column barcode; Call membership uses called_Flexiplex_f8; reference = deposited named T_cell/B_cell/T_B_doublet membership",
+        "sha256": "8532f034bdabc0b40202c2e71f3fd9047462f8373876f47f833a8765d2de4929"
+      },
+      "canonical_id": "RAGEseq-TNBC-LN",
+      "counts": {
+        "calls": 3707,
+        "fn": 2301,
+        "fp": 30,
+        "reference_n": 5978,
+        "tp": 3677
+      },
+      "reference": {
+        "content_sha256": "6b858038b0807a61acce0ad66a9f920df42cf140582040d07fa0d9dc99595f70",
+        "identifiers": 5978,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260730_rageseq_ERR3268990_tnbc_lymphnode_four_tool/analysis/barcode_level_annotations.tsv",
+        "original_source_sha256": "aa01982ec5eefb365a4ad5a2fc7899b4d5ecaa24e2be0ef308df5530840f955c",
+        "path": "data/figure_04/identifier_sets/RAGEseq-TNBC-LN.reference.txt.gz",
+        "selection": "column barcode; Call membership uses called_Flexiplex_f8; reference = deposited named T_cell/B_cell/T_B_doublet membership",
+        "sha256": "95e4d81c69b55a673aeaea8955693ab27e6b8b53fc95a29355fc6f13fd4be898"
+      },
+      "status": "passed",
+      "tool": "Flexiplex"
+    },
+    {
+      "callset": {
+        "content_sha256": "80f88089e535b7118a85ca408bcf10728180a54637465d5642cd0a6ec306e07b",
+        "identifiers": 5620,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/LongBench_comps/full_A_to_B_audit_20260731/provenance/selected_whitelists/rad/SC_ONT/SC_ONT_RAD.txt",
+        "original_source_sha256": "36d36f7c1a5d8877c0dc7f560142e706ac88a148064af4d89ef4dce2ee754b0c",
+        "path": "data/figure_04/identifier_sets/LongBench-SC-ONT.RAD.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "10bfb88cd368ae702ea0967626a8958f5f3c7f1d8f3dc87195b83def2235aaea"
+      },
+      "canonical_id": "LongBench-SC-ONT",
+      "counts": {
+        "calls": 5620,
+        "fn": 7,
+        "fp": 416,
+        "reference_n": 5211,
+        "tp": 5204
+      },
+      "reference": {
+        "content_sha256": "a91808ee31395ed98a9b7dbbce398d7a71776d7ec0e61a10e003979ca0339187",
+        "identifiers": 5211,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/LongBench_comps/full_A_to_B_audit_20260731/references/cellranger_filtered/ill_sc_barcodes.tsv.gz",
+        "original_source_sha256": "3492fa9dde1af8a2a6e3a687a0fdf26f66ca733f1e828660ea1b37adfdc32e11",
+        "path": "data/figure_04/identifier_sets/LongBench-SC-ONT.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "487437a2846e1e49d4434c8d237bee62574e5011f22de7446a808e04b1f48ca7"
+      },
+      "status": "passed",
+      "tool": "RAD"
+    },
+    {
+      "callset": {
+        "content_sha256": "b19ea9b335c7cec1232cc282a4ce081adfa28c5d9f07dceb1e87c4f360b8bdba",
+        "identifiers": 5023,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/LongBench_comps/full_A_to_B_audit_20260731/provenance/selected_whitelists/blaze/SC_ONT/whitelist.csv",
+        "original_source_sha256": "455c7c88f06f80198eb23993293c1a53bea6d95fb020400632eb30cd8bf86084",
+        "path": "data/figure_04/identifier_sets/LongBench-SC-ONT.BLAZE.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "819e58eaa3fee8c94becf25d28b4a5687c289eca3849fa73dd743b8928bded80"
+      },
+      "canonical_id": "LongBench-SC-ONT",
+      "counts": {
+        "calls": 5023,
+        "fn": 314,
+        "fp": 126,
+        "reference_n": 5211,
+        "tp": 4897
+      },
+      "reference": {
+        "content_sha256": "a91808ee31395ed98a9b7dbbce398d7a71776d7ec0e61a10e003979ca0339187",
+        "identifiers": 5211,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/LongBench_comps/full_A_to_B_audit_20260731/references/cellranger_filtered/ill_sc_barcodes.tsv.gz",
+        "original_source_sha256": "3492fa9dde1af8a2a6e3a687a0fdf26f66ca733f1e828660ea1b37adfdc32e11",
+        "path": "data/figure_04/identifier_sets/LongBench-SC-ONT.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "487437a2846e1e49d4434c8d237bee62574e5011f22de7446a808e04b1f48ca7"
+      },
+      "status": "passed",
+      "tool": "BLAZE"
+    },
+    {
+      "callset": {
+        "content_sha256": "74c934a536a8d323029d4c2a88ede029d6acc1ee24ea34caf247defeb928e8ff",
+        "identifiers": 5907,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/LongBench_comps/full_A_to_B_audit_20260731/provenance/selected_whitelists/flex_v1026/SC_ONT/SC_flexiplex_whitelist.txt",
+        "original_source_sha256": "74c934a536a8d323029d4c2a88ede029d6acc1ee24ea34caf247defeb928e8ff",
+        "path": "data/figure_04/identifier_sets/LongBench-SC-ONT.Flexiplex.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "2602cb69d3e7a28b56f3310630afa1571f6ca3b64a1c5d381874b6567c658abd"
+      },
+      "canonical_id": "LongBench-SC-ONT",
+      "counts": {
+        "calls": 5907,
+        "fn": 1,
+        "fp": 697,
+        "reference_n": 5211,
+        "tp": 5210
+      },
+      "reference": {
+        "content_sha256": "a91808ee31395ed98a9b7dbbce398d7a71776d7ec0e61a10e003979ca0339187",
+        "identifiers": 5211,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/LongBench_comps/full_A_to_B_audit_20260731/references/cellranger_filtered/ill_sc_barcodes.tsv.gz",
+        "original_source_sha256": "3492fa9dde1af8a2a6e3a687a0fdf26f66ca733f1e828660ea1b37adfdc32e11",
+        "path": "data/figure_04/identifier_sets/LongBench-SC-ONT.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "487437a2846e1e49d4434c8d237bee62574e5011f22de7446a808e04b1f48ca7"
+      },
+      "status": "passed",
+      "tool": "Flexiplex"
+    },
+    {
+      "callset": {
+        "content_sha256": "4977c3d8a98f7db3598f88a0560fdf7c6a465769e89c3e30744502636461d993",
+        "identifiers": 12423,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/LongBench_comps/full_A_to_B_audit_20260731/provenance/selected_whitelists/rad/SN_ONT/SN_ONT_RAD.txt",
+        "original_source_sha256": "e0b8711326b82aacabe1c99d0d6819c1ea23bfe1a98ae6692b2b16f2a5eae895",
+        "path": "data/figure_04/identifier_sets/LongBench-SN-ONT.RAD.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "578a9e4634ea8723e8cb84dfd8ad03d5be37691edee17ff24b92a42bd6ae6caa"
+      },
+      "canonical_id": "LongBench-SN-ONT",
+      "counts": {
+        "calls": 12423,
+        "fn": 191,
+        "fp": 602,
+        "reference_n": 12012,
+        "tp": 11821
+      },
+      "reference": {
+        "content_sha256": "fc0cd1bed64e1daa374237cfd03c95707ec6f2eacd7bc277b6ee9a0484e8eaa1",
+        "identifiers": 12012,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/LongBench_comps/full_A_to_B_audit_20260731/references/cellranger_filtered/ill_sn_barcodes.tsv.gz",
+        "original_source_sha256": "069b57c605a106d41dd8f00a93d4a2fdf1d3fd7eb9c44560ba0e62f3fb9a024e",
+        "path": "data/figure_04/identifier_sets/LongBench-SN-ONT.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "24b99c2f8c89c502d0230bb3ebf528ed8ab65910cd9b58cbdadbe187b2010f43"
+      },
+      "status": "passed",
+      "tool": "RAD"
+    },
+    {
+      "callset": {
+        "content_sha256": "bcb25727bd186ef235204031d8fddca7f18c4a01df89798a5cb0ee67b4c292ff",
+        "identifiers": 10001,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/LongBench_comps/full_A_to_B_audit_20260731/provenance/selected_whitelists/blaze/SN_ONT/whitelist.csv",
+        "original_source_sha256": "f989d8914663d5018f3f3e67d1583e8bafeba5a8b197da6a20dbdf29c241d807",
+        "path": "data/figure_04/identifier_sets/LongBench-SN-ONT.BLAZE.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "bc07761008630ac1002a53d42d5bc4be7b1b23a1b2192709ee53ca3ce3864ddf"
+      },
+      "canonical_id": "LongBench-SN-ONT",
+      "counts": {
+        "calls": 10001,
+        "fn": 2033,
+        "fp": 22,
+        "reference_n": 12012,
+        "tp": 9979
+      },
+      "reference": {
+        "content_sha256": "fc0cd1bed64e1daa374237cfd03c95707ec6f2eacd7bc277b6ee9a0484e8eaa1",
+        "identifiers": 12012,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/LongBench_comps/full_A_to_B_audit_20260731/references/cellranger_filtered/ill_sn_barcodes.tsv.gz",
+        "original_source_sha256": "069b57c605a106d41dd8f00a93d4a2fdf1d3fd7eb9c44560ba0e62f3fb9a024e",
+        "path": "data/figure_04/identifier_sets/LongBench-SN-ONT.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "24b99c2f8c89c502d0230bb3ebf528ed8ab65910cd9b58cbdadbe187b2010f43"
+      },
+      "status": "passed",
+      "tool": "BLAZE"
+    },
+    {
+      "callset": {
+        "content_sha256": "8d677717f97fc67446ff57760468c075ac99eb5cc623da9c473f6077f2a4b298",
+        "identifiers": 12101,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/LongBench_comps/full_A_to_B_audit_20260731/provenance/selected_whitelists/flex_v1026/SN_ONT/SN_flexiplex_whitelist.txt",
+        "original_source_sha256": "8d677717f97fc67446ff57760468c075ac99eb5cc623da9c473f6077f2a4b298",
+        "path": "data/figure_04/identifier_sets/LongBench-SN-ONT.Flexiplex.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "c293b3c4caafd47f43549d089b70cc7cb5649c8aabdda75f4786718bc1f1dc61"
+      },
+      "canonical_id": "LongBench-SN-ONT",
+      "counts": {
+        "calls": 12101,
+        "fn": 359,
+        "fp": 448,
+        "reference_n": 12012,
+        "tp": 11653
+      },
+      "reference": {
+        "content_sha256": "fc0cd1bed64e1daa374237cfd03c95707ec6f2eacd7bc277b6ee9a0484e8eaa1",
+        "identifiers": 12012,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/LongBench_comps/full_A_to_B_audit_20260731/references/cellranger_filtered/ill_sn_barcodes.tsv.gz",
+        "original_source_sha256": "069b57c605a106d41dd8f00a93d4a2fdf1d3fd7eb9c44560ba0e62f3fb9a024e",
+        "path": "data/figure_04/identifier_sets/LongBench-SN-ONT.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "24b99c2f8c89c502d0230bb3ebf528ed8ab65910cd9b58cbdadbe187b2010f43"
+      },
+      "status": "passed",
+      "tool": "Flexiplex"
+    },
+    {
+      "callset": {
+        "content_sha256": "2d7b14f3449a3501d68b5eaa8ead78b5b5344875f09c0037b8d59f967cc5d1e6",
+        "identifiers": 5516,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/LongBench_comps/full_A_to_B_audit_20260731/provenance/selected_whitelists/rad/SC_PB/SC_PB_RAD.txt",
+        "original_source_sha256": "38528a05583bcdadd80616f0023af745392f1616dba9e6f58fa30215ce47ced5",
+        "path": "data/figure_04/identifier_sets/LongBench-SC-PB.RAD.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "905f30e1909d04c2c4d9df9c8ebd0a0b068b1020a2555c42964a06db31a93336"
+      },
+      "canonical_id": "LongBench-SC-PB",
+      "counts": {
+        "calls": 5516,
+        "fn": 38,
+        "fp": 343,
+        "reference_n": 5211,
+        "tp": 5173
+      },
+      "reference": {
+        "content_sha256": "a91808ee31395ed98a9b7dbbce398d7a71776d7ec0e61a10e003979ca0339187",
+        "identifiers": 5211,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/LongBench_comps/full_A_to_B_audit_20260731/references/cellranger_filtered/ill_sc_barcodes.tsv.gz",
+        "original_source_sha256": "3492fa9dde1af8a2a6e3a687a0fdf26f66ca733f1e828660ea1b37adfdc32e11",
+        "path": "data/figure_04/identifier_sets/LongBench-SC-ONT.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "487437a2846e1e49d4434c8d237bee62574e5011f22de7446a808e04b1f48ca7"
+      },
+      "status": "passed",
+      "tool": "RAD"
+    },
+    {
+      "callset": {
+        "content_sha256": "128f3d40c5404fef883ba15d5d53f3b4ae8fc3e5ffeb71dd61acc2d4e621741b",
+        "identifiers": 5002,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/LongBench_comps/full_A_to_B_audit_20260731/provenance/selected_whitelists/blaze/SC_PB/whitelist.csv",
+        "original_source_sha256": "11ea3bd15df5057ccbce2061c39f098e2308ec1fbcdb47c632ef1134ac6d896d",
+        "path": "data/figure_04/identifier_sets/LongBench-SC-PB.BLAZE.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "e16d24d80794f202e6f881a9739ff71cfe81fce8e5025897e41e94ca75ae1791"
+      },
+      "canonical_id": "LongBench-SC-PB",
+      "counts": {
+        "calls": 5002,
+        "fn": 334,
+        "fp": 125,
+        "reference_n": 5211,
+        "tp": 4877
+      },
+      "reference": {
+        "content_sha256": "a91808ee31395ed98a9b7dbbce398d7a71776d7ec0e61a10e003979ca0339187",
+        "identifiers": 5211,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/LongBench_comps/full_A_to_B_audit_20260731/references/cellranger_filtered/ill_sc_barcodes.tsv.gz",
+        "original_source_sha256": "3492fa9dde1af8a2a6e3a687a0fdf26f66ca733f1e828660ea1b37adfdc32e11",
+        "path": "data/figure_04/identifier_sets/LongBench-SC-ONT.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "487437a2846e1e49d4434c8d237bee62574e5011f22de7446a808e04b1f48ca7"
+      },
+      "status": "passed",
+      "tool": "BLAZE"
+    },
+    {
+      "callset": {
+        "content_sha256": "82a0510b08360340cfb30799f8b11b82e3fd1fbb7f7b99190f384edba2fba199",
+        "identifiers": 5903,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/LongBench_comps/full_A_to_B_audit_20260731/provenance/selected_whitelists/flex_v1026/SC_PB/SC_PB_flexiplex_whitelist.txt",
+        "original_source_sha256": "82a0510b08360340cfb30799f8b11b82e3fd1fbb7f7b99190f384edba2fba199",
+        "path": "data/figure_04/identifier_sets/LongBench-SC-PB.Flexiplex.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "bbff8fe5f0e324820bc0e7976466e42d34698708791b0fc9f2899ddc991ac9f9"
+      },
+      "canonical_id": "LongBench-SC-PB",
+      "counts": {
+        "calls": 5903,
+        "fn": 1,
+        "fp": 693,
+        "reference_n": 5211,
+        "tp": 5210
+      },
+      "reference": {
+        "content_sha256": "a91808ee31395ed98a9b7dbbce398d7a71776d7ec0e61a10e003979ca0339187",
+        "identifiers": 5211,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/LongBench_comps/full_A_to_B_audit_20260731/references/cellranger_filtered/ill_sc_barcodes.tsv.gz",
+        "original_source_sha256": "3492fa9dde1af8a2a6e3a687a0fdf26f66ca733f1e828660ea1b37adfdc32e11",
+        "path": "data/figure_04/identifier_sets/LongBench-SC-ONT.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "487437a2846e1e49d4434c8d237bee62574e5011f22de7446a808e04b1f48ca7"
+      },
+      "status": "passed",
+      "tool": "Flexiplex"
+    },
+    {
+      "callset": {
+        "content_sha256": "4ab58162471ee8150112d70c9df2b83808bbf3cfbc1a046bf5d5f616c7e49ce5",
+        "identifiers": 13580,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/LongBench_comps/full_A_to_B_audit_20260731/provenance/selected_whitelists/rad/SN_PB/SN_PB_RAD.txt",
+        "original_source_sha256": "8ba75940a4465554c7e4fadeb112f7fb5f74d18b38090d27de9f2b18325eb415",
+        "path": "data/figure_04/identifier_sets/LongBench-SN-PB.RAD.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "b114e5f693f187e86b187b0e7a2a10cbc75e846b9cacdf4b4284efa23bdd0b37"
+      },
+      "canonical_id": "LongBench-SN-PB",
+      "counts": {
+        "calls": 13580,
+        "fn": 3,
+        "fp": 1571,
+        "reference_n": 12012,
+        "tp": 12009
+      },
+      "reference": {
+        "content_sha256": "fc0cd1bed64e1daa374237cfd03c95707ec6f2eacd7bc277b6ee9a0484e8eaa1",
+        "identifiers": 12012,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/LongBench_comps/full_A_to_B_audit_20260731/references/cellranger_filtered/ill_sn_barcodes.tsv.gz",
+        "original_source_sha256": "069b57c605a106d41dd8f00a93d4a2fdf1d3fd7eb9c44560ba0e62f3fb9a024e",
+        "path": "data/figure_04/identifier_sets/LongBench-SN-ONT.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "24b99c2f8c89c502d0230bb3ebf528ed8ab65910cd9b58cbdadbe187b2010f43"
+      },
+      "status": "passed",
+      "tool": "RAD"
+    },
+    {
+      "callset": {
+        "content_sha256": "6181a79fee18bef8dcadfede7ec6de5012fe36997b3357414b9216d5a4fd10e8",
+        "identifiers": 10001,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/LongBench_comps/full_A_to_B_audit_20260731/provenance/selected_whitelists/blaze/SN_PB/whitelist.csv",
+        "original_source_sha256": "295ee424c04b504721ecd0a67915892aaecc488320165e17f274dbe3f210a78e",
+        "path": "data/figure_04/identifier_sets/LongBench-SN-PB.BLAZE.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "1f7d9fd6dc9a24114d5d86d23eed505020d53e59991a6d4bc7fe69c39b9d6e75"
+      },
+      "canonical_id": "LongBench-SN-PB",
+      "counts": {
+        "calls": 10001,
+        "fn": 2038,
+        "fp": 27,
+        "reference_n": 12012,
+        "tp": 9974
+      },
+      "reference": {
+        "content_sha256": "fc0cd1bed64e1daa374237cfd03c95707ec6f2eacd7bc277b6ee9a0484e8eaa1",
+        "identifiers": 12012,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/LongBench_comps/full_A_to_B_audit_20260731/references/cellranger_filtered/ill_sn_barcodes.tsv.gz",
+        "original_source_sha256": "069b57c605a106d41dd8f00a93d4a2fdf1d3fd7eb9c44560ba0e62f3fb9a024e",
+        "path": "data/figure_04/identifier_sets/LongBench-SN-ONT.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "24b99c2f8c89c502d0230bb3ebf528ed8ab65910cd9b58cbdadbe187b2010f43"
+      },
+      "status": "passed",
+      "tool": "BLAZE"
+    },
+    {
+      "callset": {
+        "content_sha256": "8e6fc261538b7f8e180d6261f74de2d63ee7124777ffccf804da66eef16207d1",
+        "identifiers": 12016,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/LongBench_comps/full_A_to_B_audit_20260731/provenance/selected_whitelists/flex_v1026/SN_PB/SN_PB_flexiplex_whitelist.txt",
+        "original_source_sha256": "8e6fc261538b7f8e180d6261f74de2d63ee7124777ffccf804da66eef16207d1",
+        "path": "data/figure_04/identifier_sets/LongBench-SN-PB.Flexiplex.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "fe93726082151af54759a720e71fb62f0978ac84e1b7fae23c2335436c66370b"
+      },
+      "canonical_id": "LongBench-SN-PB",
+      "counts": {
+        "calls": 12016,
+        "fn": 434,
+        "fp": 438,
+        "reference_n": 12012,
+        "tp": 11578
+      },
+      "reference": {
+        "content_sha256": "fc0cd1bed64e1daa374237cfd03c95707ec6f2eacd7bc277b6ee9a0484e8eaa1",
+        "identifiers": 12012,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/LongBench_comps/full_A_to_B_audit_20260731/references/cellranger_filtered/ill_sn_barcodes.tsv.gz",
+        "original_source_sha256": "069b57c605a106d41dd8f00a93d4a2fdf1d3fd7eb9c44560ba0e62f3fb9a024e",
+        "path": "data/figure_04/identifier_sets/LongBench-SN-ONT.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "24b99c2f8c89c502d0230bb3ebf528ed8ab65910cd9b58cbdadbe187b2010f43"
+      },
+      "status": "passed",
+      "tool": "Flexiplex"
+    },
+    {
+      "callset": {
+        "content_sha256": "0fd8ad4826d39a54362b6f0a3ece90983cd1663f9b7b662c7d4ba3bdc7639a5b",
+        "identifiers": 915,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260731_lebrigand_MOB_complete_two_accession_benchmark/callsets/RAD.txt",
+        "original_source_sha256": "0fd8ad4826d39a54362b6f0a3ece90983cd1663f9b7b662c7d4ba3bdc7639a5b",
+        "path": "data/figure_04/identifier_sets/LeBrigand-MOB.RAD.txt.gz",
+        "selection": "first token, terminal -1 removal; Reference = saved in_tissue membership, 918 identifiers; combined two-accession producer",
+        "sha256": "00af6045d87b8b882632ae608b87e894fb1c342e1dbefee23a4a13f4f86f5274"
+      },
+      "canonical_id": "LeBrigand-MOB",
+      "counts": {
+        "calls": 915,
+        "fn": 3,
+        "fp": 0,
+        "reference_n": 918,
+        "tp": 915
+      },
+      "reference": {
+        "content_sha256": "d6b0e3ab1665cfaeb73539508614da493356b7f103b0d23e96b98fa65eb559cc",
+        "identifiers": 918,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260731_lebrigand_MOB_complete_two_accession_benchmark/tables/per_barcode_membership.tsv",
+        "original_source_sha256": "e3b020ac6ef9595b11a78a328d4b6375e9b993b58ad2db5068b7f561051711f4",
+        "path": "data/figure_04/identifier_sets/LeBrigand-MOB.reference.txt.gz",
+        "selection": "column barcode; Reference = saved in_tissue membership, 918 identifiers; combined two-accession producer",
+        "sha256": "a30c7cc8c3cc7c96b0564c1675397076649c27ccec8e7c292254f7ed336751ac"
+      },
+      "status": "passed",
+      "tool": "RAD"
+    },
+    {
+      "callset": {
+        "content_sha256": "f7243804a8df93bb6a96847a62291e5c1c8b657fe342c622b33e0b48e4b8c9e9",
+        "identifiers": 844,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260731_lebrigand_MOB_complete_two_accession_benchmark/callsets/BLAZE_expect918.txt",
+        "original_source_sha256": "f7243804a8df93bb6a96847a62291e5c1c8b657fe342c622b33e0b48e4b8c9e9",
+        "path": "data/figure_04/identifier_sets/LeBrigand-MOB.BLAZE.txt.gz",
+        "selection": "first token, terminal -1 removal; Reference = saved in_tissue membership, 918 identifiers; combined two-accession producer",
+        "sha256": "63b5eabf3b86838c8bf546b31fa6bdd90157baf7054ed8e7f761b51b163ba022"
+      },
+      "canonical_id": "LeBrigand-MOB",
+      "counts": {
+        "calls": 844,
+        "fn": 74,
+        "fp": 0,
+        "reference_n": 918,
+        "tp": 844
+      },
+      "reference": {
+        "content_sha256": "d6b0e3ab1665cfaeb73539508614da493356b7f103b0d23e96b98fa65eb559cc",
+        "identifiers": 918,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260731_lebrigand_MOB_complete_two_accession_benchmark/tables/per_barcode_membership.tsv",
+        "original_source_sha256": "e3b020ac6ef9595b11a78a328d4b6375e9b993b58ad2db5068b7f561051711f4",
+        "path": "data/figure_04/identifier_sets/LeBrigand-MOB.reference.txt.gz",
+        "selection": "column barcode; Reference = saved in_tissue membership, 918 identifiers; combined two-accession producer",
+        "sha256": "a30c7cc8c3cc7c96b0564c1675397076649c27ccec8e7c292254f7ed336751ac"
+      },
+      "status": "passed",
+      "tool": "BLAZE"
+    },
+    {
+      "callset": {
+        "content_sha256": "4b78996ad6fbca209bcb2f0e785ee2d136527d41c972a931f8114ff2167f031c",
+        "identifiers": 196,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260731_lebrigand_MOB_complete_two_accession_benchmark/callsets/Flexiplex_f8.txt",
+        "original_source_sha256": "4b78996ad6fbca209bcb2f0e785ee2d136527d41c972a931f8114ff2167f031c",
+        "path": "data/figure_04/identifier_sets/LeBrigand-MOB.Flexiplex.txt.gz",
+        "selection": "first token, terminal -1 removal; Reference = saved in_tissue membership, 918 identifiers; combined two-accession producer",
+        "sha256": "ecd41f8e3d443e212f893d3a34a51ee7fdc50bea2f206ce308b603c6c1151405"
+      },
+      "canonical_id": "LeBrigand-MOB",
+      "counts": {
+        "calls": 196,
+        "fn": 722,
+        "fp": 0,
+        "reference_n": 918,
+        "tp": 196
+      },
+      "reference": {
+        "content_sha256": "d6b0e3ab1665cfaeb73539508614da493356b7f103b0d23e96b98fa65eb559cc",
+        "identifiers": 918,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260731_lebrigand_MOB_complete_two_accession_benchmark/tables/per_barcode_membership.tsv",
+        "original_source_sha256": "e3b020ac6ef9595b11a78a328d4b6375e9b993b58ad2db5068b7f561051711f4",
+        "path": "data/figure_04/identifier_sets/LeBrigand-MOB.reference.txt.gz",
+        "selection": "column barcode; Reference = saved in_tissue membership, 918 identifiers; combined two-accession producer",
+        "sha256": "a30c7cc8c3cc7c96b0564c1675397076649c27ccec8e7c292254f7ed336751ac"
+      },
+      "status": "passed",
+      "tool": "Flexiplex"
+    },
+    {
+      "callset": {
+        "content_sha256": "36f8fd471fc99d2a5c86765c8779fa80d2f53b22913d8e1048c5ae8fd6089b38",
+        "identifiers": 2431,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_biological_benchmark_20260731/runs/GSE248115/RAD/GSE248115_whitelist_true.csv",
+        "original_source_sha256": "39e4b424a76f1714f57ce6aac06f92bf231919bbb0e44a3699780b377679dfbe",
+        "path": "data/figure_04/identifier_sets/Isosceles-ovarian-GSE248115.RAD.txt.gz",
+        "selection": "first token, terminal -1 removal; RAD calls are exact saved true_barcode column",
+        "sha256": "c965484227aae00a5636d617dfba0179a8f04b1ae59580c052dd9da4e57cb311"
+      },
+      "canonical_id": "Isosceles-ovarian-GSE248115",
+      "counts": {
+        "calls": 2431,
+        "fn": 119,
+        "fp": 88,
+        "reference_n": 2462,
+        "tp": 2343
+      },
+      "reference": {
+        "content_sha256": "de2f3ba458688e83c6b71afa5148e370975f2d32cd14d5478733c152a07c65a1",
+        "identifiers": 2462,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_biological_benchmark_20260731/raw/GSE248115/GSM7906076_Illumina_CellRanger_barcodes.csv.gz",
+        "original_source_sha256": "39ea09f071ea319dfb300b7f8d258a9f7ac43162d74fbc16b3cdbe6cfe723159",
+        "path": "data/figure_04/identifier_sets/Isosceles-ovarian-GSE248115.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; RAD calls are exact saved true_barcode column",
+        "sha256": "f3c98f0dded31160fc9df50d1e7f0ae16f4b7e4b6eccb6e054a3f83a8931f6f9"
+      },
+      "status": "passed",
+      "tool": "RAD"
+    },
+    {
+      "callset": {
+        "content_sha256": "9f8d91b0e8f48d50aba67b18925bd7f089b472c474b5ef3674b8b340d99e8d56",
+        "identifiers": 2247,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_biological_benchmark_20260731/runs/GSE248115/BLAZE_expect2462/whitelist.csv",
+        "original_source_sha256": "eedf75b043fa267a50addd3b973426140bfd3bdbd8838fb22137a9ff512e65cb",
+        "path": "data/figure_04/identifier_sets/Isosceles-ovarian-GSE248115.BLAZE.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "fe31f2711af3a0a5259c5f279eedbdf9b6536ca6cfaba656b3f99c21fdce40ca"
+      },
+      "canonical_id": "Isosceles-ovarian-GSE248115",
+      "counts": {
+        "calls": 2247,
+        "fn": 221,
+        "fp": 6,
+        "reference_n": 2462,
+        "tp": 2241
+      },
+      "reference": {
+        "content_sha256": "de2f3ba458688e83c6b71afa5148e370975f2d32cd14d5478733c152a07c65a1",
+        "identifiers": 2462,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_biological_benchmark_20260731/raw/GSE248115/GSM7906076_Illumina_CellRanger_barcodes.csv.gz",
+        "original_source_sha256": "39ea09f071ea319dfb300b7f8d258a9f7ac43162d74fbc16b3cdbe6cfe723159",
+        "path": "data/figure_04/identifier_sets/Isosceles-ovarian-GSE248115.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "f3c98f0dded31160fc9df50d1e7f0ae16f4b7e4b6eccb6e054a3f83a8931f6f9"
+      },
+      "status": "passed",
+      "tool": "BLAZE"
+    },
+    {
+      "callset": {
+        "content_sha256": "226563c6fb6a0ac430d9ba255c5711b64df9910da5288f3817d04e2cfbfd98a4",
+        "identifiers": 2153,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_biological_benchmark_20260731/runs/GSE248115/Flexiplex/discovery/selected.tsv",
+        "original_source_sha256": "1294a6f8cfea7b7c234c601d095c7380ecec6733cbd2c4b520cd691a9243fee4",
+        "path": "data/figure_04/identifier_sets/Isosceles-ovarian-GSE248115.Flexiplex.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "99bbdb3a3089d2b7b32e42c36a07a522eaa21a0e6a47a15a7b0c0d70ea9aac2f"
+      },
+      "canonical_id": "Isosceles-ovarian-GSE248115",
+      "counts": {
+        "calls": 2153,
+        "fn": 309,
+        "fp": 0,
+        "reference_n": 2462,
+        "tp": 2153
+      },
+      "reference": {
+        "content_sha256": "de2f3ba458688e83c6b71afa5148e370975f2d32cd14d5478733c152a07c65a1",
+        "identifiers": 2462,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_biological_benchmark_20260731/raw/GSE248115/GSM7906076_Illumina_CellRanger_barcodes.csv.gz",
+        "original_source_sha256": "39ea09f071ea319dfb300b7f8d258a9f7ac43162d74fbc16b3cdbe6cfe723159",
+        "path": "data/figure_04/identifier_sets/Isosceles-ovarian-GSE248115.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "f3c98f0dded31160fc9df50d1e7f0ae16f4b7e4b6eccb6e054a3f83a8931f6f9"
+      },
+      "status": "passed",
+      "tool": "Flexiplex"
+    },
+    {
+      "callset": {
+        "content_sha256": "1f9d214123c6d9fc3f6e89f253ffe970ead22c70d2f05c5b2525febf12d32a10",
+        "identifiers": 13349,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run1.RAD.txt",
+        "original_source_sha256": "39ebae62780cc9ea383032e3978909da25603089beb8e0c01becee36cd1f22f5",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_m1_ONT_Run1.RAD.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "be8e623017c97ec9f16d1497fd2a1a00e7ad45719829289e9d8ea154285b726c"
+      },
+      "canonical_id": "Hipp_SN_m1_ONT_Run1",
+      "counts": {
+        "calls": 13349,
+        "fn": 169,
+        "fp": 1013,
+        "reference_n": 12505,
+        "tp": 12336
+      },
+      "reference": {
+        "content_sha256": "3ff8601a41f06703c5f23e34080651e25c6f8cf1e95975baa599bad11096002b",
+        "identifiers": 12505,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/m1.cellranger_filtered_barcodes.txt.gz",
+        "original_source_sha256": "ffd6a16280dea20340d7d0ab27315e82c709838b045c4f4a89cb9ca3221249da",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_m1_ONT_Run1.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "212b4f130ae1bcfc1cbf2c0fe7803eb90608167eaa2ee1b379daed1b3a6bac28"
+      },
+      "status": "passed",
+      "tool": "RAD"
+    },
+    {
+      "callset": {
+        "content_sha256": "362a180262f0bcb5624292e32dc25504d76f82595d2ccc547c0e0b99678195e0",
+        "identifiers": 10922,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run1.BLAZE.txt",
+        "original_source_sha256": "34d005329a7ce53f2f53c257c651fff5f46d2d4859373163a5fcdfc58784885f",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_m1_ONT_Run1.BLAZE.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "082a11a82e51915f30048315129e60e46de3d5e6a872f30f26c592c428926c18"
+      },
+      "canonical_id": "Hipp_SN_m1_ONT_Run1",
+      "counts": {
+        "calls": 10922,
+        "fn": 1969,
+        "fp": 386,
+        "reference_n": 12505,
+        "tp": 10536
+      },
+      "reference": {
+        "content_sha256": "3ff8601a41f06703c5f23e34080651e25c6f8cf1e95975baa599bad11096002b",
+        "identifiers": 12505,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/m1.cellranger_filtered_barcodes.txt.gz",
+        "original_source_sha256": "ffd6a16280dea20340d7d0ab27315e82c709838b045c4f4a89cb9ca3221249da",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_m1_ONT_Run1.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "212b4f130ae1bcfc1cbf2c0fe7803eb90608167eaa2ee1b379daed1b3a6bac28"
+      },
+      "status": "passed",
+      "tool": "BLAZE"
+    },
+    {
+      "callset": {
+        "content_sha256": "1745767f8328c7caddb58fd9f2749e296440a50a1cedd75d6c2749103da214b0",
+        "identifiers": 13032,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run1.Flexiplex.txt",
+        "original_source_sha256": "23ecda7320c45e461060190a2a01e83ba7e4f0c640c40ac2298b8757620021b8",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_m1_ONT_Run1.Flexiplex.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "0e8db81ad2d43781e2d81bfe9d88db778fe266ac31ef2bdc25b3ab220f6aec66"
+      },
+      "canonical_id": "Hipp_SN_m1_ONT_Run1",
+      "counts": {
+        "calls": 13032,
+        "fn": 440,
+        "fp": 967,
+        "reference_n": 12505,
+        "tp": 12065
+      },
+      "reference": {
+        "content_sha256": "3ff8601a41f06703c5f23e34080651e25c6f8cf1e95975baa599bad11096002b",
+        "identifiers": 12505,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/m1.cellranger_filtered_barcodes.txt.gz",
+        "original_source_sha256": "ffd6a16280dea20340d7d0ab27315e82c709838b045c4f4a89cb9ca3221249da",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_m1_ONT_Run1.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "212b4f130ae1bcfc1cbf2c0fe7803eb90608167eaa2ee1b379daed1b3a6bac28"
+      },
+      "status": "passed",
+      "tool": "Flexiplex"
+    },
+    {
+      "callset": {
+        "content_sha256": "abdcaa22e5730ca76e2971dc07a9511ff859be46511da700566218a884187b91",
+        "identifiers": 12902,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run2.RAD.txt",
+        "original_source_sha256": "bdd14602a194c04dd034373bed45a95809ae1b62ca5adfa43ac9f6366aa7bf2d",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_m1_ONT_Run2.RAD.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "2f9343d5ac182ff2827d775eefa0bc67adb7ec7ead4a12bee4dec2946a368c17"
+      },
+      "canonical_id": "Hipp_SN_m1_ONT_Run2",
+      "counts": {
+        "calls": 12902,
+        "fn": 514,
+        "fp": 911,
+        "reference_n": 12505,
+        "tp": 11991
+      },
+      "reference": {
+        "content_sha256": "3ff8601a41f06703c5f23e34080651e25c6f8cf1e95975baa599bad11096002b",
+        "identifiers": 12505,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/m1.cellranger_filtered_barcodes.txt.gz",
+        "original_source_sha256": "ffd6a16280dea20340d7d0ab27315e82c709838b045c4f4a89cb9ca3221249da",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_m1_ONT_Run1.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "212b4f130ae1bcfc1cbf2c0fe7803eb90608167eaa2ee1b379daed1b3a6bac28"
+      },
+      "status": "passed",
+      "tool": "RAD"
+    },
+    {
+      "callset": {
+        "content_sha256": "6069ce536e24128da39f1fe7880f19da6452d129be342c4b85a74a5f63e9a6f6",
+        "identifiers": 10423,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run2.BLAZE.txt",
+        "original_source_sha256": "a49485707fd470b15259da4d9eca661ad68f4550dc1caaea45ed25b0ff433faf",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_m1_ONT_Run2.BLAZE.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "d40dcfab64d9cc67c7468744ab84ba57feb27e64cf018383705e84dae6963fcf"
+      },
+      "canonical_id": "Hipp_SN_m1_ONT_Run2",
+      "counts": {
+        "calls": 10423,
+        "fn": 2495,
+        "fp": 413,
+        "reference_n": 12505,
+        "tp": 10010
+      },
+      "reference": {
+        "content_sha256": "3ff8601a41f06703c5f23e34080651e25c6f8cf1e95975baa599bad11096002b",
+        "identifiers": 12505,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/m1.cellranger_filtered_barcodes.txt.gz",
+        "original_source_sha256": "ffd6a16280dea20340d7d0ab27315e82c709838b045c4f4a89cb9ca3221249da",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_m1_ONT_Run1.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "212b4f130ae1bcfc1cbf2c0fe7803eb90608167eaa2ee1b379daed1b3a6bac28"
+      },
+      "status": "passed",
+      "tool": "BLAZE"
+    },
+    {
+      "callset": {
+        "content_sha256": "65e6cdf4a83fbb43d89ae35fc2c0d2ad3897c80bd56703499daafc576b2ab84a",
+        "identifiers": 12849,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run2.Flexiplex.txt",
+        "original_source_sha256": "e60558fc3ffac35d2952d1178d5bbfd625d04f43d1b3d969fe5d527bb6de3b60",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_m1_ONT_Run2.Flexiplex.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "6136f0e79c697858140c32ef1a6a5851838d83a95a203c01728731014dda3c64"
+      },
+      "canonical_id": "Hipp_SN_m1_ONT_Run2",
+      "counts": {
+        "calls": 12849,
+        "fn": 712,
+        "fp": 1056,
+        "reference_n": 12505,
+        "tp": 11793
+      },
+      "reference": {
+        "content_sha256": "3ff8601a41f06703c5f23e34080651e25c6f8cf1e95975baa599bad11096002b",
+        "identifiers": 12505,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/m1.cellranger_filtered_barcodes.txt.gz",
+        "original_source_sha256": "ffd6a16280dea20340d7d0ab27315e82c709838b045c4f4a89cb9ca3221249da",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_m1_ONT_Run1.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "212b4f130ae1bcfc1cbf2c0fe7803eb90608167eaa2ee1b379daed1b3a6bac28"
+      },
+      "status": "passed",
+      "tool": "Flexiplex"
+    },
+    {
+      "callset": {
+        "content_sha256": "c1c11555040806d760c446691189dc3404a976446aa04a19ecd502667a06d22e",
+        "identifiers": 13105,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run3.RAD.txt",
+        "original_source_sha256": "b342e3a59d146eff8fa0e5f38c96be95d1d7d13c7467dbff97a428f3bd725b3c",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_m1_ONT_Run3.RAD.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "ad2ffdc087abe98458dac3c5294806db16a9f72cee2c0fe65c68b2859ac13bf6"
+      },
+      "canonical_id": "Hipp_SN_m1_ONT_Run3",
+      "counts": {
+        "calls": 13105,
+        "fn": 367,
+        "fp": 967,
+        "reference_n": 12505,
+        "tp": 12138
+      },
+      "reference": {
+        "content_sha256": "3ff8601a41f06703c5f23e34080651e25c6f8cf1e95975baa599bad11096002b",
+        "identifiers": 12505,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/m1.cellranger_filtered_barcodes.txt.gz",
+        "original_source_sha256": "ffd6a16280dea20340d7d0ab27315e82c709838b045c4f4a89cb9ca3221249da",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_m1_ONT_Run1.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "212b4f130ae1bcfc1cbf2c0fe7803eb90608167eaa2ee1b379daed1b3a6bac28"
+      },
+      "status": "passed",
+      "tool": "RAD"
+    },
+    {
+      "callset": {
+        "content_sha256": "45e1d55f5754b1bab20a6901bd772d92fe31c69bcc4f5f6401661994c72520ea",
+        "identifiers": 10445,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run3.BLAZE.txt",
+        "original_source_sha256": "6bcf93e1977d397478f964cc064152ca5fb24c101aeda227518fba5323cea29e",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_m1_ONT_Run3.BLAZE.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "1e30cfc98dac62c275096027b5291994f0027a124988f7b95022c306fbff860c"
+      },
+      "canonical_id": "Hipp_SN_m1_ONT_Run3",
+      "counts": {
+        "calls": 10445,
+        "fn": 2453,
+        "fp": 393,
+        "reference_n": 12505,
+        "tp": 10052
+      },
+      "reference": {
+        "content_sha256": "3ff8601a41f06703c5f23e34080651e25c6f8cf1e95975baa599bad11096002b",
+        "identifiers": 12505,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/m1.cellranger_filtered_barcodes.txt.gz",
+        "original_source_sha256": "ffd6a16280dea20340d7d0ab27315e82c709838b045c4f4a89cb9ca3221249da",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_m1_ONT_Run1.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "212b4f130ae1bcfc1cbf2c0fe7803eb90608167eaa2ee1b379daed1b3a6bac28"
+      },
+      "status": "passed",
+      "tool": "BLAZE"
+    },
+    {
+      "callset": {
+        "content_sha256": "574576a44c475a3813230dcff3fa6a61cbbd47d01a731cd6ebe684074b47bdfc",
+        "identifiers": 5182,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run3.Flexiplex.txt",
+        "original_source_sha256": "ccf9c4b7790889f28ea2484351c11358ac8efa3ce7be6bffee19636d84e38d42",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_m1_ONT_Run3.Flexiplex.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "5ac47fba823522652e55ea359dd9cadea27d257d186b4f699159f75dff89271e"
+      },
+      "canonical_id": "Hipp_SN_m1_ONT_Run3",
+      "counts": {
+        "calls": 5182,
+        "fn": 7580,
+        "fp": 257,
+        "reference_n": 12505,
+        "tp": 4925
+      },
+      "reference": {
+        "content_sha256": "3ff8601a41f06703c5f23e34080651e25c6f8cf1e95975baa599bad11096002b",
+        "identifiers": 12505,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/m1.cellranger_filtered_barcodes.txt.gz",
+        "original_source_sha256": "ffd6a16280dea20340d7d0ab27315e82c709838b045c4f4a89cb9ca3221249da",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_m1_ONT_Run1.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "212b4f130ae1bcfc1cbf2c0fe7803eb90608167eaa2ee1b379daed1b3a6bac28"
+      },
+      "status": "passed",
+      "tool": "Flexiplex"
+    },
+    {
+      "callset": {
+        "content_sha256": "6cf9fe1477fb880772d9a9dbe7f02ce18d09703206174ad78ad80b0dd346ede7",
+        "identifiers": 4636,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095094_MPNST1_scNaUMIseq_MinION.RAD.RAD.txt",
+        "original_source_sha256": "de96a760114b8b65ec518a45c92ca20e1bd9118a39b3e0fc1e01138cdfd0fd8c",
+        "path": "data/figure_04/identifier_sets/ERR15095094_MPNST1_scNaUMIseq_MinION.RAD.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "baf4c692ab0e871c226042d7c65840b97bf326f49b6d8552b3d90bbc280ea5f5"
+      },
+      "canonical_id": "ERR15095094_MPNST1_scNaUMIseq_MinION",
+      "counts": {
+        "calls": 4636,
+        "fn": 129,
+        "fp": 163,
+        "reference_n": 4602,
+        "tp": 4473
+      },
+      "reference": {
+        "content_sha256": "999dbf531a350fab6219f1b9331dc915fb33b1beadb04886a62bc1f897e9ea08",
+        "identifiers": 4602,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/mpnst_native_three_tool_whitelist_20260811/MPNST1/reference/MPNST1_2020_23.CellRanger9_GRCm39.filtered_barcodes.tsv.gz",
+        "original_source_sha256": "3da17f6129a1fc3375e99da5dbcb6e83beb61b4c1a8ad22ee7eb76caaa54c794",
+        "path": "data/figure_04/identifier_sets/ERR15095094_MPNST1_scNaUMIseq_MinION.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "3c9d29a0a4cc1b5a1360ec98557f72fee9404d805f78ec7dbfed339dda2f9896"
+      },
+      "status": "passed",
+      "tool": "RAD"
+    },
+    {
+      "callset": {
+        "content_sha256": "844d2c95b301f6e418bdb5b2130e1b2276b58f01a49384eea504e0726ffe3a96",
+        "identifiers": 4280,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095094_MPNST1_scNaUMIseq_MinION.BLAZE.BLAZE.txt",
+        "original_source_sha256": "fe94c0bed504ee428c70249f6f5ce91bde392bb1b997687cf343041c1dfe4e9a",
+        "path": "data/figure_04/identifier_sets/ERR15095094_MPNST1_scNaUMIseq_MinION.BLAZE.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "8b10e71f2476192447bde78fc795b059ade1f86fb421cfdbe673a718a1b016ac"
+      },
+      "canonical_id": "ERR15095094_MPNST1_scNaUMIseq_MinION",
+      "counts": {
+        "calls": 4280,
+        "fn": 377,
+        "fp": 55,
+        "reference_n": 4602,
+        "tp": 4225
+      },
+      "reference": {
+        "content_sha256": "999dbf531a350fab6219f1b9331dc915fb33b1beadb04886a62bc1f897e9ea08",
+        "identifiers": 4602,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/mpnst_native_three_tool_whitelist_20260811/MPNST1/reference/MPNST1_2020_23.CellRanger9_GRCm39.filtered_barcodes.tsv.gz",
+        "original_source_sha256": "3da17f6129a1fc3375e99da5dbcb6e83beb61b4c1a8ad22ee7eb76caaa54c794",
+        "path": "data/figure_04/identifier_sets/ERR15095094_MPNST1_scNaUMIseq_MinION.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "3c9d29a0a4cc1b5a1360ec98557f72fee9404d805f78ec7dbfed339dda2f9896"
+      },
+      "status": "passed",
+      "tool": "BLAZE"
+    },
+    {
+      "callset": {
+        "content_sha256": "9d4022659412b0017f0148fcb05cdca656ae62b5f83a22c1c9fe85ed64c3ea3a",
+        "identifiers": 4555,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095094_MPNST1_scNaUMIseq_MinION.Flexiplex.Flexiplex.txt",
+        "original_source_sha256": "8a6771dcc04eb4be13e97bf9b7857c0132205f8fbb076fbe9e819316adee63af",
+        "path": "data/figure_04/identifier_sets/ERR15095094_MPNST1_scNaUMIseq_MinION.Flexiplex.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "b481af84c204934df530293c51fabdc7effd0b1da1d578fea0a7dd7a600d5cb7"
+      },
+      "canonical_id": "ERR15095094_MPNST1_scNaUMIseq_MinION",
+      "counts": {
+        "calls": 4555,
+        "fn": 158,
+        "fp": 111,
+        "reference_n": 4602,
+        "tp": 4444
+      },
+      "reference": {
+        "content_sha256": "999dbf531a350fab6219f1b9331dc915fb33b1beadb04886a62bc1f897e9ea08",
+        "identifiers": 4602,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/mpnst_native_three_tool_whitelist_20260811/MPNST1/reference/MPNST1_2020_23.CellRanger9_GRCm39.filtered_barcodes.tsv.gz",
+        "original_source_sha256": "3da17f6129a1fc3375e99da5dbcb6e83beb61b4c1a8ad22ee7eb76caaa54c794",
+        "path": "data/figure_04/identifier_sets/ERR15095094_MPNST1_scNaUMIseq_MinION.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "3c9d29a0a4cc1b5a1360ec98557f72fee9404d805f78ec7dbfed339dda2f9896"
+      },
+      "status": "passed",
+      "tool": "Flexiplex"
+    },
+    {
+      "callset": {
+        "content_sha256": "6fcebbb2d6d9ae6de294b694af29730970366c74e236a5500720096cb533b058",
+        "identifiers": 4556,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095095_MPNST1_scNaUMIseq_PromethION.RAD.RAD.txt",
+        "original_source_sha256": "e7d3caaa4e283189ed88d65ac62d758892c23aadf4152cf76d45fba36257000b",
+        "path": "data/figure_04/identifier_sets/ERR15095095_MPNST1_scNaUMIseq_PromethION.RAD.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "aec021bebd0e92a37fb7144f048ba2c21a2dda183f5588c871a198d95a1277b2"
+      },
+      "canonical_id": "ERR15095095_MPNST1_scNaUMIseq_PromethION",
+      "counts": {
+        "calls": 4556,
+        "fn": 185,
+        "fp": 139,
+        "reference_n": 4602,
+        "tp": 4417
+      },
+      "reference": {
+        "content_sha256": "999dbf531a350fab6219f1b9331dc915fb33b1beadb04886a62bc1f897e9ea08",
+        "identifiers": 4602,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/mpnst_native_three_tool_whitelist_20260811/MPNST1/reference/MPNST1_2020_23.CellRanger9_GRCm39.filtered_barcodes.tsv.gz",
+        "original_source_sha256": "3da17f6129a1fc3375e99da5dbcb6e83beb61b4c1a8ad22ee7eb76caaa54c794",
+        "path": "data/figure_04/identifier_sets/ERR15095094_MPNST1_scNaUMIseq_MinION.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "3c9d29a0a4cc1b5a1360ec98557f72fee9404d805f78ec7dbfed339dda2f9896"
+      },
+      "status": "passed",
+      "tool": "RAD"
+    },
+    {
+      "callset": {
+        "content_sha256": "ac600f905fb1838bd0ebe36933824cc7a8cb0fc8b218a868fe86487922be1ab6",
+        "identifiers": 4247,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095095_MPNST1_scNaUMIseq_PromethION.BLAZE.BLAZE.txt",
+        "original_source_sha256": "faca756ab179d8d929c41cfdab634a0512c605fad8b65cf23244e84e0d4b09c5",
+        "path": "data/figure_04/identifier_sets/ERR15095095_MPNST1_scNaUMIseq_PromethION.BLAZE.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "33016e065da8c12ef38a4c1ce92ce089c38303df08dbdf8fc9810691d2811bb0"
+      },
+      "canonical_id": "ERR15095095_MPNST1_scNaUMIseq_PromethION",
+      "counts": {
+        "calls": 4247,
+        "fn": 410,
+        "fp": 55,
+        "reference_n": 4602,
+        "tp": 4192
+      },
+      "reference": {
+        "content_sha256": "999dbf531a350fab6219f1b9331dc915fb33b1beadb04886a62bc1f897e9ea08",
+        "identifiers": 4602,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/mpnst_native_three_tool_whitelist_20260811/MPNST1/reference/MPNST1_2020_23.CellRanger9_GRCm39.filtered_barcodes.tsv.gz",
+        "original_source_sha256": "3da17f6129a1fc3375e99da5dbcb6e83beb61b4c1a8ad22ee7eb76caaa54c794",
+        "path": "data/figure_04/identifier_sets/ERR15095094_MPNST1_scNaUMIseq_MinION.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "3c9d29a0a4cc1b5a1360ec98557f72fee9404d805f78ec7dbfed339dda2f9896"
+      },
+      "status": "passed",
+      "tool": "BLAZE"
+    },
+    {
+      "callset": {
+        "content_sha256": "26ee3957fbf76d75cf15d675ab34d23839e9bc9365d14b5305ec30480052ce01",
+        "identifiers": 4609,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095095_MPNST1_scNaUMIseq_PromethION.Flexiplex.Flexiplex.txt",
+        "original_source_sha256": "6b5a23ce73a308ff656e37b1cb26e0d02d09a72efca22f338b7f77ce5d3f2240",
+        "path": "data/figure_04/identifier_sets/ERR15095095_MPNST1_scNaUMIseq_PromethION.Flexiplex.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "66a80d888294e008a96f51e65544d17719a3fb7fcc3ed55c226e8794efc35788"
+      },
+      "canonical_id": "ERR15095095_MPNST1_scNaUMIseq_PromethION",
+      "counts": {
+        "calls": 4609,
+        "fn": 129,
+        "fp": 136,
+        "reference_n": 4602,
+        "tp": 4473
+      },
+      "reference": {
+        "content_sha256": "999dbf531a350fab6219f1b9331dc915fb33b1beadb04886a62bc1f897e9ea08",
+        "identifiers": 4602,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/mpnst_native_three_tool_whitelist_20260811/MPNST1/reference/MPNST1_2020_23.CellRanger9_GRCm39.filtered_barcodes.tsv.gz",
+        "original_source_sha256": "3da17f6129a1fc3375e99da5dbcb6e83beb61b4c1a8ad22ee7eb76caaa54c794",
+        "path": "data/figure_04/identifier_sets/ERR15095094_MPNST1_scNaUMIseq_MinION.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "3c9d29a0a4cc1b5a1360ec98557f72fee9404d805f78ec7dbfed339dda2f9896"
+      },
+      "status": "passed",
+      "tool": "Flexiplex"
+    },
+    {
+      "callset": {
+        "content_sha256": "e4652e6a17d0a162e0f355843815ba9db19b0b1ef8514f2846d6c51d9cf76629",
+        "identifiers": 10666,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095096.RAD.barcodes.txt",
+        "original_source_sha256": "6872e9324961262f3f5b720ca0f82d5ad350d67bd93aff86bcfb9b3052afea75",
+        "path": "data/figure_04/identifier_sets/ERR15095096.RAD.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "fcaee1eb1c02afc75f294929cbf9ae63dba27fe2590798ecb421b82a6f1df6dc"
+      },
+      "canonical_id": "ERR15095096",
+      "counts": {
+        "calls": 10666,
+        "fn": 100,
+        "fp": 485,
+        "reference_n": 10281,
+        "tp": 10181
+      },
+      "reference": {
+        "content_sha256": "b63e5a89df2457f853d386d132636c67c3bead75f53b6e874a6977d6a84eba7d",
+        "identifiers": 10281,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/mpnst_native_three_tool_whitelist_20260811/MPNST2/reference/MPNST2_2022_26.CellRanger9_GRCm39.filtered_barcodes.tsv.gz",
+        "original_source_sha256": "84351e355cebbe8706e40903b8ffc9fc53cee3317cf1a3efd678c3bc2fcfad8c",
+        "path": "data/figure_04/identifier_sets/ERR15095096.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "5f1d2aeb0c1261e2092e1069e34a8de7af96cdc4da197241e23ee8ffd6224bf7"
+      },
+      "status": "passed",
+      "tool": "RAD"
+    },
+    {
+      "callset": {
+        "content_sha256": "5b5a0dad6765f7e759b13ac5dfb27fc9c30c04af782eb706cc5436f3323a2d7f",
+        "identifiers": 10225,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095096.BLAZE.barcodes.txt",
+        "original_source_sha256": "d9fd02f873d36c7ee935a84be297847e0686a07e43632dfadfe1446eb2972b5d",
+        "path": "data/figure_04/identifier_sets/ERR15095096.BLAZE.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "f27cce34e6e52a62c400dfb1b8ef62fcae5167bcc71d7a5ea5aeba2fec0779d1"
+      },
+      "canonical_id": "ERR15095096",
+      "counts": {
+        "calls": 10225,
+        "fn": 369,
+        "fp": 313,
+        "reference_n": 10281,
+        "tp": 9912
+      },
+      "reference": {
+        "content_sha256": "b63e5a89df2457f853d386d132636c67c3bead75f53b6e874a6977d6a84eba7d",
+        "identifiers": 10281,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/mpnst_native_three_tool_whitelist_20260811/MPNST2/reference/MPNST2_2022_26.CellRanger9_GRCm39.filtered_barcodes.tsv.gz",
+        "original_source_sha256": "84351e355cebbe8706e40903b8ffc9fc53cee3317cf1a3efd678c3bc2fcfad8c",
+        "path": "data/figure_04/identifier_sets/ERR15095096.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "5f1d2aeb0c1261e2092e1069e34a8de7af96cdc4da197241e23ee8ffd6224bf7"
+      },
+      "status": "passed",
+      "tool": "BLAZE"
+    },
+    {
+      "callset": {
+        "content_sha256": "33ebdd64d86e507af80dd6e7d099a18aef0b75d6aa463d64739cbb5383b834cc",
+        "identifiers": 10706,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095096.Flexiplex.barcodes.txt",
+        "original_source_sha256": "6dd30710f92a5c90f587ab97aad91219fbcdfea66742a1ed51600080c280bb28",
+        "path": "data/figure_04/identifier_sets/ERR15095096.Flexiplex.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "e1eebca73236b46a62a25badb09857fbb59d40318b6f4df06c4ed3858b9998ed"
+      },
+      "canonical_id": "ERR15095096",
+      "counts": {
+        "calls": 10706,
+        "fn": 81,
+        "fp": 506,
+        "reference_n": 10281,
+        "tp": 10200
+      },
+      "reference": {
+        "content_sha256": "b63e5a89df2457f853d386d132636c67c3bead75f53b6e874a6977d6a84eba7d",
+        "identifiers": 10281,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/mpnst_native_three_tool_whitelist_20260811/MPNST2/reference/MPNST2_2022_26.CellRanger9_GRCm39.filtered_barcodes.tsv.gz",
+        "original_source_sha256": "84351e355cebbe8706e40903b8ffc9fc53cee3317cf1a3efd678c3bc2fcfad8c",
+        "path": "data/figure_04/identifier_sets/ERR15095096.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "5f1d2aeb0c1261e2092e1069e34a8de7af96cdc4da197241e23ee8ffd6224bf7"
+      },
+      "status": "passed",
+      "tool": "Flexiplex"
+    },
+    {
+      "callset": {
+        "content_sha256": "13c53abcadbc4a7624ccac3e4551172b26089c4b85934c4d79cdb9159b962486",
+        "identifiers": 4776,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095097.RAD.barcodes.txt",
+        "original_source_sha256": "116ada0a950a8276d3ec600696c145366dba9f1bd7454f1c12c5b763becd20c8",
+        "path": "data/figure_04/identifier_sets/ERR15095097.RAD.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "2942d96d41afc94d3da73365bbd325d1558e3f9552cbf005831aa5fd8acd716c"
+      },
+      "canonical_id": "ERR15095097",
+      "counts": {
+        "calls": 4776,
+        "fn": 10264,
+        "fp": 4759,
+        "reference_n": 10281,
+        "tp": 17
+      },
+      "reference": {
+        "content_sha256": "b63e5a89df2457f853d386d132636c67c3bead75f53b6e874a6977d6a84eba7d",
+        "identifiers": 10281,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/mpnst_native_three_tool_whitelist_20260811/MPNST2/reference/MPNST2_2022_26.CellRanger9_GRCm39.filtered_barcodes.tsv.gz",
+        "original_source_sha256": "84351e355cebbe8706e40903b8ffc9fc53cee3317cf1a3efd678c3bc2fcfad8c",
+        "path": "data/figure_04/identifier_sets/ERR15095096.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "5f1d2aeb0c1261e2092e1069e34a8de7af96cdc4da197241e23ee8ffd6224bf7"
+      },
+      "status": "passed",
+      "tool": "RAD"
+    },
+    {
+      "callset": {
+        "content_sha256": "4977b9ce969eab2212c4993ec6ef57740b7981f5ee51fb4ccf7172742b377a0f",
+        "identifiers": 4508,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095097.BLAZE.barcodes.txt",
+        "original_source_sha256": "71cb5082ef1a6cbc8e8526a17030f1cddbb47489a45d511baeac618d302f888b",
+        "path": "data/figure_04/identifier_sets/ERR15095097.BLAZE.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "937fc899bfcd53f4ca59cf8c3d4998251ef29d0ee8a134b4f2fe0ce1f9d0dc7b"
+      },
+      "canonical_id": "ERR15095097",
+      "counts": {
+        "calls": 4508,
+        "fn": 10266,
+        "fp": 4493,
+        "reference_n": 10281,
+        "tp": 15
+      },
+      "reference": {
+        "content_sha256": "b63e5a89df2457f853d386d132636c67c3bead75f53b6e874a6977d6a84eba7d",
+        "identifiers": 10281,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/mpnst_native_three_tool_whitelist_20260811/MPNST2/reference/MPNST2_2022_26.CellRanger9_GRCm39.filtered_barcodes.tsv.gz",
+        "original_source_sha256": "84351e355cebbe8706e40903b8ffc9fc53cee3317cf1a3efd678c3bc2fcfad8c",
+        "path": "data/figure_04/identifier_sets/ERR15095096.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "5f1d2aeb0c1261e2092e1069e34a8de7af96cdc4da197241e23ee8ffd6224bf7"
+      },
+      "status": "passed",
+      "tool": "BLAZE"
+    },
+    {
+      "callset": {
+        "content_sha256": "6597f1f1a0d9fc187ecfc9f76273812426f271b973c816a020c9a924593c52ed",
+        "identifiers": 4784,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095097.Flexiplex.barcodes.txt",
+        "original_source_sha256": "913f600a0b848abf41f2de7df2fc6056d54cf783db55c70e9b2acef45ffc6074",
+        "path": "data/figure_04/identifier_sets/ERR15095097.Flexiplex.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "6abf58668658c4878d76f89c299e1f287a9a4a402ef2e9d5017dceb25fe1e7ee"
+      },
+      "canonical_id": "ERR15095097",
+      "counts": {
+        "calls": 4784,
+        "fn": 10264,
+        "fp": 4767,
+        "reference_n": 10281,
+        "tp": 17
+      },
+      "reference": {
+        "content_sha256": "b63e5a89df2457f853d386d132636c67c3bead75f53b6e874a6977d6a84eba7d",
+        "identifiers": 10281,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/mpnst_native_three_tool_whitelist_20260811/MPNST2/reference/MPNST2_2022_26.CellRanger9_GRCm39.filtered_barcodes.tsv.gz",
+        "original_source_sha256": "84351e355cebbe8706e40903b8ffc9fc53cee3317cf1a3efd678c3bc2fcfad8c",
+        "path": "data/figure_04/identifier_sets/ERR15095096.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "5f1d2aeb0c1261e2092e1069e34a8de7af96cdc4da197241e23ee8ffd6224bf7"
+      },
+      "status": "passed",
+      "tool": "Flexiplex"
+    },
+    {
+      "callset": {
+        "content_sha256": "da593da7dbe0075cf5e1534f62db00d42a8301892ee83fc48e76cb27cb74a3a0",
+        "identifiers": 10507,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f1_ONT_Run1.RAD.txt",
+        "original_source_sha256": "da593da7dbe0075cf5e1534f62db00d42a8301892ee83fc48e76cb27cb74a3a0",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_f1_ONT_Run1.RAD.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "53fc626854c0bae4b588bbf7a3eb2599184720893efab2207aac0a3d286b32f5"
+      },
+      "canonical_id": "Hipp_SN_f1_ONT_Run1",
+      "counts": {
+        "calls": 10507,
+        "fn": 1299,
+        "fp": 1469,
+        "reference_n": 10337,
+        "tp": 9038
+      },
+      "reference": {
+        "content_sha256": "6d5e74d4dc1ff7396e2b64890a2d07b2984086d90fc07e1ea432e428e40406cb",
+        "identifiers": 10337,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/f1.cellranger_filtered_barcodes.txt.gz",
+        "original_source_sha256": "c48d601447ea8014fb071a8dc49de557549f5e9712576e181dafc8eeca52cdf4",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_f1_ONT_Run1.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "0c1a3ceccb04b34324ce7be7f466d4db03ef645156863f8a69b1ef1e389cac1a"
+      },
+      "status": "passed",
+      "tool": "RAD"
+    },
+    {
+      "callset": {
+        "content_sha256": "480d0d7d8d4db40cbbe7d0394609667b8ea1cbdb88362f93e3dcc82aab1d59f1",
+        "identifiers": 9443,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f1_ONT_Run1.BLAZE.txt",
+        "original_source_sha256": "480d0d7d8d4db40cbbe7d0394609667b8ea1cbdb88362f93e3dcc82aab1d59f1",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_f1_ONT_Run1.BLAZE.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "775f0d52838ed1feca126d33553c8cb81584406073a0f8f1ef26f00af664737f"
+      },
+      "canonical_id": "Hipp_SN_f1_ONT_Run1",
+      "counts": {
+        "calls": 9443,
+        "fn": 1553,
+        "fp": 659,
+        "reference_n": 10337,
+        "tp": 8784
+      },
+      "reference": {
+        "content_sha256": "6d5e74d4dc1ff7396e2b64890a2d07b2984086d90fc07e1ea432e428e40406cb",
+        "identifiers": 10337,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/f1.cellranger_filtered_barcodes.txt.gz",
+        "original_source_sha256": "c48d601447ea8014fb071a8dc49de557549f5e9712576e181dafc8eeca52cdf4",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_f1_ONT_Run1.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "0c1a3ceccb04b34324ce7be7f466d4db03ef645156863f8a69b1ef1e389cac1a"
+      },
+      "status": "passed",
+      "tool": "BLAZE"
+    },
+    {
+      "callset": {
+        "content_sha256": "1e9a5ff4d762bf050bdfce63a1beb4e13be414e12e7ba7062f4b94813208d53a",
+        "identifiers": 9563,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f1_ONT_Run1.Flexiplex.txt",
+        "original_source_sha256": "1e9a5ff4d762bf050bdfce63a1beb4e13be414e12e7ba7062f4b94813208d53a",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_f1_ONT_Run1.Flexiplex.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "0422a238a546b06982781204a48afb7e2ff8beb0e92824eca4112df913f3c849"
+      },
+      "canonical_id": "Hipp_SN_f1_ONT_Run1",
+      "counts": {
+        "calls": 9563,
+        "fn": 2192,
+        "fp": 1418,
+        "reference_n": 10337,
+        "tp": 8145
+      },
+      "reference": {
+        "content_sha256": "6d5e74d4dc1ff7396e2b64890a2d07b2984086d90fc07e1ea432e428e40406cb",
+        "identifiers": 10337,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/f1.cellranger_filtered_barcodes.txt.gz",
+        "original_source_sha256": "c48d601447ea8014fb071a8dc49de557549f5e9712576e181dafc8eeca52cdf4",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_f1_ONT_Run1.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "0c1a3ceccb04b34324ce7be7f466d4db03ef645156863f8a69b1ef1e389cac1a"
+      },
+      "status": "passed",
+      "tool": "Flexiplex"
+    },
+    {
+      "callset": {
+        "content_sha256": "ced47771c59ea43f6f9564ea996c1e73839b161e71cbf9675b4fe84d586e19c9",
+        "identifiers": 9748,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f1_ONT_Run2.RAD.txt",
+        "original_source_sha256": "ced47771c59ea43f6f9564ea996c1e73839b161e71cbf9675b4fe84d586e19c9",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_f1_ONT_Run2.RAD.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "35df4273459e5ee8dbde3544100cdf0ee5ea52b52e1160fdf3cb01d523582366"
+      },
+      "canonical_id": "Hipp_SN_f1_ONT_Run2",
+      "counts": {
+        "calls": 9748,
+        "fn": 1804,
+        "fp": 1215,
+        "reference_n": 10337,
+        "tp": 8533
+      },
+      "reference": {
+        "content_sha256": "6d5e74d4dc1ff7396e2b64890a2d07b2984086d90fc07e1ea432e428e40406cb",
+        "identifiers": 10337,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/f1.cellranger_filtered_barcodes.txt.gz",
+        "original_source_sha256": "c48d601447ea8014fb071a8dc49de557549f5e9712576e181dafc8eeca52cdf4",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_f1_ONT_Run1.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "0c1a3ceccb04b34324ce7be7f466d4db03ef645156863f8a69b1ef1e389cac1a"
+      },
+      "status": "passed",
+      "tool": "RAD"
+    },
+    {
+      "callset": {
+        "content_sha256": "57addbe249db92b31626fbfefd80c59227a4e64ac656b3f8cd02cdf66cfe1107",
+        "identifiers": 9440,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f1_ONT_Run2.BLAZE.txt",
+        "original_source_sha256": "57addbe249db92b31626fbfefd80c59227a4e64ac656b3f8cd02cdf66cfe1107",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_f1_ONT_Run2.BLAZE.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "3a5e0dd49ee55f2ca1a82c1e3cafde33fb429059f423ece145a584d080750075"
+      },
+      "canonical_id": "Hipp_SN_f1_ONT_Run2",
+      "counts": {
+        "calls": 9440,
+        "fn": 1542,
+        "fp": 645,
+        "reference_n": 10337,
+        "tp": 8795
+      },
+      "reference": {
+        "content_sha256": "6d5e74d4dc1ff7396e2b64890a2d07b2984086d90fc07e1ea432e428e40406cb",
+        "identifiers": 10337,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/f1.cellranger_filtered_barcodes.txt.gz",
+        "original_source_sha256": "c48d601447ea8014fb071a8dc49de557549f5e9712576e181dafc8eeca52cdf4",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_f1_ONT_Run1.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "0c1a3ceccb04b34324ce7be7f466d4db03ef645156863f8a69b1ef1e389cac1a"
+      },
+      "status": "passed",
+      "tool": "BLAZE"
+    },
+    {
+      "callset": {
+        "content_sha256": "5a32cb6b9f63e0ca9ba974318639342aab35fb306570d8de67a923eb4238c42c",
+        "identifiers": 7105,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f1_ONT_Run2.Flexiplex.txt",
+        "original_source_sha256": "5a32cb6b9f63e0ca9ba974318639342aab35fb306570d8de67a923eb4238c42c",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_f1_ONT_Run2.Flexiplex.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "604ec2d31dd3f9d14f037bb21cfe1a2e6c6b3d8e712520da83373796a3056e93"
+      },
+      "canonical_id": "Hipp_SN_f1_ONT_Run2",
+      "counts": {
+        "calls": 7105,
+        "fn": 3969,
+        "fp": 737,
+        "reference_n": 10337,
+        "tp": 6368
+      },
+      "reference": {
+        "content_sha256": "6d5e74d4dc1ff7396e2b64890a2d07b2984086d90fc07e1ea432e428e40406cb",
+        "identifiers": 10337,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/f1.cellranger_filtered_barcodes.txt.gz",
+        "original_source_sha256": "c48d601447ea8014fb071a8dc49de557549f5e9712576e181dafc8eeca52cdf4",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_f1_ONT_Run1.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "0c1a3ceccb04b34324ce7be7f466d4db03ef645156863f8a69b1ef1e389cac1a"
+      },
+      "status": "passed",
+      "tool": "Flexiplex"
+    },
+    {
+      "callset": {
+        "content_sha256": "f8adced4a8004361d7b4d84f7c642c8b23c78d9c13f7c1d5069e2e1486597939",
+        "identifiers": 9700,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f2_ONT.RAD.txt",
+        "original_source_sha256": "f8adced4a8004361d7b4d84f7c642c8b23c78d9c13f7c1d5069e2e1486597939",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_f2_ONT.RAD.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "380473d485a418e0cf75b74b6419962454c1c275d19d0074555165c76fdbf7aa"
+      },
+      "canonical_id": "Hipp_SN_f2_ONT",
+      "counts": {
+        "calls": 9700,
+        "fn": 752,
+        "fp": 633,
+        "reference_n": 9819,
+        "tp": 9067
+      },
+      "reference": {
+        "content_sha256": "f3c94c64256ae17d9ddf3be1f0eda512ba52949b4b4ae71922eba5ebce5b1c31",
+        "identifiers": 9819,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/f2.cellranger_filtered_barcodes.txt.gz",
+        "original_source_sha256": "c191bd554ab7111ee346b2d608c37b02c3a158f0590364a85eba757e6872d06e",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_f2_ONT.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "3f751125dbffb4323822a3402f21a4c67e0ce12a7a4d01bbe7617bf06c1609f3"
+      },
+      "status": "passed",
+      "tool": "RAD"
+    },
+    {
+      "callset": {
+        "content_sha256": "a3b0328b316f47ed465963a1e300ea74eed2348380878c109e2c6ba1de435327",
+        "identifiers": 7511,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f2_ONT.BLAZE.txt",
+        "original_source_sha256": "a3b0328b316f47ed465963a1e300ea74eed2348380878c109e2c6ba1de435327",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_f2_ONT.BLAZE.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "62740212fb3669e7a8ce2009df3493ae181d3321cfa9b4f8915a74669b2ac9d8"
+      },
+      "canonical_id": "Hipp_SN_f2_ONT",
+      "counts": {
+        "calls": 7511,
+        "fn": 2557,
+        "fp": 249,
+        "reference_n": 9819,
+        "tp": 7262
+      },
+      "reference": {
+        "content_sha256": "f3c94c64256ae17d9ddf3be1f0eda512ba52949b4b4ae71922eba5ebce5b1c31",
+        "identifiers": 9819,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/f2.cellranger_filtered_barcodes.txt.gz",
+        "original_source_sha256": "c191bd554ab7111ee346b2d608c37b02c3a158f0590364a85eba757e6872d06e",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_f2_ONT.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "3f751125dbffb4323822a3402f21a4c67e0ce12a7a4d01bbe7617bf06c1609f3"
+      },
+      "status": "passed",
+      "tool": "BLAZE"
+    },
+    {
+      "callset": {
+        "content_sha256": "6d979d6a28bd08e898f4cfd7c21be4dc8a975b573f56ae40249214e4ddcf3cb1",
+        "identifiers": 9362,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f2_ONT.Flexiplex.txt",
+        "original_source_sha256": "6d979d6a28bd08e898f4cfd7c21be4dc8a975b573f56ae40249214e4ddcf3cb1",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_f2_ONT.Flexiplex.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "fb6fdc834480137a1cfcf36eb74def1d9b86501cd3660333f1ea5fbd5a1c6099"
+      },
+      "canonical_id": "Hipp_SN_f2_ONT",
+      "counts": {
+        "calls": 9362,
+        "fn": 926,
+        "fp": 469,
+        "reference_n": 9819,
+        "tp": 8893
+      },
+      "reference": {
+        "content_sha256": "f3c94c64256ae17d9ddf3be1f0eda512ba52949b4b4ae71922eba5ebce5b1c31",
+        "identifiers": 9819,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/f2.cellranger_filtered_barcodes.txt.gz",
+        "original_source_sha256": "c191bd554ab7111ee346b2d608c37b02c3a158f0590364a85eba757e6872d06e",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_f2_ONT.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "3f751125dbffb4323822a3402f21a4c67e0ce12a7a4d01bbe7617bf06c1609f3"
+      },
+      "status": "passed",
+      "tool": "Flexiplex"
+    },
+    {
+      "callset": {
+        "content_sha256": "c431099efccf10f7d40c4ca24598c0142aaea38aefc32d5446931d6ceb9ca264",
+        "identifiers": 7849,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f3_ONT_Run1.RAD.txt",
+        "original_source_sha256": "cecdd0625173b2461aeb81899039daa3384d2d1f2e6276c0faada13afd649bbd",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_f3_ONT_Run1.RAD.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "901c97135b6a558bb5dc4205ec50b3a4b1264baba21de85438c28c7ee47229e7"
+      },
+      "canonical_id": "Hipp_SN_f3_ONT_Run1",
+      "counts": {
+        "calls": 7849,
+        "fn": 274,
+        "fp": 473,
+        "reference_n": 7650,
+        "tp": 7376
+      },
+      "reference": {
+        "content_sha256": "aa30dd38f1bfd2ed73d121cf08e77600836bc6ee38253f1ac0331dacf68ce757",
+        "identifiers": 7650,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/f3.cellranger_filtered_barcodes.txt.gz",
+        "original_source_sha256": "66168e0bf39ceb63dac65e8f4a34f12f866287f6557ac8f4c2294d9b003f1533",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_f3_ONT_Run1.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "fb56be1cd73c87706592705b31b8a0efb61cca876dd54034730267517a46d44b"
+      },
+      "status": "passed",
+      "tool": "RAD"
+    },
+    {
+      "callset": {
+        "content_sha256": "c43fcd7dfa55d4c49fed1014413d415800a105f92bb3e439f7a2ee6501064c3d",
+        "identifiers": 7602,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f3_ONT_Run1.BLAZE.txt",
+        "original_source_sha256": "94673e6977b0e3c47536f5f8cd2680e70bdb318902303b6318bf97a88900a5c1",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_f3_ONT_Run1.BLAZE.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "7e38d914e2ff96233370d37af73934aa31ff0e29616973c55eb3a20fb798dae8"
+      },
+      "canonical_id": "Hipp_SN_f3_ONT_Run1",
+      "counts": {
+        "calls": 7602,
+        "fn": 420,
+        "fp": 372,
+        "reference_n": 7650,
+        "tp": 7230
+      },
+      "reference": {
+        "content_sha256": "aa30dd38f1bfd2ed73d121cf08e77600836bc6ee38253f1ac0331dacf68ce757",
+        "identifiers": 7650,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/f3.cellranger_filtered_barcodes.txt.gz",
+        "original_source_sha256": "66168e0bf39ceb63dac65e8f4a34f12f866287f6557ac8f4c2294d9b003f1533",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_f3_ONT_Run1.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "fb56be1cd73c87706592705b31b8a0efb61cca876dd54034730267517a46d44b"
+      },
+      "status": "passed",
+      "tool": "BLAZE"
+    },
+    {
+      "callset": {
+        "content_sha256": "cdd4d36955ebf672c9eb49a246c1f32e27ad0fb3edfb3dd5c5bbc0cf44d19c00",
+        "identifiers": 3026,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f3_ONT_Run1.Flexiplex.txt",
+        "original_source_sha256": "a8392c63de1d732ab4b934de5af18ad7b3a4fb83938d8a40e820843e6282f458",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_f3_ONT_Run1.Flexiplex.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "0784bec021fd81b08434ec5ed2bd3feb59e11bc5d8a35b91cf3eb575fd7c2e52"
+      },
+      "canonical_id": "Hipp_SN_f3_ONT_Run1",
+      "counts": {
+        "calls": 3026,
+        "fn": 4655,
+        "fp": 31,
+        "reference_n": 7650,
+        "tp": 2995
+      },
+      "reference": {
+        "content_sha256": "aa30dd38f1bfd2ed73d121cf08e77600836bc6ee38253f1ac0331dacf68ce757",
+        "identifiers": 7650,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/f3.cellranger_filtered_barcodes.txt.gz",
+        "original_source_sha256": "66168e0bf39ceb63dac65e8f4a34f12f866287f6557ac8f4c2294d9b003f1533",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_f3_ONT_Run1.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "fb56be1cd73c87706592705b31b8a0efb61cca876dd54034730267517a46d44b"
+      },
+      "status": "passed",
+      "tool": "Flexiplex"
+    },
+    {
+      "callset": {
+        "content_sha256": "ec8a713d9f3b53101a2c4c2848122cdf132e1b24ba3f68d290947c6ea7caf7a4",
+        "identifiers": 7811,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f3_ONT_Run2.RAD.txt",
+        "original_source_sha256": "aa695dd0d654a2f29b69536281e785c1feb97172d7072dce613ee5a9600f2d7d",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_f3_ONT_Run2.RAD.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "cc739d93f4231daa1ea03e3212ad47034f3d23a99c0177c909fdfb8d48cf3817"
+      },
+      "canonical_id": "Hipp_SN_f3_ONT_Run2",
+      "counts": {
+        "calls": 7811,
+        "fn": 279,
+        "fp": 440,
+        "reference_n": 7650,
+        "tp": 7371
+      },
+      "reference": {
+        "content_sha256": "aa30dd38f1bfd2ed73d121cf08e77600836bc6ee38253f1ac0331dacf68ce757",
+        "identifiers": 7650,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/f3.cellranger_filtered_barcodes.txt.gz",
+        "original_source_sha256": "66168e0bf39ceb63dac65e8f4a34f12f866287f6557ac8f4c2294d9b003f1533",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_f3_ONT_Run1.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "fb56be1cd73c87706592705b31b8a0efb61cca876dd54034730267517a46d44b"
+      },
+      "status": "passed",
+      "tool": "RAD"
+    },
+    {
+      "callset": {
+        "content_sha256": "4ba14c83d34a4a980b27079c0a8c1530b0a8aa55c4ffca2512a5f2710454a179",
+        "identifiers": 7507,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f3_ONT_Run2.BLAZE.txt",
+        "original_source_sha256": "c89bfee54e37769df31962f727c79192cfa21d4c2522ce7d0e2bd8f15779df04",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_f3_ONT_Run2.BLAZE.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "dcc80b52bd4a2a671d4b6944db6d08ad5ab0d21c035323fbcbd97e0bc2aff85d"
+      },
+      "canonical_id": "Hipp_SN_f3_ONT_Run2",
+      "counts": {
+        "calls": 7507,
+        "fn": 502,
+        "fp": 359,
+        "reference_n": 7650,
+        "tp": 7148
+      },
+      "reference": {
+        "content_sha256": "aa30dd38f1bfd2ed73d121cf08e77600836bc6ee38253f1ac0331dacf68ce757",
+        "identifiers": 7650,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/f3.cellranger_filtered_barcodes.txt.gz",
+        "original_source_sha256": "66168e0bf39ceb63dac65e8f4a34f12f866287f6557ac8f4c2294d9b003f1533",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_f3_ONT_Run1.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "fb56be1cd73c87706592705b31b8a0efb61cca876dd54034730267517a46d44b"
+      },
+      "status": "passed",
+      "tool": "BLAZE"
+    },
+    {
+      "callset": {
+        "content_sha256": "b176ec7fd1c5c4628fe09010bae8e1b21d3e313eb18cd608b6f61a1bc7a7e4b1",
+        "identifiers": 2947,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f3_ONT_Run2.Flexiplex.txt",
+        "original_source_sha256": "e41829761384dff46ed7e6c133ee919be6f457a169fecc243e6d00d9641c01a7",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_f3_ONT_Run2.Flexiplex.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "721166b62fce46714ff32a1239975bf5b543bdca640f4f006dae2062cdc77e7f"
+      },
+      "canonical_id": "Hipp_SN_f3_ONT_Run2",
+      "counts": {
+        "calls": 2947,
+        "fn": 4730,
+        "fp": 27,
+        "reference_n": 7650,
+        "tp": 2920
+      },
+      "reference": {
+        "content_sha256": "aa30dd38f1bfd2ed73d121cf08e77600836bc6ee38253f1ac0331dacf68ce757",
+        "identifiers": 7650,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/f3.cellranger_filtered_barcodes.txt.gz",
+        "original_source_sha256": "66168e0bf39ceb63dac65e8f4a34f12f866287f6557ac8f4c2294d9b003f1533",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_f3_ONT_Run1.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "fb56be1cd73c87706592705b31b8a0efb61cca876dd54034730267517a46d44b"
+      },
+      "status": "passed",
+      "tool": "Flexiplex"
+    },
+    {
+      "callset": {
+        "content_sha256": "d8e024da08a127604379f2deb63486913171f16c4a2f024be8f95e85920291cb",
+        "identifiers": 12346,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m2_ONT.RAD.txt",
+        "original_source_sha256": "f5bed135da36a371118e7e520dad19d48b750166dfcadef4517356cb369bc676",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_m2_ONT.RAD.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "2146a9ef2452f803308b553a3fe722ba5456cc6aff4892c0f5834d86e921f8cb"
+      },
+      "canonical_id": "Hipp_SN_m2_ONT",
+      "counts": {
+        "calls": 12346,
+        "fn": 368,
+        "fp": 834,
+        "reference_n": 11880,
+        "tp": 11512
+      },
+      "reference": {
+        "content_sha256": "b2af772ff3bb152bacdde59b68efbc2c3dcc904f2410094e630b662c47e1c5ef",
+        "identifiers": 11880,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/m2.cellranger_filtered_barcodes.txt.gz",
+        "original_source_sha256": "ce8c104da01a558d6a442015f234f39610c733e06e9f300e180d37516744d6ae",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_m2_ONT.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "8ee34269eca77b5bf464d69b33566829638f8a092fd77cdbfce27c5bcbe0dbe1"
+      },
+      "status": "passed",
+      "tool": "RAD"
+    },
+    {
+      "callset": {
+        "content_sha256": "96a8ef753b98d0651c6dc20fdbf4521043dbced8f1adff2af76e0ce6e7cf01d9",
+        "identifiers": 10419,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m2_ONT.BLAZE.txt",
+        "original_source_sha256": "43a001cbe1bf20ccefb8fb76ab20be292fc178919ad95b56edffaa94e74986e5",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_m2_ONT.BLAZE.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "37472d0eb39d4608a001ddf66a532630ea518200583a643ab807349a6dcfb185"
+      },
+      "canonical_id": "Hipp_SN_m2_ONT",
+      "counts": {
+        "calls": 10419,
+        "fn": 1901,
+        "fp": 440,
+        "reference_n": 11880,
+        "tp": 9979
+      },
+      "reference": {
+        "content_sha256": "b2af772ff3bb152bacdde59b68efbc2c3dcc904f2410094e630b662c47e1c5ef",
+        "identifiers": 11880,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/m2.cellranger_filtered_barcodes.txt.gz",
+        "original_source_sha256": "ce8c104da01a558d6a442015f234f39610c733e06e9f300e180d37516744d6ae",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_m2_ONT.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "8ee34269eca77b5bf464d69b33566829638f8a092fd77cdbfce27c5bcbe0dbe1"
+      },
+      "status": "passed",
+      "tool": "BLAZE"
+    },
+    {
+      "callset": {
+        "content_sha256": "31fb7a82e82d5868053c753c999d72ebe39d3a233ad7953912b39f9459c807a4",
+        "identifiers": 12267,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m2_ONT.Flexiplex.txt",
+        "original_source_sha256": "22a6f2fe0a744db454f6c7a66485792a333098f39d1c453a89df22e3713ceaa6",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_m2_ONT.Flexiplex.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "ae89c84177b34117b1072fcd7261d810325d772da72f540f8224ed949d552f87"
+      },
+      "canonical_id": "Hipp_SN_m2_ONT",
+      "counts": {
+        "calls": 12267,
+        "fn": 521,
+        "fp": 908,
+        "reference_n": 11880,
+        "tp": 11359
+      },
+      "reference": {
+        "content_sha256": "b2af772ff3bb152bacdde59b68efbc2c3dcc904f2410094e630b662c47e1c5ef",
+        "identifiers": 11880,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/m2.cellranger_filtered_barcodes.txt.gz",
+        "original_source_sha256": "ce8c104da01a558d6a442015f234f39610c733e06e9f300e180d37516744d6ae",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_m2_ONT.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "8ee34269eca77b5bf464d69b33566829638f8a092fd77cdbfce27c5bcbe0dbe1"
+      },
+      "status": "passed",
+      "tool": "Flexiplex"
+    },
+    {
+      "callset": {
+        "content_sha256": "5ebb6159d5ba9254c14613b3f9f6584753d8ff1a6901bda14676676054fa51d6",
+        "identifiers": 10776,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m3_ONT.RAD.txt",
+        "original_source_sha256": "a3e83f4d88a854fbd1b8117f8994e1b9aae89445768f624826538b40e4d6dbf6",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_m3_ONT.RAD.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "b7bcdb67873ad872fe641092077c20122d0299d43f0d08550eb97979583157a1"
+      },
+      "canonical_id": "Hipp_SN_m3_ONT",
+      "counts": {
+        "calls": 10776,
+        "fn": 358,
+        "fp": 354,
+        "reference_n": 10780,
+        "tp": 10422
+      },
+      "reference": {
+        "content_sha256": "8a807e9368d30aaf2aa9e952ea789d72dc2b3575fb9b4e64b8d12f5d87bd9312",
+        "identifiers": 10780,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/m3.cellranger_filtered_barcodes.txt.gz",
+        "original_source_sha256": "0e86c5d5621b00e710b54d2e1115708ed61e8e060413161cd9d66404a5375df7",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_m3_ONT.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "d2e95471d8eeb7368a9b093a03cfc92e2c96bb97c7fd995406c2174162f77b73"
+      },
+      "status": "passed",
+      "tool": "RAD"
+    },
+    {
+      "callset": {
+        "content_sha256": "579b61ad47d21b8d6a305c55944e3fe1ed409b77ee80ca649a88c65b7a1cfa71",
+        "identifiers": 10754,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m3_ONT.BLAZE.txt",
+        "original_source_sha256": "937bdc133f1cdf1bc2b8071abbb203a6729b00e0504428a27b5d1f86292227f6",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_m3_ONT.BLAZE.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "73fea250b6d4d33cf7afe27a5d1290c0bd241ecee3d832c16168f4bbb8f5a652"
+      },
+      "canonical_id": "Hipp_SN_m3_ONT",
+      "counts": {
+        "calls": 10754,
+        "fn": 440,
+        "fp": 414,
+        "reference_n": 10780,
+        "tp": 10340
+      },
+      "reference": {
+        "content_sha256": "8a807e9368d30aaf2aa9e952ea789d72dc2b3575fb9b4e64b8d12f5d87bd9312",
+        "identifiers": 10780,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/m3.cellranger_filtered_barcodes.txt.gz",
+        "original_source_sha256": "0e86c5d5621b00e710b54d2e1115708ed61e8e060413161cd9d66404a5375df7",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_m3_ONT.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "d2e95471d8eeb7368a9b093a03cfc92e2c96bb97c7fd995406c2174162f77b73"
+      },
+      "status": "passed",
+      "tool": "BLAZE"
+    },
+    {
+      "callset": {
+        "content_sha256": "942e24e8fc521b05efec12a502877f0e6d2ee3a521beb890ce68675f5de5e70f",
+        "identifiers": 11070,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m3_ONT.Flexiplex.txt",
+        "original_source_sha256": "a39eb6847d2e0bb33dd2e605de1fd73c1a183e448acda8c5deeefef8556ddff3",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_m3_ONT.Flexiplex.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "c9676ef1513737b1cd05b5d97a20e48675356cdc5eaae8d9cbe787828d7140db"
+      },
+      "canonical_id": "Hipp_SN_m3_ONT",
+      "counts": {
+        "calls": 11070,
+        "fn": 457,
+        "fp": 747,
+        "reference_n": 10780,
+        "tp": 10323
+      },
+      "reference": {
+        "content_sha256": "8a807e9368d30aaf2aa9e952ea789d72dc2b3575fb9b4e64b8d12f5d87bd9312",
+        "identifiers": 10780,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/m3.cellranger_filtered_barcodes.txt.gz",
+        "original_source_sha256": "0e86c5d5621b00e710b54d2e1115708ed61e8e060413161cd9d66404a5375df7",
+        "path": "data/figure_04/identifier_sets/Hipp_SN_m3_ONT.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; ",
+        "sha256": "d2e95471d8eeb7368a9b093a03cfc92e2c96bb97c7fd995406c2174162f77b73"
+      },
+      "status": "passed",
+      "tool": "Flexiplex"
+    },
+    {
+      "callset": {
+        "content_sha256": "e3494f19b98741da2e3ef2ef608a57bf1069474cb2ae9be4e10b1d97c6eda383",
+        "identifiers": 279,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_scmix2_20260726/results/fixed_scmix2_scanwl_e03_t24_full_20260726/cases/01_full/output/scanwl.txt",
+        "original_source_sha256": "50a94b8ecc4ac21c356a851017c984a7fb3f6a664b6c16388d5c1fa10ea7d07e",
+        "path": "data/figure_04/identifier_sets/ScMixology2.RAD.txt.gz",
+        "selection": "first token, terminal -1 removal; Saved selected native RAD or BLAZE expect500 selector reconstruction",
+        "sha256": "a819830fc95f9a5328a3c46ede443af1079776fc5d459b09d6345a1c92b10648"
+      },
+      "canonical_id": "ScMixology2",
+      "counts": {
+        "calls": 279,
+        "fn": 15,
+        "fp": 46,
+        "reference_n": 248,
+        "tp": 233
+      },
+      "reference": {
+        "content_sha256": "f9db9041753aabdde48539845174b5b299c0725c5f846df3d0ee35b424d56c50",
+        "identifiers": 248,
+        "original_source": "/scratch/f005f43/blaze_analysis_data_20335203/data/scmixology/cellranger/whitelist.tsv",
+        "original_source_sha256": "55dab619f152ad60635138d8c15a5c1e695a27d97847bcb3a159d1a3a31e41a1",
+        "path": "data/figure_04/identifier_sets/ScMixology2.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; Saved selected native RAD or BLAZE expect500 selector reconstruction",
+        "sha256": "45f58f0b2f193135b2af503174c6a4c3665ededa8d4fba6dd81a3eca63fcd34f"
+      },
+      "status": "passed",
+      "tool": "RAD"
+    },
+    {
+      "callset": {
+        "content_sha256": "4ac4566fb59630ff1314da1586023f31e79188d0f07e2fa841fec866a1a36910",
+        "identifiers": 188,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/blaze_single_cell_expect_sweep_20260810/exploratory/scmixology2/callsets/expect500_whitelist.txt",
+        "original_source_sha256": "4ac4566fb59630ff1314da1586023f31e79188d0f07e2fa841fec866a1a36910",
+        "path": "data/figure_04/identifier_sets/ScMixology2.BLAZE.txt.gz",
+        "selection": "first token, terminal -1 removal; Saved selected native RAD or BLAZE expect500 selector reconstruction",
+        "sha256": "807557632347b3cfd8aabb0c86fa45008474a7e691e7a375c07d9fcffdbbd7b6"
+      },
+      "canonical_id": "ScMixology2",
+      "counts": {
+        "calls": 188,
+        "fn": 60,
+        "fp": 0,
+        "reference_n": 248,
+        "tp": 188
+      },
+      "reference": {
+        "content_sha256": "f9db9041753aabdde48539845174b5b299c0725c5f846df3d0ee35b424d56c50",
+        "identifiers": 248,
+        "original_source": "/scratch/f005f43/blaze_analysis_data_20335203/data/scmixology/cellranger/whitelist.tsv",
+        "original_source_sha256": "55dab619f152ad60635138d8c15a5c1e695a27d97847bcb3a159d1a3a31e41a1",
+        "path": "data/figure_04/identifier_sets/ScMixology2.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; Saved selected native RAD or BLAZE expect500 selector reconstruction",
+        "sha256": "45f58f0b2f193135b2af503174c6a4c3665ededa8d4fba6dd81a3eca63fcd34f"
+      },
+      "status": "passed",
+      "tool": "BLAZE"
+    },
+    {
+      "callset": {
+        "content_sha256": "291ec96ec8092de59eb88928a6aef660f5e44e3b8cb560a62f7aac6bcbcf9a21",
+        "identifiers": 184,
+        "original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260804_common_count_selector_ablation/full37/selector_membership.tsv.gz",
+        "original_source_sha256": "a73c2f62cd2a3ceee7697f39deb6071673b3b24e9704c3f9c2ad9cdeabe9ea41",
+        "path": "data/figure_04/identifier_sets/ScMixology2.Flexiplex.txt.gz",
+        "selection": "column barcode; Saved membership rows: dataset=scMixology2, method=Flexiplex, mode=exact_flexiplex_filter_v1.02.6",
+        "sha256": "bbef9c2a5026038f9afab6b5e4f5d848aaae060de78bc73fc2c120cf7785f80e"
+      },
+      "canonical_id": "ScMixology2",
+      "counts": {
+        "calls": 184,
+        "fn": 65,
+        "fp": 1,
+        "reference_n": 248,
+        "tp": 183
+      },
+      "reference": {
+        "content_sha256": "f9db9041753aabdde48539845174b5b299c0725c5f846df3d0ee35b424d56c50",
+        "identifiers": 248,
+        "original_source": "/scratch/f005f43/blaze_analysis_data_20335203/data/scmixology/cellranger/whitelist.tsv",
+        "original_source_sha256": "55dab619f152ad60635138d8c15a5c1e695a27d97847bcb3a159d1a3a31e41a1",
+        "path": "data/figure_04/identifier_sets/ScMixology2.reference.txt.gz",
+        "selection": "first token, terminal -1 removal; Saved membership rows: dataset=scMixology2, method=Flexiplex, mode=exact_flexiplex_filter_v1.02.6",
+        "sha256": "45f58f0b2f193135b2af503174c6a4c3665ededa8d4fba6dd81a3eca63fcd34f"
+      },
+      "status": "passed",
+      "tool": "Flexiplex"
+    }
+  ],
+  "code_sha256": "aa68c055f457805bfab8baa1abf6dd75eb3479209bf520d4b6a8583f01301cf3",
+  "identifier_manifest_sha256": "eff9759cff74c3fa360028b6b3a0b24bed8ed613fdf26f86a9d074dad89ed2a6",
+  "normalization": "exact saved selections; first token or named column, terminal -1 removed; sorted unique 16nt ACGT identifiers; no counts-to-callset inference",
+  "public_rows": 87,
+  "selected_table_sha256": "fef92287def3e62e746e494ce445c7e5b8903f3d46bd75e8f8bb4e37746b33b2",
+  "selected_unique_files": 105,
+  "status": "passed"
+}

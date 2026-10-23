@@ -1,0 +1,3 @@
+tool	input_source_reads	full_assignment_rows	full_unique_source_reads	full_unique_source_read_percent	full_assignment_row_percent	published_cells	published_assignment_rows	published_unique_source_reads	read_cell_pairs	cell_umi_pairs	median_reads	median_umis
+RAD	5764421	2536299	2498488	43.34326032050747	43.99919783790948	568	2079870	2063573	2078171	1891704	1979.5	1866.0
+Component Flexiplex polyT	5764421	1345255	1338285	23.21629527059179	23.33720940923642	568	1157117	1152260	1156252	1050292	1102.5	1042.0

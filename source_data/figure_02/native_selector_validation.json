@@ -1,0 +1,16 @@
+{
+  "added_by_replay": [],
+  "byte_identical_whitelist": true,
+  "checked_utc": "2026-09-13T19:33:20.771426+00:00",
+  "false_negatives": 0,
+  "false_positives": 15,
+  "high_quality_candidate_reads": 227812,
+  "missing_from_replay": [],
+  "original_count": 5015,
+  "original_whitelist": "/scratch-nfs/f005f43/sctagger_nanopore2023_unadjusted_20260913/runs/L/nanopore2023_native_unadjusted/blaze/whitelist.csv",
+  "other_validation_controls_run": [],
+  "passed": true,
+  "replay_count": 5015,
+  "replayed_whitelist": "/scratch-nfs/f005f43/sctagger_nanopore2023_extended_sweep_20260913/blaze_replay/conditions/native_unadjusted_validation/whitelist.csv",
+  "true_positives": 5000
+}

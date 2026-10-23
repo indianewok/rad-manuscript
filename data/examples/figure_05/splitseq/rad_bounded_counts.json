@@ -1,0 +1,36 @@
+{
+  "status": "completed aggregation; compare with selected checkpoint",
+  "tool": "rad",
+  "summary": {
+    "assignment_rows": 8,
+    "published_assignment_rows": 8,
+    "published_full_10nt_umi_rows": 7,
+    "published_other_umi_length_rows": 1,
+    "unique_source_reads": 8,
+    "published_cells": 2,
+    "published_cells_with_reads": 2,
+    "published_unique_source_reads": 8,
+    "read_cell_pairs": 8,
+    "cell_umi_pairs": 8,
+    "median_reads": 4.0,
+    "median_umis": 4.0
+  },
+  "code_sha256": "2a7f30b54767cc7cda4f59ae3361b7f701d40b7a745412b1fd3437e76faf843e",
+  "inputs": [
+    {
+      "path": "data/examples/figure_05/splitseq/rad_assignments.tsv",
+      "sha256": "57ffebe6dca5234896e73398729c24baae751a4c0056768da075c5fbe3c1c4ec"
+    },
+    {
+      "path": "data/examples/figure_05/splitseq/cells.tsv",
+      "sha256": "4ccfefad0abb788424dbb6d29f947e6faf9f8bc3a623e81344445a9f3fe9d191"
+    },
+    {
+      "path": "data/figure_05/rt_primer_well_map.csv",
+      "sha256": "e8981cdbe674e3e51b46c12736cbb6e4233eeca9d4b7b286a99a0864d4920aa1"
+    }
+  ],
+  "output_sha256": "f6de971bf3cc8d379d9b283d5a6fff3c4ac4e5f38444b5a3c4f98f6d7f1ffa23",
+  "raw_demultiplexing_rerun": false,
+  "unit": "distinct read IDs and exact UMI strings within each canonical cell; sums are cell pairs"
+}

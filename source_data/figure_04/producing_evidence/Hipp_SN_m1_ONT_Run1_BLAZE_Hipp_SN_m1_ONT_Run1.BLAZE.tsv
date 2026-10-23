@@ -1,0 +1,27 @@
+run	Hipp_SN_m1_ONT_Run1
+tool	BLAZE2
+job_id	9141858
+host	a02.hpcc.dartmouth.edu
+partition	preempt_lsong
+reserved_cpus	48
+cpus_allowed	24-47,88-111
+input	/scratch-nfs/f005f43/tilgner_rad_blaze_ambient_20260805/input/Hipp_SN_m1_ONT_Run1.fastq.gz
+input_bytes	35117122487
+input_sha256	30bd63def1599440784c50bafef4afe9ba561b68970ad66168188d6d9adf1750
+blaze_path	/scratch-nfs/f005f43/longbench_agent_runs_20260803/shared/tools/blaze2-2.5.0/venv/bin/blaze
+blaze_version	2.5.0
+blaze_wheel	/scratch-nfs/f005f43/longbench_agent_runs_20260803/shared/tools/blaze2-2.5.0/blaze2-2.5.0-py3-none-any.whl
+blaze_wheel_sha256	9cf4d9e910894c77fd897a7008f93c1c79064af7bf43d07e998d38c83d4563b8
+kit	3v3
+expect_cells	10205
+mode	native_default_conservative
+command	/scratch-nfs/f005f43/longbench_agent_runs_20260803/shared/tools/blaze2-2.5.0/venv/bin/blaze --expect-cells 10205 --kit-version 3v3 --output-prefix /scratch-nfs/f005f43/tilgner_rad_blaze_ambient_20260805/demux/BLAZE/Hipp_SN_m1_ONT_Run1/ --output-fastq matched_reads.fastq.gz --threads 48 --minimal_stdout /scratch-nfs/f005f43/tilgner_rad_blaze_ambient_20260805/input/Hipp_SN_m1_ONT_Run1.fastq.gz
+started_utc	2026-08-06T04:39:30Z
+fastq	/scratch-nfs/f005f43/tilgner_rad_blaze_ambient_20260805/demux/BLAZE/Hipp_SN_m1_ONT_Run1/matched_reads.fastq.gz
+selected_barcodes	/scratch-nfs/f005f43/tilgner_rad_blaze_ambient_20260805/demux/BLAZE/Hipp_SN_m1_ONT_Run1/whitelist.csv
+read_assignment_table	/scratch-nfs/f005f43/tilgner_rad_blaze_ambient_20260805/demux/BLAZE/Hipp_SN_m1_ONT_Run1/putative_bc.csv.gz
+summary	/scratch-nfs/f005f43/tilgner_rad_blaze_ambient_20260805/demux/BLAZE/Hipp_SN_m1_ONT_Run1/summary.txt
+fastq_sha256	f04b1f136710855529be4d07fed9b8ee22b35a93e72f18be0ca1f4d03d8ef6c0
+selected_barcode_rows	10922
+completed_utc	2026-08-06T06:00:51Z
+status	complete

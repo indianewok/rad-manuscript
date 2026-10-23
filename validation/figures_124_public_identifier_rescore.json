@@ -1,0 +1,15 @@
+{
+  "command": "/scratch/f005f43/rad-manuscript-render-env-20261023/bin/python scripts/revision/figures_124_steps/rescore_public_identifiers.py --output /tmp/figure4_identifier_rescore.tsv",
+  "controlled_rows_aggregate_only": 24,
+  "counts": "exact equality",
+  "floating_metric_tolerance": 1e-09,
+  "identifier_manifest_sha256": "eff9759cff74c3fa360028b6b3a0b24bed8ed613fdf26f86a9d074dad89ed2a6",
+  "independent_review": "Agent figures_567 independently ran source-only public rescore and reviewed 87/24 distinction; clarified metric tolerance. Subsequent current check also asserts full37-by-three pairing.",
+  "output_sha256": "5d6f394d23b79f949ec3a5b596da9ec08604ef75c3b20451cb3e919ba3c7a386",
+  "public_rows_recomputed": 87,
+  "raw_tools_rerun": false,
+  "script_sha256": "82daedea36e5cac6ee830b32c36711e330290304b9d3cf04f2693a6bc2558698",
+  "selected_inputs": 37,
+  "selected_table_sha256": "fef92287def3e62e746e494ce445c7e5b8903f3d46bd75e8f8bb4e37746b33b2",
+  "status": "passed"
+}

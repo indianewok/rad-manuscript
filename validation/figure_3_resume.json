@@ -1,0 +1,2906 @@
+{
+  "status": "passed",
+  "level": "validated_C5_to_C6",
+  "checks": [
+    {
+      "check_id": "offlist/ScTagger-L/RAD/1/target_count",
+      "observed": 5000,
+      "expected": 5000,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/ScTagger-L/RAD/1/unique_rows",
+      "observed": 5000,
+      "expected": 5000,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/ScTagger-L/RAD/1/sum",
+      "observed": 48997,
+      "expected": 48997,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/ScTagger-L/RAD/2/target_count",
+      "observed": 5000,
+      "expected": 5000,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/ScTagger-L/RAD/2/unique_rows",
+      "observed": 5000,
+      "expected": 5000,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/ScTagger-L/RAD/2/sum",
+      "observed": 49004,
+      "expected": 49004,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/ScTagger-L/RAD/3/target_count",
+      "observed": 5000,
+      "expected": 5000,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/ScTagger-L/RAD/3/unique_rows",
+      "observed": 5000,
+      "expected": 5000,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/ScTagger-L/RAD/3/sum",
+      "observed": 49292,
+      "expected": 49292,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/ScTagger-L/BLAZE/1/target_count",
+      "observed": 5000,
+      "expected": 5000,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/ScTagger-L/BLAZE/1/unique_rows",
+      "observed": 5000,
+      "expected": 5000,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/ScTagger-L/BLAZE/1/sum",
+      "observed": 294175,
+      "expected": 294175,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/ScTagger-L/BLAZE/2/target_count",
+      "observed": 5000,
+      "expected": 5000,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/ScTagger-L/BLAZE/2/unique_rows",
+      "observed": 5000,
+      "expected": 5000,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/ScTagger-L/BLAZE/2/sum",
+      "observed": 304701,
+      "expected": 304701,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/ScTagger-L/BLAZE/3/target_count",
+      "observed": 5000,
+      "expected": 5000,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/ScTagger-L/BLAZE/3/unique_rows",
+      "observed": 5000,
+      "expected": 5000,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/ScTagger-L/BLAZE/3/sum",
+      "observed": 299332,
+      "expected": 299332,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/ScTagger-L/Flexiplex/1/target_count",
+      "observed": 5000,
+      "expected": 5000,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/ScTagger-L/Flexiplex/1/unique_rows",
+      "observed": 5000,
+      "expected": 5000,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/ScTagger-L/Flexiplex/1/sum",
+      "observed": 462690,
+      "expected": 462690,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/ScTagger-L/Flexiplex/2/target_count",
+      "observed": 5000,
+      "expected": 5000,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/ScTagger-L/Flexiplex/2/unique_rows",
+      "observed": 5000,
+      "expected": 5000,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/ScTagger-L/Flexiplex/2/sum",
+      "observed": 465375,
+      "expected": 465375,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/ScTagger-L/Flexiplex/3/target_count",
+      "observed": 5000,
+      "expected": 5000,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/ScTagger-L/Flexiplex/3/unique_rows",
+      "observed": 5000,
+      "expected": 5000,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/ScTagger-L/Flexiplex/3/sum",
+      "observed": 458773,
+      "expected": 458773,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/ScTagger-L/rep1/list_unique",
+      "observed": 5000,
+      "expected": 5000,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/ScTagger-L/RAD/rep1/target_identity",
+      "observed": "5000 identical identities",
+      "expected": "5000 identical identities",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/ScTagger-L/BLAZE/rep1/target_identity",
+      "observed": "5000 identical identities",
+      "expected": "5000 identical identities",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/ScTagger-L/Flexiplex/rep1/target_identity",
+      "observed": "5000 identical identities",
+      "expected": "5000 identical identities",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/ScTagger-L/rep2/list_unique",
+      "observed": 5000,
+      "expected": 5000,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/ScTagger-L/RAD/rep2/target_identity",
+      "observed": "5000 identical identities",
+      "expected": "5000 identical identities",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/ScTagger-L/BLAZE/rep2/target_identity",
+      "observed": "5000 identical identities",
+      "expected": "5000 identical identities",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/ScTagger-L/Flexiplex/rep2/target_identity",
+      "observed": "5000 identical identities",
+      "expected": "5000 identical identities",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/ScTagger-L/rep3/list_unique",
+      "observed": 5000,
+      "expected": 5000,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/ScTagger-L/RAD/rep3/target_identity",
+      "observed": "5000 identical identities",
+      "expected": "5000 identical identities",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/ScTagger-L/BLAZE/rep3/target_identity",
+      "observed": "5000 identical identities",
+      "expected": "5000 identical identities",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/ScTagger-L/Flexiplex/rep3/target_identity",
+      "observed": "5000 identical identities",
+      "expected": "5000 identical identities",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/ScTagger-L/RAD/1/physical_conservation",
+      "observed": 49092,
+      "expected": 49092,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/ScTagger-L/RAD/2/physical_conservation",
+      "observed": 49102,
+      "expected": 49102,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/ScTagger-L/RAD/3/physical_conservation",
+      "observed": 49378,
+      "expected": 49378,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/ScTagger-L/BLAZE/1/physical_conservation",
+      "observed": 294175,
+      "expected": 294175,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/ScTagger-L/BLAZE/2/physical_conservation",
+      "observed": 304701,
+      "expected": 304701,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/ScTagger-L/BLAZE/3/physical_conservation",
+      "observed": 299332,
+      "expected": 299332,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/ScTagger-L/Flexiplex/1/physical_conservation",
+      "observed": 462794,
+      "expected": 462794,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/ScTagger-L/Flexiplex/2/physical_conservation",
+      "observed": 465478,
+      "expected": 465478,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/ScTagger-L/Flexiplex/3/physical_conservation",
+      "observed": 458897,
+      "expected": 458897,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/LongBench SC-ONT/RAD/1/target_count",
+      "observed": 5211,
+      "expected": 5211,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/LongBench SC-ONT/RAD/1/unique_rows",
+      "observed": 5211,
+      "expected": 5211,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/LongBench SC-ONT/RAD/1/sum",
+      "observed": 46487,
+      "expected": 46487,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/LongBench SC-ONT/RAD/2/target_count",
+      "observed": 5211,
+      "expected": 5211,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/LongBench SC-ONT/RAD/2/unique_rows",
+      "observed": 5211,
+      "expected": 5211,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/LongBench SC-ONT/RAD/2/sum",
+      "observed": 46961,
+      "expected": 46961,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/LongBench SC-ONT/RAD/3/target_count",
+      "observed": 5211,
+      "expected": 5211,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/LongBench SC-ONT/RAD/3/unique_rows",
+      "observed": 5211,
+      "expected": 5211,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/LongBench SC-ONT/RAD/3/sum",
+      "observed": 46568,
+      "expected": 46568,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/LongBench SC-ONT/BLAZE/1/target_count",
+      "observed": 5211,
+      "expected": 5211,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/LongBench SC-ONT/BLAZE/1/unique_rows",
+      "observed": 5211,
+      "expected": 5211,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/LongBench SC-ONT/BLAZE/1/sum",
+      "observed": 1005393,
+      "expected": 1005393,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/LongBench SC-ONT/BLAZE/2/target_count",
+      "observed": 5211,
+      "expected": 5211,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/LongBench SC-ONT/BLAZE/2/unique_rows",
+      "observed": 5211,
+      "expected": 5211,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/LongBench SC-ONT/BLAZE/2/sum",
+      "observed": 1024563,
+      "expected": 1024563,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/LongBench SC-ONT/BLAZE/3/target_count",
+      "observed": 5211,
+      "expected": 5211,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/LongBench SC-ONT/BLAZE/3/unique_rows",
+      "observed": 5211,
+      "expected": 5211,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/LongBench SC-ONT/BLAZE/3/sum",
+      "observed": 1097594,
+      "expected": 1097594,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/LongBench SC-ONT/Flexiplex/1/target_count",
+      "observed": 5211,
+      "expected": 5211,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/LongBench SC-ONT/Flexiplex/1/unique_rows",
+      "observed": 5211,
+      "expected": 5211,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/LongBench SC-ONT/Flexiplex/1/sum",
+      "observed": 1364364,
+      "expected": 1364364,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/LongBench SC-ONT/Flexiplex/2/target_count",
+      "observed": 5211,
+      "expected": 5211,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/LongBench SC-ONT/Flexiplex/2/unique_rows",
+      "observed": 5211,
+      "expected": 5211,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/LongBench SC-ONT/Flexiplex/2/sum",
+      "observed": 1370330,
+      "expected": 1370330,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/LongBench SC-ONT/Flexiplex/3/target_count",
+      "observed": 5211,
+      "expected": 5211,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/LongBench SC-ONT/Flexiplex/3/unique_rows",
+      "observed": 5211,
+      "expected": 5211,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/LongBench SC-ONT/Flexiplex/3/sum",
+      "observed": 1422565,
+      "expected": 1422565,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/LongBench SC-ONT/rep1/list_unique",
+      "observed": 5211,
+      "expected": 5211,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/LongBench SC-ONT/RAD/rep1/target_identity",
+      "observed": "5211 identical identities",
+      "expected": "5211 identical identities",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/LongBench SC-ONT/BLAZE/rep1/target_identity",
+      "observed": "5211 identical identities",
+      "expected": "5211 identical identities",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/LongBench SC-ONT/Flexiplex/rep1/target_identity",
+      "observed": "5211 identical identities",
+      "expected": "5211 identical identities",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/LongBench SC-ONT/rep2/list_unique",
+      "observed": 5211,
+      "expected": 5211,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/LongBench SC-ONT/RAD/rep2/target_identity",
+      "observed": "5211 identical identities",
+      "expected": "5211 identical identities",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/LongBench SC-ONT/BLAZE/rep2/target_identity",
+      "observed": "5211 identical identities",
+      "expected": "5211 identical identities",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/LongBench SC-ONT/Flexiplex/rep2/target_identity",
+      "observed": "5211 identical identities",
+      "expected": "5211 identical identities",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/LongBench SC-ONT/rep3/list_unique",
+      "observed": 5211,
+      "expected": 5211,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/LongBench SC-ONT/RAD/rep3/target_identity",
+      "observed": "5211 identical identities",
+      "expected": "5211 identical identities",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/LongBench SC-ONT/BLAZE/rep3/target_identity",
+      "observed": "5211 identical identities",
+      "expected": "5211 identical identities",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/LongBench SC-ONT/Flexiplex/rep3/target_identity",
+      "observed": "5211 identical identities",
+      "expected": "5211 identical identities",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/LongBench SC-ONT/RAD/1/physical_conservation",
+      "observed": 46591,
+      "expected": 46591,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/LongBench SC-ONT/RAD/2/physical_conservation",
+      "observed": 47075,
+      "expected": 47075,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/LongBench SC-ONT/RAD/3/physical_conservation",
+      "observed": 46653,
+      "expected": 46653,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/LongBench SC-ONT/BLAZE/1/physical_conservation",
+      "observed": 1005393,
+      "expected": 1005393,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/LongBench SC-ONT/BLAZE/2/physical_conservation",
+      "observed": 1024563,
+      "expected": 1024563,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/LongBench SC-ONT/BLAZE/3/physical_conservation",
+      "observed": 1097594,
+      "expected": 1097594,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/LongBench SC-ONT/Flexiplex/1/physical_conservation",
+      "observed": 1378134,
+      "expected": 1378134,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/LongBench SC-ONT/Flexiplex/2/physical_conservation",
+      "observed": 1384187,
+      "expected": 1384187,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/LongBench SC-ONT/Flexiplex/3/physical_conservation",
+      "observed": 1437046,
+      "expected": 1437046,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/RAGE-seq/rep1/list_unique",
+      "observed": 4505,
+      "expected": 4505,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/RAGE-seq/RAD/rep1/target_identity",
+      "observed": "4505 identical identities",
+      "expected": "4505 identical identities",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/RAGE-seq/BLAZE/rep1/target_identity",
+      "observed": "4505 identical identities",
+      "expected": "4505 identical identities",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/RAGE-seq/Flexiplex/rep1/target_identity",
+      "observed": "4505 identical identities",
+      "expected": "4505 identical identities",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/RAGE-seq/rep2/list_unique",
+      "observed": 4505,
+      "expected": 4505,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/RAGE-seq/RAD/rep2/target_identity",
+      "observed": "4505 identical identities",
+      "expected": "4505 identical identities",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/RAGE-seq/BLAZE/rep2/target_identity",
+      "observed": "4505 identical identities",
+      "expected": "4505 identical identities",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/RAGE-seq/Flexiplex/rep2/target_identity",
+      "observed": "4505 identical identities",
+      "expected": "4505 identical identities",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/RAGE-seq/rep3/list_unique",
+      "observed": 4505,
+      "expected": 4505,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/RAGE-seq/RAD/rep3/target_identity",
+      "observed": "4505 identical identities",
+      "expected": "4505 identical identities",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/RAGE-seq/BLAZE/rep3/target_identity",
+      "observed": "4505 identical identities",
+      "expected": "4505 identical identities",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/RAGE-seq/Flexiplex/rep3/target_identity",
+      "observed": "4505 identical identities",
+      "expected": "4505 identical identities",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/RAGE-seq/RAD/1/sum",
+      "observed": 50349,
+      "expected": 50349,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/RAGE-seq/RAD/1/physical_conservation",
+      "observed": 20346396,
+      "expected": 20346396,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/RAGE-seq/RAD/2/sum",
+      "observed": 50901,
+      "expected": 50901,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/RAGE-seq/RAD/2/physical_conservation",
+      "observed": 20346396,
+      "expected": 20346396,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/RAGE-seq/RAD/3/sum",
+      "observed": 50280,
+      "expected": 50280,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/RAGE-seq/RAD/3/physical_conservation",
+      "observed": 20346396,
+      "expected": 20346396,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/RAGE-seq/BLAZE/1/sum",
+      "observed": 1369920,
+      "expected": 1369920,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/RAGE-seq/BLAZE/1/physical_conservation",
+      "observed": 20346396,
+      "expected": 20346396,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/RAGE-seq/BLAZE/2/sum",
+      "observed": 1419257,
+      "expected": 1419257,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/RAGE-seq/BLAZE/2/physical_conservation",
+      "observed": 20346396,
+      "expected": 20346396,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/RAGE-seq/BLAZE/3/sum",
+      "observed": 1415786,
+      "expected": 1415786,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/RAGE-seq/BLAZE/3/physical_conservation",
+      "observed": 20346396,
+      "expected": 20346396,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/RAGE-seq/Flexiplex/1/sum",
+      "observed": 1594697,
+      "expected": 1594697,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/RAGE-seq/Flexiplex/1/physical_conservation",
+      "observed": 20346396,
+      "expected": 20346396,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/RAGE-seq/Flexiplex/2/sum",
+      "observed": 1652917,
+      "expected": 1652917,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/RAGE-seq/Flexiplex/2/physical_conservation",
+      "observed": 20346396,
+      "expected": 20346396,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/RAGE-seq/Flexiplex/3/sum",
+      "observed": 1656957,
+      "expected": 1656957,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "offlist/RAGE-seq/Flexiplex/3/physical_conservation",
+      "observed": 20346396,
+      "expected": 20346396,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/RAD/unique_targets",
+      "observed": 5620,
+      "expected": 5620,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/RAD/noncatalog_to_selected/marginal",
+      "observed": 9690454,
+      "expected": 9690454,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/RAD/noncatalog_to_selected/selected_checkpoint",
+      "observed": 9690454,
+      "expected": 9690454,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/RAD/catalog_noncell_to_selected_A/marginal",
+      "observed": 0,
+      "expected": 0,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/RAD/catalog_noncell_to_selected_A/selected_checkpoint",
+      "observed": 0,
+      "expected": 0,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/RAD/cellranger_to_different_cellranger_K/marginal",
+      "observed": 0,
+      "expected": 0,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/RAD/cellranger_to_different_cellranger_K/selected_checkpoint",
+      "observed": 0,
+      "expected": 0,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/RAD/unique_read_target_assignments_O/marginal",
+      "observed": 96569433,
+      "expected": 96569433,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/RAD/unique_read_target_assignments_O/selected_checkpoint",
+      "observed": 96569433,
+      "expected": 96569433,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/RAD/retained_invariant/all_emitted_targets_in_selected_whitelist",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/RAD/retained_invariant/selected_source_never_changed",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/RAD/retained_invariant/selected_whitelist_subset_global_catalog",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/RAD/retained_invariant/cellranger_filtered_subset_global_catalog",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/RAD/retained_invariant/consensus_labels_subset_cellranger_filtered",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/RAD/retained_invariant/unique_read_target_assignments_not_above_records",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/RAD/retained_invariant/target_unique_marginal_reproduces_O",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/RAD/retained_invariant/target_unique_marginal_reproduces_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/RAD/retained_invariant/physical_read_grouping_nonreentry",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/RAD/fast_exact_parity/summary.tsv",
+      "observed": "77d13f367e6dd82a26fb8eb0b2b5502bc12f5413cd02860a5cea57ab53763936",
+      "expected": "77d13f367e6dd82a26fb8eb0b2b5502bc12f5413cd02860a5cea57ab53763936",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/RAD/fast_exact_parity/per_target.tsv",
+      "observed": "a3c40f10f21bad079afa649d85b997875d30557262cd8beb8c483500a40fb1ee",
+      "expected": "a3c40f10f21bad079afa649d85b997875d30557262cd8beb8c483500a40fb1ee",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/BLAZE/unique_targets",
+      "observed": 5023,
+      "expected": 5023,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/BLAZE/noncatalog_to_selected/marginal",
+      "observed": 8672726,
+      "expected": 8672726,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/BLAZE/noncatalog_to_selected/selected_checkpoint",
+      "observed": 8672726,
+      "expected": 8672726,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/BLAZE/catalog_noncell_to_selected_A/marginal",
+      "observed": 1101618,
+      "expected": 1101618,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/BLAZE/catalog_noncell_to_selected_A/selected_checkpoint",
+      "observed": 1101618,
+      "expected": 1101618,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/BLAZE/cellranger_to_different_cellranger_K/marginal",
+      "observed": 61301,
+      "expected": 61301,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/BLAZE/cellranger_to_different_cellranger_K/selected_checkpoint",
+      "observed": 61301,
+      "expected": 61301,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/BLAZE/unique_read_target_assignments_O/marginal",
+      "observed": 93175479,
+      "expected": 93175479,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/BLAZE/unique_read_target_assignments_O/selected_checkpoint",
+      "observed": 93175479,
+      "expected": 93175479,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/BLAZE/retained_invariant/all_emitted_targets_in_selected_whitelist",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/BLAZE/retained_invariant/selected_source_never_changed",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/BLAZE/retained_invariant/selected_whitelist_subset_global_catalog",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/BLAZE/retained_invariant/cellranger_filtered_subset_global_catalog",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/BLAZE/retained_invariant/consensus_labels_subset_cellranger_filtered",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/BLAZE/retained_invariant/unique_read_target_assignments_not_above_records",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/BLAZE/retained_invariant/target_record_marginal_reproduces_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/BLAZE/retained_invariant/target_unique_marginal_reproduces_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/BLAZE/retained_invariant/pair_record_marginal_reproduces_missed_cellranger",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/BLAZE/retained_invariant/pair_unique_source_marginal_matches_source_units_missed_cellranger",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/BLAZE/retained_invariant/per_source_record_marginal_reproduces_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/BLAZE/retained_invariant/per_source_unique_source_marginal_reproduces_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/BLAZE/retained_invariant/strict_event_rows_reproduce_unique_source_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/BLAZE/retained_invariant/physical_read_K_not_above_read_target_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/BLAZE/retained_invariant/read_target_K_not_above_read_target_source_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/BLAZE/retained_invariant/blaze_header_prefix_matches_CB",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/BLAZE/retained_invariant/physical_read_grouping_nonreentry",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/Flexiplex/unique_targets",
+      "observed": 5907,
+      "expected": 5907,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/Flexiplex/noncatalog_to_selected/marginal",
+      "observed": 10386527,
+      "expected": 10386527,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/Flexiplex/noncatalog_to_selected/selected_checkpoint",
+      "observed": 10386527,
+      "expected": 10386527,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/Flexiplex/catalog_noncell_to_selected_A/marginal",
+      "observed": 1429752,
+      "expected": 1429752,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/Flexiplex/catalog_noncell_to_selected_A/selected_checkpoint",
+      "observed": 1429752,
+      "expected": 1429752,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/Flexiplex/cellranger_to_different_cellranger_K/marginal",
+      "observed": 31,
+      "expected": 31,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/Flexiplex/cellranger_to_different_cellranger_K/selected_checkpoint",
+      "observed": 31,
+      "expected": 31,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/Flexiplex/unique_read_target_assignments_O/marginal",
+      "observed": 103475960,
+      "expected": 103475960,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/Flexiplex/unique_read_target_assignments_O/selected_checkpoint",
+      "observed": 103475960,
+      "expected": 103475960,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/Flexiplex/retained_invariant/all_emitted_targets_in_selected_whitelist",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/Flexiplex/retained_invariant/selected_source_never_changed",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/Flexiplex/retained_invariant/selected_whitelist_subset_global_catalog",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/Flexiplex/retained_invariant/cellranger_filtered_subset_global_catalog",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/Flexiplex/retained_invariant/consensus_labels_subset_cellranger_filtered",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/Flexiplex/retained_invariant/unique_read_target_assignments_not_above_records",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/Flexiplex/retained_invariant/target_record_marginal_reproduces_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/Flexiplex/retained_invariant/target_unique_marginal_reproduces_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/Flexiplex/retained_invariant/pair_record_marginal_reproduces_missed_cellranger",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/Flexiplex/retained_invariant/pair_unique_source_marginal_matches_source_units_missed_cellranger",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/Flexiplex/retained_invariant/per_source_record_marginal_reproduces_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/Flexiplex/retained_invariant/per_source_unique_source_marginal_reproduces_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/Flexiplex/retained_invariant/strict_event_rows_reproduce_unique_source_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/Flexiplex/retained_invariant/physical_read_K_not_above_read_target_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/Flexiplex/retained_invariant/read_target_K_not_above_read_target_source_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/Flexiplex/retained_invariant/blaze_header_prefix_matches_CB",
+      "observed": "NOT_CHECKED",
+      "expected": "NOT_CHECKED",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_ONT/Flexiplex/retained_invariant/physical_read_grouping_nonreentry",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/RAD/unique_targets",
+      "observed": 12423,
+      "expected": 12423,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/RAD/noncatalog_to_selected/marginal",
+      "observed": 8311132,
+      "expected": 8311132,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/RAD/noncatalog_to_selected/selected_checkpoint",
+      "observed": 8311132,
+      "expected": 8311132,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/RAD/catalog_noncell_to_selected_A/marginal",
+      "observed": 0,
+      "expected": 0,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/RAD/catalog_noncell_to_selected_A/selected_checkpoint",
+      "observed": 0,
+      "expected": 0,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/RAD/cellranger_to_different_cellranger_K/marginal",
+      "observed": 0,
+      "expected": 0,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/RAD/cellranger_to_different_cellranger_K/selected_checkpoint",
+      "observed": 0,
+      "expected": 0,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/RAD/unique_read_target_assignments_O/marginal",
+      "observed": 57487924,
+      "expected": 57487924,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/RAD/unique_read_target_assignments_O/selected_checkpoint",
+      "observed": 57487924,
+      "expected": 57487924,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/RAD/retained_invariant/all_emitted_targets_in_selected_whitelist",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/RAD/retained_invariant/selected_source_never_changed",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/RAD/retained_invariant/selected_whitelist_subset_global_catalog",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/RAD/retained_invariant/cellranger_filtered_subset_global_catalog",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/RAD/retained_invariant/consensus_labels_subset_cellranger_filtered",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/RAD/retained_invariant/unique_read_target_assignments_not_above_records",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/RAD/retained_invariant/target_unique_marginal_reproduces_O",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/RAD/retained_invariant/target_unique_marginal_reproduces_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/RAD/retained_invariant/physical_read_grouping_nonreentry",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/RAD/fast_exact_parity/summary.tsv",
+      "observed": "023be97df6d05e71817b488446526a72ad481bd749e4ed90742eed430c7fee8d",
+      "expected": "023be97df6d05e71817b488446526a72ad481bd749e4ed90742eed430c7fee8d",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/RAD/fast_exact_parity/per_target.tsv",
+      "observed": "f041c0bda0dcc4db133ecacb9cf4471c2d986b4eb6c789016014bc88aa69e18d",
+      "expected": "f041c0bda0dcc4db133ecacb9cf4471c2d986b4eb6c789016014bc88aa69e18d",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/BLAZE/unique_targets",
+      "observed": 10001,
+      "expected": 10001,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/BLAZE/noncatalog_to_selected/marginal",
+      "observed": 5800878,
+      "expected": 5800878,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/BLAZE/noncatalog_to_selected/selected_checkpoint",
+      "observed": 5800878,
+      "expected": 5800878,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/BLAZE/catalog_noncell_to_selected_A/marginal",
+      "observed": 10562779,
+      "expected": 10562779,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/BLAZE/catalog_noncell_to_selected_A/selected_checkpoint",
+      "observed": 10562779,
+      "expected": 10562779,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/BLAZE/cellranger_to_different_cellranger_K/marginal",
+      "observed": 738294,
+      "expected": 738294,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/BLAZE/cellranger_to_different_cellranger_K/selected_checkpoint",
+      "observed": 738294,
+      "expected": 738294,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/BLAZE/unique_read_target_assignments_O/marginal",
+      "observed": 59984175,
+      "expected": 59984175,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/BLAZE/unique_read_target_assignments_O/selected_checkpoint",
+      "observed": 59984175,
+      "expected": 59984175,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/BLAZE/retained_invariant/all_emitted_targets_in_selected_whitelist",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/BLAZE/retained_invariant/selected_source_never_changed",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/BLAZE/retained_invariant/selected_whitelist_subset_global_catalog",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/BLAZE/retained_invariant/cellranger_filtered_subset_global_catalog",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/BLAZE/retained_invariant/consensus_labels_subset_cellranger_filtered",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/BLAZE/retained_invariant/unique_read_target_assignments_not_above_records",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/BLAZE/retained_invariant/target_record_marginal_reproduces_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/BLAZE/retained_invariant/target_unique_marginal_reproduces_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/BLAZE/retained_invariant/pair_record_marginal_reproduces_missed_cellranger",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/BLAZE/retained_invariant/pair_unique_source_marginal_matches_source_units_missed_cellranger",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/BLAZE/retained_invariant/per_source_record_marginal_reproduces_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/BLAZE/retained_invariant/per_source_unique_source_marginal_reproduces_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/BLAZE/retained_invariant/strict_event_rows_reproduce_unique_source_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/BLAZE/retained_invariant/physical_read_K_not_above_read_target_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/BLAZE/retained_invariant/read_target_K_not_above_read_target_source_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/BLAZE/retained_invariant/blaze_header_prefix_matches_CB",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/BLAZE/retained_invariant/physical_read_grouping_nonreentry",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/Flexiplex/unique_targets",
+      "observed": 12101,
+      "expected": 12101,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/Flexiplex/noncatalog_to_selected/marginal",
+      "observed": 8221126,
+      "expected": 8221126,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/Flexiplex/noncatalog_to_selected/selected_checkpoint",
+      "observed": 8221126,
+      "expected": 8221126,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/Flexiplex/catalog_noncell_to_selected_A/marginal",
+      "observed": 14331912,
+      "expected": 14331912,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/Flexiplex/catalog_noncell_to_selected_A/selected_checkpoint",
+      "observed": 14331912,
+      "expected": 14331912,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/Flexiplex/cellranger_to_different_cellranger_K/marginal",
+      "observed": 108704,
+      "expected": 108704,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/Flexiplex/cellranger_to_different_cellranger_K/selected_checkpoint",
+      "observed": 108704,
+      "expected": 108704,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/Flexiplex/unique_read_target_assignments_O/marginal",
+      "observed": 73883233,
+      "expected": 73883233,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/Flexiplex/unique_read_target_assignments_O/selected_checkpoint",
+      "observed": 73883233,
+      "expected": 73883233,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/Flexiplex/retained_invariant/all_emitted_targets_in_selected_whitelist",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/Flexiplex/retained_invariant/selected_source_never_changed",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/Flexiplex/retained_invariant/selected_whitelist_subset_global_catalog",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/Flexiplex/retained_invariant/cellranger_filtered_subset_global_catalog",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/Flexiplex/retained_invariant/consensus_labels_subset_cellranger_filtered",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/Flexiplex/retained_invariant/unique_read_target_assignments_not_above_records",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/Flexiplex/retained_invariant/target_record_marginal_reproduces_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/Flexiplex/retained_invariant/target_unique_marginal_reproduces_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/Flexiplex/retained_invariant/pair_record_marginal_reproduces_missed_cellranger",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/Flexiplex/retained_invariant/pair_unique_source_marginal_matches_source_units_missed_cellranger",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/Flexiplex/retained_invariant/per_source_record_marginal_reproduces_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/Flexiplex/retained_invariant/per_source_unique_source_marginal_reproduces_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/Flexiplex/retained_invariant/strict_event_rows_reproduce_unique_source_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/Flexiplex/retained_invariant/physical_read_K_not_above_read_target_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/Flexiplex/retained_invariant/read_target_K_not_above_read_target_source_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/Flexiplex/retained_invariant/blaze_header_prefix_matches_CB",
+      "observed": "NOT_CHECKED",
+      "expected": "NOT_CHECKED",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_ONT/Flexiplex/retained_invariant/physical_read_grouping_nonreentry",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/RAD/unique_targets",
+      "observed": 5516,
+      "expected": 5516,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/RAD/noncatalog_to_selected/marginal",
+      "observed": 4816829,
+      "expected": 4816829,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/RAD/noncatalog_to_selected/selected_checkpoint",
+      "observed": 4816829,
+      "expected": 4816829,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/RAD/catalog_noncell_to_selected_A/marginal",
+      "observed": 0,
+      "expected": 0,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/RAD/catalog_noncell_to_selected_A/selected_checkpoint",
+      "observed": 0,
+      "expected": 0,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/RAD/cellranger_to_different_cellranger_K/marginal",
+      "observed": 0,
+      "expected": 0,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/RAD/cellranger_to_different_cellranger_K/selected_checkpoint",
+      "observed": 0,
+      "expected": 0,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/RAD/unique_read_target_assignments_O/marginal",
+      "observed": 178846937,
+      "expected": 178846937,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/RAD/unique_read_target_assignments_O/selected_checkpoint",
+      "observed": 178846937,
+      "expected": 178846937,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/RAD/retained_invariant/all_emitted_targets_in_selected_whitelist",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/RAD/retained_invariant/selected_source_never_changed",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/RAD/retained_invariant/selected_whitelist_subset_global_catalog",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/RAD/retained_invariant/cellranger_filtered_subset_global_catalog",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/RAD/retained_invariant/consensus_labels_subset_cellranger_filtered",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/RAD/retained_invariant/unique_read_target_assignments_not_above_records",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/RAD/retained_invariant/target_unique_marginal_reproduces_O",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/RAD/retained_invariant/target_unique_marginal_reproduces_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/RAD/retained_invariant/physical_read_grouping_nonreentry",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/RAD/fast_exact_parity/summary.tsv",
+      "observed": "ebfdd16f4028739d641268634ba325638ece38410df9b1cc46c7ce943bcffe6d",
+      "expected": "ebfdd16f4028739d641268634ba325638ece38410df9b1cc46c7ce943bcffe6d",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/RAD/fast_exact_parity/per_target.tsv",
+      "observed": "fa05ae893ce0191ea84b24f4aa068795d8117bb0633f3eab49c0b37b5ea3a069",
+      "expected": "fa05ae893ce0191ea84b24f4aa068795d8117bb0633f3eab49c0b37b5ea3a069",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/BLAZE/unique_targets",
+      "observed": 5002,
+      "expected": 5002,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/BLAZE/noncatalog_to_selected/marginal",
+      "observed": 3932949,
+      "expected": 3932949,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/BLAZE/noncatalog_to_selected/selected_checkpoint",
+      "observed": 3932949,
+      "expected": 3932949,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/BLAZE/catalog_noncell_to_selected_A/marginal",
+      "observed": 1511949,
+      "expected": 1511949,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/BLAZE/catalog_noncell_to_selected_A/selected_checkpoint",
+      "observed": 1511949,
+      "expected": 1511949,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/BLAZE/cellranger_to_different_cellranger_K/marginal",
+      "observed": 122127,
+      "expected": 122127,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/BLAZE/cellranger_to_different_cellranger_K/selected_checkpoint",
+      "observed": 122127,
+      "expected": 122127,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/BLAZE/unique_read_target_assignments_O/marginal",
+      "observed": 178095634,
+      "expected": 178095634,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/BLAZE/unique_read_target_assignments_O/selected_checkpoint",
+      "observed": 178095634,
+      "expected": 178095634,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/BLAZE/retained_invariant/all_emitted_targets_in_selected_whitelist",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/BLAZE/retained_invariant/selected_source_never_changed",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/BLAZE/retained_invariant/selected_whitelist_subset_global_catalog",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/BLAZE/retained_invariant/cellranger_filtered_subset_global_catalog",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/BLAZE/retained_invariant/consensus_labels_subset_cellranger_filtered",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/BLAZE/retained_invariant/unique_read_target_assignments_not_above_records",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/BLAZE/retained_invariant/target_record_marginal_reproduces_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/BLAZE/retained_invariant/target_unique_marginal_reproduces_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/BLAZE/retained_invariant/pair_record_marginal_reproduces_missed_cellranger",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/BLAZE/retained_invariant/pair_unique_source_marginal_matches_source_units_missed_cellranger",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/BLAZE/retained_invariant/per_source_record_marginal_reproduces_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/BLAZE/retained_invariant/per_source_unique_source_marginal_reproduces_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/BLAZE/retained_invariant/strict_event_rows_reproduce_unique_source_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/BLAZE/retained_invariant/physical_read_K_not_above_read_target_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/BLAZE/retained_invariant/read_target_K_not_above_read_target_source_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/BLAZE/retained_invariant/blaze_header_prefix_matches_CB",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/BLAZE/retained_invariant/physical_read_grouping_nonreentry",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/Flexiplex/unique_targets",
+      "observed": 5903,
+      "expected": 5903,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/Flexiplex/noncatalog_to_selected/marginal",
+      "observed": 4331943,
+      "expected": 4331943,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/Flexiplex/noncatalog_to_selected/selected_checkpoint",
+      "observed": 4331943,
+      "expected": 4331943,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/Flexiplex/catalog_noncell_to_selected_A/marginal",
+      "observed": 1876614,
+      "expected": 1876614,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/Flexiplex/catalog_noncell_to_selected_A/selected_checkpoint",
+      "observed": 1876614,
+      "expected": 1876614,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/Flexiplex/cellranger_to_different_cellranger_K/marginal",
+      "observed": 11,
+      "expected": 11,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/Flexiplex/cellranger_to_different_cellranger_K/selected_checkpoint",
+      "observed": 11,
+      "expected": 11,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/Flexiplex/unique_read_target_assignments_O/marginal",
+      "observed": 185509618,
+      "expected": 185509618,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/Flexiplex/unique_read_target_assignments_O/selected_checkpoint",
+      "observed": 185509618,
+      "expected": 185509618,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/Flexiplex/retained_invariant/all_emitted_targets_in_selected_whitelist",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/Flexiplex/retained_invariant/selected_source_never_changed",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/Flexiplex/retained_invariant/selected_whitelist_subset_global_catalog",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/Flexiplex/retained_invariant/cellranger_filtered_subset_global_catalog",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/Flexiplex/retained_invariant/consensus_labels_subset_cellranger_filtered",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/Flexiplex/retained_invariant/unique_read_target_assignments_not_above_records",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/Flexiplex/retained_invariant/target_record_marginal_reproduces_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/Flexiplex/retained_invariant/target_unique_marginal_reproduces_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/Flexiplex/retained_invariant/pair_record_marginal_reproduces_missed_cellranger",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/Flexiplex/retained_invariant/pair_unique_source_marginal_matches_source_units_missed_cellranger",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/Flexiplex/retained_invariant/per_source_record_marginal_reproduces_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/Flexiplex/retained_invariant/per_source_unique_source_marginal_reproduces_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/Flexiplex/retained_invariant/strict_event_rows_reproduce_unique_source_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/Flexiplex/retained_invariant/physical_read_K_not_above_read_target_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/Flexiplex/retained_invariant/read_target_K_not_above_read_target_source_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/Flexiplex/retained_invariant/blaze_header_prefix_matches_CB",
+      "observed": "NOT_CHECKED",
+      "expected": "NOT_CHECKED",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SC_PB/Flexiplex/retained_invariant/physical_read_grouping_nonreentry",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/RAD/unique_targets",
+      "observed": 13580,
+      "expected": 13580,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/RAD/noncatalog_to_selected/marginal",
+      "observed": 3945475,
+      "expected": 3945475,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/RAD/noncatalog_to_selected/selected_checkpoint",
+      "observed": 3945475,
+      "expected": 3945475,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/RAD/catalog_noncell_to_selected_A/marginal",
+      "observed": 0,
+      "expected": 0,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/RAD/catalog_noncell_to_selected_A/selected_checkpoint",
+      "observed": 0,
+      "expected": 0,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/RAD/cellranger_to_different_cellranger_K/marginal",
+      "observed": 0,
+      "expected": 0,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/RAD/cellranger_to_different_cellranger_K/selected_checkpoint",
+      "observed": 0,
+      "expected": 0,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/RAD/unique_read_target_assignments_O/marginal",
+      "observed": 86368809,
+      "expected": 86368809,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/RAD/unique_read_target_assignments_O/selected_checkpoint",
+      "observed": 86368809,
+      "expected": 86368809,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/RAD/retained_invariant/all_emitted_targets_in_selected_whitelist",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/RAD/retained_invariant/selected_source_never_changed",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/RAD/retained_invariant/selected_whitelist_subset_global_catalog",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/RAD/retained_invariant/cellranger_filtered_subset_global_catalog",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/RAD/retained_invariant/consensus_labels_subset_cellranger_filtered",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/RAD/retained_invariant/unique_read_target_assignments_not_above_records",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/RAD/retained_invariant/target_unique_marginal_reproduces_O",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/RAD/retained_invariant/target_unique_marginal_reproduces_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/RAD/retained_invariant/physical_read_grouping_nonreentry",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/RAD/fast_exact_parity/summary.tsv",
+      "observed": "a5d43c555aabbb3e795548b62ffb89385c5ac297d24b0d40ed0ad10fae8bb1ef",
+      "expected": "a5d43c555aabbb3e795548b62ffb89385c5ac297d24b0d40ed0ad10fae8bb1ef",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/RAD/fast_exact_parity/per_target.tsv",
+      "observed": "f1d130f78e70deb185dfc126336aba60288b43b93cf82d09d802916405f851ad",
+      "expected": "f1d130f78e70deb185dfc126336aba60288b43b93cf82d09d802916405f851ad",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/BLAZE/unique_targets",
+      "observed": 10001,
+      "expected": 10001,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/BLAZE/noncatalog_to_selected/marginal",
+      "observed": 2304139,
+      "expected": 2304139,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/BLAZE/noncatalog_to_selected/selected_checkpoint",
+      "observed": 2304139,
+      "expected": 2304139,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/BLAZE/catalog_noncell_to_selected_A/marginal",
+      "observed": 17061625,
+      "expected": 17061625,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/BLAZE/catalog_noncell_to_selected_A/selected_checkpoint",
+      "observed": 17061625,
+      "expected": 17061625,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/BLAZE/cellranger_to_different_cellranger_K/marginal",
+      "observed": 1267182,
+      "expected": 1267182,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/BLAZE/cellranger_to_different_cellranger_K/selected_checkpoint",
+      "observed": 1267182,
+      "expected": 1267182,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/BLAZE/unique_read_target_assignments_O/marginal",
+      "observed": 93568220,
+      "expected": 93568220,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/BLAZE/unique_read_target_assignments_O/selected_checkpoint",
+      "observed": 93568220,
+      "expected": 93568220,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/BLAZE/retained_invariant/all_emitted_targets_in_selected_whitelist",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/BLAZE/retained_invariant/selected_source_never_changed",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/BLAZE/retained_invariant/selected_whitelist_subset_global_catalog",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/BLAZE/retained_invariant/cellranger_filtered_subset_global_catalog",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/BLAZE/retained_invariant/consensus_labels_subset_cellranger_filtered",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/BLAZE/retained_invariant/unique_read_target_assignments_not_above_records",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/BLAZE/retained_invariant/target_record_marginal_reproduces_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/BLAZE/retained_invariant/target_unique_marginal_reproduces_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/BLAZE/retained_invariant/pair_record_marginal_reproduces_missed_cellranger",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/BLAZE/retained_invariant/pair_unique_source_marginal_matches_source_units_missed_cellranger",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/BLAZE/retained_invariant/per_source_record_marginal_reproduces_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/BLAZE/retained_invariant/per_source_unique_source_marginal_reproduces_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/BLAZE/retained_invariant/strict_event_rows_reproduce_unique_source_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/BLAZE/retained_invariant/physical_read_K_not_above_read_target_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/BLAZE/retained_invariant/read_target_K_not_above_read_target_source_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/BLAZE/retained_invariant/blaze_header_prefix_matches_CB",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/BLAZE/retained_invariant/physical_read_grouping_nonreentry",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/Flexiplex/unique_targets",
+      "observed": 12016,
+      "expected": 12016,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/Flexiplex/noncatalog_to_selected/marginal",
+      "observed": 3292660,
+      "expected": 3292660,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/Flexiplex/noncatalog_to_selected/selected_checkpoint",
+      "observed": 3292660,
+      "expected": 3292660,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/Flexiplex/catalog_noncell_to_selected_A/marginal",
+      "observed": 21703944,
+      "expected": 21703944,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/Flexiplex/catalog_noncell_to_selected_A/selected_checkpoint",
+      "observed": 21703944,
+      "expected": 21703944,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/Flexiplex/cellranger_to_different_cellranger_K/marginal",
+      "observed": 202701,
+      "expected": 202701,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/Flexiplex/cellranger_to_different_cellranger_K/selected_checkpoint",
+      "observed": 202701,
+      "expected": 202701,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/Flexiplex/unique_read_target_assignments_O/marginal",
+      "observed": 107301108,
+      "expected": 107301108,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/Flexiplex/unique_read_target_assignments_O/selected_checkpoint",
+      "observed": 107301108,
+      "expected": 107301108,
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/Flexiplex/retained_invariant/all_emitted_targets_in_selected_whitelist",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/Flexiplex/retained_invariant/selected_source_never_changed",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/Flexiplex/retained_invariant/selected_whitelist_subset_global_catalog",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/Flexiplex/retained_invariant/cellranger_filtered_subset_global_catalog",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/Flexiplex/retained_invariant/consensus_labels_subset_cellranger_filtered",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/Flexiplex/retained_invariant/unique_read_target_assignments_not_above_records",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/Flexiplex/retained_invariant/target_record_marginal_reproduces_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/Flexiplex/retained_invariant/target_unique_marginal_reproduces_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/Flexiplex/retained_invariant/pair_record_marginal_reproduces_missed_cellranger",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/Flexiplex/retained_invariant/pair_unique_source_marginal_matches_source_units_missed_cellranger",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/Flexiplex/retained_invariant/per_source_record_marginal_reproduces_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/Flexiplex/retained_invariant/per_source_unique_source_marginal_reproduces_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/Flexiplex/retained_invariant/strict_event_rows_reproduce_unique_source_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/Flexiplex/retained_invariant/physical_read_K_not_above_read_target_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/Flexiplex/retained_invariant/read_target_K_not_above_read_target_source_K",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/Flexiplex/retained_invariant/blaze_header_prefix_matches_CB",
+      "observed": "NOT_CHECKED",
+      "expected": "NOT_CHECKED",
+      "status": "passed",
+      "tolerance": 0
+    },
+    {
+      "check_id": "correction/SN_PB/Flexiplex/retained_invariant/physical_read_grouping_nonreentry",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "passed",
+      "tolerance": 0
+    }
+  ],
+  "raw_rerun": "RAGE complete; retained ScTagger/LongBench C2 fully recounted",
+  "read_target_ledger": "not recovered for full D-G streams; aggregates do not establish pair overlaps"
+}

@@ -1,0 +1,45 @@
+{
+  "scope": "real bounded public cell-line excerpts; neither DE inference nor BH is reproducible from the excerpt alone",
+  "matrix_dimensions": [
+    45224,
+    12423,
+    15772545
+  ],
+  "inputs": [
+    {
+      "source": "checkpoints/figure_07/native/RAD/all/matrix.mtx.gz",
+      "source_sha256": "952ae1d6bbe600793801e94a23ed9bbb13caca13ac493cff14cca83e8adc985c",
+      "role": "matrix.mtx",
+      "selection": "first 8 nonzero entries, 1-based labels; library totals use complete source matrix"
+    },
+    {
+      "source": "checkpoints/figure_07/native/RAD/all/features.tsv.gz",
+      "source_sha256": "fadbcad21e5bff258a869b49a0ed240d8c55187d716ee756f9ec02a9805458cd",
+      "role": "features.tsv",
+      "selection": "first 8 nonzero entries, 1-based labels; library totals use complete source matrix"
+    },
+    {
+      "source": "checkpoints/figure_07/native/RAD/all/barcodes.tsv.gz",
+      "source_sha256": "5e45eced1a09f5f184ad7b419d8c2946f73cc36ba0bed89309e1507de4233775",
+      "role": "barcodes.tsv",
+      "selection": "first 8 nonzero entries, 1-based labels; library totals use complete source matrix"
+    },
+    {
+      "source": "source_data/figure_07/direct_H146_vs_H526_plot_data.tsv.gz",
+      "source_sha256": "c4c038bffcc1db6a98444e12b74cc3a5b6dc85f329defeb87eeec1084c75ef48",
+      "role": "C5",
+      "selection": "all tool rows for DPM1, ASCL1, POU2F3",
+      "source_data_rows": [
+        1,
+        3754,
+        3907,
+        8136,
+        11889,
+        12042,
+        16271,
+        20024,
+        20177
+      ]
+    }
+  ]
+}

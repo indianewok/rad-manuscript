@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "rows_compared": 1345255,
+  "mismatches": 0,
+  "native_sha256": "1cea7a6eadecb2c9e6e88316395466ec0163dac6e1d656d781360e90e5d96f04",
+  "normalized_sha256": "0fb4ad499c04d57f72552f06ce5b2a2e0c124649fd1bb63ce8971627260e5588",
+  "code_sha256": "0babcca7c4132ac8e47e8ea2fb8b8c25b3391f8916ec9099497389a60c9c47ed",
+  "rule": "Read copied; BC3_BC2_BC1; reverse-complement UB; empty orientation; FlankEditDist copied",
+  "raw_demultiplexing_rerun": false
+}

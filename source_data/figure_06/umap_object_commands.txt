@@ -1,0 +1,102 @@
+List of 5
+ $ SCTransform.RNA      :List of 4
+  ..$ name  : chr "SCTransform.RNA"
+  ..$ time  : chr "2026-08-05 16:02:19.626565"
+  ..$ call  : chr [1:4] "SCTransform(object, assay = \"RNA\", new.assay.name = \"SCT\", " "    vst.flavor = \"v2\", method = \"glmGamPoi\", variable.features.n = NULL, " "    return.only.var.genes = FALSE, conserve.memory = FALSE, seed.use = seed, " "    verbose = TRUE)"
+  ..$ params:List of 13
+  .. ..$ assay                  : chr "RNA"
+  .. ..$ new.assay.name         : chr "SCT"
+  .. ..$ do.correct.umi         : logi TRUE
+  .. ..$ ncells                 : num 5000
+  .. ..$ variable.features.rv.th: num 1.3
+  .. ..$ do.scale               : logi FALSE
+  .. ..$ do.center              : logi TRUE
+  .. ..$ clip.range             : num [1:2] -20 20
+  .. ..$ vst.flavor             : chr "v2"
+  .. ..$ conserve.memory        : logi FALSE
+  .. ..$ return.only.var.genes  : logi FALSE
+  .. ..$ seed.use               : int 20260805
+  .. ..$ verbose                : logi TRUE
+ $ RunPCA.SCT           :List of 4
+  ..$ name  : chr "RunPCA.SCT"
+  ..$ time  : chr "2026-08-05 16:02:57.502922"
+  ..$ call  : chr [1:2] "RunPCA(object, assay = \"SCT\", npcs = 50L, approx = TRUE, " "    seed.use = seed, verbose = FALSE)"
+  ..$ params:List of 10
+  .. ..$ assay          : chr "SCT"
+  .. ..$ npcs           : int 50
+  .. ..$ rev.pca        : logi FALSE
+  .. ..$ weight.by.var  : logi TRUE
+  .. ..$ verbose        : logi FALSE
+  .. ..$ ndims.print    : int [1:5] 1 2 3 4 5
+  .. ..$ nfeatures.print: num 30
+  .. ..$ reduction.name : chr "pca"
+  .. ..$ reduction.key  : chr "PC_"
+  .. ..$ seed.use       : int 20260805
+ $ FindNeighbors.SCT.pca:List of 4
+  ..$ name  : chr "FindNeighbors.SCT.pca"
+  ..$ time  : chr "2026-08-05 16:02:59.804154"
+  ..$ call  : chr [1:2] "FindNeighbors(object, reduction = \"pca\", dims = 1:30, " "    verbose = FALSE)"
+  ..$ params:List of 16
+  .. ..$ reduction      : chr "pca"
+  .. ..$ dims           : int [1:30] 1 2 3 4 5 6 7 8 9 10 ...
+  .. ..$ assay          : chr "SCT"
+  .. ..$ k.param        : num 20
+  .. ..$ return.neighbor: logi FALSE
+  .. ..$ compute.SNN    : logi TRUE
+  .. ..$ prune.SNN      : num 0.0667
+  .. ..$ nn.method      : chr "annoy"
+  .. ..$ n.trees        : num 50
+  .. ..$ annoy.metric   : chr "euclidean"
+  .. ..$ nn.eps         : num 0
+  .. ..$ verbose        : logi FALSE
+  .. ..$ do.plot        : logi FALSE
+  .. ..$ graph.name     : chr [1:2] "SCT_nn" "SCT_snn"
+  .. ..$ l2.norm        : logi FALSE
+  .. ..$ cache.index    : logi FALSE
+ $ FindClusters         :List of 4
+  ..$ name  : chr "FindClusters"
+  ..$ time  : chr "2026-08-05 16:03:01.865864"
+  ..$ call  : chr [1:2] "FindClusters(object, resolution = 0.5, algorithm = 1L, " "    random.seed = seed, verbose = FALSE)"
+  ..$ params:List of 11
+  .. ..$ graph.name      : chr "SCT_snn"
+  .. ..$ cluster.name    : chr "SCT_snn_res.0.5"
+  .. ..$ modularity.fxn  : num 1
+  .. ..$ resolution      : num 0.5
+  .. ..$ algorithm       : int 1
+  .. ..$ leiden_method   : chr [1:2] "leidenbase" "igraph"
+  .. ..$ n.start         : num 10
+  .. ..$ n.iter          : num 10
+  .. ..$ random.seed     : int 20260805
+  .. ..$ group.singletons: logi TRUE
+  .. ..$ verbose         : logi FALSE
+ $ RunUMAP.SCT.pca      :List of 4
+  ..$ name  : chr "RunUMAP.SCT.pca"
+  ..$ time  : chr "2026-08-05 16:03:15.257675"
+  ..$ call  : chr [1:3] "RunUMAP(object, reduction = \"pca\", dims = 1:30, n.neighbors = 30L, " "    min.dist = 0.3, metric = \"cosine\", seed.use = seed, n.threads = 1L, " "    verbose = FALSE)"
+  ..$ params:List of 26
+  .. ..$ dims                : int [1:30] 1 2 3 4 5 6 7 8 9 10 ...
+  .. ..$ reduction           : chr "pca"
+  .. ..$ assay               : chr "SCT"
+  .. ..$ slot                : chr "data"
+  .. ..$ umap.method         : chr "uwot"
+  .. ..$ return.model        : logi FALSE
+  .. ..$ n.neighbors         : int 30
+  .. ..$ n.components        : int 2
+  .. ..$ metric              : chr "cosine"
+  .. ..$ learning.rate       : num 1
+  .. ..$ min.dist            : num 0.3
+  .. ..$ spread              : num 1
+  .. ..$ set.op.mix.ratio    : num 1
+  .. ..$ local.connectivity  : int 1
+  .. ..$ repulsion.strength  : num 1
+  .. ..$ negative.sample.rate: int 5
+  .. ..$ uwot.sgd            : logi FALSE
+  .. ..$ uwot.approx_pow     : logi FALSE
+  .. ..$ seed.use            : int 20260805
+  .. ..$ angular.rp.forest   : logi FALSE
+  .. ..$ densmap             : logi FALSE
+  .. ..$ dens.lambda         : num 2
+  .. ..$ dens.frac           : num 0.3
+  .. ..$ dens.var.shift      : num 0.1
+  .. ..$ verbose             : logi FALSE
+  .. ..$ reduction.name      : chr "umap"

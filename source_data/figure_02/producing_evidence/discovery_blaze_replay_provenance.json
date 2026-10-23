@@ -1,0 +1,90 @@
+{
+  "analysis_scope": "Whitelist discovery only; no FASTQ reconstruction, extraction rerun, demultiplexing, RAD or Flexiplex execution.",
+  "biology_minimum_barcode_quality": 15,
+  "biology_quality_transform": "Shifted conditions: Q_shifted = max(1, min(50, Q_native + delta)); native validation: none (cached unadjusted qualities).",
+  "completed_shifted_conditions": 11,
+  "equivalence": "Monotone clipping commutes with the minimum; threshold 15 is interior to [1,50]. Sequence-only extraction is unchanged.",
+  "equivalent_native_minQ": "15 - delta",
+  "executed_script_archive": "/scratch-nfs/f005f43/sctagger_nanopore2023_extended_sweep_20260913/blaze_replay/provenance/replay_blaze.executed.py",
+  "executed_script_sha256": "168d0805e093b68bc31b5fd54b93d767740c8b16c10aa14ee66e67a7bf11472f",
+  "final_script_sha256": "bf638ebc00348d18d8ff753ffa8e6ae4133ee1c2d9d21621fb2776d11f2614ea",
+  "finished_utc": "2026-09-13T19:34:44.594651+00:00",
+  "frozen_blaze_module_directory": "/dartfs-hpc/scratch/f005f43/sctagger_nanopore2023_unadjusted_20260913/tools/blaze_venv/lib/python3.9/site-packages/blaze",
+  "full_10x_whitelist": "/scratch-nfs/f005f43/sctagger_nanopore2023_unadjusted_20260913/tools/blaze_venv/lib/python3.9/site-packages/blaze/10X_bc/3M-february-2018.zip",
+  "full_10x_whitelist_barcodes": 6794880,
+  "host": "q01.hpcc.dartmouth.edu",
+  "metadata_correction": "Native validation clipping labels clarified after completion. The native replay used raw cached minQ directly, with no clipping. Counts, whitelists, truth metrics, and validation are unchanged. Executed and final wrapper hashes are distinct; no selection rerun.",
+  "native_validation_passed": true,
+  "native_validation_quality_transform": "none",
+  "python": "/scratch-nfs/f005f43/sctagger_nanopore2023_unadjusted_20260913/tools/blaze_venv/bin/python",
+  "python_version": "3.9.16 | packaged by conda-forge | (main, Feb  1 2023, 21:39:03) \n[GCC 11.3.0]",
+  "script_sha256": "168d0805e093b68bc31b5fd54b93d767740c8b16c10aa14ee66e67a7bf11472f",
+  "selection_function": "blaze.main.get_bc_whitelist",
+  "selection_parameters": {
+    "count_t": null,
+    "exp_cells": 5000,
+    "force_cell_n": null,
+    "high_sensitivity_mode": false,
+    "output_empty": false
+  },
+  "slurm_cpus_per_task": "1",
+  "slurm_job_id": "9405774",
+  "source_candidate_csv": "/scratch-nfs/f005f43/sctagger_nanopore2023_unadjusted_20260913/runs/L/nanopore2023_native_unadjusted/blaze/putative_bc.csv",
+  "source_expression": "raw_bc_count += Counter(df[df.putative_bc_min_q >= minQ].putative_bc.value_counts().to_dict())",
+  "source_native_whitelist": "/scratch-nfs/f005f43/sctagger_nanopore2023_unadjusted_20260913/runs/L/nanopore2023_native_unadjusted/blaze/whitelist.csv",
+  "source_truth": "/scratch-nfs/f005f43/sctagger_nanopore2023_unadjusted_20260913/metadata/L_truth_barcodes.txt",
+  "started_utc": "2026-09-13T19:32:51.454638+00:00",
+  "targets_2018_shift_to_2023_delta": [
+    [
+      1,
+      -17
+    ],
+    [
+      2,
+      -16
+    ],
+    [
+      3,
+      -15
+    ],
+    [
+      4,
+      -14
+    ],
+    [
+      5,
+      -12
+    ],
+    [
+      6,
+      -11
+    ],
+    [
+      8,
+      -9
+    ],
+    [
+      10,
+      -7
+    ],
+    [
+      11,
+      -6
+    ],
+    [
+      12,
+      -5
+    ],
+    [
+      13,
+      -4
+    ]
+  ],
+  "validation_scope": "Only native unadjusted Q15 is compared against a previously completed BLAZE callset. Shifted conditions are requested sweep outputs, not additional controls.",
+  "versions": {
+    "blaze2": "2.6.0a0",
+    "matplotlib": "3.9.4",
+    "numpy": "2.0.2",
+    "pandas": "2.3.3"
+  }
+}

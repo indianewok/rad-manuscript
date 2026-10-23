@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/raw_fastq_datasets/rageseq.fq.gz",
+  "compressed_sha256": "cfdba50a497dd4f6b24c2a4e730e297a09498ad5fe006f65eee01fa202bcdcec",
+  "bytes": 16922373879,
+  "physical_reads": 20346396,
+  "sequence_bases": 16466857803,
+  "parser": "4-line FASTQ with sequence/quality length validation",
+  "pilot_sha256": "4a1ebff6db6f3212a9e1256510dfd0edcd655c95d755190306a000cf6683fe81",
+  "mtime_ns": 1722901490000000000,
+  "canonical_record_sha256": "a5f866d6180b46e0acbd3aa2526364060c152380714b00ec0ed74b8c1e8c24af",
+  "identity_mode": "selected compressed bytes",
+  "independent_identity_receipt": "validation/figure_3_rage_input_identity.json"
+}

@@ -1,0 +1,4 @@
+original_id	record_id	target	source	source_evidence	source_kind	orientation	ct	emitted_fastq	assignment_row
+e7985c56-3434-4733-83c7-41fd5ab8249c	e7985c56-3434-4733-83c7-41fd5ab8249c-F	TACTCATAGAAACCGC	TACCCATAGAAACCGC	RAD_CR	observed	forward	0	1	1
+e5d9f3d1-d990-47cd-839a-0dff5da34064	e5d9f3d1-d990-47cd-839a-0dff5da34064-F	CGAGAAGCAGCTGGCT	AGCGCTGGCTTAAAAG	RAD_CR	observed	forward	0	1	2
+d4813106-e58d-4b3d-9a0e-f39eb0f6ee5f	d4813106-e58d-4b3d-9a0e-f39eb0f6ee5f-F	TCTCATAAGATGCCAG	CCCCTTCCATAGATGC	RAD_CR	observed	forward	0	1	3

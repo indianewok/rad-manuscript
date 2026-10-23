@@ -1,0 +1,25 @@
+tool	donor	nuclei	count_unit
+RAD	H146	709	selected named Vireo singlets, including outside Illumina reference; no positive-expression-depth filter
+RAD	H1975	1961	selected named Vireo singlets, including outside Illumina reference; no positive-expression-depth filter
+RAD	H211	734	selected named Vireo singlets, including outside Illumina reference; no positive-expression-depth filter
+RAD	H2228	2141	selected named Vireo singlets, including outside Illumina reference; no positive-expression-depth filter
+RAD	H526	419	selected named Vireo singlets, including outside Illumina reference; no positive-expression-depth filter
+RAD	H69	637	selected named Vireo singlets, including outside Illumina reference; no positive-expression-depth filter
+RAD	HCC827	1455	selected named Vireo singlets, including outside Illumina reference; no positive-expression-depth filter
+RAD	SHP77	1348	selected named Vireo singlets, including outside Illumina reference; no positive-expression-depth filter
+BLAZE	H146	234	selected named Vireo singlets, including outside Illumina reference; no positive-expression-depth filter
+BLAZE	H1975	1764	selected named Vireo singlets, including outside Illumina reference; no positive-expression-depth filter
+BLAZE	H211	292	selected named Vireo singlets, including outside Illumina reference; no positive-expression-depth filter
+BLAZE	H2228	1909	selected named Vireo singlets, including outside Illumina reference; no positive-expression-depth filter
+BLAZE	H526	185	selected named Vireo singlets, including outside Illumina reference; no positive-expression-depth filter
+BLAZE	H69	185	selected named Vireo singlets, including outside Illumina reference; no positive-expression-depth filter
+BLAZE	HCC827	1195	selected named Vireo singlets, including outside Illumina reference; no positive-expression-depth filter
+BLAZE	SHP77	714	selected named Vireo singlets, including outside Illumina reference; no positive-expression-depth filter
+Flexiplex	H146	290	selected named Vireo singlets, including outside Illumina reference; no positive-expression-depth filter
+Flexiplex	H1975	1847	selected named Vireo singlets, including outside Illumina reference; no positive-expression-depth filter
+Flexiplex	H211	390	selected named Vireo singlets, including outside Illumina reference; no positive-expression-depth filter
+Flexiplex	H2228	1996	selected named Vireo singlets, including outside Illumina reference; no positive-expression-depth filter
+Flexiplex	H526	219	selected named Vireo singlets, including outside Illumina reference; no positive-expression-depth filter
+Flexiplex	H69	315	selected named Vireo singlets, including outside Illumina reference; no positive-expression-depth filter
+Flexiplex	HCC827	1266	selected named Vireo singlets, including outside Illumina reference; no positive-expression-depth filter
+Flexiplex	SHP77	802	selected named Vireo singlets, including outside Illumina reference; no positive-expression-depth filter

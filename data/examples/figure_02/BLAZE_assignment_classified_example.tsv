@@ -1,0 +1,9 @@
+tool	read_id	truth_barcode	raw_barcode_or_CR	target_barcode	record_state	interpretation	duplicate_status
+BLAZE	AATCGTGGTGCTCCTT-693	AATCGTGGTGCTCCTT	AATCGCTCCTTTACCG		unassigned	empty assigned target means unassigned	not assessed from bounded excerpt
+BLAZE	ACATTTCGTGCAACAG-158	ACATTTCGTGCAACAG	GCATTTCCTGCAACAG	ACATTTCGTGCAACAG	corrected_correct	empty assigned target means unassigned	not assessed from bounded excerpt
+BLAZE	AATTTCCGTGCATGCC-936	AATTTCCGTGCATGCC	AATTTCCGTGCATGCC	AATTTCCGTGCATGCC	native_correct	empty assigned target means unassigned	not assessed from bounded excerpt
+BLAZE	ACTCCCATCAAGCGAA-587	ACTCCCATCAAGCGAA	ACTCCATCAAGGAAGA	ACTCCCATCAAGCGAA	corrected_correct	empty assigned target means unassigned	not assessed from bounded excerpt
+BLAZE	AATGCCAAGACCCTCA-829	AATGCCAAGACCCTCA			unassigned	empty assigned target means unassigned	not assessed from bounded excerpt
+BLAZE	ACAACCATCTACCTTA-66	ACAACCATCTACCTTA	ACAACCATCTACCTTA	ACAACCATCTACCTTA	native_correct	empty assigned target means unassigned	not assessed from bounded excerpt
+BLAZE	AATCGACAGTAATTGG-665	AATCGACAGTAATTGG	AATCGACCAGTATTGG	AATCGACAGTAATTGG	corrected_correct	empty assigned target means unassigned	not assessed from bounded excerpt
+BLAZE	ACGCACGAGGCCTTTG-6	ACGCACGAGGCCTTTG	ACGCGGACCTTTGGAC		unassigned	empty assigned target means unassigned	not assessed from bounded excerpt

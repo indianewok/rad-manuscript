@@ -1,0 +1,6 @@
+cell_barcode,illumina_reference_present,illumina_reference_state,illumina_reference_label,rad_query_selected,rad_vireo_state,rad_vireo_label,blaze_panel_matched_query_selected,blaze_panel_matched_vireo_state,blaze_panel_matched_vireo_label,flexiplex_query_selected,flexiplex_vireo_state,flexiplex_vireo_label
+AAACCCACATCCGAGC,TRUE,named_singlet,H2228,TRUE,named_singlet,H2228,TRUE,named_singlet,H2228,TRUE,named_singlet,H2228
+AAAGGGCTCGAACGCC,TRUE,named_singlet,H2228,TRUE,unassigned,unassigned,FALSE,NA,NA,TRUE,unassigned,unassigned
+AAAGGTAAGAGGCGGA,TRUE,named_singlet,SHP77,TRUE,doublet,doublet,TRUE,doublet,doublet,TRUE,unassigned,unassigned
+AAAGGTAAGTGTGTTC,TRUE,named_singlet,SHP77,TRUE,named_singlet,H69,TRUE,named_singlet,H69,TRUE,named_singlet,H69
+AATTCCTGTAACGGTG,TRUE,named_singlet,H1975,FALSE,NA,NA,FALSE,NA,NA,FALSE,NA,NA

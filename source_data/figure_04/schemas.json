@@ -1,0 +1,134 @@
+{
+  "barcode_detection_metrics.tsv": {
+    "fields": [
+      "score_panel",
+      "display_dataset",
+      "canonical_id",
+      "dataset_family",
+      "tool",
+      "calls",
+      "reference_n",
+      "tp",
+      "fp",
+      "fn",
+      "precision",
+      "recall",
+      "f1",
+      "reference_type",
+      "reference_description",
+      "validation_tier",
+      "source_path",
+      "source_method",
+      "input_status",
+      "paired_input_id",
+      "inferential_status"
+    ],
+    "primary_key": [
+      "canonical_id",
+      "tool"
+    ],
+    "encoding": "UTF-8",
+    "delimiter": "tab",
+    "missing_value": "empty field; not zero",
+    "hash_scope": "plain file bytes"
+  },
+  "input_characteristics.tsv": {
+    "fields": [
+      "dataset",
+      "num_seqs",
+      "sum_len",
+      "min_len",
+      "avg_len",
+      "max_len",
+      "Q1",
+      "Q2",
+      "Q3",
+      "sum_gap",
+      "N50",
+      "N50_num",
+      "Q20(%)",
+      "Q30(%)",
+      "AvgQual",
+      "GC(%)",
+      "canonical_id",
+      "summary_origin"
+    ],
+    "primary_key": [
+      "canonical_id"
+    ],
+    "encoding": "UTF-8",
+    "delimiter": "tab",
+    "missing_value": "empty field; not zero",
+    "hash_scope": "plain file bytes"
+  },
+  "paired_f1.tsv": {
+    "fields": [
+      "paired_input_id",
+      "RAD",
+      "BLAZE",
+      "Flexiplex",
+      "input_status",
+      "independence_note"
+    ],
+    "primary_key": [],
+    "encoding": "UTF-8",
+    "delimiter": "tab",
+    "missing_value": "empty field; not zero",
+    "hash_scope": "plain file bytes"
+  },
+  "paired_precision.tsv": {
+    "fields": [
+      "paired_input_id",
+      "RAD",
+      "BLAZE",
+      "Flexiplex",
+      "input_status",
+      "independence_note"
+    ],
+    "primary_key": [],
+    "encoding": "UTF-8",
+    "delimiter": "tab",
+    "missing_value": "empty field; not zero",
+    "hash_scope": "plain file bytes"
+  },
+  "paired_recall.tsv": {
+    "fields": [
+      "paired_input_id",
+      "RAD",
+      "BLAZE",
+      "Flexiplex",
+      "input_status",
+      "independence_note"
+    ],
+    "primary_key": [],
+    "encoding": "UTF-8",
+    "delimiter": "tab",
+    "missing_value": "empty field; not zero",
+    "hash_scope": "plain file bytes"
+  },
+  "sample_inventory.tsv": {
+    "fields": [
+      "inventory_order",
+      "canonical_id",
+      "display_dataset",
+      "dataset_family",
+      "unit_type",
+      "in_frozen_paper_v1",
+      "paper_dataset",
+      "paper_use",
+      "in_original_prism",
+      "processed",
+      "processed_not_original_prism",
+      "three_tool_score_available",
+      "score_panel",
+      "reference_type",
+      "validation_tier",
+      "notes"
+    ],
+    "primary_key": [],
+    "encoding": "UTF-8",
+    "delimiter": "tab",
+    "missing_value": "empty field; not zero",
+    "hash_scope": "plain file bytes"
+  }
+}

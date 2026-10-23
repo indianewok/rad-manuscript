@@ -1,0 +1,15 @@
+field	value
+study	Le Brigand et al. GSE153859 mouse olfactory bulb
+matched_long_read_sample	GSM4656184
+input_accessions	SRR12157794;SRR12157795
+input_scope	complete SRR12157794 plus SRR12157795 concatenated input
+input_reads	29773474
+SRR12157794_bytes	20885878201
+SRR12157794_md5	ac05146de32ac04bc42e5b6ef36d1a5a
+SRR12157795_bytes	13367463313
+SRR12157795_md5	d1cd65d8f5a55fb1b189c0019204f872
+design_unique_barcodes	4992
+tissue_mask_unique_barcodes	918
+RAD_prior	none
+BLAZE_prior	expect_cells_918
+Flexiplex_prior	none

@@ -1,0 +1,12 @@
+arm=L
+start_utc=2026-08-12T19:17:22Z
+host=andes8.dartmouth.edu
+pid=1044928
+affinity=32-51
+command=pigz -dc -p 4 /dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260731_sctagger_badread_quality_full/inputs/L/flatQ20.fq.gz | /usr/bin/time -v /dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/software_pins_20260810/flexiplex_raw_to_assigned_audit/bin/flexiplex_v1.02.6_raw_to_assigned_audit -d 10x3v3 -p 16 -k /dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260731_sctagger_badread_quality_full/runs/flexiplex/L/flatQ20/output/L_flatQ20_barcodes_final.txt -n L_flatQ20_audit > /dev/null 2> /dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/sctagger_flexiplex_audit_20260812/L_audit.time.txt
+end_utc=2026-08-12T19:25:19Z
+elapsed_sec=477
+pigz_exit=0
+flexiplex_exit=0
+/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/sctagger_flexiplex_audit_20260812/L: native=463,613, corrected=1,398,700, incorrect=282,077, ambiguous=364
+join_exit=0

@@ -1,0 +1,10 @@
+tool	barcode	celltype	receptor	native	corrected_only	assigned
+Flexiplex	AAACCTGAGAATCTCC	Ramos	bcr	713	700	1413
+Flexiplex	AAACCTGAGAATCTCC	Ramos	tcr	10	35	45
+Flexiplex	AAACCTGAGAATCTCC	Ramos	unmapped	340	358	698
+Flexiplex	AAACCTGAGCGTCTAT	Ramos	bcr	535	505	1040
+Flexiplex	AAACCTGAGCGTCTAT	Ramos	tcr	22	32	54
+Flexiplex	AAACCTGAGCGTCTAT	Ramos	unmapped	329	325	654
+Flexiplex	AAACCTGAGTCCATAC	Ramos	bcr	497	433	930
+Flexiplex	AAACCTGAGTCCATAC	Ramos	tcr	17	18	35
+Flexiplex	AAACCTGAGTCCATAC	Ramos	unmapped	216	227	443

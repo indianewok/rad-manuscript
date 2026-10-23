@@ -1,0 +1,102 @@
+Package: FLAMES
+Title: FLAMES: Full Length Analysis of Mutations and Splicing in long read RNA-seq data
+Version: 2.7.1
+Date: 2025-07-22
+Authors@R: c(
+       person("Changqing", "Wang", role=c("aut", "cre"),
+              email="wang.ch@wehi.edu.au"),
+       person("Luyi", "Tian", role=c("aut"),
+              email="tian.l@wehi.edu.au"),
+       person("Oliver", "Voogd", role=c("aut"),
+              email="voogd.o@wehi.edu.au"),
+       person("Jakob", "Schuster", role=c("aut"),
+              email="schuster.j@wehi.edu.au"),
+       person("Shian",  "Su", role=c("aut"),
+              email="su.s@wehi.edu.au"),
+       person("Yair D.J.", "Prawer", role=c("aut"),
+              email="sefi.prawer@unimelb.edu.au"),
+       person("Yupei", "You", role=c("aut"),
+              email="you.yu@wehi.edu.au"),
+       person("Matthew", "Ritchie",role=c("ctb"),
+              email="mritchie@wehi.edu.au"))
+Description: Semi-supervised isoform detection and annotation from both bulk and single-cell 
+  long read RNA-seq data. Flames provides automated pipelines for analysing isoforms,
+  as well as intermediate functions for manual execution.
+biocViews: RNASeq, SingleCell, Transcriptomics, DataImport, 
+            DifferentialSplicing, AlternativeSplicing, GeneExpression,
+            LongRead
+BugReports: https://github.com/mritchielab/FLAMES/issues
+License: GPL (>= 3)
+Encoding: UTF-8
+Imports: 
+    abind,
+    basilisk,
+    bambu,
+    BiocParallel,
+    Biostrings,
+    BiocGenerics,
+    crew,
+    circlize,
+    ComplexHeatmap,
+    cowplot,
+    cli,
+    dplyr,
+    GenomicRanges,
+    GenomicFeatures,
+    GenomicAlignments,
+    Seqinfo,
+    ggplot2,
+    grid,
+    gridExtra,
+    igraph,
+    jsonlite,
+    magrittr,
+    magick,
+    Matrix,
+    MatrixGenerics,
+    readr,
+    reticulate,
+    Rsamtools,
+    rtracklayer,
+    RColorBrewer,
+    R.utils,
+    S4Arrays,
+    ShortRead,
+    SingleCellExperiment,
+    SummarizedExperiment,
+    SpatialExperiment,
+    scater,
+    scatterpie,
+    scrapper (>= 1.5.17),
+    S4Vectors,
+    scuttle,
+    stats,
+    scran,
+    stringr,
+    tidyr,
+    utils,
+    withr,
+    methods,
+    tibble,
+    tidyselect,
+    IRanges
+Suggests:
+    BiocStyle,
+    GEOquery,
+    ggrastr,
+    knitr,
+    rmarkdown,
+    uwot,
+    testthat (>= 3.0.0),
+    xml2
+LinkingTo: Rcpp, Rhtslib, testthat
+SystemRequirements: GNU make, C++17
+Config/Bioconductor/UnsupportedPlatforms: windows
+RoxygenNote: 7.3.3
+VignetteBuilder: knitr
+URL: https://mritchielab.github.io/FLAMES
+Config/testthat/edition: 3
+Depends: 
+    R (>= 4.2.0)
+LazyLoad: yes
+StagedInstall: no

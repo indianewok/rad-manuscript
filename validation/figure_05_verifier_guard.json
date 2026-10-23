@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "scope": "Deliberately mismatched aggregation output SHA is rejected before summary publication",
+  "exit_code": 1,
+  "expected_error": "Aggregation report does not bind to these exact counts",
+  "summary_written": false,
+  "validator_sha256": "e0de428bed3389eea4124bad2d1252d9bfb26b9fe23d0bd7c9f6954be0234818"
+}

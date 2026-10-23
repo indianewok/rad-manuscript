@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this code, please cite the manuscript below."
-title: "RAD manuscript — figure generation code"
+title: "RAD manuscript — current figure data and analysis"
 authors:
   - family-names: "Vaidya"
     given-names: "Chinmay M."
@@ -27,10 +27,5 @@ preferred-citation:
     - family-names: "Ackerman"
       given-names: "Margaret E."
   year: 2026
-  status: "in preparation"
-  # journal:
-  # doi:
-  # volume:
-  # issue:
-  # start:
-  # end:
+  journal: "bioRxiv"
+  doi: "10.64898/2026.05.29.728810"

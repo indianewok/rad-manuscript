@@ -1,0 +1,6 @@
+barcode	in_deposited_shortread_list	deposited_label	called_RAD	called_BLAZE_2.6.0a0_expect10433	called_Flexiplex_f8
+AAACCTGAGAGGACGG	True	T_cell1	True	False	False
+AAACCTGAGCCTATGT	False		False	True	False
+AAACCTGAGTATTGGA	True	1	False	False	False
+AAACCTGCAGGCTCAC	True	B_cell1	True	True	True
+AACACGTGTTCTCATT	True	T_B_doublet	True	True	True

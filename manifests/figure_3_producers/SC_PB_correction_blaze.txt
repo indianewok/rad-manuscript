@@ -1,0 +1,11 @@
+dataset=SC_PB
+input=/scratch-nfs/f005f43/rad_longbench_20260726/data/sc_sn/raw_fastq/SC_PB.fastq.gz
+selector=--expect-cells 5000
+blaze2_version=2.5.0
+threads=48
+kit_version=3v3 (BLAZE default)
+full_bc_whitelist=none
+PYTHONHASHSEED=UNSET
+start_utc=2026-07-31T03:05:48Z
+input_resolved=/dartfs-hpc/scratch/f005f43/rad_longbench_20260726/data/sc_sn/raw_fastq/SC_PB.fastq.gz
+input_size_bytes=79878370809

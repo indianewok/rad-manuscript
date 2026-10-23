@@ -1,0 +1,5 @@
+tool	reference_n	calls	tp	fp	fn	precision	recall	f1
+RAD	50	50	50	0	0	1.0	1.0	1.0
+BLAZE	50	2	2	0	48	1.0	0.04	0.07692307692307693
+Flexiplex_f0	50	186	50	136	0	0.26881720430107525	1.0	0.423728813559322
+Flexiplex_f8	50	50	50	0	0	1.0	1.0	1.0

@@ -1,0 +1,190 @@
+{
+  "status": "passed",
+  "level": "full_retained_C2_to_C5",
+  "raw_rerun": "not run",
+  "runs": [
+    {
+      "dataset": "ScTagger-L",
+      "tool": "RAD",
+      "replicate": 1,
+      "status": "passed",
+      "all_targets_compared": 5000,
+      "differences": [],
+      "observed_total": 48997,
+      "expected_total": 48997
+    },
+    {
+      "dataset": "ScTagger-L",
+      "tool": "RAD",
+      "replicate": 2,
+      "status": "passed",
+      "all_targets_compared": 5000,
+      "differences": [],
+      "observed_total": 49004,
+      "expected_total": 49004
+    },
+    {
+      "dataset": "ScTagger-L",
+      "tool": "RAD",
+      "replicate": 3,
+      "status": "passed",
+      "all_targets_compared": 5000,
+      "differences": [],
+      "observed_total": 49292,
+      "expected_total": 49292
+    },
+    {
+      "dataset": "ScTagger-L",
+      "tool": "BLAZE",
+      "replicate": 1,
+      "status": "passed",
+      "all_targets_compared": 5000,
+      "differences": [],
+      "observed_total": 294175,
+      "expected_total": 294175
+    },
+    {
+      "dataset": "ScTagger-L",
+      "tool": "BLAZE",
+      "replicate": 2,
+      "status": "passed",
+      "all_targets_compared": 5000,
+      "differences": [],
+      "observed_total": 304701,
+      "expected_total": 304701
+    },
+    {
+      "dataset": "ScTagger-L",
+      "tool": "BLAZE",
+      "replicate": 3,
+      "status": "passed",
+      "all_targets_compared": 5000,
+      "differences": [],
+      "observed_total": 299332,
+      "expected_total": 299332
+    },
+    {
+      "dataset": "ScTagger-L",
+      "tool": "Flexiplex",
+      "replicate": 1,
+      "status": "passed",
+      "all_targets_compared": 5000,
+      "differences": [],
+      "observed_total": 462690,
+      "expected_total": 462690
+    },
+    {
+      "dataset": "ScTagger-L",
+      "tool": "Flexiplex",
+      "replicate": 2,
+      "status": "passed",
+      "all_targets_compared": 5000,
+      "differences": [],
+      "observed_total": 465375,
+      "expected_total": 465375
+    },
+    {
+      "dataset": "ScTagger-L",
+      "tool": "Flexiplex",
+      "replicate": 3,
+      "status": "passed",
+      "all_targets_compared": 5000,
+      "differences": [],
+      "observed_total": 458773,
+      "expected_total": 458773
+    },
+    {
+      "dataset": "LongBench SC-ONT",
+      "tool": "RAD",
+      "replicate": 1,
+      "status": "passed",
+      "all_targets_compared": 5211,
+      "differences": [],
+      "observed_total": 46487,
+      "expected_total": 46487
+    },
+    {
+      "dataset": "LongBench SC-ONT",
+      "tool": "RAD",
+      "replicate": 2,
+      "status": "passed",
+      "all_targets_compared": 5211,
+      "differences": [],
+      "observed_total": 46961,
+      "expected_total": 46961
+    },
+    {
+      "dataset": "LongBench SC-ONT",
+      "tool": "RAD",
+      "replicate": 3,
+      "status": "passed",
+      "all_targets_compared": 5211,
+      "differences": [],
+      "observed_total": 46568,
+      "expected_total": 46568
+    },
+    {
+      "dataset": "LongBench SC-ONT",
+      "tool": "BLAZE",
+      "replicate": 1,
+      "status": "passed",
+      "all_targets_compared": 5211,
+      "differences": [],
+      "observed_total": 1005393,
+      "expected_total": 1005393
+    },
+    {
+      "dataset": "LongBench SC-ONT",
+      "tool": "BLAZE",
+      "replicate": 2,
+      "status": "passed",
+      "all_targets_compared": 5211,
+      "differences": [],
+      "observed_total": 1024563,
+      "expected_total": 1024563
+    },
+    {
+      "dataset": "LongBench SC-ONT",
+      "tool": "BLAZE",
+      "replicate": 3,
+      "status": "passed",
+      "all_targets_compared": 5211,
+      "differences": [],
+      "observed_total": 1097594,
+      "expected_total": 1097594
+    },
+    {
+      "dataset": "LongBench SC-ONT",
+      "tool": "Flexiplex",
+      "replicate": 1,
+      "status": "passed",
+      "all_targets_compared": 5211,
+      "differences": [],
+      "observed_total": 1364364,
+      "expected_total": 1364364
+    },
+    {
+      "dataset": "LongBench SC-ONT",
+      "tool": "Flexiplex",
+      "replicate": 2,
+      "status": "passed",
+      "all_targets_compared": 5211,
+      "differences": [],
+      "observed_total": 1370330,
+      "expected_total": 1370330
+    },
+    {
+      "dataset": "LongBench SC-ONT",
+      "tool": "Flexiplex",
+      "replicate": 3,
+      "status": "passed",
+      "all_targets_compared": 5211,
+      "differences": [],
+      "observed_total": 1422565,
+      "expected_total": 1422565
+    }
+  ],
+  "script_sha256": "8091a17cb1b1122bc33a3885292624fe372a26ecad89aa190f8af2ea8fb237b4",
+  "ledgers": "all assigned physical IDs retained; unassigned identities require raw input ID universe",
+  "limitations": "Flex sidecar retained even when no FASTQ record; emitted_fastq flag not yet independently reconciled"
+}

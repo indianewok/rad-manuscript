@@ -1,0 +1,334 @@
+{
+  "files": {
+    "accepted_phase_example.tsv": {
+      "rows": 12,
+      "columns": {
+        "dataset": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "raw_dataset": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "phase": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "tool": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "threads": {
+          "units_or_semantics": "threads"
+        },
+        "replicate": {
+          "units_or_semantics": "technical timing repetition ID"
+        },
+        "attempt": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "attempt_dir": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "accepted_pointer_path": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "accepted_pointer_value": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "expected_key": {
+          "units_or_semantics": "literal source acceptance/completion boolean; never inferred from file size"
+        },
+        "accepted": {
+          "units_or_semantics": "literal source acceptance/completion boolean; never inferred from file size"
+        },
+        "record_status": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "complete_marker": {
+          "units_or_semantics": "literal source acceptance/completion boolean; never inferred from file size"
+        },
+        "user_seconds": {
+          "units_or_semantics": "seconds"
+        },
+        "system_seconds": {
+          "units_or_semantics": "seconds"
+        },
+        "cpu_seconds": {
+          "units_or_semantics": "seconds"
+        },
+        "elapsed_seconds": {
+          "units_or_semantics": "seconds"
+        },
+        "observed_mean_cores": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "gnu_time_max_rss_kib": {
+          "units_or_semantics": "KiB (1024 bytes)"
+        },
+        "process_tree_peak_total_rss_kib": {
+          "units_or_semantics": "KiB (1024 bytes)"
+        },
+        "process_tree_peak_elapsed_seconds": {
+          "units_or_semantics": "seconds"
+        },
+        "process_tree_peak_process_count": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "process_tree_peak_timestamp_utc": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "process_tree_sample_count": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "process_tree_totals_path": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "selected_max_rss_kib": {
+          "units_or_semantics": "KiB (1024 bytes)"
+        },
+        "selected_max_rss_source": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "exit_status": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "metrics_path": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "metrics_sha256": {
+          "units_or_semantics": "SHA256 of exact named file bytes"
+        },
+        "metrics_extra_json": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "component_discovery_user_seconds": {
+          "units_or_semantics": "seconds"
+        },
+        "component_discovery_system_seconds": {
+          "units_or_semantics": "seconds"
+        },
+        "component_discovery_cpu_seconds": {
+          "units_or_semantics": "seconds"
+        },
+        "component_discovery_elapsed_seconds": {
+          "units_or_semantics": "seconds"
+        },
+        "component_discovery_max_rss_kib": {
+          "units_or_semantics": "KiB (1024 bytes)"
+        },
+        "component_discovery_exit_status": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "component_discovery_metrics_path": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "component_filter_user_seconds": {
+          "units_or_semantics": "seconds"
+        },
+        "component_filter_system_seconds": {
+          "units_or_semantics": "seconds"
+        },
+        "component_filter_cpu_seconds": {
+          "units_or_semantics": "seconds"
+        },
+        "component_filter_elapsed_seconds": {
+          "units_or_semantics": "seconds"
+        },
+        "component_filter_max_rss_kib": {
+          "units_or_semantics": "KiB (1024 bytes)"
+        },
+        "component_filter_exit_status": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "component_filter_metrics_path": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "status_path": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "status_metadata_json": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "run_metadata_path": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "run_metadata_json": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "hostname": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "cpu_model": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "slurm_job_id": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "slurm_cpus_per_task": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "input_fastq": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "input_size_bytes": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "input_sha256_preverified": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "expected_reads": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "command_path": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "command_sha256": {
+          "units_or_semantics": "SHA256 of exact named file bytes"
+        },
+        "command": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "stdout_path": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "stderr_path": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "whitelist_metadata_path": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "whitelist_metadata_sha256": {
+          "units_or_semantics": "SHA256 of exact named file bytes"
+        },
+        "whitelist_metadata_json": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "whitelist_rows_nonempty": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "whitelist_sha256": {
+          "units_or_semantics": "SHA256 of exact named file bytes"
+        },
+        "output_metadata_path": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "output_metadata_json": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "warnings": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        }
+      },
+      "scope": "bounded actual input or its deterministic transformation; not a full scientific dataset"
+    },
+    "combined_example.tsv": {
+      "rows": 6,
+      "columns": {
+        "dataset": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "tool": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "threads": {
+          "units_or_semantics": "threads"
+        },
+        "replicate": {
+          "units_or_semantics": "technical timing repetition ID"
+        },
+        "total_wall_seconds": {
+          "units_or_semantics": "seconds"
+        },
+        "total_wall_hours": {
+          "units_or_semantics": "hours"
+        },
+        "max_process_rss_GB": {
+          "units_or_semantics": "decimal GB (10^9 bytes)"
+        },
+        "memory_definition": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        }
+      },
+      "scope": "bounded actual input or its deterministic transformation; not a full scientific dataset"
+    },
+    "hd_stage_example.tsv": {
+      "rows": 8,
+      "columns": {
+        "bin_id": {
+          "units_or_semantics": "16um spatial-bin identifier"
+        },
+        "wide_table_count": {
+          "units_or_semantics": "recorded reads in selected wide table"
+        },
+        "retained_comparison_count": {
+          "units_or_semantics": "recorded RAD_all reads in retained comparison"
+        },
+        "RAD_valid": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        }
+      },
+      "scope": "bounded actual input or its deterministic transformation; not a full scientific dataset"
+    },
+    "parsed_gnu_time.tsv": {
+      "rows": 2,
+      "columns": {
+        "component": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "dataset": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "elapsed_seconds": {
+          "units_or_semantics": "seconds"
+        },
+        "exit_status": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "max_rss_kib": {
+          "units_or_semantics": "KiB (1024 bytes)"
+        },
+        "phase": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "replicate": {
+          "units_or_semantics": "technical timing repetition ID"
+        },
+        "source_log": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "system_seconds": {
+          "units_or_semantics": "seconds"
+        },
+        "threads": {
+          "units_or_semantics": "threads"
+        },
+        "tool": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "user_seconds": {
+          "units_or_semantics": "seconds"
+        }
+      },
+      "scope": "bounded actual input or its deterministic transformation; not a full scientific dataset"
+    },
+    "hd_grid_example.tsv": {
+      "rows": 8,
+      "columns": {
+        "bin_id": {
+          "units_or_semantics": "16um bin identifier; exact key"
+        },
+        "array_row": {
+          "units_or_semantics": "zero-based grid row"
+        },
+        "array_col": {
+          "units_or_semantics": "zero-based grid column"
+        },
+        "in_tissue": {
+          "units_or_semantics": "0outside/1inside; independently equal saved filtered reference set"
+        }
+      },
+      "scope": "first4 inside and first4 outside bins in source order; bounded actual excerpt, not an inference cohort"
+    }
+  },
+  "source_lineage": "provenance.json; original TSV/CSV header excluded from 1-based data-row numbering",
+  "output_tables": "derived examples are produced by exact commands in docs/figure_01.md",
+  "empty_files": "A zero-byte COMPLETE marker is meaningful original evidence, not a missing data value."
+}

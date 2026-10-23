@@ -1,0 +1,4 @@
+cell_bc,sample,rnd1_well,rnd2_well,rnd3_well,fastq_reads,fastq_umis_uncorrected,bam_reads,bam_umis_corrected,published_umi_count,published_gene_count
+CAAGGAGCATAGCGAC_22,MB_nuclei,22,79,82,1688527,495255,825860,326783,620484,14177
+AAGAGATCTCTTCACA_39,MT_nuclei,39,62,69,1043341,393166,563991,241593,407733,13141
+GATGAATCCACCTTAC_33,MT_nuclei,33,83,94,915931,328622,244439,99233,368479,13325

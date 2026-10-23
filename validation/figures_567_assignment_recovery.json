@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/SN_ONT_RAD_4acbe00_full_matrix_rebuild_20260828/assignments/RAD_4acbe00.assign.tsv.gz",
+  "source_bytes": 2357674940,
+  "source_sha256": "a5dc369445826fdd36541a301b1b85448438fb52d351ce8883a12ef456457c48",
+  "recorded_expected_sha256": "a5dc369445826fdd36541a301b1b85448438fb52d351ce8883a12ef456457c48",
+  "complete_gzip_stream_valid": true,
+  "assignment_rows": 57885606,
+  "exact_flag_rows": 49555699,
+  "corrected_flag_rows": 8329907,
+  "selected_barcodes": 12423,
+  "observed_barcodes": 12423,
+  "UMI_length_histogram": {
+    "12": 57885606
+  },
+  "schema": [
+    "original_read_id",
+    "cell_barcode",
+    "UMI",
+    "raw_barcode",
+    "corrected_flag"
+  ],
+  "source_row_scope": "all emitted assignments including concatemer records; not unique physical reads",
+  "limits": "Extractor removed orientation/-CT suffixes. No gene IDs, segment coordinates or original record labels are retained. Frozen read-gene input and emitted FASTQ are still missing; no matrix replay or explicit CT ledger is claimed.",
+  "example_selection": "first10 actual rows after full SHA/schema/count validation; public SN_ONT cell-line mixture",
+  "source_barcodes": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_07/native/RAD/all/barcodes.tsv.gz",
+  "source_barcodes_sha256": "5e45eced1a09f5f184ad7b419d8c2946f73cc36ba0bed89309e1507de4233775",
+  "host": "t05.hpcc.dartmouth.edu",
+  "slurm_job_id": "9977822",
+  "start_utc": "2026-10-23T18:23:57.188255Z",
+  "finish_utc": "2026-10-23T18:26:12.953525Z"
+}
