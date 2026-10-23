@@ -1,0 +1,834 @@
+{
+	"@class": "Document",
+	"$id": "document.schema.json",
+	"creationDate": "2026-07-30T00:00:00Z",
+	"modificationDate": "2026-09-01T17:14:15Z",
+	"createdBy": {
+		"name": "Prism",
+		"user": "cmv",
+		"version": "11.0.0.93",
+		"platform": "Mac"
+	},
+	"modifiedBy": {
+		"name": "Prism",
+		"user": "cmv",
+		"version": "11.0.0.93",
+		"platform": "Mac"
+	},
+	"formatVersion": "1-6-0",
+	"minFormatVersion": "1-4-0",
+	"minPrismVersion": "10.3.0",
+	"compatibility": [
+		{
+			"formatVersion": "1-0-0",
+			"action": "warningOpen"
+		}
+	],
+	"sheets": {
+		"graphs": [
+			"E6579804-0FD1-47EE-8C1E-BA5BC2E1A7E2",
+			"A1F32E1C-A5E4-4965-BF3A-869175178AC5",
+			"7A73500A-4E52-4748-9578-1BE19A00FF97",
+			"8A680068-52F5-4DFD-A916-9976BA81ACB9",
+			"D835F540-09D8-4B64-84EE-D4716D3B1FE8",
+			"1D1276FB-8F1B-452D-A57E-CA1BC6040D97",
+			"4390C148-3085-4FEB-9F81-41D02CCCEF3A",
+			"6D6DA7E9-BA59-4611-AAC8-51E0FC262256",
+			"8565E3B7-23D8-45A3-900D-A2E77A2855F1",
+			"BD851476-55B1-471C-9B3F-286381782019",
+			"FB21B9AA-D02A-41D8-B03A-ABF105036A91",
+			"7C2A814A-2651-4B9D-93DE-930D2D1A3566",
+			"FF66FE06-F6D5-453F-BFFB-4E89AD507341",
+			"64DC035C-2866-4268-9DA6-2FD18838C5CE",
+			"69E86D79-169F-4B73-A6AB-CB24CB77BF0A",
+			"5A474DEE-AA7E-43C5-9329-5A2CE4708372",
+			"130A0300-9C5A-457D-905F-777A92E9EC8D",
+			"AC69D38B-5C90-4544-B6F4-DC75A55745B0",
+			"084D2191-1BE0-44BB-9C10-E14F0ADBD59C",
+			"87684448-A690-4DD0-BD4D-9E1EA8ADFAFD",
+			"DBFD4E6A-C514-4A47-8639-3A69169628A3",
+			"521CF72D-2FEC-4598-8FF8-8361755AAB49",
+			"AFD52449-126E-4F64-982E-211C233381A7",
+			"76D750D2-0B93-493F-ACD5-A661DBAD6A6C",
+			"6A217FDE-1673-4D63-995B-AFD8D7AA1976",
+			"63A1B968-EA36-465A-A1ED-FEB5ED5FE3BC",
+			"EEB7FE4B-EE5E-4206-BF21-F01C323E1B03",
+			"6F391B3C-F7B4-4C77-920B-0E8379371EC7",
+			"7CC70CA8-649A-42C2-9978-9FF9A70F8AA2",
+			"1CACB9C6-52C0-4C51-BEB6-AD58EAF89C7E",
+			"0DB61EE6-D9D2-4B2A-83C8-A5060506DD1E",
+			"FF12B8EE-EBBF-4103-900B-89EFA8C1B897",
+			"C329C871-2CEF-44D2-ACEC-CA2C662E6404",
+			"B9E71497-1E6D-4D6B-807A-601603518B94",
+			"8745CC13-259E-4AA1-A31B-F01DA73A9EBA",
+			"B28D0381-1EE3-42D0-B33F-8F178821C90D",
+			"879813A4-52C3-4471-90AA-34D3D1884C5D",
+			"E696237E-5B58-43F1-A0DB-44ACAAAD6E23",
+			"40B00D99-1B29-4B84-8C93-93B9B345363F",
+			"5ECD6D03-8291-4081-AB0C-11B7D282BDCC",
+			"A730E06E-E108-484C-A005-C9E6E43FC8F3",
+			"7A86D2C9-A816-4A24-874E-FDB1ECF920BD",
+			"D9AA2264-5444-434C-A4DD-DF95A6030E4F",
+			"2868FF8E-9ED8-49BC-B02E-30FF1764BB2D",
+			"7ACDD7C1-DEF7-4ED1-84BF-CA9CD169AD3B",
+			"5EB5F98F-24CB-4820-872C-6F66CFF1FC2F",
+			"25D7331D-8665-4E42-BE2C-CF6976719012",
+			"DA572053-8293-4748-A556-26B197EA8460",
+			"6C2AEE71-4A35-408D-8CA5-198BEE57B6A0",
+			"E3E8EF7C-240E-4D2C-8CA5-969736C7846C",
+			"9958FA68-E23B-4840-B107-0540F832A75C",
+			"9EE9D0D0-2BE5-4221-B026-18DACBE87DDE",
+			"CF6A3C30-0EA7-4A1C-B56E-473EAC3936AF",
+			"B97379ED-8F35-4AFD-8F80-793327A98905",
+			"B9D92B5E-9FC9-466F-9263-BECED1B39D84",
+			"4AA2F045-27ED-4BA3-9A59-A0D4AB7E5CDB",
+			"B340B5C3-BC65-4B14-8C9D-4505ADEFAE2D",
+			"A802F129-B689-40F8-B170-DDBCDC54A6DE",
+			"69EE807C-A27F-4E19-868F-BADDA03304E0",
+			"DC1371DD-F48A-426E-BA20-92CBB1F45FBB",
+			"30771D71-236C-44C4-BE95-C68B9B20C0A5",
+			"F8AB0603-E69F-486E-B1E1-9B9DE941F945",
+			"4A1B6A69-2365-4B93-B632-DC23E5B225AE",
+			"CBF32846-21BD-4ECF-B76E-DB7E3F441D3B",
+			"8FAE80ED-69C9-4BBD-A013-DB1F92EB2104",
+			"0684CF56-7950-47E8-93DE-CE47BCC9F6D2",
+			"E5BBEE31-CDA2-493E-8295-AD872662F3A8",
+			"6612E9F4-A1FA-4FE3-A5BE-1CCC980680DF",
+			"0D084217-21FA-4EDD-94AD-9C8719F3DA8E",
+			"D5ED5C83-6372-4176-BB89-F465543BC5D1",
+			"BB965EB1-BA8C-4BC9-9207-6191E72ED911",
+			"1525E18F-1C58-4F97-BC29-AF63533122FE",
+			"B810718F-43BE-4480-9B60-01DAD77A11E9",
+			"29B74C34-6A3B-4709-B033-D20973FBC9E1",
+			"68F2DF82-4529-4A91-AC7A-BEFC1A048CB8",
+			"C3A1A3BA-757C-4D13-B277-B52E8A04103B",
+			"888F4DE6-F4B0-46BD-83AB-9AD2DC34FA19",
+			"A7D8209D-E011-4143-83C4-6775649A7424",
+			"89CC2FE7-CB5F-4863-83E8-A6C19CE7C054",
+			"46FFED35-1ED8-466E-9DE4-F9DD11609737",
+			"8E5F0946-18FC-4894-806D-9E9611AF8140",
+			"0612D8E6-E4A9-45D2-885C-8D045464CFF6",
+			"278231D3-2FB0-4798-8F36-EE5EE9556B15",
+			"8DE9644D-CCEA-46A9-812C-3B891C94E25D",
+			"C40D0870-BBAA-426D-B55C-F1EE5A752950",
+			"91731924-8759-4DBE-8774-FEBA11660E17",
+			"F16C6243-5CEF-45DC-B3BF-8894E15D7F7C"
+		],
+		"layouts": [
+			"DFFEFE2E-71E2-49E1-8859-D20AEFA39712",
+			"2DC5D134-B442-494D-9B24-EEAEDB17FD3A",
+			"469C0382-E60F-4FBD-956C-7D772343F90D",
+			"FBC3CB75-1D75-44C8-AE1F-CF1FEBD767FC",
+			"C3B5C198-E4BA-4C34-9580-B55EA23BE9C3",
+			"5819A734-6A3F-40D7-BD74-41BAB2741958",
+			"5CFD8A9F-03C6-4A5B-A6BB-3AD6C729A493",
+			"224701CE-D8C7-498D-AC01-B631239DA5F0"
+		],
+		"analyses": [
+			"8C7F3CCB-3C74-44A2-8D5A-E1571AE2A5B2",
+			"BDFECB85-671A-437F-B245-0F3E4807869D",
+			"FA82F797-81AB-4407-921F-58ABE8817560",
+			"1BFF3156-E20F-4792-8899-483BCC5E4CEC",
+			"F616A250-536B-42B0-B4E6-23C2BF786E46",
+			"01D2C9CC-85D5-47CA-881F-DA439ACB09ED",
+			"8EE1DFDD-6145-4540-A6C3-908F9D97838B",
+			"A0977F7E-7469-45F4-BA7D-3D93174268D5",
+			"FCC43C10-E825-4014-9D65-68710C5E652C",
+			"15BB6363-4049-472E-993A-9E760A733266",
+			"46C92149-C6E6-41F5-B963-2CBE6D523768",
+			"EBED6A23-944F-4D2D-B1C4-ECE28E1CA305",
+			"97C85D89-B439-4BE6-B46A-118434CE58C2",
+			"88158806-1E75-4B7B-AC33-3CDDB13EE6FC",
+			"D76EB620-1F1E-4F3B-B6B4-CAFF74AF0587",
+			"EAD14229-DA1F-4973-A764-02FCE6204238",
+			"2819D6B3-1568-452E-B15F-A3500A5FFC60",
+			"9D1764AE-FABA-49E1-92D1-A8FDE1CA2BA5",
+			"3F09B45E-6D8E-48B0-AA0E-8383E52AEDAC",
+			"D3DC4AF2-6B1B-4B7A-9A9D-5F1F18F0F742",
+			"CFF360F0-37B5-44A5-825A-6AAA0931484A",
+			"4B273CA6-5A23-408D-986F-E059667C8AB1",
+			"678B9A92-63C5-4684-A020-90FAEDFEAF57"
+		],
+		"info": [
+			"23EB33D8-57EF-4985-B0D4-F8F316B98FF0"
+		],
+		"data": [
+			"6C6E67C6-4687-4236-A607-B28C9BF64CC8",
+			"9969E10F-EC18-44AA-8BA8-7D94A23C964A",
+			"7D84BF0B-3F9C-4474-BA21-3C944AA4E52C",
+			"C5D1E7F5-6C46-445E-A94A-148EB4F45D23",
+			"205B5DB8-FA28-4866-AC67-F1C50A32B135",
+			"0DDD9F00-2C88-4DA7-B182-C38D51C70853",
+			"8A589845-0457-4598-B92D-93BB2E5D5AB8",
+			"A984FC1F-D817-4849-8D24-282E98B51F83",
+			"64135F2D-D1D5-4545-9B3E-F25DD29B7995",
+			"5C524558-D184-453C-99CE-80BA6E55BEAD",
+			"FEEF769C-7E7F-41AC-85C8-CB4A972322FB",
+			"92D27A71-5EE1-44AD-8447-946BA165DE9A",
+			"26FA890A-7474-433D-93A7-6DB16520537F",
+			"4217A0BF-834F-45BD-B10B-D3F93D7D9541",
+			"B405B9BC-1B0E-4E80-945E-48563990F9B8",
+			"6D466B4F-8636-4547-8F4E-B45C30CA7F51",
+			"7F52648E-85D1-4920-A525-216AA6D45C42",
+			"863F2861-9E53-441C-81FC-8E4C68D1EFF2",
+			"23B58E44-5B0C-4FCC-B0E5-7B13484F9A93",
+			"84FC2929-9B85-41EE-AB87-EB2CB846B99E",
+			"B7499EA0-B792-4E2C-A6D2-E98D5563DFB4",
+			"22A5359F-4FBA-462D-BB95-407152952856",
+			"2D1E8479-E4C5-4A28-98CD-380009FD5D57",
+			"39812EFB-0B3D-49A0-9892-55B2D3471AA5",
+			"9C56DDAD-F129-4B40-8C47-EB562F5C0585",
+			"912F181B-9811-4A83-8F31-7D998A738AAD",
+			"477724EA-24EC-47C5-B45E-E031867568EC",
+			"D612AF25-3960-4F6E-A6C4-8439ADFB1C21",
+			"31F5E266-1410-402E-8C4B-BBFF3DE71716",
+			"8C0033D7-5BA5-4B22-9B1A-31D7B954FEE5",
+			"9AB5434B-421A-44F0-9C5E-9FE6FE05705A",
+			"BFDDE8B0-A355-403E-917D-14F2877598E1",
+			"457B40F8-E32F-41C2-B68D-4261BC7854D0",
+			"595C64F1-E99A-49A5-93AB-7252BB41DC50",
+			"A79D0A7B-5E58-4430-8ED1-4539CEAA236C",
+			"C4AED970-9317-4457-9B94-58D59DDEB51A",
+			"C1960EFD-B21A-4CAC-B404-815C873EBB49",
+			"97515C64-3916-4689-9D24-55749BE92EBF",
+			"9834E32C-075C-4962-8512-2E0BB47454C9",
+			"41C0F5A3-D3FD-4501-8434-480C88F397F8",
+			"323D8B16-320E-4A4E-A622-0C4E6FB81742",
+			"40D74876-42F6-4B00-A4A6-79BDEEE85031",
+			"1A52363E-71FE-4B0E-BB81-671E3AE2C252",
+			"9D187C2D-D752-4F0D-A941-6FDB1ED956AA",
+			"8D561C87-A329-4F76-BAA1-6B84074B5538",
+			"38D81A56-1344-4F46-A7BC-D6424A2AEB76",
+			"4FC888D1-8AD1-4974-929E-4116B28FB4F6",
+			"9B421C58-1941-491E-81CE-50B4CB8F17A4",
+			"C7BBAD5D-DCA8-4AA0-81B5-A18EB05A2685",
+			"19D1AB2A-D51F-48AB-B9B6-66E57FEBEFC7",
+			"86481CA9-9F80-48DA-A038-5718BB1C98BA",
+			"C549F7FB-2D21-41CF-B375-8FEF85BD2C76",
+			"5D09E3CA-6938-4AC0-B44D-FF2C0DCC8599",
+			"59393D32-5A6B-4C7B-A5CD-63D0F077CDD9"
+		]
+	},
+	"uiSettings": {
+		"currentSheetType": "Layout",
+		"viewMode": "sheet",
+		"galleryScaleFactor": 100,
+		"nextDataSheetNumber": 89,
+		"printer": {
+			"defaultPaperSize": {
+				"width": 8.5,
+				"height": 11.0
+			},
+			"deviceName": "",
+			"driverVersion": 0,
+			"specVersion": 0,
+			"driverExtra": 7500,
+			"orientation": 1,
+			"paperLength": 2794,
+			"paperWidth": 2159,
+			"scale": 100,
+			"copies": 1,
+			"defaultSource": 7,
+			"printQuality": 72,
+			"color": 1,
+			"y_resolution": 72,
+			"collate": 1
+		},
+		"navigator": {
+			"width": 353,
+			"sheetsPaneFraction": 72,
+			"collapsedFolders": {
+				"data": false,
+				"info": false,
+				"analyses": false,
+				"graphs": false,
+				"layouts": false,
+				"dataAndAnalyses": false,
+				"search": false,
+				"family": false
+			}
+		},
+		"currentSheets": {
+			"data": "5D09E3CA-6938-4AC0-B44D-FF2C0DCC8599",
+			"analysis": "4B273CA6-5A23-408D-986F-E059667C8AB1",
+			"graph": "8DE9644D-CCEA-46A9-812C-3B891C94E25D",
+			"layout": "5CFD8A9F-03C6-4A5B-A6BB-3AD6C729A493",
+			"info": "23EB33D8-57EF-4985-B0D4-F8F316B98FF0"
+		}
+	},
+	"customColors": [
+		"#ffffffff",
+		"#ffffffff",
+		"#ffffffff",
+		"#ffffffff",
+		"#ffffffff",
+		"#ffffffff",
+		"#ffffffff",
+		"#ffffffff",
+		"#ffffffff",
+		"#ffffffff",
+		"#ffffffff",
+		"#ffffffff",
+		"#ffffffff",
+		"#ffffffff",
+		"#ffffffff",
+		"#ffffffff"
+	],
+	"sheetAttributesMap": {
+		"7CC70CA8-649A-42C2-9978-9FF9A70F8AA2": {
+			"title": "SN-ONT Cell line annotations per tool"
+		},
+		"1CACB9C6-52C0-4C51-BEB6-AD58EAF89C7E": {
+			"title": "SC-ONT Cell line annotations per tool"
+		},
+		"0DB61EE6-D9D2-4B2A-83C8-A5060506DD1E": {
+			"title": "SC-PB Cell line annotations per tool"
+		},
+		"FF12B8EE-EBBF-4103-900B-89EFA8C1B897": {
+			"title": "SN-PB Cell line annotations per tool"
+		},
+		"C329C871-2CEF-44D2-ACEC-CA2C662E6404": {
+			"title": "SN-ONT calls for Illumina singlet data"
+		},
+		"B9E71497-1E6D-4D6B-807A-601603518B94": {
+			"title": "SN-ONT calls for Illumina unassigned data"
+		},
+		"8745CC13-259E-4AA1-A31B-F01DA73A9EBA": {
+			"title": "RAD-singlet and unassigned data"
+		},
+		"B28D0381-1EE3-42D0-B33F-8F178821C90D": {
+			"title": "BLAZE-singlet and unassigned data"
+		},
+		"879813A4-52C3-4471-90AA-34D3D1884C5D": {
+			"title": "Flexiplex-singlet and unassigned data"
+		},
+		"E696237E-5B58-43F1-A0DB-44ACAAAD6E23": {
+			"title": "Flexiplex-singlet and unassigned data"
+		},
+		"40B00D99-1B29-4B84-8C93-93B9B345363F": {
+			"title": "Copy of Flexiplex-singlet and unassigned data"
+		},
+		"5ECD6D03-8291-4081-AB0C-11B7D282BDCC": {
+			"title": "Flexiplex Singlet only"
+		},
+		"A730E06E-E108-484C-A005-C9E6E43FC8F3": {
+			"title": "BLAZE singlet only"
+		},
+		"7A86D2C9-A816-4A24-874E-FDB1ECF920BD": {
+			"title": "RAD singlet only"
+		},
+		"D9AA2264-5444-434C-A4DD-DF95A6030E4F": {
+			"title": "RAD unassigned"
+		},
+		"2868FF8E-9ED8-49BC-B02E-30FF1764BB2D": {
+			"title": "Flexiplex unassigned"
+		},
+		"7ACDD7C1-DEF7-4ED1-84BF-CA9CD169AD3B": {
+			"title": "BLAZE unassigned"
+		},
+		"5EB5F98F-24CB-4820-872C-6F66CFF1FC2F": {
+			"title": "LongBench total RAD read misattributions"
+		},
+		"25D7331D-8665-4E42-BE2C-CF6976719012": {
+			"title": "SN-ONT (12,012 cells in short-read) [F1]",
+			"highlightColor": "#fed187ff"
+		},
+		"DA572053-8293-4748-A556-26B197EA8460": {
+			"title": "SC-ONT (5,211 cells in short-read) [F1]",
+			"highlightColor": "#fed187ff"
+		},
+		"6C2AEE71-4A35-408D-8CA5-198BEE57B6A0": {
+			"title": "SN-ONT shared Illumina calls, status"
+		},
+		"E3E8EF7C-240E-4D2C-8CA5-969736C7846C": {
+			"title": "Fraction of Total of SN-ONT shared Illumina calls, status",
+			"highlightColor": "#fd9984ff"
+		},
+		"9958FA68-E23B-4840-B107-0540F832A75C": {
+			"title": "total heatmap assignment SN-ONT"
+		},
+		"9EE9D0D0-2BE5-4221-B026-18DACBE87DDE": {
+			"title": "SN-ONT illumina cell lines"
+		},
+		"CF6A3C30-0EA7-4A1C-B56E-473EAC3936AF": {
+			"title": "SN-ONT BLAZE cell lines"
+		},
+		"B97379ED-8F35-4AFD-8F80-793327A98905": {
+			"title": "SN-ONT Flexiplex cell lines"
+		},
+		"B9D92B5E-9FC9-466F-9263-BECED1B39D84": {
+			"title": "SN-ONT RAD cell lines"
+		},
+		"4AA2F045-27ED-4BA3-9A59-A0D4AB7E5CDB": {
+			"title": "Copy of SN-ONT illumina cell lines"
+		},
+		"B340B5C3-BC65-4B14-8C9D-4505ADEFAE2D": {
+			"title": "Copy of Fraction of Total of SN-ONT shared Illumina calls, status"
+		},
+		"A802F129-B689-40F8-B170-DDBCDC54A6DE": {
+			"title": "Total Cell line comps SN-ONT",
+			"highlightColor": "#fd9984ff"
+		},
+		"69EE807C-A27F-4E19-868F-BADDA03304E0": {
+			"title": "Large whitelist sweep--three tools"
+		},
+		"DC1371DD-F48A-426E-BA20-92CBB1F45FBB": {
+			"title": "copy of sn-ont cell line annotations"
+		},
+		"30771D71-236C-44C4-BE95-C68B9B20C0A5": {
+			"title": "ScTagger sweep"
+		},
+		"F8AB0603-E69F-486E-B1E1-9B9DE941F945": {
+			"title": "Fraction of Total of SC-ONT Error types per tool"
+		},
+		"4A1B6A69-2365-4B93-B632-DC23E5B225AE": {
+			"title": "Fraction of Total of SN-ONT Error types per tool"
+		},
+		"CBF32846-21BD-4ECF-B76E-DB7E3F441D3B": {
+			"title": "SC-ONT Error types per tool",
+			"highlightColor": "#92ff7bff"
+		},
+		"8FAE80ED-69C9-4BBD-A013-DB1F92EB2104": {
+			"title": "SN-ONT Error types per tool",
+			"highlightColor": "#92ff7bff"
+		},
+		"0684CF56-7950-47E8-93DE-CE47BCC9F6D2": {
+			"title": "SN-PB Error types per tool",
+			"highlightColor": "#92ff7bff"
+		},
+		"E5BBEE31-CDA2-493E-8295-AD872662F3A8": {
+			"title": "SC-PB error types per tool",
+			"highlightColor": "#92ff7bff"
+		},
+		"6612E9F4-A1FA-4FE3-A5BE-1CCC980680DF": {
+			"title": "SN-ONT per cell",
+			"highlightColor": "#92ff7bff"
+		},
+		"0D084217-21FA-4EDD-94AD-9C8719F3DA8E": {
+			"title": "SC-PB per cell",
+			"highlightColor": "#92ff7bff"
+		},
+		"D5ED5C83-6372-4176-BB89-F465543BC5D1": {
+			"title": "SC-ONT per cell",
+			"highlightColor": "#92ff7bff"
+		},
+		"BB965EB1-BA8C-4BC9-9207-6191E72ED911": {
+			"title": "SN-PB per cell",
+			"highlightColor": "#92ff7bff"
+		},
+		"1525E18F-1C58-4F97-BC29-AF63533122FE": {
+			"title": "SC-PB Baseline-corrected RAD"
+		},
+		"B810718F-43BE-4480-9B60-01DAD77A11E9": {
+			"title": "SC-PB Baseline-corrected BLAZE"
+		},
+		"29B74C34-6A3B-4709-B033-D20973FBC9E1": {
+			"title": "SC-PB Baseline-corrected Flexiplex"
+		},
+		"68F2DF82-4529-4A91-AC7A-BEFC1A048CB8": {
+			"title": "SC-ONT Baseline-corrected RAD"
+		},
+		"C3A1A3BA-757C-4D13-B277-B52E8A04103B": {
+			"title": "SC-ONT Baseline-corrected BLAZE"
+		},
+		"888F4DE6-F4B0-46BD-83AB-9AD2DC34FA19": {
+			"title": "SC-ONT Baseline-corrected Flexiplex"
+		},
+		"A7D8209D-E011-4143-83C4-6775649A7424": {
+			"title": "Baseline-corrected RAD SN-PB"
+		},
+		"89CC2FE7-CB5F-4863-83E8-A6C19CE7C054": {
+			"title": "Baseline-corrected BLAZE SN-PB"
+		},
+		"46FFED35-1ED8-466E-9DE4-F9DD11609737": {
+			"title": "Baseline-corrected Flexiplex SN-PB"
+		},
+		"8E5F0946-18FC-4894-806D-9E9611AF8140": {
+			"title": "Baseline-corrected RAD SN-ONT"
+		},
+		"0612D8E6-E4A9-45D2-885C-8D045464CFF6": {
+			"title": "Baseline-corrected BLAZE SN-ONT"
+		},
+		"278231D3-2FB0-4798-8F36-EE5EE9556B15": {
+			"title": "Baseline-corrected Flexiplex SN-ONT"
+		},
+		"8DE9644D-CCEA-46A9-812C-3B891C94E25D": {
+			"title": "SC-PB Baseline-corrected total",
+			"highlightColor": "#92ff7bff"
+		},
+		"C40D0870-BBAA-426D-B55C-F1EE5A752950": {
+			"title": "SC-ONT Baseline-corrected total",
+			"highlightColor": "#92ff7bff"
+		},
+		"91731924-8759-4DBE-8774-FEBA11660E17": {
+			"title": "SN-PB Baseline-corrected total",
+			"highlightColor": "#92ff7bff"
+		},
+		"F16C6243-5CEF-45DC-B3BF-8894E15D7F7C": {
+			"title": "SN-ONT Baseline-corrected total",
+			"highlightColor": "#92ff7bff"
+		},
+		"9969E10F-EC18-44AA-8BA8-7D94A23C964A": {
+			"title": "RAD wl-scan speed single-threaded"
+		},
+		"6C6E67C6-4687-4236-A607-B28C9BF64CC8": {
+			"title": "RAD wl-scan memory"
+		},
+		"7D84BF0B-3F9C-4474-BA21-3C944AA4E52C": {
+			"title": "LongBench thread-time relationship, wl-scan"
+		},
+		"B7499EA0-B792-4E2C-A6D2-E98D5563DFB4": {
+			"title": "SN-ONT Flexiplex vs. Illumina SR"
+		},
+		"22A5359F-4FBA-462D-BB95-407152952856": {
+			"title": "SN-ONT BLAZE vs. Illumina SR"
+		},
+		"2D1E8479-E4C5-4A28-98CD-380009FD5D57": {
+			"title": "SN-ONT stacked cell types (total 12K nuclei)"
+		},
+		"39812EFB-0B3D-49A0-9892-55B2D3471AA5": {
+			"title": "SN-ONT Cell line annotations per tool"
+		},
+		"9C56DDAD-F129-4B40-8C47-EB562F5C0585": {
+			"title": "SC-ONT Cell line annotations per tool"
+		},
+		"912F181B-9811-4A83-8F31-7D998A738AAD": {
+			"title": "SC-PB Cell line annotations per tool"
+		},
+		"477724EA-24EC-47C5-B45E-E031867568EC": {
+			"title": "SN-PB Cell line annotations per tool"
+		},
+		"D612AF25-3960-4F6E-A6C4-8439ADFB1C21": {
+			"title": "Shared SN-ONT calls against Illumina"
+		},
+		"31F5E266-1410-402E-8C4B-BBFF3DE71716": {
+			"title": "SN-ONT calls for Illumina singlet data"
+		},
+		"8C0033D7-5BA5-4B22-9B1A-31D7B954FEE5": {
+			"title": "SN-ONT calls for Illumina unassigned data"
+		},
+		"9AB5434B-421A-44F0-9C5E-9FE6FE05705A": {
+			"title": "RAD-singlet and unassigned data"
+		},
+		"BFDDE8B0-A355-403E-917D-14F2877598E1": {
+			"title": "BLAZE-singlet and unassigned data"
+		},
+		"457B40F8-E32F-41C2-B68D-4261BC7854D0": {
+			"title": "Flexiplex-singlet and unassigned data"
+		},
+		"595C64F1-E99A-49A5-93AB-7252BB41DC50": {
+			"title": "Flexiplex Singlet only"
+		},
+		"A79D0A7B-5E58-4430-8ED1-4539CEAA236C": {
+			"title": "BLAZE singlet only"
+		},
+		"C4AED970-9317-4457-9B94-58D59DDEB51A": {
+			"title": "RAD singlet only"
+		},
+		"C1960EFD-B21A-4CAC-B404-815C873EBB49": {
+			"title": "RAD unassigned"
+		},
+		"97515C64-3916-4689-9D24-55749BE92EBF": {
+			"title": "Flexiplex unassigned"
+		},
+		"9834E32C-075C-4962-8512-2E0BB47454C9": {
+			"title": "BLAZE unassigned"
+		},
+		"41C0F5A3-D3FD-4501-8434-480C88F397F8": {
+			"title": "BLAZE SN-ONT fraction of total "
+		},
+		"323D8B16-320E-4A4E-A622-0C4E6FB81742": {
+			"title": "SN-ONT shared Illumina calls, status"
+		},
+		"40D74876-42F6-4B00-A4A6-79BDEEE85031": {
+			"title": "total heatmap assignment SN-ONT"
+		},
+		"1A52363E-71FE-4B0E-BB81-671E3AE2C252": {
+			"title": "SN-ONT illumina cell lines"
+		},
+		"9D187C2D-D752-4F0D-A941-6FDB1ED956AA": {
+			"title": "SN-ONT BLAZE cell lines"
+		},
+		"8D561C87-A329-4F76-BAA1-6B84074B5538": {
+			"title": "SN-ONT Flexiplex cell lines"
+		},
+		"38D81A56-1344-4F46-A7BC-D6424A2AEB76": {
+			"title": "SN-ONT RAD cell lines"
+		},
+		"4FC888D1-8AD1-4974-929E-4116B28FB4F6": {
+			"title": "Copy of SN-ONT Cell line annotations per tool",
+			"highlightColor": "#feff73ff"
+		},
+		"9B421C58-1941-491E-81CE-50B4CB8F17A4": {
+			"title": "Large whitelist sweep--three tools"
+		},
+		"C7BBAD5D-DCA8-4AA0-81B5-A18EB05A2685": {
+			"title": "copy of sn-ont cell line annotations"
+		},
+		"19D1AB2A-D51F-48AB-B9B6-66E57FEBEFC7": {
+			"title": "ScTagger sweep"
+		},
+		"86481CA9-9F80-48DA-A038-5718BB1C98BA": {
+			"title": "SN-PB per cell",
+			"highlightColor": "#92ff7bff"
+		},
+		"C549F7FB-2D21-41CF-B375-8FEF85BD2C76": {
+			"title": "SC-PB per cell",
+			"highlightColor": "#92ff7bff"
+		},
+		"5D09E3CA-6938-4AC0-B44D-FF2C0DCC8599": {
+			"title": "SN-ONT per cell",
+			"highlightColor": "#92ff7bff"
+		},
+		"59393D32-5A6B-4C7B-A5CD-63D0F077CDD9": {
+			"title": "SC-ONT per cell",
+			"highlightColor": "#92ff7bff"
+		},
+		"DFFEFE2E-71E2-49E1-8859-D20AEFA39712": {
+			"title": "LongBench whitelist auto-detection"
+		},
+		"2DC5D134-B442-494D-9B24-EEAEDB17FD3A": {
+			"title": "LongBench F1 scores"
+		},
+		"469C0382-E60F-4FBD-956C-7D772343F90D": {
+			"title": "ScTagger sweep"
+		},
+		"FBC3CB75-1D75-44C8-AE1F-CF1FEBD767FC": {
+			"title": "Longbench singlet-doublet Vireo analysis"
+		},
+		"C3B5C198-E4BA-4C34-9580-B55EA23BE9C3": {
+			"title": "LongBench cell line analysis"
+		},
+		"5819A734-6A3F-40D7-BD74-41BAB2741958": {
+			"title": "LongBench Illumina single nuclei"
+		},
+		"5CFD8A9F-03C6-4A5B-A6BB-3AD6C729A493": {
+			"title": "LongBench corrections"
+		},
+		"224701CE-D8C7-498D-AC01-B631239DA5F0": {
+			"title": "Layout 12"
+		},
+		"A984FC1F-D817-4849-8D24-282E98B51F83": {
+			"title": "LongBench total Flexiplex read misattributions",
+			"highlightColor": "#92ff7bff"
+		},
+		"8A589845-0457-4598-B92D-93BB2E5D5AB8": {
+			"title": "LongBench total BLAZE read misattributions",
+			"highlightColor": "#92ff7bff"
+		},
+		"F616A250-536B-42B0-B4E6-23C2BF786E46": {
+			"title": "Paired t test of SPLIT-seq benchmarking, continued"
+		},
+		"46C92149-C6E6-41F5-B963-2CBE6D523768": {
+			"title": "Fraction of Total of SN-ONT Error types per tool"
+		},
+		"8C7F3CCB-3C74-44A2-8D5A-E1571AE2A5B2": {
+			"title": "Fraction of Total of LongBench total BLAZE read misattributions"
+		},
+		"8EE1DFDD-6145-4540-A6C3-908F9D97838B": {
+			"title": "Fraction of Total of Shared SN-ONT calls against Illumina"
+		},
+		"FA82F797-81AB-4407-921F-58ABE8817560": {
+			"title": "Simple linear regression of SPLIT-seq benchmarking"
+		},
+		"01D2C9CC-85D5-47CA-881F-DA439ACB09ED": {
+			"title": "Paired t test of SPLIT-seq benchmarking, continued"
+		},
+		"15BB6363-4049-472E-993A-9E760A733266": {
+			"title": "Fraction of Total of SC-ONT Error types per tool"
+		},
+		"FCC43C10-E825-4014-9D65-68710C5E652C": {
+			"title": "2way ANOVA of Copy of SN-ONT Cell line annotations per tool"
+		},
+		"A0977F7E-7469-45F4-BA7D-3D93174268D5": {
+			"title": "Fraction of Total of SN-ONT shared Illumina calls, status"
+		},
+		"1BFF3156-E20F-4792-8899-483BCC5E4CEC": {
+			"title": "Paired t test of SPLIT-seq benchmarking, continued"
+		},
+		"BDFECB85-671A-437F-B245-0F3E4807869D": {
+			"title": "Fraction of Total of LongBench total Flexiplex read misattributions"
+		},
+		"EBED6A23-944F-4D2D-B1C4-ECE28E1CA305": {
+			"title": "SC-PB Baseline-corrected RAD"
+		},
+		"97C85D89-B439-4BE6-B46A-118434CE58C2": {
+			"title": "SC-PB Baseline-corrected BLAZE"
+		},
+		"4217A0BF-834F-45BD-B10B-D3F93D7D9541": {
+			"title": "ScTagger L sweep F1 scores"
+		},
+		"6D466B4F-8636-4547-8F4E-B45C30CA7F51": {
+			"title": "SPLIT-seq benchmarking"
+		},
+		"23B58E44-5B0C-4FCC-B0E5-7B13484F9A93": {
+			"title": "SN-ONT singlet status, total (12K)"
+		},
+		"B405B9BC-1B0E-4E80-945E-48563990F9B8": {
+			"title": "ScTagger S sweep F1 scores"
+		},
+		"26FA890A-7474-433D-93A7-6DB16520537F": {
+			"title": "SN-PB Error types per tool",
+			"highlightColor": "#92ff7bff"
+		},
+		"84FC2929-9B85-41EE-AB87-EB2CB846B99E": {
+			"title": "SN-ONT RAD vs. Illumina SR"
+		},
+		"7F52648E-85D1-4920-A525-216AA6D45C42": {
+			"title": "SPLIT-seq benchmarking, continued"
+		},
+		"863F2861-9E53-441C-81FC-8E4C68D1EFF2": {
+			"title": "LongBench SN-ONT overview statistics"
+		},
+		"63A1B968-EA36-465A-A1ED-FEB5ED5FE3BC": {
+			"title": "Shared SN-ONT calls against Illumina"
+		},
+		"6A217FDE-1673-4D63-995B-AFD8D7AA1976": {
+			"title": "SN-ONT stacked cell types (total 12K nuclei)"
+		},
+		"6F391B3C-F7B4-4C77-920B-0E8379371EC7": {
+			"title": "Fraction of Total of Shared SN-ONT calls against Illumina"
+		},
+		"EEB7FE4B-EE5E-4206-BF21-F01C323E1B03": {
+			"title": "Estimation Plot: Paired t test of SPLIT-seq benchmarking, continued"
+		},
+		"D835F540-09D8-4B64-84EE-D4716D3B1FE8": {
+			"title": "LongBench total BLAZE read misattributions"
+		},
+		"E6579804-0FD1-47EE-8C1E-BA5BC2E1A7E2": {
+			"title": "RAD wl-scan speed single-threaded"
+		},
+		"A1F32E1C-A5E4-4965-BF3A-869175178AC5": {
+			"title": "RAD wl-scan memory"
+		},
+		"7A73500A-4E52-4748-9578-1BE19A00FF97": {
+			"title": "LongBench thread-time relationship, wl-scan"
+		},
+		"8A680068-52F5-4DFD-A916-9976BA81ACB9": {
+			"title": "% of total demultiplexed reads, BLAZE"
+		},
+		"1D1276FB-8F1B-452D-A57E-CA1BC6040D97": {
+			"title": "LongBench total Flexiplex read misattributions"
+		},
+		"FB21B9AA-D02A-41D8-B03A-ABF105036A91": {
+			"title": "SPLIT-seq benchmarking, linear"
+		},
+		"7C2A814A-2651-4B9D-93DE-930D2D1A3566": {
+			"title": "LongBench thread-memory relationship",
+			"highlightColor": "#feff73ff"
+		},
+		"8565E3B7-23D8-45A3-900D-A2E77A2855F1": {
+			"title": "ScTagger S sweep F1 scores, grouped bar",
+			"highlightColor": "#feff73ff"
+		},
+		"BD851476-55B1-471C-9B3F-286381782019": {
+			"title": "ScTagger L sweep F1 scores, grouped bar",
+			"highlightColor": "#feff73ff"
+		},
+		"4390C148-3085-4FEB-9F81-41D02CCCEF3A": {
+			"title": "ScTagger S sweep F1 scores"
+		},
+		"6D6DA7E9-BA59-4611-AAC8-51E0FC262256": {
+			"title": "ScTagger L sweep F1 scores"
+		},
+		"FF66FE06-F6D5-453F-BFFB-4E89AD507341": {
+			"title": "SN-ONT (12,012 cells in short-read)",
+			"highlightColor": "#feff73ff"
+		},
+		"64DC035C-2866-4268-9DA6-2FD18838C5CE": {
+			"title": "SC-ONT (5,211 cells in short-read)",
+			"highlightColor": "#feff73ff"
+		},
+		"69E86D79-169F-4B73-A6AB-CB24CB77BF0A": {
+			"title": "Correction only, BLAZE on LongBench",
+			"highlightColor": "#feff73ff"
+		},
+		"5A474DEE-AA7E-43C5-9329-5A2CE4708372": {
+			"title": "Correction only, Flexiplex on LongBench",
+			"highlightColor": "#feff73ff"
+		},
+		"130A0300-9C5A-457D-905F-777A92E9EC8D": {
+			"title": "SPLIT-seq benchmarking, continued",
+			"highlightColor": "#feff73ff"
+		},
+		"AC69D38B-5C90-4544-B6F4-DC75A55745B0": {
+			"title": "Estimation Plot: Paired t test of SPLIT-seq benchmarking, continued"
+		},
+		"92D27A71-5EE1-44AD-8447-946BA165DE9A": {
+			"title": "SN-ONT Error types per tool",
+			"highlightColor": "#92ff7bff"
+		},
+		"FEEF769C-7E7F-41AC-85C8-CB4A972322FB": {
+			"title": "SC-PB error types per tool",
+			"highlightColor": "#92ff7bff"
+		},
+		"5C524558-D184-453C-99CE-80BA6E55BEAD": {
+			"title": "SC-ONT Error types per tool",
+			"highlightColor": "#92ff7bff"
+		},
+		"64135F2D-D1D5-4545-9B3E-F25DD29B7995": {
+			"title": "LongBench total RAD read misattributions",
+			"highlightColor": "#92ff7bff"
+		},
+		"76D750D2-0B93-493F-ACD5-A661DBAD6A6C": {
+			"title": "SN-ONT BLAZE vs. Illumina SR"
+		},
+		"D76EB620-1F1E-4F3B-B6B4-CAFF74AF0587": {
+			"title": "SC-ONT Baseline-corrected RAD"
+		},
+		"EAD14229-DA1F-4973-A764-02FCE6204238": {
+			"title": "SC-ONT Baseline-corrected BLAZE"
+		},
+		"2819D6B3-1568-452E-B15F-A3500A5FFC60": {
+			"title": "SC-ONT Baseline-corrected Flexiplex"
+		},
+		"AFD52449-126E-4F64-982E-211C233381A7": {
+			"title": "LongBench SN-ONT overview statistics"
+		},
+		"C5D1E7F5-6C46-445E-A94A-148EB4F45D23": {
+			"title": "LongBench thread-memory relationship"
+		},
+		"205B5DB8-FA28-4866-AC67-F1C50A32B135": {
+			"title": "SC-ONT (5,211 cells in short-read)"
+		},
+		"4B273CA6-5A23-408D-986F-E059667C8AB1": {
+			"title": "Baseline-corrected BLAZE SN-ONT"
+		},
+		"678B9A92-63C5-4684-A020-90FAEDFEAF57": {
+			"title": "Baseline-corrected Flexiplex SN-ONT"
+		},
+		"88158806-1E75-4B7B-AC33-3CDDB13EE6FC": {
+			"title": "SC-PB Baseline-corrected Flexiplex"
+		},
+		"D3DC4AF2-6B1B-4B7A-9A9D-5F1F18F0F742": {
+			"title": "Baseline-corrected Flexiplex SN-PB"
+		},
+		"3F09B45E-6D8E-48B0-AA0E-8383E52AEDAC": {
+			"title": "Baseline-corrected BLAZE SN-PB"
+		},
+		"CFF360F0-37B5-44A5-825A-6AAA0931484A": {
+			"title": "Baseline-corrected RAD SN-ONT"
+		},
+		"9D1764AE-FABA-49E1-92D1-A8FDE1CA2BA5": {
+			"title": "Baseline-corrected RAD SN-PB"
+		},
+		"0DDD9F00-2C88-4DA7-B182-C38D51C70853": {
+			"title": "SN-ONT (12,012 cells in short-read)"
+		},
+		"DBFD4E6A-C514-4A47-8639-3A69169628A3": {
+			"title": "SN-ONT RAD vs. Illumina SR"
+		},
+		"084D2191-1BE0-44BB-9C10-E14F0ADBD59C": {
+			"title": "Estimation Plot: Paired t test of SPLIT-seq benchmarking, continued"
+		},
+		"87684448-A690-4DD0-BD4D-9E1EA8ADFAFD": {
+			"title": "SN-ONT singlet status, total (12K), long-read only"
+		},
+		"521CF72D-2FEC-4598-8FF8-8361755AAB49": {
+			"title": "SN-ONT Flexiplex vs. Illumina SR"
+		},
+		"23EB33D8-57EF-4985-B0D4-F8F316B98FF0": {
+			"title": "Project info 1"
+		}
+	}
+}

@@ -4,7 +4,7 @@ Prepared 23 October 2026 from retained execution evidence, small result/provenan
 
 ## Recovery assessment
 
-- **Figure 5:** the RAGE receptor scripts and candidate outputs survive, but the exact current artwork-to-run mapping and cell-label provenance require resolution. The LR-Split-seq short-read reconstruction and a 568-row Prism read-count table survive; final component-based comparator settings and the UMI-panel source remain unresolved. Do not substitute historical two-pass code.
+- **Figure 5:** the RAGE receptor scripts and candidate outputs survive, but the exact current artwork-to-run mapping and cell-label provenance require resolution. The final LR-Split-seq ED2/component-poly-T read comparison, all 568 Prism cell identities, executed settings and paired-t provenance are recovered; see [the recovery package](../recovered/lr_splitseq_20261023/README.md). Figure 5H UMI lineage and full-input percentages still require reconciliation.
 - **Figure 6:** retained post-demultiplexing BAMs (approximately 28/49/36 GB for RAD/Flexiplex/BLAZE), CellSNP matrices, a validated bulk donor panel and graph-ready outputs permit checkpoint restoration. Exact content/hash verification belongs on HPC. The fixed UMAP coordinates are retained, but a LogNormalize builder and SCT-named RDS need a command-history/coordinate provenance check.
 - **Figure 7:** the native matrix and completed updated DE packages provide a useful restart point. The latest RAD FASTQ and frozen read-to-gene table were absent at inspected preservation mirrors; check original HPC locations if upstream replay is needed. The updated 8,135-gene analysis is selected. Replace stale A/C, retain the matching D lineage, and keep E pending.
 
@@ -62,52 +62,29 @@ Priority: **P0**. Panels: 5A, 5B, 5C, 5D, 5E, 5F. Dependencies: none.
 
 **Decision gate:** Select canonical panel source if candidate reruns do not reproduce artwork; statistical design requires review.
 
-### F5-02 — Recover final component-based LR-Split-seq comparison and its paired read/UMI tables.
+### F5-02 — Validate recovered LR-Split-seq checkpoints and complete the UMI-panel lineage.
 
-Priority: **P0**. Panels: 5G, 5H. Dependencies: none.
+Priority: **P0**. Panels: 5G, 5H. Status: ready for checkpoint replay and remaining panel integration.
 
-**Existing inputs / evidence**
+Final selected read comparison, all 568 Prism cell identities, selected execution settings, and historical paired-t provenance recovered from CMV_SSD_2 on 2026-10-23; raw rerun and Figure 5H binding remain outstanding.
 
-- `/Volumes/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/splitseq_shortread_20260727/README.md`
-- `/Volumes/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/prism_inventory_source.Pn5f14/SPLIT-seq benchmarking.csv`
-- `/Volumes/rad_data/reviewer_comment_data/paper_revision_20261022/evidence/biology_methods_supplement.md`
+Start with [the recovered package](../recovered/lr_splitseq_20261023/README.md).
 
-**Existing scripts**
+1. Read recovered/lr_splitseq_20261023/README.md first. The keyed source matches all 3,408 numeric entries in the 568-row Prism table without reordering. Recheck the mapping and preserve original IDs.
 
-- `/Volumes/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/splitseq_shortread_20260727/parse_bc_umi.py`
-- `/Volumes/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/splitseq_shortread_20260727/lr_vs_sr_umi.py`
+2. Restore selected RAD b6853a3d3d1818130ac364f7937bd0690ae9e385 ED2 and FLAMES bf2211a8da1e1c7327370ab12479ae70e1d37cd8 component poly-T execution. Executed component settings are barcode ED1, flank ED3, 8-T included, four threads. Keep no-poly-T, MATCHED_SPLIT and two-pass controls separate.
 
-**Checkpoints to retain**
+3. Validate preserved native statistics, assignment ledgers and per-cell checkpoints before any raw rerun. Component_no_polyt_t4/per_published_cell_counts.tsv contains multiple arms: select Flexiplex polyT; the RAD table selects ED2 current main. Original source paths need explicit HPC mapping.
 
-- 568-cell reference table
-- three-component barcode/UMI extraction ledger
-- selected component layout and tool run manifest
-- paired read/UMI table
-- executed paired statistics
+4. Read sums across 568 cells are read-cell pairs: RAD 2,078,171 and poly-T 1,156,252. Global distinct reads across these cells are 2,063,573 and 1,152,260. Preserve RT-primer/well normalization and actual UMI inclusion rules; current component read counts require nonempty UMI, not exactly ten bases.
 
-**Actions**
+5. Bind Figure 5H independently. Current per-cell UMI counts survive; older UMI-intersection candidates use earlier RAD ED1. Rebuild selected ED2/poly-T intersections against depth-matched short-read checkpoints or establish intended historical lineage before changing the panel.
 
-- Use long SRR13948564 and matched short SRR13948565. Restore depth-matched short-read reconstruction and exact cell-UMI counting.
-- Recover final component-based FLAMESV2/Flexiplex plus poly-T command/layout/correction limits/output and corresponding RAD run. Do not substitute historical two-pass or MATCHED_SPLIT comparator.
-- The retained six-column Prism table has 568 rows; columns 1/3 sum 2,078,171 / 1,156,252 reads. Identify all columns and barcode order from original source, not totals alone.
-- Distinguish full-input assigned fractions from read counts limited to 568 cells and from UMI counts. Recover final UMI-collapse rules/source link.
-- Reconcile paired t-test versus signed-rank text, using the same explicit pairs and multiple-comparison policy.
+6. Reconcile Figure 5G full-input percentages using the 5,764,421-read input and explicit unique-read or assignment-row numerator. RAD unique source reads are 2,498,488 (43.34%); component poly-T unique source reads 1,338,285 (23.22%) and assignment rows 1,345,255 (23.34%); displayed 23.35% needs its own source/rounding check.
 
-**Acceptance checks**
+7. The saved Prism test is two-sided paired t, t=14.959474687143327, df=567, P=6.890554214980993e-43. Correct the historical label accordingly; D05 remains only if the author selects a different final statistical method.
 
-- Barcode/UMI orientation and inclusion criteria are explicit and paired cells align by ID.
-- Published/read/UMI denominators are distinct and exact.
-- The executed final component comparator is identified; old RAD-only/reference scripts are not misrepresented as its producer.
-- Test names and values agree across code, legend and rebuttal.
-
-**Release outputs**
-
-- cell reference
-- paired read/UMI source data
-- final component configurations
-- statistics and figure exports
-
-**Decision gate:** Final comparator provenance and paired test D05 remain unresolved; prepare reviewable evidence before choosing a replacement.
+**Decision gate:** Read-table and historical test provenance resolved. D05 governs any change of final paired test; Figure 5H source/version and full-input denominator reconciliation remain.
 
 ### F6-01 — Validate and preserve the independent bulk genotype panel and short-read reference.
 

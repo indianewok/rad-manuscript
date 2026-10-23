@@ -1,0 +1,32 @@
+{
+  "validation": "passed",
+  "rows": 568,
+  "numeric_cells_compared": 3408,
+  "same_original_row_order": true,
+  "sort_used": false,
+  "unique_published_cell_barcodes": 568,
+  "published_rank_equals_prism_row_1based": true,
+  "source_labeled_export": "/Volumes/CMV_SSD_2/benchmarks/flamesv2_splitseq_20260728/plotting_exports/20260801_reads_per_published_cell/splitseq_published_barcode_read_counts.csv",
+  "source_labeled_export_sha256": "8a26f5537b50c2f3199f03b5613622d02cf4d0c9dadf5a0091c2fb2a3841a2ff",
+  "source_prism_csv": "/Volumes/rad_data/reviewer_comment_data/paper_revision_20261022/lr_splitseq_recovery_20261023/prism_recovery/native_components/data/tables/954A959E-2630-403B-89C7-8EEBAF7A986A/data.csv",
+  "source_prism_csv_sha256": "386f9dc0e09128d6d5f86166196473ac2c124d10366b3393951133c5038b4492",
+  "mapping_output": "prism_row_to_cell.csv",
+  "mapping_output_sha256": "99d9ccd7868a94b03417dcac5d92799f1944500146442d6ee59ac0c083b84e70",
+  "prism_numeric_column_to_export_field": {
+    "1": "rad_ed2_assigned_reads",
+    "2": "flex_component_no_polyt_assigned_reads",
+    "3": "flex_component_polyt_assigned_reads",
+    "4": "flames_matched_split_polyt_assigned_reads",
+    "5": "flames_historical_two_pass_assigned_reads",
+    "6": "rad_ed2_assigned_reads"
+  },
+  "final_comparison_fields": [
+    "rad_ed2_assigned_reads",
+    "flex_component_polyt_assigned_reads"
+  ],
+  "historical_comparison_fields": [
+    "flames_matched_split_polyt_assigned_reads",
+    "flames_historical_two_pass_assigned_reads"
+  ],
+  "interpretation": "The saved keyed export recovers each original Prism row identity through exact row-wise equality across all numerical columns. Native Prism alone contains no cell IDs."
+}

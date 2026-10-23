@@ -1,0 +1,61 @@
+{
+	"@class": "DataSheet",
+	"$id": "sheets/data_sheet/data_sheet.schema.json",
+	"uid": "1E3B9E02-0C96-41A4-AAD9-8C1D22F79A7A",
+	"fenID": 49,
+	"title": "Paired t test of SPLIT-seq benchmarking, continued:Estimation Plot",
+	"isCollapsed": true,
+	"table": {
+		"@class": "DataTable",
+		"$id": "sheets/data_sheet/data_table/data_table.schema.json",
+		"uid": "63AB6CD5-F44C-41AA-B826-30DEB317051E",
+		"format": "column",
+		"dataFormat": "y_single",
+		"valuesStorageData": {
+			"last rows": [
+				"2;567",
+				"1;567",
+				"0;567"
+			],
+			"version": 1,
+			"yColumnUuid": [
+				"6f8e3a7d-43ec-59e5-a473-8cceda135985",
+				"b54140e9-f263-571d-b247-d4bfb9864a0b",
+				"d37621ca-b7f9-5da7-b1e6-e6841db6c600"
+			]
+		},
+		"dataSets": [
+			"B5658FE6-7308-4664-A875-EAF4FEDC2380",
+			"035CA924-9E13-42B9-9B87-C832677AC818",
+			"14D36039-0E88-4488-B7F2-9637CAC6D27D"
+		]
+	},
+	"font": {
+		"family": "Arial",
+		"size": 11.0
+	},
+	"flags": [
+		"ANALYSIS_VIEW"
+	],
+	"titleWidth": 52,
+	"xSubColWidth": 52,
+	"maxDataSets": 2048,
+	"maxRow": 500000,
+	"selectionRange": {
+		"startCell": {
+			"row": 0,
+			"column": 0,
+			"subcolumn": 0
+		},
+		"endCell": {
+			"row": 0,
+			"column": 0,
+			"subcolumn": 0
+		}
+	},
+	"anchorRow": 0,
+	"anchorColumn": 0,
+	"firstSubColumn": 0,
+	"rowTitlesWidth": 81,
+	"subColumnTitleType": "default"
+}

@@ -1,0 +1,184 @@
+{
+	"@class": "AnalysisConstants",
+	"version": "0.0.0",
+	"content": {
+		"analysisConstantIds": [
+			{
+				"path": "/descriptiveStatistics/differences/value/firstQuartile",
+				"id": -14090242
+			},
+			{
+				"path": "/descriptiveStatistics/differences/value/maximum",
+				"id": -13893634
+			},
+			{
+				"path": "/descriptiveStatistics/differences/value/mean",
+				"id": -14548994
+			},
+			{
+				"path": "/descriptiveStatistics/differences/value/meanCI/level",
+				"id": -14221314
+			},
+			{
+				"path": "/descriptiveStatistics/differences/value/meanCI/lower",
+				"id": -14352386
+			},
+			{
+				"path": "/descriptiveStatistics/differences/value/meanCI/upper",
+				"id": -14286850
+			},
+			{
+				"path": "/descriptiveStatistics/differences/value/meanSE",
+				"id": -14417922
+			},
+			{
+				"path": "/descriptiveStatistics/differences/value/median",
+				"id": -14024706
+			},
+			{
+				"path": "/descriptiveStatistics/differences/value/minimum",
+				"id": -14155778
+			},
+			{
+				"path": "/descriptiveStatistics/differences/value/n",
+				"id": -14614530
+			},
+			{
+				"path": "/descriptiveStatistics/differences/value/sd",
+				"id": -14483458
+			},
+			{
+				"path": "/descriptiveStatistics/differences/value/thirdQuartile",
+				"id": -13959170
+			},
+			{
+				"path": "/descriptiveStatistics/sample1/value/firstQuartile",
+				"id": -15663106
+			},
+			{
+				"path": "/descriptiveStatistics/sample1/value/maximum",
+				"id": -15466498
+			},
+			{
+				"path": "/descriptiveStatistics/sample1/value/mean",
+				"id": -16121858
+			},
+			{
+				"path": "/descriptiveStatistics/sample1/value/meanCI/level",
+				"id": -15794178
+			},
+			{
+				"path": "/descriptiveStatistics/sample1/value/meanCI/lower",
+				"id": -15925250
+			},
+			{
+				"path": "/descriptiveStatistics/sample1/value/meanCI/upper",
+				"id": -15859714
+			},
+			{
+				"path": "/descriptiveStatistics/sample1/value/meanSE",
+				"id": -15990786
+			},
+			{
+				"path": "/descriptiveStatistics/sample1/value/median",
+				"id": -15597570
+			},
+			{
+				"path": "/descriptiveStatistics/sample1/value/minimum",
+				"id": -15728642
+			},
+			{
+				"path": "/descriptiveStatistics/sample1/value/n",
+				"id": -16187394
+			},
+			{
+				"path": "/descriptiveStatistics/sample1/value/sd",
+				"id": -16056322
+			},
+			{
+				"path": "/descriptiveStatistics/sample1/value/thirdQuartile",
+				"id": -15532034
+			},
+			{
+				"path": "/descriptiveStatistics/sample2/value/firstQuartile",
+				"id": -14876674
+			},
+			{
+				"path": "/descriptiveStatistics/sample2/value/maximum",
+				"id": -14680066
+			},
+			{
+				"path": "/descriptiveStatistics/sample2/value/mean",
+				"id": -15335426
+			},
+			{
+				"path": "/descriptiveStatistics/sample2/value/meanCI/level",
+				"id": -15007746
+			},
+			{
+				"path": "/descriptiveStatistics/sample2/value/meanCI/lower",
+				"id": -15138818
+			},
+			{
+				"path": "/descriptiveStatistics/sample2/value/meanCI/upper",
+				"id": -15073282
+			},
+			{
+				"path": "/descriptiveStatistics/sample2/value/meanSE",
+				"id": -15204354
+			},
+			{
+				"path": "/descriptiveStatistics/sample2/value/median",
+				"id": -14811138
+			},
+			{
+				"path": "/descriptiveStatistics/sample2/value/minimum",
+				"id": -14942210
+			},
+			{
+				"path": "/descriptiveStatistics/sample2/value/n",
+				"id": -15400962
+			},
+			{
+				"path": "/descriptiveStatistics/sample2/value/sd",
+				"id": -15269890
+			},
+			{
+				"path": "/descriptiveStatistics/sample2/value/thirdQuartile",
+				"id": -14745602
+			},
+			{
+				"path": "/pairedTTestModel/meanOfDifferences/confidenceIntervalOfDifferences/level",
+				"id": -16449538
+			},
+			{
+				"path": "/pairedTTestModel/meanOfDifferences/stdDeviationOfDifferences",
+				"id": -16580610
+			},
+			{
+				"path": "/pairedTTestModel/meanOfDifferences/stdErrorOfDifferences",
+				"id": -16515074
+			},
+			{
+				"path": "/pairedTTestModel/pairedTTest/df",
+				"id": -16711682
+			},
+			{
+				"path": "/pairedTTestModel/pairedTTest/pValue/level",
+				"id": -16646146
+			},
+			{
+				"path": "/pairedTTestModel/pearsonTest/pValue/level",
+				"id": -16384002
+			},
+			{
+				"path": "/pairedTTestModel/pearsonTest/pValueOneTailed/level",
+				"id": -16252930
+			},
+			{
+				"path": "/pairedTTestModel/pearsonTest/pValueOneTailed/value",
+				"id": -16318466
+			}
+		]
+	}
+}

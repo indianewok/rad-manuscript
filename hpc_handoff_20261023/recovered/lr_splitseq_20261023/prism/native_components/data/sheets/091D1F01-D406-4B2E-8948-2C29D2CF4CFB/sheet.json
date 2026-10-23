@@ -1,0 +1,47 @@
+{
+	"@class": "DataSheet",
+	"$id": "sheets/data_sheet/data_sheet.schema.json",
+	"uid": "091D1F01-D406-4B2E-8948-2C29D2CF4CFB",
+	"fenID": 25,
+	"title": "Paired t test of SPLIT-seq benchmarking, continued:Tabular results",
+	"isCollapsed": true,
+	"table": {
+		"@class": "DataTable",
+		"$id": "sheets/data_sheet/data_table/data_table.schema.json",
+		"uid": "C8D11567-3A7A-4F65-AD58-8EC3FFBE5BF5",
+		"format": "view",
+		"dataFormat": "text",
+		"rowTitlesDataSet": "F8266C69-BC3E-4588-A28E-C42D9E4E0980",
+		"dataSets": [
+			"C53FA8F2-FAC6-455C-8647-634E53EEBE8D"
+		]
+	},
+	"font": {
+		"family": "Arial",
+		"size": 11.0
+	},
+	"flags": [
+		"ANALYSIS_VIEW"
+	],
+	"titleWidth": 52,
+	"xSubColWidth": 133,
+	"maxDataSets": 2048,
+	"maxRow": 500000,
+	"selectionRange": {
+		"startCell": {
+			"row": 19,
+			"column": 1,
+			"subcolumn": 0
+		},
+		"endCell": {
+			"row": 19,
+			"column": 1,
+			"subcolumn": 0
+		}
+	},
+	"anchorRow": 0,
+	"anchorColumn": 0,
+	"firstSubColumn": 0,
+	"rowTitlesWidth": 212,
+	"subColumnTitleType": "default"
+}

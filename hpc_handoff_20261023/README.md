@@ -1,5 +1,7 @@
 # RAD HPC handoff — 23 October 2026
 
+**Recovery update:** [LR-Split-seq final comparator and 568-cell Prism mapping](recovered/lr_splitseq_20261023/README.md) are now recovered and validated. F5-02 is updated; Figure 5H and full-input percentage reconciliation remain.
+
 Start with [HPC_HANDOFF.md](HPC_HANDOFF.md). Give [AGENT_START_HERE.md](AGENT_START_HERE.md) to the HPC agent after cloning this repository. The full handoff is in this directory; no separate ZIP download is required.
 
 The readable [task index](TASK_INDEX.md) covers 36 tasks. The detailed queue is [regeneration_tasks.json](regeneration_tasks.json); the short index is [REGENERATION_MATRIX.tsv](REGENERATION_MATRIX.tsv). [TRANSFER_AND_AVAILABILITY.tsv](TRANSFER_AND_AVAILABILITY.tsv) maps named source assets, local availability and included snapshots. Original absolute paths are provenance and must be mapped to the HPC filesystem.

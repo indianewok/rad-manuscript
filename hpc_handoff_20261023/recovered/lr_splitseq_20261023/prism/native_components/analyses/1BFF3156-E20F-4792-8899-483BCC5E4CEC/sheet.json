@@ -1,0 +1,47 @@
+{
+	"@class": "AnalysisSheet",
+	"uid": "1BFF3156-E20F-4792-8899-483BCC5E4CEC",
+	"fenID": 12,
+	"title": "Paired t test of SPLIT-seq benchmarking, continued",
+	"$id": "analyses/sheet.schema.json",
+	"analysisClass": "T_TESTS_AND_NONPARAMETRIC",
+	"isAllDataAnalyzed": false,
+	"isCalculated": true,
+	"currentResultSheet": "B6DD5893-215D-4901-B5C0-CA1A35C334E1",
+	"preferredResultSheet": "B6DD5893-215D-4901-B5C0-CA1A35C334E1",
+	"pairwiseComparisonsDataUid": "04CD1A6D-3CE1-46B9-8044-0500B8199C62",
+	"minRequiredVersion": {
+		"major": 9,
+		"minor": 0,
+		"subminor": 0,
+		"build": 0
+	},
+	"resultSheets": [
+		{
+			"uid": "B6DD5893-215D-4901-B5C0-CA1A35C334E1",
+			"title": "Tabular results"
+		},
+		{
+			"uid": "B661BEDF-C895-435B-B1CE-44DA7BC44BFE",
+			"title": "Estimation Plot"
+		}
+	],
+	"inputDataSets": [
+		{
+			"uid": "62994E1D-9895-4348-8A3E-813370B972D0",
+			"title": "Custom Flexiplex Layout",
+			"idx": "A"
+		},
+		{
+			"uid": "78E665E3-EBF0-457E-A910-329F284AFF93",
+			"title": "RAD",
+			"idx": "E"
+		}
+	],
+	"inputSheets": [
+		{
+			"uid": "7F52648E-85D1-4920-A525-216AA6D45C42",
+			"title": "SPLIT-seq benchmarking, continued"
+		}
+	]
+}

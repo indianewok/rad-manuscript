@@ -1,5 +1,7 @@
 # Start here — RAD paper HPC handoff
 
+**Recovery update:** [LR-Split-seq final comparator and 568-cell Prism mapping](recovered/lr_splitseq_20261023/README.md) are now recovered and validated. F5-02 is updated; Figure 5H and full-input percentage reconciliation remain.
+
 Read `HPC_HANDOFF.md`, `AUTHOR_DECISIONS.md`, `REPOSITORY_AUDIT.md`, and `CHECKPOINT_AND_RELEASE_SPEC.md`. Then use `regeneration_tasks.json` as the detailed task queue and `REGENERATION_MATRIX.tsv` as its short index. The `components/` reports supply the exact retained source paths, actual code entry points, checkpoints, expected historical counts and gaps for Figures 1–7.
 
 For this GitHub edition, use the parent repository as the manuscript checkout; original `rad-manuscript/` references denote that repository at the audited baseline. Original local absolute paths need HPC mapping. This authorized handoff upload does not publish the final revised data release.

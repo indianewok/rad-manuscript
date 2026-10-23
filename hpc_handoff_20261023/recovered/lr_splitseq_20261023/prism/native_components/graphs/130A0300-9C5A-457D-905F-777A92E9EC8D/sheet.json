@@ -1,0 +1,20 @@
+{
+	"@class": "FENGraphSheet",
+	"$id": "sheets/graph_sheet.schema.json",
+	"uid": "130A0300-9C5A-457D-905F-777A92E9EC8D",
+	"fenID": 33,
+	"title": "SPLIT-seq benchmarking, continued",
+	"isAutoCreated": true,
+	"highlightColor": "#feff73ff",
+	"Miscellaneous Settings": {
+		"Pairwise Comparisons": {
+			"asteriskSize": 12.0,
+			"fontSize": 12.0
+		}
+	},
+	"inputDataSets": [
+		"78E665E3-EBF0-457E-A910-329F284AFF93",
+		"62994E1D-9895-4348-8A3E-813370B972D0",
+		"E8D73FB7-3C6F-4B6D-8E37-E80BFB83E643"
+	]
+}

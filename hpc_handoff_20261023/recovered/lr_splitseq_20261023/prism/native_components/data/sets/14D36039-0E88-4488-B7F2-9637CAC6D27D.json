@@ -1,0 +1,24 @@
+{
+	"@class": "DataSet",
+	"$id": "sheets/data_sheet/data_table/data_set.schema.json",
+	"uid": "14D36039-0E88-4488-B7F2-9637CAC6D27D",
+	"fenID": 653,
+	"format": "y_single",
+	"title": "RAD\r-\rCustom Flexiplex Layout",
+	"attributes": [
+		"DS_ATTR_Y"
+	],
+	"replicates": [
+		{
+			"@class": "DriverReplicate",
+			"valueType": "real",
+			"commonAttributes": [
+				"NUMERIC"
+			],
+			"decimalsLength": 3,
+			"significantDigitsCount": 7,
+			"lastRow": 567,
+			"firstRow": 0
+		}
+	]
+}

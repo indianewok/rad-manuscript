@@ -1,0 +1,75 @@
+{
+	"@class": "DataSheet",
+	"$id": "sheets/data_sheet/data_sheet.schema.json",
+	"uid": "0BCAF547-3235-4FA5-AFAC-FB66EB232AA1",
+	"fenID": 19,
+	"title": "Simple linear regression of SPLIT-seq benchmarking:Tabular results",
+	"isCollapsed": true,
+	"table": {
+		"@class": "DataTable",
+		"$id": "sheets/data_sheet/data_table/data_table.schema.json",
+		"uid": "906606AB-C3BE-48A2-9EF8-D0654A0718F0",
+		"format": "view",
+		"dataFormat": "text",
+		"rowTitlesDataSet": "7762FAD8-D79A-4937-BFC6-E6178B8F6F50",
+		"dataSets": [
+			"A93F029E-E768-4145-A7B2-C4486DD5B5DC",
+			"396C82F5-EF88-41AE-877B-41D334A564F5",
+			"7BD79E50-2063-48D6-9B0F-7F9526573CF9",
+			"455693C0-68B4-49CD-9410-16EFC19CEE02",
+			"B50D8195-C18D-49B8-934A-5FE5AE9D566A"
+		]
+	},
+	"font": {
+		"family": "Arial",
+		"size": 11.0
+	},
+	"flags": [
+		"ANALYSIS_VIEW"
+	],
+	"titleWidth": 52,
+	"xSubColWidth": 52,
+	"maxDataSets": 2048,
+	"maxRow": 500000,
+	"selectionRange": {
+		"startCell": {
+			"row": 31,
+			"column": 1,
+			"subcolumn": 0
+		},
+		"endCell": {
+			"row": 31,
+			"column": 1,
+			"subcolumn": 0
+		}
+	},
+	"anchorRow": 0,
+	"anchorColumn": 1,
+	"firstSubColumn": 0,
+	"userSetColumnWidth": true,
+	"horizontal dpi": 72,
+	"widthOfColumns": [
+		{
+			"columns": "0",
+			"width": 208.0
+		},
+		{
+			"columns": "1",
+			"width": 202.0
+		},
+		{
+			"columns": "2",
+			"width": 155.0
+		},
+		{
+			"columns": "3",
+			"width": 181.0
+		},
+		{
+			"columns": "4~8",
+			"width": 74.0
+		}
+	],
+	"rowTitlesWidth": 187,
+	"subColumnTitleType": "default"
+}

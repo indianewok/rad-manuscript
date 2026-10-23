@@ -1,0 +1,23 @@
+	Command being timed: "/Users/cmv/Developer/rad-main-clean/build/rad demux --layout /Volumes/CMV_SSD_2/benchmarks/flamesv2_splitseq_20260728/reverse_complemented_whitelist_test_20260728/splitseq_reverse_complemented_whitelist_layout.csv --fastq /Volumes/CMV_SSD_2/raw_fqs/splitseq.fq.gz --dir /Volumes/CMV_SSD_2/results/rad/demultiplexed/splitseq/20260801_reverse_complement_whitelist_clean_main_ed2 --output rad --threads 4 --chunk-size 5000 --joint-bc-mode strict --bc-correction-mode defensive --min-read-length 0 --generated-mutation 2 --whitelist-mutation 2 --log-file /Volumes/CMV_SSD_2/results/rad/demultiplexed/splitseq/20260801_reverse_complement_whitelist_clean_main_ed2/rad.run.log"
+	User time (seconds): 857.68
+	System time (seconds): 17.34
+	Percent of CPU this job got: 401%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 3:37.68
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 266144
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 65
+	Minor (reclaiming a frame) page faults: 23882
+	Voluntary context switches: 567828
+	Involuntary context switches: 2732197
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 16384
+	Exit status: 0

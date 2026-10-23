@@ -1,0 +1,7 @@
+{
+  "source": "/Volumes/CMV_SSD_2/results/rad/demultiplexed/splitseq/20260801_reverse_complement_whitelist_clean_main_ed2/analysis/assignments_normalized.tsv.gz",
+  "durable_copy": "/Volumes/rad_data/reviewer_comment_data/paper_revision_20261022/lr_splitseq_recovery_20261023/external_checkpoints/rad_ed2_all_assignments_normalized.tsv.gz",
+  "bytes": 56523149,
+  "sha256": "1d9baecffa853d2d5aecce18715cea5f048ef57fccea8dec08b7fce904171968",
+  "verification": "source_destination_sha256_match"
+}

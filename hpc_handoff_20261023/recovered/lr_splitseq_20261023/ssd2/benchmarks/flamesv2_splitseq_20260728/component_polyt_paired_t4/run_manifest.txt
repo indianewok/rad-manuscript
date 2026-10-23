@@ -1,0 +1,11 @@
+FLAMES source /Volumes/CMV_SSD_2/benchmarks/flamesv2_splitseq_20260728/FLAMES
+FLAMES commit bf2211a8da1e1c7327370ab12479ae70e1d37cd8
+input /Volumes/CMV_SSD_2/raw_fqs/splitseq.fq.gz
+threads 4
+BC v1 whitelist /Volumes/CMV_SSD_2/benchmarks/flamesv2_splitseq_20260728/inputs/local_whitelists/bc_8nt_v1.csv
+BC v2 whitelist /Volumes/CMV_SSD_2/benchmarks/flamesv2_splitseq_20260728/inputs/local_whitelists/bc_8nt_v2.csv
+BC v1 entries 96
+BC v2 entries 96
+max flank edit distance 3
+per component edit distance 1
+terminal poly-T segment include

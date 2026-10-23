@@ -1,0 +1,45 @@
+{
+	"@class": "DataSet",
+	"$id": "sheets/data_sheet/data_table/data_set.schema.json",
+	"uid": "C53FA8F2-FAC6-455C-8647-634E53EEBE8D",
+	"fenID": 301,
+	"format": "text",
+	"attributes": [
+		"DS_ATTR_Y"
+	],
+	"replicates": [
+		{
+			"@class": "DriverReplicate",
+			"valueType": "string",
+			"commonAttributes": [
+				"NUMERIC"
+			],
+			"decimalsLength": 15,
+			"significantDigitsCount": 7,
+			"cellAlignments": [
+				{
+					"rows": "0",
+					"attributes": "left"
+				},
+				{
+					"rows": "2~4",
+					"attributes": "left"
+				},
+				{
+					"rows": "7~12",
+					"attributes": "left"
+				},
+				{
+					"rows": "15~19",
+					"attributes": "left"
+				},
+				{
+					"rows": "22~25",
+					"attributes": "left"
+				}
+			],
+			"lastRow": 25,
+			"firstRow": 0
+		}
+	]
+}

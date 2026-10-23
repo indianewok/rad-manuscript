@@ -1,0 +1,19 @@
+{
+	"@class": "AnalysisView",
+	"uid": "B661BEDF-C895-435B-B1CE-44DA7BC44BFE",
+	"$id": "analyses/view.schema.json",
+	"dataSheet": "A2E38EA2-4608-4C84-B1C3-00DD42DAC419",
+	"name": "Estimation Plot",
+	"viewIdx": 8,
+	"graphId": 34,
+	"graphFlags": 0,
+	"tabState": "AUTO",
+	"isVisible": false,
+	"isInternal": false,
+	"isColumnLabelsVisible": true,
+	"isGraphData": false,
+	"useGraphData": false,
+	"graphDefaults": {
+		"type": "binary"
+	}
+}

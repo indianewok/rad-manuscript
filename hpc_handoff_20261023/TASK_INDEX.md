@@ -33,7 +33,7 @@
 | F3-08 | P0 | Produce explicit graph bindings and defensible statistics from identity-bearing source data. | G-01, F3-02, F3-04, F3-07 |
 | F3-09 | P1 | Package a releasable raw-to-figure workflow with a small independent smoke test. | G-01, F3-01, F3-02, F3-03, F3-04, F3-06, F3-07, F3-08 |
 | F5-01 | P0 | Identify the exact RAGE receptor/cell-label source for each current panel before regenerating. | G-01 |
-| F5-02 | P0 | Recover final component-based LR-Split-seq comparison and its paired read/UMI tables. | G-01 |
+| F5-02 | P0 | Validate recovered LR-Split-seq checkpoints and complete the UMI-panel lineage. | G-01 |
 | F6-01 | P0 | Validate and preserve the independent bulk genotype panel and short-read reference. | G-01 |
 | F6-02 | P0 | Resume per-tool genotype analysis from retained alignments and CellSNP checkpoints. | G-01, F6-01 |
 | F6-03 | P1 | Validate fixed UMAP provenance and regenerate genotype overlays/statistical inputs. | G-01, F6-02 |

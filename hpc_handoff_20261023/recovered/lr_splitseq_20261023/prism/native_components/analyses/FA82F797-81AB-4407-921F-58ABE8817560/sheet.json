@@ -1,0 +1,66 @@
+{
+	"@class": "AnalysisSheet",
+	"uid": "FA82F797-81AB-4407-921F-58ABE8817560",
+	"fenID": 8,
+	"title": "Simple linear regression of SPLIT-seq benchmarking",
+	"alertText": "Runs test is impossible for some data sets because several rows have the same X value.\r",
+	"$id": "analyses/sheet.schema.json",
+	"analysisClass": "SIMPLE_LINEAR_REGRESSION",
+	"isAllDataAnalyzed": true,
+	"isCalculated": true,
+	"currentResultSheet": "34676CCD-509D-4135-946F-C46E94197C09",
+	"preferredResultSheet": "34676CCD-509D-4135-946F-C46E94197C09",
+	"minRequiredVersion": {
+		"major": 0,
+		"minor": 0,
+		"subminor": 0,
+		"build": 0
+	},
+	"resultSheets": [
+		{
+			"uid": "34676CCD-509D-4135-946F-C46E94197C09",
+			"title": "Tabular results"
+		},
+		{
+			"uid": "4A058BF6-116E-4A8A-85E0-A2F407E566A3",
+			"title": "Line"
+		},
+		{
+			"uid": "C9F6C062-1258-4AE3-B6D0-DE4DC9B37F9B",
+			"title": "Are lines different?"
+		}
+	],
+	"inputDataSets": [
+		{
+			"uid": "7EACC79E-897A-4619-A686-3CF9DBE1757B",
+			"title": "component-based Flexiplex, no poly-T",
+			"idx": "A"
+		},
+		{
+			"uid": "4E5888BA-4FA3-406A-879E-75E136CE120B",
+			"title": "component-based Flexiplex, poly-T",
+			"idx": "B"
+		},
+		{
+			"uid": "FE3B44B5-6088-4313-9AD0-87C8DDE7547A",
+			"title": "GitHub FLAMESV2 (Newest)",
+			"idx": "C"
+		},
+		{
+			"uid": "8DD49283-AD9C-4D0D-9C20-73750E5FC551",
+			"title": "Preprint FLAMESV2 (Canonical)",
+			"idx": "D"
+		},
+		{
+			"uid": "61B79985-C46C-43A2-9212-F599E85B04F4",
+			"title": "Identity Line",
+			"idx": "E"
+		}
+	],
+	"inputSheets": [
+		{
+			"uid": "6D466B4F-8636-4547-8F4E-B45C30CA7F51",
+			"title": "SPLIT-seq benchmarking"
+		}
+	]
+}

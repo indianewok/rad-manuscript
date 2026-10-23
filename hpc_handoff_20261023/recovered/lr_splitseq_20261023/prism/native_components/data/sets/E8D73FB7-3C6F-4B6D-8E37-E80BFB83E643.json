@@ -1,0 +1,24 @@
+{
+	"@class": "DataSet",
+	"$id": "sheets/data_sheet/data_table/data_set.schema.json",
+	"uid": "E8D73FB7-3C6F-4B6D-8E37-E80BFB83E643",
+	"fenID": 289,
+	"format": "y_single",
+	"title": "Default Flexiplex Layout (2/26)",
+	"attributes": [
+		"DS_ATTR_Y"
+	],
+	"replicates": [
+		{
+			"@class": "DriverReplicate",
+			"valueType": "real",
+			"commonAttributes": [
+				"NUMERIC",
+				"USER"
+			],
+			"significantDigitsCount": 7,
+			"lastRow": 567,
+			"firstRow": 0
+		}
+	]
+}

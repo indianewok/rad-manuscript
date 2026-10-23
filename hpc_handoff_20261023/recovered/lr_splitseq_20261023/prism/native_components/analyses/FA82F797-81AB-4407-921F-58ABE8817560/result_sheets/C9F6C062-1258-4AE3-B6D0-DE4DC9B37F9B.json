@@ -1,0 +1,45 @@
+{
+	"@class": "AnalysisView",
+	"uid": "C9F6C062-1258-4AE3-B6D0-DE4DC9B37F9B",
+	"$id": "analyses/view.schema.json",
+	"textBlocks": [
+		{
+			"block": {
+				"string": "Are the slopes equal?\rF = 144.3. DFn = 3, DFd = 2264\rP<0.0001\r\rIf the overall slopes were identical, there is less than a 0.01% chance of randomly choosing\rdata points with slopes this different. You can conclude that the differences between the slopes are\rextremely significant.\r\rBecause the slopes differ so much, it is not possible to test whether the intercepts differ significantly.",
+				"version": 1,
+				"formatting": [
+					{
+						"range": "0~20",
+						"attributes": {
+							"fontFamily": "Arial",
+							"fontSize": 10.0,
+							"underline": true,
+							"horizontalAlignment": "left",
+							"indentLeft": 0
+						}
+					},
+					{
+						"range": "21~386",
+						"attributes": {
+							"fontFamily": "Arial",
+							"fontSize": 10.0,
+							"horizontalAlignment": "left",
+							"indentLeft": 0
+						}
+					}
+				]
+			},
+			"fenID": 17
+		}
+	],
+	"name": "Are lines different?",
+	"viewIdx": 5,
+	"graphId": -1,
+	"graphFlags": 0,
+	"tabState": "SHOW",
+	"isVisible": true,
+	"isInternal": false,
+	"isColumnLabelsVisible": true,
+	"isGraphData": false,
+	"useGraphData": false
+}

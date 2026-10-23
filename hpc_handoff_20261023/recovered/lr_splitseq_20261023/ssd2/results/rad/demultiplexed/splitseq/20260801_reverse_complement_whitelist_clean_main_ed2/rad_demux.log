@@ -1,0 +1,23 @@
+RAD demultiplexing summary
+status=success
+rad_version=1.0.2
+layout=/Volumes/CMV_SSD_2/benchmarks/flamesv2_splitseq_20260728/reverse_complemented_whitelist_test_20260728/splitseq_reverse_complemented_whitelist_layout.csv
+input=/Volumes/CMV_SSD_2/raw_fqs/splitseq.fq.gz
+output_prefix=/Volumes/CMV_SSD_2/results/rad/demultiplexed/splitseq/20260801_reverse_complement_whitelist_clean_main_ed2/rad
+threads=4
+auto_whitelist=false
+scan_selection=not_applicable
+total_reads=5764421
+reads_passing_filter=2498488
+reads_demultiplexed=2498488
+records_serialized=2536299
+demultiplex_rate_percent=43.343260
+chunks_processed=1153
+sigalign_wall_time_seconds=216.072521
+process_time_seconds=202.626000
+output_staging_time_seconds=0.000000
+overhead_time_seconds=13.446521
+total_wall_time_seconds=217.667075
+memory_scope=rad_process_only
+final_rss_gib=0.244553
+peak_rss_gib=0.253815

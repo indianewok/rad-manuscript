@@ -1,0 +1,76 @@
+{
+	"@class": "DataSheet",
+	"$id": "sheets/data_sheet/data_sheet.schema.json",
+	"uid": "7F52648E-85D1-4920-A525-216AA6D45C42",
+	"fenID": 22,
+	"title": "SPLIT-seq benchmarking, continued",
+	"isCustomTitle": true,
+	"table": {
+		"@class": "DataTable",
+		"$id": "sheets/data_sheet/data_table/data_table.schema.json",
+		"uid": "38B33004-EDF4-45F4-86FC-05BF595E01E1",
+		"format": "grouped",
+		"dataFormat": "y_single",
+		"dataSets": [
+			"62994E1D-9895-4348-8A3E-813370B972D0",
+			"E8D73FB7-3C6F-4B6D-8E37-E80BFB83E643",
+			"5E13EF6F-461E-4C32-9CDA-1329BE079697",
+			"AB59353A-C6D2-42CA-BF5B-D20451B41D33",
+			"78E665E3-EBF0-457E-A910-329F284AFF93"
+		]
+	},
+	"font": {
+		"family": "Arial",
+		"size": 11.0
+	},
+	"titleWidth": 52,
+	"xSubColWidth": 52,
+	"maxDataSets": 2048,
+	"maxRow": 500000,
+	"selectionRange": {
+		"startCell": {
+			"row": -2,
+			"column": 1,
+			"subcolumn": 0
+		},
+		"endCell": {
+			"row": -2,
+			"column": 1,
+			"subcolumn": 0
+		}
+	},
+	"anchorRow": 0,
+	"anchorColumn": 0,
+	"firstSubColumn": 0,
+	"userSetColumnWidth": true,
+	"horizontal dpi": 72,
+	"widthOfColumns": [
+		{
+			"columns": "0",
+			"width": 152.0
+		},
+		{
+			"columns": "1",
+			"width": 118.0
+		},
+		{
+			"columns": "2",
+			"width": 155.0
+		},
+		{
+			"columns": "3",
+			"width": 176.0
+		},
+		{
+			"columns": "4",
+			"width": 145.0
+		},
+		{
+			"columns": "5~16",
+			"width": 74.0
+		}
+	],
+	"rowTitlesWidth": 39,
+	"subColumnTitleType": "default",
+	"pairwiseComparisonsDataUid": "B265DC65-6FB7-457A-ADB2-BA24511512AA"
+}

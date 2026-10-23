@@ -1,0 +1,288 @@
+{
+	"@class": "AnalysisConstants",
+	"version": "0.0.0",
+	"content": {
+		"analysisConstantIds": [
+			{
+				"path": "/modelComparisonTests/slopeTest/dfDenominator",
+				"id": -13107202
+			},
+			{
+				"path": "/modelComparisonTests/slopeTest/dfNumerator",
+				"id": -13172738
+			},
+			{
+				"path": "/modelComparisonTests/slopeTest/f",
+				"id": -13238274
+			},
+			{
+				"path": "/modelComparisonTests/slopeTest/pValue/level",
+				"id": -12976130
+			},
+			{
+				"path": "/modelComparisonTests/slopeTest/pValue/value",
+				"id": -13041666
+			},
+			{
+				"path": "/modelComparisonTests/slopeTest/pooledSlope",
+				"id": -13303810
+			},
+			{
+				"path": "/models/3ef6eda1-e607-51cd-b400-53e51e90b2c8/value/dataSummary/pointsAnalyzed",
+				"id": -13434882
+			},
+			{
+				"path": "/models/3ef6eda1-e607-51cd-b400-53e51e90b2c8/value/dataSummary/pointsSkipped",
+				"id": -13369346
+			},
+			{
+				"path": "/models/3ef6eda1-e607-51cd-b400-53e51e90b2c8/value/dataSummary/xValues",
+				"id": -13565954
+			},
+			{
+				"path": "/models/3ef6eda1-e607-51cd-b400-53e51e90b2c8/value/dataSummary/yReplicates",
+				"id": -13500418
+			},
+			{
+				"path": "/models/3ef6eda1-e607-51cd-b400-53e51e90b2c8/value/model/equation",
+				"id": -14155778
+			},
+			{
+				"path": "/models/3ef6eda1-e607-51cd-b400-53e51e90b2c8/value/model/parameters/Slope/ci/level",
+				"id": -14090242
+			},
+			{
+				"path": "/models/3ef6eda1-e607-51cd-b400-53e51e90b2c8/value/model/parameters/Slope/significanceTest/dfDenominator",
+				"id": -13893634
+			},
+			{
+				"path": "/models/3ef6eda1-e607-51cd-b400-53e51e90b2c8/value/model/parameters/Slope/significanceTest/dfNumerator",
+				"id": -13959170
+			},
+			{
+				"path": "/models/3ef6eda1-e607-51cd-b400-53e51e90b2c8/value/model/parameters/Slope/significanceTest/f",
+				"id": -14024706
+			},
+			{
+				"path": "/models/3ef6eda1-e607-51cd-b400-53e51e90b2c8/value/model/parameters/Slope/significanceTest/pValue/level",
+				"id": -13762562
+			},
+			{
+				"path": "/models/3ef6eda1-e607-51cd-b400-53e51e90b2c8/value/model/parameters/Slope/significanceTest/pValue/value",
+				"id": -13828098
+			},
+			{
+				"path": "/models/3ef6eda1-e607-51cd-b400-53e51e90b2c8/value/model/parameters/X-intercept/ci/level",
+				"id": -13631490
+			},
+			{
+				"path": "/models/3ef6eda1-e607-51cd-b400-53e51e90b2c8/value/model/parameters/Y-intercept/ci/level",
+				"id": -13697026
+			},
+			{
+				"path": "/models/3ef6eda1-e607-51cd-b400-53e51e90b2c8/value/runsTest/pointsAboveCount",
+				"id": -12320770
+			},
+			{
+				"path": "/models/3ef6eda1-e607-51cd-b400-53e51e90b2c8/value/runsTest/pointsBelowCount",
+				"id": -12255234
+			},
+			{
+				"path": "/models/3ef6eda1-e607-51cd-b400-53e51e90b2c8/value/runsTest/runsCount",
+				"id": -12189698
+			},
+			{
+				"path": "/models/76ea2264-8b34-5d10-ba18-86295029d9c9/value/dataSummary/pointsAnalyzed",
+				"id": -15138818
+			},
+			{
+				"path": "/models/76ea2264-8b34-5d10-ba18-86295029d9c9/value/dataSummary/pointsSkipped",
+				"id": -15073282
+			},
+			{
+				"path": "/models/76ea2264-8b34-5d10-ba18-86295029d9c9/value/dataSummary/xValues",
+				"id": -15269890
+			},
+			{
+				"path": "/models/76ea2264-8b34-5d10-ba18-86295029d9c9/value/dataSummary/yReplicates",
+				"id": -15204354
+			},
+			{
+				"path": "/models/76ea2264-8b34-5d10-ba18-86295029d9c9/value/model/equation",
+				"id": -15859714
+			},
+			{
+				"path": "/models/76ea2264-8b34-5d10-ba18-86295029d9c9/value/model/parameters/Slope/ci/level",
+				"id": -15794178
+			},
+			{
+				"path": "/models/76ea2264-8b34-5d10-ba18-86295029d9c9/value/model/parameters/Slope/significanceTest/dfDenominator",
+				"id": -15597570
+			},
+			{
+				"path": "/models/76ea2264-8b34-5d10-ba18-86295029d9c9/value/model/parameters/Slope/significanceTest/dfNumerator",
+				"id": -15663106
+			},
+			{
+				"path": "/models/76ea2264-8b34-5d10-ba18-86295029d9c9/value/model/parameters/Slope/significanceTest/f",
+				"id": -15728642
+			},
+			{
+				"path": "/models/76ea2264-8b34-5d10-ba18-86295029d9c9/value/model/parameters/Slope/significanceTest/pValue/level",
+				"id": -15466498
+			},
+			{
+				"path": "/models/76ea2264-8b34-5d10-ba18-86295029d9c9/value/model/parameters/Slope/significanceTest/pValue/value",
+				"id": -15532034
+			},
+			{
+				"path": "/models/76ea2264-8b34-5d10-ba18-86295029d9c9/value/model/parameters/X-intercept/ci/level",
+				"id": -15335426
+			},
+			{
+				"path": "/models/76ea2264-8b34-5d10-ba18-86295029d9c9/value/model/parameters/Y-intercept/ci/level",
+				"id": -15400962
+			},
+			{
+				"path": "/models/76ea2264-8b34-5d10-ba18-86295029d9c9/value/runsTest/pointsAboveCount",
+				"id": -12713986
+			},
+			{
+				"path": "/models/76ea2264-8b34-5d10-ba18-86295029d9c9/value/runsTest/pointsBelowCount",
+				"id": -12648450
+			},
+			{
+				"path": "/models/76ea2264-8b34-5d10-ba18-86295029d9c9/value/runsTest/runsCount",
+				"id": -12582914
+			},
+			{
+				"path": "/models/c15b629b-88a6-5eb1-80e1-f8d230123540/value/dataSummary/pointsAnalyzed",
+				"id": -15990786
+			},
+			{
+				"path": "/models/c15b629b-88a6-5eb1-80e1-f8d230123540/value/dataSummary/pointsSkipped",
+				"id": -15925250
+			},
+			{
+				"path": "/models/c15b629b-88a6-5eb1-80e1-f8d230123540/value/dataSummary/xValues",
+				"id": -16121858
+			},
+			{
+				"path": "/models/c15b629b-88a6-5eb1-80e1-f8d230123540/value/dataSummary/yReplicates",
+				"id": -16056322
+			},
+			{
+				"path": "/models/c15b629b-88a6-5eb1-80e1-f8d230123540/value/model/equation",
+				"id": -16711682
+			},
+			{
+				"path": "/models/c15b629b-88a6-5eb1-80e1-f8d230123540/value/model/parameters/Slope/ci/level",
+				"id": -16646146
+			},
+			{
+				"path": "/models/c15b629b-88a6-5eb1-80e1-f8d230123540/value/model/parameters/Slope/significanceTest/dfDenominator",
+				"id": -16449538
+			},
+			{
+				"path": "/models/c15b629b-88a6-5eb1-80e1-f8d230123540/value/model/parameters/Slope/significanceTest/dfNumerator",
+				"id": -16515074
+			},
+			{
+				"path": "/models/c15b629b-88a6-5eb1-80e1-f8d230123540/value/model/parameters/Slope/significanceTest/f",
+				"id": -16580610
+			},
+			{
+				"path": "/models/c15b629b-88a6-5eb1-80e1-f8d230123540/value/model/parameters/Slope/significanceTest/pValue/level",
+				"id": -16318466
+			},
+			{
+				"path": "/models/c15b629b-88a6-5eb1-80e1-f8d230123540/value/model/parameters/Slope/significanceTest/pValue/value",
+				"id": -16384002
+			},
+			{
+				"path": "/models/c15b629b-88a6-5eb1-80e1-f8d230123540/value/model/parameters/X-intercept/ci/level",
+				"id": -16187394
+			},
+			{
+				"path": "/models/c15b629b-88a6-5eb1-80e1-f8d230123540/value/model/parameters/Y-intercept/ci/level",
+				"id": -16252930
+			},
+			{
+				"path": "/models/c15b629b-88a6-5eb1-80e1-f8d230123540/value/runsTest/pointsAboveCount",
+				"id": -12910594
+			},
+			{
+				"path": "/models/c15b629b-88a6-5eb1-80e1-f8d230123540/value/runsTest/pointsBelowCount",
+				"id": -12845058
+			},
+			{
+				"path": "/models/c15b629b-88a6-5eb1-80e1-f8d230123540/value/runsTest/runsCount",
+				"id": -12779522
+			},
+			{
+				"path": "/models/c90c3174-6dc3-5a31-8d73-e45565d5f640/value/dataSummary/pointsAnalyzed",
+				"id": -14286850
+			},
+			{
+				"path": "/models/c90c3174-6dc3-5a31-8d73-e45565d5f640/value/dataSummary/pointsSkipped",
+				"id": -14221314
+			},
+			{
+				"path": "/models/c90c3174-6dc3-5a31-8d73-e45565d5f640/value/dataSummary/xValues",
+				"id": -14417922
+			},
+			{
+				"path": "/models/c90c3174-6dc3-5a31-8d73-e45565d5f640/value/dataSummary/yReplicates",
+				"id": -14352386
+			},
+			{
+				"path": "/models/c90c3174-6dc3-5a31-8d73-e45565d5f640/value/model/equation",
+				"id": -15007746
+			},
+			{
+				"path": "/models/c90c3174-6dc3-5a31-8d73-e45565d5f640/value/model/parameters/Slope/ci/level",
+				"id": -14942210
+			},
+			{
+				"path": "/models/c90c3174-6dc3-5a31-8d73-e45565d5f640/value/model/parameters/Slope/significanceTest/dfDenominator",
+				"id": -14745602
+			},
+			{
+				"path": "/models/c90c3174-6dc3-5a31-8d73-e45565d5f640/value/model/parameters/Slope/significanceTest/dfNumerator",
+				"id": -14811138
+			},
+			{
+				"path": "/models/c90c3174-6dc3-5a31-8d73-e45565d5f640/value/model/parameters/Slope/significanceTest/f",
+				"id": -14876674
+			},
+			{
+				"path": "/models/c90c3174-6dc3-5a31-8d73-e45565d5f640/value/model/parameters/Slope/significanceTest/pValue/level",
+				"id": -14614530
+			},
+			{
+				"path": "/models/c90c3174-6dc3-5a31-8d73-e45565d5f640/value/model/parameters/Slope/significanceTest/pValue/value",
+				"id": -14680066
+			},
+			{
+				"path": "/models/c90c3174-6dc3-5a31-8d73-e45565d5f640/value/model/parameters/X-intercept/ci/level",
+				"id": -14483458
+			},
+			{
+				"path": "/models/c90c3174-6dc3-5a31-8d73-e45565d5f640/value/model/parameters/Y-intercept/ci/level",
+				"id": -14548994
+			},
+			{
+				"path": "/models/c90c3174-6dc3-5a31-8d73-e45565d5f640/value/runsTest/pointsAboveCount",
+				"id": -12517378
+			},
+			{
+				"path": "/models/c90c3174-6dc3-5a31-8d73-e45565d5f640/value/runsTest/pointsBelowCount",
+				"id": -12451842
+			},
+			{
+				"path": "/models/c90c3174-6dc3-5a31-8d73-e45565d5f640/value/runsTest/runsCount",
+				"id": -12386306
+			}
+		]
+	}
+}

@@ -1,0 +1,26 @@
+Table Analyzed,"SPLIT-seq benchmarking, continued"
+,
+Group E,RAD
+vs.,vs.
+Group A,Custom Flexiplex Layout
+,
+Paired t test,
+    P value,<0.0001
+    P value summary,****
+    Significantly different (P < 0.05)?,Yes
+    One- or two-tailed P value?,Two-tailed
+"    t, df","t=5.144, df=567"
+    Number of pairs,568
+,
+How large is the effect?,
+    Mean of differences (E - A),27.86
+    SD of differences,129.0
+    SEM of differences,5.415
+    95% confidence interval,17.22 to 38.49
+    R squared (partial eta squared),0.04459
+,
+How effective was the pairing?,
+    Correlation coefficient (r),0.9997
+    P value (one tailed),<0.0001
+    P value summary,****
+    Was the pairing significantly effective?,Yes

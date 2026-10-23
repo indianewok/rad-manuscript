@@ -1,0 +1,168 @@
+{
+  "status": "PASS",
+  "checks": {
+    "export_568_unique_canonical_barcodes": true,
+    "master_568_unique_canonical_barcodes": true,
+    "published_ranks_1_to_568": true,
+    "master_order_exact": true,
+    "all_master_metadata_exact": true,
+    "canonical_vs_bam_reverse_component_order": true,
+    "published_cell_barcode_from_bam_and_rt_well": true,
+    "rad_ed2_assigned_reads_join": true,
+    "flex_component_polyt_assigned_reads_join": true,
+    "flex_component_no_polyt_assigned_reads_join": true,
+    "flames_matched_split_polyt_assigned_reads_join": true,
+    "flames_historical_two_pass_assigned_reads_join": true,
+    "same_published_cell_set_as_independent_short_read_metadata": true,
+    "published_sr_umi_matches_independent_metadata": true,
+    "published_sample_matches_independent_metadata": true,
+    "canonical_RT_component_matches_round1_well": true,
+    "canonical_ligation_components_match_round2_round3_wells": true,
+    "Flexiplex polyT_matches_saved_read_cell_pair_metric": true,
+    "Flexiplex no-polyT_matches_saved_read_cell_pair_metric": true,
+    "rad_ed2_assignment_replay_all568_read_umi_counts_match": true,
+    "rad_ed2_global_source_read_total_match": true
+  },
+  "joins": {
+    "rad_ed2_assigned_reads": {
+      "source_rows": 568,
+      "unique_keys": 568,
+      "same_key_set": true,
+      "mismatches": 0,
+      "sum": 2078171,
+      "positive_cells": 568,
+      "zero_cells": 0
+    },
+    "flex_component_polyt_assigned_reads": {
+      "source_rows": 568,
+      "unique_keys": 568,
+      "same_key_set": true,
+      "mismatches": 0,
+      "sum": 1156252,
+      "positive_cells": 568,
+      "zero_cells": 0,
+      "globally_unique_source_reads_saved": 1152260,
+      "read_cell_pair_excess": 3992
+    },
+    "flex_component_no_polyt_assigned_reads": {
+      "source_rows": 568,
+      "unique_keys": 568,
+      "same_key_set": true,
+      "mismatches": 0,
+      "sum": 2062349,
+      "positive_cells": 568,
+      "zero_cells": 0,
+      "globally_unique_source_reads_saved": 2047298,
+      "read_cell_pair_excess": 15051
+    },
+    "flames_matched_split_polyt_assigned_reads": {
+      "source_rows": 568,
+      "unique_keys": 568,
+      "same_key_set": true,
+      "mismatches": 0,
+      "sum": 2331521,
+      "positive_cells": 568,
+      "zero_cells": 0
+    },
+    "flames_historical_two_pass_assigned_reads": {
+      "source_rows": 568,
+      "unique_keys": 568,
+      "same_key_set": true,
+      "mismatches": 0,
+      "sum": 2209802,
+      "positive_cells": 546,
+      "zero_cells": 22
+    }
+  },
+  "files": [
+    {
+      "role": "export",
+      "path": "/Volumes/CMV_SSD_2/benchmarks/flamesv2_splitseq_20260728/plotting_exports/20260801_reads_per_published_cell/splitseq_published_barcode_read_counts.csv",
+      "bytes": 74157,
+      "sha256": "8a26f5537b50c2f3199f03b5613622d02cf4d0c9dadf5a0091c2fb2a3841a2ff"
+    },
+    {
+      "role": "master",
+      "path": "/Volumes/CMV_SSD_2/results/misc/splitseq_shortread_umis_20260728/published_568_barcode_map.csv",
+      "bytes": 60443,
+      "sha256": "d25f1a9ba73e14f7ba39523748e677e93eaea3eb780ae65ab639fa76afc68e47"
+    },
+    {
+      "role": "rad",
+      "path": "/Volumes/CMV_SSD_2/results/rad/demultiplexed/splitseq/20260801_reverse_complement_whitelist_clean_main_ed2/analysis/ed1_ed2_per_published_cell.tsv",
+      "bytes": 60304,
+      "sha256": "a8ce3759583df7195ea7bc8f6659169963a9ea35856769e5f073164621d50a33"
+    },
+    {
+      "role": "components",
+      "path": "/Volumes/CMV_SSD_2/benchmarks/flamesv2_splitseq_20260728/component_no_polyt_t4/per_published_cell_counts.tsv",
+      "bytes": 122348,
+      "sha256": "7f7c15190c12428f6c6d8dc4b1a08d80824b2f84f1667b53df151690f7a52584"
+    },
+    {
+      "role": "matched",
+      "path": "/Volumes/CMV_SSD_2/benchmarks/flamesv2_splitseq_20260728/joint_matched_split_t4/per_published_cell.tsv",
+      "bytes": 42817,
+      "sha256": "7796ae36fdcb42cbe312a32ced182d378a2588edafbcd96ac26b6cd7f5af0507"
+    },
+    {
+      "role": "historical",
+      "path": "/Volumes/CMV_SSD_2/benchmarks/flamesv2_splitseq_20260728/plotting_exports/20260801_reads_per_published_cell/historical_two_pass_per_published_cell.tsv",
+      "bytes": 18090,
+      "sha256": "0fe017025c9dba1e74dcda32690ea65da00256ce028776d841901a7be1122aee"
+    },
+    {
+      "role": "component_sql",
+      "path": "/Users/cmv/Desktop/rad/benchmarks/lr_splitseq_no_polyt/analyze_no_polyt.sql",
+      "bytes": 17808,
+      "sha256": "094725b7de2b59d7888a6279792504170d7439ed0dc06d4eac952c13fdcf1a97"
+    },
+    {
+      "role": "component_runner",
+      "path": "/Users/cmv/Desktop/rad/benchmarks/lr_splitseq_no_polyt/run_component_no_polyt.R",
+      "bytes": 4535,
+      "sha256": "1a17ce914b47146b531f9c807ee27f158d454319ed5a38fc8dabbc6d09773133"
+    },
+    {
+      "role": "component_metrics",
+      "path": "/Volumes/CMV_SSD_2/benchmarks/flamesv2_splitseq_20260728/component_no_polyt_t4/published_cell_metrics.tsv",
+      "bytes": 484,
+      "sha256": "84004f194e23e6d10b7dd2bf93b50764e56628039f153deb6f70a2d580a78e95"
+    },
+    {
+      "role": "component_polyt_manifest",
+      "path": "/Volumes/CMV_SSD_2/benchmarks/flamesv2_splitseq_20260728/component_polyt_paired_t4/run_manifest.txt",
+      "bytes": 535,
+      "sha256": "2f5b8d65c5a3705721383e9fe667bc7cf97472b90728131004c45a62fef16907"
+    }
+  ],
+  "counting_unit": "Component SQL explicitly counts DISTINCT read_id grouped by tool and canonical cell. Per-cell sums therefore count unique read-cell pairs; a physical read assigned to two cells contributes to both. Repeated UMI/segment calls within one read-cell pair do not increase read counts. Component SQL excludes empty barcode or empty UMI, maps RT primer sequences to the same-well T-primer sequence, and restricts canonical cells to the published568 set. The retained RAD ED2 normalized ledger was independently replayed after the same RT-well normalization: all568 per-cell read and UMI counts match exactly. Original RAD tally producer is unlocated; the added portable validator supplies the checkpoint-to-table step.",
+  "source_folder_warning": "component_no_polyt_t4/per_published_cell_counts.tsv contains both Flexiplex polyT and no-polyT arms plus historical RAD main ED1; filter by tool column.",
+  "component_execution": {
+    "flames_commit": "bf2211a8da1e1c7327370ab12479ae70e1d37cd8",
+    "per_component_edit_distance": 1,
+    "max_flank_edit_distance": 3,
+    "terminal_polyt": "include,8T",
+    "threads": 4,
+    "raw_input": "/Volumes/CMV_SSD_2/raw_fqs/splitseq.fq.gz",
+    "note": "The published upstream config found in longbench_full_demux has flank8; final local paired component run manifest and runner use flank3."
+  },
+  "barcode_convention": "Canonical sequence order is RT/v2, then round2 ligation/v1, then round3 ligation/v1, separated by underscores. BAM CB reverses the component order. Published cell_barcode concatenates round3 and round2 sequence plus underscore and RT well index. The final export labels canonical order BC3/v2_BC2/v1_BC1/v1 using FLAMES component nomenclature; numbering differs from physical-round names.",
+  "rad_ed2_checkpoint_validation": {
+    "report": "rad_ed2_checkpoint_validation.json",
+    "status": "PASS",
+    "checkpoint": {
+      "path": "/Volumes/rad_data/reviewer_comment_data/paper_revision_20261022/lr_splitseq_recovery_20261023/package/checkpoints/rad_ed2/assignments_selected_ed2_published_cells.tsv.gz",
+      "bytes": 26638130,
+      "sha256": "fe39fc76b67eb374c270ad684d5e96179933d1ce98a9e747b7744083788ff406"
+    },
+    "row_accounting": {
+      "input_rows": 2536299,
+      "selected_assignment_rows": 2079870,
+      "outside_published_cells_rows": 456429
+    },
+    "read_cell_pairs": 2078171,
+    "globally_unique_published_cell_reads": 2063573,
+    "cell_umi_pairs": 1891704
+  }
+}

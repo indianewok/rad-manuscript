@@ -1,0 +1,67 @@
+{
+	"@class": "DataSheet",
+	"$id": "sheets/data_sheet/data_sheet.schema.json",
+	"uid": "96242718-17A2-4095-BC85-D60ACB839BE3",
+	"fenID": 20,
+	"title": "Simple linear regression of SPLIT-seq benchmarking:Line",
+	"isCollapsed": true,
+	"table": {
+		"@class": "XYDataTable",
+		"$id": "sheets/data_sheet/data_table/data_table.schema.json",
+		"uid": "A02B0252-73D4-409E-8F79-0E6ABDF462E2",
+		"format": "xy",
+		"dataFormat": "y_plus_minus",
+		"valuesStorageData": {
+			"last rows": [
+				"3;100",
+				"2;100",
+				"1;100",
+				"0;100"
+			],
+			"version": 1,
+			"yColumnUuid": [
+				"1c311d9e-d8a4-5d77-b8e5-d5c426479a45",
+				"28a1b16f-7225-5f02-b7fd-e3fed07dd74a",
+				"42a15b1f-d7d7-5acd-9ff0-e488e7fc3289",
+				"337f9f63-44b2-539f-b856-5afdf9b5ab65"
+			]
+		},
+		"dataSets": [
+			"7D6A19F5-6C59-4869-B72E-3CEC05296141",
+			"DE0CD8BC-F4B0-4ACC-88ED-BA0A19B51195",
+			"F6C7A0EE-5182-47E6-B960-58A1796F3887",
+			"F335A3B1-3B9C-49D6-A7E8-8A6748D6628D"
+		],
+		"xDataSetFormat": "series",
+		"xDataSet": "EAB0528D-A69C-41C6-9511-CC1EA45A9C6F"
+	},
+	"font": {
+		"family": "Arial",
+		"size": 11.0
+	},
+	"flags": [
+		"HIDE_ROW_TITLES",
+		"ANALYSIS_VIEW"
+	],
+	"titleWidth": 228,
+	"xSubColWidth": 228,
+	"maxDataSets": 2048,
+	"maxRow": 500000,
+	"selectionRange": {
+		"startCell": {
+			"row": 0,
+			"column": 0,
+			"subcolumn": 0
+		},
+		"endCell": {
+			"row": 0,
+			"column": 0,
+			"subcolumn": 0
+		}
+	},
+	"anchorRow": 0,
+	"anchorColumn": 0,
+	"firstSubColumn": 0,
+	"xRowWidth": -2,
+	"subColumnTitleType": "default"
+}

@@ -1,0 +1,23 @@
+{
+	"@class": "DataSet",
+	"$id": "sheets/data_sheet/data_table/data_set.schema.json",
+	"uid": "C38C15EE-4F4D-4C5F-A873-8815E4215328",
+	"fenID": 268,
+	"format": "y_single",
+	"title": "rad_ed2_assigned_reads",
+	"attributes": [
+		"DS_ATTR_X"
+	],
+	"replicates": [
+		{
+			"@class": "DriverReplicate",
+			"valueType": "real",
+			"commonAttributes": [
+				"NUMERIC"
+			],
+			"significantDigitsCount": 7,
+			"lastRow": 567,
+			"firstRow": 0
+		}
+	]
+}

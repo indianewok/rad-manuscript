@@ -625,14 +625,14 @@
       "actions": [
         "Locate only the referenced HPC HD_MAPPING_DIR and its tissue_positions_16um.csv plus visium_hd_mouse_brain_016um_seurat.rds; record hashes and creation provenance. These two files are not included in the cloned repo and their current HPC location is unresolved.",
         "Old repo panels 4I-K correspond to current 1D. Use overview_panels_bare.R in an output copy, with HD_MAPPING_DIR and a working directory containing the copied sample_bin_matrix_16um.csv.gz. Record R/sessionInfo and six package versions.",
-        "Before rendering, trace the repo wide-table columns/counts to preserved RAD spot counts and map. aggregate_to_sr16.py bins each 2 µm coordinate by integer division by 8; sum 8x8 positions into 16 µm bins. Do not substitute legacy Hamming-inclusive counts.",
+        "Before rendering, trace the repo wide-table columns/counts to preserved RAD spot counts and map. aggregate_to_sr16.py bins each 2 \u00b5m coordinate by integer division by 8; sum 8x8 positions into 16 \u00b5m bins. Do not substitute legacy Hamming-inclusive counts.",
         "Plot recipe: representative PBC44593; Seurat obj$nCount_Spatial; Seurat denominator is sum over the entire object; RAD denominator is sum of PBC44593_count in the entire wide table; log10(count*1e6/total), no pseudocount. These sums precede grid merge/display subset.",
         "Shared color limits use Seurat-present and RAD-valid bins, full combined range; common bounding box from complete tissue-position grid; Space Ranger in_tissue==1 is displayed in gray. Validate finite values and positive counts in plotted subsets instead of silently adding pseudocounts.",
         "Render the three plots, both colorbar options, and triptych; compare orientation, extent, count meanings, scale and silhouette with current panel before final assembly."
       ],
       "validation": [
         "Exactly four named flowcells PBC44593 / PBC44760 / PBC49262 / PBC52788; display is PBC44593 only.",
-        "16 µm unit is retained (old legend incorrectly says 16 mm). Shared coordinates/limits and mask agree across three panels.",
+        "16 \u00b5m unit is retained (old legend incorrectly says 16 mm). Shared coordinates/limits and mask agree across three panels.",
         "RAD-valid mapping is documented and no unmatched observed pairs are silently imputed. exact_match_counts.py infers canonical pairs from aggregate support; verify whether this inferred mapping is actually the final source.",
         "No unmatched/missing bins silently become zero observations; no -Inf scale endpoints or unrecorded clipping."
       ],
@@ -719,7 +719,7 @@
       ],
       "validation": [
         "Native 2023 compressed 10,032,810,794 bytes; SHA256 69b3da301d03d57f3932cfe2d227cc4c0a63ad45191d48eead36d00171471f67; ordered header/sequence SHA256 ca3073f0a44d03b40a5919e01e59a8df89ceceafa086ee7580fae2daa3bf2f61; ordered quality SHA256 1356a4993a6cc31ca80857f99d105da376534d594112588af4e32b3cdf138841.",
-        "Native 2023 Q1–90, whole mean 31.6695023; 8,394,808,882 bases; barcode located 4,976,160, unlocated 17,645. Background-only quality retained when barcode unlocated.",
+        "Native 2023 Q1\u201390, whole mean 31.6695023; 8,394,808,882 bases; barcode located 4,976,160, unlocated 17,645. Background-only quality retained when barcode unlocated.",
         "Generation environment Python 3.9.16, BadRead 0.4.1, edlib 1.3.9, NumPy 1.23.5; tape 16,777,216; adapter ED 7; boundary slop 8. Validate sequence/header and decompressed quality hashes, not only gzip file hash across compressors."
       ],
       "dependencies": [
@@ -818,7 +818,7 @@
       "actions": [
         "Reuse complete archived tables/whitelists and record actual-run versus reused-callset origins. For 2018: eleven shifts +1,+2,+3,+4,+5,+6,+8,+10,+11,+12,+13 and flatQ20, S/L, four configurations RAD/BLAZE/Flex f0/Flex f8 = 96 rows.",
         "For 2023 L: shifts -17,-16,-15,-14,-12,-11,-9,-7,-6,-5,-4 plus native ; 48 rows. The combined 2018/2023 L table has 96 rows; do not confuse it with the distinct 96-row 2018 S/L table. 2023 S was not established in the saved extended sweep.",
-        "Reuse paired 50,000 located-read distributions spanning 5,000 truth barcodes. Shift individual bases then clip to 1–50 before averaging 16 barcode bases; native 2023 preserves 1–90. Match model conditions by full-dataset whole-base mean, not barcode-region mean.",
+        "Reuse paired 50,000 located-read distributions spanning 5,000 truth barcodes. Shift individual bases then clip to 1\u201350 before averaging 16 barcode bases; native 2023 preserves 1\u201390. Match model conditions by full-dataset whole-base mean, not barcode-region mean.",
         "If table replay is needed, copy scripts into a new run root and explicitly remap ordinary paths. Rebuild quality summaries, then BLAZE selector replay, then tabulation/plots. The source reconstruct_quality_sweep.py also needs historical sample_replay_evidence.jsonl.gz at /dartfs/rc/lab/A/AckermanLab/CMV/rad_data/081226_Figure_2_CMV_V14_Q20p18_sweep_20260913_provenance/quality/; its mounted counterpart was not located. Do not derive exact per-base transforms from already averaged Q values.",
         "BLAZE replay imports pinned 2.6.0a0 selector; minQ gate 15-shift; expect 5000/3v3/default sensitivity; no empty-drop analysis/demultiplexing. Freeze full candidate table including low-Q candidates. RAD/Flex callsets reuse is valid only with fixed sequences and same settings.",
         "If full 2018 FASTQs are missing on HPC, regenerate with historical generator after F2-01. The 2023 shifted FASTQs were never all written; no need to materialize them merely to reproduce the exact whitelist replay. New full per-condition assignment experiments or 2023 S are separate scientific expansions."
@@ -992,7 +992,7 @@
       "actions": [
         "Use the corrected copy with SHA256 dded389f9d8214278f93d2669c64e704bbf2208c47db96bf57a4ce4c77d6d016. Do not use superseded_five_outcome_draft or the original V18 numeric data.",
         "Open a fresh review copy in licensed Prism, verify all graphs and native-save before final export. HPC can prepare tables but must not claim native UI verification without actually performing it.",
-        "The two-outcome correction doughnuts intentionally exclude source rows 0 and 3–5 of their six-state tables. Do not remove these exclusions. Correction denominators are RAD 2,135,825; Flex 1,680,396; BLAZE 2,014,432.",
+        "The two-outcome correction doughnuts intentionally exclude source rows 0 and 3\u20135 of their six-state tables. Do not remove these exclusions. Correction denominators are RAD 2,135,825; Flex 1,680,396; BLAZE 2,014,432.",
         "Retain the native Flex full-truth reference increment of 222,371 reads and label it as a reference increment, not as observed native count under the selected 3,004-target condition.",
         "Inspect manual false-positive labels, bar labels, center labels and significance brackets/stars. Six numeric statistical caches were invalidated; no replacement P values have been calculated. Apply the author-approved analysis only, and update legend/test parameters together."
       ],
@@ -1893,15 +1893,24 @@
         "5G",
         "5H"
       ],
-      "purpose": "Recover final component-based LR-Split-seq comparison and its paired read/UMI tables.",
+      "purpose": "Validate recovered LR-Split-seq checkpoints and complete the UMI-panel lineage.",
       "inputs": [
         "/Volumes/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/splitseq_shortread_20260727/README.md",
         "/Volumes/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/prism_inventory_source.Pn5f14/SPLIT-seq benchmarking.csv",
-        "/Volumes/rad_data/reviewer_comment_data/paper_revision_20261022/evidence/biology_methods_supplement.md"
+        "/Volumes/rad_data/reviewer_comment_data/paper_revision_20261022/evidence/biology_methods_supplement.md",
+        "recovered/lr_splitseq_20261023/README.md",
+        "recovered/lr_splitseq_20261023/tables/splitseq_published_barcode_read_counts.csv",
+        "recovered/lr_splitseq_20261023/prism/prism_row_to_cell.csv",
+        "recovered/lr_splitseq_20261023/source_manifest.json",
+        "recovered/lr_splitseq_20261023/REPLAY.md"
       ],
       "scripts": [
         "/Volumes/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/splitseq_shortread_20260727/parse_bc_umi.py",
-        "/Volumes/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/splitseq_shortread_20260727/lr_vs_sr_umi.py"
+        "/Volumes/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/splitseq_shortread_20260727/lr_vs_sr_umi.py",
+        "recovered/lr_splitseq_20261023/source/component_runner/run_component_no_polyt.R",
+        "recovered/lr_splitseq_20261023/prism/validate_cell_mapping.py",
+        "recovered/lr_splitseq_20261023/validation/verify_component_normalization.py",
+        "recovered/lr_splitseq_20261023/scripts/validate_rad_ed2_checkpoint.py"
       ],
       "checkpoints": [
         "568-cell reference table",
@@ -1911,11 +1920,13 @@
         "executed paired statistics"
       ],
       "actions": [
-        "Use long SRR13948564 and matched short SRR13948565. Restore depth-matched short-read reconstruction and exact cell-UMI counting.",
-        "Recover final component-based FLAMESV2/Flexiplex plus poly-T command/layout/correction limits/output and corresponding RAD run. Do not substitute historical two-pass or MATCHED_SPLIT comparator.",
-        "The retained six-column Prism table has 568 rows; columns 1/3 sum 2,078,171 / 1,156,252 reads. Identify all columns and barcode order from original source, not totals alone.",
-        "Distinguish full-input assigned fractions from read counts limited to 568 cells and from UMI counts. Recover final UMI-collapse rules/source link.",
-        "Reconcile paired t-test versus signed-rank text, using the same explicit pairs and multiple-comparison policy."
+        "Read recovered/lr_splitseq_20261023/README.md first. The keyed source matches all 3,408 numeric entries in the 568-row Prism table without reordering. Recheck the mapping and preserve original IDs.",
+        "Restore selected RAD b6853a3d3d1818130ac364f7937bd0690ae9e385 ED2 and FLAMES bf2211a8da1e1c7327370ab12479ae70e1d37cd8 component poly-T execution. Executed component settings are barcode ED1, flank ED3, 8-T included, four threads. Keep no-poly-T, MATCHED_SPLIT and two-pass controls separate.",
+        "Validate preserved native statistics, assignment ledgers and per-cell checkpoints before any raw rerun. Component_no_polyt_t4/per_published_cell_counts.tsv contains multiple arms: select Flexiplex polyT; the RAD table selects ED2 current main. Original source paths need explicit HPC mapping.",
+        "Read sums across 568 cells are read-cell pairs: RAD 2,078,171 and poly-T 1,156,252. Global distinct reads across these cells are 2,063,573 and 1,152,260. Preserve RT-primer/well normalization and actual UMI inclusion rules; current component read counts require nonempty UMI, not exactly ten bases.",
+        "Bind Figure 5H independently. Current per-cell UMI counts survive; older UMI-intersection candidates use earlier RAD ED1. Rebuild selected ED2/poly-T intersections against depth-matched short-read checkpoints or establish intended historical lineage before changing the panel.",
+        "Reconcile Figure 5G full-input percentages using the 5,764,421-read input and explicit unique-read or assignment-row numerator. RAD unique source reads are 2,498,488 (43.34%); component poly-T unique source reads 1,338,285 (23.22%) and assignment rows 1,345,255 (23.34%); displayed 23.35% needs its own source/rounding check.",
+        "The saved Prism test is two-sided paired t, t=14.959474687143327, df=567, P=6.890554214980993e-43. Correct the historical label accordingly; D05 remains only if the author selects a different final statistical method."
       ],
       "validation": [
         "Barcode/UMI orientation and inclusion criteria are explicit and paired cells align by ID.",
@@ -1926,7 +1937,7 @@
       "dependencies": [
         "G-01"
       ],
-      "decision_needed": "Final comparator provenance and paired test D05 remain unresolved; prepare reviewable evidence before choosing a replacement.",
+      "decision_needed": "Read-table and historical test provenance resolved. D05 governs any change of final paired test; Figure 5H source/version and full-input denominator reconciliation remain.",
       "public_outputs": [
         "cell reference",
         "paired read/UMI source data",
@@ -1934,10 +1945,11 @@
         "statistics and figure exports"
       ],
       "availability_notes": [
-        "See saved biology evidence and supplement; a directory reference is not proof of every nested asset. Verify named assets on HPC before execution."
+        "See recovered/lr_splitseq_20261023: source hashes, original and durable paths, selected checkpoints and executed validators are included. Full demultiplexed FASTQs remain external; the read checkpoint recovery is not a new demultiplexing run."
       ],
       "component_file": "components/figures_5_6_7_tasks.json",
-      "status": "planned"
+      "status": "ready",
+      "recovery_status": "Final selected read comparison, all 568 Prism cell identities, selected execution settings, and historical paired-t provenance recovered from CMV_SSD_2 on 2026-10-23; raw rerun and Figure 5H binding remain outstanding."
     },
     {
       "id": "F6-01",
@@ -2187,8 +2199,8 @@
         "Use all positive-depth named native cohorts; gene eligibility >= 10 molecules and >= 1% detection; CP10K from full prefilter library then log2(1 + x), two-sided scran pairwiseWilcox and BH.",
         "Keep one-versus-rest analyses distinct from direct H146/H526. For direct comparison recompute BH over common 8,135 genes and use fixed Illumina FDR < 0.05 absolute FC > 1 truth, direction-specific.",
         "Regenerate old A/C from current data. Expected supported recoveries RAD 654, BLAZE 522, Flexiplex 556 and Venn 117/29/26/29/66/22/442; old 8,126 outputs are historical.",
-        "For confidence slopes recover actual fit/intercept/selection/capping rule; do not assume visual 0–20 limits define fitting data or substitute Spearman plots.",
-        "Rebuild 9 × 11 grids with strict inequalities and fixed Illumina truth: 412 H146-high / 769 H526-high. Match 594 displayed D labels with documented rounding; do not tune data to labels."
+        "For confidence slopes recover actual fit/intercept/selection/capping rule; do not assume visual 0\u201320 limits define fitting data or substitute Spearman plots.",
+        "Rebuild 9 \u00d7 11 grids with strict inequalities and fixed Illumina truth: 412 H146-high / 769 H526-high. Match 594 displayed D labels with documented rounding; do not tune data to labels."
       ],
       "validation": [
         "All platforms share 8,135 identical gene IDs and BH family.",
@@ -2206,7 +2218,7 @@
         "Venn membership",
         "confidence source/fit table",
         "threshold grids",
-        "new A–D exports"
+        "new A\u2013D exports"
       ],
       "availability_notes": [
         "See saved biology evidence and supplement; a directory reference is not proof of every nested asset. Verify named assets on HPC before execution."
@@ -2230,7 +2242,7 @@
         "analysis/input/code specification if retained"
       ],
       "actions": [
-        "Record author confirmation that Olivia panel is pending. Obtain definition, inputs, code and validation if retained, or record removal. Continue 7A–D independently."
+        "Record author confirmation that Olivia panel is pending. Obtain definition, inputs, code and validation if retained, or record removal. Continue 7A\u2013D independently."
       ],
       "validation": [
         "No placeholder is presented as a complete analysis or filled with inferred methods."

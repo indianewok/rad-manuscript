@@ -1,0 +1,3 @@
+tool	canonical_assignment_tuples	assigned_source_reads	physical_cells_observed	total_cell_umis	published_cell_reads	published_cells_detected	published_cell_umis
+ED1 prior clean	2402246	2372756	90144	2203908	2033838	568	1863781
+ED2 current main	2536299	2498488	113406	2329483	2063573	568	1891704

@@ -1,0 +1,4 @@
+tool	input_source_reads	raw_assignment_rows	raw_source_reads	raw_observed_combinations	unmappable_assignment_rows	canonical_assignment_tuples	canonical_source_reads	canonical_cells	canonical_cell_umis	full_10nt_umi_tuples	short_umi_tuples
+Flexiplex no-polyT	5764421	2357434	2329760	95323	0	2356340	2329760	73285	2157265	2264531	91809
+Flexiplex polyT	5764421	1345255	1338285	59093	0	1344723	1338285	54893	1230943	1293282	51441
+RAD main ED1	5764421	2181540	2159157	124843	0	2181085	2159157	96512	2007396	2102893	78192

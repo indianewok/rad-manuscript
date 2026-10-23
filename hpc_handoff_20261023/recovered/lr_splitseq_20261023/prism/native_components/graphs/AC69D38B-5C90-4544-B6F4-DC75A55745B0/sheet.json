@@ -1,0 +1,13 @@
+{
+	"@class": "FENGraphSheet",
+	"$id": "sheets/graph_sheet.schema.json",
+	"uid": "AC69D38B-5C90-4544-B6F4-DC75A55745B0",
+	"fenID": 34,
+	"title": "Estimation Plot: Paired t test of SPLIT-seq benchmarking, continued",
+	"isAutoCreated": true,
+	"inputDataSets": [
+		"00189C3A-19A1-4622-97C8-C7ABEEF74FB3",
+		"B7BFB467-5A85-43BD-84C1-6CD737BCC228",
+		"C4AF6EE2-B4BB-40A9-AEE3-4E4779F94A4A"
+	]
+}
