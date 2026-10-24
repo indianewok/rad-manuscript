@@ -1,0 +1,133 @@
+{
+  "status": "passed complete scan and internal conservation",
+  "started_utc": "2026-10-24T14:51:57.194831+00:00",
+  "elapsed_seconds": 297.30543367471546,
+  "host": "q01.hpcc.dartmouth.edu",
+  "python": "3.9.16 | packaged by conda-forge | (main, Feb  1 2023, 21:39:03) \n[GCC 11.3.0]",
+  "package_versions": {
+    "edlib": "1.3.9"
+  },
+  "argv": [
+    "scripts/figure_02/summarize_full_barcode_quality_2018.py",
+    "--fastq",
+    "/scratch-nfs/f005f43/rad_full_barcode_quality_20261024/inputs/shuffled_L_lr_synth.badread2018_truthbc.shift_p01.fq.gz",
+    "--input-shift",
+    "1",
+    "--output-dir",
+    "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_02/full_read_quality_2018",
+    "--workers",
+    "7",
+    "--sample-csv",
+    "source_data/figure_02/paired_50000_barcode_mean_Q.csv.gz"
+  ],
+  "workers": 7,
+  "batch_size": 1000,
+  "maximum_pending_batches": 14,
+  "slurm": {
+    "SLURM_JOB_ID": "10082679",
+    "SLURM_JOB_NODELIST": "q01",
+    "SLURM_CPUS_PER_TASK": "8"
+  },
+  "input": {
+    "path": "/dartfs-hpc/scratch/f005f43/rad_full_barcode_quality_20261024/inputs/shuffled_L_lr_synth.badread2018_truthbc.shift_p01.fq.gz",
+    "bytes": 9240006410,
+    "mtime_ns": 1792853316544102818
+  },
+  "input_unchanged_during_scan": true,
+  "reads": 4993805,
+  "bases": 8394808882,
+  "distinct_header_truth_barcodes": 5000,
+  "located_reads": 4976160,
+  "correct_reads": 879860,
+  "error_reads": 4096300,
+  "unlocated_reads": 17645,
+  "barcode_ed_counts": {
+    "0": 879860,
+    "1": 526254,
+    "2": 1051268,
+    "3": 732067,
+    "4": 714040,
+    "5": 451253,
+    "6": 314447,
+    "7": 179176,
+    "8": 90021,
+    "9": 29851,
+    "10": 6585,
+    "11": 1154,
+    "12": 157,
+    "13": 22,
+    "14": 5
+  },
+  "orientation_counts": {
+    "-": 2483393,
+    "+": 2492767
+  },
+  "header_sequence_sha256": "ca3073f0a44d03b40a5919e01e59a8df89ceceafa086ee7580fae2daa3bf2f61",
+  "quality_sha256": "6a5dcfa5a348e9895b1eddfa79f1982b2257caa93d1ac9ec621d83d757b4fdfb",
+  "recovered_native_quality_sha256": "80a7e27dd24cc1b51ea98338d6e5a865f4bf733c929153de6b88290dfe0e9855",
+  "input_shift": 1,
+  "input_quality_condition": "shift_p01",
+  "input_quality_support_checked": [
+    2,
+    29
+  ],
+  "recovered_native_quality_support": [
+    1,
+    28
+  ],
+  "native_recovery": "Qnative=Qstored-input_shift; selected original model support1..28 and offsets1..13 imply no clipping; all stored quality bytes checked before inversion",
+  "quality_hash_scope": "quality_sha256 hashes actual stored shifted FASTQ qualities; recovered_native_quality_sha256 hashes their exact inverse",
+  "original_2018_generator": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/LongBench_comps/ScTagger_quality_sweep_20260731/code/original_quality_generation/generate_truth_conditioned_qscores.py",
+  "original_2018_generator_sha256": "3efcd5b677bc65b3eebcfb9ed48432829b3c3a5cbb2521807e24f85cd57c834d",
+  "original_2018_model_sha256": "6f60b7db6691bdf5955da54f621776bd7584d6c21b30f7290dff82d7037a0a85",
+  "locator_identity": "All three copied locator function ASTs are identical to the original2018 generator",
+  "digest_contract": "CR/LF stripped; header including @ plus LF, uppercase sequence plus LF; quality plus LF; source order",
+  "gzip_crc_checked_by_complete_stream_read": true,
+  "sample_validation": {
+    "requested": true,
+    "expected_reads": 50000,
+    "found_reads": 50000,
+    "conditions_per_read": 12,
+    "read_condition_values_compared": 600000,
+    "maximum_absolute_mean_Q_difference": 0.0,
+    "tolerance": 1e-12,
+    "source": "source_data/figure_02/paired_50000_barcode_mean_Q.csv.gz",
+    "source_sha256": "93bb23eeac686cac6b1e8d2ecb9b4968bda3f7d57b6c40cacfdc856dad778e5d"
+  },
+  "script_sha256": "42b4aac31e98ee426a04bb1530ee377104077f69896cc49d5dacc92b5ca76836",
+  "locator_sha256": "0ead90df058cfd940befd3a0b7a659d9f030f01fc382863dcd7e67e583f0fb68",
+  "locator_original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/sctagger_nanopore2023_unadjusted_20260913/scripts/generate_truth_conditioned_qscores.py",
+  "locator_original_source_sha256": "aef619a3f417c4aa4c2c9ac3bfd161916a7e85efa23720ae74a8b630a9026e49",
+  "locator_copied_functions_sha256": "1d6e2734bb901c2bfe01b99a5aa60dfb6b51508f6dcc3d195b926d2739da4b5b",
+  "counting": "Truth-located 16-base window ED0 versus ED>0; per-base transform precedes averaging; unlocated reads excluded from both groups",
+  "outputs": [
+    {
+      "path": "barcode_edit_distance_counts.tsv",
+      "bytes": 262,
+      "sha256": "1973de93a008a0b008ac5a95c0f482e0162b54c4f24717a39987b366b56b266f"
+    },
+    {
+      "path": "barcode_minimum_quality_by_ed.tsv",
+      "bytes": 1295,
+      "sha256": "c26d07cfdd279cb84e08f8f4c5facc23b4cafd4b825d22193ddc97ac4277c1f1"
+    },
+    {
+      "path": "barcode_quality_by_ed.tsv",
+      "bytes": 4226,
+      "sha256": "84d189b00d6bdc0922ae5c916668238de545ff681fcfa129297e69dea2b67406"
+    },
+    {
+      "path": "first20_barcode_windows.tsv",
+      "bytes": 2693,
+      "sha256": "c3a4c72d38640a8bb297d7bfe348952f481541174711630f5f8ab83b19e084e4"
+    },
+    {
+      "path": "full_quality_summary.tsv",
+      "bytes": 2725,
+      "sha256": "4c94b8975dcfc61d754bcc62654ffec1efb0977a8f820041ecaeb301854cd42f"
+    }
+  ],
+  "quality_regenerated": false,
+  "blaze_rerun": false,
+  "limitation": "Read IDs are hashed in order; global read-ID uniqueness is not re-audited. Existing BLAZE F1 is joined separately."
+}

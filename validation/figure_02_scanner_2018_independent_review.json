@@ -1,0 +1,89 @@
+{
+  "status": "passed scoped independent code review and synthetic edge fixtures",
+  "completed_utc": "2026-10-24T14:54:09.362264+00:00",
+  "reviewed_sources": {
+    "scripts/figure_02/summarize_full_barcode_quality_2018.py": "42b4aac31e98ee426a04bb1530ee377104077f69896cc49d5dacc92b5ca76836",
+    "scripts/figure_02/barcode_locator.py": "0ead90df058cfd940befd3a0b7a659d9f030f01fc382863dcd7e67e583f0fb68",
+    "scripts/figure_02/validate_full_barcode_quality_2018.py": "31903c288da82307c233df88d6b0ede29b0dd586dfcaa74a365b1081a5b23b89"
+  },
+  "original_generator": {
+    "path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/LongBench_comps/ScTagger_quality_sweep_20260731/code/original_quality_generation/generate_truth_conditioned_qscores.py",
+    "sha256": "3efcd5b677bc65b3eebcfb9ed48432829b3c3a5cbb2521807e24f85cd57c834d",
+    "all_three_locator_function_ASTs_identical": true
+  },
+  "model": {
+    "path": "source_data/figure_02/models/nanopore2018.gz",
+    "sha256": "6f60b7db6691bdf5955da54f621776bd7584d6c21b30f7290dff82d7037a0a85",
+    "rows_parsed": 19459,
+    "positive_probability_support_min": 1,
+    "positive_probability_support_max": 28,
+    "selected_shifts_have_no_floor_or_cap_clipping": true
+  },
+  "scanner_review": [
+    "whole FASTQ stored quality support checked before one exact inverse subtraction",
+    "stored and recovered-native stream hashes computed separately",
+    "bounded two-times-worker pending queue and complete gzip EOF/CRC",
+    "identical locator and fixed 16-base ED0/ED>0 classification",
+    "unlocated reads excluded from both groups",
+    "integer per-base Q histograms transformed before averaging"
+  ],
+  "validator_review": [
+    "exact stored p01 quality and header-sequence hashes from independently pinned original invariants",
+    "original generation/model/minimum-histogram SHA pins",
+    "full read/base/ED/orientation conservation and exact original native minimum-Q histogram",
+    "six-decimal pooled means compared with 5.00001e-7 tolerance",
+    "all twelve group means recomputed from integer histograms",
+    "eleven BLAZE condition identities and arithmetic checked; native metrics blank",
+    "recovered-native digest correctly labelled newly computed, not independently preserved"
+  ],
+  "fixture": {
+    "records": 4,
+    "correct_ED0": 2,
+    "error_ED1": 1,
+    "unlocated": 1,
+    "native_ED0_mean": 15.34375,
+    "native_ED1_mean": 20,
+    "conditions": 12,
+    "cases": [
+      {
+        "input_shift": 1,
+        "workers": 1,
+        "stored_quality_sha256": "e04e5c506d19127c15960fcb4d860c68e8616c28b38b14d70dac4f082e8abee2",
+        "recovered_native_quality_sha256": "36d190311b8a294db5cf829b34b0cca0a68a4bed3cf57413e39d15e99fd96da4",
+        "passed": true
+      },
+      {
+        "input_shift": 1,
+        "workers": 2,
+        "stored_quality_sha256": "e04e5c506d19127c15960fcb4d860c68e8616c28b38b14d70dac4f082e8abee2",
+        "recovered_native_quality_sha256": "36d190311b8a294db5cf829b34b0cca0a68a4bed3cf57413e39d15e99fd96da4",
+        "passed": true
+      },
+      {
+        "input_shift": 13,
+        "workers": 2,
+        "stored_quality_sha256": "e4b479b467bb201fbc2c3e0ecef8206ea12e6e560cb2c0925efcbd10d26e2cd8",
+        "recovered_native_quality_sha256": "36d190311b8a294db5cf829b34b0cca0a68a4bed3cf57413e39d15e99fd96da4",
+        "passed": true
+      }
+    ],
+    "all_five_TSVs_identical_across_input_shift_and_worker_count": true,
+    "rejections": [
+      {
+        "case": "below_support_unlocated",
+        "exit_code": 1,
+        "rejected_before_publication": true
+      },
+      {
+        "case": "above_support_nonbarcode",
+        "exit_code": 1,
+        "rejected_before_publication": true
+      }
+    ]
+  },
+  "fixture_script": {
+    "path": "/tmp/review_full2018_edges.py",
+    "sha256": "fc06c6a6b6ddce5a2f92a84b47e863a5bebe1dc061db59903779a9fad8f69ae0"
+  },
+  "scope": "Read-only review of producing files; tiny designed fixture only. Full 4,993,805-read job and its selected-data validation are separate."
+}
