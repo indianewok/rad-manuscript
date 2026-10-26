@@ -1,93 +1,29 @@
-# Current manuscript evidence: Figures 1, 2 and 4
+# Computational efficiency, synthetic benchmarks, and barcode discovery
 
-These replacement passages describe the selected current analyses. They are a
-review draft, not a claim that the complete manuscript or its statistical artwork
-has been finalized. The machine-readable [claim registry](../manifests/results_claims.tsv)
-contains selected numerical claims with their exact table keys and hashes. Existing inferential
-tests and annotations are preserved separately.
+These passages describe the analyses for Figures 1, 2, and 4. Numerical results are linked to their source tables in the [results registry](../manifests/results_claims.tsv).
 
 ## Computational efficiency
 
-Computational efficiency was assessed using complete LongBench single-nucleus
-ONT and single-cell PacBio inputs with 119,016,231 and 195,242,483 reads,
-respectively. RAD 1.0.2 (4acbe00), BLAZE 2.5.0 (11994f9), and Flexiplex 1.02.6
-(d84c8ae) were run at 4, 16 and 64 tool threads, with three computational
-repetitions per condition on AMD EPYC 7543 nodes. Each demultiplexing run used
-the whitelist selected in its corresponding discovery phase. At 16 threads,
-mean total wall times were 1.75, 7.24 and 9.08 hours for RAD, BLAZE and Flexiplex
-on SN-ONT, and 1.49, 3.04 and 2.01 hours on SC-PB. Total time is the sum of
-the two phases within each repetition. Peak process memory is the larger GNU-time
-maximum resident set size, converted from KiB to decimal GB. These are repeated
-computational runs on the same inputs.
+Computational efficiency was assessed using complete LongBench single-nucleus ONT and single-cell PacBio inputs with 119,016,231 and 195,242,483 reads, respectively. RAD 1.0.2 (`4acbe00`), BLAZE 2.5.0 (`11994f9`), and Flexiplex 1.02.6 (`d84c8ae`) were run with 4, 16, and 64 tool threads, with three repetitions per condition on AMD EPYC 7543 nodes. Each demultiplexing run used the whitelist selected in its corresponding discovery phase. Total wall time was the sum of the two phases within each repetition. Peak process memory was the larger GNU-time maximum resident set size, converted from KiB to decimal GB. Means and sample standard deviations were calculated across repetitions.
 
-[Figure 1 source and commands](figure_01.md) provide the complete identities,
-resource definitions and phase-specific parameters. The two recovered HD count
-sources describe different stages: whitelist detection and demultiplexing. The
-selected detection totals match the original valid-pair tables exactly across all
-four flow cells. The complete 419×419 grid and 123,658-bin tissue mask are also
-recovered and independently matched to the saved Space Ranger barcode sets. The
-selected Seurat `nCount_Spatial` values and full barcode-to-bin creation provenance
-remain unresolved, so a shared-scale spatial triptych is not yet supported. Coordinates
-for that analysis represent **16 µm bins**, not individual cells. The Space Ranger
-workflow derives from converted Nanopore reads, not an independent Illumina input.
+At 16 threads, mean total wall times were 1.75, 7.24, and 9.08 hours for RAD, BLAZE, and Flexiplex on SN-ONT, and 1.49, 3.04, and 2.01 hours on SC-PB. The [Figure 1 guide](figure_01.md) provides the phase-specific commands and software identities.
+
+The Visium HD analysis used 16 µm bins. Whitelist-detection totals matched the original valid-pair tables across all four flow cells. The 419 × 419 grid and its 123,658-bin tissue mask matched the saved Space Ranger barcode sets. Space Ranger processed converted Nanopore reads. Reconstruction of the shared-scale spatial comparison requires the original Seurat `nCount_Spatial` values and barcode-to-bin creation workflow, as listed in the Figure 1 guide.
 
 ## Synthetic barcode discovery and assignment
 
-The ScTagger large input contains 4,993,805 reads from 5,000 known source barcodes;
-the small input contains 98,873 reads from 50 source barcodes. The selected
-quality experiments preserve original read identifiers, nucleotide sequences
-and error patterns. Complete input checks confirmed those identities. Discovery
-performance is calculated by exact selected-set comparison to the known source
-set, and is distinct from read-assignment correctness.
+ScTagger-L contained 4,993,805 reads from 5,000 known source barcodes; ScTagger-S contained 98,873 reads from 50 source barcodes. Quality experiments retained read identifiers, nucleotide sequences, and error patterns across conditions. Badread Nanopore2018 and Nanopore2023 models supplied background quality scores across each read. Scores in a located barcode were sampled conditional on local matches and errors against its known source sequence. Each sweep condition added a fixed Phred-score offset to every base and clipped the result to Q1–Q50. The native Nanopore2023 condition retained the original generated scores. The recorded seed and model pathname jointly determine the effective sampling seed; the [Figure 2 guide](figure_02.md) links the exact generation contract.
 
-The primary assignment comparison retains the tool-specific selected inputs:
-RAD 24d5ce4 with the complete 5,000-source-barcode set as both global and custom
-list; Flexiplex 1.02.6 with the diagnostic pre-correction field and its own
-3,004-target list; and the BLAZE 2.6.0a0 matching-function replay on the native
-nanopore2023 extraction with its 5,015 selected targets. RAD and Flexiplex retain
-the uniform-Phred-20 sequence-identical inputs because these procedures do not
-use base quality. This is not a claim that the three assignments used an identical
-selected whitelist or were all rerun from raw reads in this revision.
+Barcode discovery was scored by comparison of the selected barcode set with the known source set. Precision was the fraction of selected barcodes present in the source set, recall was the fraction of source barcodes selected, and F1 was the harmonic mean of precision and recall.
 
-Each physical read belongs to one of six mutually exclusive states:
-native-correct, corrected-correct, native-incorrect, corrected-incorrect,
-multiple-output excluded, or unassigned. The state counts sum to the complete
-input for each tool. RAD excludes every identifier with multiple emitted records;
-Flexiplex collapses repeated identical-target assignments and excludes conflicting
-targets. Missing unselected source barcodes remain blank in the per-target
-comparison; selected targets with no reads in a category have zero. Correction-only
-fractions exclude native assignments. These definitions and all counts are
-inspectable in the [Figure 2 walkthrough](figure_02.md).
+Read assignment used RAD `24d5ce4` with all 5,000 source barcodes supplied as both global and custom lists; diagnostic Flexiplex 1.02.6 with its 3,004 selected targets; and the BLAZE 2.6.0a0 matching-function replay on native Nanopore2023 extractions with 5,015 selected targets. RAD and Flexiplex used the sequence-identical uniform-Q20 input. Flexiplex’s diagnostic field recorded the raw barcode before correction.
 
-The selected quality-generation seed contract includes the literal model-path
-strings. A future pathname-independent generator would create a new experiment;
-it has not silently replaced these selected data.
+Each original read was classified as native-correct, corrected-correct, native-incorrect, corrected-incorrect, multiple-output excluded, or unassigned. RAD excluded identifiers with multiple emitted records. Flexiplex collapsed repeated assignments to the same target and excluded conflicting-target assignments. BLAZE provided one outcome per original identifier. Each tool’s state counts summed to the complete input. Per-target tables represented unselected source barcodes as blank and selected targets with no reads in a category as zero. Correction-only fractions used the sum of correct and incorrect corrected assignments as their denominator. Source tables, counting rules, and numerical checks are provided in the Figure 2 guide.
 
-## Barcode discovery across 37 inputs
+## Barcode discovery across modalities
 
-The comparison includes all 37 benchmark inputs and all three tools, yielding
-111 observations. ScMixology2 retains a native RAD callset and explicitly
-reconstructed BLAZE/Flexiplex counts and filter replays. Separate technical runs remain distinct benchmark entries,
-with their shared library/donor context retained; the 37 inputs are not asserted
-to be 37 independent biological replicates. Exact known barcodes define simulation
-truth. Matched short-read filtered barcodes and published spatial masks are
-operational positive references for biological inputs, not exhaustive biological
-negative truth.
+The comparison included 37 benchmark inputs and three tools, yielding 111 observations. Input identifiers retained the relationships among donors, libraries, and technical sequencing runs. ScMixology2 combined a native RAD callset with BLAZE and Flexiplex selector replays on retained count tables. Known source barcodes defined the synthetic references; matched filtered short-read barcodes and published spatial masks defined the biological reference sets.
 
-The RAGE-seq lymph-node positive reference contains 5,978 annotated
-adaptive-immune-containing barcodes: 4,255 T cells, 1,637 B cells and 86 T/B
-doublets. Epithelial and numeric/unannotated entries are not counted as positives.
-Consequently, a call outside this positive reference is an operational false
-positive, not proof of an empty or nonimmune biological source.
+The RAGE-seq lymph-node reference comprised 5,978 barcodes annotated as containing adaptive immune cells: 4,255 T-cell barcodes, 1,637 B-cell barcodes, and 86 T/B-doublet barcodes. Reference selection required membership in the deposited short-read list and the corresponding annotation label. Barcode calls outside this set contributed to the false-positive count under that reference definition.
 
-Using the retained precision/recall/F1 definitions, RAD, BLAZE and Flexiplex have
-F1 greater than 0.90 on **26, 19 and 17** of the 37 inputs, respectively. The
-current rebuttal should therefore use **17**, not 18, for this Flexiplex statement.
-This is a numerical source correction, not a new statistical test. The plotted
-read count, GC percentage and average-quality summaries describe each actual
-long-read input. They are retained SeqKit summaries; their original complete
-invocation/version has not been recovered.
-
-Per-input versions, parameter differences, exact source lists where recovered,
-and paired observations are linked from [Figure 4](figure_04.md). No new paired
-test or multiplicity correction is proposed in this revision.
+RAD, BLAZE, and Flexiplex achieved F1 scores above 0.90 on 26, 19, and 17 of the 37 inputs, respectively. Read count, GC percentage, and average-quality summaries described the corresponding long-read inputs using retained SeqKit results. The [Figure 4 guide](figure_04.md) provides per-input software settings, barcode sets, paired observations, and commands for recalculating the metrics.

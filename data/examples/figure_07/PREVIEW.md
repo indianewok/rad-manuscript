@@ -1,10 +1,10 @@
-# Figure 07 — actual bounded source-data preview
+# Figure 7 — source-data examples
 
-These are real excerpts from the public cell-line experiment, not synthetic data. They illustrate data structure and named transformations; they do not reproduce a whole figure from the excerpt alone. [Source hashes, exact paths and selection](extraction.json) and the [walkthrough](../../../docs/figure_07.md) give the full scope.
+The tables below show selected RAD assignments, molecule counts and differential-expression results from LongBench single nuclei. [Extraction details](extraction.json) record source paths, hashes and selected rows. The [Figure 7 guide](../../../docs/figure_07.md) gives the complete analysis.
 
-## C2: recovered emitted RAD assignment rows
+## Emitted RAD assignments
 
-These are the first ten actual rows of the fully hash-validated selected assignment checkpoint. [Extraction/source receipt](assignment_extraction.json). The original extractor stripped orientation and `-CT` suffixes; no gene ID or segment boundary is present. These rows are assignments, not unique physical reads or deduplicated molecules. The complete source has57,885,606rows; all12,423selected cells are represented.
+These are the first ten rows of the RAD assignment checkpoint. The complete ledger contains 57,885,606 assignments across all 12,423 selected cells. The extractor normalizes orientation and `-CT` suffixes to retain original read IDs alongside barcodes, UMIs and correction flags. [Extraction details](assignment_extraction.json) record source hashes and row selection.
 
 | source_data_row | original_read_id | cell_barcode | UMI | raw_barcode | corrected_flag |
 |---|---|---|---|---|---|
@@ -19,9 +19,9 @@ These are the first ten actual rows of the fully hash-validated selected assignm
 | 9 | 19f0d679-bd5d-43c7-bd09-744626f8f415 | TGACTCCCAGCGTATT | CCATGCCCAGAG | TGACTCCCAGCGTATT | 0 |
 | 10 | 2e57d915-82ad-465d-bf57-a6fb172b144e | GCTGCAGCAATCTGCA | GAGTGTTTACGC | GCTGCAGCAATCTGCA | 0 |
 
-## C3: actual native RAD matrix entries and complete-cell normalization
+## Molecule counts and normalization
 
-Indices are 1-based. Molecule denominators were calculated from the complete source matrix, not this excerpt.
+Matrix indices are one-based. Normalization uses each nucleus's complete molecule count from the source matrix.
 
 | source_entry | gene_symbol | cell_barcode | molecule_count | full_cell_library_molecules | CP10K | log2_1_plus_CP10K |
 |---|---|---|---|---|---|---|
@@ -34,9 +34,9 @@ Indices are 1-based. Molecule denominators were calculated from the complete sou
 | 7 | TTLL5 | CAACCAAGTGTTAAAG | 1 | 1465 | 6.825938566552901 | 2.9682637851585456 |
 | 8 | RPL7P9 | ATACCTTGTACTAACC | 2 | 1238 | 16.15508885298869 | 4.100564693090373 |
 
-## C5: real direct-contrast rows
+## Differential-expression results
 
-BH values below were calculated using all 8,135 genes per tool/reference, not these three genes. Positive fold change means H146-high.
+Benjamini–Hochberg adjusted P values use all 8,135 genes in each workflow and the reference. Positive fold change indicates higher expression in H146.
 
 | gene_symbol | tool | tool_log2FC | tool_p_value | tool_BH_FDR_common | Illumina_log2FC | Illumina_BH_FDR_common |
 |---|---|---|---|---|---|---|

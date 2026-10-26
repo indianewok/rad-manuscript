@@ -1,3 +1,7 @@
-# Figure 2 actual data examples
+# Figure 2 data examples
 
-Walk through [Figure 2](../../../docs/figure_02.md). [provenance.json](provenance.json) records original full-source SHA256, selected row/record numbers, and each excerpt hash; [schema.json](schema.json) describes columns and units. These are actual bounded input excerpts or complete small public synthetic callsets, not invented data. Full scientific results use the complete tables under [source_data](../../../source_data/figure_02/). Controlled raw reads are not included.
+These source records illustrate the calculations in the [Figure 2 guide](../../../docs/figure_02.md).
+The [schema](schema.json) describes their columns and units. The
+[source record](provenance.json) gives the full-file SHA-256 hashes, selected
+row or record numbers, and excerpt hashes. Complete result tables are in
+[source_data/figure_02](../../../source_data/figure_02/).

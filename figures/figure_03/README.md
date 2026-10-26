@@ -1,17 +1,28 @@
-# Figure 3 selected current analysis
+# Figure 3: off-list assignments and barcode correction
 
-Start with the [data-first walkthrough](../../docs/figure_03.md): exact versions and parameters, actual raw/assignment excerpts, small counting scripts, observed outputs and links to every plotted source table.
+![Figure 3](./prism/figure_03.png)
 
-The three off-list datasets use strict physical-read counts. All nine current RAGE matched raw producer/count validations passed, and ScTagger and LongBench retained assignments have been fully recounted. B displays strict assigned reads divided by every physical input read; a raw-total companion is retained. Correction panels use unique original-read–target pairs and the selected all-record RAD4acbe00 plus native competitor checkpoints.
+This image reproduces the saved Prism layout. Panel B shows total read counts;
+the source tables below contain the updated assignment fractions and RAGE-seq
+rerun counts.
 
-These PDF/SVG/PNG files are scripted data proofs. Existing statistical test and annotation choices remain unchanged. Native Prism recalculation/export and inspection of final annotated artwork remain pending; [current cell-update instructions](../../validation/figure_3_native_table_updates.tsv) contain only table identities and selected current values.
+The [Figure 3 guide](../../docs/figure_03.md) describes the datasets, software,
+counting rules and calculations. The [source tables](../../source_data/figure_03/)
+contain the assignment fractions, per-target counts and correction categories.
 
-From the repository root:
+The off-list challenge counts physical reads with exactly one assignment row.
+Assignment fractions use all physical input reads as the denominator. The
+LongBench correction analysis counts unique original-read–target-barcode pairs
+and summarizes them by target barcode.
+
+Validate the source tables from the repository root:
+
+```bash
+python3 scripts/revision/figure_3.py validate
+```
+
+Rebuild them from the retained project checkpoints:
 
 ```bash
 python3 scripts/revision/figure_3.py build --project-root /path/to/reviewer_comment_data
-python3 scripts/revision/figure_3.py validate
-python3 scripts/revision/figure_3.py render
 ```
-
-The renderer uses only [deposited source data](../../source_data/figure_03/). Full input and assignment ledgers are large current checkpoints, excluded from Git. Complete D–G source-bearing assignment streams are still required to reconstruct full pair-overlap ledgers; marginal tables cannot supply these intersections.

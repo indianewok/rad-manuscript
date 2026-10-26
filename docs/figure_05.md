@@ -1,38 +1,33 @@
-# Figure 5 — follow the receptor and LR-Split-seq data
+# Figure 5 — receptor recovery and LR-Split-seq
 
-**Versions and parameters come first.** These are recovered candidate receptor producers; their binding to the selected Figure 5 artwork is still unresolved. The selected LR-Split-seq RAD ED2 and component-polyT producers, all 568 physical-cell pairs and current per-cell UMIs are now recovered. Full flags, evidence paths and explicit unknowns are in the [parameter registry](../manifests/figures_567_tool_parameters.tsv).
+Figure 5 compares recovery of receptor reads from a mixture of Ramos B cells, Jurkat T cells and monocytes, then tests demultiplexing of the three-component LR-Split-seq barcode. The receptor experiment uses RAGE-seq accession **ERR3268991**. The LR-Split-seq comparison pairs long-read **SRR13948564** with short-read **SRR13948565** and follows the same 568 published physical cells through both workflows.
 
-| Producer | Version/build used | Parameters and evidence |
+![Figure 5: saved Prism layout](../figures/figure_05/prism/figure_05.png)
+
+[Export details](../manifests/prism_exports.json) identify the original Prism project and saved layout.
+
+## Software and inputs
+
+The [parameter registry](../manifests/figures_567_tool_parameters.tsv) records complete commands, build identifiers, reference hashes and seeds.
+
+| Analysis | Software and settings | Run records |
 |---|---|---|
-| RAD receptor candidate | Successful producer version/hash **unrecovered** | Intended `-l three_prime -R offensive -M 2 -m 2 -z 10000 -t 32 -w`; saved [execution failure](../source_data/figure_05/provenance/RAD_candidate_producer_failure.txt) says `offensive: command not found`. Candidate counts do not prove this command succeeded. |
-| BLAZE receptor candidate | **2.6.0a0**, executable hash unrecovered | `--expect-cells 4505 --10x-kit-version 3v2 --threads 32 --max-edit-distance 2`; [complete executed command](../source_data/figure_05/provenance/BLAZE_receptor_command.txt). No seed recorded. |
-| Flexiplex receptor candidate | **1.02.5 fallback**, executable hash unrecovered | `-d 10x3v2 -f 8 -p 56 -k selected.tsv`; 3,259 selected barcodes. [Executed wrapper](../source_data/figure_05/provenance/Flexiplex_receptor_producer.sh), [successful execution receipt and input hashes](../source_data/figure_05/provenance/Flexiplex_receptor_execution.md). Discovery used 1.02.6; this receptor run used 1.02.5. |
-| Receptor alignment | minimap2 **2.26-r1175** | `-x map-ont --secondary=no -t 20`; TRUST4 `hg38_bcrtcr.fa`, SHA-256 `615152a7481d0a68557ab0a84b735d8f25fc1ee9d5076af3b8d31aa7792dc3df`. No seed explicitly passed. |
-| Selected LR-Split RAD | **1.0.2**, commit `b6853a3d3d1818130ac364f7937bd0690ae9e385`; executable SHA-256 `a3937d2a11a61a8600b0dc2ef1d2a9eddbafbb8e06289f2fdc2eb04794149079` | `demux --threads 4 --chunk-size 5000 --joint-bc-mode strict --bc-correction-mode defensive --min-read-length 0 --generated-mutation 2 --whitelist-mutation 2`; [executed argv/exit0](../source_data/figure_05/provenance/splitseq/RAD_time.txt), [input/build/layout hashes](../source_data/figure_05/provenance/splitseq/RAD_run_manifest.txt), [layout](../data/figure_05/splitseq_reverse_complemented_whitelist_layout.csv). No seed explicitly passed. |
-| Selected LR-Split component Flexiplex + poly-T | **FLAMES2.7.1**, commit `bf2211a8da1e1c7327370ab12479ae70e1d37cd8`, embedded **Flexiplex1.02.6** | Three separately matched8nt components, barcode ED1/buffer1, flank ED3, UMI10 template, terminal fixed8T included, `reverse_complement=FALSE`,4threads. [Exact Rscript argv/exit0](../source_data/figure_05/provenance/splitseq/component_time.txt), [executed wrapper](../source_data/figure_05/provenance/splitseq/component_runner.R), [manifest](../source_data/figure_05/provenance/splitseq/component_run_manifest.txt), [stdout version](../source_data/figure_05/provenance/splitseq/component_stdout.log). No explicit seed; exact R/Rcpp/Rhtslib versions and compiled shared-object hash unrecovered. |
-| LR-Split catalogs/reference | [96 ligation sequences](../data/figure_05/bc_8nt_v1.csv), [96 RT sequences](../data/figure_05/bc_8nt_v2.csv), paired into48 physical RT wells | [568 selected cells](../data/figure_05/splitseq_cells.tsv). Long-read input SHA-256 `62acb6d466c37ba89632081526410bdc3ef73c0c68d778d40e05f03181f2a4f7`. No BLAZE arm in this selected comparison. |
+| RAD receptor counts | Intended settings: 10x 3′ layout, offensive correction, generated/whitelist edit distance 2, chunk size 10,000, 32 threads. The successful producing run is still needed. | [Retained execution log](../source_data/figure_05/provenance/RAD_candidate_producer_failure.txt) |
+| BLAZE receptor counts | BLAZE 2.6.0a0; 4,505 expected cells, 10x 3v2, 32 threads, edit distance 2 | [Executed command](../source_data/figure_05/provenance/BLAZE_receptor_command.txt) |
+| Flexiplex receptor counts | Flexiplex 1.02.5; 10x3v2, flank edit distance 8, 56 threads, 3,259 selected barcodes. Barcode discovery used 1.02.6. | [Wrapper](../source_data/figure_05/provenance/Flexiplex_receptor_producer.sh), [execution and input hashes](../source_data/figure_05/provenance/Flexiplex_receptor_execution.md) |
+| Receptor alignment | minimap2 2.26-r1175, `-x map-ont --secondary=no -t 20`; TRUST4 human BCR/TCR reference | Reference SHA-256 `615152a7481d0a68557ab0a84b735d8f25fc1ee9d5076af3b8d31aa7792dc3df` |
+| LR-Split-seq RAD | RAD 1.0.2, commit `b6853a3d3d1818130ac364f7937bd0690ae9e385`; strict joint-barcode matching, defensive correction, generated/whitelist edit distance 2, minimum read length 0, chunk size 5,000, four threads | [Command](../source_data/figure_05/provenance/splitseq/RAD_time.txt), [manifest](../source_data/figure_05/provenance/splitseq/RAD_run_manifest.txt), [layout](../data/figure_05/splitseq_reverse_complemented_whitelist_layout.csv) |
+| LR-Split-seq component workflow | FLAMES 2.7.1, commit `bf2211a8da1e1c7327370ab12479ae70e1d37cd8`, embedded Flexiplex 1.02.6; three separately matched 8-nt barcode components, barcode edit distance 1 and buffer 1, flank edit distance 3, 10-nt UMI template, terminal fixed eight-thymidine segment, `reverse_complement=FALSE`, four threads | [Command](../source_data/figure_05/provenance/splitseq/component_time.txt), [R wrapper](../source_data/figure_05/provenance/splitseq/component_runner.R), [manifest](../source_data/figure_05/provenance/splitseq/component_run_manifest.txt), [version log](../source_data/figure_05/provenance/splitseq/component_stdout.log) |
 
-The receptor experiment is public **RAGE-seq ERR3268991**, a Ramos/Jurkat/monocyte mixture. It is not a TNBC sample. The separate LR-Split-seq pair is long-read **SRR13948564** and short-read **SRR13948565**. The previews below contain public benchmark identifiers and small real excerpts, not synthetic examples or controlled donor material.
+The component catalogs contain [96 ligation sequences](../data/figure_05/bc_8nt_v1.csv) and [96 reverse-transcription sequences](../data/figure_05/bc_8nt_v2.csv). The two reverse-transcription primers from each well map to one of 48 physical wells. The long-read input SHA-256 is `62acb6d466c37ba89632081526410bdc3ef73c0c68d778d40e05f03181f2a4f7`.
 
-## 1. Inspect the roots before running anything
+## Receptor-read counts
 
-Open the [GitHub-rendered real-data preview](../data/examples/figure_05/PREVIEW.md), the [six read assignments](../data/examples/figure_05/rad_read_assignments.tsv), [three receptor rows](../data/examples/figure_05/flexiplex_receptor_input.tsv), and [three short-read reference rows](../data/examples/figure_05/splitseq_reference.csv). The [extraction receipt](../data/examples/figure_05/extraction.json) gives each full source path, SHA-256 and selected data-row ordinals. These are bounded excerpts; they do not recreate full read-level receptor assignment.
+Demultiplexer assignments are joined to receptor alignments by original read ID and to cell annotations by barcode. The [Flexiplex join script](../source_data/figure_05/provenance/join_flexiplex_bcrtcr.py) removes ambiguous read assignments, applies the BCR/TCR alignment rule and aggregates counts by barcode. The cell-identity map contains 1,993 Ramos cells, 1,572 Jurkat cells and 20 monocytes; the discovery reference contains 4,505 cells.
 
-The first RAD root row is read `51593f7b-d384-41a3-877c-4d27bfc0c279`, assigned barcode `CGTAGGCGTGGCGAAT`, with `native=0`. That flag describes barcode assignment, not receptor identity. The saved [Flexiplex join code](../source_data/figure_05/provenance/join_flexiplex_bcrtcr.py) joins demultiplexer read assignments to receptor hits, removes ambiguous read assignments, applies its BCR/TCR hit rule, and aggregates by barcode. It is retained as executed source evidence; the large original sidecar/alignment streams are not included in Git.
+Each receptor class has native and corrected-only counts. In the Flexiplex source table, the column named `corrected` contains native plus corrected reads, so the native count is subtracted to obtain corrected-only reads. The RAD and BLAZE source columns already contain corrected-only counts. For Ramos barcode `AAACCTGAGAATCTCC`, Flexiplex BCR counts are 713 native and 1,413 cumulative, giving 700 corrected-only reads and 1,413 assigned reads.
 
-| Root/source columns | Meaning and units | Missing versus zero |
-|---|---|---|
-| `read_id`, `barcode`, `native` | Original read identity, assigned cell barcode, native-assignment indicator 0/1 | `native=0` means corrected assignment; it does not mean no read. |
-| `barcode`, `celltype` | Stable barcode and candidate cell identity | The identity map has 3,585 barcodes: 1,993 Ramos, 1,572 Jurkat, 20 monocytes. It is distinct from the 4,505-cell discovery reference. |
-| `native_bcr/tcr/unmapped` | Counts of uniquely assigned original reads in each class | Zero is a measured count. An absent barcode has not been assigned an invented zero row. |
-| `corrected_bcr/tcr/unmapped` | Flexiplex: cumulative native + corrected; RAD/BLAZE candidates: corrected-only | The same column label has different source semantics; the transformation must state which applies. |
-| `cell_bc`, `sample`, `rnd1/2/3_well` | LR-Split reference ID, sample, combinatorial wells | Cell ID is BC3 + BC2 + `_` + RT well; the two RT barcodes collapse into one well. |
-| `fastq_reads`, `bam_reads` | Short-read counts at the named processing stage | Counts are not interchangeable across stages. |
-| `fastq_umis_uncorrected`, `bam_umis_corrected`, `published_umi_count/gene_count` | Stage-specific molecule/gene counts | These short-read stages do not establish the missing depth-matched Figure 5H checkpoint. |
-
-## 2. Make native and corrected reads exclusive
-
-Run this small transformation from the repository root; Python standard library is sufficient:
+Run this transformation on the [example input](../data/examples/figure_05/flexiplex_receptor_input.tsv):
 
 ```bash
 python3 scripts/figure_05/exclusive_receptor_counts.py \
@@ -41,38 +36,31 @@ python3 scripts/figure_05/exclusive_receptor_counts.py \
   --tool Flexiplex --corrected-column cumulative
 ```
 
-For real Ramos barcode `AAACCTGAGAATCTCC`, the input BCR counts are native **713**, cumulative corrected **1,413**. The output is native **713**, corrected-only **700**, assigned **1,413**. Its TCR values become **10 + 35 = 45**, and unmapped values **340 + 358 = 698**. Compare the [nine expected output rows](../data/examples/figure_05/flexiplex_receptor_output.tsv). Do not add cumulative corrected to native again. RAD/BLAZE candidate tables require `--corrected-column exclusive`.
+The [expected output](../data/examples/figure_05/flexiplex_receptor_output.tsv) contains nine receptor-class rows. Use `--corrected-column exclusive` for the RAD and BLAZE tables. The complete [per-cell table](../source_data/figure_05/candidate_receptor_counts.tsv) and [totals](../source_data/figure_05/candidate_receptor_totals.tsv) retain the source selection labels. Their assigned-read totals are 7,808,411 for RAD, 5,588,936 for BLAZE and 6,595,231 for Flexiplex. [Example records and extraction details](../data/examples/figure_05/PREVIEW.md) connect individual assignments to these tables.
 
-The complete candidate [per-cell source table](../source_data/figure_05/candidate_receptor_counts.tsv) adds `tool`, `receptor`, `native`, `corrected_only`, `assigned` and the explicit candidate-selection label. Counts conserve to these [totals](../source_data/figure_05/candidate_receptor_totals.tsv): RAD 7,808,411; BLAZE 5,588,936; Flexiplex 6,595,231. The plot below verifies those source counts; it is **not a replacement for selected Figure 5 artwork or its statistics**.
+## Map LR-Split-seq records to physical cells
 
-![Candidate receptor counts, source verification](../figures/figure_05/candidate_receptor_count_verification.png)
+The [cell list](../data/figure_05/splitseq_cells.tsv) identifies all 568 published cells. Each cell is defined by its round-3 barcode, round-2 barcode and reverse-transcription well. The published ID concatenates round 3 and round 2, followed by `_` and a zero-based row-major well index: A1 = 0, B11 = 22 and D12 = 47. The [primer map](../data/figure_05/rt_primer_well_map.csv) converts both reverse-transcription primer variants from a well to its T-primer sequence.
 
-## 3. Follow the selected LR-Split-seq identifiers
-
-Open the [actual native records and cell IDs](../data/examples/figure_05/splitseq/PREVIEW.md), [native component statistics](../data/examples/figure_05/splitseq/component_native_stats.tsv), [normalized assignments](../data/examples/figure_05/splitseq/component_assignments.tsv), [RAD assignments](../data/examples/figure_05/splitseq/rad_assignments.tsv) and [row-lineage receipt](../data/examples/figure_05/splitseq/extraction.json). These are eight actual records per tool for the first two selected physical cells. Their bounded counts are examples, not the full per-cell totals.
-
-| Field | Transformation and units |
+| Source field | Conversion |
 |---|---|
-| Native `Read`, `BC1`, `BC2`, `BC3`, `UB`, `FlankEditDist` | `read_id=Read`; assignment barcode is `BC3_BC2_BC1`; `umi=reverse_complement(UB)`; flank distance is copied. No new sequence inference is performed. |
-| RAD `normalized_barcode`, `umi`, `read_id` | Read the saved normalized assignment fields. Every original read ID belongs to accession SRR13948564. |
-| Canonical physical-cell barcode | RT T-primer sequence, round2 ligation, round3 ligation, separated by `_`. Both RT primer variants from one well map to that well's T primer using the [96-to48 map](../data/figure_05/rt_primer_well_map.csv). |
-| Published cell ID | Round3 + round2 + `_` + zero-based row-major RT well index: A1=0, B11=22, D12=47. The retained BAM barcode instead joins round3, round2, RT sequence. |
-| `prism_row_1based`, `sample` | Original saved row and annotation. All568 explicit cell IDs were checked against the keyed native source; no pairing was inferred from numerical similarity. |
-| `rad_reads`, `component_polyt_reads` | Distinct original read IDs **within each physical cell**, requiring nonempty barcode and UMI. Summing cells counts read–cell pairs, so a read assigned to two cells contributes twice. |
-| `rad_umis`, `component_polyt_umis` | Distinct exact UMI strings within each physical cell. The executed inclusion rule is nonempty UMI, not necessarily length10; no error correction or depth matching is added. |
+| Component `Read` | Original `read_id` |
+| Component `BC1`, `BC2`, `BC3` | Assignment barcode `BC3_BC2_BC1` |
+| Component `UB` | UMI = reverse complement of `UB` |
+| Component `FlankEditDist` | Retained flank distance |
+| RAD `normalized_barcode`, `umi`, `read_id` | Saved normalized assignments |
+| `prism_row_1based`, `sample` | Original Prism row and published sample annotation |
 
-First normalize the real component excerpt and compare it with its retained normalized records:
+Records with a nonempty barcode and UMI contribute to the comparison. Reads are counted as distinct original read IDs within each physical cell; molecules are counted as distinct exact UMI strings within each cell. Thus, summed read counts represent read–cell pairs. UMI inclusion uses the saved nonempty-string rule.
+
+Normalize the [component example records](../data/examples/figure_05/splitseq/component_native_stats.tsv), then aggregate them by cell:
 
 ```bash
 python3 scripts/figure_05/normalize_component_stats.py \
   --input data/examples/figure_05/splitseq/component_native_stats.tsv \
   --output /tmp/figure05_component_assignments.tsv
 cmp /tmp/figure05_component_assignments.tsv data/examples/figure_05/splitseq/component_assignments.tsv
-```
 
-Then count the bounded records by physical cell:
-
-```bash
 python3 scripts/figure_05/aggregate_splitseq.py \
   --assignments /tmp/figure05_component_assignments.tsv \
   --cells data/examples/figure_05/splitseq/cells.tsv \
@@ -80,47 +68,35 @@ python3 scripts/figure_05/aggregate_splitseq.py \
   --output /tmp/figure05_component_cells.tsv --report /tmp/figure05_component_cells.json
 ```
 
-Compare the [expected bounded counts](../data/examples/figure_05/splitseq/component_bounded_counts.tsv). Use `--format rad` and the excerpt's `rad_assignments.tsv` for RAD; its [bounded result](../data/examples/figure_05/splitseq/rad_bounded_counts.tsv) is also deposited. The full [568-cell table](../source_data/figure_05/splitseq_reads_umis_568.tsv) retains original row identities and only the two selected current arms.
+The [expected component counts](../data/examples/figure_05/splitseq/component_bounded_counts.tsv) and [RAD counts](../data/examples/figure_05/splitseq/rad_bounded_counts.tsv) cover the example records. For RAD, use `--format rad` and its [assignment file](../data/examples/figure_05/splitseq/rad_assignments.tsv). The [record preview](../data/examples/figure_05/splitseq/PREVIEW.md) and [extraction receipt](../data/examples/figure_05/splitseq/extraction.json) preserve the original source rows.
 
-## 4. Recount the complete saved assignments
+## Reproduce the complete comparison
 
-The three current compressed checkpoints are supplied separately from Git, indexed by [path, bytes and SHA-256](../manifests/figure_05_staged_checkpoints.tsv). Stage the Figure 5 checkpoint archive at the repository root, following the [release guide](release_review.md), then run:
+Restore the three compressed checkpoints listed in the [checkpoint manifest](../manifests/figure_05_staged_checkpoints.tsv) using the [data-package instructions](release_review.md), then run:
 
 ```bash
 python3 scripts/figure_05/replay_splitseq.py --root .
 ```
 
-This calls the same small aggregation script on the complete RAD and component ledgers and verifies every read/UMI count against the selected table. The [2,272-integer validation](../validation/figure_05_splitseq_counts.json), [RAD receipt](../validation/figure_05_rad_aggregation.json) and [component receipt](../validation/figure_05_component_aggregation.json) record all inputs and counts. It is a saved-assignment replay, not a new demultiplexer run.
+This recounts the complete RAD and component assignment ledgers and compares every read and UMI count with the [568-cell source table](../source_data/figure_05/splitseq_reads_umis_568.tsv). All 2,272 counts match. The [validation report](../validation/figure_05_splitseq_counts.json), [RAD aggregation](../validation/figure_05_rad_aggregation.json) and [component aggregation](../validation/figure_05_component_aggregation.json) record the inputs and results.
 
-| Selected quantity | RAD ED2 | Component Flexiplex + poly-T |
+| Quantity | RAD ED2 | Component Flexiplex + poly-T |
 |---|---:|---:|
-| Full-input assignment rows |2,536,299|1,345,255|
-| Distinct original reads across full input |2,498,488|1,338,285|
-| Distinct original reads /5,764,421 input reads |43.34%|23.22%|
-| Read–cell pairs across568 published cells |2,078,171|1,156,252|
-| Globally distinct reads among those568 cells |2,063,573|1,152,260|
-| Median reads per published cell |1,979.5|1,102.5|
-| Exact cell–UMI pairs |1,891,704|1,050,292|
-| Median UMIs per published cell |1,866|1,042|
+| Full-input assignment rows | 2,536,299 | 1,345,255 |
+| Distinct original reads across the full input | 2,498,488 | 1,338,285 |
+| Fraction of 5,764,421 input reads | 43.34% | 23.22% |
+| Read–cell pairs across 568 published cells | 2,078,171 | 1,156,252 |
+| Distinct reads among those cells | 2,063,573 | 1,152,260 |
+| Median reads per cell | 1,979.5 | 1,102.5 |
+| Exact cell–UMI pairs | 1,891,704 | 1,050,292 |
+| Median UMIs per cell | 1,866 | 1,042 |
 
-The [summary table](../source_data/figure_05/splitseq_summary.tsv) gives exact numerators and unrounded percentages. The previously displayed component value23.35% does not follow either recovered numerator: distinct reads give23.22%; assignment rows give23.34%. This discrepancy is recorded for artwork review without silently changing the existing annotation. Per-cell read–cell totals remain the paired comparison and must not be described as globally unique read counts.
+The [summary table](../source_data/figure_05/splitseq_summary.tsv) retains exact numerators and denominators. The component workflow's full-input fraction is 23.22% for distinct reads and 23.34% for assignment rows; the earlier 23.35% annotation requires correction.
 
-The saved native [paired t-test](../source_data/figure_05/splitseq_saved_paired_t_test.json) is explicitly two-sided, with568pairs, t=14.959474687143327, df=567 and P=6.890554214980993e-43. The [independent native archive check](../validation/figure_05_native_stat_review.json) verifies the selected dataset/graph links and recomputes the same statistic within floating-point rounding. This resolves the signed-rank wording for this LR-Split read comparison. It does not establish the test for receptor panels A–F or certify the final exported graph. No new test or inferential annotation was selected.
+The saved read-count comparison uses a [two-sided paired t-test](../source_data/figure_05/splitseq_saved_paired_t_test.json): 568 cell pairs, t = 14.959474687143327, df = 567 and P = 6.890554214980993e-43. The [independent check](../validation/figure_05_native_stat_review.json) reproduces the statistic and verifies the paired datasets.
 
-## 5. Redraw the source proof and retain the Figure 5H boundary
+To extract the examples again, run `python3 scripts/figure_05/extract_splitseq_examples.py`. The [source manifest](../manifests/figure_05_splitseq_sources.tsv) provides original paths and hashes.
 
-```bash
-python3 scripts/figure_05/render_candidate_counts.py \
-  --input source_data/figure_05/candidate_receptor_totals.tsv \
-  --splitseq-input source_data/figure_05/splitseq_reads_umis_568.tsv \
-  --splitseq-summary source_data/figure_05/splitseq_summary.tsv \
-  --output-dir /tmp/figure05_proofs
-```
+## Additional source records
 
-![Selected Split-seq counts and explicitly paired cells](../figures/figure_05/splitseq_selected_read_verification.png)
-
-This proof uses the selected current count tables and preserves sample annotations; it contains no replacement significance stars. Native panel lettering, final export and annotation appearance still need artwork QA.
-
-Current RAD ED2/component-polyT **per-cell UMI counts are recovered**. Figure 5H additionally needs the exact short-read depth-matched checkpoint or sampling rule/seed and its intended panel binding. The available complete short-read FASTQ/BAM summaries are different stages, and the retained prior UMI intersection used RAD ED1. Neither is substituted. No new sampling rule, UMI intersection or Figure 5H plot is generated.
-
-To re-extract the deposited bounded examples from staged checkpoints, run `python3 scripts/figure_05/extract_splitseq_examples.py`. Original selected source paths and hashes are in the [source manifest](../manifests/figure_05_splitseq_sources.tsv); the [recovery handback](../validation/figure_05_handback.md) records upload provenance, executed commands and remaining dependencies.
+Complete reconstruction of the receptor panels requires the successful RAD producing run and the mapping between the retained receptor tables and the plotted datasets. The long-read/short-read UMI comparison also requires its depth-matched short-read checkpoint or the sampling rule and seed. The complete short-read FASTQ/BAM summaries and the older RAD ED1 UMI intersection are retained as separate processing stages.

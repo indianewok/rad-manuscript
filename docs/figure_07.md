@@ -1,43 +1,55 @@
-# Figure 7 — emitted segments, molecules, differential expression and recovery
+# Figure 7 — differential expression in LongBench single nuclei
 
-**Versions and parameters. Current Figure 7 contains A–D; panel E was removed by the author on 2026-10-23.** The [parameter registry](../manifests/figures_567_tool_parameters.tsv) records exact full argv, source hashes, references and unknowns.
+Figure 7 compares differential expression between H146 and H526 nuclei with the matched Illumina reference. It follows each workflow from barcode and UMI assignments to molecule counts, gene-level tests and recovery of reference-supported expression differences. The analysis uses **8,135 genes** eligible in all four platforms and retains all emitted RAD concatemer segments.
 
-| Producer | Exact selected version/build | Parameters and evidence |
+![Figure 7: saved Prism layout](../figures/figure_07/prism/figure_07.png)
+
+The image is the saved Prism layout; panels A and C retain the earlier analysis. The source tables and methods below describe the updated 8,135-gene analysis. [Export details](../manifests/prism_exports.json) identify the original project and layout.
+
+## Software and parameters
+
+The [parameter registry](../manifests/figures_567_tool_parameters.tsv) contains complete commands, binary hashes and reference identities.
+
+| Stage | Software and settings | Source record |
 |---|---|---|
-| RAD | **1.0.2 @ 4acbe004ba11b150d6832395452632f367a6e6c1**; binary SHA-256 **01ae4700f329593487e1b0a3528da009d7e47c82bf213a5f53ba98acad6fda0e** | 10x 3v3.1; offensive correction, whitelist/generated mutations 2/2, minimum read length 85, chunk 5,000, 60 RAD + 4 pigz threads; all emitted records including concatemer `-CT` segments. [Receipt/layout/whitelist hashes](../source_data/figure_07/provenance/RAD_run_metadata.txt), [exact argv](../source_data/figure_07/provenance/RAD_demux_command.txt). |
-| BLAZE | **2.5.0**, immutable executable hash unrecovered | Same native assignment output as Figure 6: `--force-cells 10000 --threads 48 --minimal_stdout`; actual 10,001 selected; kit 3v3 default, `PYTHONHASHSEED=UNSET`. [Producer](../source_data/figure_06/provenance/BLAZE_run_metadata.txt), [matrix assignment extraction argv](../source_data/figure_07/provenance/extract_BLAZE_command.txt). |
-| Flexiplex | **1.02.6 + d84c8ae4f3865052f2b5ecec816949b94682f302 audit build**; binary SHA-256 **38dccd37f1747e5105b62eacde572b7e4c5206fb925dc1fdbe8210ffe8b1e8c4** | `-d 10x3v3 -f 8 -e 2 -k SELECTED -p 16`; 12,101 selected; July 31 diagnostic sidecar, 74,421,076 assignment rows. `RawCellBarcode` added with matching logic unchanged. [Producer](../source_data/figure_07/provenance/Flexiplex_run_metadata.txt), [extraction argv](../source_data/figure_07/provenance/extract_Flexiplex_command.txt). This is a separate execution from Figure 6's native FASTQ run. |
-| Common raw alignment | **minimap2 2.30-r1287**, SHA-256 **5ef4a631a6318c66d1184007f87bedc55f712c27472d141da4d35e80df82e3cc**; samtools **1.22.1** | `-ax splice --secondary=no --MD -Y`; GENCODE v44 splice index SHA-256 `c10ef7c90bd53ec6b71baa6e572ffedaeb1afa53c16562e224f1ec3cca1b1c2f`; wrapper defaults to 48 alignment threads, actual invocation argument unrecovered; sort 8 threads. No seed explicitly passed. [Selected wrapper](../source_data/figure_07/provenance/align_common_raw.sh). |
-| Direct differential expression | **R 4.5.3, scran 1.34.0, scuttle 1.16.0** | `pairwiseWilcox(direction="any", BPPARAM=SerialParam(...))`; full-cell CP10K, `log2(1+CP10K)`; effect pseudocount 0.1. Native script seed 20260825; common Illumina script no explicit seed. [Native direct producer](../source_data/figure_07/provenance/direct_native_DE_producer.R), [common-universe producer](../source_data/figure_07/provenance/common_gene_DE_producer.R), [session](../source_data/figure_07/provenance/DE_sessionInfo.txt). |
+| RAD assignments | RAD 1.0.2, commit `4acbe004ba11b150d6832395452632f367a6e6c1`; 10x 3v3.1, offensive correction, generated/whitelist edit distance 2, minimum read length 85, chunk size 5,000, 60 RAD and four pigz threads; all emitted records retained | [Run metadata](../source_data/figure_07/provenance/RAD_run_metadata.txt), [command](../source_data/figure_07/provenance/RAD_demux_command.txt) |
+| BLAZE assignments | BLAZE 2.5.0; native output from `--force-cells 10000 --threads 48 --minimal_stdout`, 3v3 default; 10,001 selected barcodes; `PYTHONHASHSEED=UNSET` | [Producer](../source_data/figure_06/provenance/BLAZE_run_metadata.txt), [extraction command](../source_data/figure_07/provenance/extract_BLAZE_command.txt) |
+| Flexiplex assignments | Flexiplex 1.02.6 audit build `d84c8ae4f3865052f2b5ecec816949b94682f302`; `-d 10x3v3 -f 8 -e 2 -k SELECTED -p 16`; 12,101 selected barcodes; diagnostic sidecar with `RawCellBarcode` | [Producer](../source_data/figure_07/provenance/Flexiplex_run_metadata.txt), [extraction command](../source_data/figure_07/provenance/extract_Flexiplex_command.txt) |
+| Common raw-read alignment | minimap2 2.30-r1287, samtools 1.22.1; `-ax splice --secondary=no --MD -Y`; GENCODE v44 splice index; wrapper default 48 alignment threads, eight sort threads | [Alignment wrapper](../source_data/figure_07/provenance/align_common_raw.sh) |
+| Differential expression | R 4.5.3, scran 1.34.0, scuttle 1.16.0; two-sided `pairwiseWilcox` with serial execution; native-script seed 20260825 | [Native producer](../source_data/figure_07/provenance/direct_native_DE_producer.R), [common-gene producer](../source_data/figure_07/provenance/common_gene_DE_producer.R), [session information](../source_data/figure_07/provenance/DE_sessionInfo.txt) |
 
-## 1. Begin with real root records and their limitations
+The Flexiplex audit build adds raw-barcode reporting while preserving barcode-matching logic. Its diagnostic-sidecar execution supplies this expression analysis; the native FASTQ execution supplies the genotype alignment in [Figure 6](figure_06.md).
 
-The public LongBench SN_ONT cell-line mixture starts with original reads. The selected [assignment extractor](../source_data/figure_07/provenance/extract_assignments.py) interprets native tool outputs. RAD emits multiple records from concatemers: each segment inherits the frozen **original-read** gene assignment, then [matrix assembly](../source_data/figure_07/provenance/build_matrices.py) collapses exact `(cell, gene, UMI)` keys. A record without a UMI counts individually. The common [gene assignment rule](../source_data/figure_07/provenance/assign_genes.py) uses primary alignments, MAPQ ≥1, unstranded summed overlap with unmerged exons, and rejects tied genes.
+## Assign genes and count molecules
 
-**C2 emitted assignments have now been recovered.** The selected compressed assignment checkpoint matches its recorded SHA-256 `a5dc369445826fdd36541a301b1b85448438fb52d351ce8883a12ef456457c48`. Its complete stream contains **57,885,606 rows**: 49,555,699 exact-flag rows and 8,329,907 corrected-flag rows, covering all 12,423 selected barcodes; all retained UMIs are 12 bases. Open [ten real rows](../data/examples/figure_07/RAD_emitted_assignment_rows.tsv), their [source/extraction receipt](../data/examples/figure_07/assignment_extraction.json), and the [full per-barcode row counts](../source_data/figure_07/RAD_assignment_rows_by_barcode.tsv). The five source columns are original read ID, cell barcode, UMI, raw barcode and corrected flag. These are emitted assignment rows, not unique physical-read counts or molecules.
+The [assignment extractor](../source_data/figure_07/provenance/extract_assignments.py) reads cell barcodes and UMIs from each tool's output. The common [gene-assignment script](../source_data/figure_07/provenance/assign_genes.py) uses primary alignments with MAPQ ≥1. It sums unstranded overlap with annotated exon records and selects the gene with the greatest overlap; tied best genes and reads without exon overlap are excluded.
 
-The extractor had already removed the orientation and `-CT` suffixes, and this table contains no gene IDs or segment coordinates. It therefore restores barcode/UMI assignments keyed to original reads, **not a complete gene/segment-boundary ledger**. The emitted FASTQ and frozen original-read-to-gene table remain missing at the [bounded searched paths](../validation/figures_567_upstream_path_search.json); their expected hashes are in the [source manifest](../source_data/figure_07/RAD_emitted_segment_source_manifest.tsv). The [assignment validation](../validation/figures_567_assignment_recovery.json) checks all compressed bytes, gzip integrity, row schema, counts and barcode membership. The 2.36 GB file remains at its preserved source path in the [access manifest](../manifests/figures_567_assignment_access.tsv), outside Git and the default archive. No raw demultiplexing or alignment was restarted.
+Each RAD concatemer segment inherits the gene assigned to its original read. The [matrix builder](../source_data/figure_07/provenance/build_matrices.py) counts each exact cell–gene–UMI combination once and counts records without a UMI individually.
 
-**C3 native MEX checkpoint.** Open the [real MEX/DE preview](../data/examples/figure_07/PREVIEW.md), [eight real matrix entries](../data/examples/figure_07/RAD_matrix_entries.tsv), and [extraction receipt](../data/examples/figure_07/extraction.json). Matrix Market stores 1-based gene index, cell index and positive integer molecule count. Ordered feature and barcode files resolve those indices. A sparse absent entry means zero observed molecules; a missing barcode, gene or genotype assignment is not an invented zero.
+The retained RAD assignment ledger contains 57,885,606 emitted rows: 49,555,699 exact-barcode rows and 8,329,907 corrected-barcode rows. Each row contains original read ID, cell barcode, UMI, raw barcode and correction flag. The ledger covers all 12,423 selected barcodes and retains 12-base UMIs. Its SHA-256 is `a5dc369445826fdd36541a301b1b85448438fb52d351ce8883a12ef456457c48`.
 
-| Tool | Genes × selected cells | Nonzero coordinates | Molecules |
+[Ten example assignments](../data/examples/figure_07/RAD_emitted_assignment_rows.tsv), their [extraction receipt](../data/examples/figure_07/assignment_extraction.json), and [per-barcode row counts](../source_data/figure_07/RAD_assignment_rows_by_barcode.tsv) connect individual records to the complete stream. The [access manifest](../manifests/figures_567_assignment_access.tsv) locates the 2.36 GB compressed checkpoint; [validation](../validation/figures_567_assignment_recovery.json) covers its hash, gzip integrity, schema, counts and barcode membership.
+
+## Molecule matrices and normalization
+
+Matrix Market files store a one-based gene index, cell index and integer molecule count. Ordered feature and barcode files resolve each coordinate; absent sparse entries have count zero. The [matrix preview](../data/examples/figure_07/PREVIEW.md), [example entries](../data/examples/figure_07/RAD_matrix_entries.tsv) and [extraction record](../data/examples/figure_07/extraction.json) show the mapping.
+
+| Workflow | Genes × selected nuclei | Nonzero coordinates | Molecules |
 |---|---:|---:|---:|
 | RAD, all emitted segments | 45,224 × 12,423 | 15,772,545 | 22,875,174 |
 | BLAZE | 44,807 × 10,001 | 17,301,003 | 27,350,119 |
 | Flexiplex | 45,939 × 12,101 | 21,582,352 | 35,106,495 |
 
-Complete matrix content, labels, integer counts, unique coordinates, sealed hashes and positive-depth named cohorts were validated. Native matrices/labels are staged under ignored `checkpoints/figure_07/`; [file hashes and sizes](../manifests/figures_567_staged_checkpoints.tsv) describe that review-archive payload. They are not giant Git blobs.
+The [checkpoint manifest](../manifests/figures_567_staged_checkpoints.tsv) lists the matrices and labels stored under `checkpoints/figure_07/`. The [cohort table](../source_data/figure_07/native_positive_depth_cohorts.tsv) records cell IDs, named genotypes and complete-library depths for 9,404 RAD, 6,478 BLAZE and 7,125 Flexiplex nuclei.
 
-## 2. Follow one real molecule count through normalization
-
-The first retained RAD matrix entry is `(gene 25054, cell 3611, count 2)`. Its labels are **PTPRJ / ENSG00000149177.15**, barcode **CATACCCAGCGTGAGT**. That cell has **2,400** molecules across its complete unfiltered library, so:
+Counts are normalized to 10,000 molecules per nucleus using each nucleus's complete library total before gene filtering, then transformed as `log2(1 + CP10K)`. For example, the retained RAD entry for PTPRJ (`ENSG00000149177.15`) in barcode `CATACCCAGCGTGAGT` contains two molecules in a 2,400-molecule library:
 
 ```text
 CP10K = 10,000 × 2 / 2,400 = 8.333333333333334
 log2(1 + CP10K) = 3.222392421336448
 ```
 
-The excerpt script reads the complete source matrix to obtain each displayed cell's denominator; the denominator is not the sum of the eight displayed entries. These entries illustrate the calculation, not a full DE cohort. The [native cohort table](../source_data/figure_07/native_positive_depth_cohorts.tsv) retains exact cell IDs, named genotype and full-library depth for 9,404 RAD, 6,478 BLAZE and 7,125 Flexiplex cells.
+Extract the examples from the complete matrix with:
 
 ```bash
 python3 scripts/figure_07/extract_examples.py \
@@ -45,26 +57,32 @@ python3 scripts/figure_07/extract_examples.py \
   --de-table source_data/figure_07/direct_H146_vs_H526_plot_data.tsv.gz
 ```
 
-Expected: eight real matrix entries and nine real DE rows for DPM1, ASCL1 and POU2F3, with original row indices and full input hashes. These public cell-line excerpts contain no synthetic rows.
+This produces eight matrix entries and nine differential-expression rows for DPM1, ASCL1 and POU2F3, retaining original indices and full-input hashes.
 
-## 3. Define the direct H146-versus-H526 analysis
+## Differential expression between cell lines
 
-Only named, positive-depth H146/H526 cells enter the direct contrast: RAD **709/419**, BLAZE **234/185**, Flexiplex **290/219**, Illumina **263/195**. Within each pair-only cohort, a gene needs ≥10 molecules and detection in ≥1% of cells. Other cell lines do not affect this eligibility rule. Intersect the three native eligible gene sets and the Illumina pair-eligible set to obtain **8,135 common genes**.
+The contrast includes positive-depth nuclei assigned to H146 or H526: 709/419 for RAD, 234/185 for BLAZE, 290/219 for Flexiplex and 263/195 for Illumina. Within each platform, a gene requires at least ten molecules and detection in at least 1% of the two-line cohort. Intersecting the four eligible sets gives 8,135 common genes.
 
-Library normalization uses every gene's molecule contribution before gene filtering. The two-sided Wilcoxon test acts on `log2(1+CP10K)`. The effect is `log2((mean H146 CP10K + 0.1)/(mean H526 CP10K + 0.1))`; positive means H146-high. Each tool and the Illumina reference receives a separate BH adjustment over the same 8,135-gene family. No 10% detection display gate from other analyses is added to the current Figure 7 threshold rules.
+Two-sided Wilcoxon tests compare `log2(1 + CP10K)` values. The effect estimate is:
 
-The portable [24,405-row C5 table](../source_data/figure_07/direct_H146_vs_H526_plot_data.tsv.gz) has exactly three rows per common gene. Its columns are:
+```text
+log2 fold change = log2[(mean H146 CP10K + 0.1) / (mean H526 CP10K + 0.1)]
+```
 
-| Columns | Meaning/units |
+Positive values indicate higher expression in H146. Benjamini–Hochberg adjustment is applied separately to each workflow and the Illumina reference over the same common-gene family.
+
+The [gene-level table](../source_data/figure_07/direct_H146_vs_H526_plot_data.tsv.gz) contains 24,405 rows, one per gene and long-read workflow:
+
+| Columns | Meaning |
 |---|---|
-| `gene_id`, `gene_symbol`, `tool` | Versioned gene key, readable symbol, native tool |
-| `tool_log2FC`, `Illumina_log2FC` | Dimensionless log2 mean-CP10K ratios defined above |
-| `tool_p_value`, `Illumina_p_value` | Retained direct Wilcoxon P values |
-| `tool_BH_FDR_common`, `Illumina_BH_FDR_common` | Separate 8,135-gene BH-adjusted P values |
-| `tool_confidence`, `Illumina_confidence` | Uncapped `-log10(BH FDR)` |
-| `*_confidence_cap50` | Optional display values capped at 50; not the uncapped confidence-fit inputs |
+| `gene_id`, `gene_symbol`, `tool` | Versioned gene ID, symbol and workflow |
+| `tool_log2FC`, `Illumina_log2FC` | Mean-expression effect estimates |
+| `tool_p_value`, `Illumina_p_value` | Direct Wilcoxon P values |
+| `tool_BH_FDR_common`, `Illumina_BH_FDR_common` | Adjusted P values over 8,135 genes |
+| `tool_confidence`, `Illumina_confidence` | Uncapped −log10 adjusted P values |
+| `*_confidence_cap50` | Display values capped at 50 |
 
-Recompute the complete BH families, then the calls, without a master runner:
+Recalculate the adjusted P values and directional scores from the retained direct tests:
 
 ```bash
 python3 scripts/figure_07/adjust_common_gene_pvalues.py \
@@ -74,30 +92,24 @@ python3 scripts/figure_07/score_directional_calls.py \
   --input /tmp/figure07_adjusted.tsv --output /tmp/figure07_thresholds.tsv
 ```
 
-Expected: 24,405 adjusted rows, 594 directional threshold rows, exact integer agreement and metric agreement within 1e-12 with the [deposited grid](../source_data/figure_07/threshold_grid.tsv). The raw Wilcoxon P values are retained in this resume; the tests are not rerun. Using the nine-row preview for BH would change the family and is rejected by the script.
+The output contains 24,405 adjusted rows and 594 directional threshold rows. Counts match the [deposited threshold grid](../source_data/figure_07/threshold_grid.tsv) exactly, and metrics match within 1e-12. The [direct-test comparison](../validation/figures_567_direct_test_lineage.json) verifies every retained P value and effect against the native test output; its [script](../scripts/figure_07/check_direct_test_provenance.py) records both source hashes.
 
-The [direct-test lineage check](../validation/figures_567_direct_test_lineage.json) also confirms that every one of these 24,405 rows retains exactly the P value and effect from the selected 36,590-row native direct-test table. The [small comparison script](../scripts/figure_07/check_direct_test_provenance.py) records both complete source hashes.
+## Connect the tests to panels A–D
 
-## 4. Trace calls into panels A–D
+**Panel A** shows recovery of same-direction Illumina calls. Both reference and long-read calls require adjusted P <0.05 and absolute log2 fold change >1. The reference contains 412 H146-high and 769 H526-high genes. The updated analysis recovers 654 with RAD, 522 with BLAZE and 556 with Flexiplex. [Gene membership](../source_data/figure_07/directional_membership.tsv) and the seven [intersection regions](../source_data/figure_07/venn_regions.tsv) define the comparison.
 
-Fixed Illumina truth is BH FDR **<0.05** and absolute log2FC **>1**, giving **412 H146-high** and **769 H526-high** genes. A supported tool call must also pass these strict cutoffs and agree in direction. [Gene-by-gene membership](../source_data/figure_07/directional_membership.tsv) produces RAD **654**, BLAZE **522**, Flexiplex **556** recoveries and the exact seven [intersection regions](../source_data/figure_07/venn_regions.tsv). Circle areas below are schematic; counts are authoritative.
+**Panel B** plots log2 fold change against −log10 adjusted P for each long-read workflow. The common gene-level table supplies the coordinates, symbols and reference calls.
 
-![A: supported gene intersections](../figures/figure_07/A_updated_venn_schematic.png)
+**Panel C** compares uncapped confidence among directional Illumina-reference genes. The [source points](../source_data/figure_07/confidence_fit_points.tsv) support a retained OLS fit with an estimated intercept; its [coefficients](../source_data/figure_07/confidence_fit_candidates.tsv) are recorded separately from the saved artwork's fit.
 
-![B: current common-universe volcano proof](../figures/figure_07/B_updated_common_universe_volcano.png)
+**Panel D** evaluates adjusted-P cutoffs of 10⁻⁸, 10⁻⁶, 10⁻⁵, 10⁻⁴, 0.001, 0.005, 0.01, 0.05 and 0.1, and absolute log2-fold-change cutoffs of 0.1, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2, 2.5 and 3. Adjusted P must fall below its cutoff and absolute fold change must exceed its cutoff. Both directions are evaluated for each workflow while the Illumina thresholds remain fixed. Precision is TP/(TP + FP), recall is TP/(TP + FN), and F1 is `2TP/(2TP + FP + FN)`, with F1 = 0 for a zero denominator. The [grid](../source_data/figure_07/threshold_grid.tsv) includes counts, metrics and the 594 display labels, rounded half-up to one significant digit.
 
-Panel C's [source points](../source_data/figure_07/confidence_fit_points.tsv) use uncapped confidence. The computed **candidate** is OLS with an estimated intercept over all directional Illumina-truth genes. Its [coefficients](../source_data/figure_07/confidence_fit_candidates.tsv) remain explicitly subject to final artwork fit confirmation. A [bounded search of primary scripts and native-project filenames](../validation/figures_567_fit_definition_search.json) did not recover the executed directional BLAZE-axis fit definition. Available regression scripts use different reference axes or contrasts and cannot establish this panel's model. No coefficient was chosen by closeness to an existing label.
-
-![C: candidate confidence-fit source proof](../figures/figure_07/C_candidate_updated_confidence.png)
-
-Panel D evaluates 9 FDR cutoffs × 11 absolute-fold-change cutoffs × 2 directions × 3 tools. F1 is `2TP/(2TP+FP+FN)`, with zero for a zero denominator. Truth is fixed throughout. The [grid](../source_data/figure_07/threshold_grid.tsv) includes all TP/FP/FN/TN, precision, recall, F1 and display labels. Display uses decimal half-up rounding to one significant digit, checked against all 594 selected artwork labels.
-
-![D: all threshold cells](../figures/figure_07/D_updated_threshold_grid.png)
-
-These PNGs verify selected updated source data; final Figure 7C fit/annotation selection remains explicit. Panel E is removed, not pending a substitute analysis. See [current panel status](../source_data/figure_07/panel_status.json), [validation](../validation/figures_567_handback.md), [checkpoint checks](../validation/figures_567_checkpoint_checks.tsv) and [task status](../manifests/figures_567_tasks.tsv).
+Source-table plots can be regenerated with matplotlib and numpy:
 
 ```bash
 python3 scripts/figure_07/render_source_proofs.py
 ```
 
-This writes only Figure 7A–D PNG/SVG/PDF proofs from its portable source tables, using matplotlib/numpy. It does not require Figure 6 inputs. On the validated HPC host, use `/usr/bin/python3` and `OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1`.
+## Additional source records
+
+Reconstruction from emitted sequences requires the emitted FASTQ and frozen original-read-to-gene table listed in the [source manifest](../source_data/figure_07/RAD_emitted_segment_source_manifest.tsv). The available assignment ledger normalizes orientation and concatemer suffixes and stores barcode/UMI assignments keyed to original reads. Reproducing the saved Panel C regression annotations requires its executed fit specification. The [checkpoint checks](../validation/figures_567_checkpoint_checks.tsv) record the available matrices, assignments and test outputs.

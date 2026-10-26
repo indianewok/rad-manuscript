@@ -1,5 +1,5 @@
 file	bytes	sha256	rows	columns	header_present
-source_data/figure_01/README.md	2444	cb15d77fa8e74e1752b01aa40e809917b67f2d815cf278ade0c1636af128b4b7			
+source_data/figure_01/README.md	2076	95f7e817eb7cd5e696913260a2b5c2348c1216ade43a6afd540372e207f698ac			
 source_data/figure_01/accepted_phase_records.tsv	422197	c45addcc2bd1dab64380983300ad80762cf9bb4ca1048ff1999727c3211b4ef7	108	"[""dataset"", ""raw_dataset"", ""phase"", ""tool"", ""threads"", ""replicate"", ""attempt"", ""attempt_dir"", ""accepted_pointer_path"", ""accepted_pointer_value"", ""expected_key"", ""accepted"", ""record_status"", ""complete_marker"", ""user_seconds"", ""system_seconds"", ""cpu_seconds"", ""elapsed_seconds"", ""observed_mean_cores"", ""gnu_time_max_rss_kib"", ""process_tree_peak_total_rss_kib"", ""process_tree_peak_elapsed_seconds"", ""process_tree_peak_process_count"", ""process_tree_peak_timestamp_utc"", ""process_tree_sample_count"", ""process_tree_totals_path"", ""selected_max_rss_kib"", ""selected_max_rss_source"", ""exit_status"", ""metrics_path"", ""metrics_sha256"", ""metrics_extra_json"", ""component_discovery_user_seconds"", ""component_discovery_system_seconds"", ""component_discovery_cpu_seconds"", ""component_discovery_elapsed_seconds"", ""component_discovery_max_rss_kib"", ""component_discovery_exit_status"", ""component_discovery_metrics_path"", ""component_filter_user_seconds"", ""component_filter_system_seconds"", ""component_filter_cpu_seconds"", ""component_filter_elapsed_seconds"", ""component_filter_max_rss_kib"", ""component_filter_exit_status"", ""component_filter_metrics_path"", ""status_path"", ""status_metadata_json"", ""run_metadata_path"", ""run_metadata_json"", ""hostname"", ""cpu_model"", ""slurm_job_id"", ""slurm_cpus_per_task"", ""input_fastq"", ""input_size_bytes"", ""input_sha256_preverified"", ""expected_reads"", ""command_path"", ""command_sha256"", ""command"", ""stdout_path"", ""stderr_path"", ""whitelist_metadata_path"", ""whitelist_metadata_sha256"", ""whitelist_metadata_json"", ""whitelist_rows_nonempty"", ""whitelist_sha256"", ""output_metadata_path"", ""output_metadata_json"", ""warnings""]"	yes
 source_data/figure_01/algorithm_crosswalk.tsv	1088	d4f8fbc6c6ffdbef05034f1ae1fbb01243e4c081bd78dc47c7187ff1c47e54a6	6	"[""step"", ""role"", ""description"", ""code_anchor""]"	yes
 source_data/figure_01/combined_replicates.tsv	6083	cdc88402d806415712d81251682b66cc3779ea906c810345b80664815b59e2b5	54	"[""dataset"", ""tool"", ""threads"", ""replicate"", ""total_wall_seconds"", ""total_wall_hours"", ""max_process_rss_GB"", ""memory_definition""]"	yes
@@ -11,21 +11,21 @@ source_data/figure_01/hd_plot_contract.json	795	5f5f9f5d13971386a88214201ab7066b
 source_data/figure_01/hd_stage_counts.tsv	1368	a1c516a8bf39845e741b2538008f67146be55bba9234451cd93f2b407e2a3d9f	4	"[""flowcell"", ""valid_pair_rows"", ""valid_pair_count_total"", ""wide_count_total"", ""equality"", ""source_path"", ""source_sha256""]"	yes
 source_data/figure_01/hd_stage_differences.tsv	5171642	2d6633739418295bfcfe0dd83763bdb5958ce37db6500f895abdcc8bcedddc94	165898	"[""bin_id"", ""wide_table_count"", ""retained_comparison_count"", ""RAD_valid""]"	yes
 source_data/figure_01/input_manifest.tsv	436	ae1eb3425e1019e1b7eca17f4dba3b5c23ffeb304683b6a343d6330ebd0e101e	2	"[""dataset"", ""raw_fastq"", ""size_bytes"", ""read_count_contract"", ""sha256_preverified"", ""pinned_node""]"	yes
-source_data/figure_01/pinned_algorithm_audit.md	16617	d0fb6f4c63eab79a9275e3899e668b0cdfa85e6825a03244e66a51ef2d5155fa			
+source_data/figure_01/pinned_algorithm_audit.md	8406	2154d682c0147dceb2af33a1c658b38376949cfca1e755324d86f097001304bd			
 source_data/figure_01/producing_evidence/HD_selected_count_definition.json	1081	7ab91aea6492aa3957ffad65b21d7ef17d070866ce368318efdd1483679b6b84			
 source_data/figure_01/schemas.json	5487	746f138ecc90e5a8d3456afb2fe04566fe08500c6b75c077b66bda112170c817			
 source_data/figure_01/software_and_resources.tsv	1457	2831c8cd3d3e4feb80632b1b9a9d791b53aa61ba18c91db6cc3cf31d0c62d00a	19	"[""key"", ""value""]"	yes
 source_data/figure_01/timing_raw_source_registry.tsv	756878	1419ad1fa038aeb7b34bb0d6b3eb5a4422acdd9a1d46405784561e528186194b	2139	"[""relative_path"", ""source_path"", ""bytes"", ""sha256""]"	yes
 source_data/figure_01/timing_summary.tsv	3765	75e71792e0703e912d9770b4fb036e3430829acaa8d8a5f3bb54cc9d8e953b2a	36	"[""dataset"", ""tool"", ""threads"", ""metric"", ""n"", ""mean"", ""sd"", ""minimum"", ""maximum""]"	yes
-source_data/figure_02/README.md	3075	2195c953b22896def48a7c9149e5f6c26d938813675ade9cc24744f8f34c8c9a			
+source_data/figure_02/README.md	2544	10f66b4cc022cadf489d147b0bb10dd7ae94df2fbded8c6acf715c37fbe2f484			
 source_data/figure_02/assignment_per_target.tsv	592201	e21d3069bb904fd29235a3c50e7f9d24148eaed9a8b6803fbc308489a20889ba	15015	"[""tool"", ""barcode"", ""is_truth"", ""selected"", ""native_correct"", ""corrected_correct"", ""native_incorrect"", ""corrected_incorrect""]"	yes
 source_data/figure_02/assignment_six_states.tsv	1477	812dfb97c5b892662ecbae9e34f527636c2d4cd2d31c0147085d422d446686b3	18	"[""tool"", ""state"", ""reads"", ""denominator"", ""fraction"", ""count_unit""]"	yes
 source_data/figure_02/correction_only.tsv	401	088fb77accea006e03ece2b5d4dac8f261a31b5896e3b49280cdbd21d4ea4991	6	"[""tool"", ""state"", ""reads"", ""denominator"", ""fraction""]"	yes
-source_data/figure_02/desktop_QA.md	4969	b33169652783e875b86f92c95ead6566034324b48ca1f082b8cc0831f5f31b66			
+source_data/figure_02/desktop_QA.md	2368	8e4d752f408a4887c70fc4a42f787683e069bce3fa1bb077d7596182d164cb29			
 source_data/figure_02/discovery_barcode_identities.tsv.gz	2889220	56c7cb9cbe202803ba88712de3daa8a0566da254eaa57b0d9e87720109026150	673540	"[""dataset"", ""model"", ""condition"", ""tool"", ""barcode"", ""classification""]"	yes
 source_data/figure_02/discovery_callset_manifest.tsv	48730	d68becc91e366cb5823de6d2fd34ded6532bfe98a7870aecc4cafe14c5f76301	144	"[""dataset"", ""model"", ""condition"", ""tool"", ""original_path"", ""resolved_path"", ""sha256"", ""calls""]"	yes
 source_data/figure_02/discovery_metrics.tsv	32536	e9b1dfb70a60c8dabe76c00b0e5aa0b6822b72a2197508ae9d7eb1ae9bb6e78b	144	"[""dataset"", ""model"", ""condition"", ""shift"", ""tool"", ""full_dataset_mean_Q"", ""calls"", ""tp"", ""fp"", ""fn"", ""precision"", ""recall"", ""f1"", ""origin"", ""source_table""]"	yes
-source_data/figure_02/full_read_quality/README.md	6053	9edf64743a5cfe70f3424c87d6060a1ff19ed1456fb9a7c59c5d4f1e6c86bed9			
+source_data/figure_02/full_read_quality/README.md	4634	892d977b1b9ef24d745f516aab14122928fb643f1a7e37b3225a7aa0ee28e11d			
 source_data/figure_02/full_read_quality/barcode_edit_distance_counts.tsv	262	1973de93a008a0b008ac5a95c0f482e0162b54c4f24717a39987b366b56b266f	15	"[""barcode_ED"", ""reads"", ""barcode_bases""]"	yes
 source_data/figure_02/full_read_quality/barcode_minimum_quality_by_ed.tsv	1760	24e0631e827ba752b656c70fcade064301497862a93c08dd360f00e11864aef1	194	"[""barcode_ED"", ""min_q"", ""read_count""]"	yes
 source_data/figure_02/full_read_quality/barcode_quality_by_ed.tsv	9782	ab4a43dc19002bfcd73c140fc3c50206d0b0eff381b89154d4e21e5ffcd0fedb	976	"[""barcode_ED"", ""q"", ""base_count""]"	yes
@@ -34,7 +34,7 @@ source_data/figure_02/full_read_quality/full_quality_summary.tsv	2727	2dadb874e9
 source_data/figure_02/full_read_quality/full_quality_with_blaze_f1.tsv	6391	aa1eb6488319b02dfb65d74e606a0cae2713141263dee0a9439f6df5a5b90510	12	"[""dataset"", ""model"", ""condition"", ""shift"", ""quality_transform"", ""total_reads"", ""located_reads"", ""unlocated_reads"", ""correct_reads"", ""error_reads"", ""correct_barcode_bases"", ""error_barcode_bases"", ""correct_quality_sum"", ""error_quality_sum"", ""correct_mean_barcode_Q"", ""error_mean_barcode_Q"", ""correct_minus_error_mean_Q"", ""pooled_mean_barcode_Q"", ""full_dataset_mean_Q"", ""blaze_tp"", ""blaze_fp"", ""blaze_fn"", ""blaze_calls"", ""blaze_precision"", ""blaze_recall"", ""blaze_f1"", ""blaze_metric_scope"", ""blaze_origin"", ""blaze_source_table""]"	yes
 source_data/figure_02/full_read_quality/run.json	4526	bb3b79a3c5cd3b342722484ef50bdcb22858ea9f9178e5f3ef3268529a10fe27			
 source_data/figure_02/full_read_quality/source_generation_summary.tsv	1686	93cf6124a3cbce2d3db481cbc0d6627095477124ee2a9b3198a3417abfda1cf4	65	"[""metric"", ""value""]"	yes
-source_data/figure_02/full_read_quality_2018/README.md	6989	ae9a9b6f7aa49be86c2db0e5215b46bb5595465c7cc6aac2f371f03239ff3844			
+source_data/figure_02/full_read_quality_2018/README.md	5905	d71f324a94046a2c35aa4ae4a894533a18a0bdc196b0bd390f7367a44ce88427			
 source_data/figure_02/full_read_quality_2018/barcode_edit_distance_counts.tsv	262	1973de93a008a0b008ac5a95c0f482e0162b54c4f24717a39987b366b56b266f	15	"[""barcode_ED"", ""reads"", ""barcode_bases""]"	yes
 source_data/figure_02/full_read_quality_2018/barcode_minimum_quality_by_ed.tsv	1295	c26d07cfdd279cb84e08f8f4c5facc23b4cafd4b825d22193ddc97ac4277c1f1	140	"[""barcode_ED"", ""min_q"", ""read_count""]"	yes
 source_data/figure_02/full_read_quality_2018/barcode_quality_by_ed.tsv	4226	84d189b00d6bdc0922ae5c916668238de545ff681fcfa129297e69dea2b67406	400	"[""barcode_ED"", ""q"", ""base_count""]"	yes
@@ -77,8 +77,8 @@ source_data/figure_02/quality_summary.tsv	5972	2395f1f40dffac4eae578d5a07fcc303f
 source_data/figure_02/reconstructed_full_quality_histograms.tsv	31938	e29a0b81460a74b08274b403102bfce4404da5e20d160740ef11a52c14b4b841	630	"[""model"", ""condition"", ""shift"", ""q"", ""whole_base_count"", ""barcode_base_count"", ""truth_located_barcode_window_min_count""]"	yes
 source_data/figure_02/schemas.json	6165	d55195e9aefd0a1b23b6d786de84541856d3eefee328063b7076136a774b252f			
 source_data/figure_02/truth_barcodes.tsv	85008	33fe132ccd287c3f30319bcdc340bc74ae80a2d57d9a2571a64972cf7592b30f	5000	"[""barcode""]"	yes
-source_data/figure_03/README.md	2976	6412547995a76896fc975b818514b8dbd8cf10aba7d2e41cb92e192558af23fd			
-source_data/figure_03/checksums.json	957	243f5209c67637e061b3bdf61a8987237e4e18bee8192725e9c26d25d1646c6e			
+source_data/figure_03/README.md	2554	034af15b7c87a1fd993da916c19b3c76c2279d43e431a183dfe273a12508e7a1			
+source_data/figure_03/checksums.json	957	d2c803b8b08af8b37ded6b07fb72f381d89d38d9b41b352b60abbeb82f12d542			
 source_data/figure_03/correction_per_target.tsv.gz	4703991	88ef055e4ad9c7003cf9f4a3076d68873b3849c6561eb9ba787736c99e0a6dce	340317	"[""dataset"", ""tool"", ""barcode"", ""selected_by_tool"", ""category"", ""count"", ""denominator_O"", ""percent"", ""unit"", ""source_sha256""]"	yes
 source_data/figure_03/correction_totals.tsv	6495	e0ba8d0ef56b2ebb19b14ef834f973104f9c03ea0c901f9935b2dd3f62ee0e38	36	"[""dataset"", ""tool"", ""category"", ""count"", ""denominator_O"", ""percent"", ""unit"", ""scope"", ""source_sha256""]"	yes
 source_data/figure_03/measured_category_definitions.tsv	474	45b01f76af79dd5bdf2c85d5b5b682ec9de603c09466a6c6756473b845aa1f56	3	"[""category"", ""observed_source"", ""selected_target"", ""condition""]"	yes
@@ -88,7 +88,7 @@ source_data/figure_03/offlist_totals.tsv	4454	ae63e8b62c9aa68f98da8b5693890c7676
 source_data/figure_03/panel_data_manifest.tsv	2339	037d86d78b8315c4682b54423ee6200feab02dbc4af6331e2bba4157cb8db922	8	"[""panel"", ""table"", ""row_key"", ""metric"", ""unit"", ""statistical_policy"", ""sha256"", ""render_scope""]"	yes
 source_data/figure_03/replicate_whitelists.tsv	4471648	9952b99b5220282dc5a0edd404bb560815bcf6182c2e1c81dba56f74b29f96b6	44148	"[""dataset"", ""replicate"", ""rank"", ""barcode"", ""list_sha256""]"	yes
 source_data/figure_03/schema.json	2290	09a381b0ab27ff7694e87582b52a0da96a53b37e5c454bfb1370f6d9803f5409			
-source_data/figure_04/README.md	2649	2d9a26fe56e205fbd12700f793383ced9f75ddb4d4786d0e934a0254ad3de222			
+source_data/figure_04/README.md	1835	f1fb59c5a580bb4f589647adf357250ec365768aa29cd5ad0b104ae34b8e9f04			
 source_data/figure_04/barcode_detection_metrics.tsv	84275	fef92287def3e62e746e494ce445c7e5b8903f3d46bd75e8f8bb4e37746b33b2	111	"[""score_panel"", ""display_dataset"", ""canonical_id"", ""dataset_family"", ""tool"", ""calls"", ""reference_n"", ""tp"", ""fp"", ""fn"", ""precision"", ""recall"", ""f1"", ""reference_type"", ""reference_description"", ""validation_tier"", ""source_path"", ""source_method"", ""input_status"", ""paired_input_id"", ""inferential_status""]"	yes
 source_data/figure_04/input_characteristics.tsv	7180	1276689c895800018e7707c26128dfe2f66a9b0724c4cf9acdb5dc73b52e0455	37	"[""dataset"", ""num_seqs"", ""sum_len"", ""min_len"", ""avg_len"", ""max_len"", ""Q1"", ""Q2"", ""Q3"", ""sum_gap"", ""N50"", ""N50_num"", ""Q20(%)"", ""Q30(%)"", ""AvgQual"", ""GC(%)"", ""canonical_id"", ""summary_origin""]"	yes
 source_data/figure_04/paired_f1.tsv	5089	609af895e71a2b5246f66ffc9fef170cedcaf50f2a0aabe5482662f13a42bb4f	37	"[""paired_input_id"", ""RAD"", ""BLAZE"", ""Flexiplex"", ""input_status"", ""independence_note""]"	yes
@@ -155,7 +155,7 @@ source_data/figure_04/producing_evidence/PromethION_iPSC_Flexiplex_run_selection
 source_data/figure_04/producing_evidence/PromethION_iPSC_RAD_MANIFEST.tsv	4527	6df9f9b5461b690d7625191002fffa3f4fe822921c2414146444faefa656f318	65	"[""field"", ""value""]"	yes
 source_data/figure_04/producing_evidence/PromethION_iPSC_RAD_run_selection_tools.sh	4461	f4d117dec58d35734474add6235fa2dda05c702931c41db925592de7bfb57f5a			
 source_data/figure_04/producing_evidence/PromethION_iPSC_RAD_time.txt	1016	e7a0f4fd88a6e08ad831f2e23996320eda2cc264b703e1b4ac6107a21953edca			
-source_data/figure_04/producing_evidence/RAGE_TNBC_commands.md	5916	c64dd5561e0de630532fd22cc3a17a40af470385f2a4f1062b1002e2a2114f64			
+source_data/figure_04/producing_evidence/RAGE_TNBC_commands.md	5300	fc9dcc833b4d4ebc825dba2e39fd0bd748472600a9cbff5bcb26a32476f85f89			
 source_data/figure_04/producing_evidence/RAGE_TNBC_executed.sh	15441	ed0be721f0f152d8c7a381b525e27757c9243602ab39e3f81280f4af9c74c309			
 source_data/figure_04/producing_evidence/RAGEseq-TNBC-LN_producer.sh	15441	ed0be721f0f152d8c7a381b525e27757c9243602ab39e3f81280f4af9c74c309			
 source_data/figure_04/producing_evidence/RAGEseq-TNBC-LN_tool_provenance.tsv	2540	b1ce7a2e8ff4e7a055cc5847b888ff1a23fb32c25ddb317e4f67c674524116a7	17	"[""method"", ""component"", ""version_or_revision"", ""executable_or_environment"", ""sha256_or_note""]"	yes
@@ -195,7 +195,7 @@ source_data/figure_05/candidate_identity_summary.tsv	232	5e4da963320ea0ba9564cf6
 source_data/figure_05/candidate_receptor_counts.tsv	2701864	6fccb250d5a7a0a390c3aa73ee55d619f816408ca82c80aa93e6e23dc8aa1674	30234	"[""tool"", ""barcode"", ""celltype"", ""receptor"", ""native"", ""corrected_only"", ""assigned"", ""selection""]"	yes
 source_data/figure_05/candidate_receptor_totals.tsv	132	5c15cdacf374494af99d876782c136eb8c58db4cf02c90b397bd35f65c09e518	3	"[""tool"", ""native"", ""corrected_only"", ""assigned""]"	yes
 source_data/figure_05/provenance/BLAZE_receptor_command.txt	305	8f97a874844df73f8a6bb6c6f3c968a17bde1540090f75e1e276d8fce91893e0			
-source_data/figure_05/provenance/Flexiplex_receptor_execution.md	4043	2ae7ac163e251f3420039a4227768ac7b6578e2008847b80c470f3f826e1e47c			
+source_data/figure_05/provenance/Flexiplex_receptor_execution.md	3699	7b8b8efa9fdd6e75c929f3a34e5cf16e7751801aacdb3487b89e17171c8372d0			
 source_data/figure_05/provenance/Flexiplex_receptor_producer.sh	3020	16b2e2146c8027adbc76fb152525ac64de2f0d6495e3bff350139d01570b026d			
 source_data/figure_05/provenance/RAD_candidate_producer_failure.txt	162	62feae17358ae51b60bcdb45193bdbf8317ef2e0c0bcb32f49bbd17129cedf62			
 source_data/figure_05/provenance/join_flexiplex_bcrtcr.py	5269	5486f574028de3cfd62b505c41d8de2a99ae2c509f93c73ecc314e122bef0b99			
@@ -260,7 +260,7 @@ source_data/figure_07/confidence_fit_candidates.tsv	757	1c4e99eced4c762c0788ac07
 source_data/figure_07/confidence_fit_points.tsv	175534	c220daa85d31fd6bc8249ab62584d8b46b265b26c74b8369d8786ded30451384	2362	"[""gene_id"", ""direction"", ""tool"", ""BLAZE_confidence"", ""tool_confidence""]"	yes
 source_data/figure_07/direct_H146_vs_H526_plot_data.tsv.gz	2064215	c4c038bffcc1db6a98444e12b74cc3a5b6dc85f329defeb87eeec1084c75ef48	24405	"[""gene_id"", ""tool"", ""gene_symbol"", ""tool_log2FC"", ""tool_p_value"", ""tool_BH_FDR_common"", ""tool_confidence"", ""Illumina_p_value"", ""Illumina_log2FC"", ""Illumina_BH_FDR_common"", ""Illumina_confidence"", ""Illumina_confidence_cap50"", ""tool_confidence_cap50""]"	yes
 source_data/figure_07/directional_membership.tsv	394384	851c880041f0a4cdb26cab289f568e0838e6e635ebc834c8a6a4a71d75c26686	8135	"[""gene_id"", ""gene_symbol"", ""Illumina_truth"", ""direction"", ""region"", ""RAD"", ""BLAZE"", ""Flexiplex""]"	yes
-source_data/figure_07/matrix_production_record.md	2361	a300112260819424bdbbd0e7a72745eb7550ef838b334ae5268e456f12629500			
+source_data/figure_07/matrix_production_record.md	2090	80d63c87b2b4a49a67c31150cbb12d94bd19e3adee7755d366789f14e18c076d			
 source_data/figure_07/native_positive_depth_cohorts.tsv	812122	dd98d254a1ed7df7c9b6f0b59b8195800fc645103df40114fde82ced480e20a0	23007	"[""tool"", ""cell_barcode"", ""donor"", ""full_library_molecules""]"	yes
 source_data/figure_07/panel_status.json	286	763ec12e41ae410995db74096da9116ea04e4b54c18ec6411ef0cd6597565c77			
 source_data/figure_07/provenance/DE_sessionInfo.txt	2886	3ec7c0c360bd1770ec34d09a4a7439d86a4a6646c4e1cfba4c2dbc247af646d7			

@@ -1,24 +1,52 @@
-# Figure 4 selected public identifier sets
+# Figure 4 barcode lists
 
-These are the actual saved selected barcode identifiers and matched reference identifiers for **29 public inputs, 87 input/tool rows**. Each gzip file contains sorted unique 16-nucleotide identifiers, one per line, without a header. Terminal Cell Ranger `-1` suffixes are removed. Identical sets are stored once and can be referenced by multiple manifest rows.
+These files contain the selected tool barcodes and matched reference barcodes
+for 29 public inputs, covering 87 input–tool comparisons. Each gzip file contains
+sorted, unique 16-nucleotide barcodes, one per line, without a header. Terminal
+Cell Ranger `-1` suffixes are removed. Identical sets are stored once and can be
+referenced by several manifest rows.
 
-[identifier_manifest.tsv](identifier_manifest.tsv) maps all 111 selected rows to their current files and SHA256 hashes. Eight controlled-access Visium inputs (24 tool rows) remain explicitly `aggregate-only-controlled-access`; their identifier files are not published. Four of those original RAD callsets are also missing at their recorded paths. No selected set was inferred from aggregate counts.
+The [identifier manifest](identifier_manifest.tsv) maps all 111 comparisons to
+their files and SHA-256 hashes. The eight controlled-access Visium inputs have
+24 rows marked `aggregate-only-controlled-access`. Their aggregate metrics are
+included in the source tables, and the dataset registry gives the EGA access
+identifiers.
 
-[Full source lineage and equality checks](../../validation/figures_124_public_identifier_export.json) give the original source path/hash, exact selection rule, normalized-content hash, and TP/FP/FN for every public row. Membership-table selections are recorded explicitly, including the 5,978-barcode RAGE immune reference. ScMixology2 retains its native RAD and reconstructed BLAZE/Flexiplex execution origins. These identifiers are computational barcode sets, not raw sequencing reads.
+The [source and equality report](../../validation/figures_124_public_identifier_export.json)
+records the original file identities, selection rules, normalized-content
+hashes and TP/FP/FN counts. The RAGE immune reference contains 5,978 barcodes
+selected from the membership table. ScMixology2 retains native RAD calls and
+reconstructed BLAZE/Flexiplex calls, as described in the [Figure 4 guide](../../docs/figure_04.md).
 
-Run from the repository root using Python 3.9 or newer; no scientific Python packages or mounted project files are required:
+## Recalculate the metrics
+
+Run from the repository root with Python 3.9 or newer:
 
 ```bash
 python3 scripts/revision/figures_124_steps/rescore_public_identifiers.py \
   --output /tmp/figure4_identifier_rescore.tsv
 ```
 
-The small scorer checks each file hash, reconstructs TP/FP/FN by set intersection/difference, and matches counts exactly and floating-point metrics within 1e-9 against the selected table. Its 111-row output labels the 87 independently recomputed public rows and 24 retained controlled aggregate rows separately. Counts are identifier counts; precision/recall/F1 are unitless fractions. It does not rerun discovery tools or statistical analyses.
+The scorer verifies file hashes, calculates TP/FP/FN by set intersection and
+difference, and compares the results with the saved metrics. Counts must match
+exactly; precision, recall and F1 must agree within `1e-9`. The output contains
+87 recalculated public comparisons and 24 retained controlled-access aggregate
+rows. Counts are numbers of barcodes; precision, recall and F1 are fractions.
 
-Inspect an entire small real input:
+To inspect a complete barcode list:
 
 ```bash
 gzip -dc data/figure_04/identifier_sets/ScTagger-S_flatQ20.RAD.txt.gz
 ```
 
-To repeat the source extraction on the authorized project filesystem, use `python3 scripts/revision/figures_124_export_public_sets.py --project-root /path/to/rad_data --output-root .`. That recovery command also uses explicitly recorded retained scratch paths for selected Measles/ScMix sources; the portable scoring command above does not.
+To repeat extraction from the project files:
+
+```bash
+python3 scripts/revision/figures_124_export_public_sets.py \
+  --project-root /path/to/rad_data --output-root .
+```
+
+This extraction uses the recorded project and scratch locations for the
+Measles and ScMixology2 sources. Four original Visium RAD callsets are missing
+from their recorded paths; their aggregate metrics and recorded hashes remain
+in the source tables.

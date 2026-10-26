@@ -4,20 +4,11 @@ The executable orchestration is in `run_after_download.sh`. All methods use
 10x 3' v2 structure (adapter `CTACACGACGCTCTTCCGATCT`, 16-nt cell barcode,
 10-nt UMI) and maximum correction edit distance 2 where applicable.
 
-Input validation and local-NVMe staging proceed immediately. Before tool
-launch, the runner waits for the concurrent PromethION heavy selection queue
-and its BLAZE expect-1,022 sensitivity to finish. This avoids overlapping with
-that queue's possible ~96 requested workers.
-
-The LN runs are then scheduled in two bounded waves. Wave 1 requests RAD 16,
-BLAZE 16, and Flexiplex 10 workers in each of two tracks: 52 requested workers
-during discovery and at most 56 when both Flexiplex tracks concurrently add
-two `pigz` workers. Wave 2 requests 16 workers for the BLAZE 6,027-cell
-sensitivity and 24 for FLAMES, for a maximum of 40. The LN cap remains low
-enough that a later PromethION competitor-demux stage (maximum 64 workers)
-cannot take their combined request above 120 on the 128-logical-CPU node.
-Exact budgets and cross-workload bounds are in
-`analysis/resource_budget.tsv`.
+Runs used local NVMe storage and two scheduling waves. The first wave ran
+RAD, BLAZE and Flexiplex discovery; the second ran the BLAZE 6,027-cell
+sensitivity analysis and FLAMES. Per-tool thread counts appear in the commands
+below, and the original resource allocation is recorded in
+`analysis/resource_budget.tsv` within the producing project.
 
 ## Input validation
 
@@ -137,7 +128,6 @@ python3 scripts/validate_benchmark.py
 scripts/package_compact_results.sh
 ```
 
-Tracks within each bounded wave run concurrently on local NVMe. Timing records
-therefore document completed commands on a shared node and are not an isolated
-speed ranking. The 6,027-cell BLAZE timing is specifically an incremental
-reused-putative measurement and must not be compared as a full end-to-end run.
+Runs within each wave shared a compute node. Timing records include this
+concurrent workload. The 6,027-cell BLAZE timing measures whitelist selection
+and demultiplexing after reuse of the primary run's putative-barcode extraction.

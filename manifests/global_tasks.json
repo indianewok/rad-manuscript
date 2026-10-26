@@ -3,7 +3,7 @@
     "id": "G-01",
     "status": "passed-with-explicit-gaps",
     "completed": "Current scope, 39 dataset identities, 37 paired benchmark inputs, source files and per-panel tasks recorded; no unsupported identity or completeness claim.",
-    "evidence": "manifests/datasets.tsv; manifests/panels.tsv; manifests/data_files.tsv; docs/decisions.md",
+    "evidence": "manifests/datasets.tsv; manifests/panels.tsv; manifests/data_files.tsv; docs/validation.md",
     "next_dependency": "Source gaps remain attached to the affected figure tasks."
   },
   {
@@ -31,7 +31,7 @@
     "id": "G-05",
     "status": "passed-author-preservation",
     "completed": "Existing statistical choices and annotations preserved as instructed. Paired observations, denominators and selected P values remain explicit; no new inferential designs substituted.",
-    "evidence": "docs/decisions.md; source_data/figure_04/paired_f1.tsv; source_data/figure_06/statistical_observations.tsv; source_data/figure_07/direct_H146_vs_H526_plot_data.tsv.gz",
+    "evidence": "docs/validation.md; source_data/figure_04/paired_f1.tsv; source_data/figure_06/statistical_observations.tsv; source_data/figure_07/direct_H146_vs_H526_plot_data.tsv.gz",
     "next_dependency": "Native statistical artwork verification remains separate. The selected LR-Split-seq paired t analysis and all 568 cell identities are recovered and preserved."
   },
   {
