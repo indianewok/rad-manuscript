@@ -207,8 +207,8 @@
     },
     {
       "path": "source_data/figure_07/matrix_production_record.md",
-      "sha256": "a300112260819424bdbbd0e7a72745eb7550ef838b334ae5268e456f12629500",
-      "bytes": 2361
+      "sha256": "80d63c87b2b4a49a67c31150cbb12d94bd19e3adee7755d366789f14e18c076d",
+      "bytes": 2090
     },
     {
       "path": "source_data/figure_07/native_positive_depth_cohorts.tsv",
@@ -322,8 +322,8 @@
     },
     {
       "path": "source_data/figure_05/provenance/Flexiplex_receptor_execution.md",
-      "sha256": "2ae7ac163e251f3420039a4227768ac7b6578e2008847b80c470f3f826e1e47c",
-      "bytes": 4043
+      "sha256": "7b8b8efa9fdd6e75c929f3a34e5cf16e7751801aacdb3487b89e17171c8372d0",
+      "bytes": 3699
     },
     {
       "path": "source_data/figure_05/provenance/Flexiplex_receptor_producer.sh",
@@ -457,5 +457,21 @@
     "script_sha256": "14dfd6a9a458a4f997c37c36f312a7f03acab3547633a1118f85fcbe3b2d8314",
     "validation": "validation/figure_05_splitseq_counts.json",
     "raw_rerun": false
+  },
+  "documentation_revision": {
+    "date": "2026-10-26",
+    "description": "Reader documentation revised; numerical outputs unchanged.",
+    "changes": [
+      {
+        "file": "source_data/figure_07/matrix_production_record.md",
+        "previous_sha256": "a300112260819424bdbbd0e7a72745eb7550ef838b334ae5268e456f12629500",
+        "sha256": "80d63c87b2b4a49a67c31150cbb12d94bd19e3adee7755d366789f14e18c076d"
+      },
+      {
+        "file": "source_data/figure_05/provenance/Flexiplex_receptor_execution.md",
+        "previous_sha256": "2ae7ac163e251f3420039a4227768ac7b6578e2008847b80c470f3f826e1e47c",
+        "sha256": "7b8b8efa9fdd6e75c929f3a34e5cf16e7751801aacdb3487b89e17171c8372d0"
+      }
+    ]
   }
 }

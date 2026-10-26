@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Extract actual bounded Split-seq ledger rows with full-source hash and row lineage."""
+"""Extract LR-Split-seq assignment examples with source hashes and original row numbers."""
 import argparse
 import csv
 import gzip
@@ -51,19 +51,19 @@ def main():
     cellpath=root/'data/figure_05/splitseq_cells.tsv'
     sources.append(dict(output='cells.tsv',source=str(cellpath.relative_to(root)),source_sha256=sha(cellpath),
         source_data_rows=[1,2],selection='first2 rows, all columns unchanged'))
-    (a.output/'extraction.json').write_text(json.dumps(dict(scope='Actual public derived identifiers; bounded counts are not full-cell totals',sources=sources),indent=2)+'\n')
-    lines=['# Actual Split-seq root-data preview','','These are bounded records from the selected current runs. Full-source hashes and exact data-row ordinals are in [extraction.json](extraction.json). The first two original physical-cell IDs are retained; eight matching assignment rows are shown per tool.','','## Native component records','','| Read | BC1 | BC2 | BC3 | UB |','|---|---|---|---|---|']
+    (a.output/'extraction.json').write_text(json.dumps(dict(scope='Eight assignment records per tool for the first two published physical cells',sources=sources),indent=2)+'\n')
+    lines=['# LR-Split-seq assignment examples','','These examples follow the first two published physical cells through RAD and component Flexiplex/poly-T assignments. Each tool contributes eight records. [Extraction details](extraction.json) give the source hashes and original row numbers.','','## Native component records','','| Read | BC1 | BC2 | BC3 | UB |','|---|---|---|---|---|']
     lines += ['| '+' | '.join(row[k] for k in ['Read','BC1','BC2','BC3','UB'])+' |' for row in native[:3]]
-    lines += ['','The small normalization script writes `BC3_BC2_BC1` and reverse-complements `UB`. RT primer variants then map to the T primer of the same physical well; exact read IDs and UMI strings are counted within that cell. The [full selected table](../../../../source_data/figure_05/splitseq_reads_umis_568.tsv) contains the complete 568-cell counts.','','## Physical-cell identities','','| Original Prism row | Published ID | Canonical RT_BC2_BC3 | Sample |','|---|---|---|---|']
+    lines += ['','The normalization script writes `BC3_BC2_BC1` and reverse-complements `UB`. RT primer variants then map to the T primer of the same physical well; exact read IDs and UMI strings are counted within that cell. The [full selected table](../../../../source_data/figure_05/splitseq_reads_umis_568.tsv) contains the complete 568-cell counts.','','## Physical-cell identities','','| Original Prism row | Published ID | Canonical RT_BC2_BC3 | Sample |','|---|---|---|---|']
     lines += ['| '+' | '.join(row[k] for k in ['prism_row_1based','published_cell_barcode','canonical_barcode','sample'])+' |' for row in cells]
     non10=next(x for x in selected if len(x['umi'])!=10)
-    lines += ['','## A real non-ten-base UMI is included','','| Original RAD read | Saved normalized barcode | Canonical physical cell | Exact UMI | Bases |','|---|---|---|---|---|',
+    lines += ['','## UMI inclusion','','| Original RAD read | Saved normalized barcode | Canonical physical cell | Exact UMI | Bases |','|---|---|---|---|---|',
               '| '+' | '.join([non10['read_id'],non10['normalized_barcode'],canonical(non10['normalized_barcode']),non10['umi'],str(len(non10['umi']))])+' |',
-              '', 'This actual nine-base UMI is nonempty and contributes to the bounded read and exact-UMI counts. Requiring exactly ten bases would discard it and change the selected counting rule.',
-              '', 'The eight RAD excerpt rows yield five read–cell pairs for the first selected cell and three for the second; see [bounded counts](rad_bounded_counts.tsv). These are excerpt counts, not full-cell depths.']
+              '', 'This nine-base UMI passes the nonempty-UMI inclusion rule and contributes to both the read and exact-UMI counts.',
+              '', 'The eight RAD example rows give five read–cell pairs for the first cell and three for the second; see [example counts](rad_bounded_counts.tsv).']
     lines += ['','Follow [Figure 5](../../../../docs/figure_05.md) for exact normalization and aggregation commands.']
     (a.output/'PREVIEW.md').write_text('\n'.join(lines)+'\n')
-    print('Extracted public native/normalized examples with explicit physical-cell identities and source row ordinals.')
+    print('Extracted assignment examples with physical-cell identities and source row numbers.')
 
 
 if __name__=='__main__':main()

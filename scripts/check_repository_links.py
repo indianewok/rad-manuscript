@@ -8,7 +8,7 @@ from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 pages = [ROOT/'README.md', ROOT/'SETUP.md', ROOT/'data/README.md']
-for directory in ('docs', 'data', 'vendor/flexiplex-audit'):
+for directory in ('docs', 'data', 'source_data', 'figures', 'validation', 'vendor/flexiplex-audit'):
     pages.extend((ROOT/directory).rglob('*.md'))
 checks = []
 for page in sorted(set(pages)):
@@ -21,11 +21,21 @@ for page in sorted(set(pages)):
         result = dict(page=str(page.relative_to(ROOT)), link=link, exists=target.exists())
         try:
             relative = str(target.relative_to(ROOT))
-            ignored = subprocess.run(['git','check-ignore','-q',relative], cwd=str(ROOT)).returncode == 0
-            result['available_in_working_tree'] = target.exists() and not ignored
+            result['repository_target'] = relative
+            result['available_in_working_tree'] = result['exists']
         except ValueError:
             result['available_in_working_tree'] = False
         checks.append(result)
+targets = sorted({r['repository_target'] for r in checks if 'repository_target' in r})
+ignored_result = subprocess.run(['git', 'check-ignore', '--stdin', '-z'],
+                                input='\0'.join(targets) + '\0', text=True,
+                                stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd=str(ROOT))
+if ignored_result.returncode not in (0, 1):
+    raise RuntimeError(ignored_result.stderr)
+ignored = set(ignored_result.stdout.split('\0'))
+for result in checks:
+    if result.pop('repository_target', None) in ignored:
+        result['available_in_working_tree'] = False
 failed = [r for r in checks if not r['available_in_working_tree']]
 report = dict(status='failed' if failed else 'passed', pages=len(set(pages)), links=len(checks), failures=failed)
 (ROOT/'validation/repository_links.json').write_text(json.dumps(report, indent=2)+'\n')

@@ -1,10 +1,10 @@
-# Figure 06 — actual bounded source-data preview
+# Figure 6 — source-data examples
 
-These are real excerpts from the public cell-line experiment, not synthetic data. They illustrate data structure and named transformations; they do not reproduce a whole figure from the excerpt alone. [Source hashes, exact paths and selection](extraction.json) and the [walkthrough](../../../docs/figure_06.md) give the full scope.
+The tables below show selected allele counts, cell-line genotypes and fixed UMAP coordinates from LongBench single nuclei. [Extraction details](extraction.json) record source paths, hashes and selected rows. The [Figure 6 guide](../../../docs/figure_06.md) gives the complete analysis.
 
-## C3: sparse allele matrix → variant → barcode → genotype → fixed coordinate
+## Allele counts, genotype calls and UMAP coordinates
 
-The first eight AD entries are resolved by 1-based row/column identity, then joined by exact barcode. AD is alternate-allele molecule count, not a genotype probability. [Extraction hashes and rules](allele_extraction.json).
+The first eight alternate-allele molecule counts (AD) are resolved by one-based matrix row and column, then joined to genotype calls and UMAP coordinates by barcode. [Extraction details](allele_extraction.json) retain the hashes and selection rules.
 
 | source_AD_entry | CHROM | POS | REF | ALT | cell_barcode | alternate_allele_molecules | query_label | reference_label | UMAP_1 | UMAP_2 |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -17,7 +17,7 @@ The first eight AD entries are resolved by 1-based row/column identity, then joi
 | 7 | 1 | 14464 | A | T | ACGGAAGTCTGGGCGT | 1 | HCC827 | HCC827 | -1.85452970287786 | 6.16738371002965 |
 | 8 | 1 | 14464 | A | T | AGAGAGCTCGGCGATC | 1 | H2228 | unassigned | -9.68027170917974 | 3.53467945206456 |
 
-## C4: five deliberately selected identity examples
+## Five genotype outcomes
 
 | cell_barcode | illumina_reference_label | rad_query_selected | rad_vireo_state | rad_vireo_label |
 |---|---|---|---|---|
@@ -47,7 +47,7 @@ The first eight AD entries are resolved by 1-based row/column identity, then joi
 | AATTCCTGTAACGGTG | BLAZE | 0 | H1975 | NA | not_selected |
 | AATTCCTGTAACGGTG | Flexiplex | 0 | H1975 | NA | not_selected |
 
-## Excerpt summary — denominator five only
+## Summary of the five-cell example
 
 | tool | reference_denominator | same | different | doublet | unassigned | not_selected | strict_recall |
 |---|---|---|---|---|---|---|---|

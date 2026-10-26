@@ -1,13 +1,36 @@
 # Figure 4 source data
 
-`barcode_detection_metrics.tsv` retains all 37 scored input identities and three matched tools (111 rows). Counts satisfy calls=TP+FP and reference_n=TP+FN; precision, recall and F1 are independently recomputed. These metrics measure barcode discovery against the declared reference class, not physical-read assignment accuracy or biological false-cell discovery.
+The [Figure 4 guide](../../docs/figure_04.md) describes barcode discovery across
+37 sequencing inputs. `barcode_detection_metrics.tsv` contains three matched
+tool observations per input, for 111 rows. Counts satisfy `calls = TP + FP`
+and `reference_n = TP + FN`; precision, recall and F1 are calculated from these
+barcode-set comparisons.
 
-The RAGE lymph-node reference is the 5,978-barcode T/B-containing proxy, independently rescored from barcode-level annotations. The upstream master is read only in a temporary validation workspace; only selected current rows are published. An explicit path map recovers moved callsets while retaining original provenance strings. Its independent 703-check validator passes. All 30 Tilgner callsets were also independently rescored against the donor-matched reference. Four historical split-library Visium RAD callset paths under `/tmp` remain missing; downstream metrics and recorded hashes are retained, and this limit is explicit in `validation/figures_124_native_master_path_recovery.json`.
+## Reference sets and barcode calls
 
-ScMixology2 is explicitly reconstructed: native RAD selected calls, BLAZE expected-500 selector replay and Flexiplex filter replay on common RAD counts. The three callsets are independently rescored; RAD is cross-checked against the retained RDS. These heterogeneous execution sources are not relabeled as a new native three-tool FASTQ run.
+The RAGE lymph-node reference contains 5,978 barcodes annotated as T/B-containing.
+All 30 Tilgner callsets use donor-matched references. Source-path recovery and
+rescoring are recorded in the
+[703-check validation report](../../validation/figures_124_native_master_path_recovery.json).
+Four original Visium RAD callsets are missing from their temporary locations;
+their metrics and recorded hashes are retained.
 
-`paired_precision.tsv`, `paired_recall.tsv` and `paired_f1.tsv` preserve exactly the same 37 input IDs. Technical libraries/runs remain input observations and are not asserted to be independent biological replicates. Descriptive review graphics show individual inputs, median boxes and min–max whiskers. Existing statistical analyses and annotations remain unchanged by author instruction. No new inferential procedure is run; scripted proofs are descriptive.
+ScMixology2 combines native RAD calls with a BLAZE expected-500 selector replay
+and a Flexiplex filter replay on common RAD counts. All three sets are rescored
+against the reference, and RAD calls are checked against the retained RDS.
 
-`input_characteristics.tsv` joins the saved 37-row all-read SeqKit table to canonical IDs. Its exact original invocation/version has not been recovered from the checked project logs. AvgQual retains the saved SeqKit field meaning; it is not relabeled arithmetic mean Phred. ScTagger S/L are the uniform-Q20 Figure 4 inputs. A regenerated raw summary pass would be a separately documented comparison, not recovered historical execution.
+Complete public barcode lists and references are in
+[data/figure_04](../../data/figure_04/README.md). The portable scorer reproduces
+all 87 public input–tool comparisons. The other 24 rows contain aggregate
+metrics for controlled-access Visium inputs.
 
-The complete saved public callsets and matched references are now deposited under [data/figure_04](../../data/figure_04/README.md). The portable set scorer exactly reproduces all 87 public input/tool rows. The other 24 controlled Visium rows remain labeled aggregate-only; no identifier file is published for those inputs.
+## Paired metrics and input characteristics
+
+`paired_precision.tsv`, `paired_recall.tsv` and `paired_f1.tsv` share the same
+37 input IDs. Each observation is a sequencing input, including individual
+technical libraries and runs.
+
+`input_characteristics.tsv` joins the saved 37-row all-read SeqKit summary to
+the canonical input IDs. `AvgQual` retains the SeqKit summary-field definition.
+The ScTagger S/L inputs use uniform Q20 qualities. The original SeqKit invocation
+and version are absent from the retained execution records.

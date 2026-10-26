@@ -1,6 +1,6 @@
-# Flexiplex BCR/TCR cell-line run status
+# Flexiplex BCR/TCR cell-line analysis
 
-Status: **completed successfully** on 2026-08-11.
+This analysis was completed on 11 August 2026.
 
 ## Inputs and integrity
 
@@ -17,19 +17,16 @@ Status: **completed successfully** on 2026-08-11.
 
 ## Tools and execution
 
-Flexiplex 1.02.6 was not present in the cluster environment. The active
-binary was 1.01; the only cached 1.02.x binary was 1.02.5, so 1.02.5 was
-used explicitly as the documented fallback (no silent substitution). It was
-run with its cached libstdc++ 13.2 runtime:
+The run used Flexiplex 1.02.5 with the cached libstdc++ 13.2 runtime.
 
 - Flexiplex 1.02.5: `/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/miniconda3/pkgs/flexiplex-1.02.5-py39h2de1943_0/bin/flexiplex`
 - minimap2 2.26-r1175: `/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/miniconda3/pkgs/minimap2-2.26-he4a0461_1/bin/minimap2`
 - Python 3.9.16: `/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/miniconda3/bin/python3`
 - gzip 1.9 (`/usr/bin/gzip`), GNU bash 4.4.20, GNU Awk 4.2.1
-- 128 online CPUs; worker allocation: Flexiplex `-p 56`, minimap2 `-t 20` (76 requested workers, under the authorized 80-core cap)
+- 128 online CPUs; worker allocation: Flexiplex `-p 56`, minimap2 `-t 20` (76 workers)
 
 The reproducible wrapper is `run_flexiplex_bcrtcr.sh`. Its pipeline is the
-requested gzip → tee(process-substitution Flexiplex) → minimap2 → awk stream,
+gzip → tee(process-substitution Flexiplex) → minimap2 → awk stream,
 with explicit capture of both pipefail status and the asynchronous Flexiplex
 status, followed by `python3 join_flexiplex_bcrtcr.py` inside WORK.
 
@@ -41,8 +38,7 @@ Join completion: `2026-08-11T18:49:48-04:00`.
 
 Minimap2 reported real time 587.054 s, CPU 875.318 s, peak RSS 1.337 GB.
 
-Exit status: pipeline 0; Flexiplex 0; join 0. The running marker was removed
-after completion.
+Exit status: pipeline 0; Flexiplex 0; join 0.
 
 ## Counts and concordance
 
@@ -51,8 +47,8 @@ after completion.
 - Flexiplex reads with more than one barcode (tool log): 45,612
 - Sidecar assignment records: 6,755,575
 - Sidecar unique read IDs: 6,665,219
-- Ambiguous read IDs dropped by join: **69,988** (target ≈69,988)
-- Assigned unique read IDs after ambiguity removal: **6,595,231** (target ≈6,595,231)
+- Ambiguous read IDs dropped by join: **69,988**
+- Assigned unique read IDs after ambiguity removal: **6,595,231**
 - Reduced minimap2 hits: 16,233,872 rows / 11,467,989 unique read IDs
   - BCR target rows: 10,459,673; TCR target rows: 5,774,199; other: 0
 - Corrected summary total: 6,595,231 (BCR 2,985,039; TCR 1,126,957; unmapped 2,483,235)

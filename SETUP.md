@@ -1,91 +1,83 @@
-# Run the readable analysis steps
+# Setup and analysis
 
-Begin with the [figure walkthrough](README.md) for the panel of interest. The
-small scripts show their expected columns and write inspectable TSV/CSV outputs.
-Most counting examples use only the Python standard library. Plotting and the
-full matrix checks require a scientific Python environment.
+The [figure guides](README.md) list the inputs, commands and software versions
+for each experiment. Most small counting scripts use the Python standard
+library. Plotting and matrix analysis require the scientific Python environment
+below; the named RDS and Seurat steps also require R.
 
-## Portable render environment
+## Install the analysis environment
 
-The independent render check uses Python 3.11 and this exact dependency lock:
+The source-table checks use Python 3.11 with pinned dependencies:
 
 ```bash
 python3.11 -m venv .venv
 .venv/bin/pip install -r environments/render-python311.lock.txt
 ```
 
-Use `.venv/bin/python` in the walkthrough commands if your default `python3`
-selects a different environment. Limit numerical-library threads for small
-checks with `OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1`.
-The initial HPC verification used the system Python3.6.8 environment; it is
-recorded in the run receipts and is not silently substituted for tool-producer
-versions. R/Seurat are needed only for the explicitly named RDS inspection or
-producer steps, not for reading TSVs or rendering their Python proofs.
-
-## Three starting points
-
-1. **Read or run an example.** `data/examples/figure_XX/` includes actual bounded
-   source records, source hashes, selection rules and expected outputs. These
-   examples explain an operation; they are not full reproduction evidence.
-2. **Resume a checkpoint.** Restore the current checkpoints listed by the
-   figure's manifest, verify their hashes, then run the linked count/metric
-   scripts. The full source tables are in `source_data/figure_XX/`.
-3. **Run from raw reads.** Follow the exact producing-run parameters in the
-   figure guide. The raw input, reference, supplied list and software pins are
-   all dependencies. A path existing is not proof of identity; check its hash.
-
-The supplementary `scripts/revision/` commands reconstruct and validate full
-checkpoint tables. They are implementation aids; the numbered figure-specific
-steps and column examples are the main explanation.
-
-## Current checkpoints and local paths
-
-Large FASTQs, BAMs, read ledgers and MEX files are not committed to Git.
-`checkpoints/` is ignored. Exact retained locations/hashes and acquisition
-identifiers appear in the figure manifests. On this HPC installation,
-`/Volumes/rad_data` maps to
-`/dartfs/rc/lab/A/AckermanLab/CMV/rad_data`; this mapping does not alter source
-identity. For ScTagger quality generation, the original literal model pathname
-is part of the effective RNG seed and must be preserved as data, not rewritten.
-
-Do not put home-directory paths into a reproducibility command without declaring
-what asset they identify. The compact deposited source tables and examples can
-be read independently of HPC paths.
-
-## Restore a supplied checkpoint archive
-
-The [release guide](docs/release_review.md) names the separate checkpoint,
-software and RAGE read-order archives. They are prepared for review; an archive
-being staged locally does not mean it has been published. The source tables and
-small examples in Git remain usable without them.
-
-After obtaining the archive and its SHA-256 manifest, verify the checksum before
-extracting it. From the repository root, restore only its checkpoint payload:
+Use `.venv/bin/python` in place of `python3` to select this environment. For small
+checks, limit numerical-library threads with:
 
 ```bash
+export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
+```
+
+The original HPC checks used system Python 3.6.8. Producing-run versions for RAD,
+BLAZE, Flexiplex and other analysis tools are recorded separately in each figure
+guide.
+
+## Choose the starting data
+
+**Source tables and examples.** The `source_data/figure_XX/` directories contain
+the complete plotting and metric tables. The `data/examples/figure_XX/`
+directories contain selected records, extraction rules, source hashes and
+expected outputs. Run the numbered steps in a figure guide to follow the
+calculation from these inputs.
+
+**Saved checkpoints.** Restore the files listed in the figure's checkpoint
+manifest, verify their SHA-256 hashes, and run the linked counting or metric
+scripts. The `scripts/revision/` commands rebuild the full checkpoint tables.
+
+**Raw reads.** Follow the producing-run commands in the figure guide. Each run
+requires its specified raw input, reference, barcode list and software version.
+
+## Restore checkpoint files
+
+Large FASTQ, BAM, assignment-ledger and sparse-matrix files are stored in
+`checkpoints/`, which is excluded from Git. The [data-package guide](docs/release_review.md)
+lists the archives and their contents. After obtaining an archive and its
+SHA-256 manifest, verify the archive and restore its checkpoint payload from the
+repository root. For example:
+
+```bash
+shasum -a 256 /path/to/rad-manuscript-checkpoints-05.tar.gz
 tar -tzf /path/to/rad-manuscript-checkpoints-05.tar.gz
 tar -xzf /path/to/rad-manuscript-checkpoints-05.tar.gz \
   --strip-components=1 --wildcards 'rad-manuscript/checkpoints/*'
 ```
 
-Use the corresponding archive name for Figures 3, 6/7, HD, RAGE software or RAGE
-read order. Each figure's checkpoint manifest records the resulting relative
-paths and exact hashes. For a raw RAGE replay, follow the
-[public-input reconstruction](docs/rage_public_input_order.md) before running
-the tools; the ENA file has a different read order.
+Use the corresponding archive for Figures 3, 6/7, Visium HD or RAGE-seq. Figure
+manifests give the restored relative paths and file hashes. RAGE-seq raw-read
+runs require the [input-order reconstruction](docs/rage_public_input_order.md),
+which restores the read order used in the benchmark from the public ENA file.
 
-## CPU jobs on Dartmouth Discovery
+On the original HPC installation, `/Volumes/rad_data` maps to
+`/dartfs/rc/lab/A/AckermanLab/CMV/rad_data`. Figure manifests identify the files
+at these locations. ScTagger quality generation uses the original literal model
+pathname as part of its effective random seed; retain that pathname in the
+quality-generation configuration.
 
-Inspect the live partition hardware before submission. Current validation used
-`standard`, whose nodes reported no GPU GRES, with account `lsonglab`, explicit
-CPU/memory/time requests and `--gres=gpu:0`. The account permits/defaults to
-`lsonglab_gpu`; the CPU-only partition is the placement safeguard. Do not route
-CPU-only jobs to a02 or unrestricted `preempt_lsong`. Example scripts record
-resources per job; old dependency IDs are never reused.
+## Build diagnostic Flexiplex
 
-## Custom Flexiplex
-
-[The pinned diagnostic source](vendor/flexiplex-audit/README.md) builds offline
-with a C++11 compiler. `build_and_check.py` verifies the exact patch and tests
-pre-correction barcode output. `FLEXIPLEX_AUDIT_SOURCE_FILE` must be unset for
+The [pinned diagnostic source](vendor/flexiplex-audit/README.md) builds offline
+with a C++11 compiler. `build_and_check.py` verifies the patch and tests the
+pre-correction barcode output. Leave `FLEXIPLEX_AUDIT_SOURCE_FILE` unset for
 manuscript assignment runs.
+
+## Dartmouth Discovery jobs
+
+The recorded CPU jobs used partition `standard`, account `lsonglab`, explicit
+CPU, memory and time requests, and `--gres=gpu:0`. Select a CPU-only partition
+when submitting these jobs; the account's default partition is `lsonglab_gpu`.
+The supplied job scripts record the resources for each analysis. Check the
+current partition configuration and use the new job IDs when setting
+submission dependencies.

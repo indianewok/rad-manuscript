@@ -1,12 +1,9 @@
-# Nanopore2018 barcode quality across the complete dataset
+# Nanopore2018 barcode quality
 
-The [full-data table](full_quality_with_blaze_f1.tsv) gives the correct and
-incorrect read-barcode counts, their mean quality scores, and existing BLAZE
-discovery F1 for every selected condition. The counts refer to observed barcode
-windows in individual reads, not unique barcodes called by BLAZE.
-
-All **4,993,805 reads** were scanned. The **17,645 reads with no located barcode**
-are excluded from both quality groups. Counts below are individual read-barcode windows.
+The [complete-dataset table](full_quality_with_blaze_f1.tsv) combines correct
+and incorrect barcode-window counts, mean quality scores and BLAZE discovery
+F1 for each selected condition. The scan covers all 4,993,805 reads. The
+17,645 reads without a located barcode are excluded from both quality groups.
 
 | Quality shift | Correct reads | Incorrect reads | Correct mean Q | Incorrect mean Q | Q difference | BLAZE F1 |
 |---|---:|---:|---:|---:|---:|---:|
@@ -23,58 +20,52 @@ are excluded from both quality groups. Counts below are individual read-barcode 
 | +13 | 879,860 | 4,096,300 | 28.465 | 25.635 | 2.830 | 0.9428 |
 | Unshifted | 879,860 | 4,096,300 | 15.465 | 12.635 | 2.830 | — |
 
-The group counts stay fixed because the sequence and its errors stay unchanged.
-Differences are calculated before rounding. An em dash means no recorded BLAZE result.
+Sequences and error patterns are retained across all shifts, so the group
+counts remain fixed. Quality differences are calculated before rounding. The
+unshifted BLAZE result is unrecorded and its metric fields are blank.
 
-## Software and input
+## Input and software
 
-The original quality scores used **Badread 0.4.1**, its pinned
-[**Nanopore2018 model**](../models/nanopore2018.gz), and seed **20260731**.
-The model's scores range from **Q1 to Q28**.
-The retained full FASTQ is the **+1 condition**, containing scores Q2–Q29.
-Subtracting 1 therefore recovers the original scores exactly: no clipping
-occurred and no scores need to be sampled again.
+The quality scores were generated with Badread 0.4.1, its pinned
+[Nanopore2018 model](../models/nanopore2018.gz) and seed `20260731`. The model
+produces scores from Q1 to Q28. The retained complete FASTQ is the +1 condition,
+with scores from Q2 to Q29. Subtracting one recovers the native scores exactly.
 
-The scan uses **edlib 1.3.9** and the original barcode-location function.
-The adapter is `CTACACGACGCTCTTCCGATCT`, adapter maximum edit distance is **7**,
-boundary slop is **8**, and each window contains **16 bases**. Both orientations
-are checked. The known barcode in the read header resolves the barcode location.
-The copied locator functions are identical to those in the original 2018
-generator; the [independent review](../../../validation/figure_02_scanner_2018_independent_review.json)
-records this check and the model's score support.
+The scan uses edlib 1.3.9 and the original barcode locator. It searches both
+orientations for adapter `CTACACGACGCTCTTCCGATCT`, with a maximum adapter edit
+distance of 7 and boundary slop of 8. Each window contains 16 bases. The known
+source barcode in the read header resolves its location. The
+[locator check](../../../validation/figure_02_scanner_2018_independent_review.json)
+verifies the copied functions against the original generator.
 
-**BLAZE 2.6.0a0** discovery uses `--expect-cells 5000`,
-`--10x-kit-version 3v3`, and `--minQ 15`, with empty-droplet output and
-demultiplexing disabled. Its F1 values come from the original full-data results.
-The [Figure 2 tool registry](../../../docs/figure_02.md#versions-and-parameters-that-produced-these-data)
-gives exact build hashes and producing commands. An unshifted 2018 BLAZE result
-is not recorded; its metric fields are blank, not zero.
+BLAZE 2.6.0a0 discovery used `--expect-cells 5000`, `--10x-kit-version 3v3` and
+`--minQ 15`, with empty-droplet output and demultiplexing disabled. F1 values
+come from the retained complete-dataset discovery results. The
+[Figure 2 guide](../../../docs/figure_02.md) gives the build hashes and commands.
 
-## Follow the calculation
+## Calculation
 
-1. Inspect [the first 20 actual read windows](first20_barcode_windows.tsv).
-   The true and observed sequences, edit distance, barcode location, and all
-   16 recovered native quality scores are shown. Adding 1 to each listed score
-   gives the corresponding stored input score.
-2. Inspect [read counts by edit distance](barcode_edit_distance_counts.tsv)
-   and [native quality counts by edit distance](barcode_quality_by_ed.tsv).
-   Correct means edit distance zero; incorrect means one or more sequence edits.
-   Unlocated reads are counted separately and excluded from both groups.
-3. For each condition, add its shift to every native score. Every selected
-   result remains within Q1–Q50, so clipping has no effect. Within each group,
-   sum `score * base_count` and divide by the total number of barcode bases.
-   All windows contain 16 bases, so this equals the average of the per-read
-   barcode means. The [summary](full_quality_summary.tsv) exposes both integer
-   quality sums and their denominators.
-4. Join the existing BLAZE discovery counts and recompute
-   `F1 = 2*TP / (2*TP + FP + FN)`. The read-level groups used for quality means
-   are distinct from BLAZE's true-positive and false-positive barcode calls.
+A correct barcode window has edit distance zero from its known source barcode;
+an incorrect window has one or more sequence edits. The
+[first 20 windows](first20_barcode_windows.tsv) show both sequences, edit distance,
+location and all 16 recovered native scores. Adding one to those scores gives
+the corresponding stored input qualities.
 
-The mean difference is a comparison between two groups of reads. It is not a
-fixed quality penalty assigned to each error. Because each group receives the
-same unclipped shift, the difference between its means stays constant.
+The [read counts](barcode_edit_distance_counts.tsv) and
+[native base-score histogram](barcode_quality_by_ed.tsv) summarize the complete
+dataset by edit distance. Add each selected shift to every native score. All
+results remain within Q1–Q50. Within each barcode group, sum
+`shifted_score × base_count` and divide by the total number of barcode bases.
+All windows contain 16 bases, so each read has equal weight. The
+[quality summary](full_quality_summary.tsv) records the integer sums and
+denominators.
 
-## Reproduce
+Join the BLAZE discovery counts and calculate
+`F1 = 2 × TP / (2 × TP + FP + FN)`. The quality groups describe individual read
+windows; TP, FP and FN describe the discovered barcode set. Applying the same
+shift to both quality groups preserves the difference between their means.
+
+## Reproduce the analysis
 
 Run from the repository root with edlib 1.3.9:
 
@@ -88,26 +79,22 @@ python scripts/figure_02/summarize_full_barcode_quality_2018.py \
 ```
 
 The [scanner](../../../scripts/figure_02/summarize_full_barcode_quality_2018.py)
-reads the complete retained FASTQ once with bounded parallel workers. It checks
-the score range of every input base and records separate hashes for the actual
-stored qualities and their exact unshifted values. The [run receipt](run.json)
-records counts, software versions, source identities, and sample checks.
-The [staging receipt](../../../validation/figure_02_full_quality_2018_staging.json)
-identifies the retained input and its compressed SHA256. The
+reads the FASTQ once, checks every input score and records separate hashes for
+the stored and recovered native qualities. The [run record](run.json) contains
+counts, versions, source identities and sample checks. The
+[input record](../../../validation/figure_02_full_quality_2018_staging.json)
+identifies the compressed FASTQ and its SHA-256 hash. The
 [Dartmouth submission script](../../../scripts/figure_02/summarize_full_barcode_quality_2018.sbatch)
-uses eight CPUs on a verified CPU-only partition, with no GPUs.
+requests eight CPUs.
 
-The [independent validator](../../../scripts/figure_02/validate_full_barcode_quality_2018.py)
-checks the original [generation counts](source_generation_summary.tsv),
-[full-stream identities](source_variant_invariants.tsv),
-[native minimum-score histogram](source_native_barcode_min_q.tsv), all recorded
-shifted minimum-Q15 pass counts and pooled means, and all 600,000 quality values
-in the retained paired sample. The original pooled means were saved to six
-decimal places; their comparison allows only that rounding difference.
-The original generator did not save a base-score histogram, so the new
-base-score histogram is checked for internal conservation and against those
-independent records. The [validation report](../../../validation/figure_02_full_barcode_quality_2018.json)
-states exactly which comparisons were possible.
+The [validator](../../../scripts/figure_02/validate_full_barcode_quality_2018.py)
+checks the [generation counts](source_generation_summary.tsv),
+[complete-stream identities](source_variant_invariants.tsv),
+[native minimum-score histogram](source_native_barcode_min_q.tsv), shifted
+minimum-Q15 pass counts, pooled means and all 600,000 quality values in the
+retained paired sample. Comparisons with original pooled means allow their
+recorded six-decimal rounding. Base-score counts are checked for conservation
+and agreement with these independent summaries.
 
 ```bash
 python scripts/figure_02/validate_full_barcode_quality_2018.py \
@@ -118,3 +105,6 @@ python scripts/figure_02/validate_full_barcode_quality_2018.py \
   --output /tmp/full_barcode_quality_2018/full_quality_with_blaze_f1.tsv \
   --report /tmp/full_barcode_quality_2018/validation.json
 ```
+
+The [validation report](../../../validation/figure_02_full_barcode_quality_2018.json)
+records the comparisons and their results.

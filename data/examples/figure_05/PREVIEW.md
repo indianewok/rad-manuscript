@@ -1,6 +1,6 @@
-# Figure 05 — actual bounded source-data preview
+# Figure 5 — source-data examples
 
-These are real excerpts from the public cell-line experiment, not synthetic data. They illustrate data structure and named transformations; they do not reproduce a whole figure from the excerpt alone. [Source hashes, exact paths and selection](extraction.json) and the [walkthrough](../../../docs/figure_05.md) give the full scope.
+The tables below show selected RAGE-seq receptor assignments and the paired LR-Split-seq short-read reference. [Extraction details](extraction.json) record source paths, hashes and selected rows. The [Figure 5 guide](../../../docs/figure_05.md) gives the complete analysis.
 
 ## Read assignment root (first six rows)
 

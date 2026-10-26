@@ -1,11 +1,41 @@
 # Figure 1 source data
 
-`accepted_phase_records.tsv` is rebuilt from GNU-time records and actual status/COMPLETE markers. Nonempty files preserved on rad_data and zero-byte markers retained on scratch were joined through the byte-hashed `timing_raw_source_registry.tsv`; no success markers were manufactured. The 108 accepted phase rows describe two inputs × three tools × three thread counts × three repetitions × two phases. Historical invalid and superseded attempts were not promoted.
+The [Figure 1 guide](../../docs/figure_01.md) describes the RAD workflow, timing
+benchmark and Visium HD analysis.
 
-`combined_replicates.tsv` sums matching detection/demultiplexing wall seconds and takes the larger process maxRSS across the two phases. KiB × 1024 / 1e9 gives decimal GB. This memory measure is not summed process-tree memory. `timing_summary.tsv` contains means and sample SDs over three repetitions. Review figures declare this error-bar convention. The source hardware stratum is AMD EPYC 7543, with 4/16/64 requested threads. SN-ONT is single-nucleus ONT; SC-PB is single-cell PacBio. The historical RAD parser's one-fewer-record SC-PB count remains an upstream disclosed discrepancy.
+## Computational efficiency
 
-`algorithm_crosswalk.tsv` and `pinned_algorithm_audit.md` describe current main cb699170. Historical efficiency experiments retain their own software pins, including RAD 4acbe00. The scripted workflow schematic is an editable review alternative; it is not an asserted reconstruction of the original artwork.
+`accepted_phase_records.tsv` contains 108 successful timing phases: two inputs,
+three tools, three thread counts, three repetitions and two phases. GNU-time
+records are joined to status and completion markers through the file hashes in
+`timing_raw_source_registry.tsv`.
 
-`hd_RAD_bins.tsv` preserves PBC44593 16-µm whitelist-detection counts, validity flags and the full-table denominator 45,979,761. All four wide-table totals exactly match the original valid-pair count tables; see `hd_stage_counts.tsv` and `validation/figures_124_hd_lineage.json`. The 165,898 differences in `hd_stage_differences.tsv` compare detection counts to the separate retained `rad_demux` column; requiring identity across these stages is inapplicable. The plotting-required full-grid and in-tissue columns are reconstructed exactly from this selected data and independently match saved raw/filtered 16-µm barcode sets; see `hd_grid_reference_sources.json` and the grid reconstruction receipt. The original named positions file, full count-to-bin creation code, and selected Seurat counts/provenance remain missing. No triptych is rendered. Empty transformed values remain nonpositive/unplotted counts, without pseudocounts.
+`combined_replicates.tsv` sums the detection and demultiplexing wall times for
+each repetition. Its memory measurement is the larger process maximum RSS
+across the two phases, converted from KiB to decimal GB as `KiB × 1024 / 1e9`.
+`timing_summary.tsv` reports the mean and sample standard deviation across the
+three repetitions. Runs used AMD EPYC 7543 hardware with 4, 16 or 64 requested
+threads. SN-ONT denotes single-nucleus ONT; SC-PB denotes single-cell PacBio.
+The RAD parser recorded one fewer SC-PB read than the input reference count.
 
-All new outputs are checkpoint resumptions or descriptive renders. No new sequencing or timing experiment was run.
+`algorithm_crosswalk.tsv` and `pinned_algorithm_audit.md` describe RAD commit
+`cb699170`. The timing experiments retain their own software versions, including
+RAD `4acbe00`.
+
+## Visium HD
+
+`hd_RAD_bins.tsv` contains PBC44593 16-µm barcode-detection counts, validity flags
+and the full-table denominator of 45,979,761. The four wide-table totals match
+the original valid-pair count tables. `hd_stage_counts.tsv` records those totals;
+`hd_stage_differences.tsv` contains 165,898 bins whose detection count differs
+from the separately retained demultiplexing count.
+
+Full-grid and tissue-mask columns are reconstructed from the selected data and
+match the saved raw and filtered 16-µm barcode sets. Their sources are recorded
+in `hd_grid_reference_sources.json`. Nonpositive counts have empty transformed
+values and are omitted from logarithmic plots.
+
+A complete spatial-count reconstruction also requires the original positions
+file, count-to-bin generation code and selected Seurat count values. The
+[reproducibility checks](../../docs/validation.md) summarize those input
+requirements.

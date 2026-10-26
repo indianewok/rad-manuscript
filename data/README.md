@@ -1,66 +1,59 @@
-# Read the data from its source to the figure
+# Data guide
 
-Start with the [figure walkthroughs](../README.md). Each begins with the actual
-producer versions and parameters, then follows named records through small
-scripts to the plotted values.
+The [figure guides](../README.md) follow each analysis from its input records to
+its plotted values. The files below provide the source data, examples and
+identifiers used in those steps.
 
-| Location | Contents | How to use it |
-|---|---|---|
-| [`examples/`](examples/) | Small real excerpts, with source hashes and selection rules | Open directly on GitHub; follow the worked rows |
-| [`../source_data/`](../source_data/) | Complete selected plot/metric tables and schemas | Inspect values, join keys and denominators; rerender a panel |
-| [`../manifests/datasets.tsv`](../manifests/datasets.tsv) | Dataset/input IDs, accessions, access status and reference type | Locate the raw acquisition source and distinguish technical inputs |
-| [`../manifests/data_files.tsv`](../manifests/data_files.tsv) | Table columns, row counts, byte sizes and SHA-256 hashes | Verify exactly which file is being inspected |
-| `../checkpoints/` | Larger local read ledgers, sparse matrices and reference files | Restore the separately packaged checkpoint files; these are excluded from Git |
+| Location | Contents |
+|---|---|
+| [`examples/`](examples/) | Selected source records, extraction rules, hashes and expected outputs |
+| [`../source_data/`](../source_data/) | Complete plotting and metric tables with schemas |
+| [`../manifests/datasets.tsv`](../manifests/datasets.tsv) | Dataset IDs, accessions, access requirements and reference types |
+| [`../manifests/data_files.tsv`](../manifests/data_files.tsv) | Columns, row counts, file sizes and SHA-256 hashes |
+| `../checkpoints/` | Large read ledgers, sparse matrices and reference files restored from the checkpoint archives |
 
-## The file types
+## File formats and identifiers
 
-**FASTQ** has four lines per read: identifier, sequence, separator and quality
-string. A physical read can produce more than one emitted segment. The example
-must say whether it is a physical read or a segment; never infer that from the
-number of rows alone.
+**FASTQ.** Each record contains an identifier, nucleotide sequence, separator and
+quality string. A physical read can yield several emitted segments. The example
+schemas identify the counting unit and the relationship between original-read
+and segment identifiers.
 
-**Assignment TSVs** retain the original read ID, the tool-selected barcode and,
-where available, the observed raw barcode. The diagnostic Flexiplex table keeps
-`CellBarcode` and `RawCellBarcode` separately. A barcode that was not selected is
-not the same as a selected barcode with zero reads. Figure 3's strict-read
-challenge excludes every ID with multiple assignment rows, including identical
-duplicates. Its measured-correction analysis instead uses unique read–target
-pairs and allows overlapping class flags. The [Figure 3 guide](../docs/figure_03.md)
-shows why those denominators differ.
+**Assignment tables.** These tables link the original read ID to the selected
+barcode and, when available, the extracted barcode sequence. Diagnostic
+Flexiplex output stores `CellBarcode` and `RawCellBarcode` in separate columns.
+Figure 3's off-list challenge counts physical reads with exactly one assignment
+row. Its correction analysis counts unique original-read–target-barcode pairs;
+category flags can overlap for a pair. The [Figure 3 guide](../docs/figure_03.md)
+defines both counting procedures and their denominators.
 
-**Matrix Market / MEX** uses separate matrix, feature and barcode files. Integer
-row/column coordinates are one-based indexes into the feature/barcode files.
-All three files are required. Figure 7 normalization uses each cell's complete
-library total before filtering genes; a tiny displayed matrix slice is not a
-valid substitute for that total.
+**Matrix Market / MEX.** A sparse matrix is accompanied by feature and barcode
+files. Its one-based row and column indexes refer to these files. Figure 7 uses
+each nucleus's complete library total for normalization before filtering genes.
 
-**VCF and CellSNP** preserve variant order and cell order. Figure 6 explicitly
-records the identical duplicated VCF records present in the selected source;
-counts of records and counts of unique variant keys differ. No deduplication or
-coordinate conversion is performed silently.
+**VCF and CellSNP.** Variant and cell order link the genotype inputs and outputs.
+The selected Figure 6 VCF retains identical duplicate records; its schema
+reports both record counts and unique variant keys.
 
-**Plot tables** use stable input/barcode/gene keys and preserve the numerator,
-denominator, missingness and transformation. Empty or null fields mean missing
-or undefined as specified by the local schema. Zero means an observed zero.
-The file inventory's `header_present` field identifies native tables without
-headers, including barcode lists and `samtools idxstats` exports. Their first
-line is counted as data; the inventory supplies descriptive column names.
+**Plot tables.** Input, barcode and gene keys identify observations. Local
+schemas define numerators, denominators, transformations and missing values.
+Zero represents an observed zero; empty or null fields represent missing or
+undefined values. The file inventory's `header_present` field identifies tables
+without headers, including barcode lists and `samtools idxstats` output. The
+inventory supplies descriptive column names for those files.
 
-## Where full inputs come from
+## Dataset sources
 
-The [dataset registry](../manifests/datasets.tsv) records 37 Figure 4 input
-identities, plus Visium HD and LR-Split-seq. Raw-read accessions and matched
-reference definitions belong to each input; a study accession alone is not a
-file identity. Figure-specific manifests retain exact file hashes and commands.
+The [dataset registry](../manifests/datasets.tsv) identifies the 37 Figure 4
+inputs, Visium HD and LR-Split-seq. Each entry gives the acquisition source and
+matched reference. Figure-specific manifests record file hashes and processing
+commands. ScMixology2 uses the reconstructed input described in the Figure 4
+guide.
 
-The eight Engblom/Swedish Visium libraries use controlled EGA access
-(`EGAD00001011062`, study `EGAS00001007337`, DAC `EGAC00001003294`). Their raw
-reads are not redistributed here. The registry preserves their benchmark
-identities; derived-data release eligibility remains part of final release
-review. ScMixology2 is explicitly reconstructed and remains in all 37 inputs.
+The eight Engblom/Swedish Visium libraries are available through controlled EGA
+access: dataset `EGAD00001011062`, study `EGAS00001007337`, and data-access
+committee `EGAC00001003294`. Their aggregate benchmark metrics and acquisition
+identifiers are included here; raw reads are obtained through EGA.
 
-The older published workspace record is not the current data dependency.
-Current source tables, schemas and checkpoint instructions replace global
-R sessions as the readable entry point. No superseded workspace is deposited in
-this tree. Current archival identifiers will be added only after they are verified
-and the release is approved.
+The [data-package guide](../docs/release_review.md) describes the checkpoint
+archives used to resume analyses from saved intermediate data.

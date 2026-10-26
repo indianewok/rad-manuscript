@@ -1,20 +1,18 @@
-# RAGE reference and chemistry catalog
+# RAGE-seq reference barcodes
 
-These are the complete fixed identifier sets used to draw the three supplied
-challenge lists. The [Figure 3 walkthrough](../../docs/figure_03.md) begins with
-the exact tool versions and then follows real reads into counts.
+The off-list challenge uses the matched short-read reference and the complete
+10x 3′ v2 chemistry catalog to sample three target lists. Each list contains
+4,505 catalog barcodes after exclusion of the reference set. All three tools
+receive the same list within each replicate. The [Figure 3 guide](../../docs/figure_03.md)
+describes the sampling and assignment analysis.
 
-| File | Meaning | Rows |
+| File | Contents | Rows |
 |---|---|---:|
-| [Matched reference](rage_matched_reference_4505.txt) | Filtered short-read cell barcodes, with the terminal `-1` removed, deduplicated and sorted | 4,505 |
-| [Chemistry catalog](chemistry_3v2_catalog.txt.gz) | All possible 10x 3v2 barcode sequences in the selected catalog | 737,280 |
-| [Source manifest](source_manifest.tsv) | Compressed/plain hashes, normalization and original source identities | 2 files |
+| [Matched reference](rage_matched_reference_4505.txt) | Filtered short-read cell barcodes, with terminal `-1` suffixes removed, deduplicated and sorted | 4,505 |
+| [Chemistry catalog](chemistry_3v2_catalog.txt.gz) | Valid 10x 3′ v2 barcode sequences | 737,280 |
+| [Source manifest](source_manifest.tsv) | Source identities, normalization rules and compressed/plain file hashes | 2 files |
 
-Each random challenge list contains 4,505 catalog barcodes outside the matched
-reference. Every tool receives the same list within a replicate. The full catalog
-is a design list; membership does not indicate that a cell was observed.
-
-The first five actual lines of each file are:
+The first five barcodes in each file are:
 
 | Matched reference | Chemistry catalog |
 |---|---|
@@ -24,6 +22,6 @@ The first five actual lines of each file are:
 | `AAACCTGAGTGGGCTA` | `AAACCTGAGAAACGAG` |
 | `AAACCTGCAAACGTGG` | `AAACCTGAGAAACGCC` |
 
-The complete raw FASTQ is acquired separately. Its original read identifiers,
-sequence, quality and **order** are verified before an exact replay. See the
-[public input-order guide](../../docs/rage_public_input_order.md).
+Obtain the raw FASTQ and restore the benchmark read order using the
+[public-input guide](../../docs/rage_public_input_order.md). That procedure
+verifies read identifiers, sequences, qualities and order.

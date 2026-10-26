@@ -1,0 +1,490 @@
+{
+  "exporter": "GraphPad Prism",
+  "exporter_version": "Prism 11.0.0 (93) Mac Tuesday, February 10, 2026",
+  "export_script_sha256": "5af88ec3f5de50a07f61d6e2d6800b650cb6b893b61fb4d4cc7830b72e4ba651",
+  "source_directory": "Nat Comm/appeal/figure_revisions/CURRENT FIGURES",
+  "format": "PNG",
+  "exports": [
+    {
+      "source_file": "figure_1/Figure 1.prism",
+      "source_sha256": "9ac1bec05e055eeb24f6f1cd1215b0bc6da65e2f605b9faff0ea10e74e1abcb5",
+      "source_prism_version": "11.0.0.93",
+      "layout_id": "8525848D-FB3C-42CC-9F1C-6F7F5A67F4CE",
+      "layout_index": 2,
+      "layout_title": "Layout 2",
+      "linked_graphs": [
+        {
+          "id": "5489FAA8-BC66-497C-B04E-C4A6B1489E8E",
+          "title": "Copy of total max memory"
+        },
+        {
+          "id": "9E11669E-3492-4F47-95A1-9BF53A7437E5",
+          "title": "SN-ONT total time in hours"
+        }
+      ],
+      "image": "figures/figure_01/prism/figure_01.png",
+      "resolution_dpi": 300,
+      "image_sha256": "c7760e749401ab149cd2158dc953077ebd792d7ec29204052899dbae827da137",
+      "width": 3280,
+      "height": 1567,
+      "original_unchanged": true,
+      "copy_unchanged": true
+    },
+    {
+      "source_file": "Figure 2.prism",
+      "source_sha256": "e45c68f938dbcb31aea2622d6739bc8078323c0fe920e319b67da1eae9da79e0",
+      "source_prism_version": "11.0.0.93",
+      "layout_id": "30A33090-FD85-4730-B1A1-CDE05A559C52",
+      "layout_index": 2,
+      "layout_title": "Copy of Layout 1",
+      "linked_graphs": [
+        {
+          "id": "B1B9DD97-D8A6-4176-986D-F1FFE06CC16D",
+          "title": "correct assignment"
+        },
+        {
+          "id": "78ED1972-AE8E-4FF9-A806-A4C01F8685AE",
+          "title": "incorrect assignment"
+        },
+        {
+          "id": "F865645E-456D-47FD-8044-D25160387EBA",
+          "title": "copy 2E TP--no blaze FP"
+        },
+        {
+          "id": "122822C9-4B03-4D27-B2BE-010D9D86EC90",
+          "title": "Panel C Copy of Panel C performance parameters"
+        },
+        {
+          "id": "2DA077CB-95AE-40D8-AEDB-D86BA89FAACE",
+          "title": "Panel B stacked"
+        },
+        {
+          "id": "C7434C91-4E18-4805-93E3-FCBE8777D387",
+          "title": "Panel E, native match count per true positive (TP) barcode"
+        },
+        {
+          "id": "3568D2DE-F40D-46FE-B8F5-7C7BB63AA49F",
+          "title": "Figure 2J, incorrect assignments per TP barcode"
+        },
+        {
+          "id": "618D16ED-954A-44DD-B5C8-FA74FF1CD274",
+          "title": "Panel G bottom corrected assignments per TP barcode"
+        },
+        {
+          "id": "B966F8E8-0320-49B2-ACD2-68E5E5FF8904",
+          "title": "Panel F Panel F RAD read correction types (ScTagger-L, n=4,993,805) [Reads]"
+        },
+        {
+          "id": "83474767-C51C-4BC1-B6AB-E18E9B70436B",
+          "title": "Panel F BLAZE read correction types, pie"
+        },
+        {
+          "id": "98FF29A5-EA42-4F66-9919-ABA4DD8B11C4",
+          "title": "Panel F Flexiplex read correction types, pie"
+        }
+      ],
+      "image": "figures/figure_02/prism/figure_02.png",
+      "resolution_dpi": 300,
+      "image_sha256": "f7c7af1164892b74401fe854ebeb2d521b2c6ab913dbec25574b6b87261d8670",
+      "width": 2367,
+      "height": 1005,
+      "original_unchanged": true,
+      "copy_unchanged": true
+    },
+    {
+      "source_file": "Figure 3.prism",
+      "source_sha256": "08d53b9394a1404f621730e926e496a9de790f58fa5175158f5523cbb3c9b536",
+      "source_prism_version": "11.0.0.93",
+      "layout_id": "4B74E124-3EC5-4749-A164-AA426B306E0C",
+      "layout_index": 1,
+      "layout_title": "Layout 1",
+      "linked_graphs": [
+        {
+          "id": "73F311BA-849B-4232-BD38-50F2D99FD8C6",
+          "title": "Panel J"
+        },
+        {
+          "id": "0416174E-A451-4CBA-9CB5-C1A776AB5A54",
+          "title": "Panel K"
+        },
+        {
+          "id": "DB70B66D-16C4-46F5-83BB-8882EAAF2063",
+          "title": "Panel M count total"
+        },
+        {
+          "id": "52B315BE-0A66-465E-8E10-8E3BAC7A476B",
+          "title": "Panel N reads perPanel M count total"
+        },
+        {
+          "id": "272D234A-2C37-4AA8-83A4-4F2E386BB040",
+          "title": "Panel O percentages"
+        }
+      ],
+      "image": "figures/figure_03/prism/figure_03.png",
+      "resolution_dpi": 300,
+      "image_sha256": "d9c7d25dc33ea481478049598a82b0cdc240e29de17bb62b979888250d7bad4c",
+      "width": 2455,
+      "height": 1609,
+      "original_unchanged": true,
+      "copy_unchanged": true
+    },
+    {
+      "source_file": "Figure 4.prism",
+      "source_sha256": "8d7182c5edc4f1a4ca65df2ac697dacdc3e41b725e7b36cf6630c39765bcf5dc",
+      "source_prism_version": "11.1.0.218",
+      "layout_id": "A832BFDA-4E92-4AB6-BA27-1DC54997A075",
+      "layout_index": 1,
+      "layout_title": "Layout 3",
+      "linked_graphs": [
+        {
+          "id": "11E96F24-6450-442A-8E09-25EE32C26895",
+          "title": "**Recall by dataset (per tool)"
+        },
+        {
+          "id": "5977DCE9-EF13-4207-873F-147504A3586E",
+          "title": "**Precision by dataset (per tool)"
+        },
+        {
+          "id": "467B647E-9581-43A1-8D34-EC648F3C844A",
+          "title": "*F1 by dataset (per tool)"
+        },
+        {
+          "id": "964784E4-4787-4A44-BBAA-D14A068F6540",
+          "title": "*F1s new [Synthetic]"
+        },
+        {
+          "id": "FEC2B08B-AA7A-4D69-AB48-ECF261FB2758",
+          "title": "average quality"
+        },
+        {
+          "id": "A52428AF-A888-4050-B8D9-F1B375BEB3A5",
+          "title": "GC content (%)"
+        },
+        {
+          "id": "8BE8B167-74A0-4B7E-A36C-E1356C7F3800",
+          "title": "*precision [Synthetic]"
+        },
+        {
+          "id": "68E1B5E9-EE7E-4211-8154-C02FB818694E",
+          "title": "*precision [Single cell]"
+        },
+        {
+          "id": "FDA4F2F6-85B1-44A8-B3F6-28DD26FD4E17",
+          "title": "*precision [Targeted LR-seq]"
+        },
+        {
+          "id": "817B3DE8-F181-418E-A759-23B94B9FD1E7",
+          "title": "*precision [Single nuclei]"
+        },
+        {
+          "id": "1EC45CBD-9776-4AA6-9729-5851606E64F4",
+          "title": "*precision [Visium]"
+        },
+        {
+          "id": "5A9EC4D9-CD8E-4C64-AF60-26C461EC9223",
+          "title": "*recall [Synthetic]"
+        },
+        {
+          "id": "90D22F3C-2B87-412F-8052-A52089B5D3BE",
+          "title": "*recall [Single cell]"
+        },
+        {
+          "id": "A04A754C-1F3D-481A-9337-A94C5818E9A9",
+          "title": "*recall [Targeted LR-seq]"
+        },
+        {
+          "id": "E04C3AA9-C407-489D-9979-1BED85C21885",
+          "title": "*recall [Single nuclei]"
+        },
+        {
+          "id": "2EDF8493-88DD-496D-BEF9-11B3316EEE79",
+          "title": "*recall [Visium]"
+        },
+        {
+          "id": "86EA0C4F-FA7A-45C4-A704-D8E2A6959389",
+          "title": "*F1s new [Targeted LR-seq]"
+        },
+        {
+          "id": "455C31CE-DB1B-418D-9655-9AB506E8A804",
+          "title": "*F1s new [Visium]"
+        },
+        {
+          "id": "99C724A4-19CD-49FC-8027-342A56F2FE30",
+          "title": "*F1s new [Single nuclei]"
+        },
+        {
+          "id": "095F148A-980C-410C-8C7C-4984A4ADFC22",
+          "title": "*F1s new [Single cell]"
+        },
+        {
+          "id": "B4EDA9E6-38C8-4505-8CBA-CAB902A0374C",
+          "title": "whitelist barcodes"
+        },
+        {
+          "id": "6F77BF85-5FA4-4F34-822A-5E9AC6D6F80B",
+          "title": "Copy of total dataset counts"
+        },
+        {
+          "id": "9A364874-9402-42C0-8C3B-6104B2EDF10A",
+          "title": "number of sequences"
+        }
+      ],
+      "image": "figures/figure_04/prism/figure_04.png",
+      "resolution_dpi": 300,
+      "image_sha256": "ede70a16fcb81a286cb78ef5a06a2b883d3bd89b0fa81f71a8fd6172ecbf06ab",
+      "width": 2288,
+      "height": 1396,
+      "original_unchanged": true,
+      "copy_unchanged": true
+    },
+    {
+      "source_file": "Figure 5.prism",
+      "source_sha256": "dca1ba208150fef5ebcb2a8dd0733d7949002ce64a618ed628c2015c3d24db03",
+      "source_prism_version": "11.0.0.93",
+      "layout_id": "5D32AC1F-A6CB-47FA-929D-4FF453617D61",
+      "layout_index": 4,
+      "layout_title": "Copy of full page final figure",
+      "linked_graphs": [
+        {
+          "id": "0CD032E7-F239-4047-8567-FECF741AE640",
+          "title": "Figure 3G total mapped reads across three replicates"
+        },
+        {
+          "id": "843DAF22-0F02-4210-95ED-1432F5225BE5",
+          "title": "Figure 3G-H, total reads per cell types in short-read data, paired"
+        },
+        {
+          "id": "8B75E1A6-EFE4-41D5-9989-BE03CEFA84F4",
+          "title": "Copy of Copy of monocyte"
+        },
+        {
+          "id": "57BC5C20-131B-424C-AB76-CB336D9DEF9B",
+          "title": "jurkat"
+        },
+        {
+          "id": "87D75565-88E9-463B-995F-DAB14363252F",
+          "title": "ramos"
+        },
+        {
+          "id": "6EE7EE39-D3D0-45A5-806C-DE98C5CC6C54",
+          "title": "Figure 3 total cells across three replicates"
+        },
+        {
+          "id": "70361E96-8DB6-4789-AF86-BA679C25A7A1",
+          "title": "Data 30"
+        },
+        {
+          "id": "238E2DC1-408E-4BA9-9C65-DC5397A1F59D",
+          "title": "Primary ED2 - Myoblast cells"
+        },
+        {
+          "id": "FCCCEDCE-0FE1-48BE-9B33-2F5336CFDD7A",
+          "title": "Primary ED2 - Myoblast nuclei"
+        },
+        {
+          "id": "D9787104-4D40-4731-A771-6CEED3B3179B",
+          "title": "Primary ED2 - Myotube nuclei"
+        },
+        {
+          "id": "963F2B95-8690-4864-B04C-2A41B69FA01B",
+          "title": "split seq"
+        }
+      ],
+      "image": "figures/figure_05/prism/figure_05.png",
+      "resolution_dpi": 300,
+      "image_sha256": "5b0abebba3d2c2567a00906aeb0798e8765df29a7ebdcdfaca2019a706cf46c3",
+      "width": 2667,
+      "height": 2063,
+      "original_unchanged": true,
+      "copy_unchanged": true
+    },
+    {
+      "source_file": "Figure 6.prism",
+      "source_sha256": "73441c16abf479c589d8c0e5e32ab30b36a5f7c61b84e32e0c4281656fc8c376",
+      "source_prism_version": "11.1.0.218",
+      "layout_id": "2DD8E8CE-1D8F-41E1-A0CF-8B152558EA0C",
+      "layout_index": 6,
+      "layout_title": "Figure 5",
+      "linked_graphs": [
+        {
+          "id": "B9D92B5E-9FC9-466F-9263-BECED1B39D84",
+          "title": "SN-ONT RAD cell lines"
+        },
+        {
+          "id": "B97379ED-8F35-4AFD-8F80-793327A98905",
+          "title": "SN-ONT Flexiplex cell lines"
+        },
+        {
+          "id": "CF6A3C30-0EA7-4A1C-B56E-473EAC3936AF",
+          "title": "SN-ONT BLAZE cell lines"
+        },
+        {
+          "id": "DC1371DD-F48A-426E-BA20-92CBB1F45FBB",
+          "title": "copy of sn-ont cell line annotations"
+        }
+      ],
+      "image": "figures/figure_06/prism/figure_06.png",
+      "resolution_dpi": 300,
+      "image_sha256": "0fb214b0b654313e187e9cda33a58a850fdae860bf63a62e4575e58638e1b4f2",
+      "width": 1400,
+      "height": 2001,
+      "original_unchanged": true,
+      "copy_unchanged": true
+    },
+    {
+      "source_file": "Figure 7.prism",
+      "source_sha256": "ade68ca14a7db417db8f0142757c43622521ef274b6f5d137487d829e4f6ad3b",
+      "source_prism_version": "11.0.0.93",
+      "layout_id": "C3B5C198-E4BA-4C34-9580-B55EA23BE9C3",
+      "layout_index": 2,
+      "layout_title": "LongBench cell line analysis",
+      "linked_graphs": [
+        {
+          "id": "47E987CA-3F8E-471A-AC95-9D87BAA35A0A",
+          "title": "RAD"
+        },
+        {
+          "id": "468DB8AA-7B62-4DDC-8A6D-F673B2FC1F9A",
+          "title": "Flexi"
+        },
+        {
+          "id": "D85F9BC6-EB04-4C69-B70B-5269D382A31A",
+          "title": "BLAZE"
+        },
+        {
+          "id": "97C1162B-73F7-4BB2-AF2A-F872C4F43B57",
+          "title": "Copy of Data 1"
+        },
+        {
+          "id": "4165C95D-F3D3-4958-8E3C-163EDB7F9054",
+          "title": "Data 4"
+        },
+        {
+          "id": "58A38F11-631D-432F-8B24-79E308A0F714",
+          "title": "*RAD F1 H146 high"
+        },
+        {
+          "id": "9B191ADC-4CE2-4D3A-9632-C0C9CE933267",
+          "title": "*Flexiplex F1 H146 high"
+        },
+        {
+          "id": "8C740359-D2CE-49F6-A9C2-A495CE34B5DF",
+          "title": "*BLAZE F1 H146 high"
+        },
+        {
+          "id": "F3C2D864-DFC0-4DEA-9F52-6190712A9E5E",
+          "title": "*RAD F1 H526 high"
+        },
+        {
+          "id": "BD4FB324-5DDC-43A2-8E39-626CA2212D87",
+          "title": "*Flexiplex F1 H526 high"
+        },
+        {
+          "id": "FFD84336-E158-43E2-BB5D-2A60E372DA84",
+          "title": "*BLAZE F1 H526 high"
+        }
+      ],
+      "image": "figures/figure_07/prism/figure_07.png",
+      "resolution_dpi": 300,
+      "image_sha256": "b92da6db4a7b2e08659fbbc8593f9ea79afac5d293ff0953e3c5cb73442ff188",
+      "width": 2167,
+      "height": 1363,
+      "original_unchanged": true,
+      "copy_unchanged": true
+    },
+    {
+      "source_file": "Supplemental 2ish V2.prism",
+      "source_sha256": "bca36551c5babeb2a413cbe180c09d94981ad8a5a673a34cd3f620947e247281",
+      "source_prism_version": "11.0.0.93",
+      "layout_id": "0EA6984E-96DB-4417-AB20-179C0558851D",
+      "layout_index": 1,
+      "layout_title": "Layout 2",
+      "linked_graphs": [
+        {
+          "id": "A512F199-A7BF-4A3E-B38C-6F22C6ABEB9E",
+          "title": "ScTagger L F1 2023"
+        },
+        {
+          "id": "22835443-ED6D-4A75-BF76-D0D65E3C3F52",
+          "title": "precision 2023"
+        },
+        {
+          "id": "683FE7CC-C0F4-47C8-908B-15890ECBC43A",
+          "title": "recall"
+        }
+      ],
+      "image": "figures/figure_02/prism/figure_02_supplement.png",
+      "resolution_dpi": 300,
+      "image_sha256": "78a2f4942c62addcb1b684cd7c72edf5ddb5edcc8b8027096528b40f0ea4b0bf",
+      "width": 2246,
+      "height": 721,
+      "original_unchanged": true,
+      "copy_unchanged": true
+    },
+    {
+      "source_file": "Supplemental Related to Figure 4.prism",
+      "source_sha256": "148a0a4541e007063c4d644838d3fb43da179be37428d1a62d33cedc77903976",
+      "source_prism_version": "11.0.0.93",
+      "layout_id": "59488B30-603A-4CD5-A1CF-9EEC86EFAC02",
+      "layout_index": 1,
+      "layout_title": "Layout 6",
+      "linked_graphs": [
+        {
+          "id": "658E96FB-6BE0-4908-B38E-44CFD6DADF75",
+          "title": "*precision new [Synthetic]"
+        },
+        {
+          "id": "65BF7FE5-1EF6-43F7-A3C2-147612392B9A",
+          "title": "*recall new [Synthetic]"
+        },
+        {
+          "id": "A8A9D66B-CC6E-483A-A052-04E6A8FD7741",
+          "title": "*precision new [Single cell]"
+        },
+        {
+          "id": "B1182EFA-254E-4BD9-9669-563715A77607",
+          "title": "*recall new [Single cell]"
+        },
+        {
+          "id": "71ECDE3F-EB8A-4AAB-987E-F2897F7B7BB6",
+          "title": "*precision new [Targeted LR-seq]"
+        },
+        {
+          "id": "BAE5F60D-D557-42A1-86A7-2326D8603137",
+          "title": "*recall new [Targeted LR-seq]"
+        },
+        {
+          "id": "31AC2CE9-98F2-433E-ADDE-45F62F9D249F",
+          "title": "*precision new [Single nuclei]"
+        },
+        {
+          "id": "24826371-D22F-4155-8EB6-89F289F30A82",
+          "title": "*recall new [Single nuclei]"
+        },
+        {
+          "id": "FDFA89B7-7F2C-4E8D-906E-509B21393A53",
+          "title": "*precision new [Visium]"
+        },
+        {
+          "id": "7850AD78-5A2D-4E5A-8319-41F488EAEB65",
+          "title": "*recall new [Visium]"
+        },
+        {
+          "id": "B46F84DF-3ACD-41AD-997B-59AE1991E026",
+          "title": "average quality"
+        },
+        {
+          "id": "DEB38BA7-887B-43C6-8D5A-ABCA08829497",
+          "title": "GC content (%)"
+        }
+      ],
+      "image": "figures/figure_04/prism/figure_04_supplement.png",
+      "resolution_dpi": 300,
+      "image_sha256": "06ece560ab0f8587a1bab6bcff33b4577e9ca8c72061fc62f9e3d37c85bcacc2",
+      "width": 2180,
+      "height": 1726,
+      "original_unchanged": true,
+      "copy_unchanged": true
+    }
+  ]
+}
