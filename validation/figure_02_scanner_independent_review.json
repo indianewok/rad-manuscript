@@ -1,0 +1,135 @@
+{
+  "status": "passed scoped independent code review and four-read edge fixtures",
+  "completed_utc": "2026-10-24T14:34:03.326595+00:00",
+  "reviewed_sources": {
+    "scripts/figure_02/barcode_locator.py": "0ead90df058cfd940befd3a0b7a659d9f030f01fc382863dcd7e67e583f0fb68",
+    "scripts/figure_02/summarize_full_barcode_quality.py": "841e1111fa541e4d587e677814a8e8975d174700a697764bf69d1bfbc23ab9de",
+    "scripts/figure_02/validate_full_barcode_quality.py": "93850c2f72ea2722e9904800a650a1d1821232f07f9f2099c951e62eb6f7f86a"
+  },
+  "original_locator_source": {
+    "path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/sctagger_nanopore2023_unadjusted_20260913/scripts/generate_truth_conditioned_qscores.py",
+    "sha256": "aef619a3f417c4aa4c2c9ac3bfd161916a7e85efa23720ae74a8b630a9026e49",
+    "functions": {
+      "reverse_complement": {
+        "source_segment_identical": true,
+        "AST_identical": true
+      },
+      "nw_edit_distance": {
+        "source_segment_identical": true,
+        "AST_identical": true
+      },
+      "locate_truth_barcode": {
+        "source_segment_identical": true,
+        "AST_identical": true
+      }
+    }
+  },
+  "scanner_review": [
+    "exact original locator/tie-breaking/orientation rules",
+    "uppercase sequence and CR/LF-stripped ordered header/sequence and quality hash contract",
+    "full gzip EOF/CRC and bounded2*workers queue",
+    "ED0 versus ED>0; unlocated excluded from both",
+    "integer per-Q histograms; per-base shift/clipping before group averaging",
+    "native scores aboveQ50 preserved",
+    "each sampled read truth/ED and all12mean values checked exactly once"
+  ],
+  "validator_review": [
+    "all consumed scan tables bound to output hashes",
+    "full counts/ED classes/orientations and both selected stream hashes checked",
+    "both native and shifted pooled base/minimum-Q histograms compared exactly",
+    "all12group means and pooled means recomputed independently",
+    "600000sample read-condition comparisons bound to sample source hash",
+    "BLAZE barcode TP/FP/FN conservation and F1/precision/recall arithmetic checked",
+    "current deposited source schemas match defaults"
+  ],
+  "fixture": {
+    "records": 4,
+    "located": 3,
+    "correct_ED0": 2,
+    "error_ED1": 1,
+    "unlocated": 1,
+    "conditions": 12,
+    "workers_tested": [
+      1,
+      2
+    ],
+    "all_five_TSV_outputs_identical": true,
+    "ED0_native_vectors": [
+      [
+        90,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90
+      ]
+    ],
+    "ED1_native_vector": [
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20
+    ],
+    "expected_ED0_native_mean": 48.28125,
+    "expected_ED0_each_shifted_mean": 27.03125,
+    "expected_ED1_mean": "20+shift; native shift0",
+    "cases": [
+      "forwardED0",
+      "reverseED0",
+      "ED1",
+      "unlocated",
+      "nativeQ90",
+      "per-base clipping versus incorrect clip-mean operation",
+      "read-weighted pooling"
+    ],
+    "outputs": {
+      "barcode_edit_distance_counts.tsv": "ab3d0e8d0357b4b9041b249a422ae1aefbe93772887e2a05854f355eaec0f38a",
+      "barcode_minimum_quality_by_ed.tsv": "b8ccb3d555c5882eec4465cd0a3ee5348078510e4ca8bf50350b2934d263665d",
+      "barcode_quality_by_ed.tsv": "8eb4d0337a166fdbaa855d044aeeb5263dd5abf3433958750b666c9a53711189",
+      "first20_barcode_windows.tsv": "fd312b23be011e5ba941d901a68bebf5ff61e37734a48a48205f27f78df5f9c0",
+      "full_quality_summary.tsv": "4152e9df0f1c88c0685666d37c07fec7fc000b87ac0646cf92177c36928ed4f9"
+    }
+  },
+  "full_input_scan": "Not performed by this review; full selected-data validation is a separate required step",
+  "producing_files_edited": false
+}

@@ -1,0 +1,4 @@
+tool	reference_denominator	same	different	doublet	unassigned	not_selected	missing_row	strict_recall	conditional_concordance
+BLAZE	5	1	1	1	0	2	0	0.2	0.5
+Flexiplex	5	1	1	0	2	1	0	0.2	0.5
+RAD	5	1	1	1	1	1	0	0.2	0.5

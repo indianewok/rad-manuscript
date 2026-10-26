@@ -1,0 +1,26 @@
+{
+  "scope": "eight real first AD entries; 1-based variant/cell joins; query labels and fixed UMAP added by exact barcode; no allele fraction inferred",
+  "AD_dimensions": "115810\t12423\t4093185",
+  "sources": [
+    {
+      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/LongBench_comps/SN_ONT_RAD_bulk_cellline_bundle_20260803/RAD/cellsnp/cellSNP.tag.AD.mtx",
+      "sha256": "c1ac702a1301856a7bd2155d79c84b330691a66e1b1e645f8e56bb3b1f29bea3"
+    },
+    {
+      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/LongBench_comps/SN_ONT_RAD_bulk_cellline_bundle_20260803/RAD/cellsnp/cellSNP.base.vcf.gz",
+      "sha256": "6ada287fa2523d780e64f66feacb87c3248305c208b993c4c11684e7d11770c4"
+    },
+    {
+      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/LongBench_comps/SN_ONT_RAD_bulk_cellline_bundle_20260803/RAD/cellsnp/cellSNP.samples.tsv",
+      "sha256": "4977c3d8a98f7db3598f88a0560fdf7c6a465769e89c3e30744502636461d993"
+    },
+    {
+      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_06/union_per_cell_genotype.tsv",
+      "sha256": "3a4d9e0c381505498842b8d6884ac15d7e41c6266e81b8c32c57729052d7238a"
+    },
+    {
+      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_06/fixed_coordinates.tsv",
+      "sha256": "b1c2821e90f3b3f0d6b416208adb1022c91f094a316ec811ca35d0bdeefda531"
+    }
+  ]
+}

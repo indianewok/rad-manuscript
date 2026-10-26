@@ -1,0 +1,69 @@
+{
+  "Rscript_version": "Rscript (R) version 4.5.3 (2026-03-11)",
+  "builder_path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/scripts/revision/figures_124_native_recovery.py",
+  "builder_sha256": "761d84a1a15664177874ddd6b305c4bca3a49d34cdea01b9c2bb11b9456b6f13",
+  "raw_rerun": false,
+  "source_rows": [
+    {
+      "calls": 279,
+      "f1": 0.8842504743833017,
+      "fn": 15,
+      "fp": 46,
+      "precision": 0.8351254480286738,
+      "recall": 0.9395161290322581,
+      "reference_n": 248,
+      "tool": "RAD",
+      "tp": 233
+    },
+    {
+      "calls": 188,
+      "f1": 0.8623853211009175,
+      "fn": 60,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 0.7580645161290323,
+      "reference_n": 248,
+      "tool": "BLAZE",
+      "tp": 188
+    },
+    {
+      "calls": 184,
+      "f1": 0.8472222222222222,
+      "fn": 65,
+      "fp": 1,
+      "precision": 0.9945652173913043,
+      "recall": 0.7379032258064516,
+      "reference_n": 248,
+      "tool": "Flexiplex",
+      "tp": 183
+    }
+  ],
+  "sources": [
+    {
+      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_scmix2_20260726/results/fixed_scmix2_scanwl_e03_t24_full_20260726/cases/01_full/output/scanwl.txt",
+      "role": "RAD",
+      "sha256": "50a94b8ecc4ac21c356a851017c984a7fb3f6a664b6c16388d5c1fa10ea7d07e"
+    },
+    {
+      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/blaze_single_cell_expect_sweep_20260810/exploratory/scmixology2/callsets/expect500_whitelist.txt",
+      "role": "BLAZE",
+      "sha256": "4ac4566fb59630ff1314da1586023f31e79188d0f07e2fa841fec866a1a36910"
+    },
+    {
+      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260804_common_count_selector_ablation/full37/selector_membership.tsv.gz",
+      "role": "Flexiplex",
+      "sha256": "a73c2f62cd2a3ceee7697f39deb6071673b3b24e9704c3f9c2ad9cdeabe9ea41"
+    },
+    {
+      "path": "/scratch/f005f43/blaze_analysis_data_20335203/data/scmixology/cellranger/whitelist.tsv",
+      "role": "truth",
+      "sha256": "55dab619f152ad60635138d8c15a5c1e695a27d97847bcb3a159d1a3a31e41a1"
+    },
+    {
+      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/reviewer_response_20260804/objects/other_streams/objects/scmixology2_performance.rds",
+      "role": "RDS",
+      "sha256": "35dc51cf96ec9acaad034421b9e51d170ed85ba59262c361dea919806757ea4d"
+    }
+  ],
+  "status": "passed"
+}

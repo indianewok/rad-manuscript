@@ -1,0 +1,6 @@
+chrom	position	ref	alt	first_record	duplicate_record	identical_record	policy
+4	74446969	A	G	84911	84912	True	retained unchanged; historical panel identity includes record ordinal
+19	20396180	C	T	316127	316128	True	retained unchanged; historical panel identity includes record ordinal
+19	20404502	C	T	316133	316134	True	retained unchanged; historical panel identity includes record ordinal
+19	39894438	T	C	320312	320313	True	retained unchanged; historical panel identity includes record ordinal
+19	39894463	A	G	320314	320315	True	retained unchanged; historical panel identity includes record ordinal

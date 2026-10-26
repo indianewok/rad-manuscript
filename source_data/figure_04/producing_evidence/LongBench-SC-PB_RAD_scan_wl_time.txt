@@ -1,0 +1,23 @@
+	Command being timed: "/scratch-nfs/f005f43/longbench_full_demux_20260730/tools/rad_920adda_edlibfix/build_release/rad scan-wl --input /scratch-nfs/f005f43/rad_longbench_20260726/data/sc_sn/raw_fastq/SC_PB.fastq.gz --output-prefix /scratch-nfs/f005f43/longbench_full_demux_20260730/runs/rad_920adda_current/SC_PB/scan_wl/SC_PB_RAD --adapter_seq CTACACGACGCTCTTCCGATCT --barcode-length 16 --max-error 0.1 --whitelist 10x_3v3.1 --threads 32 --chunk-size 10000"
+	User time (seconds): 8577.94
+	System time (seconds): 369.73
+	Percent of CPU this job got: 836%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 17:49.34
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 398616
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 10
+	Minor (reclaiming a frame) page faults: 1331603
+	Voluntary context switches: 39637067
+	Involuntary context switches: 84455
+	Swaps: 0
+	File system inputs: 17085840
+	File system outputs: 217784
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

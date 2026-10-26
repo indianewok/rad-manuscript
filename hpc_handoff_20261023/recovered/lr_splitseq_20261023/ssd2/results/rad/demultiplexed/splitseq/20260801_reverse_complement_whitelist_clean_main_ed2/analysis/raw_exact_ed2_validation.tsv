@@ -1,3 +1,0 @@
-observed_primer	raw_exact_reads	called_reads	correct_cell_reads	exact_cell_umi_reads	wrong_cell_only_reads	uncalled_reads
-R	423498	423498	423498	423498	0	0
-T	503375	503375	503375	503375	0	0

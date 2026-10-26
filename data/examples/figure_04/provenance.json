@@ -1,0 +1,72 @@
+{
+  "scope": "root evidence excerpts for human inspection; quantitative conclusions use complete source_data tables",
+  "sources": [
+    {
+      "columns": [
+        "score_panel",
+        "display_dataset",
+        "canonical_id",
+        "dataset_family",
+        "tool",
+        "calls",
+        "reference_n",
+        "tp",
+        "fp",
+        "fn",
+        "precision",
+        "recall",
+        "f1",
+        "reference_type",
+        "reference_description",
+        "validation_tier",
+        "source_path",
+        "source_method",
+        "input_status",
+        "paired_input_id",
+        "inferential_status"
+      ],
+      "excerpt_sha256": "f1e7d992b6adeecb09368bb47fbd550770b2ba33abe2997b3b035bd3717fad41",
+      "file": "three_input_metrics_example.tsv",
+      "header_excluded_from_row_count": true,
+      "scope": "bounded actual source excerpt; not a representative statistical sample",
+      "source_bytes": 84275,
+      "source_data_row_numbers_1_based": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        22,
+        23,
+        24
+      ],
+      "source_path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_04/barcode_detection_metrics.tsv",
+      "source_sha256": "fef92287def3e62e746e494ce445c7e5b8903f3d46bd75e8f8bb4e37746b33b2"
+    },
+    {
+      "columns": [
+        "barcode",
+        "in_deposited_shortread_list",
+        "deposited_label",
+        "called_RAD",
+        "called_BLAZE_2.6.0a0_expect10433",
+        "called_Flexiplex_f8"
+      ],
+      "excerpt_sha256": "ae25ff37e130ad75559db14e01c560354083ac468b671aebc1fda28495d72e73",
+      "file": "immune_reference_annotation_example.tsv",
+      "header_excluded_from_row_count": true,
+      "scope": "bounded actual source excerpt; not a representative statistical sample",
+      "source_bytes": 937510,
+      "source_data_row_numbers_1_based": [
+        1,
+        4,
+        6,
+        10,
+        150
+      ],
+      "source_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260730_rageseq_ERR3268990_tnbc_lymphnode_four_tool/analysis/barcode_level_annotations.tsv",
+      "source_sha256": "aa01982ec5eefb365a4ad5a2fc7899b4d5ecaa24e2be0ef308df5530840f955c"
+    }
+  ]
+}

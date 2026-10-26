@@ -1,0 +1,198 @@
+{
+  "scope": "root evidence excerpts for human inspection; quantitative conclusions use complete source_data tables",
+  "sources": [
+    {
+      "excerpt_sha256": "2c3f78089eb43144120f80b89d2e51ce0fc95244b7110c56fbef48e03f1bc8eb",
+      "file": "S_truth_barcodes.txt",
+      "scope": "complete compact input, copied byte-identically",
+      "source_bytes": 850,
+      "source_path": "/scratch/f005f43/sctagger_sl_three_tool_quality_20260731/inputs/S_truth_barcodes.txt",
+      "source_sha256": "2c3f78089eb43144120f80b89d2e51ce0fc95244b7110c56fbef48e03f1bc8eb"
+    },
+    {
+      "excerpt_sha256": "a5c86850f337213babb59cfc2e7f8e1dba6bde4901167ead129dd7ea30e469f8",
+      "file": "S_shift_p01_RAD.txt",
+      "scope": "complete compact input, copied byte-identically",
+      "source_bytes": 850,
+      "source_path": "/scratch/f005f43/sctagger_sl_three_tool_quality_20260731/runs/S/shift_p01/rad/scanwl.txt",
+      "source_sha256": "a5c86850f337213babb59cfc2e7f8e1dba6bde4901167ead129dd7ea30e469f8"
+    },
+    {
+      "excerpt_sha256": "f30dbe56236213b8a93a75923dd82441ec3f2a58bc9292744588a649089145c5",
+      "file": "S_shift_p01_BLAZE.txt",
+      "scope": "complete compact input, copied byte-identically",
+      "source_bytes": 34,
+      "source_path": "/scratch/f005f43/sctagger_sl_three_tool_quality_20260731/runs/S/shift_p01/blaze/whitelist.csv",
+      "source_sha256": "f30dbe56236213b8a93a75923dd82441ec3f2a58bc9292744588a649089145c5"
+    },
+    {
+      "excerpt_sha256": "5951e4257d426111b25b8b288721f13ab097357ce995a096c5f66371ca880396",
+      "file": "S_shift_p01_Flexiplex_f0.txt",
+      "scope": "complete compact input, copied byte-identically",
+      "source_bytes": 3584,
+      "source_path": "/scratch/f005f43/sctagger_sl_three_tool_quality_20260731/runs/S/shift_p01/flex_f0/selected.txt",
+      "source_sha256": "5951e4257d426111b25b8b288721f13ab097357ce995a096c5f66371ca880396"
+    },
+    {
+      "excerpt_sha256": "cdb75887a44bd681d7820e0201bf226d9dc4cd5c0624c3c77780576c4809c603",
+      "file": "S_shift_p01_Flexiplex_f8.txt",
+      "scope": "complete compact input, copied byte-identically",
+      "source_bytes": 1050,
+      "source_path": "/scratch/f005f43/sctagger_sl_three_tool_quality_20260731/runs/S/shift_p01/flex_f8/selected.txt",
+      "source_sha256": "cdb75887a44bd681d7820e0201bf226d9dc4cd5c0624c3c77780576c4809c603"
+    },
+    {
+      "excerpt_sha256": "a2fd60a6efb10678d471e82386689b6ac763a5ef4064f3745986c2f2ebc82fec",
+      "file": "L_flatQ20_first2.fastq",
+      "scope": "public ScTagger synthetic sequences; first two records only; full-stream hash from completed audit9976816",
+      "source_bytes": 3074597647,
+      "source_fastq_record_numbers_1_based": [
+        1,
+        2
+      ],
+      "source_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_longbench_20260726/data/shuffled_L_lr_synth.fq.gz",
+      "source_sha256": "6f7385468b607cf86c91449b095c2968ee2a5d25ab473901102b87d141543090"
+    },
+    {
+      "excerpt_sha256": "68d008d95fe106f95c21b204fcb3ed8ae3cbc24141dea77b7e6ce25dc8bd2c32",
+      "file": "L_native2023_first2.fastq",
+      "scope": "public ScTagger synthetic sequences; first two records only; full-stream hash from completed audit9976816",
+      "source_bytes": 10032810794,
+      "source_fastq_record_numbers_1_based": [
+        1,
+        2
+      ],
+      "source_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/sctagger_nanopore2023_unadjusted_20260913/inputs/L_variants/shuffled_L_lr_synth.nanopore2023_truthbc.native_unadjusted.fq.gz",
+      "source_sha256": "69b3da301d03d57f3932cfe2d227cc4c0a63ad45191d48eead36d00171471f67"
+    },
+    {
+      "columns": [
+        "read_id",
+        "truth_barcode",
+        "rad_cb",
+        "rad_cr",
+        "strand",
+        "record_category"
+      ],
+      "excerpt_sha256": "0f8d57521dbe217490a34b40edb3d4e22b08adfc170a7aba8817244ff14768e0",
+      "file": "RAD_assignment_records_example.tsv",
+      "header_excluded_from_row_count": true,
+      "scope": "bounded actual source excerpt; not a representative statistical sample",
+      "source_bytes": 46703941,
+      "source_data_row_numbers_1_based": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "source_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/sctagger_L_rad_fixed5000_adapter_fix_20260817/independent_validation/record_audit.tsv.gz",
+      "source_sha256": "44c381cc8eeb4130a7eea73e604940d454b47a4cf0f167c916485c577961b7e0"
+    },
+    {
+      "columns": [
+        "Read",
+        "CellBarcode",
+        "RawCellBarcode",
+        "FlankEditDist",
+        "BarcodeEditDist",
+        "UMI"
+      ],
+      "excerpt_sha256": "98cceb02f9b29e1da1fcb43652cf87c8b657f3d91594e4cec2ce7d779ddd60eb",
+      "file": "Flexiplex_assignment_records_example.tsv",
+      "header_excluded_from_row_count": true,
+      "scope": "bounded actual source excerpt; not a representative statistical sample",
+      "source_bytes": 154296487,
+      "source_data_row_numbers_1_based": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "source_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/sctagger_flexiplex_audit_20260812/L_flatQ20_audit_reads_barcodes.txt",
+      "source_sha256": "693d9f3362dbeea174acf8bef432a596aec3a91aa5d797125b6782e1ba424b06"
+    },
+    {
+      "columns": [
+        "read_id",
+        "true_barcode",
+        "putative_barcode",
+        "assigned_barcode",
+        "state",
+        "target_class"
+      ],
+      "excerpt_sha256": "265fe4aa3bd82483af04954c2e2611f875f23164f1450c92c738a9a65c225521",
+      "file": "BLAZE_assignment_records_example.tsv",
+      "header_excluded_from_row_count": true,
+      "scope": "bounded actual source excerpt; not a representative statistical sample",
+      "source_bytes": 102379073,
+      "source_data_row_numbers_1_based": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "source_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/paper_revision_20261022/prism/blaze2023_assignment_replay/assignment_records.tsv.gz",
+      "source_sha256": "23328307cdca24cdbbeced7a4841d6daada13a720165ea5dda570382796ba8f8"
+    },
+    {
+      "columns": [
+        "read_id",
+        "truth_barcode",
+        "barcode_ED",
+        "nanopore2018 +1",
+        "nanopore2023 -17",
+        "nanopore2018 +2",
+        "nanopore2023 -16",
+        "nanopore2018 +3",
+        "nanopore2023 -15",
+        "nanopore2018 +4",
+        "nanopore2023 -14",
+        "nanopore2018 +5",
+        "nanopore2023 -12",
+        "nanopore2018 +6",
+        "nanopore2023 -11",
+        "nanopore2018 +8",
+        "nanopore2023 -9",
+        "nanopore2018 +10",
+        "nanopore2023 -7",
+        "nanopore2018 +11",
+        "nanopore2023 -6",
+        "nanopore2018 +12",
+        "nanopore2023 -5",
+        "nanopore2018 +13",
+        "nanopore2023 -4",
+        "nanopore2018 native",
+        "nanopore2023 native"
+      ],
+      "excerpt_sha256": "65be1febd836a43b647155b5d9876a8870e777adaa7140885e525ad5ab2cf6e9",
+      "file": "paired_quality_example.tsv",
+      "header_excluded_from_row_count": true,
+      "scope": "bounded actual source excerpt; not a representative statistical sample",
+      "source_bytes": 2655992,
+      "source_data_row_numbers_1_based": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "source_path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_02/paired_50000_barcode_mean_Q.csv.gz",
+      "source_sha256": "93bb23eeac686cac6b1e8d2ecb9b4968bda3f7d57b6c40cacfdc856dad778e5d"
+    }
+  ]
+}

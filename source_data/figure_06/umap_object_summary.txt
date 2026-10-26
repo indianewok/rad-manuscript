@@ -1,0 +1,19 @@
+$input
+[1] "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/LongBench_Illumina_SC_SN_Seurat_UMAP_20260805/objects/LongBench_Illumina_SN_SCT_Seurat_UMAP.rds"
+
+$assays
+[1] "RNA" "SCT"
+
+$reductions
+[1] "pca"  "umap"
+
+$command_names
+[1] "SCTransform.RNA"       "RunPCA.SCT"            "FindNeighbors.SCT.pca"
+[4] "FindClusters"          "RunUMAP.SCT.pca"      
+
+$dimensions
+[1] 29161 12012
+
+$object_version
+[1] "5.4.0"
+

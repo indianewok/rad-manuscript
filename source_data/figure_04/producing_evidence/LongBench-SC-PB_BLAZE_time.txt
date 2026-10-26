@@ -1,0 +1,23 @@
+	Command being timed: "/scratch/f005f43/blaze2_250_probe_20260727/venv/bin/blaze --expect-cells 5000 --output-prefix /scratch-nfs/f005f43/longbench_full_demux_20260730/runs/blaze2_2.5.0_longbench_published/SC_PB/ --output-fastq matched_reads.fastq --threads 48 --minimal_stdout /scratch-nfs/f005f43/rad_longbench_20260726/data/sc_sn/raw_fastq/SC_PB.fastq.gz"
+	User time (seconds): 218684.81
+	System time (seconds): 2538.47
+	Percent of CPU this job got: 1106%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 5:33:13
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1564312
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 16
+	Minor (reclaiming a frame) page faults: 342104987
+	Voluntary context switches: 42787974
+	Involuntary context switches: 8344417
+	Swaps: 0
+	File system inputs: 291042056
+	File system outputs: 715833464
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

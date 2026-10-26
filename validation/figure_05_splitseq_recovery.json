@@ -1,0 +1,18 @@
+{
+  "status": "passed selected source promotion",
+  "incoming_git_commit": "07b39852cf436ad729cd7e4271c786a8c956fa1f",
+  "package_root": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/paper_revision_20261022/lr_splitseq_recovery_20261023/package",
+  "rows": 568,
+  "native_numeric_cells_compared": 3408,
+  "same_original_row_order": true,
+  "physical_keys_unique": true,
+  "source_reference_identity": true,
+  "raw_demultiplexing_rerun": false,
+  "selected_arms": [
+    "ED2 current main",
+    "Flexiplex polyT"
+  ],
+  "code_sha256": "4f19fac02453fc653081986d0b1a2c31bb771c9a66107e4ac68f5f3f21f3662f",
+  "primary_table_sha256": "3dacbb07802efd1f8e98d537d0c09a414b8ffc17974464b2747b1de0352bc341",
+  "remaining": "Assignment aggregation replay follows separately. Figure5H intended depth-matched SR checkpoint/selection and panel binding unrecovered; no depth rule invented."
+}

@@ -1,0 +1,114 @@
+{
+  "status": "passed complete scan and internal conservation",
+  "started_utc": "2026-10-24T14:30:17.378551+00:00",
+  "elapsed_seconds": 295.1402355739847,
+  "host": "q01.hpcc.dartmouth.edu",
+  "python": "3.9.16 | packaged by conda-forge | (main, Feb  1 2023, 21:39:03) \n[GCC 11.3.0]",
+  "package_versions": {
+    "edlib": "1.3.9"
+  },
+  "argv": [
+    "scripts/figure_02/summarize_full_barcode_quality.py",
+    "--fastq",
+    "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/sctagger_nanopore2023_unadjusted_20260913/inputs/L_variants/shuffled_L_lr_synth.nanopore2023_truthbc.native_unadjusted.fq.gz",
+    "--output-dir",
+    "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_02/full_read_quality",
+    "--workers",
+    "7",
+    "--sample-csv",
+    "source_data/figure_02/paired_50000_barcode_mean_Q.csv.gz"
+  ],
+  "workers": 7,
+  "batch_size": 1000,
+  "maximum_pending_batches": 14,
+  "slurm": {
+    "SLURM_JOB_ID": "10082224",
+    "SLURM_JOB_NODELIST": "q01",
+    "SLURM_CPUS_PER_TASK": "8"
+  },
+  "input": {
+    "path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/sctagger_nanopore2023_unadjusted_20260913/inputs/L_variants/shuffled_L_lr_synth.nanopore2023_truthbc.native_unadjusted.fq.gz",
+    "bytes": 10032810794,
+    "mtime_ns": 1789314431304831321
+  },
+  "input_unchanged_during_scan": true,
+  "reads": 4993805,
+  "bases": 8394808882,
+  "distinct_header_truth_barcodes": 5000,
+  "located_reads": 4976160,
+  "correct_reads": 879860,
+  "error_reads": 4096300,
+  "unlocated_reads": 17645,
+  "barcode_ed_counts": {
+    "0": 879860,
+    "1": 526254,
+    "2": 1051268,
+    "3": 732067,
+    "4": 714040,
+    "5": 451253,
+    "6": 314447,
+    "7": 179176,
+    "8": 90021,
+    "9": 29851,
+    "10": 6585,
+    "11": 1154,
+    "12": 157,
+    "13": 22,
+    "14": 5
+  },
+  "orientation_counts": {
+    "-": 2483393,
+    "+": 2492767
+  },
+  "header_sequence_sha256": "ca3073f0a44d03b40a5919e01e59a8df89ceceafa086ee7580fae2daa3bf2f61",
+  "quality_sha256": "1356a4993a6cc31ca80857f99d105da376534d594112588af4e32b3cdf138841",
+  "digest_contract": "CR/LF stripped; header including @ plus LF, uppercase sequence plus LF; quality plus LF; source order",
+  "gzip_crc_checked_by_complete_stream_read": true,
+  "sample_validation": {
+    "requested": true,
+    "expected_reads": 50000,
+    "found_reads": 50000,
+    "conditions_per_read": 12,
+    "read_condition_values_compared": 600000,
+    "maximum_absolute_mean_Q_difference": 0.0,
+    "tolerance": 1e-12,
+    "source": "source_data/figure_02/paired_50000_barcode_mean_Q.csv.gz",
+    "source_sha256": "93bb23eeac686cac6b1e8d2ecb9b4968bda3f7d57b6c40cacfdc856dad778e5d"
+  },
+  "script_sha256": "841e1111fa541e4d587e677814a8e8975d174700a697764bf69d1bfbc23ab9de",
+  "locator_sha256": "0ead90df058cfd940befd3a0b7a659d9f030f01fc382863dcd7e67e583f0fb68",
+  "locator_original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/sctagger_nanopore2023_unadjusted_20260913/scripts/generate_truth_conditioned_qscores.py",
+  "locator_original_source_sha256": "aef619a3f417c4aa4c2c9ac3bfd161916a7e85efa23720ae74a8b630a9026e49",
+  "locator_copied_functions_sha256": "1d6e2734bb901c2bfe01b99a5aa60dfb6b51508f6dcc3d195b926d2739da4b5b",
+  "counting": "Truth-located 16-base window ED0 versus ED>0; per-base transform precedes averaging; unlocated reads excluded from both groups",
+  "outputs": [
+    {
+      "path": "barcode_edit_distance_counts.tsv",
+      "bytes": 262,
+      "sha256": "1973de93a008a0b008ac5a95c0f482e0162b54c4f24717a39987b366b56b266f"
+    },
+    {
+      "path": "barcode_minimum_quality_by_ed.tsv",
+      "bytes": 1760,
+      "sha256": "24e0631e827ba752b656c70fcade064301497862a93c08dd360f00e11864aef1"
+    },
+    {
+      "path": "barcode_quality_by_ed.tsv",
+      "bytes": 9782,
+      "sha256": "ab4a43dc19002bfcd73c140fc3c50206d0b0eff381b89154d4e21e5ffcd0fedb"
+    },
+    {
+      "path": "first20_barcode_windows.tsv",
+      "bytes": 2699,
+      "sha256": "0787dd31ee835ff9f5a292eb982cfccbe0e136ffdb931f44f4dc31a84ca7ff1c"
+    },
+    {
+      "path": "full_quality_summary.tsv",
+      "bytes": 2727,
+      "sha256": "2dadb874e97117e36586ccac1355180021d00a50bfdd2642992b8949922a3665"
+    }
+  ],
+  "quality_regenerated": false,
+  "blaze_rerun": false,
+  "limitation": "Read IDs are hashed in order; global read-ID uniqueness is not re-audited. Existing BLAZE F1 is joined separately."
+}

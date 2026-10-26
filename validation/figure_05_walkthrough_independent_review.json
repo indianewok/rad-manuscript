@@ -1,0 +1,77 @@
+{
+  "status": "passed",
+  "scope": "Independent executable bounded-example review and read-only implementation/guide review; not a repeated full-assignment replay",
+  "scripts": {
+    "scripts/figure_05/aggregate_splitseq.py": "2a7f30b54767cc7cda4f59ae3361b7f701d40b7a745412b1fd3437e76faf843e",
+    "scripts/figure_05/normalize_component_stats.py": "4879f5c3363669206dfe0b721c3907b8c6a0fea6bb7927fd60ab2c670321d06f",
+    "scripts/figure_05/verify_splitseq_counts.py": "e0de428bed3389eea4124bad2d1252d9bfb26b9fe23d0bd7c9f6954be0234818",
+    "scripts/figure_05/check_component_normalization.py": "0babcca7c4132ac8e47e8ea2fb8b8c25b3391f8916ec9099497389a60c9c47ed",
+    "scripts/figure_05/replay_splitseq.py": "14dfd6a9a458a4f997c37c36f312a7f03acab3547633a1118f85fcbe3b2d8314"
+  },
+  "guide_sha256": "249524eb414fa63a89defab295602fef8188abf05c8114d6e5e6c8354c1c3ead",
+  "preview_sha256": "5d40c29190ff0d7a9889f0c9d83c7eff251af3bfc77834ac764f85cd26b30083",
+  "commands": [
+    "/usr/bin/python3 scripts/figure_05/normalize_component_stats.py --input data/examples/figure_05/splitseq/component_native_stats.tsv --output /tmp/figure05_component_independent.tsv",
+    "cmp /tmp/figure05_component_independent.tsv data/examples/figure_05/splitseq/component_assignments.tsv",
+    "/usr/bin/python3 scripts/figure_05/aggregate_splitseq.py --assignments /tmp/figure05_component_independent.tsv --cells data/examples/figure_05/splitseq/cells.tsv --rt-primers data/figure_05/rt_primer_well_map.csv --format component --output /tmp/figure05_component_independent_counts.tsv --report /tmp/figure05_component_independent_counts.json",
+    "cmp /tmp/figure05_component_independent_counts.tsv data/examples/figure_05/splitseq/component_bounded_counts.tsv",
+    "/usr/bin/python3 scripts/figure_05/aggregate_splitseq.py --assignments data/examples/figure_05/splitseq/rad_assignments.tsv --cells data/examples/figure_05/splitseq/cells.tsv --rt-primers data/figure_05/rt_primer_well_map.csv --format rad --output /tmp/figure05_rad_independent_counts.tsv --report /tmp/figure05_rad_independent_counts.json",
+    "cmp /tmp/figure05_rad_independent_counts.tsv data/examples/figure_05/splitseq/rad_bounded_counts.tsv"
+  ],
+  "checks": [
+    {
+      "check": "native component normalization",
+      "rows": 8,
+      "status": "passed"
+    },
+    {
+      "check": "component physical-cell aggregation",
+      "cells": 2,
+      "assignment_rows": 8,
+      "status": "passed"
+    },
+    {
+      "check": "RAD physical-cell aggregation including real non10nt UMI",
+      "cells": 2,
+      "assignment_rows": 8,
+      "non10nt_umi_rows": 1,
+      "status": "passed"
+    },
+    {
+      "check": "normalization code copies Read, reverses BC order, reverse-complements UB without deduplication",
+      "status": "reviewed"
+    },
+    {
+      "check": "aggregation uses distinct source-read IDs and exact nonempty UMI strings within physical RT wells",
+      "status": "reviewed"
+    },
+    {
+      "check": "verifier binds aggregation output hash,568cells and recomputed medians",
+      "status": "reviewed"
+    },
+    {
+      "check": "whole native-to-normalized checker rejects row-count or field mismatches",
+      "status": "reviewed"
+    },
+    {
+      "check": "guide distinguishes current per-cell UMIs from missing depth-matched Figure5H checkpoint/sampling and retains artwork/statistics holds",
+      "status": "reviewed"
+    }
+  ],
+  "exact_output_matches": [
+    {
+      "expected": "data/examples/figure_05/splitseq/component_assignments.tsv",
+      "sha256": "1364b4bdc9e268b0f1b6efadabace285b09fb02eed726e54c9b2540fc0155ecc"
+    },
+    {
+      "expected": "data/examples/figure_05/splitseq/component_bounded_counts.tsv",
+      "sha256": "f6de971bf3cc8d379d9b283d5a6fff3c4ac4e5f38444b5a3c4f98f6d7f1ffa23"
+    },
+    {
+      "expected": "data/examples/figure_05/splitseq/rad_bounded_counts.tsv",
+      "sha256": "f6de971bf3cc8d379d9b283d5a6fff3c4ac4e5f38444b5a3c4f98f6d7f1ffa23"
+    }
+  ],
+  "raw_tools_rerun": false,
+  "new_statistical_test": false
+}

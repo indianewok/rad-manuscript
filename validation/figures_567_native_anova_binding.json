@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "check": "Native candidate analysis input binding against current Figure6C counts",
+  "binding": "excluded_input_mismatch",
+  "current_analysis_validated": false,
+  "source_archive": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/081926_rebuttal_RAD4acbe_rawLongBench_updated_20260827.prism",
+  "source_archive_sha256": "2987ae97728ff61488a861b305aa2b9fb356f51ba860c084e9c06c823765572b",
+  "native_analysis_uid": "FCC43C10-E825-4014-9D65-68710C5E652C",
+  "native_sheet_uid": "4FC888D1-8AD1-4974-929E-4116B28FB4F6",
+  "native_table_uid": "E248D61F-F6DA-49E0-A049-53E5EA99D0B3",
+  "input_entries_checked": 24,
+  "input_entries_mismatched": 24,
+  "current_source": "source_data/figure_06/selected_nuclei_by_donor.tsv",
+  "current_source_sha256": "e58941a2e7ff5e4c29f8e30b1d0e7a2a49bf19efc33caec6d90dd3b8f5ceb496",
+  "native_graph_keys": [
+    {
+      "uid": "A802F129-B689-40F8-B170-DDBCDC54A6DE",
+      "title": "Total Cell line comps SN-ONT"
+    }
+  ],
+  "native_layout_keys": [],
+  "conclusion": "The inspected native analysis uses different donor/tool counts and cannot identify the executed statistics for the selected current Figure6C table. No native P values or alternative statistical design were imported; existing selected statistics remain unchanged.",
+  "external_detailed_comparison": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/rad_manuscript_recovery_20261023/selected_asset_recovery/native_master_review/input_comparison.tsv",
+  "external_recovery_manifest": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/rad_manuscript_recovery_20261023/selected_asset_recovery/native_master_review/MANIFEST.json",
+  "external_recovery_manifest_sha256": "dc67ef3ca4dd72d57c29e3da3f168e401db68a66272fa3bf89453235f74ce550"
+}

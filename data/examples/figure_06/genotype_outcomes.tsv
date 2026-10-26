@@ -1,0 +1,16 @@
+cell_barcode	tool	reference_present	reference_state	reference_label	selected	query_state	query_label	strict_identity_eligible	outcome
+AAACCCACATCCGAGC	RAD	1	named_singlet	H2228	1	named_singlet	H2228	1	same
+AAACCCACATCCGAGC	BLAZE	1	named_singlet	H2228	1	named_singlet	H2228	1	same
+AAACCCACATCCGAGC	Flexiplex	1	named_singlet	H2228	1	named_singlet	H2228	1	same
+AAAGGGCTCGAACGCC	RAD	1	named_singlet	H2228	1	unassigned	unassigned	1	unassigned
+AAAGGGCTCGAACGCC	BLAZE	1	named_singlet	H2228	0	NA	NA	1	not_selected
+AAAGGGCTCGAACGCC	Flexiplex	1	named_singlet	H2228	1	unassigned	unassigned	1	unassigned
+AAAGGTAAGAGGCGGA	RAD	1	named_singlet	SHP77	1	doublet	doublet	1	doublet
+AAAGGTAAGAGGCGGA	BLAZE	1	named_singlet	SHP77	1	doublet	doublet	1	doublet
+AAAGGTAAGAGGCGGA	Flexiplex	1	named_singlet	SHP77	1	unassigned	unassigned	1	unassigned
+AAAGGTAAGTGTGTTC	RAD	1	named_singlet	SHP77	1	named_singlet	H69	1	different
+AAAGGTAAGTGTGTTC	BLAZE	1	named_singlet	SHP77	1	named_singlet	H69	1	different
+AAAGGTAAGTGTGTTC	Flexiplex	1	named_singlet	SHP77	1	named_singlet	H69	1	different
+AATTCCTGTAACGGTG	RAD	1	named_singlet	H1975	0	NA	NA	1	not_selected
+AATTCCTGTAACGGTG	BLAZE	1	named_singlet	H1975	0	NA	NA	1	not_selected
+AATTCCTGTAACGGTG	Flexiplex	1	named_singlet	H1975	0	NA	NA	1	not_selected

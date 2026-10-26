@@ -1,0 +1,25 @@
+field	value
+workflow_repository	https://github.com/youyupei/LongBench_workflow
+workflow_commit	37a9506
+fastp_version	0.23.4
+R_version	4.5.3
+Rsubread_version	2.20.0
+cellsnp_lite_version	1.2.3 (htslib 1.23.1)
+vireoSNP_version	0.5.8
+samtools_version	1.6
+bgzip_version	1.23.1
+tabix_version	1.23.1
+human_genome	/scratch-nfs/f005f43/longbench_full_demux_20260730/references/gencode_v44/GRCh38.primary_assembly.genome.fa
+human_genome_source_gzip_md5	9c3fc2ca260a767530dddb0f26721a6b
+human_gtf	/scratch-nfs/f005f43/longbench_full_demux_20260730/references/gencode_v44/gencode.v44.annotation.gtf
+human_gtf_source_gzip_md5	ee330cfe6d0654ba9b9cf434d5c1bfb1
+candidate_snp_vcf	/scratch-nfs/f005f43/longbench_snont_postdemux_vireo_20260803/bulk_donor_panel/reference/genome1K.phase3.SNP_AF5e2.chr1toX.hg38.vcf.gz
+candidate_snp_vcf_bytes	92432276
+candidate_snp_vcf_sha256	88e22ea3c4d416aed925e5b3efeb371ef023c954599a325dcb334dffcf6ad707
+donor_order	H146,H1975,H211,H2228,H526,H69,HCC827,SHP77
+fastp_command	fastp -i R1 -I R2 -o TRIM_R1 -O TRIM_R2 --thread 16 -j JSON -h HTML
+subjunc_parameters	reportAllJunctions=TRUE;useAnnotation=TRUE;input_format=gzFASTQ;isGTF=TRUE;unique=TRUE;nthreads=16
+cellsnp_command	cellsnp-lite -s BAM1,...,BAM8 -I H146,H1975,H211,H2228,H526,H69,HCC827,SHP77 -O OUT -R COMMON_HG38_VCF -p 32 --cellTAG None --UMItag None --gzip --genotype
+vireo_validation_command	vireo -c ILL_SN_CELLSNP -d FIXED_BULK_VCF -o OUT -t GT --callAmbientRNAs -p 16 --noPlot
+completion_contract	final VCF + TBI + nonempty validation/BULK_PANEL.VALIDATED.ok
+

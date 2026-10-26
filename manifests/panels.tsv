@@ -1,0 +1,47 @@
+panel	experiment_id	dataset_ids	guide	source_directory	task_ids	completion
+1A	figure_01	LongBench-SN-ONT; LongBench-SC-PB; Visium-HD-3p-mouse-brain	docs/figure_01.md	source_data/figure_01	F1-01	See task_status.tsv; source-verification proofs do not imply final artwork.
+1B	figure_01	LongBench-SN-ONT; LongBench-SC-PB	docs/figure_01.md	source_data/figure_01	F1-02	See task_status.tsv; source-verification proofs do not imply final artwork.
+1C	figure_01	LongBench-SN-ONT; LongBench-SC-PB	docs/figure_01.md	source_data/figure_01	F1-02	See task_status.tsv; source-verification proofs do not imply final artwork.
+1D	figure_01	Visium-HD-3p-mouse-brain / PBC44593	docs/figure_01.md	source_data/figure_01	F1-03	See task_status.tsv; source-verification proofs do not imply final artwork.
+2A	figure_02	ScTagger-S_flatQ20; ScTagger-L_flatQ20	docs/figure_02.md	source_data/figure_02	F2-01	See task_status.tsv; source-verification proofs do not imply final artwork.
+2B	figure_02	ScTagger-S_flatQ20; ScTagger-L_flatQ20	docs/figure_02.md	source_data/figure_02	F2-01; F2-02; F2-04	See task_status.tsv; source-verification proofs do not imply final artwork.
+2C	figure_02	ScTagger-S_flatQ20; ScTagger-L_flatQ20	docs/figure_02.md	source_data/figure_02	F2-01; F2-02; F2-04	See task_status.tsv; source-verification proofs do not imply final artwork.
+2D	figure_02	ScTagger-S_flatQ20; ScTagger-L_flatQ20	docs/figure_02.md	source_data/figure_02	F2-03; F2-04	See task_status.tsv; source-verification proofs do not imply final artwork.
+2E	figure_02	ScTagger-S_flatQ20; ScTagger-L_flatQ20	docs/figure_02.md	source_data/figure_02	F2-03; F2-04	See task_status.tsv; source-verification proofs do not imply final artwork.
+2F	figure_02	ScTagger-S_flatQ20; ScTagger-L_flatQ20	docs/figure_02.md	source_data/figure_02	F2-03; F2-04	See task_status.tsv; source-verification proofs do not imply final artwork.
+2G	figure_02	ScTagger-S_flatQ20; ScTagger-L_flatQ20	docs/figure_02.md	source_data/figure_02	F2-03; F2-04	See task_status.tsv; source-verification proofs do not imply final artwork.
+2H	figure_02	ScTagger-S_flatQ20; ScTagger-L_flatQ20	docs/figure_02.md	source_data/figure_02	F2-03; F2-04	See task_status.tsv; source-verification proofs do not imply final artwork.
+3A	figure_03	ScTagger-L_flatQ20; LongBench-SC-ONT; RAGEseq-cell-line	docs/figure_03.md	source_data/figure_03	F3-01; F3-03; F3-05; F3-09	See task_status.tsv; source-verification proofs do not imply final artwork.
+3B	figure_03	ScTagger-L_flatQ20; LongBench-SC-ONT; RAGEseq-cell-line	docs/figure_03.md	source_data/figure_03	F3-01; F3-02; F3-03; F3-04; F3-05; F3-08; F3-09	See task_status.tsv; source-verification proofs do not imply final artwork.
+3C	figure_03	ScTagger-L_flatQ20; LongBench-SC-ONT; RAGEseq-cell-line	docs/figure_03.md	source_data/figure_03	F3-01; F3-02; F3-03; F3-04; F3-05; F3-08; F3-09	See task_status.tsv; source-verification proofs do not imply final artwork.
+3D	figure_03	LongBench-SC-ONT; LongBench-SN-ONT; LongBench-SC-PB; LongBench-SN-PB	docs/figure_03.md	source_data/figure_03	F3-01; F3-06; F3-07; F3-08; F3-09	See task_status.tsv; source-verification proofs do not imply final artwork.
+3E	figure_03	LongBench-SC-ONT; LongBench-SN-ONT; LongBench-SC-PB; LongBench-SN-PB	docs/figure_03.md	source_data/figure_03	F3-01; F3-06; F3-07; F3-08; F3-09	See task_status.tsv; source-verification proofs do not imply final artwork.
+3F	figure_03	LongBench-SC-ONT; LongBench-SN-ONT; LongBench-SC-PB; LongBench-SN-PB	docs/figure_03.md	source_data/figure_03	F3-01; F3-06; F3-07; F3-08; F3-09	See task_status.tsv; source-verification proofs do not imply final artwork.
+3G	figure_03	LongBench-SC-ONT; LongBench-SN-ONT; LongBench-SC-PB; LongBench-SN-PB	docs/figure_03.md	source_data/figure_03	F3-01; F3-06; F3-07; F3-08; F3-09	See task_status.tsv; source-verification proofs do not imply final artwork.
+4A	figure_04	all 37 inputs marked figure_04_input=yes in datasets.tsv	docs/figure_04.md	source_data/figure_04	F4-01	See task_status.tsv; source-verification proofs do not imply final artwork.
+4B	figure_04	all 37 inputs marked figure_04_input=yes in datasets.tsv	docs/figure_04.md	source_data/figure_04	F4-01; F4-02	See task_status.tsv; source-verification proofs do not imply final artwork.
+4C	figure_04	all 37 inputs marked figure_04_input=yes in datasets.tsv	docs/figure_04.md	source_data/figure_04	F4-02	See task_status.tsv; source-verification proofs do not imply final artwork.
+4D	figure_04	all 37 inputs marked figure_04_input=yes in datasets.tsv	docs/figure_04.md	source_data/figure_04	F4-02	See task_status.tsv; source-verification proofs do not imply final artwork.
+4E	figure_04	all 37 inputs marked figure_04_input=yes in datasets.tsv	docs/figure_04.md	source_data/figure_04	F4-02	See task_status.tsv; source-verification proofs do not imply final artwork.
+4F	figure_04	all 37 inputs marked figure_04_input=yes in datasets.tsv	docs/figure_04.md	source_data/figure_04	F4-01; F4-03	See task_status.tsv; source-verification proofs do not imply final artwork.
+4G	figure_04	all 37 inputs marked figure_04_input=yes in datasets.tsv	docs/figure_04.md	source_data/figure_04	F4-01; F4-03	See task_status.tsv; source-verification proofs do not imply final artwork.
+4H	figure_04	all 37 inputs marked figure_04_input=yes in datasets.tsv	docs/figure_04.md	source_data/figure_04	F4-01; F4-03	See task_status.tsv; source-verification proofs do not imply final artwork.
+4I	figure_04	all 37 inputs marked figure_04_input=yes in datasets.tsv	docs/figure_04.md	source_data/figure_04	F4-03	See task_status.tsv; source-verification proofs do not imply final artwork.
+4J	figure_04	all 37 inputs marked figure_04_input=yes in datasets.tsv	docs/figure_04.md	source_data/figure_04	F4-03	See task_status.tsv; source-verification proofs do not imply final artwork.
+4K	figure_04	all 37 inputs marked figure_04_input=yes in datasets.tsv	docs/figure_04.md	source_data/figure_04	F4-03	See task_status.tsv; source-verification proofs do not imply final artwork.
+5A	figure_05	RAGEseq-cell-line; matched cell labels	docs/figure_05.md	source_data/figure_05	F5-01	See task_status.tsv; source-verification proofs do not imply final artwork.
+5B	figure_05	RAGEseq-cell-line; matched cell labels	docs/figure_05.md	source_data/figure_05	F5-01	See task_status.tsv; source-verification proofs do not imply final artwork.
+5C	figure_05	RAGEseq-cell-line; matched cell labels	docs/figure_05.md	source_data/figure_05	F5-01	See task_status.tsv; source-verification proofs do not imply final artwork.
+5D	figure_05	RAGEseq-cell-line; matched cell labels	docs/figure_05.md	source_data/figure_05	F5-01	See task_status.tsv; source-verification proofs do not imply final artwork.
+5E	figure_05	RAGEseq-cell-line; matched cell labels	docs/figure_05.md	source_data/figure_05	F5-01	See task_status.tsv; source-verification proofs do not imply final artwork.
+5F	figure_05	RAGEseq-cell-line; matched cell labels	docs/figure_05.md	source_data/figure_05	F5-01	See task_status.tsv; source-verification proofs do not imply final artwork.
+5G	figure_05	LR-Split-seq; matched short-read reference	docs/figure_05.md	source_data/figure_05	F5-02	See task_status.tsv; source-verification proofs do not imply final artwork.
+5H	figure_05	LR-Split-seq; matched short-read reference	docs/figure_05.md	source_data/figure_05	F5-02	See task_status.tsv; source-verification proofs do not imply final artwork.
+6A	figure_06	LongBench-SN-ONT; matched Illumina SN and eight bulk genotype references	docs/figure_06.md	source_data/figure_06	F6-01; F6-02; F6-03	See task_status.tsv; source-verification proofs do not imply final artwork.
+6B	figure_06	LongBench-SN-ONT; matched Illumina SN and eight bulk genotype references	docs/figure_06.md	source_data/figure_06	F6-01; F6-02; F6-03	See task_status.tsv; source-verification proofs do not imply final artwork.
+6C	figure_06	LongBench-SN-ONT; matched Illumina SN and eight bulk genotype references	docs/figure_06.md	source_data/figure_06	F6-01; F6-02; F6-03	See task_status.tsv; source-verification proofs do not imply final artwork.
+7A	figure_07	LongBench-SN-ONT; matched Illumina SN	docs/figure_07.md	source_data/figure_07	F7-01; F7-02	See task_status.tsv; source-verification proofs do not imply final artwork.
+7B	figure_07	LongBench-SN-ONT; matched Illumina SN	docs/figure_07.md	source_data/figure_07	F7-01; F7-02	See task_status.tsv; source-verification proofs do not imply final artwork.
+7C	figure_07	LongBench-SN-ONT; matched Illumina SN	docs/figure_07.md	source_data/figure_07	F7-01; F7-02	See task_status.tsv; source-verification proofs do not imply final artwork.
+7D	figure_07	LongBench-SN-ONT; matched Illumina SN	docs/figure_07.md	source_data/figure_07	F7-01; F7-02	See task_status.tsv; source-verification proofs do not imply final artwork.
+quality-sweep supplement	figure_02	ScTagger-S_flatQ20; ScTagger-L_flatQ20	docs/figure_02.md	source_data/figure_02	F2-01; F2-02; F2-05	See task_status.tsv; source-verification proofs do not imply final artwork.

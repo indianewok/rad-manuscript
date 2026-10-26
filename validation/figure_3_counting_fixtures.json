@@ -1,0 +1,114 @@
+{
+  "status": "passed",
+  "scope": "independent hand-computable fixtures only",
+  "checks": [
+    "same-target duplicate exclusion",
+    "multitarget exclusion in strict counts",
+    "zero-count target",
+    "input conservation",
+    "read re-entry",
+    "pair deduplication",
+    "multitarget retention for correction",
+    "overlapping class flags",
+    "missing source unknown",
+    "RAD empty CR native",
+    "reverse complement",
+    "CT retention",
+    "identity/schema rejection"
+  ],
+  "strict_expected": {
+    "input_reads": 5,
+    "strict_assigned": 1,
+    "ambiguous_ids": 2,
+    "unassigned": 2,
+    "assignment_rows": 5,
+    "unique_assignment_ids": 3
+  },
+  "pair_ledger": [
+    {
+      "original_id": "x",
+      "target": "AAAA",
+      "sources": [
+        "CCCC",
+        "GGGG",
+        "NNNN"
+      ],
+      "source_evidence": [
+        ""
+      ],
+      "assignment_record_count": 4,
+      "CT_records": 1,
+      "corrected_off_list": true,
+      "failure_mode_1": true,
+      "failure_mode_2": true,
+      "missing_source": false,
+      "conflicting_sources": true
+    },
+    {
+      "original_id": "z",
+      "target": "AAAA",
+      "sources": [],
+      "source_evidence": [
+        ""
+      ],
+      "assignment_record_count": 1,
+      "CT_records": 0,
+      "corrected_off_list": false,
+      "failure_mode_1": false,
+      "failure_mode_2": false,
+      "missing_source": true,
+      "conflicting_sources": false
+    },
+    {
+      "original_id": "x",
+      "target": "CCCC",
+      "sources": [
+        "NNNN"
+      ],
+      "source_evidence": [
+        ""
+      ],
+      "assignment_record_count": 1,
+      "CT_records": 0,
+      "corrected_off_list": true,
+      "failure_mode_1": false,
+      "failure_mode_2": false,
+      "missing_source": false,
+      "conflicting_sources": false
+    },
+    {
+      "original_id": "n",
+      "target": "AAAA",
+      "sources": [
+        "AAAA"
+      ],
+      "source_evidence": [
+        ""
+      ],
+      "assignment_record_count": 1,
+      "CT_records": 0,
+      "corrected_off_list": false,
+      "failure_mode_1": false,
+      "failure_mode_2": false,
+      "missing_source": false,
+      "conflicting_sources": false
+    },
+    {
+      "original_id": "rev",
+      "target": "AAAA",
+      "sources": [
+        "CCCC"
+      ],
+      "source_evidence": [
+        ""
+      ],
+      "assignment_record_count": 1,
+      "CT_records": 0,
+      "corrected_off_list": false,
+      "failure_mode_1": true,
+      "failure_mode_2": false,
+      "missing_source": false,
+      "conflicting_sources": false
+    }
+  ]
+}

@@ -1,0 +1,321 @@
+{
+  "files": {
+    "BLAZE_assignment_classified_example.tsv": {
+      "rows": 8,
+      "columns": {
+        "tool": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "read_id": {
+          "units_or_semantics": "physical synthetic read identifier"
+        },
+        "truth_barcode": {
+          "units_or_semantics": "known synthetic barcode identity"
+        },
+        "raw_barcode_or_CR": {
+          "units_or_semantics": "raw observed barcode sequence; RAD CR may use reverse orientation and empty CR means native"
+        },
+        "target_barcode": {
+          "units_or_semantics": "assigned barcode identity; blank assigned_barcode means unassigned"
+        },
+        "record_state": {
+          "units_or_semantics": "classification before full physical-ID duplicate accounting"
+        },
+        "interpretation": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "duplicate_status": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        }
+      },
+      "scope": "bounded actual input or its deterministic transformation; not a full scientific dataset"
+    },
+    "BLAZE_assignment_records_example.tsv": {
+      "rows": 8,
+      "columns": {
+        "read_id": {
+          "units_or_semantics": "physical synthetic read identifier"
+        },
+        "true_barcode": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "putative_barcode": {
+          "units_or_semantics": "raw observed barcode sequence; RAD CR may use reverse orientation and empty CR means native"
+        },
+        "assigned_barcode": {
+          "units_or_semantics": "assigned barcode identity; blank assigned_barcode means unassigned"
+        },
+        "state": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "target_class": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        }
+      },
+      "scope": "bounded actual input or its deterministic transformation; not a full scientific dataset"
+    },
+    "Flexiplex_assignment_classified_example.tsv": {
+      "rows": 8,
+      "columns": {
+        "tool": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "read_id": {
+          "units_or_semantics": "physical synthetic read identifier"
+        },
+        "truth_barcode": {
+          "units_or_semantics": "known synthetic barcode identity"
+        },
+        "raw_barcode_or_CR": {
+          "units_or_semantics": "raw observed barcode sequence; RAD CR may use reverse orientation and empty CR means native"
+        },
+        "target_barcode": {
+          "units_or_semantics": "assigned barcode identity; blank assigned_barcode means unassigned"
+        },
+        "record_state": {
+          "units_or_semantics": "classification before full physical-ID duplicate accounting"
+        },
+        "interpretation": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "duplicate_status": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        }
+      },
+      "scope": "bounded actual input or its deterministic transformation; not a full scientific dataset"
+    },
+    "Flexiplex_assignment_records_example.tsv": {
+      "rows": 8,
+      "columns": {
+        "Read": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "CellBarcode": {
+          "units_or_semantics": "assigned barcode identity; blank assigned_barcode means unassigned"
+        },
+        "RawCellBarcode": {
+          "units_or_semantics": "raw observed barcode sequence; RAD CR may use reverse orientation and empty CR means native"
+        },
+        "FlankEditDist": {
+          "units_or_semantics": "integer edit distance"
+        },
+        "BarcodeEditDist": {
+          "units_or_semantics": "integer edit distance"
+        },
+        "UMI": {
+          "units_or_semantics": "nucleotide unique-molecular-identifier string"
+        }
+      },
+      "scope": "bounded actual input or its deterministic transformation; not a full scientific dataset"
+    },
+    "RAD_assignment_classified_example.tsv": {
+      "rows": 8,
+      "columns": {
+        "tool": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "read_id": {
+          "units_or_semantics": "physical synthetic read identifier"
+        },
+        "truth_barcode": {
+          "units_or_semantics": "known synthetic barcode identity"
+        },
+        "raw_barcode_or_CR": {
+          "units_or_semantics": "raw observed barcode sequence; RAD CR may use reverse orientation and empty CR means native"
+        },
+        "target_barcode": {
+          "units_or_semantics": "assigned barcode identity; blank assigned_barcode means unassigned"
+        },
+        "record_state": {
+          "units_or_semantics": "classification before full physical-ID duplicate accounting"
+        },
+        "interpretation": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "duplicate_status": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        }
+      },
+      "scope": "bounded actual input or its deterministic transformation; not a full scientific dataset"
+    },
+    "RAD_assignment_records_example.tsv": {
+      "rows": 8,
+      "columns": {
+        "read_id": {
+          "units_or_semantics": "physical synthetic read identifier"
+        },
+        "truth_barcode": {
+          "units_or_semantics": "known synthetic barcode identity"
+        },
+        "rad_cb": {
+          "units_or_semantics": "assigned barcode identity; blank assigned_barcode means unassigned"
+        },
+        "rad_cr": {
+          "units_or_semantics": "raw observed barcode sequence; RAD CR may use reverse orientation and empty CR means native"
+        },
+        "strand": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "record_category": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        }
+      },
+      "scope": "bounded actual input or its deterministic transformation; not a full scientific dataset"
+    },
+    "S_shift_p01_metrics.tsv": {
+      "rows": 4,
+      "columns": {
+        "tool": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "reference_n": {
+          "units_or_semantics": "distinct barcode identities"
+        },
+        "calls": {
+          "units_or_semantics": "distinct barcode identities"
+        },
+        "tp": {
+          "units_or_semantics": "distinct barcode identities"
+        },
+        "fp": {
+          "units_or_semantics": "distinct barcode identities"
+        },
+        "fn": {
+          "units_or_semantics": "distinct barcode identities"
+        },
+        "precision": {
+          "units_or_semantics": "fraction 0..1"
+        },
+        "recall": {
+          "units_or_semantics": "fraction 0..1"
+        },
+        "f1": {
+          "units_or_semantics": "fraction 0..1"
+        }
+      },
+      "scope": "bounded actual input or its deterministic transformation; not a full scientific dataset"
+    },
+    "paired_quality_example.tsv": {
+      "rows": 8,
+      "columns": {
+        "read_id": {
+          "units_or_semantics": "physical synthetic read identifier"
+        },
+        "truth_barcode": {
+          "units_or_semantics": "known synthetic barcode identity"
+        },
+        "barcode_ED": {
+          "units_or_semantics": "barcode edit distance, integer edits"
+        },
+        "nanopore2018 +1": {
+          "units_or_semantics": "mean numeric Phred quality over the located16-base barcode window for this same physical read"
+        },
+        "nanopore2023 -17": {
+          "units_or_semantics": "mean numeric Phred quality over the located16-base barcode window for this same physical read"
+        },
+        "nanopore2018 +2": {
+          "units_or_semantics": "mean numeric Phred quality over the located16-base barcode window for this same physical read"
+        },
+        "nanopore2023 -16": {
+          "units_or_semantics": "mean numeric Phred quality over the located16-base barcode window for this same physical read"
+        },
+        "nanopore2018 +3": {
+          "units_or_semantics": "mean numeric Phred quality over the located16-base barcode window for this same physical read"
+        },
+        "nanopore2023 -15": {
+          "units_or_semantics": "mean numeric Phred quality over the located16-base barcode window for this same physical read"
+        },
+        "nanopore2018 +4": {
+          "units_or_semantics": "mean numeric Phred quality over the located16-base barcode window for this same physical read"
+        },
+        "nanopore2023 -14": {
+          "units_or_semantics": "mean numeric Phred quality over the located16-base barcode window for this same physical read"
+        },
+        "nanopore2018 +5": {
+          "units_or_semantics": "mean numeric Phred quality over the located16-base barcode window for this same physical read"
+        },
+        "nanopore2023 -12": {
+          "units_or_semantics": "mean numeric Phred quality over the located16-base barcode window for this same physical read"
+        },
+        "nanopore2018 +6": {
+          "units_or_semantics": "mean numeric Phred quality over the located16-base barcode window for this same physical read"
+        },
+        "nanopore2023 -11": {
+          "units_or_semantics": "mean numeric Phred quality over the located16-base barcode window for this same physical read"
+        },
+        "nanopore2018 +8": {
+          "units_or_semantics": "mean numeric Phred quality over the located16-base barcode window for this same physical read"
+        },
+        "nanopore2023 -9": {
+          "units_or_semantics": "mean numeric Phred quality over the located16-base barcode window for this same physical read"
+        },
+        "nanopore2018 +10": {
+          "units_or_semantics": "mean numeric Phred quality over the located16-base barcode window for this same physical read"
+        },
+        "nanopore2023 -7": {
+          "units_or_semantics": "mean numeric Phred quality over the located16-base barcode window for this same physical read"
+        },
+        "nanopore2018 +11": {
+          "units_or_semantics": "mean numeric Phred quality over the located16-base barcode window for this same physical read"
+        },
+        "nanopore2023 -6": {
+          "units_or_semantics": "mean numeric Phred quality over the located16-base barcode window for this same physical read"
+        },
+        "nanopore2018 +12": {
+          "units_or_semantics": "mean numeric Phred quality over the located16-base barcode window for this same physical read"
+        },
+        "nanopore2023 -5": {
+          "units_or_semantics": "mean numeric Phred quality over the located16-base barcode window for this same physical read"
+        },
+        "nanopore2018 +13": {
+          "units_or_semantics": "mean numeric Phred quality over the located16-base barcode window for this same physical read"
+        },
+        "nanopore2023 -4": {
+          "units_or_semantics": "mean numeric Phred quality over the located16-base barcode window for this same physical read"
+        },
+        "nanopore2018 native": {
+          "units_or_semantics": "mean numeric Phred quality over the located16-base barcode window for this same physical read"
+        },
+        "nanopore2023 native": {
+          "units_or_semantics": "mean numeric Phred quality over the located16-base barcode window for this same physical read"
+        }
+      },
+      "scope": "bounded actual input or its deterministic transformation; not a full scientific dataset"
+    },
+    "two_read_quality_comparison.tsv": {
+      "rows": 2,
+      "columns": {
+        "read_id": {
+          "units_or_semantics": "physical synthetic read identifier"
+        },
+        "bases": {
+          "units_or_semantics": "nucleotides"
+        },
+        "sequence_equal": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "quality_equal": {
+          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
+        },
+        "flat_mean_Q": {
+          "units_or_semantics": "mean Phred score"
+        },
+        "native_mean_Q": {
+          "units_or_semantics": "mean Phred score"
+        }
+      },
+      "scope": "bounded actual input or its deterministic transformation; not a full scientific dataset"
+    },
+    "L_flatQ20_first2.fastq": {
+      "format": "FASTQ four lines per record; Phred+33 ASCII quality; sequence and quality lengths equal",
+      "scope": "first two public synthetic ScTagger records only"
+    },
+    "L_native2023_first2.fastq": {
+      "format": "FASTQ four lines per record; Phred+33 ASCII quality; sequence and quality lengths equal",
+      "scope": "first two public synthetic ScTagger records only"
+    }
+  },
+  "source_lineage": "provenance.json; original TSV/CSV header excluded from 1-based data-row numbering",
+  "output_tables": "derived examples are produced by exact commands in docs/figure_02.md",
+  "empty_files": "No empty records are imputed."
+}

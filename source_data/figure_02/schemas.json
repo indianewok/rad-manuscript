@@ -1,0 +1,275 @@
+{
+  "assignment_per_target.tsv": {
+    "fields": [
+      "tool",
+      "barcode",
+      "is_truth",
+      "selected",
+      "native_correct",
+      "corrected_correct",
+      "native_incorrect",
+      "corrected_incorrect"
+    ],
+    "primary_key": [
+      "tool",
+      "barcode"
+    ],
+    "encoding": "UTF-8",
+    "delimiter": "tab",
+    "missing_value": "empty field; not zero",
+    "hash_scope": "plain file bytes"
+  },
+  "assignment_six_states.tsv": {
+    "fields": [
+      "tool",
+      "state",
+      "reads",
+      "denominator",
+      "fraction",
+      "count_unit"
+    ],
+    "primary_key": [
+      "tool",
+      "state"
+    ],
+    "encoding": "UTF-8",
+    "delimiter": "tab",
+    "missing_value": "empty field; not zero",
+    "hash_scope": "plain file bytes"
+  },
+  "correction_only.tsv": {
+    "fields": [
+      "tool",
+      "state",
+      "reads",
+      "denominator",
+      "fraction"
+    ],
+    "primary_key": [],
+    "encoding": "UTF-8",
+    "delimiter": "tab",
+    "missing_value": "empty field; not zero",
+    "hash_scope": "plain file bytes"
+  },
+  "discovery_barcode_identities.tsv.gz": {
+    "fields": [
+      "dataset",
+      "model",
+      "condition",
+      "tool",
+      "barcode",
+      "classification"
+    ],
+    "primary_key": [],
+    "encoding": "UTF-8",
+    "delimiter": "tab",
+    "missing_value": "empty field; not zero",
+    "hash_scope": "compressed bytes"
+  },
+  "discovery_callset_manifest.tsv": {
+    "fields": [
+      "dataset",
+      "model",
+      "condition",
+      "tool",
+      "original_path",
+      "resolved_path",
+      "sha256",
+      "calls"
+    ],
+    "primary_key": [],
+    "encoding": "UTF-8",
+    "delimiter": "tab",
+    "missing_value": "empty field; not zero",
+    "hash_scope": "plain file bytes"
+  },
+  "discovery_metrics.tsv": {
+    "fields": [
+      "dataset",
+      "model",
+      "condition",
+      "shift",
+      "tool",
+      "full_dataset_mean_Q",
+      "calls",
+      "tp",
+      "fp",
+      "fn",
+      "precision",
+      "recall",
+      "f1",
+      "origin",
+      "source_table"
+    ],
+    "primary_key": [
+      "dataset",
+      "model",
+      "condition",
+      "tool"
+    ],
+    "encoding": "UTF-8",
+    "delimiter": "tab",
+    "missing_value": "empty field; not zero",
+    "hash_scope": "plain file bytes"
+  },
+  "generation_environment.tsv": {
+    "fields": [
+      "start_utc",
+      "2026-09-13T15:24:40Z"
+    ],
+    "primary_key": [],
+    "encoding": "UTF-8",
+    "delimiter": "tab",
+    "missing_value": "empty field; not zero",
+    "hash_scope": "plain file bytes"
+  },
+  "generator_source_manifest.tsv": {
+    "fields": [
+      "source_path",
+      "archived_path",
+      "bytes",
+      "sha256"
+    ],
+    "primary_key": [],
+    "encoding": "UTF-8",
+    "delimiter": "tab",
+    "missing_value": "empty field; not zero",
+    "hash_scope": "plain file bytes"
+  },
+  "matched_quality_levels.tsv": {
+    "fields": [
+      "dataset",
+      "shift2018",
+      "condition2018",
+      "mean_whole_Q2018",
+      "shift2023",
+      "condition2023",
+      "mean_whole_Q2023",
+      "mean_Q_difference2023_minus2018",
+      "biological_minQ",
+      "effective_native_BLAZE_minQ",
+      "matching_rule"
+    ],
+    "primary_key": [],
+    "encoding": "UTF-8",
+    "delimiter": "tab",
+    "missing_value": "empty field; not zero",
+    "hash_scope": "plain file bytes"
+  },
+  "paired_50000_barcode_mean_Q.csv.gz": {
+    "fields": [
+      "read_id",
+      "truth_barcode",
+      "barcode_ED",
+      "nanopore2018 +1",
+      "nanopore2023 -17",
+      "nanopore2018 +2",
+      "nanopore2023 -16",
+      "nanopore2018 +3",
+      "nanopore2023 -15",
+      "nanopore2018 +4",
+      "nanopore2023 -14",
+      "nanopore2018 +5",
+      "nanopore2023 -12",
+      "nanopore2018 +6",
+      "nanopore2023 -11",
+      "nanopore2018 +8",
+      "nanopore2023 -9",
+      "nanopore2018 +10",
+      "nanopore2023 -7",
+      "nanopore2018 +11",
+      "nanopore2023 -6",
+      "nanopore2018 +12",
+      "nanopore2023 -5",
+      "nanopore2018 +13",
+      "nanopore2023 -4",
+      "nanopore2018 native",
+      "nanopore2023 native"
+    ],
+    "primary_key": [],
+    "encoding": "UTF-8",
+    "delimiter": "comma",
+    "missing_value": "empty field; not zero",
+    "hash_scope": "compressed bytes"
+  },
+  "quality_conditions_2018.tsv": {
+    "fields": [
+      "dataset",
+      "quality_tag",
+      "phred_shift",
+      "quality_model",
+      "seed",
+      "reads",
+      "located_barcodes",
+      "pass_minQ15",
+      "pass_fraction",
+      "min_all_base_q",
+      "max_all_base_q",
+      "mean_all_base_q",
+      "mean_barcode_base_q",
+      "median_barcode_min_q",
+      "headers_and_sequences_unchanged",
+      "note"
+    ],
+    "primary_key": [],
+    "encoding": "UTF-8",
+    "delimiter": "tab",
+    "missing_value": "empty field; not zero",
+    "hash_scope": "plain file bytes"
+  },
+  "quality_summary.tsv": {
+    "fields": [
+      "dataset",
+      "model",
+      "condition",
+      "shift",
+      "paired2018_shift",
+      "label",
+      "quality_transform",
+      "full_dataset_mean_Q",
+      "full_located_barcode_mean_Q",
+      "full_truth_located_barcode_minQ15_pass_n",
+      "sample_reads",
+      "sample_mean_barcode_Q",
+      "sample_SD",
+      "sample_median",
+      "sample_P2_5",
+      "sample_P97_5",
+      "sample_clean_mean_Q",
+      "sample_error_mean_Q",
+      "sample_clean_error_gap",
+      "sample_minQ15_pass_n"
+    ],
+    "primary_key": [],
+    "encoding": "UTF-8",
+    "delimiter": "tab",
+    "missing_value": "empty field; not zero",
+    "hash_scope": "plain file bytes"
+  },
+  "reconstructed_full_quality_histograms.tsv": {
+    "fields": [
+      "model",
+      "condition",
+      "shift",
+      "q",
+      "whole_base_count",
+      "barcode_base_count",
+      "truth_located_barcode_window_min_count"
+    ],
+    "primary_key": [],
+    "encoding": "UTF-8",
+    "delimiter": "tab",
+    "missing_value": "empty field; not zero",
+    "hash_scope": "plain file bytes"
+  },
+  "truth_barcodes.tsv": {
+    "fields": [
+      "barcode"
+    ],
+    "primary_key": [],
+    "encoding": "UTF-8",
+    "delimiter": "tab",
+    "missing_value": "empty field; not zero",
+    "hash_scope": "plain file bytes"
+  }
+}

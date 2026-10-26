@@ -1,0 +1,372 @@
+{
+  "checks": [
+    {
+      "expected_original_sha256": "da593da7dbe0075cf5e1534f62db00d42a8301892ee83fc48e76cb27cb74a3a0",
+      "identity": "byte-identical",
+      "original_path": "/scratch-nfs/f005f43/tilgner_native_wl_missing7_20260810/runs/Hipp_SN_f1_ONT_Run1/RAD/selected.normalized.sorted.txt",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f1_ONT_Run1.RAD.txt",
+      "sha256": "da593da7dbe0075cf5e1534f62db00d42a8301892ee83fc48e76cb27cb74a3a0"
+    },
+    {
+      "expected_original_sha256": "480d0d7d8d4db40cbbe7d0394609667b8ea1cbdb88362f93e3dcc82aab1d59f1",
+      "identity": "byte-identical",
+      "original_path": "/scratch-nfs/f005f43/tilgner_native_wl_missing7_20260810/runs/Hipp_SN_f1_ONT_Run1/BLAZE/selected.normalized.sorted.txt",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f1_ONT_Run1.BLAZE.txt",
+      "sha256": "480d0d7d8d4db40cbbe7d0394609667b8ea1cbdb88362f93e3dcc82aab1d59f1"
+    },
+    {
+      "expected_original_sha256": "1e9a5ff4d762bf050bdfce63a1beb4e13be414e12e7ba7062f4b94813208d53a",
+      "identity": "byte-identical",
+      "original_path": "/scratch-nfs/f005f43/tilgner_native_wl_missing7_20260810/runs/Hipp_SN_f1_ONT_Run1/Flexiplex/selected.normalized.sorted.txt",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f1_ONT_Run1.Flexiplex.txt",
+      "sha256": "1e9a5ff4d762bf050bdfce63a1beb4e13be414e12e7ba7062f4b94813208d53a"
+    },
+    {
+      "expected_original_sha256": "ced47771c59ea43f6f9564ea996c1e73839b161e71cbf9675b4fe84d586e19c9",
+      "identity": "byte-identical",
+      "original_path": "/scratch-nfs/f005f43/tilgner_native_wl_missing7_20260810/runs/Hipp_SN_f1_ONT_Run2/RAD/selected.normalized.sorted.txt",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f1_ONT_Run2.RAD.txt",
+      "sha256": "ced47771c59ea43f6f9564ea996c1e73839b161e71cbf9675b4fe84d586e19c9"
+    },
+    {
+      "expected_original_sha256": "57addbe249db92b31626fbfefd80c59227a4e64ac656b3f8cd02cdf66cfe1107",
+      "identity": "byte-identical",
+      "original_path": "/scratch-nfs/f005f43/tilgner_native_wl_missing7_20260810/runs/Hipp_SN_f1_ONT_Run2/BLAZE/selected.normalized.sorted.txt",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f1_ONT_Run2.BLAZE.txt",
+      "sha256": "57addbe249db92b31626fbfefd80c59227a4e64ac656b3f8cd02cdf66cfe1107"
+    },
+    {
+      "expected_original_sha256": "5a32cb6b9f63e0ca9ba974318639342aab35fb306570d8de67a923eb4238c42c",
+      "identity": "byte-identical",
+      "original_path": "/scratch-nfs/f005f43/tilgner_native_wl_missing7_20260810/runs/Hipp_SN_f1_ONT_Run2/Flexiplex/selected.normalized.sorted.txt",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f1_ONT_Run2.Flexiplex.txt",
+      "sha256": "5a32cb6b9f63e0ca9ba974318639342aab35fb306570d8de67a923eb4238c42c"
+    },
+    {
+      "expected_original_sha256": "f8adced4a8004361d7b4d84f7c642c8b23c78d9c13f7c1d5069e2e1486597939",
+      "identity": "byte-identical",
+      "original_path": "/scratch-nfs/f005f43/tilgner_native_wl_missing7_20260810/runs/Hipp_SN_f2_ONT/RAD/selected.normalized.sorted.txt",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f2_ONT.RAD.txt",
+      "sha256": "f8adced4a8004361d7b4d84f7c642c8b23c78d9c13f7c1d5069e2e1486597939"
+    },
+    {
+      "expected_original_sha256": "a3b0328b316f47ed465963a1e300ea74eed2348380878c109e2c6ba1de435327",
+      "identity": "byte-identical",
+      "original_path": "/scratch-nfs/f005f43/tilgner_native_wl_missing7_20260810/runs/Hipp_SN_f2_ONT/BLAZE/selected.normalized.sorted.txt",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f2_ONT.BLAZE.txt",
+      "sha256": "a3b0328b316f47ed465963a1e300ea74eed2348380878c109e2c6ba1de435327"
+    },
+    {
+      "expected_original_sha256": "6d979d6a28bd08e898f4cfd7c21be4dc8a975b573f56ae40249214e4ddcf3cb1",
+      "identity": "byte-identical",
+      "original_path": "/scratch-nfs/f005f43/tilgner_native_wl_missing7_20260810/runs/Hipp_SN_f2_ONT/Flexiplex/selected.normalized.sorted.txt",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f2_ONT.Flexiplex.txt",
+      "sha256": "6d979d6a28bd08e898f4cfd7c21be4dc8a975b573f56ae40249214e4ddcf3cb1"
+    },
+    {
+      "expected_original_sha256": "cecdd0625173b2461aeb81899039daa3384d2d1f2e6276c0faada13afd649bbd",
+      "identity": "byte-identical",
+      "original_path": "/scratch-nfs/f005f43/tilgner_native_wl_missing7_20260810/compact/f3_m2/callsets/Hipp_SN_f3_ONT_Run1.RAD.txt",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f3_ONT_Run1.RAD.txt",
+      "sha256": "cecdd0625173b2461aeb81899039daa3384d2d1f2e6276c0faada13afd649bbd"
+    },
+    {
+      "expected_original_sha256": "94673e6977b0e3c47536f5f8cd2680e70bdb318902303b6318bf97a88900a5c1",
+      "identity": "byte-identical",
+      "original_path": "/scratch-nfs/f005f43/tilgner_native_wl_missing7_20260810/compact/f3_m2/callsets/Hipp_SN_f3_ONT_Run1.BLAZE.txt",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f3_ONT_Run1.BLAZE.txt",
+      "sha256": "94673e6977b0e3c47536f5f8cd2680e70bdb318902303b6318bf97a88900a5c1"
+    },
+    {
+      "expected_original_sha256": "a8392c63de1d732ab4b934de5af18ad7b3a4fb83938d8a40e820843e6282f458",
+      "identity": "byte-identical",
+      "original_path": "/scratch-nfs/f005f43/tilgner_native_wl_missing7_20260810/compact/f3_m2/callsets/Hipp_SN_f3_ONT_Run1.Flexiplex.txt",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f3_ONT_Run1.Flexiplex.txt",
+      "sha256": "a8392c63de1d732ab4b934de5af18ad7b3a4fb83938d8a40e820843e6282f458"
+    },
+    {
+      "expected_original_sha256": "aa695dd0d654a2f29b69536281e785c1feb97172d7072dce613ee5a9600f2d7d",
+      "identity": "byte-identical",
+      "original_path": "/scratch-nfs/f005f43/tilgner_native_wl_missing7_20260810/compact/f3_m2/callsets/Hipp_SN_f3_ONT_Run2.RAD.txt",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f3_ONT_Run2.RAD.txt",
+      "sha256": "aa695dd0d654a2f29b69536281e785c1feb97172d7072dce613ee5a9600f2d7d"
+    },
+    {
+      "expected_original_sha256": "c89bfee54e37769df31962f727c79192cfa21d4c2522ce7d0e2bd8f15779df04",
+      "identity": "byte-identical",
+      "original_path": "/scratch-nfs/f005f43/tilgner_native_wl_missing7_20260810/compact/f3_m2/callsets/Hipp_SN_f3_ONT_Run2.BLAZE.txt",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f3_ONT_Run2.BLAZE.txt",
+      "sha256": "c89bfee54e37769df31962f727c79192cfa21d4c2522ce7d0e2bd8f15779df04"
+    },
+    {
+      "expected_original_sha256": "e41829761384dff46ed7e6c133ee919be6f457a169fecc243e6d00d9641c01a7",
+      "identity": "byte-identical",
+      "original_path": "/scratch-nfs/f005f43/tilgner_native_wl_missing7_20260810/compact/f3_m2/callsets/Hipp_SN_f3_ONT_Run2.Flexiplex.txt",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f3_ONT_Run2.Flexiplex.txt",
+      "sha256": "e41829761384dff46ed7e6c133ee919be6f457a169fecc243e6d00d9641c01a7"
+    },
+    {
+      "expected_original_sha256": "39ebae62780cc9ea383032e3978909da25603089beb8e0c01becee36cd1f22f5",
+      "identity": "byte-identical",
+      "original_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run1.RAD.txt",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run1.RAD.txt",
+      "sha256": "39ebae62780cc9ea383032e3978909da25603089beb8e0c01becee36cd1f22f5"
+    },
+    {
+      "expected_original_sha256": "34d005329a7ce53f2f53c257c651fff5f46d2d4859373163a5fcdfc58784885f",
+      "identity": "byte-identical",
+      "original_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run1.BLAZE.txt",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run1.BLAZE.txt",
+      "sha256": "34d005329a7ce53f2f53c257c651fff5f46d2d4859373163a5fcdfc58784885f"
+    },
+    {
+      "expected_original_sha256": "f54d8b4c5b62636a085424d5a53856d7cc3bfdc2ecdfefe1e63d02d3509f779a",
+      "identity": "byte-identical",
+      "original_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run1.Flexiplex_f0.tsv",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run1.Flexiplex_f0.tsv",
+      "sha256": "f54d8b4c5b62636a085424d5a53856d7cc3bfdc2ecdfefe1e63d02d3509f779a"
+    },
+    {
+      "expected_original_sha256": "bdd14602a194c04dd034373bed45a95809ae1b62ca5adfa43ac9f6366aa7bf2d",
+      "identity": "byte-identical",
+      "original_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run2.RAD.txt",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run2.RAD.txt",
+      "sha256": "bdd14602a194c04dd034373bed45a95809ae1b62ca5adfa43ac9f6366aa7bf2d"
+    },
+    {
+      "expected_original_sha256": "a49485707fd470b15259da4d9eca661ad68f4550dc1caaea45ed25b0ff433faf",
+      "identity": "byte-identical",
+      "original_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run2.BLAZE.txt",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run2.BLAZE.txt",
+      "sha256": "a49485707fd470b15259da4d9eca661ad68f4550dc1caaea45ed25b0ff433faf"
+    },
+    {
+      "expected_original_sha256": "6cb4299706dedd0b896ccab19babb13f377e1a61715996a7be41420406413082",
+      "identity": "byte-identical",
+      "original_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run2.Flexiplex_f0.tsv",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run2.Flexiplex_f0.tsv",
+      "sha256": "6cb4299706dedd0b896ccab19babb13f377e1a61715996a7be41420406413082"
+    },
+    {
+      "expected_original_sha256": "b342e3a59d146eff8fa0e5f38c96be95d1d7d13c7467dbff97a428f3bd725b3c",
+      "identity": "byte-identical",
+      "original_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run3.RAD.txt",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run3.RAD.txt",
+      "sha256": "b342e3a59d146eff8fa0e5f38c96be95d1d7d13c7467dbff97a428f3bd725b3c"
+    },
+    {
+      "expected_original_sha256": "6bcf93e1977d397478f964cc064152ca5fb24c101aeda227518fba5323cea29e",
+      "identity": "byte-identical",
+      "original_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run3.BLAZE.txt",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run3.BLAZE.txt",
+      "sha256": "6bcf93e1977d397478f964cc064152ca5fb24c101aeda227518fba5323cea29e"
+    },
+    {
+      "expected_original_sha256": "3cf0be1c46bbeaf9d647bf07af0824594490a13b20fc4a7e6b121d3865f686eb",
+      "identity": "byte-identical",
+      "original_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run3.Flexiplex_f0.tsv",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run3.Flexiplex_f0.tsv",
+      "sha256": "3cf0be1c46bbeaf9d647bf07af0824594490a13b20fc4a7e6b121d3865f686eb"
+    },
+    {
+      "expected_original_sha256": "f5bed135da36a371118e7e520dad19d48b750166dfcadef4517356cb369bc676",
+      "identity": "byte-identical",
+      "original_path": "/scratch-nfs/f005f43/tilgner_native_wl_missing7_20260810/compact/f3_m2/callsets/Hipp_SN_m2_ONT.RAD.txt",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m2_ONT.RAD.txt",
+      "sha256": "f5bed135da36a371118e7e520dad19d48b750166dfcadef4517356cb369bc676"
+    },
+    {
+      "expected_original_sha256": "43a001cbe1bf20ccefb8fb76ab20be292fc178919ad95b56edffaa94e74986e5",
+      "identity": "byte-identical",
+      "original_path": "/scratch-nfs/f005f43/tilgner_native_wl_missing7_20260810/compact/f3_m2/callsets/Hipp_SN_m2_ONT.BLAZE.txt",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m2_ONT.BLAZE.txt",
+      "sha256": "43a001cbe1bf20ccefb8fb76ab20be292fc178919ad95b56edffaa94e74986e5"
+    },
+    {
+      "expected_original_sha256": "22a6f2fe0a744db454f6c7a66485792a333098f39d1c453a89df22e3713ceaa6",
+      "identity": "byte-identical",
+      "original_path": "/scratch-nfs/f005f43/tilgner_native_wl_missing7_20260810/compact/f3_m2/callsets/Hipp_SN_m2_ONT.Flexiplex.txt",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m2_ONT.Flexiplex.txt",
+      "sha256": "22a6f2fe0a744db454f6c7a66485792a333098f39d1c453a89df22e3713ceaa6"
+    },
+    {
+      "expected_original_sha256": "a3e83f4d88a854fbd1b8117f8994e1b9aae89445768f624826538b40e4d6dbf6",
+      "identity": "byte-identical",
+      "original_path": "/scratch-nfs/f005f43/tilgner_native_wl_missing7_20260810/callsets/Hipp_SN_m3_ONT/Hipp_SN_m3_ONT.RAD.txt",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m3_ONT.RAD.txt",
+      "sha256": "a3e83f4d88a854fbd1b8117f8994e1b9aae89445768f624826538b40e4d6dbf6"
+    },
+    {
+      "expected_original_sha256": "937bdc133f1cdf1bc2b8071abbb203a6729b00e0504428a27b5d1f86292227f6",
+      "identity": "byte-identical",
+      "original_path": "/scratch-nfs/f005f43/tilgner_native_wl_missing7_20260810/callsets/Hipp_SN_m3_ONT/Hipp_SN_m3_ONT.BLAZE.txt",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m3_ONT.BLAZE.txt",
+      "sha256": "937bdc133f1cdf1bc2b8071abbb203a6729b00e0504428a27b5d1f86292227f6"
+    },
+    {
+      "expected_original_sha256": "3ca4d8f7ad325ca20d731b6b0535585b6c18ca2d50999a6985a3f83fe47ac73d",
+      "identity": "normalized retained copy; independently rescored below",
+      "original_path": "/scratch-nfs/f005f43/tilgner_native_wl_missing7_20260810/callsets/Hipp_SN_m3_ONT/Hipp_SN_m3_ONT.Flexiplex_f0.tsv",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m3_ONT.Flexiplex.txt",
+      "sha256": "a39eb6847d2e0bb33dd2e605de1fd73c1a183e448acda8c5deeefef8556ddff3"
+    },
+    {
+      "identity": "byte-identical",
+      "original_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/wl_scan/20260802_visium_b6853a3_error_sweep/reference/visium_spot_tool_calls_wide.tsv",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260802_visium_b6853a3_error_sweep/reference/visium_spot_tool_calls_wide.tsv",
+      "sha256": "36bf48f9daa7589648a85419c95a8bdf2f5e0e72224386c4545fe5fe641d9dd5"
+    },
+    {
+      "identity": "byte-identical",
+      "original_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/wl_scan/20260802_visium_b6853a3_error_sweep/e030/section12/section12_b685.txt",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260802_visium_b6853a3_error_sweep/e030/section12/section12_b685.txt",
+      "sha256": "ec4624f3e922ec9e8a9c7ec0d3c11167a8262a702058f47ad01a00bbd9f85827"
+    },
+    {
+      "identity": "byte-identical",
+      "original_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/wl_scan/20260729_spatial_vdj_single_slices_expect2500/runs/section12/blaze_expect2500/whitelist.csv",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260729_spatial_vdj_single_slices_expect2500/runs/section12/blaze_expect2500/whitelist.csv",
+      "sha256": "04f4ead2e257b54e7855c7bf1976f80c3108e4306bc6b79ba6a17ed05e92e03b"
+    },
+    {
+      "identity": "byte-identical",
+      "original_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/wl_scan/20260730_visium_flexiplex_f8_per_section_fairness/callsets/section12/flexiplex_barcodes_final.txt",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260730_visium_flexiplex_f8_per_section_fairness/callsets/section12/flexiplex_barcodes_final.txt",
+      "sha256": "22fcd636c87b5bc9ce6e8873c3f0f6d47d6dd730c109e50da0434c8af5b622dd"
+    },
+    {
+      "identity": "byte-identical",
+      "original_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/wl_scan/20260802_visium_b6853a3_error_sweep/e030/section16/section16_b685.txt",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260802_visium_b6853a3_error_sweep/e030/section16/section16_b685.txt",
+      "sha256": "531950deb5a81a0ab53786561922ee65f8d6591856c02e0ae130d751ee6eefea"
+    },
+    {
+      "identity": "byte-identical",
+      "original_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/wl_scan/20260729_spatial_vdj_single_slices_expect2500/runs/section16/blaze_expect2500/whitelist.csv",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260729_spatial_vdj_single_slices_expect2500/runs/section16/blaze_expect2500/whitelist.csv",
+      "sha256": "583a5cd0d0f23f8520d9443ab3b13aec9913ca5d8969c18ca6fd416c6f2fe034"
+    },
+    {
+      "identity": "byte-identical",
+      "original_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/wl_scan/20260730_visium_flexiplex_f8_per_section_fairness/callsets/section16/flexiplex_barcodes_final.txt",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260730_visium_flexiplex_f8_per_section_fairness/callsets/section16/flexiplex_barcodes_final.txt",
+      "sha256": "f1c4b8d86b7084022a700945632de492e5bfeb11bb6b5d2585f2058579f89315"
+    },
+    {
+      "identity": "byte-identical",
+      "original_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/wl_scan/20260802_visium_17_32_split_three_tool/blaze/section17_1T_1B/whitelist.csv",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260802_visium_17_32_split_three_tool/blaze/section17_1T_1B/whitelist.csv",
+      "sha256": "7b2b3db77aba7071aecc7d83019668b90ff2524533710d4803f699e78d881d5b"
+    },
+    {
+      "identity": "byte-identical",
+      "original_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/wl_scan/20260802_visium_17_32_split_three_tool/flexiplex/section17_1T_1B/f8/flexiplex_barcodes_final.txt",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260802_visium_17_32_split_three_tool/flexiplex/section17_1T_1B/f8/flexiplex_barcodes_final.txt",
+      "sha256": "3e13a86dddf08587b645d981ebc1788f26ab150f6c0c064ceef0a38787d51929"
+    },
+    {
+      "identity": "byte-identical",
+      "original_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/wl_scan/20260802_visium_17_32_split_three_tool/blaze/section17_4T_1B/whitelist.csv",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260802_visium_17_32_split_three_tool/blaze/section17_4T_1B/whitelist.csv",
+      "sha256": "75b84716d10e5c760d393351c4a913f8a94e8b46274fc21907001fd15bcc1f34"
+    },
+    {
+      "identity": "byte-identical",
+      "original_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/wl_scan/20260802_visium_17_32_split_three_tool/flexiplex/section17_4T_1B/f8/flexiplex_barcodes_final.txt",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260802_visium_17_32_split_three_tool/flexiplex/section17_4T_1B/f8/flexiplex_barcodes_final.txt",
+      "sha256": "788a00016ca4a6fd36c86336aff99825f470ab7070b127abac418b6ee68ee3fa"
+    },
+    {
+      "identity": "byte-identical",
+      "original_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/wl_scan/20260802_visium_b6853a3_error_sweep/e030/section22/section22_b685.txt",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260802_visium_b6853a3_error_sweep/e030/section22/section22_b685.txt",
+      "sha256": "4c9be2ae6ae6ae7d25917c335bc05e008252920918cef1671365cf4158d67979"
+    },
+    {
+      "identity": "byte-identical",
+      "original_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/wl_scan/20260729_spatial_vdj_single_slices_expect2500/runs/section22/blaze_expect2500/whitelist.csv",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260729_spatial_vdj_single_slices_expect2500/runs/section22/blaze_expect2500/whitelist.csv",
+      "sha256": "033377407660dc9e43477e4b5f9a227996acc7e53ccbbf190bb22e6eedf4ce68"
+    },
+    {
+      "identity": "byte-identical",
+      "original_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/wl_scan/20260730_visium_flexiplex_f8_per_section_fairness/callsets/section22/flexiplex_barcodes_final.txt",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260730_visium_flexiplex_f8_per_section_fairness/callsets/section22/flexiplex_barcodes_final.txt",
+      "sha256": "a1194380fe40234b311baa7c61a74e420f9790e4113c81988dc3ded1c0481e29"
+    },
+    {
+      "identity": "byte-identical",
+      "original_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/wl_scan/20260802_visium_b6853a3_error_sweep/e030/section31/section31_b685.txt",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260802_visium_b6853a3_error_sweep/e030/section31/section31_b685.txt",
+      "sha256": "a283a083954c13909d3d517e93758d23c2886d51301c2da723fa4701cf2e79e7"
+    },
+    {
+      "identity": "byte-identical",
+      "original_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/wl_scan/20260729_spatial_vdj_single_slices_expect2500/runs/section31/blaze_expect2500/whitelist.csv",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260729_spatial_vdj_single_slices_expect2500/runs/section31/blaze_expect2500/whitelist.csv",
+      "sha256": "d5cebca7007784b02601623d33e30d07b04e324721e74c4714be08551eacc913"
+    },
+    {
+      "identity": "byte-identical",
+      "original_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/wl_scan/20260730_visium_flexiplex_f8_per_section_fairness/callsets/section31/flexiplex_barcodes_final.txt",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260730_visium_flexiplex_f8_per_section_fairness/callsets/section31/flexiplex_barcodes_final.txt",
+      "sha256": "385190ae23c0bccdd0126555673a38419426845ddf154cb9c62ad2c31350a450"
+    },
+    {
+      "identity": "byte-identical",
+      "original_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/wl_scan/20260802_visium_17_32_split_three_tool/blaze/section32_1T_1B/whitelist.csv",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260802_visium_17_32_split_three_tool/blaze/section32_1T_1B/whitelist.csv",
+      "sha256": "574570ea64780b6fc324e874d134c4ae52e08178d03ad216a15ddac8c1f6448b"
+    },
+    {
+      "identity": "byte-identical",
+      "original_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/wl_scan/20260802_visium_17_32_split_three_tool/flexiplex/section32_1T_1B/f8/flexiplex_barcodes_final.txt",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260802_visium_17_32_split_three_tool/flexiplex/section32_1T_1B/f8/flexiplex_barcodes_final.txt",
+      "sha256": "4ddb7a28c4a1edadb7fde49244e5902838c9086c60b75a136f60a5d5ded6056b"
+    },
+    {
+      "identity": "byte-identical",
+      "original_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/wl_scan/20260802_visium_17_32_split_three_tool/blaze/section32_4T_1B/whitelist.csv",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260802_visium_17_32_split_three_tool/blaze/section32_4T_1B/whitelist.csv",
+      "sha256": "0e67c79fb76d557acce339e2d424ac1e951a2ecaf8a0a52620f6d80b101722d5"
+    },
+    {
+      "identity": "byte-identical",
+      "original_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/wl_scan/20260802_visium_17_32_split_three_tool/flexiplex/section32_4T_1B/f8/flexiplex_barcodes_final.txt",
+      "resolved_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260802_visium_17_32_split_three_tool/flexiplex/section32_4T_1B/f8/flexiplex_barcodes_final.txt",
+      "sha256": "872f2d023fb06543ea70c9f432725ecea19609e0a79c6ce72c63e15710520de8"
+    }
+  ],
+  "code_sha256": "761d84a1a15664177874ddd6b305c4bca3a49d34cdea01b9c2bb11b9456b6f13",
+  "command": [
+    "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/miniconda3/bin/python3",
+    "scripts/revision/figures_124_native_recovery.py"
+  ],
+  "missing_callsets": [
+    {
+      "checked_path": "/tmp/rad_split_e030_finite_verify_20260802/section17_1T.txt",
+      "expected_sha256": "50ae2b7db89e9ff41d2a9e221dc18821b9c73dee23019b34a4268893de2c60e0",
+      "original_path": "/tmp/rad_split_e030_finite_verify_20260802/section17_1T.txt",
+      "reason": "not at checked original or mapped path; retained metric table still available"
+    },
+    {
+      "checked_path": "/tmp/rad_split_e030_finite_verify_20260802/section17_4T.txt",
+      "expected_sha256": "53fbec411e2eee5221f7da6daad2745900ee0d6306c743170aa082c799ce2fb8",
+      "original_path": "/tmp/rad_split_e030_finite_verify_20260802/section17_4T.txt",
+      "reason": "not at checked original or mapped path; retained metric table still available"
+    },
+    {
+      "checked_path": "/tmp/rad_split_e030_finite_verify_20260802/section32_1T.txt",
+      "expected_sha256": "c6b740e15b9fb4839ca39b2704a27ee3fe95a6648a0b66a6756d177ffd09b5a7",
+      "original_path": "/tmp/rad_split_e030_finite_verify_20260802/section32_1T.txt",
+      "reason": "not at checked original or mapped path; retained metric table still available"
+    },
+    {
+      "checked_path": "/tmp/rad_split_e030_finite_verify_20260802/section32_4T.txt",
+      "expected_sha256": "12e66f290ed6aba080c5bd141259004112aab77c5fc79efa9767f444a5e801b0",
+      "original_path": "/tmp/rad_split_e030_finite_verify_20260802/section32_4T.txt",
+      "reason": "not at checked original or mapped path; retained metric table still available"
+    }
+  ],
+  "status": "passed with explicit missing callsets"
+}

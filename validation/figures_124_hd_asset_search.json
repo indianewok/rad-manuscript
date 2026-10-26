@@ -1,0 +1,57 @@
+{
+  "command": [
+    "rg",
+    "--files",
+    "--hidden",
+    "-g",
+    "*.rds",
+    "-g",
+    "*.RDS",
+    "-g",
+    "*16um*",
+    "-g",
+    "*16_um*",
+    "-g",
+    "*tissue*position*",
+    "-g",
+    "*bin*matrix*",
+    "-g",
+    "!**/.git/**"
+  ],
+  "exact_target_matches": {
+    "tissue_positions_16um.csv": [],
+    "visium_hd_mouse_brain_016um_seurat.rds": []
+  },
+  "full_candidate_index_local_path": "/tmp/rad124_hd_candidate_paths_20261023.txt",
+  "full_candidate_index_sha256": "ad9f0845e160bc55ba2d333b55d908e265b7f2d36a265431cd78e81b064bda94",
+  "limitation": "Filename-pattern search only, not proof of universal absence or inspection of arbitrarily renamed objects. No raw-read contents searched.",
+  "matching_filename_count": 3147,
+  "relevant_candidate_paths": [
+    "/scratch/f005f43/rad_longbench_20260726/rad_manuscript/figures/figure_4/sample_bin_matrix_16um.csv.gz",
+    "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/raw_fastq_datasets/complex_outsourced_datasets/visium_hd_lr/uncorrected_spot_counts/visium_hd_whitelist/square_016um_barcodes.tsv.gz",
+    "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/raw_fastq_datasets/complex_outsourced_datasets/visium_hd_lr/uncorrected_spot_counts/visium_hd_whitelist/sup_square_016um_raw_barcodes.tsv.gz",
+    "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/raw_fastq_datasets/complex_outsourced_datasets/visium_hd_lr/uncorrected_spot_counts/visium_hd_whitelist/sup_square_016um_filtered_barcodes.tsv.gz",
+    "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/raw_fastq_datasets/complex_outsourced_datasets/visium_hd_lr/uncorrected_spot_counts/bin_only_rad_016um.txt",
+    "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/visium_hd_flamesv2_compatibility_20260804/results/devel_2.7.1_first10k/find_barcode_result.rds",
+    "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/visium_hd_flamesv2_compatibility_20260804/results/stable_2.6.0_first10k/find_barcode_result.rds",
+    "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/paper_revision_20261022/hpc_handoff_20261023/rad-manuscript/figures/figure_4/sample_bin_matrix_16um.csv.gz",
+    "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_hd_catalog_scaling_20260907.ZgHhLg/data/sample_bin_matrix_16um.csv.gz",
+    "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_hd_native_refresh_20260907.SaryuR/data/sample_bin_matrix_16um.csv.gz",
+    "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/rad_manuscript_recovery_20261023/superseded_tree/figures/figure_4/sample_bin_matrix_16um.csv.gz"
+  ],
+  "roots": [
+    "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data",
+    "/scratch/f005f43",
+    "/scratch-nfs/f005f43"
+  ],
+  "status": "named selected assets not found by bounded filename search",
+  "targeted_public_workspace_check": {
+    "bytes": 465251189,
+    "inventory_script": "scripts/revision/figures_124_inventory_workspace.R",
+    "objects": 51,
+    "official_md5": "69cb1f8316678bebddb5917f9f2143bb",
+    "path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/rad_manuscript_recovery_20261023/selected_asset_recovery/figure_4_workspace.RData",
+    "result": "No top-level Seurat, HD bin grid or nCount_Spatial metadata object. Saved objects concern Swedish Visium, ScMixology and Split-seq; no saved function was called. Whole mixed workspace remains outside repository.",
+    "sha256": "50e3c21008e420d79b57de59a7db49878cc0b79f95139da2d40d17a009e3d734"
+  }
+}

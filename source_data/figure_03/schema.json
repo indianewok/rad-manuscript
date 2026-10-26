@@ -1,0 +1,91 @@
+{
+  "format": "UTF-8 tab separated, header row; empty numeric value is null",
+  "keys": {
+    "replicate_whitelists.tsv": [
+      "dataset",
+      "replicate",
+      "rank",
+      "barcode",
+      "list_sha256"
+    ],
+    "offlist_totals.tsv": [
+      "dataset",
+      "tool",
+      "replicate",
+      "assigned_count",
+      "target_count",
+      "unit",
+      "source_sha256",
+      "input_reads",
+      "assignment_fraction",
+      "mean_assigned_per_target"
+    ],
+    "panel_data_manifest.tsv": [
+      "panel",
+      "table",
+      "row_key",
+      "metric",
+      "unit",
+      "statistical_policy",
+      "sha256",
+      "render_scope"
+    ],
+    "correction_totals.tsv": [
+      "dataset",
+      "tool",
+      "category",
+      "count",
+      "denominator_O",
+      "percent",
+      "unit",
+      "scope",
+      "source_sha256"
+    ],
+    "offlist_read_fates.tsv": [
+      "dataset",
+      "tool",
+      "replicate",
+      "input_reads",
+      "strict_assigned",
+      "ambiguous_ids",
+      "unassigned",
+      "unit",
+      "evidence_level"
+    ],
+    "measured_category_definitions.tsv": [
+      "category",
+      "observed_source",
+      "selected_target",
+      "condition"
+    ],
+    "offlist_per_target.tsv.gz": [
+      "dataset",
+      "tool",
+      "replicate",
+      "original_row_index",
+      "barcode",
+      "identity_status",
+      "assigned_count",
+      "unit",
+      "source_sha256"
+    ],
+    "correction_per_target.tsv.gz": [
+      "dataset",
+      "tool",
+      "barcode",
+      "selected_by_tool",
+      "category",
+      "count",
+      "denominator_O",
+      "percent",
+      "unit",
+      "source_sha256"
+    ]
+  },
+  "contracts": {
+    "offlist": "All three datasets count strict physical reads. A physical ID with multiple assignment rows is wholly excluded, including identical duplicates.",
+    "correction": "Within each class collapse original-read\u2013target pairs; classes can overlap. No source means unknown, not noncatalog. Percent denominator O includes all pairs to target.",
+    "identity": "Each offlist target is the actual supplied nucleotide barcode; pairing requires dataset,replicate,barcode.",
+    "zero": "Targets with zero assignments retained; percent is null when O=0. Tool-unselected targets explicitly selected_by_tool=0."
+  }
+}

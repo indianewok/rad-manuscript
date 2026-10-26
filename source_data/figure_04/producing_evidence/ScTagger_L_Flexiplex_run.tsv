@@ -1,0 +1,9 @@
+dataset	L
+case	flatQ20
+input	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/wl_scan/20260731_sctagger_badread_quality_full/inputs/L/flatQ20.fq.gz
+threads	16
+design	10x3v3
+flank_edit_distance	builtin_default_8
+barcode_edit_distance	builtin_default_2
+mode	native_discovery_then_inflection_filter
+chemistry_whitelist	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/cellranger_whitelists/3M-february-2018-3v3.txt

@@ -1,0 +1,112 @@
+{
+  "status": "passed",
+  "scope": "Full native-read scan validated; 12 conditions joined to existing BLAZE discovery metrics",
+  "full_fastq_read_by_validator": false,
+  "quality_regenerated": false,
+  "blaze_rerun": false,
+  "reads": 4993805,
+  "bases": 8394808882,
+  "located_reads": 4976160,
+  "correct_ED0_reads": 879860,
+  "incorrect_EDgt0_reads": 4096300,
+  "unlocated_reads_excluded_from_quality_groups": 17645,
+  "edit_distance_classes_checked": 15,
+  "conditions_checked": 12,
+  "native_and_shifted_histograms_checked": 24,
+  "sample_read_condition_values_checked": 600000,
+  "native_header_sequence_sha256": "ca3073f0a44d03b40a5919e01e59a8df89ceceafa086ee7580fae2daa3bf2f61",
+  "native_quality_sha256": "1356a4993a6cc31ca80857f99d105da376534d594112588af4e32b3cdf138841",
+  "mean_absolute_tolerance": 1e-12,
+  "f1_formula": "2*TP/(2*TP+FP+FN)",
+  "means": "Arithmetic mean of 16 Phred scores per truth-located read, then across reads in the ED group; integer histogram gives the identical mean",
+  "quality_groups": "ED0 and ED>0 refer to the observed truth-located barcode, independent of a tool assignment or discovery call",
+  "limitation": "Preserved BLAZE discovery TP/FP/FN are joined and arithmetic checked; this validator does not rerun BLAZE or rescore callsets",
+  "inputs": {
+    "generation_summary": {
+      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_02/full_read_quality/source_generation_summary.tsv",
+      "bytes": 1686,
+      "sha256": "93cf6124a3cbce2d3db481cbc0d6627095477124ee2a9b3198a3417abfda1cf4"
+    },
+    "native_audit": {
+      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_02/native_fastq_validation.json",
+      "bytes": 1871,
+      "sha256": "517ecb4d9a385b849108ba1a24e3e6a53a23513dcd87976d088d91f3d0deea93"
+    },
+    "quality_summary": {
+      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_02/quality_summary.tsv",
+      "bytes": 5972,
+      "sha256": "2395f1f40dffac4eae578d5a07fcc303f38f1084955df613c83821fb60ba7d96"
+    },
+    "histograms": {
+      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_02/reconstructed_full_quality_histograms.tsv",
+      "bytes": 31938,
+      "sha256": "e29a0b81460a74b08274b403102bfce4404da5e20d160740ef11a52c14b4b841"
+    },
+    "discovery_metrics": {
+      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_02/discovery_metrics.tsv",
+      "bytes": 32536,
+      "sha256": "e9b1dfb70a60c8dabe76c00b0e5aa0b6822b72a2197508ae9d7eb1ae9bb6e78b"
+    },
+    "sample_csv": {
+      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_02/paired_50000_barcode_mean_Q.csv.gz",
+      "bytes": 2655992,
+      "sha256": "93bb23eeac686cac6b1e8d2ecb9b4968bda3f7d57b6c40cacfdc856dad778e5d"
+    },
+    "scanner_script": {
+      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/scripts/figure_02/summarize_full_barcode_quality.py",
+      "bytes": 16263,
+      "sha256": "841e1111fa541e4d587e677814a8e8975d174700a697764bf69d1bfbc23ab9de"
+    },
+    "locator_script": {
+      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/scripts/figure_02/barcode_locator.py",
+      "bytes": 4646,
+      "sha256": "0ead90df058cfd940befd3a0b7a659d9f030f01fc382863dcd7e67e583f0fb68"
+    },
+    "full_scan_receipt": {
+      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_02/full_read_quality/run.json",
+      "bytes": 4526,
+      "sha256": "bb3b79a3c5cd3b342722484ef50bdcb22858ea9f9178e5f3ef3268529a10fe27"
+    },
+    "full_quality_summary.tsv": {
+      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_02/full_read_quality/full_quality_summary.tsv",
+      "bytes": 2727,
+      "sha256": "2dadb874e97117e36586ccac1355180021d00a50bfdd2642992b8949922a3665"
+    },
+    "barcode_quality_by_ed.tsv": {
+      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_02/full_read_quality/barcode_quality_by_ed.tsv",
+      "bytes": 9782,
+      "sha256": "ab4a43dc19002bfcd73c140fc3c50206d0b0eff381b89154d4e21e5ffcd0fedb"
+    },
+    "barcode_minimum_quality_by_ed.tsv": {
+      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_02/full_read_quality/barcode_minimum_quality_by_ed.tsv",
+      "bytes": 1760,
+      "sha256": "24e0631e827ba752b656c70fcade064301497862a93c08dd360f00e11864aef1"
+    },
+    "barcode_edit_distance_counts.tsv": {
+      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_02/full_read_quality/barcode_edit_distance_counts.tsv",
+      "bytes": 262,
+      "sha256": "1973de93a008a0b008ac5a95c0f482e0162b54c4f24717a39987b366b56b266f"
+    }
+  },
+  "scanner_report": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_02/full_read_quality/run.json",
+  "output_published": true,
+  "output": {
+    "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_02/full_read_quality/full_quality_with_blaze_f1.tsv",
+    "rows": 12,
+    "bytes": 6391,
+    "sha256": "aa1eb6488319b02dfb65d74e606a0cae2713141263dee0a9439f6df5a5b90510"
+  },
+  "validator_sha256": "93850c2f72ea2722e9904800a650a1d1821232f07f9f2099c951e62eb6f7f86a",
+  "argv": [
+    "scripts/figure_02/validate_full_barcode_quality.py",
+    "--scan-dir",
+    "source_data/figure_02/full_read_quality",
+    "--generation-summary",
+    "source_data/figure_02/full_read_quality/source_generation_summary.tsv",
+    "--output",
+    "source_data/figure_02/full_read_quality/full_quality_with_blaze_f1.tsv",
+    "--report",
+    "validation/figure_02_full_barcode_quality.json"
+  ],
+  "completed_utc": "2026-10-24T14:35:48.818121+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "offlist_per_target.tsv.gz": "4669bc3013790a24f021844c10d38abe8862a0c850f8b7d8b8272fb9a3a91747",
+  "README.md": "6412547995a76896fc975b818514b8dbd8cf10aba7d2e41cb92e192558af23fd",
+  "correction_per_target.tsv.gz": "88ef055e4ad9c7003cf9f4a3076d68873b3849c6561eb9ba787736c99e0a6dce",
+  "replicate_whitelists.tsv": "9952b99b5220282dc5a0edd404bb560815bcf6182c2e1c81dba56f74b29f96b6",
+  "offlist_totals.tsv": "ae63e8b62c9aa68f98da8b5693890c7676e8da8e7b2c596f1d01a1a13118fb9b",
+  "panel_data_manifest.tsv": "037d86d78b8315c4682b54423ee6200feab02dbc4af6331e2bba4157cb8db922",
+  "schema.json": "09a381b0ab27ff7694e87582b52a0da96a53b37e5c454bfb1370f6d9803f5409",
+  "correction_totals.tsv": "e0ba8d0ef56b2ebb19b14ef834f973104f9c03ea0c901f9935b2dd3f62ee0e38",
+  "offlist_read_fates.tsv": "fd60e4091f9aa1ea0f773c609765c41492583ca8e26e1458fde91772d536f467",
+  "measured_category_definitions.tsv": "45b01f76af79dd5bdf2c85d5b5b682ec9de603c09466a6c6756473b845aa1f56"
+}

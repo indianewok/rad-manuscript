@@ -1,0 +1,4 @@
+JobID	JobName	Partition	Account	QOS	State	ExitCode	Elapsed	AllocCPUS	ReqMem	MaxRSS	NodeList
+10082224	rad-full-barcode-q	standard	lsonglab	lsonglab_gpu	COMPLETED	0:0	00:05:01	8	16G		q01
+10082224.batch	batch		lsonglab		COMPLETED	0:0	00:05:01	8		610944K	q01
+10082224.extern	extern		lsonglab		COMPLETED	0:0	00:05:01	8			q01

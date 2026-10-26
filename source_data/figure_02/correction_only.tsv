@@ -1,0 +1,7 @@
+tool	state	reads	denominator	fraction
+RAD	corrected_correct	1944306	2135825	0.9103302002738989
+RAD	corrected_incorrect	191519	2135825	0.08966979972610116
+BLAZE	corrected_correct	1881358	2014432	0.9339396911883846
+BLAZE	corrected_incorrect	133074	2014432	0.06606030881161538
+Flexiplex	corrected_correct	1398700	1680396	0.8323633238831799
+Flexiplex	corrected_incorrect	281696	1680396	0.1676366761168201

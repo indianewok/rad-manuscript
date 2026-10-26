@@ -1,0 +1,29 @@
+{
+  "source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/reviewer_response_20260804/manuscript_tables/SN_ONT_cross_tool_vireo_per_cell_graph_ready.csv",
+  "source_sha256": "20ae5aa801d44ae07504a019d6e7eb2990a8a03eebd4a2de9266be4cb7da346b",
+  "selection": "first reference named singlet in source order for each RAD same/different/doublet/unassigned/not_selected outcome; named columns only",
+  "source_data_rows": [
+    3,
+    60,
+    62,
+    66,
+    633
+  ],
+  "selected_columns": [
+    "cell_barcode",
+    "illumina_reference_present",
+    "illumina_reference_state",
+    "illumina_reference_label",
+    "rad_query_selected",
+    "rad_vireo_state",
+    "rad_vireo_label",
+    "blaze_panel_matched_query_selected",
+    "blaze_panel_matched_vireo_state",
+    "blaze_panel_matched_vireo_label",
+    "flexiplex_query_selected",
+    "flexiplex_vireo_state",
+    "flexiplex_vireo_label"
+  ],
+  "row_count": 5,
+  "scope": "real bounded public cell-line excerpt; selection is illustrative, not random or representative"
+}

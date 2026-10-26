@@ -1,0 +1,12 @@
+dataset	L
+condition	nanopore2023_native_unadjusted
+tool	Flexiplex_f0
+scope	whitelist discovery only; no full demultiplexing
+input	/scratch-nfs/f005f43/sctagger_nanopore2023_unadjusted_20260913/inputs/L_variants/shuffled_L_lr_synth.nanopore2023_truthbc.native_unadjusted.fq.gz
+threads_per_tool	8
+start_utc	2026-09-13T15:53:31Z
+host	q03.hpcc.dartmouth.edu
+slurm_job_id	9405382
+slurm_cpus_per_task	12
+command	pigz -dc -p 4 /scratch-nfs/f005f43/sctagger_nanopore2023_unadjusted_20260913/inputs/L_variants/shuffled_L_lr_synth.nanopore2023_truthbc.native_unadjusted.fq.gz | /scratch-nfs/f005f43/sctagger_nanopore2023_unadjusted_20260913/tools/flexiplex-v1.02.6/flexiplex-linux -d 10x3v3 -f 0 -e 2 -p 8 -n L_nanopore2023_native_unadjusted_f0; /dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/miniconda3/bin/python /scratch-nfs/f005f43/sctagger_nanopore2023_unadjusted_20260913/tools/flexiplex_filter/main.py -v -w /dartfs/rc/lab/A/AckermanLab/CMV/rad_data/cellranger_whitelists/3M-february-2018-3v3.txt -o selected.txt L_nanopore2023_native_unadjusted_f0_barcodes_counts.txt
+finish_utc	2026-09-13T15:57:21Z

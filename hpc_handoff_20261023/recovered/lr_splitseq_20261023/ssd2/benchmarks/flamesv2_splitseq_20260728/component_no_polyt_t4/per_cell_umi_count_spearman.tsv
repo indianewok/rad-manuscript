@@ -1,7 +1,0 @@
-tool	umi_scope	published_cells	spearman_vs_published_long_read_umis	spearman_vs_published_short_read_umis
-Flexiplex no-polyT	all_umi_lengths	568	0.9448093904376021	0.9515206090442716
-Flexiplex no-polyT	full_10nt_only	568	0.9449064166743238	0.9510629338005504
-Flexiplex polyT	all_umi_lengths	568	0.9962708530136707	0.8955198832809169
-Flexiplex polyT	full_10nt_only	568	0.9963626448086736	0.8954277960279307
-RAD main ED1	all_umi_lengths	568	0.9474714402429818	0.950791578784068
-RAD main ED1	full_10nt_only	568	0.9471511391557031	0.9508476661785092

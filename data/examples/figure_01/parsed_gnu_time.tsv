@@ -1,0 +1,3 @@
+component	dataset	elapsed_seconds	exit_status	max_rss_kib	phase	replicate	source_log	system_seconds	threads	tool	user_seconds
+main	SN_ONT	1143.86	0	371452	whitelist_detection	1	data/examples/figure_01/raw_timing/whitelist_detection/metrics.tsv	119.40	4	RAD	2247.68
+main	SN_ONT	15391.29	0	1641640	demultiplexing	1	data/examples/figure_01/raw_timing/demultiplexing/metrics.tsv	171.91	4	RAD	54734.43

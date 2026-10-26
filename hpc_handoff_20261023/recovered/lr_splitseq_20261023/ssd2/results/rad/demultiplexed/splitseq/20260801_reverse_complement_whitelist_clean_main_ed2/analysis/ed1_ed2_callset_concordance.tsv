@@ -1,2 +1,0 @@
-shared_reads	reads_retaining_every_ed1_call	reads_with_exact_callset	reads_with_all_ed1_calls_plus_additional	reads_losing_any_ed1_call	ed1_call_tuples_on_shared	ed2_call_tuples_on_shared	shared_call_tuples
-2372756	2372756	2364936	7820	0	2401597	2409417	2401597

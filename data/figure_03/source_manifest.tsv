@@ -1,0 +1,3 @@
+file	sha256	uncompressed_sha256	rows	normalization	source
+rage_matched_reference_4505.txt	93f7551ec70c57d5f9e6d8e77f4041d19c99acc9b771e16ce1acf26dfac5ba54	93f7551ec70c57d5f9e6d8e77f4041d19c99acc9b771e16ce1acf26dfac5ba54	4505	Strip terminal -1, unique16mer sequences, lexical sort	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/rageseq_single_cell_data/outs/filtered_feature_bc_matrix/barcodes.tsv.gz
+chemistry_3v2_catalog.txt.gz	7023efe05cb6585d47590eed5f3f380ce8cc66f2434d6c505960945f277a939d	b0dda4b114d8fc7ea8def94fb472e6205c1831a72e3ac245ed13cc332d9f20d1	737280	Exact plain catalog bytes in deterministic gzip; decoded RAD bitlist set independently verified	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/cellranger_whitelists/737K-august-2016.txt

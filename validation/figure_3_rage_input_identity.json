@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/raw_fastq_datasets/rageseq.fq.gz",
+  "compressed_sha256": "cfdba50a497dd4f6b24c2a4e730e297a09498ad5fe006f65eee01fa202bcdcec",
+  "compressed_bytes": 16922373879,
+  "records": 20346396,
+  "unique_original_ids": 20346396,
+  "duplicate_original_ids": 0,
+  "sequence_bases": 16466857803,
+  "exact_decompressed_fastq_sha256": "2f4f7e469795b23c15209547909ec791e937058497328ba69d0855274eb380f7",
+  "canonical_record_sha256": "a5f866d6180b46e0acbd3aa2526364060c152380714b00ec0ed74b8c1e8c24af",
+  "canonical_record_encoding": "For each ordered record: uint64be ID byte length, ID bytes (first header token without @), uint64be sequence length, sequence bytes, quality bytes. Strip CR/LF line endings only. Header descriptions and plus-line annotations excluded.",
+  "sequence_quality_order_sha256": "ac0e923c605ddc2b82b2132354d7afdf9f8c3d26c9973ac9dc63473e0b3e58b7",
+  "sequence_quality_encoding": "For each ordered record: uint64be sequence length, sequence bytes, quality bytes; IDs excluded. Diagnostic only, not sufficient alone to replace input.",
+  "original_id_order_sha256": "4a2433272a200378ff97ebae117f10e87d80488087153347cb3af1406e89e9c2",
+  "input_ids_sha256": "e4831a95828b65f21253c9f1058f1af9ef2fa7abe286321d88aaffba12ab2952",
+  "input_ids_path": "checkpoints/figure_03/rage_matched/counts/input_original_ids.txt.gz",
+  "script_sha256": "d73c3c13e92cbea49d11f8a89f3013531a33d79fed2c949fe77a1373da01cc9c"
+}

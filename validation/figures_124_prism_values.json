@@ -1,0 +1,53 @@
+{
+  "checks": [
+    {
+      "compared_values": 15000,
+      "missing_policy": "unselected truth targets stay blank",
+      "rows": 5000,
+      "selected_tool_columns": [
+        "BLAZE",
+        "RAD",
+        "Flexiplex"
+      ],
+      "sheet": "Native correct assignments per selected truth barcode",
+      "status": "passed",
+      "table_uid": "454FDFB2-AEAA-4BE0-B7FD-78208EC7D650"
+    },
+    {
+      "compared_values": 15000,
+      "missing_policy": "unselected truth targets stay blank",
+      "rows": 5000,
+      "selected_tool_columns": [
+        "BLAZE",
+        "RAD",
+        "Flexiplex 3K"
+      ],
+      "sheet": "Corrected correct assignments per selected truth barcode",
+      "status": "passed",
+      "table_uid": "9B38C59C-7023-4935-BC85-6E5F22DE25C4"
+    },
+    {
+      "compared_values": 15000,
+      "missing_policy": "unselected truth targets stay blank",
+      "rows": 5000,
+      "selected_tool_columns": [
+        "BLAZE",
+        "RAD",
+        "Flexiplex"
+      ],
+      "sheet": "Corrected incorrect assignments per selected truth target barcode",
+      "status": "passed",
+      "table_uid": "8761666A-E513-4EA1-ADC3-E148DD37108C"
+    }
+  ],
+  "command": [
+    "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/miniconda3/bin/python3",
+    "scripts/revision/figures_124_prism_audit.py"
+  ],
+  "compared_values": 45000,
+  "limitation": "CSV data and JSON bindings only. Separate structural duplicate-layout-ID finding and native Prism recalculation remain unresolved.",
+  "prism_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/paper_revision_20261022/prism/Figure2_corrected_20261022.prism",
+  "prism_sha256": "dded389f9d8214278f93d2669c64e704bbf2208c47db96bf57a4ce4c77d6d016",
+  "script_sha256": "6cb44726694180a9f2255ae1d46775bd52f8649819ad694778af2e6ac950cc86",
+  "status": "passed"
+}

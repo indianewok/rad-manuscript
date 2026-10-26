@@ -1,0 +1,15 @@
+component	version_or_identity	path	sha256
+Python	3.9.16	/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/miniconda3/bin/python3.9	021a0455f593f7b7a097ec3f6f8fcabd0bdf789be9883d7873083ddbd03f2988
+BadRead_qscore_code	0.4.1	/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/miniconda3/lib/python3.9/site-packages/badread/qscore_model.py	62dc63ef7619d5f76c39d8d2b58b4ac1acfa03b91b6cfaeb6a580f36e4897de6
+edlib	1.3.9	/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/miniconda3/lib/python3.9/site-packages/edlib.cpython-39-x86_64-linux-gnu.so	6b60014ca36ca1395c85c2dcbc88db771f9ae7b62b54de4874098afee10b687f
+NumPy_random_generator	1.23.5	/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/miniconda3/lib/python3.9/site-packages/numpy/random/_generator.cpython-39-x86_64-linux-gnu.so	326de8beb2f7992dc0c8d5ee0112235efc2747c12cd5bd5de1d6cb2fec73842b
+NumPy_PCG64	1.23.5	/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/miniconda3/lib/python3.9/site-packages/numpy/random/_pcg64.cpython-39-x86_64-linux-gnu.so	d6e29051edceaffe197730e584e9168d2ce73faaba8d14066b36d453724b4f98
+pigz	2.4	/usr/bin/pigz	2c3cccf25649e095a7fe3da696fd1106669335e8a543cc4e0481c3822e9e8771
+BadRead_qscore_model	nanopore2023; logical seed path retained	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/LongBench_comps/ScTagger_nanopore2023_Q15_Q20_20260819/models/nanopore2023.gz	75182dbd45424f811b5ad5f95b1606900a8900b5565075001011433c03478f90
+RAD	1.0.2; build identity 920adda_edlibfix	/scratch-nfs/f005f43/longbench_full_demux_20260730/tools/rad_920adda_edlibfix/build_release/rad	b2feda73a4ae3acf705b724013665af35dff2534f42a568db3f168ca958a2c9e
+RAD_10x3v3_bitlist	exact runtime resource	/scratch-nfs/f005f43/longbench_full_demux_20260730/tools/rad_920adda_edlibfix/resources/wl/3M-february-2018-3v3.txt_bitlist.csv.gz	02f771363a95e786ab1a6ab1e554c770e58cdff2fb30f2d7a9fb50a97762d452
+BLAZE	2.6.0a0; exact copied environment	/scratch-nfs/f005f43/sctagger_nanopore2023_unadjusted_20260913/tools/blaze_venv/bin/blaze	46d36e12fb0dfd4ce3c403169bdb9a6574eddc8e5b26363afe40867471f994dc
+BLAZE_package_tree	non-pyc relative manifest identity	/scratch-nfs/f005f43/sctagger_nanopore2023_unadjusted_20260913/tools/blaze_venv/lib/python3.9/site-packages/blaze	d70d28d9d965f6310c850e65f1c76ded552fe61179c6eb5b52a87159b0897aee
+BLAZE_10x3v3_whitelist_zip	bundled 3M-february-2018; decompressed SHA equals global text whitelist	/scratch-nfs/f005f43/sctagger_nanopore2023_unadjusted_20260913/tools/blaze_venv/lib/python3.9/site-packages/blaze/10X_bc/3M-february-2018.zip	06af0b2b5ed3294977aa5a5be86a4c9852b7ec1b26ac4a28a6edc08e588066f3
+Flexiplex	1.02.6	/scratch-nfs/f005f43/sctagger_nanopore2023_unadjusted_20260913/tools/flexiplex-v1.02.6/flexiplex-linux	6eee3a7113044d45e106dc74a541b9a53475311449bf49bd91cc912ba911c40e
+Flexiplex_filter	release audit copy	/scratch-nfs/f005f43/sctagger_nanopore2023_unadjusted_20260913/tools/flexiplex_filter/main.py	672ab65cc2fe6fe9f48319a632d72e73c75a1d699b04d6b0f4ec887f5e6bfca0

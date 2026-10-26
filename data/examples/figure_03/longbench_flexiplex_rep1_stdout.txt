@@ -1,0 +1,1 @@
+45 assignment rows; 44 physical IDs; 1 ambiguous IDs excluded; 43 strict reads to requested targets

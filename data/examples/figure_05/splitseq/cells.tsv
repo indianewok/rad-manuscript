@@ -1,0 +1,3 @@
+prism_row_1based	published_cell_barcode	canonical_barcode	sample	rt_well	rt_plate_well
+1	CAAGGAGCATAGCGAC_22	TACGGTTA_ATAGCGAC_CAAGGAGC	MB_nuclei	22	B11
+2	AAGAGATCTCTTCACA_39	GGTGGAGC_TCTTCACA_AAGAGATC	MT_nuclei	39	D4

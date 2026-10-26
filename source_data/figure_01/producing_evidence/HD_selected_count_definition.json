@@ -1,0 +1,24 @@
+{
+  "scope": "Only original source lines defining the selected HD inputs; panel labels are original source labels, current panel is1D.",
+  "source_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/rad_manuscript_recovery_20261023/superseded_tree/figures/figure_4/figure_4_analysis.Rmd",
+  "source_sha256": "8ed7068ccf13f8699dcbf23fc1d823cea1dea4d03d0116124aba3256356346ee",
+  "source_lines": [
+    {
+      "line": 113,
+      "text": "- **4K \u2014 RAD Counts** \u2014 `log10(ncpm)` per bin from the RAD whitelist-detection output for PBC44593."
+    },
+    {
+      "line": 117,
+      "text": "- `${HD_MAPPING_DIR}/tissue_positions_16um.csv` (full grid)"
+    },
+    {
+      "line": 118,
+      "text": "- `${HD_MAPPING_DIR}/visium_hd_mouse_brain_016um_seurat.rds` (Percula counts)"
+    },
+    {
+      "line": 119,
+      "text": "- `sample_bin_matrix_16um.csv.gz` (RAD per-sample counts)"
+    }
+  ],
+  "interpretation": "Source explicitly calls wide table RAD whitelist-detection output. Retained per-bin comparison separately labels its RAD column rad_demux."
+}

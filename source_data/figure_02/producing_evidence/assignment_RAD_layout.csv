@@ -1,0 +1,18 @@
+Read Layout,,,,,,,,,,,
+id,seq,masked_seq,expected_length,length_candidates,flags,type,class,direction,class_id,whitelist,order
+"seq_start","",,0,"","",static,start,forward,seq_start,,1
+"forw_primer","CTACACGACGCTCTTCCGATCT",NTNCNCNANGNTNTNCNGNTNT,22,"22","",static,forw_primer,forward,forw_primer,,2
+"barcode","",,16,"16","",variable,barcode,forward,barcode,10x_3v3,3
+"umi","",,12,"12","",variable,umi,forward,umi,,4
+"poly_t","T{12,}+",,12,"12","",static,poly_tail,forward,poly_t,,5
+"read","",,,"","",variable,read,forward,read,,6
+"rev_primer","ACTCTGCGTTGATACCACTGCTT",NCNCNGNGNTNANANCNCNGNTN,23,"23","",static,rev_primer,forward,rev_primer,,7
+"seq_stop","",,0,"","",static,stop,forward,seq_stop,,8
+"rc_seq_start","",,0,"","",static,start,reverse,rc_seq_start,,9
+"rc_rev_primer","AAGCAGTGGTATCAACGCAGAGT",NANCNGNGNTNTNANCNCNGNGN,23,"23","",static,rev_primer,reverse,rc_rev_primer,,10
+"rc_read","",,,"","",variable,read,reverse,rc_read,,11
+"poly_a","A{12,}+",,12,"12","",static,poly_tail,reverse,poly_a,,12
+"rc_umi","",,12,"12","",variable,umi,reverse,rc_umi,,13
+"rc_barcode","",,16,"16","",variable,barcode,reverse,rc_barcode,10x_3v3,14
+"rc_forw_primer","AGATCGGAAGAGCGTCGTGTAG",NGNTNGNANGNGNGNCNTNTNG,22,"22","",static,forw_primer,reverse,rc_forw_primer,,15
+"rc_seq_stop","",,0,"","",static,stop,reverse,rc_seq_stop,,16

@@ -1,0 +1,90 @@
+{
+  "code_sha256": "5242995f40eab522b1e3d78d332dc9aef305b1a25974e55a1efb16981c319ddb",
+  "command": [
+    "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/miniconda3/bin/python3",
+    "scripts/revision/figures_124_assignment_audit.py"
+  ],
+  "expected_table_hashes": {
+    "source_data/figure_02/assignment_per_target.tsv": "e21d3069bb904fd29235a3c50e7f9d24148eaed9a8b6803fbc308489a20889ba",
+    "source_data/figure_02/assignment_six_states.tsv": "812dfb97c5b892662ecbae9e34f527636c2d4cd2d31c0147085d422d446686b3"
+  },
+  "fixtures": {
+    "Flex_same_target_duplicate_collapsed": "passed",
+    "RAD_identical_duplicate_excluded": "passed",
+    "different_target_id_excluded_after_later_repeat": "passed"
+  },
+  "independent_reconstruction": {
+    "canonical_json_sha256": "6277418904924047466096109f36c6e157d9713fb4c0713b561a03c5f73d2cf3",
+    "publication": "one canonical assignment_per_target.tsv; every selected category checked above; duplicate rebuilt table not published",
+    "selected_rows": 13019
+  },
+  "scope": "complete retained read-table resumption, not tool execution from raw FASTQ",
+  "sources": [
+    {
+      "bytes": 46703941,
+      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/sctagger_L_rad_fixed5000_adapter_fix_20260817/independent_validation/record_audit.tsv.gz",
+      "sha256": "44c381cc8eeb4130a7eea73e604940d454b47a4cf0f167c916485c577961b7e0",
+      "tool": "RAD"
+    },
+    {
+      "bytes": 154296487,
+      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/sctagger_flexiplex_audit_20260812/L_flatQ20_audit_reads_barcodes.txt",
+      "sha256": "693d9f3362dbeea174acf8bef432a596aec3a91aa5d797125b6782e1ba424b06",
+      "tool": "Flexiplex"
+    },
+    {
+      "bytes": 102379073,
+      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/paper_revision_20261022/prism/blaze2023_assignment_replay/assignment_records.tsv.gz",
+      "sha256": "23328307cdca24cdbbeced7a4841d6daada13a720165ea5dda570382796ba8f8",
+      "tool": "BLAZE"
+    }
+  ],
+  "status": "passed",
+  "tools": {
+    "BLAZE": {
+      "elapsed_seconds": 18.984588146209717,
+      "exact_per_target_value_comparisons": 20060,
+      "records": 4993805,
+      "state_counts": {
+        "corrected_correct": 1881358,
+        "corrected_incorrect": 133074,
+        "excluded_multiple_outputs": 0,
+        "native_correct": 640957,
+        "native_incorrect": 764,
+        "unassigned": 2337652
+      },
+      "status": "passed",
+      "unique_physical_ids_in_checkpoint": 4993805
+    },
+    "Flexiplex": {
+      "elapsed_seconds": 7.872423410415649,
+      "exact_per_target_value_comparisons": 12016,
+      "records": 2145119,
+      "state_counts": {
+        "corrected_correct": 1398700,
+        "corrected_incorrect": 281696,
+        "excluded_multiple_outputs": 364,
+        "native_correct": 463613,
+        "native_incorrect": 381,
+        "unassigned": 2849051
+      },
+      "status": "passed",
+      "unique_physical_ids_in_checkpoint": 2144754
+    },
+    "RAD": {
+      "elapsed_seconds": 11.986913919448853,
+      "exact_per_target_value_comparisons": 20000,
+      "records": 2822457,
+      "state_counts": {
+        "corrected_correct": 1944306,
+        "corrected_incorrect": 191519,
+        "excluded_multiple_outputs": 9048,
+        "native_correct": 667965,
+        "native_incorrect": 571,
+        "unassigned": 2180396
+      },
+      "status": "passed",
+      "unique_physical_ids_in_checkpoint": 2813409
+    }
+  }
+}

@@ -1,0 +1,12 @@
+dataset	shift2018	condition2018	mean_whole_Q2018	shift2023	condition2023	mean_whole_Q2023	mean_Q_difference2023_minus2018	biological_minQ	effective_native_BLAZE_minQ	matching_rule
+L	1	shift_p01	15.181087743552993	-17	shift_m17	15.403003525101573	0.22191578154857972	15	32	nearest achievable full-dataset whole-base mean using an integer negative shift and per-base Q1..50 clipping
+L	2	shift_p02	16.181087743552993	-16	shift_m16	16.21089857194917	0.029810828396175992	15	31	nearest achievable full-dataset whole-base mean using an integer negative shift and per-base Q1..50 clipping
+L	3	shift_p03	17.181087743552993	-15	shift_m15	17.02969786322766	-0.15138988032533263	15	30	nearest achievable full-dataset whole-base mean using an integer negative shift and per-base Q1..50 clipping
+L	4	shift_p04	18.181087743552993	-14	shift_m14	17.859272916917373	-0.3218148266356202	15	29	nearest achievable full-dataset whole-base mean using an integer negative shift and per-base Q1..50 clipping
+L	5	shift_p05	19.181087743552993	-12	shift_m12	19.55098227916989	0.369894535616897	15	27	nearest achievable full-dataset whole-base mean using an integer negative shift and per-base Q1..50 clipping
+L	6	shift_p06	20.181087743552993	-11	shift_m11	20.413456573435784	0.23236882988279106	15	26	nearest achievable full-dataset whole-base mean using an integer negative shift and per-base Q1..50 clipping
+L	8	shift_p08	22.181087743552993	-9	shift_m09	22.173622497008264	-0.007465246544729354	15	24	nearest achievable full-dataset whole-base mean using an integer negative shift and per-base Q1..50 clipping
+L	10	shift_p10	24.181087743552993	-7	shift_m07	23.985526983197854	-0.19556076035513925	15	22	nearest achievable full-dataset whole-base mean using an integer negative shift and per-base Q1..50 clipping
+L	11	shift_p11	25.181087743552993	-6	shift_m06	24.91307445955504	-0.2680132839979521	15	21	nearest achievable full-dataset whole-base mean using an integer negative shift and per-base Q1..50 clipping
+L	12	shift_p12	26.181087743552993	-5	shift_m05	25.854378925335492	-0.32670881821750086	15	20	nearest achievable full-dataset whole-base mean using an integer negative shift and per-base Q1..50 clipping
+L	13	shift_p13	27.181087743552993	-4	shift_m04	26.807486551782585	-0.3736011917704083	15	19	nearest achievable full-dataset whole-base mean using an integer negative shift and per-base Q1..50 clipping

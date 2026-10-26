@@ -1,0 +1,9 @@
+dataset	S
+case	flatQ20
+input	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/wl_scan/20260731_sctagger_badread_quality_full/inputs/S/flatQ20.fq.gz
+expected_cells	50
+threads	8
+kit	3v3
+minQ	15
+empty_droplet_output	disabled_with_--no-emtpy-drops
+mode	whitelist_discovery_no_demultiplexing

@@ -1,0 +1,9 @@
+tool	read_id	truth_barcode	raw_barcode_or_CR	target_barcode	record_state	interpretation	duplicate_status
+Flexiplex	ACATTTCGTGCAACAG-158	ACATTTCGTGCAACAG	GCATTTCCTGCAACAG	ACATTTCGTGCAACAG	corrected_correct	compare native raw barcode and final target	not assessed from bounded excerpt
+Flexiplex	AATTTCCGTGCATGCC-936	AATTTCCGTGCATGCC	AATTTCCGTGCATGCC	AATTTCCGTGCATGCC	native_correct	compare native raw barcode and final target	not assessed from bounded excerpt
+Flexiplex	ACTCCCATCAAGCGAA-587	ACTCCCATCAAGCGAA	ACTCCATCAAGGAAGA	ACTCCCATCAAGCGAA	corrected_correct	compare native raw barcode and final target	not assessed from bounded excerpt
+Flexiplex	AATGCCAAGACCCTCA-829	AATGCCAAGACCCTCA	AATGGCCAAGACCTCA	AATGACCTCAGTCAGC	corrected_incorrect	compare native raw barcode and final target	not assessed from bounded excerpt
+Flexiplex	ACAACCATCTACCTTA-66	ACAACCATCTACCTTA	ACAACCATCTACCTTA	ACTATCTCACCTTAAG	corrected_incorrect	compare native raw barcode and final target	not assessed from bounded excerpt
+Flexiplex	AATCGACAGTAATTGG-665	AATCGACAGTAATTGG	AATCGACCAGTATTGG	AATCGACAGTAATTGG	corrected_correct	compare native raw barcode and final target	not assessed from bounded excerpt
+Flexiplex	ACCATTTTCATTGTGA-739	ACCATTTTCATTGTGA	GCACTATTTCATTGTG	ACTATTCTCATTGTGA	corrected_incorrect	compare native raw barcode and final target	not assessed from bounded excerpt
+Flexiplex	AAACGCTGTGAGAATT-190	AAACGCTGTGAGAATT	AAACGATGTGAGAATT	AAACGCTGTGAGAATT	corrected_correct	compare native raw barcode and final target	not assessed from bounded excerpt

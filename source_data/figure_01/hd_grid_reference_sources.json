@@ -1,0 +1,14 @@
+[
+  {
+    "source_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/raw_fastq_datasets/complex_outsourced_datasets/visium_hd_lr/uncorrected_spot_counts/visium_hd_whitelist/sup_square_016um_raw_barcodes.tsv.gz",
+    "deposited_path": "source_data/figure_01/hd_16um_raw_barcodes.tsv.gz",
+    "bytes": 462477,
+    "sha256": "698632251d45ea1dd2eace39f1af98aeef3566fcd323c477501b20c5c165c787"
+  },
+  {
+    "source_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/raw_fastq_datasets/complex_outsourced_datasets/visium_hd_lr/uncorrected_spot_counts/visium_hd_whitelist/sup_square_016um_filtered_barcodes.tsv.gz",
+    "deposited_path": "source_data/figure_01/hd_16um_filtered_barcodes.tsv.gz",
+    "bytes": 561997,
+    "sha256": "2e0e370954261e4c19a46d4a74f345b51e2f0852881572d238580324c31f60d8"
+  }
+]

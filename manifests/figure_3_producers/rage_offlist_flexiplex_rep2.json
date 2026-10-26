@@ -1,0 +1,89 @@
+{
+  "experiment_id": "rage_matched_offlist_20261023",
+  "tool": "Flexiplex",
+  "replicate": 2,
+  "scope": "full input",
+  "argv": [
+    "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/software_pins_20260810/flexiplex_raw_to_assigned_audit/bin/flexiplex_v1.02.6_raw_to_assigned_audit",
+    "-d",
+    "10x3v2",
+    "-k",
+    "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/inputs/false_rep2.txt",
+    "-f",
+    "8",
+    "-e",
+    "2",
+    "-p",
+    "16",
+    "-n",
+    "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/runs/flexiplex/rep2/rage_rep2_flexiplex"
+  ],
+  "cwd": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/runs/flexiplex/rep2",
+  "input": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/raw_fastq_datasets/rageseq.fq.gz",
+  "input_sha256": "cfdba50a497dd4f6b24c2a4e730e297a09498ad5fe006f65eee01fa202bcdcec",
+  "input_reads": 20346396,
+  "target_sha256": "ad84e82a4ac9ad3f4e6c5665e2d0ff438369253b851e2197b1c22e0892172864",
+  "catalog_sha256": "b0dda4b114d8fc7ea8def94fb472e6205c1831a72e3ac245ed13cc332d9f20d1",
+  "reference_sha256": "93f7551ec70c57d5f9e6d8e77f4041d19c99acc9b771e16ce1acf26dfac5ba54",
+  "layout_sha256": "470dbba928017e4a0d8a99fbdc0564f1b7e25e3601218f5c69197609acc2ae89",
+  "code_sha256": "ca5dcca6dfbedb5d5f877e67e971e8ac680805ae08ebdda999bcaff846803858",
+  "executable_sha256": "38dccd37f1747e5105b62eacde572b7e4c5206fb925dc1fdbe8210ffe8b1e8c4",
+  "binary_versions": {
+    "rad_commit": "cd0582b2440cde0f35725dc557fa47307d74d374",
+    "blaze_version": "2.6.0a0",
+    "blaze_commit": "af8d2cc9f6374caf4d1006d5f8a0e99097211646",
+    "flex_commit": "d84c8ae4f3865052f2b5ecec816949b94682f302",
+    "flex_patch_sha256": "88dc9cbad139d8ac416803c19c1d4291ebb7e3159f5a1a49205aff59319f86cb"
+  },
+  "threads": 16,
+  "compression_threads": 2,
+  "PYTHONHASHSEED": "20261023",
+  "FLEXIPLEX_AUDIT_SOURCE_FILE": "UNSET",
+  "scheduler_job": "9977581",
+  "scheduler_array_task": "7",
+  "start_utc": "2026-10-23T18:11:35Z",
+  "status": "passed",
+  "pipeline": [
+    [
+      "pigz",
+      "-dc",
+      "-p",
+      "2",
+      "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/raw_fastq_datasets/rageseq.fq.gz"
+    ],
+    [
+      "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/software_pins_20260810/flexiplex_raw_to_assigned_audit/bin/flexiplex_v1.02.6_raw_to_assigned_audit",
+      "-d",
+      "10x3v2",
+      "-k",
+      "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/inputs/false_rep2.txt",
+      "-f",
+      "8",
+      "-e",
+      "2",
+      "-p",
+      "16",
+      "-n",
+      "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/runs/flexiplex/rep2/rage_rep2_flexiplex"
+    ],
+    [
+      "pigz",
+      "-p",
+      "2"
+    ]
+  ],
+  "exit_status": 0,
+  "outputs": [
+    {
+      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/runs/flexiplex/rep2/rage_rep2_flexiplex.fastq.gz",
+      "sha256": "3a7d4d62b3d78310d888fb8028a8f3b29d18e514b442a6a8553b46be4dc0a300",
+      "bytes": 1317390812
+    },
+    {
+      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/runs/flexiplex/rep2/rage_rep2_flexiplex_reads_barcodes.txt",
+      "sha256": "da6bf5ec06b2feb6f226f33e2660903f17686910826c596849727a1be3c0cf0b",
+      "bytes": 143293438
+    }
+  ],
+  "end_utc": "2026-10-23T18:39:50Z"
+}

@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "native_test_rows": 36590,
+  "common_rows": 24405,
+  "max_absolute_errors": {
+    "tool_p_value": 0.0,
+    "tool_log2FC": 0.0
+  },
+  "inputs": [
+    {
+      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/082426_volcano_plots/three_tool_overlay_and_H146_vs_H526_20260825/tables/direct_H146_vs_H526_all_deg_results.tsv.gz",
+      "sha256": "2cb1cd59158ed89b6b0444a80ce1d91e4088b0abff6bbaf6d2024353283be17f"
+    },
+    {
+      "path": "source_data/figure_07/direct_H146_vs_H526_plot_data.tsv.gz",
+      "sha256": "c4c038bffcc1db6a98444e12b74cc3a5b6dc85f329defeb87eeec1084c75ef48"
+    }
+  ],
+  "scope": "exact all-current-gene raw P/effect lineage comparison; does not rerun Wilcoxon"
+}

@@ -1,0 +1,14 @@
+{
+  "source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/longbench_sc_ont_false_whitelist_20260813/runs/flexiplex/rep1/flexiplex_SC_ONT_10M_false_rep1_audit_reads_barcodes.txt",
+  "source_sha256": "23dc95e69fbd850f39215278b469b877eff0ec2c7f1f9df32519750591bc826c",
+  "comparison_fastq_sha256": "c296f791de46c45ab03e6e04e4a96fbb0e93b2f371e804059f7156068bb0ca3d",
+  "selection": "Sidecar-only IDs in the complete target example",
+  "sidecar_only_assignments": [
+    {
+      "original_id": "abb4d68b-0846-4910-8c8e-fea3a4153076",
+      "target": "CCACTTGTCTTTCTTC",
+      "rows": 1
+    }
+  ],
+  "full_run_sidecar_only_rows": 4
+}

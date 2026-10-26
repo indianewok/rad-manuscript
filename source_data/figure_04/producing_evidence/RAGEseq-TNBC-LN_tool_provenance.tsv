@@ -1,0 +1,18 @@
+method	component	version_or_revision	executable_or_environment	sha256_or_note
+RAD	RAD binary	repo HEAD cd0582b2440cde0f35725dc557fa47307d74d374; exact current staged build	/tmp/rad-current-f005f43.8ChwC9/build-system/rad	211e75d7211aa14f844fe505cab0cbe48c095bc4bf46ca9b07f0ba7d06981f41
+BLAZE	BLAZE2	2.6.0a0	/scratch/f005f43/blaze2_260a0_native_20260727/venv/bin/blaze	native venv
+BLAZE	entry-point script	2.6.0a0	venv/bin/blaze	SHA256 46d36e12fb0dfd4ce3c403169bdb9a6574eddc8e5b26363afe40867471f994dc
+BLAZE	selection constants source	2.6.0a0	blaze/config.py	SHA256 81d56c3c62b2797aa8d3e3aa8330ad090fcfb70d0da498e2ba9d3e5e03b88776
+BLAZE	pipeline source	2.6.0a0	blaze/main.py	SHA256 c6f596fd8d5159379f1ad525f64c991b6d381cc4bf434723a379d0241da1472d
+BLAZE	read-assignment source	2.6.0a0	blaze/read_assignment.py	SHA256 dc474d91f0fde73539e4ee13d1449300d4dfe2a801d8703c32f6674bb1730f11
+BLAZE	command parser source	2.6.0a0	blaze/parser.py	SHA256 ad92bccff3b8d959daa355c0738891e3fd002c6526bec689f2643a1809e689d9
+BLAZE sensitivity	putative extraction reuse	2.6.0a0	runs/blaze_expect6027/putative_bc.csv	symlink to primary expect10433 table; sensitivity timing excludes extraction
+Flexiplex	Flexiplex binary	1.02.6	/tmp/flexiplex_release.GqgaKA/flexiplex/bin/flexiplex-linux	6eee3a7113044d45e106dc74a541b9a53475311449bf49bd91cc912ba911c40e
+Flexiplex	flexiplex-filter	1.01	/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/miniconda3/bin/flexiplex-filter	8d8074e50c60c3fcecffeedf23af8ecbed42b868ff73be82fe0a14abd77271ba
+FLAMESv2	FLAMES	2.6.0	/dartfs-hpc/scratch/f005f43/rad_longbench_20260726/tools/bioconductor_3.23_r4.6.1.sif	Bioconductor container
+FLAMESv2	embedded BLAZE2	2.5.1	basilisk FLAMES 2.6.0 environment	expect-cells 10433; 10x 3v2
+FLAMESv2	embedded BLAZE selection constants source	2.5.1	blaze/config.py	SHA256 801398e7779c24c10d471ad0e950538b04ec4754c771bb180d15c9f4edb21a78; differs from 2.6.0a0 only in a comment
+FLAMESv2	embedded BLAZE pipeline source	2.5.1	blaze/main.py	SHA256 431ab033a96b37010368084e812ad4505bef4d2648e982549f340fe5cfe1b446
+FLAMESv2	embedded BLAZE read-assignment source	2.5.1	blaze/read_assignment.py	SHA256 dc474d91f0fde73539e4ee13d1449300d4dfe2a801d8703c32f6674bb1730f11; byte-identical to standalone 2.6.0a0
+FLAMESv2	embedded BLAZE command parser source	2.5.1	blaze/parser.py	SHA256 0c73bbea507c5cb548db792395620af76a735f19e6e701d9f915ee2b90f8765a
+Comparator	official RAGE-seq barcode repository	98436154f7db855bd727f5abaaf2133ad1b3bf85	https://github.com/KCCG/rageseq	10433 deposited lymph-node short-read barcodes

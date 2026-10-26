@@ -1,0 +1,30 @@
+{
+  "job_id": "9979121",
+  "submitted_utc": "2026-10-23T19:24:35.252763Z",
+  "command": "sbatch --parsable --partition=preempt_lsong --nodelist=t02 scripts/revision/rage_public_reorder.sbatch",
+  "cpu_only_node": "t02",
+  "fresh_hardware_check": "Gres=(null);64CPUs,8allocated;773221MBRAM,262144MBallocated;noGPUresource;explicitnodepin",
+  "cpus_per_task": 6,
+  "memory": "24G",
+  "time_limit": "01:00:00",
+  "requested_gpu_gres": 0,
+  "account": "lsonglab",
+  "qos": "lsonglab_gpu",
+  "mode": "verify_only",
+  "batch_sha256": "3b96a9aa51c3f32e27e182886edab3ca6a64d52317822574d14b6bfebd344f44",
+  "implementation_sha256": "bd328ce80257f4de4cc03cce58290b37e180b478754e41514c7d048703d2a987",
+  "acquisition_receipt_sha256": "844315996427f83a698379b114d0b02bd22edeca616e32470d4f334267a829fd",
+  "scope": "Only complete public input identity verification; no sequencing-tool producer rerun, no reconstructed full FASTQ written",
+  "completion": {
+    "scheduler_state": "COMPLETED",
+    "exit_code": "0:0",
+    "scheduler_elapsed": "00:11:10",
+    "scheduler_max_rss_kib": 9043556,
+    "scientific_status": "passed",
+    "comparison_receipt": "validation/rage_public_payload_comparison.json",
+    "comparison_receipt_sha256": "9aba7b3920e24b9dfdb7bceab0d7faae95b02edef328f1844353e43bf445a36a",
+    "exact_decompressed_match": true,
+    "canonical_ordered_match": true,
+    "full_fastq_written": false
+  }
+}

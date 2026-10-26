@@ -1,0 +1,41 @@
+[
+  {
+    "output": "rad_read_assignments.tsv",
+    "source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/rad_blaze_bcrtcr_cellline/rad_per_read.tsv",
+    "source_sha256": "1dc982d7b030a26c6b961bfa3f2acf18e94e5799f10405950e9f29c6123e0416",
+    "selection": "first 6 data rows; all columns unchanged",
+    "source_data_rows": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "scope": "real bounded excerpt; candidate source, not proof of final artwork binding"
+  },
+  {
+    "output": "flexiplex_receptor_input.tsv",
+    "source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/flexiplex_bcrtcr_cellline_20260811/flexiplex_per_barcode_bcrtcr.tsv",
+    "source_sha256": "57ed7778309a12af0424b6b075eaf49dbd1a3c882a361b6b18a08b8dd7d8750b",
+    "selection": "first 3 data rows; all columns unchanged",
+    "source_data_rows": [
+      1,
+      2,
+      3
+    ],
+    "scope": "real bounded excerpt; candidate source, not proof of final artwork binding"
+  },
+  {
+    "output": "splitseq_reference.csv",
+    "source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/splitseq_shortread_20260727/csv/called_cells_summary.csv",
+    "source_sha256": "ee703c44f62eb1ae8c239567d8594b2b0114a7afa486a1236d384e688738f064",
+    "selection": "first 3 data rows; all columns unchanged",
+    "source_data_rows": [
+      1,
+      2,
+      3
+    ],
+    "scope": "real bounded excerpt; candidate source, not proof of final artwork binding"
+  }
+]

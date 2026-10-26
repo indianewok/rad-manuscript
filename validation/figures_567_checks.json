@@ -1,0 +1,450 @@
+[
+  {
+    "check_id": "copy_direct_H146_vs_H526_plot_data.tsv.gz",
+    "observed": "c4c038bffcc1db6a98444e12b74cc3a5b6dc85f329defeb87eeec1084c75ef48",
+    "expected": "c4c038bffcc1db6a98444e12b74cc3a5b6dc85f329defeb87eeec1084c75ef48",
+    "tolerance": "0",
+    "status": "passed",
+    "evidence": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_07/direct_H146_vs_H526_plot_data.tsv.gz"
+  },
+  {
+    "check_id": "copy_RAD_emitted_segment_source_manifest.tsv",
+    "observed": "711209398cb8e0fc7644f6414edda9ad251154ab6575ff3a3072c505896b7bfa",
+    "expected": "711209398cb8e0fc7644f6414edda9ad251154ab6575ff3a3072c505896b7bfa",
+    "tolerance": "0",
+    "status": "passed",
+    "evidence": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_07/RAD_emitted_segment_source_manifest.tsv"
+  },
+  {
+    "check_id": "F7_selected_matrix_molecules",
+    "observed": "22875174",
+    "expected": "22875174",
+    "tolerance": "0",
+    "status": "passed",
+    "evidence": ""
+  },
+  {
+    "check_id": "F7_selected_assignment_count_conservation",
+    "observed": "57885606",
+    "expected": "57885606",
+    "tolerance": "0",
+    "status": "passed",
+    "evidence": ""
+  },
+  {
+    "check_id": "F7_common_rows",
+    "observed": "24405",
+    "expected": "24405",
+    "tolerance": "0",
+    "status": "passed",
+    "evidence": ""
+  },
+  {
+    "check_id": "F7_common_genes",
+    "observed": "8135",
+    "expected": "8135",
+    "tolerance": "0",
+    "status": "passed",
+    "evidence": ""
+  },
+  {
+    "check_id": "F7_RAD_gene_identity",
+    "observed": "True",
+    "expected": "True",
+    "tolerance": "0",
+    "status": "passed",
+    "evidence": ""
+  },
+  {
+    "check_id": "F7_RAD_tool_BH",
+    "observed": "7.771561172376096e-16",
+    "expected": "0.0",
+    "tolerance": "1e-12",
+    "status": "passed",
+    "evidence": ""
+  },
+  {
+    "check_id": "F7_RAD_Illumina_BH",
+    "observed": "1.609823385706477e-15",
+    "expected": "0.0",
+    "tolerance": "1e-12",
+    "status": "passed",
+    "evidence": ""
+  },
+  {
+    "check_id": "F7_BLAZE_gene_identity",
+    "observed": "True",
+    "expected": "True",
+    "tolerance": "0",
+    "status": "passed",
+    "evidence": ""
+  },
+  {
+    "check_id": "F7_BLAZE_tool_BH",
+    "observed": "7.771561172376096e-16",
+    "expected": "0.0",
+    "tolerance": "1e-12",
+    "status": "passed",
+    "evidence": ""
+  },
+  {
+    "check_id": "F7_BLAZE_Illumina_BH",
+    "observed": "1.609823385706477e-15",
+    "expected": "0.0",
+    "tolerance": "1e-12",
+    "status": "passed",
+    "evidence": ""
+  },
+  {
+    "check_id": "F7_Flexiplex_gene_identity",
+    "observed": "True",
+    "expected": "True",
+    "tolerance": "0",
+    "status": "passed",
+    "evidence": ""
+  },
+  {
+    "check_id": "F7_Flexiplex_tool_BH",
+    "observed": "6.661338147750939e-16",
+    "expected": "0.0",
+    "tolerance": "1e-12",
+    "status": "passed",
+    "evidence": ""
+  },
+  {
+    "check_id": "F7_Flexiplex_Illumina_BH",
+    "observed": "1.609823385706477e-15",
+    "expected": "0.0",
+    "tolerance": "1e-12",
+    "status": "passed",
+    "evidence": ""
+  },
+  {
+    "check_id": "F7_BLAZE_reference_identity",
+    "observed": "True",
+    "expected": "True",
+    "tolerance": "0",
+    "status": "passed",
+    "evidence": ""
+  },
+  {
+    "check_id": "F7_Flexiplex_reference_identity",
+    "observed": "True",
+    "expected": "True",
+    "tolerance": "0",
+    "status": "passed",
+    "evidence": ""
+  },
+  {
+    "check_id": "F7_supported_recoveries",
+    "observed": "{'RAD': 654, 'BLAZE': 522, 'Flexiplex': 556}",
+    "expected": "{'RAD': 654, 'BLAZE': 522, 'Flexiplex': 556}",
+    "tolerance": "0",
+    "status": "passed",
+    "evidence": ""
+  },
+  {
+    "check_id": "F7_Venn_regions",
+    "observed": "{'100': 117, '111': 442, '010': 29, '011': 22, '101': 66, '001': 26, '110': 29}",
+    "expected": "{'100': 117, '010': 29, '001': 26, '110': 29, '101': 66, '011': 22, '111': 442}",
+    "tolerance": "0",
+    "status": "passed",
+    "evidence": ""
+  },
+  {
+    "check_id": "F7_threshold_grid_exact_integer_and_metric_comparison",
+    "observed": "594",
+    "expected": "594",
+    "tolerance": "0",
+    "status": "passed",
+    "evidence": ""
+  },
+  {
+    "check_id": "F7_all_artwork_display_labels_half_up",
+    "observed": "594",
+    "expected": "594",
+    "tolerance": "0",
+    "status": "passed",
+    "evidence": ""
+  },
+  {
+    "check_id": "F7_truth_H146",
+    "observed": "412",
+    "expected": "412",
+    "tolerance": "0",
+    "status": "passed",
+    "evidence": ""
+  },
+  {
+    "check_id": "F7_truth_H526",
+    "observed": "769",
+    "expected": "769",
+    "tolerance": "0",
+    "status": "passed",
+    "evidence": ""
+  },
+  {
+    "check_id": "F6_union_barcode_unique",
+    "observed": "12614",
+    "expected": "12614",
+    "tolerance": "0",
+    "status": "passed",
+    "evidence": ""
+  },
+  {
+    "check_id": "F6_reference_cells",
+    "observed": "12012",
+    "expected": "12012",
+    "tolerance": "0",
+    "status": "passed",
+    "evidence": ""
+  },
+  {
+    "check_id": "F6_reference_states",
+    "observed": "{'unassigned': 6171, 'named_singlet': 5782, 'doublet': 59}",
+    "expected": "{'named_singlet': 5782, 'doublet': 59, 'unassigned': 6171}",
+    "tolerance": "0",
+    "status": "passed",
+    "evidence": ""
+  },
+  {
+    "check_id": "F6_RAD_complete_selected_universe",
+    "observed": "12423",
+    "expected": "12423",
+    "tolerance": "0",
+    "status": "passed",
+    "evidence": ""
+  },
+  {
+    "check_id": "F6_RAD_strict_outcomes",
+    "observed": "(5324, 32, 246, 165, 15)",
+    "expected": "(5324, 32, 246, 165, 15)",
+    "tolerance": "0",
+    "status": "passed",
+    "evidence": ""
+  },
+  {
+    "check_id": "F6_RAD_no_missing_selected_row",
+    "observed": "0",
+    "expected": "0",
+    "tolerance": "0",
+    "status": "passed",
+    "evidence": ""
+  },
+  {
+    "check_id": "F6_BLAZE_complete_selected_universe",
+    "observed": "10001",
+    "expected": "10001",
+    "tolerance": "0",
+    "status": "passed",
+    "evidence": ""
+  },
+  {
+    "check_id": "F6_BLAZE_strict_outcomes",
+    "observed": "(4450, 12, 766, 308, 246)",
+    "expected": "(4450, 12, 766, 308, 246)",
+    "tolerance": "0",
+    "status": "passed",
+    "evidence": ""
+  },
+  {
+    "check_id": "F6_BLAZE_no_missing_selected_row",
+    "observed": "0",
+    "expected": "0",
+    "tolerance": "0",
+    "status": "passed",
+    "evidence": ""
+  },
+  {
+    "check_id": "F6_Flexiplex_complete_selected_universe",
+    "observed": "12101",
+    "expected": "12101",
+    "tolerance": "0",
+    "status": "passed",
+    "evidence": ""
+  },
+  {
+    "check_id": "F6_Flexiplex_strict_outcomes",
+    "observed": "(4674, 17, 725, 340, 26)",
+    "expected": "(4674, 17, 725, 340, 26)",
+    "tolerance": "0",
+    "status": "passed",
+    "evidence": ""
+  },
+  {
+    "check_id": "F6_Flexiplex_no_missing_selected_row",
+    "observed": "0",
+    "expected": "0",
+    "tolerance": "0",
+    "status": "passed",
+    "evidence": ""
+  },
+  {
+    "check_id": "F6_RAD_executed_CB_UB_contract",
+    "observed": "True",
+    "expected": "True",
+    "tolerance": "0",
+    "status": "passed",
+    "evidence": ""
+  },
+  {
+    "check_id": "F6_BLAZE_executed_CB_UB_contract",
+    "observed": "True",
+    "expected": "True",
+    "tolerance": "0",
+    "status": "passed",
+    "evidence": ""
+  },
+  {
+    "check_id": "F6_Flexiplex_executed_CB_UB_contract",
+    "observed": "True",
+    "expected": "True",
+    "tolerance": "0",
+    "status": "passed",
+    "evidence": ""
+  },
+  {
+    "check_id": "copy_bulk_panel_runtime_manifest.tsv",
+    "observed": "707e95996a5e96edfdc80db72ffbf0402f1372e85b2bb5c3b91a0eca4e103a5f",
+    "expected": "707e95996a5e96edfdc80db72ffbf0402f1372e85b2bb5c3b91a0eca4e103a5f",
+    "tolerance": "0",
+    "status": "passed",
+    "evidence": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_06/bulk_panel_runtime_manifest.tsv"
+  },
+  {
+    "check_id": "F6_coordinate_identity",
+    "observed": "{'n': 12012, 'sorted_key_sha256': '54a1826ce726cfd52b936604588ad849ec8548fccd841654ac0140f96a55788a'}",
+    "expected": "{'n': 12012, 'sorted_key_sha256': '54a1826ce726cfd52b936604588ad849ec8548fccd841654ac0140f96a55788a'}",
+    "tolerance": "0",
+    "status": "passed",
+    "evidence": ""
+  },
+  {
+    "check_id": "F6_object_coordinate_identity",
+    "observed": "{'n': 12012, 'sorted_key_sha256': '54a1826ce726cfd52b936604588ad849ec8548fccd841654ac0140f96a55788a'}",
+    "expected": "{'n': 12012, 'sorted_key_sha256': '54a1826ce726cfd52b936604588ad849ec8548fccd841654ac0140f96a55788a'}",
+    "tolerance": "0",
+    "status": "passed",
+    "evidence": ""
+  },
+  {
+    "check_id": "F6_SCT_object_matches_fixed_coordinates",
+    "observed": "1.0125233984581428e-13",
+    "expected": "0.0",
+    "tolerance": "1e-12",
+    "status": "passed",
+    "evidence": ""
+  },
+  {
+    "check_id": "F5_RAD_unique_barcodes",
+    "observed": "3864",
+    "expected": "3864",
+    "tolerance": 0,
+    "status": "passed",
+    "evidence": ""
+  },
+  {
+    "check_id": "F5_BLAZE_unique_barcodes",
+    "observed": "2955",
+    "expected": "2955",
+    "tolerance": 0,
+    "status": "passed",
+    "evidence": ""
+  },
+  {
+    "check_id": "F5_Flexiplex_unique_barcodes",
+    "observed": "3259",
+    "expected": "3259",
+    "tolerance": 0,
+    "status": "passed",
+    "evidence": ""
+  },
+  {
+    "check_id": "F5_Flex_assigned",
+    "observed": "6595231",
+    "expected": "6595231",
+    "tolerance": 0,
+    "status": "passed",
+    "evidence": ""
+  },
+  {
+    "check_id": "copy_candidate_cell_identity_map.csv",
+    "observed": "5d398b62c37b10e0a080f7e84321c11edb7fb0a1e2badef27209186e57e80f95",
+    "expected": "5d398b62c37b10e0a080f7e84321c11edb7fb0a1e2badef27209186e57e80f95",
+    "tolerance": 0,
+    "status": "passed",
+    "evidence": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_05/candidate_cell_identity_map.csv"
+  },
+  {
+    "check_id": "F5_candidate_identity_map_rows",
+    "observed": "3585",
+    "expected": "3585",
+    "tolerance": 0,
+    "status": "passed",
+    "evidence": ""
+  },
+  {
+    "check_id": "copy_splitseq_reference_568_cells.csv",
+    "observed": "ee703c44f62eb1ae8c239567d8594b2b0114a7afa486a1236d384e688738f064",
+    "expected": "ee703c44f62eb1ae8c239567d8594b2b0114a7afa486a1236d384e688738f064",
+    "tolerance": 0,
+    "status": "passed",
+    "evidence": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_05/splitseq_reference_568_cells.csv"
+  },
+  {
+    "check_id": "F5_split_reference_cells",
+    "observed": "568",
+    "expected": "568",
+    "tolerance": 0,
+    "status": "passed",
+    "evidence": ""
+  },
+  {
+    "check_id": "F5_split_selected_physical_cells",
+    "observed": "568",
+    "expected": "568",
+    "tolerance": 0,
+    "status": "passed",
+    "evidence": ""
+  },
+  {
+    "check_id": "F5_split_rad_reads",
+    "observed": "2078171",
+    "expected": "2078171",
+    "tolerance": 0,
+    "status": "passed",
+    "evidence": "568 explicitly mapped physical cells; current ledger replay"
+  },
+  {
+    "check_id": "F5_split_component_polyt_reads",
+    "observed": "1156252",
+    "expected": "1156252",
+    "tolerance": 0,
+    "status": "passed",
+    "evidence": "568 explicitly mapped physical cells; current ledger replay"
+  },
+  {
+    "check_id": "F5_split_rad_umis",
+    "observed": "1891704",
+    "expected": "1891704",
+    "tolerance": 0,
+    "status": "passed",
+    "evidence": "568 explicitly mapped physical cells; current ledger replay"
+  },
+  {
+    "check_id": "F5_split_component_polyt_umis",
+    "observed": "1050292",
+    "expected": "1050292",
+    "tolerance": 0,
+    "status": "passed",
+    "evidence": "568 explicitly mapped physical cells; current ledger replay"
+  },
+  {
+    "check_id": "F5_split_replayed_numeric_counts",
+    "observed": "2272",
+    "expected": "2272",
+    "tolerance": 0,
+    "status": "passed",
+    "evidence": ""
+  }
+]

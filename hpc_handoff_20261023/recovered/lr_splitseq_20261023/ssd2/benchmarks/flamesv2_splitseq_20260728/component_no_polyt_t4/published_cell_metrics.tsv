@@ -1,4 +1,0 @@
-tool	unique_reads_across_published_cells	median_reads_per_published_cell	published_cells_detected	published_cells_total	unique_cell_umi_pairs	median_umis_per_published_cell	unique_read_cell_pairs	unique_read_cell_umi_tuples	sum_per_cell_unique_reads
-Flexiplex no-polyT	2047298	1985.5	568	568	1874853	1848.5	2062349	2063493	2062349
-Flexiplex polyT	1152260	1102.5	568	568	1050292	1042.0	1156252	1156666	1156252
-RAD main ED1	1754214	1646.5	568	568	1605269	1546.5	1763471	1763972	1763471

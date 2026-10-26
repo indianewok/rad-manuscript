@@ -1,0 +1,4 @@
+tool	input_annotation_rows	reference_n	calls	tp	fp	fn
+RAD	5	3	3	3	0	0
+BLAZE	5	3	3	2	1	1
+Flexiplex	5	3	2	2	0	1

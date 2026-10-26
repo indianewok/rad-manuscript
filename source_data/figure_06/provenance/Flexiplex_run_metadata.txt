@@ -1,0 +1,17 @@
+dataset=SN_ONT
+scope=full LongBench input
+input=/scratch-nfs/f005f43/rad_longbench_20260726/data/sc_sn/raw_fastq/SN_ONT.fastq.gz
+input_resolved=/dartfs-hpc/scratch/f005f43/rad_longbench_20260726/data/sc_sn/raw_fastq/SN_ONT.fastq.gz
+input_size_bytes=90056019300
+flexiplex_binary=/scratch/f005f43/rad_longbench_20260726/benchmarks/flexiplex_valid_to_valid_correction_audit_20260728/tools/flexiplex-v1.02.6-audit/flexiplex
+flexiplex_binary_sha256=38dccd37f1747e5105b62eacde572b7e4c5206fb925dc1fdbe8210ffe8b1e8c4
+selected_whitelist=/scratch/f005f43/rad_longbench_20260726/benchmarks/flexiplex_valid_to_valid_correction_audit_20260728/inputs/SN_flexiplex_whitelist.txt
+selected_whitelist_sha256=8d677717f97fc67446ff57760468c075ac99eb5cc623da9c473f6077f2a4b298
+selected_barcodes=12101
+threads=16
+kit=10x3v3
+flank_edit_distance=8
+barcode_edit_distance=2
+command=pigz -dc INPUT | flexiplex -d 10x3v3 -f 8 -e 2 -k SELECTED -p THREADS -n PREFIX | pigz > RAW_FASTQ_GZ
+start_utc=2026-08-03T15:06:40Z
+demux_exit_status=0

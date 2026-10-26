@@ -1,0 +1,190 @@
+{
+  "status": "passed_bounded_runtime_benchmark",
+  "scope": "First 100000 records from a stable ENA download prefix; selected-order subset only. Expected payload comes from this prefix. NOT full public-to-selected payload identity or published-MD5 validation.",
+  "source_prefix": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/rage_public_replication_20261023/ramos_nanopore.fastq.gz.parts/000",
+  "source_prefix_bytes": 536870912,
+  "source_prefix_sha256": "b537b405088190615d62a06793f3c8b55c4cd6aded9c91aa89b869334d28f45d",
+  "records": 100000,
+  "all_prefix_IDs_found_in_selected_order": true,
+  "public_prefix_order_matches_selected_subset": false,
+  "extract_prefix_seconds": 1.8536782264709473,
+  "scan_complete_selected_order_seconds": 21.536841869354248,
+  "reconstruction": {
+    "status": "passed",
+    "started_utc": "2026-10-23T18:48:44.715843Z",
+    "host": "andes8.dartmouth.edu",
+    "argv": [
+      "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/scripts/figure_03/reorder_public_fastq.py",
+      "--public",
+      "/scratch/f005f43/rage_order_prefix_benchmark_20261023/public_prefix_100k.fq.gz",
+      "--order",
+      "/scratch/f005f43/rage_order_prefix_benchmark_20261023/subset_ids.gz",
+      "--identity",
+      "/scratch/f005f43/rage_order_prefix_benchmark_20261023/subset_identity.json",
+      "--output",
+      "/scratch/f005f43/rage_order_prefix_benchmark_20261023/reconstructed_100k.fq.gz",
+      "--report",
+      "/scratch/f005f43/rage_order_prefix_benchmark_20261023/reorder_receipt.json",
+      "--scratch",
+      "/scratch/f005f43/rage_order_prefix_benchmark_20261023",
+      "--sort-threads",
+      "1",
+      "--sort-memory",
+      "16M",
+      "--pigz-threads",
+      "1",
+      "--min-temp-free-bytes",
+      "0"
+    ],
+    "script_sha256": "01ba84d0da3d8e6c479e9b752e17217105870f53d55bcec9e7e23f644f670972",
+    "public_input": "/scratch/f005f43/rage_order_prefix_benchmark_20261023/public_prefix_100k.fq.gz",
+    "selected_order": "/scratch/f005f43/rage_order_prefix_benchmark_20261023/subset_ids.gz",
+    "selected_identity": "/scratch/f005f43/rage_order_prefix_benchmark_20261023/subset_identity.json",
+    "output": "/scratch/f005f43/rage_order_prefix_benchmark_20261023/reconstructed_100k.fq.gz",
+    "raw_tools_rerun": false,
+    "selected_identity_sha256": "9b97ae674e058835fab337ca870d1e1633647508fc9c19da8d09c5791ef11ec8",
+    "selected_order_hashes": {
+      "md5": "92ec0b70402077473f2a1ed096bf394c",
+      "sha256": "ff383d90b2ad65ffde92fbcdfa083ebe4efb666f2b158ed8f3bdd13354d812b1",
+      "bytes": 2124590
+    },
+    "public_input_hashes": {
+      "md5": "255bd4082a7009eae4de694607201529",
+      "sha256": "a4d7c954ab9a795fb23f0bd8e4660b4b63c1f7f1a6b507f052fda488dcf81589",
+      "bytes": 83510839
+    },
+    "phase_seconds": {
+      "input_hashes_and_receipts": 0.203,
+      "load_selected_order": 0.224,
+      "index_public_records_and_sort_runs": 1.073,
+      "merge_reconstruct_hash_and_gzip": 18.858,
+      "output_compressed_hashes": 0.21
+    },
+    "temporary_disk_free_bytes_before": 3996435783680,
+    "diagnostic_logs": {
+      "sort": "/scratch/f005f43/rage_order_prefix_benchmark_20261023/reorder_receipt.sort.stderr.log",
+      "pigz": "/scratch/f005f43/rage_order_prefix_benchmark_20261023/reorder_receipt.pigz.stderr.log"
+    },
+    "sort_command": [
+      "sort",
+      "--parallel=1",
+      "--buffer-size=16M",
+      "--temporary-directory=/scratch/f005f43/rage_order_prefix_benchmark_20261023/rage_fastq_order_nr2tcb_o",
+      "-t",
+      "\t",
+      "-k1,1"
+    ],
+    "pigz_threads": 1,
+    "reconstructed_identity": {
+      "records": 100000,
+      "sequence_bases": 75466679,
+      "canonical_record_sha256": "03129ca71ad28f00054c2f1d19cbcc1f4c1f945bf71d5ec92d7c5003e70c3915",
+      "sequence_quality_order_sha256": "d2bc8924f925c8e940f2d5fe94ef1bcc34094496ec99e5e428370f80b00493c5",
+      "original_id_order_sha256": "892064aa8c2d65bd968b4874c3a9d2629e56cb3a5ea6e08ff40d0a64bb56513d",
+      "exact_decompressed_fastq_sha256": "1e367ad11c03e35b3eab34722850a43e19c869c3c3036df315d59dae1d7f7fed"
+    },
+    "exact_decompressed_fastq_matches_selected": true,
+    "metadata_scope": "Canonical comparison covers every ordered physical read ID, sequence and quality; header descriptions and plus-line annotations are excluded. Original public record bytes are preserved in the output.",
+    "output_hashes": {
+      "md5": "973089fb24e37bb0bcf7a9716b1f338b",
+      "sha256": "3a82b775a6257b9e8fb546659169580c9c221633a4da69fd38c5472da47401e2",
+      "bytes": 78165687
+    },
+    "complete_unique_ID_set_and_payload_identity": true,
+    "completed_utc": "2026-10-23T18:49:05.291787Z",
+    "elapsed_seconds": 20.576,
+    "python_peak_rss_kib": 201476,
+    "largest_child_peak_rss_kib": 28996
+  },
+  "elapsed_total_seconds": 52.970826625823975,
+  "verify_only_benchmark": {
+    "status": "passed",
+    "started_utc": "2026-10-23T18:53:19.998546Z",
+    "host": "andes8.dartmouth.edu",
+    "argv": [
+      "scripts/figure_03/reorder_public_fastq.py",
+      "--public",
+      "/scratch/f005f43/rage_order_prefix_benchmark_20261023/public_prefix_100k.fq.gz",
+      "--order",
+      "/scratch/f005f43/rage_order_prefix_benchmark_20261023/subset_ids.gz",
+      "--identity",
+      "/scratch/f005f43/rage_order_prefix_benchmark_20261023/subset_identity.json",
+      "--verify-only",
+      "--report",
+      "/scratch/f005f43/rage_order_prefix_benchmark_20261023/verify_only_receipt.json",
+      "--scratch",
+      "/scratch/f005f43/rage_order_prefix_benchmark_20261023",
+      "--sort-threads",
+      "1",
+      "--sort-memory",
+      "16M",
+      "--pigz-threads",
+      "1",
+      "--min-temp-free-bytes",
+      "0"
+    ],
+    "script_sha256": "bd328ce80257f4de4cc03cce58290b37e180b478754e41514c7d048703d2a987",
+    "public_input": "/scratch/f005f43/rage_order_prefix_benchmark_20261023/public_prefix_100k.fq.gz",
+    "selected_order": "/scratch/f005f43/rage_order_prefix_benchmark_20261023/subset_ids.gz",
+    "selected_identity": "/scratch/f005f43/rage_order_prefix_benchmark_20261023/subset_identity.json",
+    "output": null,
+    "mode": "verify_only",
+    "raw_tools_rerun": false,
+    "software": {
+      "python": "3.6.8 (default, Oct 15 2026, 01:28:52) \n[GCC 8.5.0 20210514 (Red Hat 8.5.0-29)]",
+      "sort": "sort (GNU coreutils) 8.30",
+      "pigz": "pigz 2.4"
+    },
+    "scheduler": {},
+    "selected_identity_sha256": "9b97ae674e058835fab337ca870d1e1633647508fc9c19da8d09c5791ef11ec8",
+    "selected_order_hashes": {
+      "md5": "92ec0b70402077473f2a1ed096bf394c",
+      "sha256": "ff383d90b2ad65ffde92fbcdfa083ebe4efb666f2b158ed8f3bdd13354d812b1",
+      "bytes": 2124590
+    },
+    "public_input_hashes": {
+      "md5": "255bd4082a7009eae4de694607201529",
+      "sha256": "a4d7c954ab9a795fb23f0bd8e4660b4b63c1f7f1a6b507f052fda488dcf81589",
+      "bytes": 83510839
+    },
+    "phase_seconds": {
+      "input_hashes_and_receipts": 0.194,
+      "load_selected_order": 0.213,
+      "index_public_records_and_sort_runs": 1.133,
+      "merge_verify_and_optional_compression": 1.925
+    },
+    "temporary_disk_free_bytes_before": 3996357423104,
+    "diagnostic_logs": {
+      "sort": "/scratch/f005f43/rage_order_prefix_benchmark_20261023/verify_only_receipt.sort.stderr.log",
+      "pigz": "/scratch/f005f43/rage_order_prefix_benchmark_20261023/verify_only_receipt.pigz.stderr.log"
+    },
+    "sort_command": [
+      "sort",
+      "--parallel=1",
+      "--buffer-size=16M",
+      "--temporary-directory=/scratch/f005f43/rage_order_prefix_benchmark_20261023/rage_fastq_order_tzx3u83f",
+      "-t",
+      "\t",
+      "-k1,1"
+    ],
+    "pigz_threads": 1,
+    "reconstructed_identity": {
+      "records": 100000,
+      "sequence_bases": 75466679,
+      "canonical_record_sha256": "03129ca71ad28f00054c2f1d19cbcc1f4c1f945bf71d5ec92d7c5003e70c3915",
+      "sequence_quality_order_sha256": "d2bc8924f925c8e940f2d5fe94ef1bcc34094496ec99e5e428370f80b00493c5",
+      "original_id_order_sha256": "892064aa8c2d65bd968b4874c3a9d2629e56cb3a5ea6e08ff40d0a64bb56513d",
+      "exact_decompressed_fastq_sha256": "1e367ad11c03e35b3eab34722850a43e19c869c3c3036df315d59dae1d7f7fed"
+    },
+    "exact_decompressed_fastq_matches_selected": true,
+    "metadata_scope": "Canonical comparison covers every ordered physical read ID, sequence and quality; header descriptions and plus-line annotations are excluded. The exact decompressed digest covers the original public record bytes in selected order, including metadata, whether or not a FASTQ is written.",
+    "complete_unique_ID_set_and_payload_identity": true,
+    "full_ordered_stream_verified": true,
+    "full_fastq_written": false,
+    "completed_utc": "2026-10-23T18:53:23.470780Z",
+    "elapsed_seconds": 3.472,
+    "python_peak_rss_kib": 36808,
+    "largest_child_peak_rss_kib": 29060
+  },
+  "verify_only_interpretation": "Same public-prefix subset; complete dataset equivalence remains untested. No reconstructed full FASTQ was written. Runtime supports a shorter verification allocation than recompression requires."
+}

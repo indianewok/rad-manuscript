@@ -1,0 +1,38 @@
+{
+  "host": "andes8.dartmouth.edu",
+  "checked_utc": "2026-10-23T18:25:38.405096Z",
+  "command": "rg --files -g *SN_ONT*readgene* -g *SN_ONT*read_gene* -g SN_ONT_RAD.fq* -g SN_ONT_RAD.fastq* ROOT",
+  "scans": [
+    {
+      "root": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data",
+      "resolved_root": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data",
+      "exit_code": 0,
+      "matches": [
+        "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/LongBench_comps/SN_ONT_H146_H526_fullcohort_DEG_20260822/provenance/source_stats/SN_ONT.readgene.stats.json",
+        "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/SN_ONT_H146_H526_DEG_RAD4acbe00_all_records_20260828/provenance/source_stats/SN_ONT.readgene.stats.json"
+      ]
+    },
+    {
+      "root": "/scratch/f005f43",
+      "resolved_root": "/scratch/f005f43",
+      "exit_code": 0,
+      "matches": [
+        "/scratch/f005f43/longbench_sn_ont_H146_H526_fullcohort_DEG_20260822/provenance/source_stats/SN_ONT.readgene.stats.json"
+      ]
+    },
+    {
+      "root": "/scratch-nfs/f005f43",
+      "resolved_root": "/dartfs-hpc/scratch/f005f43",
+      "exit_code": 1,
+      "matches": []
+    }
+  ],
+  "interpretation": "No emitted RAD FASTQ or frozen read-gene table matched these filename patterns in the scanned visible trees; three readgene statistics JSON matches only. This is bounded absence, not a claim about all archives, renamed files, ignored paths or symlink targets.",
+  "new_assignment_lead": {
+    "path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/SN_ONT_RAD_4acbe00_full_matrix_rebuild_20260828/assignments/RAD_4acbe00.assign.tsv.gz",
+    "bytes": 2357674940,
+    "recorded_expected_sha256": "a5dc369445826fdd36541a301b1b85448438fb52d351ce8883a12ef456457c48",
+    "validation_job_id": "9977822"
+  },
+  "no_raw_demultiplexing_or_alignment_restarted": true
+}

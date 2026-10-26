@@ -1,0 +1,26 @@
+tool=RAD
+replicate=3
+affinity=64-95
+input	/scratch/f005f43/longbench_sc_ont_false_whitelist_20260813/fastq/SC_ONT_10M_seqkit_seed2026081326.fastq.gz
+input_sha256	ecb19387e6cad1f7095ea95b183b5c30d3ac83c9ced67df53fddde885398689a
+input_expected_records	10000000
+canonical_input	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/longbench_sc_ont_false_whitelist_20260813/inputs/SC_ONT.fastq.gz
+canonical_input_bytes	88257731285
+target_whitelist	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/longbench_sc_ont_false_whitelist_20260813/whitelists/false_whitelist_rep3.txt
+target_sha256	1737b92a5ca3e3a95cfe79346fc2ac204a67d9fbd50b2237eef9deb49f21a5cd
+target_rows	5211
+global_catalog	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/cellranger_whitelists/3M-february-2018-3v3.txt
+global_catalog_sha256	843a6f7038db8cb3c06f3dc21cc69d04139ffa10689780518d7a9e42dc2e819b
+global_catalog_rows	6794880
+global_rad_bitlist	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/sctagger_L_false_whitelist_20260813/provenance/global_chemistry_10x3v3_bitlist.csv.gz
+global_rad_bitlist_sha256	02f771363a95e786ab1a6ab1e554c770e58cdff2fb30f2d7a9fb50a97762d452
+layout	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/longbench_sc_ont_false_whitelist_20260813/inputs/longbench_three_prime_v31.csv
+layout_sha256	c5cbbb07958a9c1ca6f9c0452ad1dd01933d5a51efba6f67522897c5dd4146fb
+threads=32
+rad_binary	/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad/build/rad
+rad_sha256	80a573fe05fa1a236751240fad7da17ca00e2d55a95259ca997584a8a5e0e67c
+rad_version	rad 1.0.2
+settings	10x3v3; bc_correction=offensive; ED=2; whitelist_mutation=2; generated_mutation=2; chunk=5000
+command	taskset -c 64-95 /usr/bin/time -v -o time.verbose.txt -- /dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad/build/rad demux -l /dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/longbench_sc_ont_false_whitelist_20260813/inputs/longbench_three_prime_v31.csv -q /scratch/f005f43/longbench_sc_ont_false_whitelist_20260813/fastq/SC_ONT_10M_seqkit_seed2026081326.fastq.gz -g /dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/sctagger_L_false_whitelist_20260813/provenance/global_chemistry_10x3v3_bitlist.csv.gz -c /dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/longbench_sc_ont_false_whitelist_20260813/whitelists/false_whitelist_rep3.txt -R offensive -M 2 -m 2 -z 5000 -o SC_ONT_10M_false_rep3_rad -d /dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/longbench_sc_ont_false_whitelist_20260813/runs/rad/rep3 -F /dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/longbench_sc_ont_false_whitelist_20260813/runs/rad/rep3/SC_ONT_10M_false_rep3_rad.log -t 32 -v 
+exit_status	0
+assigned_output	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/longbench_sc_ont_false_whitelist_20260813/runs/rad/rep3/SC_ONT_10M_false_rep3_rad.fq.gz

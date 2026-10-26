@@ -1,0 +1,79 @@
+{
+  "path": "/tmp/rad_fig567_clean_render_xdimwbxl",
+  "inputs": "copied source_data only; no raw data, matrices, RDS or project links",
+  "status": "passed",
+  "formats": [
+    "SVG",
+    "PDF",
+    "PNG"
+  ],
+  "files": 27,
+  "command": "env -i PATH=/usr/bin:/bin OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 MPLCONFIGDIR=/tmp/rad_fig567_clean_render_xdimwbxl/mpl /usr/bin/python3 scripts/revision/figures_567.py render --output-root /tmp/rad_fig567_clean_render_xdimwbxl",
+  "outputs": {
+    "figures/figure_06/genotype_strict_recall.svg": "5a8df478d44710093ab656041bcf4deac5eb8e01753e330d49da29a354e147c4",
+    "figures/figure_06/genotype_strict_recall.pdf": "d4dc2cf0ca499b17c7d0b3c3973f13b35e409562f66ec8a603cd790b867066e1",
+    "figures/figure_06/genotype_strict_recall.png": "0d4b6a69525abcfcd30017b2e0dbcccebc0c6ef0505f1eb52043c65a38ec36a2",
+    "figures/figure_06/genotype_fixed_umap.svg": "d9fa4b5fa98d3265a64bd5effd517325a48fcfdb1507f5527fba9ad7c54b513f",
+    "figures/figure_06/genotype_fixed_umap.pdf": "bba4394d6a7f24089476e20c8037a0db330e9130b9c7821c4457300b8f5627a9",
+    "figures/figure_06/genotype_fixed_umap.png": "67a71e6942fb652e95595112415c73a0f48a45a27c2da1552fc410b90bf420ea",
+    "figures/figure_06/A_reference_fixed_umap.svg": "2d98aac3198c1f58b6d0922ca02f2cd63f80e5f73bddf4b77e9b6eee956e97d6",
+    "figures/figure_06/A_reference_fixed_umap.pdf": "f419b1e2667c236a8c4fdcc6300d9492af4f2247cc2bf157c3507c72998d8aa4",
+    "figures/figure_06/A_reference_fixed_umap.png": "4d8e879948e3cf0f2d2c3c388b5389641da4789e934692c8f828c33cc97bd17a",
+    "figures/figure_06/C_native_selected_nuclei_by_donor.svg": "dc457aa95ffe655d41c6fb230b8f0ca747c438968e4ad9b5477b26ddd69caf11",
+    "figures/figure_06/C_native_selected_nuclei_by_donor.pdf": "7d92532e6c5520974004792ebf77b25d5a504bfe4103c96bc64389b873d61c3f",
+    "figures/figure_06/C_native_selected_nuclei_by_donor.png": "0d5821b421f6440e415fc5b6f13c1d3b327ca02a0fec86985ee3b4af8e5aa58f",
+    "figures/figure_07/A_updated_supported_intersections.svg": "372f1955ef2b3d1c26d09cff458f60ffa9b2667c3407e97b2d376c1873441c21",
+    "figures/figure_07/A_updated_supported_intersections.pdf": "1503d38780f7966d7876ac9b0c7c998cf8f0c63c1ab2c8bc1093ccd6cf18d6e6",
+    "figures/figure_07/A_updated_supported_intersections.png": "b92a98f66f6d3bea1f16ca8ffa9901ebce3ef9d0afcf509755f4e9e8f664785c",
+    "figures/figure_07/A_updated_venn_schematic.svg": "c1e86772a0443ef821b51490af85eca5121fec5f619752c26f29fd9f4257ebac",
+    "figures/figure_07/A_updated_venn_schematic.pdf": "a67e3368762134003680183c218261dc0ce33ed1124955afc02fa39462df3a6c",
+    "figures/figure_07/A_updated_venn_schematic.png": "ed16b4c610063c87249d2245bf0b7c230bf9a7cc3834c66e199f39b694ebaa18",
+    "figures/figure_07/B_updated_common_universe_volcano.svg": "88017254c703a2a6d23f4a5dc3ecf7dbec57019206833c3922a43588019a4fb7",
+    "figures/figure_07/B_updated_common_universe_volcano.pdf": "b0fcd46784cd731f74a597d8fb44813de1a496a1cc885a891c5b4ebfb9cf5e21",
+    "figures/figure_07/B_updated_common_universe_volcano.png": "00bb2914e8f5e639a2e3c7d114b72659aa95031bdb8777586c41ba4874a76d7f",
+    "figures/figure_07/D_updated_threshold_grid.svg": "1865c3c0ecdd89ab10ec122ba70986e68f2a9087f16db2840f9d8b6f64688bea",
+    "figures/figure_07/D_updated_threshold_grid.pdf": "0ac432da934c5a3ebb4d4f3c96e5412c6173215fbbbfc2fc23df16865c017df3",
+    "figures/figure_07/D_updated_threshold_grid.png": "0b376a9c952a61bc8534d6764d0ed629d9f75266ef244400fd2ac2b3b050ea3b",
+    "figures/figure_07/C_candidate_updated_confidence.svg": "e8c60707e0b30190ef9b9e559be24f70d27852c5e64e93ed4c711380474dd751",
+    "figures/figure_07/C_candidate_updated_confidence.pdf": "bbd63829d4863a792607bd660866e26b9eb1b95590dff2fbc23b678612f43cf3",
+    "figures/figure_07/C_candidate_updated_confidence.png": "0393feba0fe64b7cf97deedab77e9279f58b060833c81215f1f7f85793f0914f"
+  },
+  "PNG_parity_with_primary_render": [
+    {
+      "file": "figures/figure_06/genotype_strict_recall.png",
+      "same_png_bytes": true
+    },
+    {
+      "file": "figures/figure_06/genotype_fixed_umap.png",
+      "same_png_bytes": true
+    },
+    {
+      "file": "figures/figure_06/A_reference_fixed_umap.png",
+      "same_png_bytes": true
+    },
+    {
+      "file": "figures/figure_06/C_native_selected_nuclei_by_donor.png",
+      "same_png_bytes": true
+    },
+    {
+      "file": "figures/figure_07/A_updated_supported_intersections.png",
+      "same_png_bytes": true
+    },
+    {
+      "file": "figures/figure_07/A_updated_venn_schematic.png",
+      "same_png_bytes": true
+    },
+    {
+      "file": "figures/figure_07/B_updated_common_universe_volcano.png",
+      "same_png_bytes": true
+    },
+    {
+      "file": "figures/figure_07/D_updated_threshold_grid.png",
+      "same_png_bytes": true
+    },
+    {
+      "file": "figures/figure_07/C_candidate_updated_confidence.png",
+      "same_png_bytes": true
+    }
+  ]
+}

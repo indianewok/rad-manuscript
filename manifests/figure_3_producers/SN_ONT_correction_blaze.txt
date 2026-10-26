@@ -1,0 +1,10 @@
+dataset=SN_ONT
+input=/scratch-nfs/f005f43/rad_longbench_20260726/data/sc_sn/raw_fastq/SN_ONT.fastq.gz
+selector=--force-cells 10000
+blaze2_version=2.5.0
+threads=48
+kit_version=3v3 (BLAZE default)
+full_bc_whitelist=none
+PYTHONHASHSEED=UNSET
+start_utc=2026-07-30T20:49:45Z
+input_size_bytes=90056019300

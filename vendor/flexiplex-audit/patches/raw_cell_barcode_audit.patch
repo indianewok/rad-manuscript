@@ -1,0 +1,144 @@
+diff --git a/flexiplex.c++ b/flexiplex.c++
+index 8a0fe6a..3a19927 100644
+--- a/flexiplex.c++
++++ b/flexiplex.c++
+@@ -125,6 +125,7 @@ void reverse_complement(string & seq){
+ //Holds the found barcode and associated information
+ struct Barcode {
+   string barcode;
++  string raw_barcode;
+   string umi;
+   int editd;
+   int flank_editd;
+@@ -133,6 +134,11 @@ struct Barcode {
+   bool unambiguous;
+ } ;
+ 
++// Diagnostic-only source set.  When FLEXIPLEX_AUDIT_SOURCE_FILE is set during
++// discovery mode, retain normal Flexiplex parsing while emitting only reads and
++// per-candidate rows whose raw extracted barcode belongs to this set.
++unordered_set<string> audit_source_barcodes;
++
+ struct SearchResult {
+   string read_id;
+   string qual_scores;
+@@ -399,6 +405,7 @@ Barcode get_barcode(string & seq,
+   std::string exact_bc = seq.substr(
+       read_to_subpatterns[bc_index],
+       search_pattern[bc_index].second.length());
++  barcode.raw_barcode = exact_bc;
+   if (known_barcodes->size()==0 || (known_barcodes->find(exact_bc) != known_barcodes->end())){
+     barcode.barcode=exact_bc;
+     barcode.editd=0;
+@@ -485,9 +492,15 @@ bool get_bool_opt_arg(string value){
+ // print information about barcodes
+ void print_stats(string read_id, vector<Barcode> & vec_bc, ostream & out_stream){
+   for(int b=0; b<vec_bc.size() ; b++){
++    if (!audit_source_barcodes.empty() &&
++        audit_source_barcodes.find(vec_bc.at(b).raw_barcode) ==
++            audit_source_barcodes.end()) {
++      continue;
++    }
+     out_stream << read_id << "\t"
+-	       << vec_bc.at(b).barcode << "\t"
+-	       << vec_bc.at(b).flank_editd << "\t"
++		       << vec_bc.at(b).barcode << "\t"
++		       << vec_bc.at(b).raw_barcode << "\t"
++		       << vec_bc.at(b).flank_editd << "\t"
+ 	       << vec_bc.at(b).editd << "\t"
+ 	       << vec_bc.at(b).umi << "\n";
+   }
+@@ -661,6 +674,26 @@ int main(int argc, char **argv) {
+   unordered_set<string> known_barcodes;
+   unordered_set<string> found_barcodes;
+ 
++  const char *audit_source_file = std::getenv("FLEXIPLEX_AUDIT_SOURCE_FILE");
++  if (audit_source_file != nullptr) {
++    ifstream audit_file(audit_source_file);
++    if (!audit_file.good()) {
++      cerr << "Unable to open FLEXIPLEX_AUDIT_SOURCE_FILE "
++           << audit_source_file << endl;
++      exit(1);
++    }
++    string audit_line;
++    string audit_bc;
++    while (getline(audit_file, audit_line)) {
++      istringstream audit_line_stream(audit_line);
++      if (audit_line_stream >> audit_bc) {
++        audit_source_barcodes.insert(audit_bc);
++      }
++    }
++    cerr << "Diagnostic audit source barcodes: "
++         << audit_source_barcodes.size() << "\n";
++  }
++
+   // threads
+   int n_threads = 1;
+ 
+@@ -856,13 +889,13 @@ int main(int argc, char **argv) {
+   out_stat_filename = out_filename_prefix + "_" + out_stat_filename;
+   out_bc_filename = out_filename_prefix + "_" + out_bc_filename;
+ 
+-  if (known_barcodes.size() > 0) {
++  if (known_barcodes.size() > 0 || !audit_source_barcodes.empty()) {
+     if (file_exists(out_stat_filename)) {
+       cerr << "File " << out_stat_filename
+            << " already exists, overwriting." << endl;
+     }
+     out_stat_file.open(out_stat_filename, std::ios::trunc);
+-    out_stat_file << "Read\tCellBarcode\tFlankEditDist\tBarcodeEditDist\tUMI\n";
++    out_stat_file << "Read\tCellBarcode\tRawCellBarcode\tFlankEditDist\tBarcodeEditDist\tUMI\n";
+   }
+ 
+   cerr << "Searching for barcodes...\n";
+@@ -968,9 +1001,7 @@ int main(int argc, char **argv) {
+           multi_bc_count++;
+         }
+ 
+-        if (known_barcodes.size() !=
+-            0) { // if we are just looking for all possible barcodes don't
+-                 // output reads etc.
++        if (known_barcodes.size() != 0) {
+ 
+           print_stats(sr_v[t][r].read_id, sr_v[t][r].vec_bc_for, out_stat_file);
+           print_stats(sr_v[t][r].read_id, sr_v[t][r].vec_bc_rev, out_stat_file);
+@@ -1008,6 +1039,25 @@ int main(int argc, char **argv) {
+               is_fastq
+             );
+           }
++        } else if (!audit_source_barcodes.empty()) {
++          print_stats(sr_v[t][r].read_id, sr_v[t][r].vec_bc_for, out_stat_file);
++          print_stats(sr_v[t][r].read_id, sr_v[t][r].vec_bc_rev, out_stat_file);
++
++          bool audit_hit = false;
++          for (const auto &bc : sr_v[t][r].vec_bc_for) {
++            audit_hit = audit_hit ||
++                audit_source_barcodes.find(bc.raw_barcode) !=
++                    audit_source_barcodes.end();
++          }
++          for (const auto &bc : sr_v[t][r].vec_bc_rev) {
++            audit_hit = audit_hit ||
++                audit_source_barcodes.find(bc.raw_barcode) !=
++                    audit_source_barcodes.end();
++          }
++          if (audit_hit) {
++            print_line(sr_v[t][r].read_id, sr_v[t][r].line,
++                       sr_v[t][r].qual_scores, is_fastq, std::cout);
++          }
+         }
+       }
+     }
+@@ -1025,7 +1075,7 @@ int main(int argc, char **argv) {
+   cerr << "All done!" << endl;
+   cerr << "If you like Flexiplex, please cite us! https://doi.org/10.1093/bioinformatics/btae102" << endl;
+ 
+-  if (known_barcodes.size() > 0) {
++  if (known_barcodes.size() > 0 || !audit_source_barcodes.empty()) {
+     out_stat_file.close();
+     return (0);
+   }
+@@ -1062,4 +1112,3 @@ int main(int argc, char **argv) {
+   for (int i = hist.size() - 1; i >= 0; i--)
+     cout << i + 1 << "\t" << hist[i] << "\n";
+ }
+-

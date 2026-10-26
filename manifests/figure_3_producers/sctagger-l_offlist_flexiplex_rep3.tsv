@@ -1,0 +1,20 @@
+replicate=3
+affinity=16-31,80-95
+flexiplex_threads=28
+pigz_decompress_threads=4
+pigz_compress_threads=4
+input	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260731_sctagger_badread_quality_full/inputs/L/flatQ20.fq.gz
+input_sha256	6f7385468b607cf86c91449b095c2968ee2a5d25ab473901102b87d141543090
+input_reads	4993805
+target_whitelist	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/sctagger_L_false_whitelist_20260813/whitelists/false_rep3.txt
+target_sha256	75819c745aab4377b22df8697d24971283199c3f21643aff4177da425228538d
+target_rows	5000
+binary	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/software_pins_20260810/flexiplex_raw_to_assigned_audit/bin/flexiplex_v1.02.6_raw_to_assigned_audit
+binary_sha256	38dccd37f1747e5105b62eacde572b7e4c5206fb925dc1fdbe8210ffe8b1e8c4
+binary_version	1.02.6
+upstream_commit	d84c8ae4f3865052f2b5ecec816949b94682f302
+settings	10x3v3; flank_edit_distance=8; barcode_edit_distance=2; forced_known_list=true; raw_to_assigned_audit=true
+command	taskset -c 16-31\,80-95 /usr/bin/time -v -o flexiplex.time.txt bash -o pipefail -c pigz\ -dc\ -p\ 4\ \"\$1\"\ \|\ \"\$2\"\ -d\ 10x3v3\ -k\ \"\$3\"\ -f\ 8\ -e\ 2\ -p\ 28\ -n\ \"\$4\"\ 2\>\"\$5\"\ \|\ pigz\ -p\ 4\ \>\ \"\$6\" _ /dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260731_sctagger_badread_quality_full/inputs/L/flatQ20.fq.gz /dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/software_pins_20260810/flexiplex_raw_to_assigned_audit/bin/flexiplex_v1.02.6_raw_to_assigned_audit /dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/sctagger_L_false_whitelist_20260813/whitelists/false_rep3.txt /dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/sctagger_L_false_whitelist_20260813/runs/flexiplex/rep3/flexiplex_L_flatQ20_false_rep3_audit /dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/sctagger_L_false_whitelist_20260813/runs/flexiplex/rep3/flexiplex.stderr.log /dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/sctagger_L_false_whitelist_20260813/runs/flexiplex/rep3/flexiplex_L_flatQ20_false_rep3_audit.fastq.gz 
+exit_status	0
+assigned_output	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/sctagger_L_false_whitelist_20260813/runs/flexiplex/rep3/flexiplex_L_flatQ20_false_rep3_audit.fastq.gz
+sidecar_output	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/sctagger_L_false_whitelist_20260813/runs/flexiplex/rep3/flexiplex_L_flatQ20_false_rep3_audit_reads_barcodes.txt

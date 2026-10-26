@@ -1,0 +1,3 @@
+original_id	record_id	target	source	source_evidence	source_kind	orientation	ct	emitted_fastq	assignment_row
+AACAACCGTGGGTATG-737	AACAACCGTGGGTATG-737-F-CT	CACGTGGGTGTTCATG	ACAACCCGTGGGTGTG	RAD_CR	observed	forward	1	1	169
+AACAACCGTGGGTATG-737	AACAACCGTGGGTATG-737-R-CT	GCCAACGAGCTGGCTC	GCGGAGCCAGCTCGTT	RAD_CR	observed	reverse_raw	1	1	170

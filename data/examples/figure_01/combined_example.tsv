@@ -1,0 +1,7 @@
+dataset	tool	threads	replicate	total_wall_seconds	total_wall_hours	max_process_rss_GB	memory_definition
+SC-PB	BLAZE	16	1	10722.56	2.9784888888888887	1.561812992	max GNU time process maxRSS over phases; decimal GB
+SC-PB	Flexiplex	16	1	7083.29	1.9675805555555554	1.723543552	max GNU time process maxRSS over phases; decimal GB
+SC-PB	RAD	16	1	4961.79	1.378275	1.646350336	max GNU time process maxRSS over phases; decimal GB
+SN-ONT	BLAZE	16	1	26075.420000000002	7.243172222222222	1.673760768	max GNU time process maxRSS over phases; decimal GB
+SN-ONT	Flexiplex	16	1	32848.33	9.124536111111112	1.921478656	max GNU time process maxRSS over phases; decimal GB
+SN-ONT	RAD	16	1	6348.95	1.7635972222222223	1.980563456	max GNU time process maxRSS over phases; decimal GB

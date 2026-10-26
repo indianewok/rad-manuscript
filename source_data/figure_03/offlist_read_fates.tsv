@@ -1,0 +1,28 @@
+dataset	tool	replicate	input_reads	strict_assigned	ambiguous_ids	unassigned	unit	evidence_level
+ScTagger-L	RAD	1	4993805	48997	95	4944713	physical_reads	retained_C2_fully_recounted
+ScTagger-L	RAD	2	4993805	49004	98	4944703	physical_reads	retained_C2_fully_recounted
+ScTagger-L	RAD	3	4993805	49292	86	4944427	physical_reads	retained_C2_fully_recounted
+ScTagger-L	BLAZE	1	4993805	294175	0	4699630	physical_reads	retained_C2_fully_recounted
+ScTagger-L	BLAZE	2	4993805	304701	0	4689104	physical_reads	retained_C2_fully_recounted
+ScTagger-L	BLAZE	3	4993805	299332	0	4694473	physical_reads	retained_C2_fully_recounted
+ScTagger-L	Flexiplex	1	4993805	462690	104	4531011	physical_reads	retained_C2_fully_recounted
+ScTagger-L	Flexiplex	2	4993805	465375	103	4528327	physical_reads	retained_C2_fully_recounted
+ScTagger-L	Flexiplex	3	4993805	458773	124	4534908	physical_reads	retained_C2_fully_recounted
+LongBench SC-ONT	RAD	1	10000000	46487	104	9953409	physical_reads	retained_C2_fully_recounted
+LongBench SC-ONT	RAD	2	10000000	46961	114	9952925	physical_reads	retained_C2_fully_recounted
+LongBench SC-ONT	RAD	3	10000000	46568	85	9953347	physical_reads	retained_C2_fully_recounted
+LongBench SC-ONT	BLAZE	1	10000000	1005393	0	8994607	physical_reads	retained_C2_fully_recounted
+LongBench SC-ONT	BLAZE	2	10000000	1024563	0	8975437	physical_reads	retained_C2_fully_recounted
+LongBench SC-ONT	BLAZE	3	10000000	1097594	0	8902406	physical_reads	retained_C2_fully_recounted
+LongBench SC-ONT	Flexiplex	1	10000000	1364364	13770	8621866	physical_reads	retained_C2_fully_recounted
+LongBench SC-ONT	Flexiplex	2	10000000	1370330	13857	8615813	physical_reads	retained_C2_fully_recounted
+LongBench SC-ONT	Flexiplex	3	10000000	1422565	14481	8562954	physical_reads	retained_C2_fully_recounted
+RAGE-seq	RAD	1	20346396	50349	158	20295889	physical_reads	full_raw_replay_and_ID_universe
+RAGE-seq	RAD	2	20346396	50901	133	20295362	physical_reads	full_raw_replay_and_ID_universe
+RAGE-seq	RAD	3	20346396	50280	155	20295961	physical_reads	full_raw_replay_and_ID_universe
+RAGE-seq	BLAZE	1	20346396	1369920	0	18976476	physical_reads	full_raw_replay_and_ID_universe
+RAGE-seq	BLAZE	2	20346396	1419257	0	18927139	physical_reads	full_raw_replay_and_ID_universe
+RAGE-seq	BLAZE	3	20346396	1415786	0	18930610	physical_reads	full_raw_replay_and_ID_universe
+RAGE-seq	Flexiplex	1	20346396	1594697	6200	18745499	physical_reads	full_raw_replay_and_ID_universe
+RAGE-seq	Flexiplex	2	20346396	1652917	6630	18686849	physical_reads	full_raw_replay_and_ID_universe
+RAGE-seq	Flexiplex	3	20346396	1656957	6537	18682902	physical_reads	full_raw_replay_and_ID_universe

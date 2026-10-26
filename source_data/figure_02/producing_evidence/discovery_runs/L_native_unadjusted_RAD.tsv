@@ -1,0 +1,12 @@
+dataset	L
+condition	nanopore2023_native_unadjusted
+tool	RAD
+scope	whitelist discovery only; no full demultiplexing
+input	/scratch-nfs/f005f43/sctagger_nanopore2023_unadjusted_20260913/inputs/L_variants/shuffled_L_lr_synth.nanopore2023_truthbc.native_unadjusted.fq.gz
+threads_per_tool	8
+start_utc	2026-09-13T15:48:45Z
+host	q03.hpcc.dartmouth.edu
+slurm_job_id	9405374
+slurm_cpus_per_task	12
+command	/scratch-nfs/f005f43/longbench_full_demux_20260730/tools/rad_920adda_edlibfix/build_release/rad scan-wl -i /scratch-nfs/f005f43/sctagger_nanopore2023_unadjusted_20260913/inputs/L_variants/shuffled_L_lr_synth.nanopore2023_truthbc.native_unadjusted.fq.gz -o /scratch-nfs/f005f43/sctagger_nanopore2023_unadjusted_20260913/runs/L/nanopore2023_native_unadjusted/rad/scanwl -p CTACACGACGCTCTTCCGATCT -n 16 -e 0.3 -w 10x_3v3 -t 8 -k 10000 -v
+finish_utc	2026-09-13T15:53:30Z

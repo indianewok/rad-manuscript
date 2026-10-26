@@ -1,0 +1,64 @@
+{
+  "command": [
+    "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/miniconda3/bin/python3",
+    "scripts/revision/figures_124_hd_lineage.py"
+  ],
+  "comparison_source": {
+    "column": "rad_demux",
+    "path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/raw_fastq_datasets/complex_outsourced_datasets/visium_hd_lr/uncorrected_spot_counts/per_bin_compare_PBC44593.csv.gz",
+    "rows": 173732,
+    "sha256": "1905c0bfa8e410b54d2b118f731e91d0eecd472634a95bdad101e462922c9254",
+    "total": 67872744
+  },
+  "detection_sources": [
+    {
+      "equality": "exact total equality; per-bin mapping provenance still incomplete",
+      "flowcell": "PBC44593",
+      "source_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/raw_fastq_datasets/complex_outsourced_datasets/visium_hd_lr/valid_pair_output/PBC44593_wl_valid_pairs.csv.gz",
+      "source_sha256": "a6b2718fed4dba9644459ebd06ee825edf0c2dc0d7d866da4a04be20adcef3ca",
+      "valid_pair_count_total": 45979761,
+      "valid_pair_rows": 7099704,
+      "wide_count_total": 45979761
+    },
+    {
+      "equality": "exact total equality; per-bin mapping provenance still incomplete",
+      "flowcell": "PBC44760",
+      "source_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/raw_fastq_datasets/complex_outsourced_datasets/visium_hd_lr/valid_pair_output/PBC44760_wl_valid_pairs.csv.gz",
+      "source_sha256": "201c93e368d3a121e82b101fae7e5efc6d3ed74cc5e1a79141d6008efea6dc48",
+      "valid_pair_count_total": 39268207,
+      "valid_pair_rows": 6906082,
+      "wide_count_total": 39268207
+    },
+    {
+      "equality": "exact total equality; per-bin mapping provenance still incomplete",
+      "flowcell": "PBC49262",
+      "source_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/raw_fastq_datasets/complex_outsourced_datasets/visium_hd_lr/valid_pair_output/PBC49262_wl_valid_pairs.csv.gz",
+      "source_sha256": "63d3fb1e86c6a20b00c30d6f8cefb141f1d89198cf45a175edf378d73a719e04",
+      "valid_pair_count_total": 41679323,
+      "valid_pair_rows": 6973226,
+      "wide_count_total": 41679323
+    },
+    {
+      "equality": "exact total equality; per-bin mapping provenance still incomplete",
+      "flowcell": "PBC52788",
+      "source_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/raw_fastq_datasets/complex_outsourced_datasets/visium_hd_lr/valid_pair_output/PBC52788_wl_valid_pairs.csv.gz",
+      "source_sha256": "4186c5b7bd154122a7513ad68615eec1fa9f95a82b12b8084843b733e4d44565",
+      "valid_pair_count_total": 47990983,
+      "valid_pair_rows": 7116405,
+      "wide_count_total": 47990983
+    }
+  ],
+  "different_shared_bins": 165898,
+  "limitation": "Matching total does not prove every barcode-to-bin mapping. Full wide-table creation provenance, selected Seurat nCount_Spatial object, and named tissue-position source remain unrecovered. No triptych is rendered.",
+  "no_statistics_run": true,
+  "no_values_changed": true,
+  "scientific_scope": "Whitelist-detection valid-pair counts versus retained rad_demux counts. Different counting stages cannot be required to agree.",
+  "script_sha256": "8f5a147dc4fab7482ae217bc2b30cb35b14f9795e031c192fbb73042ab096310",
+  "status": "different_processing_stages; identity-comparison-assumption_rejected",
+  "wide_source": {
+    "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_01/sample_bin_matrix_16um.csv.gz",
+    "rows": 175561,
+    "sha256": "9ebd47784f66148d0d76aec34053f50922769b969e664540dd2a55276fd40f31",
+    "total_PBC44593": 45979761
+  }
+}
