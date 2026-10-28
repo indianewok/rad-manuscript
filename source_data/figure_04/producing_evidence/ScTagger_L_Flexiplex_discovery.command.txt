@@ -1,1 +1,1 @@
-pigz -dc -p 16 /dartfs/rc/lab/A/AckermanLab/CMV/rad_data/wl_scan/20260731_sctagger_badread_quality_full/inputs/L/flatQ20.fq.gz | /scratch/f005f43/rad_scmix2_20260726/tools/flexiplex-v1.02.6/flexiplex -d 10x3v3 -p 16 -n L_flatQ20
+pigz -dc -p 16 external_data/wl_scan/20260731_sctagger_badread_quality_full/inputs/L/flatQ20.fq.gz | external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_scmix2_20260726/tools/flexiplex-v1.02.6/flexiplex -d 10x3v3 -p 16 -n L_flatQ20

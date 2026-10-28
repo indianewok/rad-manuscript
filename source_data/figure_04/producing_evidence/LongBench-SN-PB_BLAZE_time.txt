@@ -1,4 +1,4 @@
-	Command being timed: "/scratch/f005f43/blaze2_250_probe_20260727/venv/bin/blaze --force-cells 10000 --output-prefix /scratch-nfs/f005f43/longbench_full_demux_20260730/runs/blaze2_2.5.0_longbench_published/SN_PB/ --output-fastq matched_reads.fastq --threads 48 --minimal_stdout /scratch-nfs/f005f43/rad_longbench_20260726/data/sc_sn/raw_fastq/SN_PB.fastq.gz"
+	Command being timed: "external_data/reviewer_comment_data/scratch_preservation_20260921/files/blaze2_250_probe_20260727/venv/bin/blaze --force-cells 10000 --output-prefix external_data/reviewer_comment_data/scratch_preservation_20260921/files/longbench_full_demux_20260730/runs/blaze2_2.5.0_longbench_published/SN_PB/ --output-fastq matched_reads.fastq --threads 48 --minimal_stdout external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_longbench_20260726/data/sc_sn/raw_fastq/SN_PB.fastq.gz"
 	User time (seconds): 778272.10
 	System time (seconds): 6545.98
 	Percent of CPU this job got: 2906%

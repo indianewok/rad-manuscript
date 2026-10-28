@@ -4,11 +4,11 @@
   "replicate": 3,
   "scope": "full input",
   "argv": [
-    "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/bin/python",
-    "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/bin/blaze",
+    "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/bin/python",
+    "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/bin/blaze",
     "--no-whitelisting",
     "--known-bc-list",
-    "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/inputs/false_rep3.txt",
+    "checkpoints/figure_03/rage_matched/inputs/false_rep3.txt",
     "--10x-kit-version",
     "3v2",
     "--minQ",
@@ -19,14 +19,14 @@
     "--threads",
     "16",
     "--output-prefix",
-    "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/runs/blaze/rep3/",
+    "checkpoints/figure_03/rage_matched/runs/blaze/rep3/",
     "--output-fastq",
     "matched_reads.fastq.gz",
     "--overwrite",
-    "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/raw_fastq_datasets/rageseq.fq.gz"
+    "external_data/raw_fastq_datasets/rageseq.fq.gz"
   ],
-  "cwd": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/runs/blaze/rep3",
-  "input": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/raw_fastq_datasets/rageseq.fq.gz",
+  "cwd": "checkpoints/figure_03/rage_matched/runs/blaze/rep3",
+  "input": "external_data/raw_fastq_datasets/rageseq.fq.gz",
   "input_sha256": "cfdba50a497dd4f6b24c2a4e730e297a09498ad5fe006f65eee01fa202bcdcec",
   "input_reads": 20346396,
   "target_sha256": "6e4bf40175775b1a2d6809175eea84611cd2c6ddf42f005fd8a4ffa09344a893",
@@ -53,12 +53,12 @@
   "exit_status": 0,
   "outputs": [
     {
-      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/runs/blaze/rep3/matched_reads.fastq.gz",
+      "path": "checkpoints/figure_03/rage_matched/runs/blaze/rep3/matched_reads.fastq.gz",
       "sha256": "f7f4354d14c67411f48cd2cdb0215b8c3a053768d70461c5dd3d84001886de60",
       "bytes": 1084666997
     },
     {
-      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/runs/blaze/rep3/putative_bc.csv",
+      "path": "checkpoints/figure_03/rage_matched/runs/blaze/rep3/putative_bc.csv",
       "sha256": "31586093e23fbb74e748ab50134a2389c734f6d688ec0e72f6d47b5f98529adf",
       "bytes": 1368158082
     }

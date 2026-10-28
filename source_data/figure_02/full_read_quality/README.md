@@ -65,9 +65,10 @@ distances and all 12 quality conditions are checked against the complete scan.
 Run from the repository root with edlib 1.3.9:
 
 ```bash
+mkdir -p results
 python scripts/figure_02/summarize_full_barcode_quality.py \
   --fastq /path/to/shuffled_L_lr_synth.nanopore2023_truthbc.native_unadjusted.fq.gz \
-  --output-dir /tmp/full_barcode_quality \
+  --output-dir results/full_barcode_quality \
   --workers 7 \
   --sample-csv source_data/figure_02/paired_50000_barcode_mean_Q.csv.gz
 ```
@@ -87,10 +88,10 @@ BLAZE discovery results:
 
 ```bash
 python scripts/figure_02/validate_full_barcode_quality.py \
-  --scan-dir /tmp/full_barcode_quality \
+  --scan-dir results/full_barcode_quality \
   --generation-summary source_data/figure_02/full_read_quality/source_generation_summary.tsv \
-  --output /tmp/full_barcode_quality/full_quality_with_blaze_f1.tsv \
-  --report /tmp/full_barcode_quality/validation.json
+  --output results/full_barcode_quality/full_quality_with_blaze_f1.tsv \
+  --report results/full_barcode_quality/validation.json
 ```
 
 The [validation report](../../../validation/figure_02_full_barcode_quality.json)

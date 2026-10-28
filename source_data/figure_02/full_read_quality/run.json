@@ -10,9 +10,9 @@
   "argv": [
     "scripts/figure_02/summarize_full_barcode_quality.py",
     "--fastq",
-    "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/sctagger_nanopore2023_unadjusted_20260913/inputs/L_variants/shuffled_L_lr_synth.nanopore2023_truthbc.native_unadjusted.fq.gz",
+    "external_data/reviewer_comment_data/scratch_preservation_20260921/files/sctagger_nanopore2023_unadjusted_20260913/inputs/L_variants/shuffled_L_lr_synth.nanopore2023_truthbc.native_unadjusted.fq.gz",
     "--output-dir",
-    "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_02/full_read_quality",
+    "source_data/figure_02/full_read_quality",
     "--workers",
     "7",
     "--sample-csv",
@@ -27,7 +27,7 @@
     "SLURM_CPUS_PER_TASK": "8"
   },
   "input": {
-    "path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/sctagger_nanopore2023_unadjusted_20260913/inputs/L_variants/shuffled_L_lr_synth.nanopore2023_truthbc.native_unadjusted.fq.gz",
+    "path": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/sctagger_nanopore2023_unadjusted_20260913/inputs/L_variants/shuffled_L_lr_synth.nanopore2023_truthbc.native_unadjusted.fq.gz",
     "bytes": 10032810794,
     "mtime_ns": 1789314431304831321
   },
@@ -77,7 +77,7 @@
   },
   "script_sha256": "841e1111fa541e4d587e677814a8e8975d174700a697764bf69d1bfbc23ab9de",
   "locator_sha256": "0ead90df058cfd940befd3a0b7a659d9f030f01fc382863dcd7e67e583f0fb68",
-  "locator_original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/sctagger_nanopore2023_unadjusted_20260913/scripts/generate_truth_conditioned_qscores.py",
+  "locator_original_source": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/sctagger_nanopore2023_unadjusted_20260913/scripts/generate_truth_conditioned_qscores.py",
   "locator_original_source_sha256": "aef619a3f417c4aa4c2c9ac3bfd161916a7e85efa23720ae74a8b630a9026e49",
   "locator_copied_functions_sha256": "1d6e2734bb901c2bfe01b99a5aa60dfb6b51508f6dcc3d195b926d2739da4b5b",
   "counting": "Truth-located 16-base window ED0 versus ED>0; per-base transform precedes averaging; unlocated reads excluded from both groups",

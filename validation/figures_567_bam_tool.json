@@ -1,5 +1,5 @@
 {
-  "samtools_path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/miniconda3/bin/samtools",
+  "samtools_path": "external_data/software/miniconda3/bin/samtools",
   "samtools_sha256": "3106ed1112399b52585decaa7a2d7b3e184f62a9e64bbb87b08375b52d8bc8eb",
   "version": "samtools 1.6\nUsing htslib 1.6\nCopyright (C) 2017 Genome Research Ltd.\n"
 }

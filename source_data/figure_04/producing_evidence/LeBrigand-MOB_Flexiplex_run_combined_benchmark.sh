@@ -1,20 +1,20 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-root=/scratch/f005f43/visium_lebrigand_combined_full_auto_wl_20260731
-input_dir=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/raw_fastq_datasets/visium_lebrigand_GSE153859_MOB
+root=external_data/reviewer_comment_data/scratch_preservation_20260921/files/visium_lebrigand_combined_full_auto_wl_20260731
+input_dir=external_data/raw_fastq_datasets/visium_lebrigand_GSE153859_MOB
 input_one="${input_dir}/SRR12157794_1.fastq.gz"
 input_two="${input_dir}/SRR12157795_1.fastq.gz"
 combined="${root}/MOB_SRR12157794_SRR12157795.fastq.gz"
-design=/scratch/f005f43/visium_lebrigand_mob_redirect_audit_20260730/inputs/visium_v2_full_4992.txt
-truth=/scratch/f005f43/visium_lebrigand_mob_redirect_audit_20260730/inputs/MOB_in_tissue_918.txt
+design=external_data/reviewer_comment_data/scratch_preservation_20260921/files/visium_lebrigand_mob_redirect_audit_20260730/inputs/visium_v2_full_4992.txt
+truth=external_data/reviewer_comment_data/scratch_preservation_20260921/files/visium_lebrigand_mob_redirect_audit_20260730/inputs/MOB_in_tissue_918.txt
 positions="${input_dir}/mob164315-spatial-illumina/spatial/tissue_positions_list.csv"
-rad=/scratch-nfs/f005f43/longbench_full_demux_20260730/tools/rad_920adda_edlibfix/build_release/rad
-blaze=/scratch/f005f43/blaze2_260a0_native_20260727/venv/bin/blaze
-flex_root=/tmp/flexiplex_release.GqgaKA/flexiplex
+rad=external_data/reviewer_comment_data/scratch_preservation_20260921/files/longbench_full_demux_20260730/tools/rad_920adda_edlibfix/build_release/rad
+blaze=external_data/reviewer_comment_data/scratch_preservation_20260921/files/blaze2_260a0_native_20260727/venv/bin/blaze
+flex_root=external_data/temporary/flexiplex_release.GqgaKA/flexiplex
 flex="${flex_root}/bin/flexiplex-linux"
-analysis_script=/scratch/f005f43/visium_lebrigand_full_auto_wl_20260731/analyze_callsets.py
-figure_script=/scratch/f005f43/visium_lebrigand_full_auto_wl_20260731/render_figures.py
+analysis_script=external_data/reviewer_comment_data/scratch_preservation_20260921/files/visium_lebrigand_full_auto_wl_20260731/analyze_callsets.py
+figure_script=external_data/reviewer_comment_data/scratch_preservation_20260921/files/visium_lebrigand_full_auto_wl_20260731/render_figures.py
 threads=${LEBRIGAND_THREADS:-12}
 
 mkdir -p "${root}/logs" "${root}/rad" "${root}/blaze_expect918" \
@@ -70,7 +70,7 @@ run_flex() {
     if [[ -e "${out}/DONE" ]]; then return; fi
     (
         cd "${out}"
-        export LD_LIBRARY_PATH=/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/miniconda3/lib
+        export LD_LIBRARY_PATH=external_data/software/miniconda3/lib
         /usr/bin/time -v -o time.txt bash -c '
             set -o pipefail
             pigz -dc -p "$1" "$2" |
@@ -160,7 +160,7 @@ cp "${root}/flex_f8/stderr.log" \
 )
 mv "${root}/analysis_stage.tmp" "${root}/analysis_stage"
 
-destination=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/wl_scan/20260731_lebrigand_MOB_complete_two_accession_benchmark
+destination=external_data/wl_scan/20260731_lebrigand_MOB_complete_two_accession_benchmark
 if [[ -e "${destination}" ]]; then
     echo "Refusing to overwrite existing durable export: ${destination}" >&2
     exit 5

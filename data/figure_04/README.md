@@ -23,8 +23,9 @@ reconstructed BLAZE/Flexiplex calls, as described in the [Figure 4 guide](../../
 Run from the repository root with Python 3.9 or newer:
 
 ```bash
+mkdir -p results
 python3 scripts/revision/figures_124_steps/rescore_public_identifiers.py \
-  --output /tmp/figure4_identifier_rescore.tsv
+  --output results/figure4_identifier_rescore.tsv
 ```
 
 The scorer verifies file hashes, calculates TP/FP/FN by set intersection and

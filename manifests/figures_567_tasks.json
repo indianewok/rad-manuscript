@@ -18,7 +18,7 @@
     "commands": [
       "/usr/bin/python3 scripts/revision/figures_567.py build",
       "/usr/bin/python3 scripts/revision/figures_567.py validate",
-      "env OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 MPLCONFIGDIR=/tmp/rad_manuscript_fig567_mpl /usr/bin/python3 scripts/revision/figures_567.py render"
+      "env OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 MPLCONFIGDIR=external_data/temporary/rad_manuscript_fig567_mpl /usr/bin/python3 scripts/revision/figures_567.py render"
     ],
     "common_report": "validation/figures_567_handback.md",
     "id": "F5-01",
@@ -48,7 +48,7 @@
       "python3 scripts/figure_05/recover_splitseq.py",
       "python3 scripts/figure_05/replay_splitseq.py --root .",
       "python3 scripts/figure_05/extract_splitseq_examples.py",
-      "python3 scripts/figure_05/render_candidate_counts.py --input source_data/figure_05/candidate_receptor_totals.tsv --splitseq-input source_data/figure_05/splitseq_reads_umis_568.tsv --splitseq-summary source_data/figure_05/splitseq_summary.tsv --output-dir /tmp/figure05_proofs"
+      "python3 scripts/figure_05/render_candidate_counts.py --input source_data/figure_05/candidate_receptor_totals.tsv --splitseq-input source_data/figure_05/splitseq_reads_umis_568.tsv --splitseq-summary source_data/figure_05/splitseq_summary.tsv --output-dir external_data/temporary/figure05_proofs"
     ],
     "common_report": "validation/figure_05_handback.md",
     "id": "F5-02",
@@ -92,7 +92,7 @@
     "commands": [
       "/usr/bin/python3 scripts/revision/figures_567.py build",
       "/usr/bin/python3 scripts/revision/figures_567.py validate",
-      "env OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 MPLCONFIGDIR=/tmp/rad_manuscript_fig567_mpl /usr/bin/python3 scripts/revision/figures_567.py render"
+      "env OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 MPLCONFIGDIR=external_data/temporary/rad_manuscript_fig567_mpl /usr/bin/python3 scripts/revision/figures_567.py render"
     ],
     "common_report": "validation/figures_567_handback.md",
     "id": "F6-01",
@@ -135,7 +135,7 @@
     "commands": [
       "/usr/bin/python3 scripts/revision/figures_567.py build",
       "/usr/bin/python3 scripts/revision/figures_567.py validate",
-      "env OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 MPLCONFIGDIR=/tmp/rad_manuscript_fig567_mpl /usr/bin/python3 scripts/revision/figures_567.py render"
+      "env OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 MPLCONFIGDIR=external_data/temporary/rad_manuscript_fig567_mpl /usr/bin/python3 scripts/revision/figures_567.py render"
     ],
     "common_report": "validation/figures_567_handback.md",
     "id": "F6-02",
@@ -178,7 +178,7 @@
     "commands": [
       "/usr/bin/python3 scripts/revision/figures_567.py build",
       "/usr/bin/python3 scripts/revision/figures_567.py validate",
-      "env OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 MPLCONFIGDIR=/tmp/rad_manuscript_fig567_mpl /usr/bin/python3 scripts/revision/figures_567.py render"
+      "env OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 MPLCONFIGDIR=external_data/temporary/rad_manuscript_fig567_mpl /usr/bin/python3 scripts/revision/figures_567.py render"
     ],
     "common_report": "validation/figures_567_handback.md",
     "id": "F6-03",
@@ -221,7 +221,7 @@
     "commands": [
       "/usr/bin/python3 scripts/revision/figures_567.py build",
       "/usr/bin/python3 scripts/revision/figures_567.py validate",
-      "env OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 MPLCONFIGDIR=/tmp/rad_manuscript_fig567_mpl /usr/bin/python3 scripts/revision/figures_567.py render"
+      "env OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 MPLCONFIGDIR=external_data/temporary/rad_manuscript_fig567_mpl /usr/bin/python3 scripts/revision/figures_567.py render"
     ],
     "common_report": "validation/figures_567_handback.md",
     "id": "F7-01",
@@ -264,7 +264,7 @@
     "commands": [
       "/usr/bin/python3 scripts/revision/figures_567.py build",
       "/usr/bin/python3 scripts/revision/figures_567.py validate",
-      "env OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 MPLCONFIGDIR=/tmp/rad_manuscript_fig567_mpl /usr/bin/python3 scripts/revision/figures_567.py render"
+      "env OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 MPLCONFIGDIR=external_data/temporary/rad_manuscript_fig567_mpl /usr/bin/python3 scripts/revision/figures_567.py render"
     ],
     "common_report": "validation/figures_567_handback.md",
     "id": "F7-02",
@@ -307,7 +307,7 @@
     "commands": [
       "/usr/bin/python3 scripts/revision/figures_567.py build",
       "/usr/bin/python3 scripts/revision/figures_567.py validate",
-      "env OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 MPLCONFIGDIR=/tmp/rad_manuscript_fig567_mpl /usr/bin/python3 scripts/revision/figures_567.py render"
+      "env OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 MPLCONFIGDIR=external_data/temporary/rad_manuscript_fig567_mpl /usr/bin/python3 scripts/revision/figures_567.py render"
     ],
     "common_report": "validation/figures_567_handback.md",
     "id": "F7-03",

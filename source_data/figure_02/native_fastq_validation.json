@@ -5,7 +5,7 @@
   "header_mismatches_vs_source": 0,
   "header_sequence_hashes_match": true,
   "malformed_records": 0,
-  "native": "/scratch-nfs/f005f43/sctagger_nanopore2023_unadjusted_20260913/inputs/L_variants/shuffled_L_lr_synth.nanopore2023_truthbc.native_unadjusted.fq.gz",
+  "native": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/sctagger_nanopore2023_unadjusted_20260913/inputs/L_variants/shuffled_L_lr_synth.nanopore2023_truthbc.native_unadjusted.fq.gz",
   "native_header_sequence_sha256": "ca3073f0a44d03b40a5919e01e59a8df89ceceafa086ee7580fae2daa3bf2f61",
   "native_quality_sha256": "1356a4993a6cc31ca80857f99d105da376534d594112588af4e32b3cdf138841",
   "plus_line_mismatches_vs_source": 0,
@@ -43,8 +43,8 @@
     "records": 50000,
     "sequence_mismatches": 0
   },
-  "sample_replay": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/081226_Figure_2_CMV_V14_Q20p18_sweep_20260913_provenance/quality/sample_replay_evidence.jsonl.gz",
+  "sample_replay": "external_data/081226_Figure_2_CMV_V14_Q20p18_sweep_20260913_provenance/quality/sample_replay_evidence.jsonl.gz",
   "sequence_mismatches_vs_source": 0,
-  "source": "/scratch-nfs/f005f43/rad_longbench_20260726/data/shuffled_L_lr_synth.fq.gz",
+  "source": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_longbench_20260726/data/shuffled_L_lr_synth.fq.gz",
   "source_header_sequence_sha256": "ca3073f0a44d03b40a5919e01e59a8df89ceceafa086ee7580fae2daa3bf2f61"
 }

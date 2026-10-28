@@ -4,162 +4,162 @@
     {
       "version": "2.6.0a0",
       "module": "__init__.py",
-      "pinned_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/software_pins_20260810/blaze_fast_selector/upstream_v2.6.0a0/source/__init__.py",
+      "pinned_source": "external_data/reviewer_comment_data/software_pins_20260810/blaze_fast_selector/upstream_v2.6.0a0/source/__init__.py",
       "source_sha256": "d76d58bc3ed75945121746f4ed7e28579275e5582cd7de5b0a897a8eb6396a36",
-      "installed_module": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/blaze/__init__.py",
+      "installed_module": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/blaze/__init__.py",
       "installed_sha256": "d76d58bc3ed75945121746f4ed7e28579275e5582cd7de5b0a897a8eb6396a36",
       "identical": "True"
     },
     {
       "version": "2.6.0a0",
       "module": "config.py",
-      "pinned_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/software_pins_20260810/blaze_fast_selector/upstream_v2.6.0a0/source/config.py",
+      "pinned_source": "external_data/reviewer_comment_data/software_pins_20260810/blaze_fast_selector/upstream_v2.6.0a0/source/config.py",
       "source_sha256": "81d56c3c62b2797aa8d3e3aa8330ad090fcfb70d0da498e2ba9d3e5e03b88776",
-      "installed_module": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/blaze/config.py",
+      "installed_module": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/blaze/config.py",
       "installed_sha256": "81d56c3c62b2797aa8d3e3aa8330ad090fcfb70d0da498e2ba9d3e5e03b88776",
       "identical": "True"
     },
     {
       "version": "2.6.0a0",
       "module": "find_reads.py",
-      "pinned_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/software_pins_20260810/blaze_fast_selector/upstream_v2.6.0a0/source/find_reads.py",
+      "pinned_source": "external_data/reviewer_comment_data/software_pins_20260810/blaze_fast_selector/upstream_v2.6.0a0/source/find_reads.py",
       "source_sha256": "571e457838b3cd83427098693e6c6bafd16e0a2d31b1fc7d2c24c4f2fb3c3289",
-      "installed_module": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/blaze/find_reads.py",
+      "installed_module": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/blaze/find_reads.py",
       "installed_sha256": "571e457838b3cd83427098693e6c6bafd16e0a2d31b1fc7d2c24c4f2fb3c3289",
       "identical": "True"
     },
     {
       "version": "2.6.0a0",
       "module": "helper.py",
-      "pinned_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/software_pins_20260810/blaze_fast_selector/upstream_v2.6.0a0/source/helper.py",
+      "pinned_source": "external_data/reviewer_comment_data/software_pins_20260810/blaze_fast_selector/upstream_v2.6.0a0/source/helper.py",
       "source_sha256": "03468a722de7affc1b6e00d68023ae25a8e5ca54d9140f9100c73d678d4bcb83",
-      "installed_module": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/blaze/helper.py",
+      "installed_module": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/blaze/helper.py",
       "installed_sha256": "03468a722de7affc1b6e00d68023ae25a8e5ca54d9140f9100c73d678d4bcb83",
       "identical": "True"
     },
     {
       "version": "2.6.0a0",
       "module": "main.py",
-      "pinned_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/software_pins_20260810/blaze_fast_selector/upstream_v2.6.0a0/source/main.py",
+      "pinned_source": "external_data/reviewer_comment_data/software_pins_20260810/blaze_fast_selector/upstream_v2.6.0a0/source/main.py",
       "source_sha256": "c6f596fd8d5159379f1ad525f64c991b6d381cc4bf434723a379d0241da1472d",
-      "installed_module": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/blaze/main.py",
+      "installed_module": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/blaze/main.py",
       "installed_sha256": "c6f596fd8d5159379f1ad525f64c991b6d381cc4bf434723a379d0241da1472d",
       "identical": "True"
     },
     {
       "version": "2.6.0a0",
       "module": "parser.py",
-      "pinned_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/software_pins_20260810/blaze_fast_selector/upstream_v2.6.0a0/source/parser.py",
+      "pinned_source": "external_data/reviewer_comment_data/software_pins_20260810/blaze_fast_selector/upstream_v2.6.0a0/source/parser.py",
       "source_sha256": "ad92bccff3b8d959daa355c0738891e3fd002c6526bec689f2643a1809e689d9",
-      "installed_module": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/blaze/parser.py",
+      "installed_module": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/blaze/parser.py",
       "installed_sha256": "ad92bccff3b8d959daa355c0738891e3fd002c6526bec689f2643a1809e689d9",
       "identical": "True"
     },
     {
       "version": "2.6.0a0",
       "module": "polyT_adaptor_finder.py",
-      "pinned_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/software_pins_20260810/blaze_fast_selector/upstream_v2.6.0a0/source/polyT_adaptor_finder.py",
+      "pinned_source": "external_data/reviewer_comment_data/software_pins_20260810/blaze_fast_selector/upstream_v2.6.0a0/source/polyT_adaptor_finder.py",
       "source_sha256": "d0e17667f873a230449f1bd053c7c93be0c4ec57ec19cb2e836436ff54171113",
-      "installed_module": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/blaze/polyT_adaptor_finder.py",
+      "installed_module": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/blaze/polyT_adaptor_finder.py",
       "installed_sha256": "d0e17667f873a230449f1bd053c7c93be0c4ec57ec19cb2e836436ff54171113",
       "identical": "True"
     },
     {
       "version": "2.6.0a0",
       "module": "polyT_trimmer.py",
-      "pinned_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/software_pins_20260810/blaze_fast_selector/upstream_v2.6.0a0/source/polyT_trimmer.py",
+      "pinned_source": "external_data/reviewer_comment_data/software_pins_20260810/blaze_fast_selector/upstream_v2.6.0a0/source/polyT_trimmer.py",
       "source_sha256": "08e350e27b5e5ed0c243fccd58940f3b156b216934b9d96fc2fd5377d2aa81c2",
-      "installed_module": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/blaze/polyT_trimmer.py",
+      "installed_module": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/blaze/polyT_trimmer.py",
       "installed_sha256": "08e350e27b5e5ed0c243fccd58940f3b156b216934b9d96fc2fd5377d2aa81c2",
       "identical": "True"
     },
     {
       "version": "2.6.0a0",
       "module": "read_assignment.py",
-      "pinned_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/software_pins_20260810/blaze_fast_selector/upstream_v2.6.0a0/source/read_assignment.py",
+      "pinned_source": "external_data/reviewer_comment_data/software_pins_20260810/blaze_fast_selector/upstream_v2.6.0a0/source/read_assignment.py",
       "source_sha256": "dc474d91f0fde73539e4ee13d1449300d4dfe2a801d8703c32f6674bb1730f11",
-      "installed_module": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/blaze/read_assignment.py",
+      "installed_module": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/blaze/read_assignment.py",
       "installed_sha256": "dc474d91f0fde73539e4ee13d1449300d4dfe2a801d8703c32f6674bb1730f11",
       "identical": "True"
     },
     {
       "version": "2.5.0",
       "module": "__init__.py",
-      "pinned_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/software_pins_20260810/blaze_fast_selector/upstream_v2.5.0/dist/blaze2-2.5.0-py3-none-any.whl!blaze/__init__.py",
+      "pinned_source": "external_data/reviewer_comment_data/software_pins_20260810/blaze_fast_selector/upstream_v2.5.0/dist/blaze2-2.5.0-py3-none-any.whl!blaze/__init__.py",
       "source_sha256": "d76d58bc3ed75945121746f4ed7e28579275e5582cd7de5b0a897a8eb6396a36",
-      "installed_module": "/scratch/f005f43/blaze2_250_probe_20260727/venv/lib/python3.9/site-packages/blaze/__init__.py",
+      "installed_module": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/blaze2_250_probe_20260727/venv/lib/python3.9/site-packages/blaze/__init__.py",
       "installed_sha256": "d76d58bc3ed75945121746f4ed7e28579275e5582cd7de5b0a897a8eb6396a36",
       "identical": true
     },
     {
       "version": "2.5.0",
       "module": "config.py",
-      "pinned_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/software_pins_20260810/blaze_fast_selector/upstream_v2.5.0/dist/blaze2-2.5.0-py3-none-any.whl!blaze/config.py",
+      "pinned_source": "external_data/reviewer_comment_data/software_pins_20260810/blaze_fast_selector/upstream_v2.5.0/dist/blaze2-2.5.0-py3-none-any.whl!blaze/config.py",
       "source_sha256": "801398e7779c24c10d471ad0e950538b04ec4754c771bb180d15c9f4edb21a78",
-      "installed_module": "/scratch/f005f43/blaze2_250_probe_20260727/venv/lib/python3.9/site-packages/blaze/config.py",
+      "installed_module": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/blaze2_250_probe_20260727/venv/lib/python3.9/site-packages/blaze/config.py",
       "installed_sha256": "801398e7779c24c10d471ad0e950538b04ec4754c771bb180d15c9f4edb21a78",
       "identical": true
     },
     {
       "version": "2.5.0",
       "module": "find_reads.py",
-      "pinned_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/software_pins_20260810/blaze_fast_selector/upstream_v2.5.0/dist/blaze2-2.5.0-py3-none-any.whl!blaze/find_reads.py",
+      "pinned_source": "external_data/reviewer_comment_data/software_pins_20260810/blaze_fast_selector/upstream_v2.5.0/dist/blaze2-2.5.0-py3-none-any.whl!blaze/find_reads.py",
       "source_sha256": "571e457838b3cd83427098693e6c6bafd16e0a2d31b1fc7d2c24c4f2fb3c3289",
-      "installed_module": "/scratch/f005f43/blaze2_250_probe_20260727/venv/lib/python3.9/site-packages/blaze/find_reads.py",
+      "installed_module": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/blaze2_250_probe_20260727/venv/lib/python3.9/site-packages/blaze/find_reads.py",
       "installed_sha256": "571e457838b3cd83427098693e6c6bafd16e0a2d31b1fc7d2c24c4f2fb3c3289",
       "identical": true
     },
     {
       "version": "2.5.0",
       "module": "helper.py",
-      "pinned_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/software_pins_20260810/blaze_fast_selector/upstream_v2.5.0/dist/blaze2-2.5.0-py3-none-any.whl!blaze/helper.py",
+      "pinned_source": "external_data/reviewer_comment_data/software_pins_20260810/blaze_fast_selector/upstream_v2.5.0/dist/blaze2-2.5.0-py3-none-any.whl!blaze/helper.py",
       "source_sha256": "03468a722de7affc1b6e00d68023ae25a8e5ca54d9140f9100c73d678d4bcb83",
-      "installed_module": "/scratch/f005f43/blaze2_250_probe_20260727/venv/lib/python3.9/site-packages/blaze/helper.py",
+      "installed_module": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/blaze2_250_probe_20260727/venv/lib/python3.9/site-packages/blaze/helper.py",
       "installed_sha256": "03468a722de7affc1b6e00d68023ae25a8e5ca54d9140f9100c73d678d4bcb83",
       "identical": true
     },
     {
       "version": "2.5.0",
       "module": "main.py",
-      "pinned_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/software_pins_20260810/blaze_fast_selector/upstream_v2.5.0/dist/blaze2-2.5.0-py3-none-any.whl!blaze/main.py",
+      "pinned_source": "external_data/reviewer_comment_data/software_pins_20260810/blaze_fast_selector/upstream_v2.5.0/dist/blaze2-2.5.0-py3-none-any.whl!blaze/main.py",
       "source_sha256": "8b52651ccb0682877da32be18b6ff7f9a7f9340cc29d0048d5a338f494c3649b",
-      "installed_module": "/scratch/f005f43/blaze2_250_probe_20260727/venv/lib/python3.9/site-packages/blaze/main.py",
+      "installed_module": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/blaze2_250_probe_20260727/venv/lib/python3.9/site-packages/blaze/main.py",
       "installed_sha256": "8b52651ccb0682877da32be18b6ff7f9a7f9340cc29d0048d5a338f494c3649b",
       "identical": true
     },
     {
       "version": "2.5.0",
       "module": "parser.py",
-      "pinned_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/software_pins_20260810/blaze_fast_selector/upstream_v2.5.0/dist/blaze2-2.5.0-py3-none-any.whl!blaze/parser.py",
+      "pinned_source": "external_data/reviewer_comment_data/software_pins_20260810/blaze_fast_selector/upstream_v2.5.0/dist/blaze2-2.5.0-py3-none-any.whl!blaze/parser.py",
       "source_sha256": "551ad7ce99c9c3f9534f398df24838f4257fa01eadc4ec13f0d3c8ca6cafe705",
-      "installed_module": "/scratch/f005f43/blaze2_250_probe_20260727/venv/lib/python3.9/site-packages/blaze/parser.py",
+      "installed_module": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/blaze2_250_probe_20260727/venv/lib/python3.9/site-packages/blaze/parser.py",
       "installed_sha256": "551ad7ce99c9c3f9534f398df24838f4257fa01eadc4ec13f0d3c8ca6cafe705",
       "identical": true
     },
     {
       "version": "2.5.0",
       "module": "polyT_adaptor_finder.py",
-      "pinned_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/software_pins_20260810/blaze_fast_selector/upstream_v2.5.0/dist/blaze2-2.5.0-py3-none-any.whl!blaze/polyT_adaptor_finder.py",
+      "pinned_source": "external_data/reviewer_comment_data/software_pins_20260810/blaze_fast_selector/upstream_v2.5.0/dist/blaze2-2.5.0-py3-none-any.whl!blaze/polyT_adaptor_finder.py",
       "source_sha256": "d0e17667f873a230449f1bd053c7c93be0c4ec57ec19cb2e836436ff54171113",
-      "installed_module": "/scratch/f005f43/blaze2_250_probe_20260727/venv/lib/python3.9/site-packages/blaze/polyT_adaptor_finder.py",
+      "installed_module": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/blaze2_250_probe_20260727/venv/lib/python3.9/site-packages/blaze/polyT_adaptor_finder.py",
       "installed_sha256": "d0e17667f873a230449f1bd053c7c93be0c4ec57ec19cb2e836436ff54171113",
       "identical": true
     },
     {
       "version": "2.5.0",
       "module": "polyT_trimmer.py",
-      "pinned_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/software_pins_20260810/blaze_fast_selector/upstream_v2.5.0/dist/blaze2-2.5.0-py3-none-any.whl!blaze/polyT_trimmer.py",
+      "pinned_source": "external_data/reviewer_comment_data/software_pins_20260810/blaze_fast_selector/upstream_v2.5.0/dist/blaze2-2.5.0-py3-none-any.whl!blaze/polyT_trimmer.py",
       "source_sha256": "08e350e27b5e5ed0c243fccd58940f3b156b216934b9d96fc2fd5377d2aa81c2",
-      "installed_module": "/scratch/f005f43/blaze2_250_probe_20260727/venv/lib/python3.9/site-packages/blaze/polyT_trimmer.py",
+      "installed_module": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/blaze2_250_probe_20260727/venv/lib/python3.9/site-packages/blaze/polyT_trimmer.py",
       "installed_sha256": "08e350e27b5e5ed0c243fccd58940f3b156b216934b9d96fc2fd5377d2aa81c2",
       "identical": true
     },
     {
       "version": "2.5.0",
       "module": "read_assignment.py",
-      "pinned_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/software_pins_20260810/blaze_fast_selector/upstream_v2.5.0/dist/blaze2-2.5.0-py3-none-any.whl!blaze/read_assignment.py",
+      "pinned_source": "external_data/reviewer_comment_data/software_pins_20260810/blaze_fast_selector/upstream_v2.5.0/dist/blaze2-2.5.0-py3-none-any.whl!blaze/read_assignment.py",
       "source_sha256": "dc474d91f0fde73539e4ee13d1449300d4dfe2a801d8703c32f6674bb1730f11",
-      "installed_module": "/scratch/f005f43/blaze2_250_probe_20260727/venv/lib/python3.9/site-packages/blaze/read_assignment.py",
+      "installed_module": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/blaze2_250_probe_20260727/venv/lib/python3.9/site-packages/blaze/read_assignment.py",
       "installed_sha256": "dc474d91f0fde73539e4ee13d1449300d4dfe2a801d8703c32f6674bb1730f11",
       "identical": true
     }
@@ -168,6 +168,6 @@
   "recovered_2_5_0_pin": {
     "source_commit": "11994f9c12a6664dfe1679576aaca19b6bfd35c1",
     "wheel_sha256": "9cf4d9e910894c77fd897a7008f93c1c79064af7bf43d07e998d38c83d4563b8",
-    "wheel_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/software_pins_20260810/blaze_fast_selector/upstream_v2.5.0/dist/blaze2-2.5.0-py3-none-any.whl"
+    "wheel_path": "external_data/reviewer_comment_data/software_pins_20260810/blaze_fast_selector/upstream_v2.5.0/dist/blaze2-2.5.0-py3-none-any.whl"
   }
 }

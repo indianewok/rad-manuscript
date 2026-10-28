@@ -2,13 +2,11 @@
 
 Figure 5 compares recovery of receptor reads from a mixture of Ramos B cells, Jurkat T cells and monocytes, then tests demultiplexing of the three-component LR-Split-seq barcode. The receptor experiment uses RAGE-seq accession **ERR3268991**. The LR-Split-seq comparison pairs long-read **SRR13948564** with short-read **SRR13948565** and follows the same 568 published physical cells through both workflows.
 
-![Figure 5: saved Prism layout](../figures/figure_05/prism/figure_05.png)
-
-[Export details](../manifests/prism_exports.json) identify the original Prism project and saved layout.
+![Figure 5](../figures/figure_05/prism/figure_05.png)
 
 ## Software and inputs
 
-The [parameter registry](../manifests/figures_567_tool_parameters.tsv) records complete commands, build identifiers, reference hashes and seeds.
+The [run table](../manifests/figures_567_tool_parameters.tsv) lists versions, commits, threads, chemistry and saved commands. [Run evidence](../manifests/figures_567_run_evidence.tsv) records hashes, references, seeds and execution limitations.
 
 | Analysis | Software and settings | Run records |
 |---|---|---|
@@ -30,9 +28,10 @@ Each receptor class has native and corrected-only counts. In the Flexiplex sourc
 Run this transformation on the [example input](../data/examples/figure_05/flexiplex_receptor_input.tsv):
 
 ```bash
+mkdir -p results
 python3 scripts/figure_05/exclusive_receptor_counts.py \
   --input data/examples/figure_05/flexiplex_receptor_input.tsv \
-  --output /tmp/figure05_receptor_counts.tsv \
+  --output results/figure05_receptor_counts.tsv \
   --tool Flexiplex --corrected-column cumulative
 ```
 
@@ -58,14 +57,14 @@ Normalize the [component example records](../data/examples/figure_05/splitseq/co
 ```bash
 python3 scripts/figure_05/normalize_component_stats.py \
   --input data/examples/figure_05/splitseq/component_native_stats.tsv \
-  --output /tmp/figure05_component_assignments.tsv
-cmp /tmp/figure05_component_assignments.tsv data/examples/figure_05/splitseq/component_assignments.tsv
+  --output results/figure05_component_assignments.tsv
+cmp results/figure05_component_assignments.tsv data/examples/figure_05/splitseq/component_assignments.tsv
 
 python3 scripts/figure_05/aggregate_splitseq.py \
-  --assignments /tmp/figure05_component_assignments.tsv \
+  --assignments results/figure05_component_assignments.tsv \
   --cells data/examples/figure_05/splitseq/cells.tsv \
   --rt-primers data/figure_05/rt_primer_well_map.csv --format component \
-  --output /tmp/figure05_component_cells.tsv --report /tmp/figure05_component_cells.json
+  --output results/figure05_component_cells.tsv --report results/figure05_component_cells.json
 ```
 
 The [expected component counts](../data/examples/figure_05/splitseq/component_bounded_counts.tsv) and [RAD counts](../data/examples/figure_05/splitseq/rad_bounded_counts.tsv) cover the example records. For RAD, use `--format rad` and its [assignment file](../data/examples/figure_05/splitseq/rad_assignments.tsv). The [record preview](../data/examples/figure_05/splitseq/PREVIEW.md) and [extraction receipt](../data/examples/figure_05/splitseq/extraction.json) preserve the original source rows.
@@ -95,7 +94,7 @@ The [summary table](../source_data/figure_05/splitseq_summary.tsv) retains exact
 
 The saved read-count comparison uses a [two-sided paired t-test](../source_data/figure_05/splitseq_saved_paired_t_test.json): 568 cell pairs, t = 14.959474687143327, df = 567 and P = 6.890554214980993e-43. The [independent check](../validation/figure_05_native_stat_review.json) reproduces the statistic and verifies the paired datasets.
 
-To extract the examples again, run `python3 scripts/figure_05/extract_splitseq_examples.py`. The [source manifest](../manifests/figure_05_splitseq_sources.tsv) provides original paths and hashes.
+To extract the examples again, run `python3 scripts/figure_05/extract_splitseq_examples.py`. The [source manifest](../manifests/figure_05_splitseq_sources.tsv) provides source identities and hashes.
 
 ## Additional source records
 

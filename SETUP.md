@@ -60,11 +60,29 @@ manifests give the restored relative paths and file hashes. RAGE-seq raw-read
 runs require the [input-order reconstruction](docs/rage_public_input_order.md),
 which restores the read order used in the benchmark from the public ENA file.
 
-On the original HPC installation, `/Volumes/rad_data` maps to
-`/dartfs/rc/lab/A/AckermanLab/CMV/rad_data`. Figure manifests identify the files
-at these locations. ScTagger quality generation uses the original literal model
-pathname as part of its effective random seed; retain that pathname in the
-quality-generation configuration.
+## Portable input locations
+
+Files included in Git use paths relative to the repository root. External
+records use `external_data/` as a location label; those files are obtained
+separately using the dataset accession, filename and SHA-256 in the manifests.
+Configure archive locations with these variables, or a script's input options:
+
+| Variable | Default relative to the repository |
+|---|---|
+| `RAD_DATA_ROOT` | `external_data` |
+| `RAD_REVIEWER_ROOT` | `external_data/reviewer_comment_data` |
+| `RAD_SCRATCH_ROOT` | `external_data/reviewer_comment_data/scratch_preservation_20260921/files` |
+| `RAD_SCRATCH_NFS_ROOT` | Same as `RAD_SCRATCH_ROOT` |
+
+Source tables and small examples work without external files. Locations in
+copied command/log records are normalized; original-source hashes identify the
+producer records, while the [file inventory](manifests/data_files.tsv) identifies
+the deposited copies.
+
+ScTagger's [generation contract](source_data/figure_02/quality_generation_contract.json)
+retains the exact effective quality-tape seeds. Use the
+[recorded-seed adapter](scripts/figure_02/generate_with_recorded_seed.py) to
+preserve them when model files are relocated.
 
 ## Build diagnostic Flexiplex
 
@@ -73,11 +91,8 @@ with a C++11 compiler. `build_and_check.py` verifies the patch and tests the
 pre-correction barcode output. Leave `FLEXIPLEX_AUDIT_SOURCE_FILE` unset for
 manuscript assignment runs.
 
-## Dartmouth Discovery jobs
+## Scheduled CPU jobs
 
-The recorded CPU jobs used partition `standard`, account `lsonglab`, explicit
-CPU, memory and time requests, and `--gres=gpu:0`. Select a CPU-only partition
-when submitting these jobs; the account's default partition is `lsonglab_gpu`.
-The supplied job scripts record the resources for each analysis. Check the
-current partition configuration and use the new job IDs when setting
-submission dependencies.
+Adapt the Slurm templates to your cluster's account and CPU-only partition.
+Set explicit CPU, memory and time requests, and verify the selected nodes'
+hardware. The figure registries record the producing runs' thread settings.

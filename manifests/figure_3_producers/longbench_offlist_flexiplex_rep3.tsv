@@ -1,28 +1,28 @@
 tool=Flexiplex
 replicate=3
 affinity=64-91
-input	/scratch/f005f43/longbench_sc_ont_false_whitelist_20260813/fastq/SC_ONT_10M_seqkit_seed2026081326.fastq.gz
+input	external_data/reviewer_comment_data/scratch_preservation_20260921/files/longbench_sc_ont_false_whitelist_20260813/fastq/SC_ONT_10M_seqkit_seed2026081326.fastq.gz
 input_sha256	ecb19387e6cad1f7095ea95b183b5c30d3ac83c9ced67df53fddde885398689a
 input_expected_records	10000000
-canonical_input	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/longbench_sc_ont_false_whitelist_20260813/inputs/SC_ONT.fastq.gz
+canonical_input	external_data/reviewer_comment_data/longbench_sc_ont_false_whitelist_20260813/inputs/SC_ONT.fastq.gz
 canonical_input_bytes	88257731285
-target_whitelist	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/longbench_sc_ont_false_whitelist_20260813/whitelists/false_whitelist_rep3.txt
+target_whitelist	external_data/reviewer_comment_data/longbench_sc_ont_false_whitelist_20260813/whitelists/false_whitelist_rep3.txt
 target_sha256	1737b92a5ca3e3a95cfe79346fc2ac204a67d9fbd50b2237eef9deb49f21a5cd
 target_rows	5211
-global_catalog	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/cellranger_whitelists/3M-february-2018-3v3.txt
+global_catalog	external_data/cellranger_whitelists/3M-february-2018-3v3.txt
 global_catalog_sha256	843a6f7038db8cb3c06f3dc21cc69d04139ffa10689780518d7a9e42dc2e819b
 global_catalog_rows	6794880
-global_rad_bitlist	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/sctagger_L_false_whitelist_20260813/provenance/global_chemistry_10x3v3_bitlist.csv.gz
+global_rad_bitlist	external_data/reviewer_comment_data/sctagger_L_false_whitelist_20260813/provenance/global_chemistry_10x3v3_bitlist.csv.gz
 global_rad_bitlist_sha256	02f771363a95e786ab1a6ab1e554c770e58cdff2fb30f2d7a9fb50a97762d452
-layout	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/longbench_sc_ont_false_whitelist_20260813/inputs/longbench_three_prime_v31.csv
+layout	external_data/reviewer_comment_data/longbench_sc_ont_false_whitelist_20260813/inputs/longbench_three_prime_v31.csv
 layout_sha256	c5cbbb07958a9c1ca6f9c0452ad1dd01933d5a51efba6f67522897c5dd4146fb
 flexiplex_threads=28
 pigz_decompress_threads=4
 pigz_compress_threads=4
-binary	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/software_pins_20260810/flexiplex_raw_to_assigned_audit/bin/flexiplex_v1.02.6_raw_to_assigned_audit
+binary	external_data/reviewer_comment_data/software_pins_20260810/flexiplex_raw_to_assigned_audit/bin/flexiplex_v1.02.6_raw_to_assigned_audit
 binary_sha256	38dccd37f1747e5105b62eacde572b7e4c5206fb925dc1fdbe8210ffe8b1e8c4
 binary_version	1.02.6
 settings	10x3v3; flank_edit_distance=8; barcode_edit_distance=2; forced_known_list; raw_to_assigned_audit
-command	taskset -c 64-91 /usr/bin/time -v -o flexiplex.time.txt bash -o pipefail -c pigz\ -dc\ -p\ 4\ \"\$1\"\ \|\ \"\$2\"\ -d\ 10x3v3\ -k\ \"\$3\"\ -f\ 8\ -e\ 2\ -p\ 28\ -n\ \"\$4\"\ 2\>\"\$5\"\ \|\ pigz\ -p\ 4\ \>\ \"\$6\" _ /scratch/f005f43/longbench_sc_ont_false_whitelist_20260813/fastq/SC_ONT_10M_seqkit_seed2026081326.fastq.gz /dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/software_pins_20260810/flexiplex_raw_to_assigned_audit/bin/flexiplex_v1.02.6_raw_to_assigned_audit /dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/longbench_sc_ont_false_whitelist_20260813/whitelists/false_whitelist_rep3.txt /dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/longbench_sc_ont_false_whitelist_20260813/runs/flexiplex/rep3/flexiplex_SC_ONT_10M_false_rep3_audit /dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/longbench_sc_ont_false_whitelist_20260813/runs/flexiplex/rep3/flexiplex.stderr.log /dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/longbench_sc_ont_false_whitelist_20260813/runs/flexiplex/rep3/flexiplex_SC_ONT_10M_false_rep3_audit.fastq.gz 
+command	taskset -c 64-91 /usr/bin/time -v -o flexiplex.time.txt bash -o pipefail -c pigz\ -dc\ -p\ 4\ \"\$1\"\ \|\ \"\$2\"\ -d\ 10x3v3\ -k\ \"\$3\"\ -f\ 8\ -e\ 2\ -p\ 28\ -n\ \"\$4\"\ 2\>\"\$5\"\ \|\ pigz\ -p\ 4\ \>\ \"\$6\" _ external_data/reviewer_comment_data/scratch_preservation_20260921/files/longbench_sc_ont_false_whitelist_20260813/fastq/SC_ONT_10M_seqkit_seed2026081326.fastq.gz external_data/reviewer_comment_data/software_pins_20260810/flexiplex_raw_to_assigned_audit/bin/flexiplex_v1.02.6_raw_to_assigned_audit external_data/reviewer_comment_data/longbench_sc_ont_false_whitelist_20260813/whitelists/false_whitelist_rep3.txt external_data/reviewer_comment_data/longbench_sc_ont_false_whitelist_20260813/runs/flexiplex/rep3/flexiplex_SC_ONT_10M_false_rep3_audit external_data/reviewer_comment_data/longbench_sc_ont_false_whitelist_20260813/runs/flexiplex/rep3/flexiplex.stderr.log external_data/reviewer_comment_data/longbench_sc_ont_false_whitelist_20260813/runs/flexiplex/rep3/flexiplex_SC_ONT_10M_false_rep3_audit.fastq.gz 
 exit_status	0
-assigned_output	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/longbench_sc_ont_false_whitelist_20260813/runs/flexiplex/rep3/flexiplex_SC_ONT_10M_false_rep3_audit.fastq.gz
+assigned_output	external_data/reviewer_comment_data/longbench_sc_ont_false_whitelist_20260813/runs/flexiplex/rep3/flexiplex_SC_ONT_10M_false_rep3_audit.fastq.gz

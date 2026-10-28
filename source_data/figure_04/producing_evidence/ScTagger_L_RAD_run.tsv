@@ -1,9 +1,9 @@
 dataset	L
 case	flatQ20
-input	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/wl_scan/20260731_sctagger_badread_quality_full/inputs/L/flatQ20.fq.gz
+input	external_data/wl_scan/20260731_sctagger_badread_quality_full/inputs/L/flatQ20.fq.gz
 input_bytes	3074597647
 input_sha256	6f7385468b607cf86c91449b095c2968ee2a5d25ab473901102b87d141543090
-rad_binary	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/wl_scan/20260731_sctagger_badread_quality_full/provenance/rad/rad_1.0.2_b02ff24
+rad_binary	external_data/wl_scan/20260731_sctagger_badread_quality_full/provenance/rad/rad_1.0.2_b02ff24
 rad_binary_sha256	78169e8e696976b82713f357d31e08fa53595c6d38ac55d989c7c6ce2efafbed
 rad_version	rad 1.0.2
 git_commit	b02ff24110fe45873811d5389d2e58c338045f05

@@ -4,12 +4,12 @@
     "sbatch",
     "--parsable",
     "--output",
-    "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/validation/figure_02_full_quality_2018_%j.log",
+    "validation/figure_02_full_quality_2018_%j.log",
     "scripts/figure_02/summarize_full_barcode_quality_2018.sbatch",
-    "/scratch-nfs/f005f43/rad_full_barcode_quality_20261024/inputs/shuffled_L_lr_synth.badread2018_truthbc.shift_p01.fq.gz",
-    "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_02/full_read_quality_2018"
+    "external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_full_barcode_quality_20261024/inputs/shuffled_L_lr_synth.badread2018_truthbc.shift_p01.fq.gz",
+    "source_data/figure_02/full_read_quality_2018"
   ],
-  "python": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/miniconda3/bin/python",
+  "python": "external_data/software/miniconda3/bin/python",
   "partition": "standard",
   "account": "lsonglab",
   "cpus_per_task": 8,
@@ -17,9 +17,9 @@
   "time_limit": "01:00:00",
   "gres": "gpu:0",
   "qos": "inherited from association",
-  "input": "/scratch-nfs/f005f43/rad_full_barcode_quality_20261024/inputs/shuffled_L_lr_synth.badread2018_truthbc.shift_p01.fq.gz",
+  "input": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_full_barcode_quality_20261024/inputs/shuffled_L_lr_synth.badread2018_truthbc.shift_p01.fq.gz",
   "input_shift": 1,
-  "output": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_02/full_read_quality_2018",
+  "output": "source_data/figure_02/full_read_quality_2018",
   "files": {
     "scripts/figure_02/summarize_full_barcode_quality_2018.py": "42b4aac31e98ee426a04bb1530ee377104077f69896cc49d5dacc92b5ca76836",
     "scripts/figure_02/barcode_locator.py": "0ead90df058cfd940befd3a0b7a659d9f030f01fc382863dcd7e67e583f0fb68",

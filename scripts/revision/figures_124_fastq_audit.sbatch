@@ -7,8 +7,8 @@
 #SBATCH --mem=4G
 #SBATCH --time=00:30:00
 #SBATCH --gres=gpu:0
-#SBATCH --output=/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/validation/figures_124_fastq_%j.log
+#SBATCH --output=validation/figures_124_fastq_%j.log
 set -euo pipefail
 export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1
-cd /dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript
-/usr/bin/time -v /dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/miniconda3/bin/python3 scripts/revision/figures_124_fastq_audit.py
+cd "${RAD_REPO_ROOT:-${SLURM_SUBMIT_DIR:?Submit this script from the repository root}}"
+/usr/bin/time -v "${PYTHON:-python3}" scripts/revision/figures_124_fastq_audit.py

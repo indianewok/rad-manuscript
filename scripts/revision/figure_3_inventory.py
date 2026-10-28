@@ -6,6 +6,7 @@ import csv
 import gzip
 import json
 from pathlib import Path
+from source_paths import scratch_root, scratch_nfs_root
 import re
 import subprocess
 from figure_3 import ROOT, ARMS, TOOLS, PACKAGES, sha, read, write, js
@@ -29,23 +30,23 @@ def main():
             s=inspect(checkpoint/'per_target.tsv','C5_per_target',True)
             if t=='RAD':
                 selected=latest/'inputs'/d/'custom_whitelist.txt'
-                stream=Path('/scratch-nfs/f005f43/longbench_rad_4acbe00_raw_prism_20260827/runs')/d/'demux'/f'{d}_RAD.fq.gz'
+                stream=scratch_nfs_root() / 'longbench_rad_4acbe00_raw_prism_20260827/runs'/d/'demux'/f'{d}_RAD.fq.gz'
                 meta=latest/'runs'/d/'audit_raw_all_fast_exact/fast_run_metadata.tsv'
             elif t=='BLAZE':
                 selected=competitor/'provenance/selected_whitelists/blaze'/d/'whitelist.csv'
-                stream=Path('/scratch-nfs/f005f43/longbench_full_demux_20260730/runs/blaze2_2.5.0_longbench_published')/d/'matched_reads.fastq'
+                stream=scratch_nfs_root() / 'longbench_full_demux_20260730/runs/blaze2_2.5.0_longbench_published'/d/'matched_reads.fastq'
                 meta=competitor/'provenance/producers'/name/d/'run_metadata.txt'
                 inspect(stream.parent/'putative_bc.csv','BLAZE_raw_extraction',False)
             else:
                 selected=next((competitor/'provenance/selected_whitelists'/name/d).glob('*.txt'))
-                stream=Path('/scratch/f005f43/longbench_full_ab_audit_20260730/flexiplex_v1026_current_diagnostic')/d/f'{d}_flexiplex_v1026_audit_reads_barcodes.txt.gz'
+                stream=scratch_root() / 'longbench_full_ab_audit_20260730/flexiplex_v1026_current_diagnostic'/d/f'{d}_flexiplex_v1026_audit_reads_barcodes.txt.gz'
                 meta=competitor/'provenance/producers'/name/d/'run_metadata.txt'
             w=inspect(selected,'tool_selected_whitelist',True);producer=inspect(meta,'producer_metadata',True);st=inspect(stream,'full_C2_assignment_stream',False)
             targets={r['target_barcode'] for r in read(checkpoint/'per_target.tsv')}
             selected_targets=set(re.findall(r'\b[ACGT]{16}\b',selected.read_text()))
             checks.append(dict(check_id=f'{d}/{t}/selected_target_identity',status='passed' if targets==selected_targets else 'failed',observed=len(targets),expected=len(selected_targets),missing=sorted(selected_targets-targets),extra=sorted(targets-selected_targets)))
             arms.append(dict(dataset=d,tool=t,version='4acbe004ba11b150d6832395452632f367a6e6c1' if t=='RAD' else '2.5.0' if t=='BLAZE' else '1.02.6 diagnostic',binary_sha256=rad_binary['sha256'] if t=='RAD' else '38dccd37f1747e5105b62eacde572b7e4c5206fb925dc1fdbe8210ffe8b1e8c4' if t=='Flexiplex' else '',producer_metadata_sha256=producer['sha256'],selected_sha256=w['sha256'],catalog_sha256=catalog['sha256'],reference_sha256=cell['sha256'],checkpoint_sha256=s['sha256'],full_assignments_status=st['status'],full_assignments_checked_path=st['path'],CT_scope='all emitted CT records included' if t=='RAD' else 'tool-native records',hash_seed='UNSET (retained execution)' if t=='BLAZE' else 'not applicable',resume_level='C5 verified',pair_ledger_status='blocked-missing-asset' if st['status']=='missing_at_checked_path' else 'not yet reprocessed'))
-    inspect('/scratch/f005f43/longbench_sc_ont_false_whitelist_20260813/fastq/SC_ONT_10M_seqkit_seed2026081326.fastq.gz','exact_10M_offlist_input_metadata_recovered',False)
+    inspect(scratch_root()/'longbench_sc_ont_false_whitelist_20260813/fastq/SC_ONT_10M_seqkit_seed2026081326.fastq.gz','exact_10M_offlist_input_metadata_recovered',False)
     inspect(b/'wl_scan/20260731_sctagger_badread_quality_full/inputs/L/flatQ20.fq.gz','ScTagger_flatQ20_input',False)
     for dataset,package in PACKAGES.items():
         base=b/package

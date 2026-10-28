@@ -1,6 +1,6 @@
 metric	value
-input	/scratch-nfs/f005f43/rad_longbench_20260726/data/shuffled_L_lr_synth.fq.gz
-model	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/LongBench_comps/ScTagger_nanopore2023_Q15_Q20_20260819/models/nanopore2023.gz
+input	external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_longbench_20260726/data/shuffled_L_lr_synth.fq.gz
+model	external_data/reviewer_comment_data/LongBench_comps/ScTagger_nanopore2023_Q15_Q20_20260819/models/nanopore2023.gz
 model_label	nanopore2023
 quality_mode	native_unadjusted_no_shift_no_ceiling
 seed	20260731

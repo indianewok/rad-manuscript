@@ -16,8 +16,8 @@ options(stringsAsFactors = FALSE)
 set.seed(20260825)
 
 argv <- commandArgs(trailingOnly = TRUE)
-default_source <- "/scratch-nfs/f005f43/SN_ONT_H146_H526_DEG_RAD4acbe00_all_records_20260828"
-default_rank <- "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/082426_volcano_plots/wilcoxon_auc_rank"
+default_source <- "external_data/reviewer_comment_data/scratch_preservation_20260921/files/SN_ONT_H146_H526_DEG_RAD4acbe00_all_records_20260828"
+default_rank <- "external_data/reviewer_comment_data/082426_volcano_plots/wilcoxon_auc_rank"
 source_package <- if (length(argv) >= 1L) normalizePath(argv[[1L]], mustWork = TRUE) else default_source
 rank_package <- if (length(argv) >= 2L) normalizePath(argv[[2L]], mustWork = TRUE) else default_rank
 

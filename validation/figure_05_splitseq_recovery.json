@@ -1,7 +1,7 @@
 {
   "status": "passed selected source promotion",
   "incoming_git_commit": "07b39852cf436ad729cd7e4271c786a8c956fa1f",
-  "package_root": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/paper_revision_20261022/lr_splitseq_recovery_20261023/package",
+  "package_root": "external_data/reviewer_comment_data/paper_revision_20261022/lr_splitseq_recovery_20261023/package",
   "rows": 568,
   "native_numeric_cells_compared": 3408,
   "same_original_row_order": true,

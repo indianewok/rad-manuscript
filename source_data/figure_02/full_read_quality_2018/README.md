@@ -70,10 +70,11 @@ shift to both quality groups preserves the difference between their means.
 Run from the repository root with edlib 1.3.9:
 
 ```bash
+mkdir -p results
 python scripts/figure_02/summarize_full_barcode_quality_2018.py \
   --fastq /path/to/shuffled_L_lr_synth.badread2018_truthbc.shift_p01.fq.gz \
   --input-shift 1 \
-  --output-dir /tmp/full_barcode_quality_2018 \
+  --output-dir results/full_barcode_quality_2018 \
   --workers 7 \
   --sample-csv source_data/figure_02/paired_50000_barcode_mean_Q.csv.gz
 ```
@@ -98,12 +99,12 @@ and agreement with these independent summaries.
 
 ```bash
 python scripts/figure_02/validate_full_barcode_quality_2018.py \
-  --scan-dir /tmp/full_barcode_quality_2018 \
+  --scan-dir results/full_barcode_quality_2018 \
   --generation-summary source_data/figure_02/full_read_quality_2018/source_generation_summary.tsv \
   --source-invariants source_data/figure_02/full_read_quality_2018/source_variant_invariants.tsv \
   --native-minimum-histogram source_data/figure_02/full_read_quality_2018/source_native_barcode_min_q.tsv \
-  --output /tmp/full_barcode_quality_2018/full_quality_with_blaze_f1.tsv \
-  --report /tmp/full_barcode_quality_2018/validation.json
+  --output results/full_barcode_quality_2018/full_quality_with_blaze_f1.tsv \
+  --report results/full_barcode_quality_2018/validation.json
 ```
 
 The [validation report](../../../validation/figure_02_full_barcode_quality_2018.json)

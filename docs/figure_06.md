@@ -2,13 +2,11 @@
 
 Figure 6 measures recovery of cell-line identity from the LongBench single-nucleus ONT library. The mixture contains eight cell lines: H146, H1975, H211, H2228, H526, H69, HCC827 and SHP77. Each workflow's native demultiplexed reads are aligned and genotyped against a common bulk-Illumina panel. The resulting calls are compared with the matched single-nucleus Illumina reference and displayed on its fixed UMAP coordinates.
 
-![Figure 6: saved Prism layout](../figures/figure_06/prism/figure_06.png)
-
-[Export details](../manifests/prism_exports.json) identify the original Prism project and saved layout.
+![Figure 6](../figures/figure_06/prism/figure_06.png)
 
 ## Software and parameters
 
-Full commands, build hashes and reference identities are in the [parameter registry](../manifests/figures_567_tool_parameters.tsv).
+The [run table](../manifests/figures_567_tool_parameters.tsv) lists versions, commits, threads, chemistry and saved commands. [Run evidence](../manifests/figures_567_run_evidence.tsv) records hashes, references, seeds and execution limitations.
 
 | Stage | Software and settings | Source record |
 |---|---|---|
@@ -52,12 +50,13 @@ All joins use the exact `cell_barcode`. For each reference nucleus, the comparis
 Run the classifier on the [five-cell example](../data/examples/figure_06/genotype_input.csv):
 
 ```bash
+mkdir -p results
 python3 scripts/figure_06/classify_genotypes.py \
   --input data/examples/figure_06/genotype_input.csv \
-  --output /tmp/figure06_outcomes.tsv
+  --output results/figure06_outcomes.tsv
 python3 scripts/figure_06/summarize_identity.py \
-  --input /tmp/figure06_outcomes.tsv \
-  --output /tmp/figure06_summary.tsv --expected-reference-singlets 5
+  --input results/figure06_outcomes.tsv \
+  --output results/figure06_summary.tsv --expected-reference-singlets 5
 ```
 
 The result contains 15 rows, matching the [expected outcomes](../data/examples/figure_06/genotype_outcomes.tsv). This example includes one RAD cell for each outcome. For the complete source CSV, use the same classifier with `--expected-reference-singlets 5782`.

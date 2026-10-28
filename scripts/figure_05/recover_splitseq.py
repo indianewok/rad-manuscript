@@ -10,10 +10,12 @@ import gzip
 import hashlib
 import json
 import shutil
+import sys
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[2]
-RECOVERY=Path('/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/paper_revision_20261022/lr_splitseq_recovery_20261023')
+sys.path.insert(0,str(ROOT/'scripts/revision'))
+from tool_parameter_schema import FIELDS, project_parameters, details_path_name, prepare_evidence_rows
 
 
 def sha(path):
@@ -35,8 +37,8 @@ def write(path, rows):
 
 def main():
     p=argparse.ArgumentParser(description=__doc__)
-    p.add_argument('--recovery-root',type=Path,default=RECOVERY/'package')
-    p.add_argument('--full-rad-ledger',type=Path,default=RECOVERY/'external_checkpoints/rad_ed2_all_assignments_normalized.tsv.gz')
+    p.add_argument('--recovery-root',type=Path,required=True,help='Directory containing the validated uploaded package')
+    p.add_argument('--full-rad-ledger',type=Path,required=True,help='Complete normalized RAD ED2 assignment ledger')
     p.add_argument('--output-root',type=Path,default=ROOT)
     a=p.parse_args();r=a.recovery_root;o=a.output_root;assets=[]
     def record(path,role,output='',selection='byte-identical selected evidence'):
@@ -145,8 +147,11 @@ def main():
     write(o/'manifests/figure_05_staged_checkpoints.tsv',checkpoint_rows)
     write(o/'manifests/figure_05_splitseq_sources.tsv',assets)
     registry=o/'manifests/figures_567_tool_parameters.tsv'
+    detail_registry=o/'manifests'/details_path_name('567')
     if registry.exists():
-        parameter_rows=read(registry)
+        parameter_rows=read(detail_registry if detail_registry.exists() else registry)
+        if parameter_rows and 'figure' not in parameter_rows[0]:
+            raise ValueError('Original parameter evidence details are required to update selected Split-seq records')
         parameter_rows=[x for x in parameter_rows if not (x['figure']=='05' and (x['component'].startswith('LR-Split RAD /') or x['component'] in ['RAD (LR-Split-seq ED2)','FLAMES component Flexiplex (poly-T)']))]
         for x in parameter_rows:
             if x['figure']=='05':x['panels']=x['panels'].replace('; LR-Split panels unresolved','')
@@ -171,7 +176,9 @@ def main():
             reference='Same568 published physical cells; input SRR13948564, 5764421 original reads',seed='No explicit RNG seed in executed deterministic wrapper',threads='4',
             evidence='source_data/figure_05/provenance/splitseq/component_run_manifest.txt; source_data/figure_05/provenance/splitseq/component_time.txt; source_data/figure_05/provenance/splitseq/component_stdout.log; source_data/figure_05/provenance/splitseq/component_runner.R',
             limitations='Exact R/Rcpp/Rhtslib versions and compiled shared-object hash unrecovered; no BLAZE arm in this selected LR-Split comparison')
-        write(registry,parameter_rows)
+        parameter_rows=prepare_evidence_rows(parameter_rows,o)
+        write(detail_registry,parameter_rows)
+        write(registry,project_parameters(parameter_rows,'567',o))
     # Source snapshots retain their own licenses even in a fresh output tree.
     for name in ['FLAMES_GPL-3.txt','embedded_Flexiplex_MIT.txt']:
         source=ROOT/'source_data/figure_05/provenance/splitseq/licenses'/name

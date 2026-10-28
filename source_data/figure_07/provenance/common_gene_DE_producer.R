@@ -24,11 +24,11 @@ out_dir <- if (length(args)) {
 dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
 
 default_native_path <- paste0(
-  "/scratch-nfs/f005f43/SN_ONT_direct_H146_H526_RAD4acbe00_CT_rerun_20260828/",
+  "external_data/reviewer_comment_data/scratch_preservation_20260921/files/SN_ONT_direct_H146_H526_RAD4acbe00_CT_rerun_20260828/",
   "package/tables/direct_H146_vs_H526_all_deg_results.tsv.gz"
 )
 default_source_package <-
-  "/scratch-nfs/f005f43/SN_ONT_H146_H526_DEG_RAD4acbe00_all_records_20260828"
+  "external_data/reviewer_comment_data/scratch_preservation_20260921/files/SN_ONT_H146_H526_DEG_RAD4acbe00_all_records_20260828"
 native_path <- normalizePath(
   if (length(args) >= 2L) args[[2L]] else default_native_path,
   mustWork = TRUE

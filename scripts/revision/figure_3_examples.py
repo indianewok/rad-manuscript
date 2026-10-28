@@ -2,12 +2,13 @@
 """Extract actual bounded, identity-closed examples, with source hashes."""
 import collections,csv,gzip,json,subprocess,sys
 from pathlib import Path
+from source_paths import reviewer_root
 from figure_3 import ROOT,sha,read,write,js
 from figure_3_count import fastq_rows
 
 OUT=ROOT/'data/examples/figure_03'
 CHECKPOINT=ROOT/'checkpoints/figure_03/offlist_recount'
-SOURCE=Path('/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data')
+SOURCE=reviewer_root()
 
 def rows(path):
     with gzip.open(path,'rt',newline='') as f:yield from csv.DictReader(f,delimiter='\t')

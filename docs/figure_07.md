@@ -2,13 +2,13 @@
 
 Figure 7 compares differential expression between H146 and H526 nuclei with the matched Illumina reference. It follows each workflow from barcode and UMI assignments to molecule counts, gene-level tests and recovery of reference-supported expression differences. The analysis uses **8,135 genes** eligible in all four platforms and retains all emitted RAD concatemer segments.
 
-![Figure 7: saved Prism layout](../figures/figure_07/prism/figure_07.png)
+![Figure 7](../figures/figure_07/prism/figure_07.png)
 
-The image is the saved Prism layout; panels A and C retain the earlier analysis. The source tables and methods below describe the updated 8,135-gene analysis. [Export details](../manifests/prism_exports.json) identify the original project and layout.
+Panels A and C show the earlier analysis. The source tables and methods below use the updated 8,135-gene analysis.
 
 ## Software and parameters
 
-The [parameter registry](../manifests/figures_567_tool_parameters.tsv) contains complete commands, binary hashes and reference identities.
+The [run table](../manifests/figures_567_tool_parameters.tsv) lists versions, commits, threads, chemistry and saved commands. [Run evidence](../manifests/figures_567_run_evidence.tsv) records hashes, references, seeds and execution limitations.
 
 | Stage | Software and settings | Source record |
 |---|---|---|
@@ -52,6 +52,7 @@ log2(1 + CP10K) = 3.222392421336448
 Extract the examples from the complete matrix with:
 
 ```bash
+mkdir -p results
 python3 scripts/figure_07/extract_examples.py \
   --matrix-dir checkpoints/figure_07/native/RAD/all \
   --de-table source_data/figure_07/direct_H146_vs_H526_plot_data.tsv.gz
@@ -87,9 +88,9 @@ Recalculate the adjusted P values and directional scores from the retained direc
 ```bash
 python3 scripts/figure_07/adjust_common_gene_pvalues.py \
   --input source_data/figure_07/direct_H146_vs_H526_plot_data.tsv.gz \
-  --output /tmp/figure07_adjusted.tsv
+  --output results/figure07_adjusted.tsv
 python3 scripts/figure_07/score_directional_calls.py \
-  --input /tmp/figure07_adjusted.tsv --output /tmp/figure07_thresholds.tsv
+  --input results/figure07_adjusted.tsv --output results/figure07_thresholds.tsv
 ```
 
 The output contains 24,405 adjusted rows and 594 directional threshold rows. Counts match the [deposited threshold grid](../source_data/figure_07/threshold_grid.tsv) exactly, and metrics match within 1e-12. The [direct-test comparison](../validation/figures_567_direct_test_lineage.json) verifies every retained P value and effect against the native test output; its [script](../scripts/figure_07/check_direct_test_provenance.py) records both source hashes.

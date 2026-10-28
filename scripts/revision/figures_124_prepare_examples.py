@@ -2,12 +2,13 @@
 """Extract bounded actual evidence examples; retain source SHA256 and row lineage."""
 import sys,csv,gzip,json,hashlib,shutil,itertools
 from pathlib import Path
-R=Path(__file__).resolve().parents[2];B=Path('/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data')
+from source_paths import reviewer_root, scratch_root, resolve_source
+R=Path(__file__).resolve().parents[2];B=reviewer_root()
 sys.path.insert(0,str(R/'scripts/revision'))
 from figures_124 import sha,rows,write_rows,write_json
 provenance={i:[] for i in (1,2,4)}
 def excerpt(i,source,name,predicate=lambda r,n: n<=8,fields=None,limit=None,delimiter=None):
- source=Path(source);op=gzip.open if source.suffix=='.gz' else open
+ source=resolve_source(source,base=B);op=gzip.open if source.suffix=='.gz' else open
  delimiter=delimiter or ('\t' if '.tsv' in source.name else ',')
  chosen=[];numbers=[]
  with op(source,'rt') as f:
@@ -20,7 +21,7 @@ def excerpt(i,source,name,predicate=lambda r,n: n<=8,fields=None,limit=None,deli
  return dest
 
 def copy(i,source,name,**extra):
- source=Path(source);dest=R/f'data/examples/figure_{i:02d}'/name;dest.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(source,dest)
+ source=resolve_source(source,base=B);dest=R/f'data/examples/figure_{i:02d}'/name;dest.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(source,dest)
  provenance[i].append(dict(file=name,source_path=str(source),source_sha256=sha(source),source_bytes=source.stat().st_size,excerpt_sha256=sha(dest),scope='complete compact input, copied byte-identically',**extra))
  return dest
 
@@ -40,14 +41,14 @@ def grid_examples(r,n):
  hd_seen[state]+=1;return True
 excerpt(1,R/'source_data/figure_01/hd_RAD_bins.tsv','hd_grid_example.tsv',grid_examples,fields=['bin_id','array_row','array_col','in_tissue'],limit=8)
 # Discovery preview has every barcode for one small public synthetic case.
-copy(2,'/scratch/f005f43/sctagger_sl_three_tool_quality_20260731/inputs/S_truth_barcodes.txt','S_truth_barcodes.txt')
+copy(2,scratch_root()/'sctagger_sl_three_tool_quality_20260731/inputs/S_truth_barcodes.txt','S_truth_barcodes.txt')
 for tool,sub in [('RAD','rad/scanwl.txt'),('BLAZE','blaze/whitelist.csv'),('Flexiplex_f0','flex_f0/selected.txt'),('Flexiplex_f8','flex_f8/selected.txt')]:
- copy(2,f'/scratch/f005f43/sctagger_sl_three_tool_quality_20260731/runs/S/shift_p01/{sub}',f'S_shift_p01_{tool}.txt')
+ copy(2,scratch_root()/f'sctagger_sl_three_tool_quality_20260731/runs/S/shift_p01/{sub}',f'S_shift_p01_{tool}.txt')
 # Two actual synthetic reads; no real/controlled FASTQ material enters GitHub.
 audit=json.loads((R/'validation/figures_124_fastq_identity.json').read_text())
 for key,name in [('L_flatQ20','L_flatQ20_first2.fastq'),('L_native2023','L_native2023_first2.fastq')]:
  if key not in audit['sources']:key=next(k for k in audit['sources'] if 'native' in k.lower())
- info=audit['sources'][key];source=Path(info['path']);dest=R/'data/examples/figure_02'/name
+ info=audit['sources'][key];source=resolve_source(info['path'],base=B);dest=R/'data/examples/figure_02'/name
  with gzip.open(source,'rt') as f:content=''.join(itertools.islice(f,8))
  dest.write_text(content)
  provenance[2].append(dict(file=name,source_path=str(source),source_sha256=info.get('sha256',info.get('compressed_sha256')),source_bytes=source.stat().st_size,source_fastq_record_numbers_1_based=[1,2],excerpt_sha256=sha(dest),scope='public ScTagger synthetic sequences; first two records only; full-stream hash from completed audit9976816'))

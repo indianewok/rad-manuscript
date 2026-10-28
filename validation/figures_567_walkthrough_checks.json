@@ -59,15 +59,15 @@
   "checker_sha256": "e0015b7cbd0994a757522c61d6d7ec539fb65c2f86827cb9c0d6c6c3e23ee6d9",
   "inputs": [
     {
-      "path": "/tmp/figure06_all_summary.tsv",
+      "path": "external_data/temporary/figure06_all_summary.tsv",
       "sha256": "c338473afa3cbb1e3ec3d62a0627a75791d0d828e37231abee214211c7bbaaee"
     },
     {
-      "path": "/tmp/figure07_adjusted.tsv",
+      "path": "external_data/temporary/figure07_adjusted.tsv",
       "sha256": "1ab4adeb3ea471d7c9abc255d40a2cb050528ad4fabc0429c7cab77e3cb6d821"
     },
     {
-      "path": "/tmp/figure07_thresholds.tsv",
+      "path": "external_data/temporary/figure07_thresholds.tsv",
       "sha256": "5a823733cd2922eb67e7c02a32eb5eab363b44f48622be6e386afbd8315922a8"
     }
   ],

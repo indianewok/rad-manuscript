@@ -2,9 +2,7 @@
 
 Figure 1 introduces RAD’s barcode detection and demultiplexing workflow, compares runtime and memory use on complete LongBench inputs, and examines barcode counts in Visium HD spatial bins.
 
-![Figure 1 exported from Prism](../figures/figure_01/prism/figure_01.png)
-
-[Prism source and export details](../manifests/prism_exports.json).
+![Figure 1](../figures/figure_01/prism/figure_01.png)
 
 ## Workflow and software
 
@@ -16,7 +14,7 @@ The [algorithm crosswalk](../source_data/figure_01/algorithm_crosswalk.tsv) link
 | BLAZE | 2.5.0; `11994f9c12a6664dfe1679576aaca19b6bfd35c1` | Detection: `--force-cells 10000` for SN-ONT and `--expect-cells 5000` for SC-PB; 3v3, minimum Q15, edit distance 2, batch size 1,000. Demultiplexing: `--no-whitelisting --known-bc-list` with the detected whitelist. `PYTHONHASHSEED=0`; SC-PB uses the saved FIFO launcher. |
 | Flexiplex | 1.02.6; `d84c8ae4f3865052f2b5ecec816949b94682f302` | Discovery: flank distance 0 and the pinned global 3v3 filter. Demultiplexing: `-d 10x3v3 -e 2 -f 8 -k SELECTED`; one compression thread. |
 
-The [run registry](../manifests/figures_124_tool_parameters.tsv) contains all 108 accepted phase commands, executable and whitelist hashes, layouts, and thread settings. [Software and resources](../source_data/figure_01/software_and_resources.tsv) identifies the binaries and reference files.
+The [run table](../manifests/figures_124_tool_parameters.tsv) lists versions, commits, threads, chemistry and saved commands for all 108 accepted phases. [Run evidence](../manifests/figures_124_run_evidence.tsv) records executable and whitelist hashes, references and seeds. [Software and resources](../source_data/figure_01/software_and_resources.tsv) identifies the binaries and reference files.
 
 ## Runtime and memory
 
@@ -34,13 +32,14 @@ The 108 accepted phase records form 54 paired repetitions. Means and sample stan
 The [example records](../data/examples/figure_01/) contain the GNU-time logs, commands, completion markers, and statuses for SN-ONT/RAD/4 threads/repetition 1. Parse those logs and combine the complete phase table with:
 
 ```bash
+mkdir -p results
 python3 scripts/revision/figures_124_steps/read_gnu_time.py \
   data/examples/figure_01/raw_timing/whitelist_detection/metrics.tsv \
   data/examples/figure_01/raw_timing/demultiplexing/metrics.tsv \
-  --output /tmp/figure1_parsed_time.tsv
+  --output results/figure1_parsed_time.tsv
 
 python3 scripts/revision/figures_124_steps/combine_timing.py \
-  source_data/figure_01/accepted_phase_records.tsv /tmp/figure1_all54_totals.tsv
+  source_data/figure_01/accepted_phase_records.tsv results/figure1_all54_totals.tsv
 ```
 
 Expected outputs are [parsed measurements](../data/examples/figure_01/parsed_gnu_time.tsv), [combined repetitions](../source_data/figure_01/combined_replicates.tsv), and [timing summaries](../source_data/figure_01/timing_summary.tsv). The [raw-source registry](../source_data/figure_01/timing_raw_source_registry.tsv) records every contributing file. Reconstruction joins the preserved timing directory with the original scratch completion records through a temporary symlink directory, verifies duplicate files, and runs the original [collector](../scripts/revision/figures_124_collect_timing.py).
@@ -58,8 +57,8 @@ python3 scripts/revision/figures_124_steps/recover_hd_grid.py \
   --input source_data/figure_01/hd_RAD_bins.tsv \
   --raw-barcodes source_data/figure_01/hd_16um_raw_barcodes.tsv.gz \
   --filtered-barcodes source_data/figure_01/hd_16um_filtered_barcodes.tsv.gz \
-  --output /tmp/tissue_positions_16um_reconstructed.csv \
-  --report /tmp/figure1_grid_receipt.json
+  --output results/tissue_positions_16um_reconstructed.csv \
+  --report results/figure1_grid_receipt.json
 ```
 
 [Eight example bins](../data/examples/figure_01/hd_grid_example.tsv) show the grid and tissue-mask fields. [Grid validation](../validation/figures_124_hd_grid_reconstruction.json) and [reference hashes](../source_data/figure_01/hd_grid_reference_sources.json) record the complete comparisons. To reconstruct the shared-scale spatial triptych, the remaining required inputs are the Seurat `nCount_Spatial` values and the code and RAD invocation that created the barcode-to-bin matrix.

@@ -2,9 +2,11 @@
 """Recover producing-run settings without borrowing versions from other runs."""
 import argparse,csv,json,re,shutil
 from pathlib import Path
+from source_paths import data_root, resolve_source
 from figures_124 import REPO,sha,rows,write_rows,write_json,TIMING,NATIVE,EXTENDED,SWEEP
+from tool_parameter_schema import FIELDS, project_parameters, details_path_name, prepare_evidence_rows
 p=argparse.ArgumentParser(description=__doc__)
-p.add_argument('--project-root',type=Path,default=Path('/dartfs/rc/lab/A/AckermanLab/CMV/rad_data'))
+p.add_argument('--project-root',type=Path,default=data_root())
 p.add_argument('--output-root',type=Path,default=REPO)
 a=p.parse_args();B=a.project_root/'reviewer_comment_data';O=a.output_root
 fields=['figure','experiment','producing_run','tool','version','commit_or_build','binary_or_source_sha256','exact_command_or_recorded_settings','command_status','chemistry_layout','reference_whitelist','seed','threads','evidence','evidence_sha256','applies_to','limitation']
@@ -16,7 +18,7 @@ def kv(path):
 def keep(path,name):
  path=Path(path);dest=O/'source_data'/f'figure_{name[:2]}'/'producing_evidence'/name[3:]
  dest.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(path,dest)
- evidence.append(dict(path=str(dest.relative_to(O)),source_path=str(path),sha256=sha(path),bytes=path.stat().st_size))
+ evidence.append(dict(path=str(dest.relative_to(O)),source_path=str(path),source_sha256=sha(path),source_bytes=path.stat().st_size,sha256=sha(dest),bytes=dest.stat().st_size))
  return str(dest.relative_to(O))
 # Every accepted timing phase has its own exact saved command and resource record.
 soft=kv(O/'source_data/figure_01/software_and_resources.tsv')
@@ -47,7 +49,7 @@ assert rad_identity['rad_binary_sha256']==software['RAD']['sha256']
 rad_receipt_link=keep(rad_receipt,'02_discovery_RAD_same_binary_build_receipt.txt')
 seen=set()
 for r in rows(O/'source_data/figure_02/discovery_callset_manifest.tsv'):
- path=Path(r['resolved_path']);tool=r['tool'];t=tool.split('_')[0]
+ path=resolve_source(r['resolved_path'],base=B);tool=r['tool'];t=tool.split('_')[0]
  # Reused RAD/Flex quality-invariant callsets are one producing run, with multiple applications.
  if str(path) in seen:continue
  seen.add(str(path));s=software[t];metadata=path.parent/'run_metadata.tsv'
@@ -97,7 +99,9 @@ from figures_124_parameters_details import recover
 details=recover(B,O,keep)
 for r in output:
  if r['figure']=='04':r.update(details.get((r['applies_to'],r['tool']),{}))
-write_rows(O/'manifests/figures_124_tool_parameters.tsv',output,fields)
+output=prepare_evidence_rows(output,O)
+write_rows(O/'manifests'/details_path_name('124'),output,fields+['evidence_original_sha256'])
+write_rows(O/'manifests/figures_124_tool_parameters.tsv',project_parameters(output,'124',O),FIELDS)
 write_rows(O/'manifests/figures_124_parameter_evidence.tsv',evidence)
 write_json(O/'validation/figures_124_parameter_recovery.json',dict(status='recorded with explicit unresolved identities',producing_runs=len(output),figure_counts={f:sum(r['figure']==f for r in output) for f in ['01','02','04']},source_master=dict(path=str(master_path),sha256=sha(master_path)),no_global_version_imputation=True))
 print('Recorded',len(output),'producing-run rows; unknown means unrecovered, not default.')

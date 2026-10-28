@@ -2,10 +2,10 @@ key	value
 run_id	fixed_scmix2_scanwl_e03_t24_full_20260726
 tag	fixed_scmix2_scanwl_e03_t24
 created_utc	2026-07-26T21:15:47Z
-binary	/scratch/f005f43/rad_longbench_20260726/rad_work/build_fixed/rad
-source_tree	/scratch/f005f43/rad_longbench_20260726/rad_work
-input	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/raw_fastq_datasets/scmix2.fq.gz
-results_dir	/scratch/f005f43/rad_scmix2_20260726/results
+binary	external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_longbench_20260726/rad_work/build_fixed/rad
+source_tree	external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_longbench_20260726/rad_work
+input	external_data/raw_fastq_datasets/scmix2.fq.gz
+results_dir	external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_scmix2_20260726/results
 adapter	CTACACGACGCTCTTCCGATCT
 barcode_length	16
 max_error	0.3

@@ -6,15 +6,15 @@
       "file": "raw_timing/whitelist_detection/metrics.tsv",
       "scope": "complete compact input, copied byte-identically",
       "source_bytes": 199,
-      "source_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/three_tool_phase_benchmark_20260902_parallel_epyc7543/raw/SN_ONT/threads_4/rep_1/RAD/whitelist_detection/attempt_001/metrics.tsv",
+      "source_path": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/three_tool_phase_benchmark_20260902_parallel_epyc7543/raw/SN_ONT/threads_4/rep_1/RAD/whitelist_detection/attempt_001/metrics.tsv",
       "source_sha256": "6d11bac56cdac95dfbd0e2bb7e8ee24d42d23c81658fcf4ecaf30c79cf3b266a"
     },
     {
-      "excerpt_sha256": "404140e0076f7ac87747c29cddfb8e82f7f482f03fd951cdff3c7f58d530fe98",
+      "excerpt_sha256": "e636a1e0d5f428d92cf3be2b60ffce522bceedd3bc95f9d715e07af2b5547b93",
       "file": "raw_timing/whitelist_detection/command.sh",
-      "scope": "complete compact input, copied byte-identically",
+      "scope": "Complete compact input; machine-specific locations normalized in this copy.",
       "source_bytes": 679,
-      "source_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/three_tool_phase_benchmark_20260902_parallel_epyc7543/raw/SN_ONT/threads_4/rep_1/RAD/whitelist_detection/attempt_001/command.sh",
+      "source_path": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/three_tool_phase_benchmark_20260902_parallel_epyc7543/raw/SN_ONT/threads_4/rep_1/RAD/whitelist_detection/attempt_001/command.sh",
       "source_sha256": "404140e0076f7ac87747c29cddfb8e82f7f482f03fd951cdff3c7f58d530fe98"
     },
     {
@@ -22,7 +22,7 @@
       "file": "raw_timing/whitelist_detection/status.tsv",
       "scope": "complete compact input, copied byte-identically",
       "source_bytes": 96,
-      "source_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/three_tool_phase_benchmark_20260902_parallel_epyc7543/raw/SN_ONT/threads_4/rep_1/RAD/whitelist_detection/attempt_001/status.tsv",
+      "source_path": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/three_tool_phase_benchmark_20260902_parallel_epyc7543/raw/SN_ONT/threads_4/rep_1/RAD/whitelist_detection/attempt_001/status.tsv",
       "source_sha256": "468832006ad4a9d2f225d7ff5bf15ca225634fecb491c060c95d2a911cd96b69"
     },
     {
@@ -30,7 +30,7 @@
       "file": "raw_timing/whitelist_detection/COMPLETE",
       "scope": "complete compact input, copied byte-identically",
       "source_bytes": 0,
-      "source_path": "/scratch-nfs/f005f43/three_tool_phase_benchmark_20260902_parallel_epyc7543/raw/SN_ONT/threads_4/rep_1/RAD/whitelist_detection/attempt_001/COMPLETE",
+      "source_path": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/three_tool_phase_benchmark_20260902_parallel_epyc7543/raw/SN_ONT/threads_4/rep_1/RAD/whitelist_detection/attempt_001/COMPLETE",
       "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
@@ -38,15 +38,15 @@
       "file": "raw_timing/demultiplexing/metrics.tsv",
       "scope": "complete compact input, copied byte-identically",
       "source_bytes": 197,
-      "source_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/three_tool_phase_benchmark_20260902_parallel_epyc7543/raw/SN_ONT/threads_4/rep_1/RAD/demultiplexing/attempt_001/metrics.tsv",
+      "source_path": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/three_tool_phase_benchmark_20260902_parallel_epyc7543/raw/SN_ONT/threads_4/rep_1/RAD/demultiplexing/attempt_001/metrics.tsv",
       "source_sha256": "a94cacb34a23a4743c921b26b13faf3b7711a31a5b4ed52bc48f14f1fbbed2f4"
     },
     {
-      "excerpt_sha256": "eef7941cdcb135340f28e29605905b9480447abc1b4550c7e518cc844f40750a",
+      "excerpt_sha256": "6aacdb307ec9acb8050675a1c1f0f72fe092cf44cf2d7e36f42307abf3e7b433",
       "file": "raw_timing/demultiplexing/command.sh",
-      "scope": "complete compact input, copied byte-identically",
+      "scope": "Complete compact input; machine-specific locations normalized in this copy.",
       "source_bytes": 1088,
-      "source_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/three_tool_phase_benchmark_20260902_parallel_epyc7543/raw/SN_ONT/threads_4/rep_1/RAD/demultiplexing/attempt_001/command.sh",
+      "source_path": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/three_tool_phase_benchmark_20260902_parallel_epyc7543/raw/SN_ONT/threads_4/rep_1/RAD/demultiplexing/attempt_001/command.sh",
       "source_sha256": "eef7941cdcb135340f28e29605905b9480447abc1b4550c7e518cc844f40750a"
     },
     {
@@ -54,7 +54,7 @@
       "file": "raw_timing/demultiplexing/status.tsv",
       "scope": "complete compact input, copied byte-identically",
       "source_bytes": 96,
-      "source_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/three_tool_phase_benchmark_20260902_parallel_epyc7543/raw/SN_ONT/threads_4/rep_1/RAD/demultiplexing/attempt_001/status.tsv",
+      "source_path": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/three_tool_phase_benchmark_20260902_parallel_epyc7543/raw/SN_ONT/threads_4/rep_1/RAD/demultiplexing/attempt_001/status.tsv",
       "source_sha256": "c3093d18953156ff89624b214cbbf58c00b1d8c214bfe43d6c767eb85fab9a9f"
     },
     {
@@ -62,7 +62,7 @@
       "file": "raw_timing/demultiplexing/COMPLETE",
       "scope": "complete compact input, copied byte-identically",
       "source_bytes": 0,
-      "source_path": "/scratch-nfs/f005f43/three_tool_phase_benchmark_20260902_parallel_epyc7543/raw/SN_ONT/threads_4/rep_1/RAD/demultiplexing/attempt_001/COMPLETE",
+      "source_path": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/three_tool_phase_benchmark_20260902_parallel_epyc7543/raw/SN_ONT/threads_4/rep_1/RAD/demultiplexing/attempt_001/COMPLETE",
       "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
@@ -139,11 +139,11 @@
         "output_metadata_json",
         "warnings"
       ],
-      "excerpt_sha256": "2ed550c5d716b626841920e07b58b0db4c68bd96717527717a6f5029555d81d5",
+      "excerpt_sha256": "4f0350e3b206e034331435ce517fe77e5e2350662e3267c6cb596e70d0dd3579",
       "file": "accepted_phase_example.tsv",
       "header_excluded_from_row_count": true,
       "scope": "bounded actual source excerpt; not a representative statistical sample",
-      "source_bytes": 422197,
+      "source_bytes": 467257,
       "source_data_row_numbers_1_based": [
         19,
         20,
@@ -158,8 +158,8 @@
         77,
         78
       ],
-      "source_path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_01/accepted_phase_records.tsv",
-      "source_sha256": "c45addcc2bd1dab64380983300ad80762cf9bb4ca1048ff1999727c3211b4ef7"
+      "source_path": "source_data/figure_01/accepted_phase_records.tsv",
+      "source_sha256": "dfb29b8ac39abfc9e496c33fcf5e310bd5f63f17155bf7dbd1ea2fd60a48b78b"
     },
     {
       "columns": [
@@ -183,7 +183,7 @@
         7,
         8
       ],
-      "source_path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_01/hd_stage_differences.tsv",
+      "source_path": "source_data/figure_01/hd_stage_differences.tsv",
       "source_sha256": "2d6633739418295bfcfe0dd83763bdb5958ce37db6500f895abdcc8bcedddc94"
     },
     {
@@ -208,7 +208,7 @@
         378,
         379
       ],
-      "source_path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_01/hd_RAD_bins.tsv",
+      "source_path": "source_data/figure_01/hd_RAD_bins.tsv",
       "source_sha256": "9b5a6cabd67a310ad99e090082e7de3a7e137568be1924891b5d7d251477f3ab"
     }
   ]

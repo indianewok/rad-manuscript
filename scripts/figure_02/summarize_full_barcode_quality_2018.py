@@ -25,7 +25,7 @@ import time
 import barcode_locator as locator
 
 SHIFTS = [1, 2, 3, 4, 5, 6, 8, 10, 11, 12, 13, 0]
-ORIGINAL_2018_GENERATOR = '/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/LongBench_comps/ScTagger_quality_sweep_20260731/code/original_quality_generation/generate_truth_conditioned_qscores.py'
+ORIGINAL_2018_GENERATOR = 'LongBench_comps/ScTagger_quality_sweep_20260731/code/original_quality_generation/generate_truth_conditioned_qscores.py'
 ORIGINAL_2018_SHA256 = '3efcd5b677bc65b3eebcfb9ed48432829b3c3a5cbb2521807e24f85cd57c834d'
 MODEL_2018_SHA256 = '6f60b7db6691bdf5955da54f621776bd7584d6c21b30f7290dff82d7037a0a85'
 READ_ID = re.compile(r'^@([ACGT]{16})-(\d+)(?:\s|$)')

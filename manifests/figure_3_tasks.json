@@ -20,7 +20,7 @@
       "rage_input": "python3 scripts/revision/figure_3_rage_preflight.py",
       "rage_producer": "python3 scripts/revision/figure_3_rage_run.py TOOL REPLICATE (RAD/BLAZE/Flexiplex by1/2/3)",
       "rage_count": "python3 scripts/revision/figure_3_rage_count.py",
-      "human_example": "python3 scripts/revision/figure_3_example_count.py data/examples/figure_03/sctagger_rad_rep1_assignments.tsv data/examples/figure_03/sctagger_rad_rep1_targets.txt /tmp/sc_counts.tsv"
+      "human_example": "python3 scripts/revision/figure_3_example_count.py data/examples/figure_03/sctagger_rad_rep1_assignments.tsv data/examples/figure_03/sctagger_rad_rep1_targets.txt external_data/temporary/sc_counts.tsv"
     },
     "validation_evidence": [
       "validation/figure_3_counting_fixtures.json",
@@ -65,7 +65,7 @@
       "rage_input": "python3 scripts/revision/figure_3_rage_preflight.py",
       "rage_producer": "python3 scripts/revision/figure_3_rage_run.py TOOL REPLICATE (RAD/BLAZE/Flexiplex by1/2/3)",
       "rage_count": "python3 scripts/revision/figure_3_rage_count.py",
-      "human_example": "python3 scripts/revision/figure_3_example_count.py data/examples/figure_03/sctagger_rad_rep1_assignments.tsv data/examples/figure_03/sctagger_rad_rep1_targets.txt /tmp/sc_counts.tsv"
+      "human_example": "python3 scripts/revision/figure_3_example_count.py data/examples/figure_03/sctagger_rad_rep1_assignments.tsv data/examples/figure_03/sctagger_rad_rep1_targets.txt external_data/temporary/sc_counts.tsv"
     },
     "validation_evidence": [
       "validation/figure_3_counting_fixtures.json",
@@ -110,7 +110,7 @@
       "rage_input": "python3 scripts/revision/figure_3_rage_preflight.py",
       "rage_producer": "python3 scripts/revision/figure_3_rage_run.py TOOL REPLICATE (RAD/BLAZE/Flexiplex by1/2/3)",
       "rage_count": "python3 scripts/revision/figure_3_rage_count.py",
-      "human_example": "python3 scripts/revision/figure_3_example_count.py data/examples/figure_03/sctagger_rad_rep1_assignments.tsv data/examples/figure_03/sctagger_rad_rep1_targets.txt /tmp/sc_counts.tsv"
+      "human_example": "python3 scripts/revision/figure_3_example_count.py data/examples/figure_03/sctagger_rad_rep1_assignments.tsv data/examples/figure_03/sctagger_rad_rep1_targets.txt external_data/temporary/sc_counts.tsv"
     },
     "validation_evidence": [
       "validation/figure_3_counting_fixtures.json",
@@ -155,7 +155,7 @@
       "rage_input": "python3 scripts/revision/figure_3_rage_preflight.py",
       "rage_producer": "python3 scripts/revision/figure_3_rage_run.py TOOL REPLICATE (RAD/BLAZE/Flexiplex by1/2/3)",
       "rage_count": "python3 scripts/revision/figure_3_rage_count.py",
-      "human_example": "python3 scripts/revision/figure_3_example_count.py data/examples/figure_03/sctagger_rad_rep1_assignments.tsv data/examples/figure_03/sctagger_rad_rep1_targets.txt /tmp/sc_counts.tsv"
+      "human_example": "python3 scripts/revision/figure_3_example_count.py data/examples/figure_03/sctagger_rad_rep1_assignments.tsv data/examples/figure_03/sctagger_rad_rep1_targets.txt external_data/temporary/sc_counts.tsv"
     },
     "validation_evidence": [
       "validation/figure_3_counting_fixtures.json",
@@ -200,7 +200,7 @@
       "rage_input": "python3 scripts/revision/figure_3_rage_preflight.py",
       "rage_producer": "python3 scripts/revision/figure_3_rage_run.py TOOL REPLICATE (RAD/BLAZE/Flexiplex by1/2/3)",
       "rage_count": "python3 scripts/revision/figure_3_rage_count.py",
-      "human_example": "python3 scripts/revision/figure_3_example_count.py data/examples/figure_03/sctagger_rad_rep1_assignments.tsv data/examples/figure_03/sctagger_rad_rep1_targets.txt /tmp/sc_counts.tsv"
+      "human_example": "python3 scripts/revision/figure_3_example_count.py data/examples/figure_03/sctagger_rad_rep1_assignments.tsv data/examples/figure_03/sctagger_rad_rep1_targets.txt external_data/temporary/sc_counts.tsv"
     },
     "validation_evidence": [
       "validation/figure_3_counting_fixtures.json",
@@ -245,7 +245,7 @@
       "rage_input": "python3 scripts/revision/figure_3_rage_preflight.py",
       "rage_producer": "python3 scripts/revision/figure_3_rage_run.py TOOL REPLICATE (RAD/BLAZE/Flexiplex by1/2/3)",
       "rage_count": "python3 scripts/revision/figure_3_rage_count.py",
-      "human_example": "python3 scripts/revision/figure_3_example_count.py data/examples/figure_03/sctagger_rad_rep1_assignments.tsv data/examples/figure_03/sctagger_rad_rep1_targets.txt /tmp/sc_counts.tsv"
+      "human_example": "python3 scripts/revision/figure_3_example_count.py data/examples/figure_03/sctagger_rad_rep1_assignments.tsv data/examples/figure_03/sctagger_rad_rep1_targets.txt external_data/temporary/sc_counts.tsv"
     },
     "validation_evidence": [
       "validation/figure_3_counting_fixtures.json",
@@ -290,7 +290,7 @@
       "rage_input": "python3 scripts/revision/figure_3_rage_preflight.py",
       "rage_producer": "python3 scripts/revision/figure_3_rage_run.py TOOL REPLICATE (RAD/BLAZE/Flexiplex by1/2/3)",
       "rage_count": "python3 scripts/revision/figure_3_rage_count.py",
-      "human_example": "python3 scripts/revision/figure_3_example_count.py data/examples/figure_03/sctagger_rad_rep1_assignments.tsv data/examples/figure_03/sctagger_rad_rep1_targets.txt /tmp/sc_counts.tsv"
+      "human_example": "python3 scripts/revision/figure_3_example_count.py data/examples/figure_03/sctagger_rad_rep1_assignments.tsv data/examples/figure_03/sctagger_rad_rep1_targets.txt external_data/temporary/sc_counts.tsv"
     },
     "validation_evidence": [
       "validation/figure_3_counting_fixtures.json",
@@ -335,7 +335,7 @@
       "rage_input": "python3 scripts/revision/figure_3_rage_preflight.py",
       "rage_producer": "python3 scripts/revision/figure_3_rage_run.py TOOL REPLICATE (RAD/BLAZE/Flexiplex by1/2/3)",
       "rage_count": "python3 scripts/revision/figure_3_rage_count.py",
-      "human_example": "python3 scripts/revision/figure_3_example_count.py data/examples/figure_03/sctagger_rad_rep1_assignments.tsv data/examples/figure_03/sctagger_rad_rep1_targets.txt /tmp/sc_counts.tsv"
+      "human_example": "python3 scripts/revision/figure_3_example_count.py data/examples/figure_03/sctagger_rad_rep1_assignments.tsv data/examples/figure_03/sctagger_rad_rep1_targets.txt external_data/temporary/sc_counts.tsv"
     },
     "validation_evidence": [
       "validation/figure_3_counting_fixtures.json",
@@ -380,7 +380,7 @@
       "rage_input": "python3 scripts/revision/figure_3_rage_preflight.py",
       "rage_producer": "python3 scripts/revision/figure_3_rage_run.py TOOL REPLICATE (RAD/BLAZE/Flexiplex by1/2/3)",
       "rage_count": "python3 scripts/revision/figure_3_rage_count.py",
-      "human_example": "python3 scripts/revision/figure_3_example_count.py data/examples/figure_03/sctagger_rad_rep1_assignments.tsv data/examples/figure_03/sctagger_rad_rep1_targets.txt /tmp/sc_counts.tsv"
+      "human_example": "python3 scripts/revision/figure_3_example_count.py data/examples/figure_03/sctagger_rad_rep1_assignments.tsv data/examples/figure_03/sctagger_rad_rep1_targets.txt external_data/temporary/sc_counts.tsv"
     },
     "validation_evidence": [
       "validation/figure_3_counting_fixtures.json",

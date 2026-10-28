@@ -1,6 +1,6 @@
 # Figure 2 Prism data checks
 
-The numerical comparison in this record used the corrected project `Figure2_corrected_20261022.prism`, SHA-256 `dded389f9d8214278f93d2669c64e704bbf2208c47db96bf57a4ce4c77d6d016`. The repository figure image is a separate export of the saved Dropbox project identified in the [export manifest](../../manifests/prism_exports.json).
+The numerical comparison in this record used the corrected project `Figure2_corrected_20261022.prism`, SHA-256 `dded389f9d8214278f93d2669c64e704bbf2208c47db96bf57a4ce4c77d6d016`.
 
 ## Assignment tables
 
@@ -10,9 +10,7 @@ Correction-only plots use the corrected states and exclude native, ambiguous, an
 
 The [value comparison](../../validation/figures_124_prism_values.json) matched all 45,000 inspected selected-truth values and blanks to the reconstructed arrays. Relevant tables are [assignment states](assignment_six_states.tsv), [per-target assignments](assignment_per_target.tsv), and [correction proportions](correction_only.tsv).
 
-## Project structure and statistics
-
-The [structural report](../../validation/figures_124_prism_structure.json) found repeated layout-object fenIDs 134 and 135 in both the original V18 project and corrected copy. ZIP integrity, JSON, sheet identities, and inspected layout links passed. This report concerns those two historical project files.
+## Statistics
 
 The quality conditions share the same sequences and error patterns. Assignment proportions use the denominators above. The retained Prism analyses and annotations were preserved during table reconstruction; the original native analysis settings are the source for reproducing their statistical calculations.
 

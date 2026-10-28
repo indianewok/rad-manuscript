@@ -2,7 +2,7 @@
   "status": "passed",
   "documents": [
     {
-      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/rad_manuscript_recovery_20261023/current_revision/Current_Figure_Legends_20261023.docx",
+      "path": "external_data/reviewer_comment_data/rad_manuscript_recovery_20261023/current_revision/Current_Figure_Legends_20261023.docx",
       "bytes": 5403,
       "sha256": "2a887a9d491369ead903e8267a44eda102f1110716c5b637ec9f51bebb40ac36",
       "images": 0,
@@ -10,7 +10,7 @@
       "fig8_and_7e_absent": true
     },
     {
-      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/rad_manuscript_recovery_20261023/current_revision/Methods_current.docx",
+      "path": "external_data/reviewer_comment_data/rad_manuscript_recovery_20261023/current_revision/Methods_current.docx",
       "bytes": 13739,
       "sha256": "d11c07f092494767aa9d0113bcc29ff319215e381fa720e7da8740df23fcb9e2",
       "images": 0,

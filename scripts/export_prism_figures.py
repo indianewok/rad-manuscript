@@ -100,7 +100,7 @@ def verify(args, root):
         shutil.copyfile(row.pop('staged_image'), destination)
     report = {'exporter': 'GraphPad Prism', 'exporter_version': version,
               'export_script_sha256': sha256(work / 'export.pzc'),
-              'source_directory': 'Nat Comm/appeal/figure_revisions/CURRENT FIGURES',
+              'source_directory': 'external_data/prism',
               'format': 'PNG', 'exports': rows}
     manifest = root / 'manifests/prism_exports.json'
     manifest.write_text(json.dumps(report, indent=2) + '\n')

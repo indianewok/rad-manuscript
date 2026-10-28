@@ -1,5 +1,5 @@
 $input
-[1] "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/LongBench_Illumina_SC_SN_Seurat_UMAP_20260805/objects/LongBench_Illumina_SN_SCT_Seurat_UMAP.rds"
+[1] "external_data/LongBench_Illumina_SC_SN_Seurat_UMAP_20260805/objects/LongBench_Illumina_SN_SCT_Seurat_UMAP.rds"
 
 $assays
 [1] "RNA" "SCT"

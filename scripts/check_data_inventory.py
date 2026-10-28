@@ -11,6 +11,7 @@ import gzip
 import hashlib
 import json
 from pathlib import Path
+from published_files import published_source_files
 
 # These native exports have no header row. Their first record is data, and the
 # column labels below describe the source format rather than changing the file.
@@ -53,9 +54,7 @@ def main():
         assert sorted(tools) == ['BLAZE', 'Flexiplex', 'RAD'], (dataset, tools)
     assert all(row['accessions'] for row in inventory)
     files = []
-    for path in sorted((root / 'source_data').rglob('*')):
-        if not path.is_file():
-            continue
+    for path in published_source_files(root):
         record = {'file': str(path.relative_to(root)), 'bytes': path.stat().st_size,
                   'sha256': digest(path), 'rows': '', 'columns': '', 'header_present': ''}
         suffix = path.name[:-3] if path.suffix == '.gz' else path.name

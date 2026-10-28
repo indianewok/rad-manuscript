@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 """Publish exact parameters separately for each selected Figure3 analysis arm."""
-import json,shutil
+import argparse,json,shutil
 from pathlib import Path
+from source_paths import reviewer_root
 from figure_3 import ROOT,sha,read,write,js
+from tool_parameter_schema import FIELDS, project_parameters, details_path_name, prepare_evidence_rows
 
-B=Path('/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data')
+B=reviewer_root()
 RAD='cd0582b2440cde0f35725dc557fa47307d74d374'
 BLAZE='af8d2cc9f6374caf4d1006d5f8a0e99097211646'
 FLEX='d84c8ae4f3865052f2b5ecec816949b94682f302'
@@ -18,6 +20,9 @@ def metadata(path):
     return answer
 
 def main():
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--project-root',type=Path,default=reviewer_root(),help='Restored reviewer source archive')
+    args=parser.parse_args();B=args.project_root
     out=ROOT/'manifests/figure_3_producers';out.mkdir(exist_ok=True);result=[]
     fields=['analysis','dataset','tool','replicate','version','source_commit','binary_sha256','entrypoint_sha256','patch_sha256','threads','compression_threads','PYTHONHASHSEED','FLEXIPLEX_AUDIT_SOURCE_FILE','chemistry','input_sha256','catalog_sha256','reference_sha256','target_sha256','list_seed','layout_sha256','argv','evidence','evidence_sha256','limitations']
     def record(**kwargs):result.append({k:kwargs.get(k,'') for k in fields})
@@ -46,6 +51,8 @@ def main():
             if not p.exists():continue
             m=json.loads(p.read_text());saved=out/f'rage_offlist_{t}_rep{rep}.json';shutil.copyfile(p,saved)
             record(analysis='offlist matched raw replay',dataset='RAGE-seq',tool=m['tool'],replicate=rep,version={'rad':'1.0.2 rebuilt from pinned source','blaze':'2.6.0a0','flexiplex':'1.02.6 diagnostic'}[t],source_commit={'rad':RAD,'blaze':BLAZE,'flexiplex':FLEX}[t],binary_sha256=m['executable_sha256'],entrypoint_sha256=sha(exp['blaze_entrypoint']) if t=='blaze' else '',patch_sha256=PATCH if t=='flexiplex' else '',threads=16,compression_threads=2,PYTHONHASHSEED='20261023',FLEXIPLEX_AUDIT_SOURCE_FILE='UNSET',chemistry='10x3v2 UMI10',input_sha256=m['input_sha256'],catalog_sha256=m['catalog_sha256'],reference_sha256=m['reference_sha256'],target_sha256=m['target_sha256'],list_seed=2026102300+rep,layout_sha256=m['layout_sha256'],argv=json.dumps(m.get('pipeline',m['argv'])),evidence=str(saved.relative_to(ROOT)),evidence_sha256=sha(saved),limitations='Producer status='+m['status']+'; full physical-ID count validation recorded separately')
-    write(ROOT/'manifests/figure_3_tool_parameters.tsv',result,fields)
+    result=prepare_evidence_rows(result,ROOT)
+    write(ROOT/'manifests'/details_path_name('3'),result,fields+['evidence_original_sha256'])
+    write(ROOT/'manifests/figure_3_tool_parameters.tsv',project_parameters(result,'3',ROOT),FIELDS)
     print(json.dumps({'status':'written','analysis_arms':len(result),'manifest':'manifests/figure_3_tool_parameters.tsv'}))
 if __name__=='__main__':main()

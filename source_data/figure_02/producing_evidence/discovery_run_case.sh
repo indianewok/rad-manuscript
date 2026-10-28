@@ -10,15 +10,15 @@ dataset=$1
 tag=$2
 input=$3
 
-root=/scratch/f005f43/sctagger_sl_three_tool_quality_20260731
+root=external_data/reviewer_comment_data/scratch_preservation_20260921/files/sctagger_sl_three_tool_quality_20260731
 adapter=CTACACGACGCTCTTCCGATCT
-global_whitelist=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/cellranger_whitelists/3M-february-2018-3v3.txt
-rad=/scratch-nfs/f005f43/longbench_full_demux_20260730/tools/rad_920adda_edlibfix/build_release/rad
-blaze=/scratch/f005f43/blaze2_260a0_native_20260727/venv/bin/blaze
-flex=/scratch/f005f43/measles_p7_p8_four_tool_20260730/tools/flexiplex-v1.02.6/flexiplex-linux
-flex_filter=/scratch/f005f43/rad_longbench_20260726/benchmarks/flexiplex_valid_to_valid_correction_audit_20260728/tools/flexiplex-v1.02.6-audit/scripts/flexiplex_filter/main.py
-python=/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/miniconda3/bin/python
-conda_lib=/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/miniconda3/lib
+global_whitelist=external_data/cellranger_whitelists/3M-february-2018-3v3.txt
+rad=external_data/reviewer_comment_data/scratch_preservation_20260921/files/longbench_full_demux_20260730/tools/rad_920adda_edlibfix/build_release/rad
+blaze=external_data/reviewer_comment_data/scratch_preservation_20260921/files/blaze2_260a0_native_20260727/venv/bin/blaze
+flex=external_data/reviewer_comment_data/scratch_preservation_20260921/files/measles_p7_p8_four_tool_20260730/tools/flexiplex-v1.02.6/flexiplex-linux
+flex_filter=external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_longbench_20260726/benchmarks/flexiplex_valid_to_valid_correction_audit_20260728/tools/flexiplex-v1.02.6-audit/scripts/flexiplex_filter/main.py
+python=external_data/software/miniconda3/bin/python
+conda_lib=external_data/software/miniconda3/lib
 threads=${SCTAGGER_TOOL_THREADS:-8}
 
 case "${dataset}" in

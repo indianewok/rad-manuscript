@@ -10,11 +10,11 @@
   "argv": [
     "scripts/figure_02/summarize_full_barcode_quality_2018.py",
     "--fastq",
-    "/scratch-nfs/f005f43/rad_full_barcode_quality_20261024/inputs/shuffled_L_lr_synth.badread2018_truthbc.shift_p01.fq.gz",
+    "external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_full_barcode_quality_20261024/inputs/shuffled_L_lr_synth.badread2018_truthbc.shift_p01.fq.gz",
     "--input-shift",
     "1",
     "--output-dir",
-    "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_02/full_read_quality_2018",
+    "source_data/figure_02/full_read_quality_2018",
     "--workers",
     "7",
     "--sample-csv",
@@ -29,7 +29,7 @@
     "SLURM_CPUS_PER_TASK": "8"
   },
   "input": {
-    "path": "/dartfs-hpc/scratch/f005f43/rad_full_barcode_quality_20261024/inputs/shuffled_L_lr_synth.badread2018_truthbc.shift_p01.fq.gz",
+    "path": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_full_barcode_quality_20261024/inputs/shuffled_L_lr_synth.badread2018_truthbc.shift_p01.fq.gz",
     "bytes": 9240006410,
     "mtime_ns": 1792853316544102818
   },
@@ -77,7 +77,7 @@
   ],
   "native_recovery": "Qnative=Qstored-input_shift; selected original model support1..28 and offsets1..13 imply no clipping; all stored quality bytes checked before inversion",
   "quality_hash_scope": "quality_sha256 hashes actual stored shifted FASTQ qualities; recovered_native_quality_sha256 hashes their exact inverse",
-  "original_2018_generator": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/LongBench_comps/ScTagger_quality_sweep_20260731/code/original_quality_generation/generate_truth_conditioned_qscores.py",
+  "original_2018_generator": "external_data/reviewer_comment_data/LongBench_comps/ScTagger_quality_sweep_20260731/code/original_quality_generation/generate_truth_conditioned_qscores.py",
   "original_2018_generator_sha256": "3efcd5b677bc65b3eebcfb9ed48432829b3c3a5cbb2521807e24f85cd57c834d",
   "original_2018_model_sha256": "6f60b7db6691bdf5955da54f621776bd7584d6c21b30f7290dff82d7037a0a85",
   "locator_identity": "All three copied locator function ASTs are identical to the original2018 generator",
@@ -96,7 +96,7 @@
   },
   "script_sha256": "42b4aac31e98ee426a04bb1530ee377104077f69896cc49d5dacc92b5ca76836",
   "locator_sha256": "0ead90df058cfd940befd3a0b7a659d9f030f01fc382863dcd7e67e583f0fb68",
-  "locator_original_source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/sctagger_nanopore2023_unadjusted_20260913/scripts/generate_truth_conditioned_qscores.py",
+  "locator_original_source": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/sctagger_nanopore2023_unadjusted_20260913/scripts/generate_truth_conditioned_qscores.py",
   "locator_original_source_sha256": "aef619a3f417c4aa4c2c9ac3bfd161916a7e85efa23720ae74a8b630a9026e49",
   "locator_copied_functions_sha256": "1d6e2734bb901c2bfe01b99a5aa60dfb6b51508f6dcc3d195b926d2739da4b5b",
   "counting": "Truth-located 16-base window ED0 versus ED>0; per-base transform precedes averaging; unlocated reads excluded from both groups",

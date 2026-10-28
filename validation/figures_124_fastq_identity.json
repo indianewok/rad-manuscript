@@ -1,6 +1,6 @@
 {
   "command": [
-    "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/miniconda3/bin/python3",
+    "external_data/software/miniconda3/bin/python3",
     "scripts/revision/figures_124_fastq_audit.py"
   ],
   "cpus": "1",
@@ -20,7 +20,7 @@
       "max_q": 20,
       "mean_q": 20.0,
       "min_q": 20,
-      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_longbench_20260726/data/shuffled_L_lr_synth.fq.gz",
+      "path": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_longbench_20260726/data/shuffled_L_lr_synth.fq.gz",
       "quality_histogram": {
         "20": 8394808882
       },
@@ -40,7 +40,7 @@
       "max_q": 90,
       "mean_q": 31.669502288616844,
       "min_q": 1,
-      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/sctagger_nanopore2023_unadjusted_20260913/inputs/L_variants/shuffled_L_lr_synth.nanopore2023_truthbc.native_unadjusted.fq.gz",
+      "path": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/sctagger_nanopore2023_unadjusted_20260913/inputs/L_variants/shuffled_L_lr_synth.nanopore2023_truthbc.native_unadjusted.fq.gz",
       "quality_histogram": {
         "1": 7910,
         "10": 111015971,
@@ -139,7 +139,7 @@
       "max_q": 20,
       "mean_q": 20.0,
       "min_q": 20,
-      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_longbench_20260726/data/shuffled_S_lr_synth.fq.gz",
+      "path": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_longbench_20260726/data/shuffled_S_lr_synth.fq.gz",
       "quality_histogram": {
         "20": 320489068
       },

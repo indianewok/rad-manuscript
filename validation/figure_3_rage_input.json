@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/raw_fastq_datasets/rageseq.fq.gz",
+  "source": "external_data/raw_fastq_datasets/rageseq.fq.gz",
   "compressed_sha256": "cfdba50a497dd4f6b24c2a4e730e297a09498ad5fe006f65eee01fa202bcdcec",
   "bytes": 16922373879,
   "physical_reads": 20346396,

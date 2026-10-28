@@ -2,12 +2,12 @@
 set -euo pipefail
 umask 007
 
-root=/scratch-nfs/f005f43/measles_p8_whole_three_tool_20260801
-input=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/raw_fastq_datasets/complex_outsourced_datasets/measles_wgs/mmr_p8_raw_data/SRR28349078.fastq.gz
-design=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/cellranger_whitelists/3M-february-2018-3v3.txt
-flex=/scratch/f005f43/measles_p7_p8_four_tool_20260730/tools/flexiplex-v1.02.6/flexiplex-linux
-filter=/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/miniconda3/bin/flexiplex-filter
-conda_lib=/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/miniconda3/lib
+root=external_data/reviewer_comment_data/scratch_preservation_20260921/files/measles_p8_whole_three_tool_20260801
+input=external_data/raw_fastq_datasets/complex_outsourced_datasets/measles_wgs/mmr_p8_raw_data/SRR28349078.fastq.gz
+design=external_data/cellranger_whitelists/3M-february-2018-3v3.txt
+flex=external_data/reviewer_comment_data/scratch_preservation_20260921/files/measles_p7_p8_four_tool_20260730/tools/flexiplex-v1.02.6/flexiplex-linux
+filter=external_data/software/miniconda3/bin/flexiplex-filter
+conda_lib=external_data/software/miniconda3/lib
 discovery="$root/runs/flexiplex/discovery"
 demux="$root/runs/flexiplex/demux"
 prefix="$discovery/p8_wt_SRR28349078"

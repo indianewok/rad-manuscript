@@ -11,12 +11,12 @@
   "guide_sha256": "249524eb414fa63a89defab295602fef8188abf05c8114d6e5e6c8354c1c3ead",
   "preview_sha256": "5d40c29190ff0d7a9889f0c9d83c7eff251af3bfc77834ac764f85cd26b30083",
   "commands": [
-    "/usr/bin/python3 scripts/figure_05/normalize_component_stats.py --input data/examples/figure_05/splitseq/component_native_stats.tsv --output /tmp/figure05_component_independent.tsv",
-    "cmp /tmp/figure05_component_independent.tsv data/examples/figure_05/splitseq/component_assignments.tsv",
-    "/usr/bin/python3 scripts/figure_05/aggregate_splitseq.py --assignments /tmp/figure05_component_independent.tsv --cells data/examples/figure_05/splitseq/cells.tsv --rt-primers data/figure_05/rt_primer_well_map.csv --format component --output /tmp/figure05_component_independent_counts.tsv --report /tmp/figure05_component_independent_counts.json",
-    "cmp /tmp/figure05_component_independent_counts.tsv data/examples/figure_05/splitseq/component_bounded_counts.tsv",
-    "/usr/bin/python3 scripts/figure_05/aggregate_splitseq.py --assignments data/examples/figure_05/splitseq/rad_assignments.tsv --cells data/examples/figure_05/splitseq/cells.tsv --rt-primers data/figure_05/rt_primer_well_map.csv --format rad --output /tmp/figure05_rad_independent_counts.tsv --report /tmp/figure05_rad_independent_counts.json",
-    "cmp /tmp/figure05_rad_independent_counts.tsv data/examples/figure_05/splitseq/rad_bounded_counts.tsv"
+    "/usr/bin/python3 scripts/figure_05/normalize_component_stats.py --input data/examples/figure_05/splitseq/component_native_stats.tsv --output external_data/temporary/figure05_component_independent.tsv",
+    "cmp external_data/temporary/figure05_component_independent.tsv data/examples/figure_05/splitseq/component_assignments.tsv",
+    "/usr/bin/python3 scripts/figure_05/aggregate_splitseq.py --assignments external_data/temporary/figure05_component_independent.tsv --cells data/examples/figure_05/splitseq/cells.tsv --rt-primers data/figure_05/rt_primer_well_map.csv --format component --output external_data/temporary/figure05_component_independent_counts.tsv --report external_data/temporary/figure05_component_independent_counts.json",
+    "cmp external_data/temporary/figure05_component_independent_counts.tsv data/examples/figure_05/splitseq/component_bounded_counts.tsv",
+    "/usr/bin/python3 scripts/figure_05/aggregate_splitseq.py --assignments data/examples/figure_05/splitseq/rad_assignments.tsv --cells data/examples/figure_05/splitseq/cells.tsv --rt-primers data/figure_05/rt_primer_well_map.csv --format rad --output external_data/temporary/figure05_rad_independent_counts.tsv --report external_data/temporary/figure05_rad_independent_counts.json",
+    "cmp external_data/temporary/figure05_rad_independent_counts.tsv data/examples/figure_05/splitseq/rad_bounded_counts.tsv"
   ],
   "checks": [
     {

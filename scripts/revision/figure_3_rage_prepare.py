@@ -2,6 +2,7 @@
 """Freeze the current matched RAGE input, references and three target lists."""
 import argparse,csv,gzip,hashlib,json,random,shutil,sys
 from pathlib import Path
+from source_paths import data_root
 from figure_3 import ROOT,sha,write,js
 from figure_3_rage_verify_tools import verify_tools
 EXPECTED_CANONICAL_RECORD_SHA256='a5f866d6180b46e0acbd3aa2526364060c152380714b00ec0ed74b8c1e8c24af'
@@ -14,7 +15,7 @@ def decode_bitlist(value):
     return ''.join(reversed(bases))
 
 def main():
-    data=Path('/dartfs/rc/lab/A/AckermanLab/CMV/rad_data')
+    data=data_root()
     base=ROOT/'checkpoints/figure_03/rage_matched';inputs=base/'inputs';inputs.mkdir(parents=True,exist_ok=True)
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--input',type=Path,default=data/'raw_fastq_datasets/rageseq.fq.gz')

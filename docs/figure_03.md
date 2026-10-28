@@ -2,9 +2,7 @@
 
 Figure 3 tests how often tools assign reads to supplied target lists that exclude the matched reference, then examines barcode correction in LongBench single-cell and single-nucleus ONT and PacBio data. The supplied-list challenges count original physical reads. The correction analysis counts unique original-read–target-barcode pairs.
 
-![Figure 3. Saved Prism layout.](../figures/figure_03/prism/figure_03.png)
-
-[Prism source and export details](../manifests/prism_exports.json). The saved schematic uses biological labels; the calculations below classify observed barcode sequences by chemistry-catalog and matched-reference membership.
+![Figure 3](../figures/figure_03/prism/figure_03.png)
 
 ## Supplied-list challenges
 
@@ -20,7 +18,7 @@ The LongBench subsample used SeqKit 2.8.2 with seed `2026081326`. List sampling 
 
 ## Software and parameters
 
-The [run manifest](../manifests/figure_3_tool_parameters.tsv) links exact commands, versions, executable and source hashes, input and list identities, thread counts, and seeds to the [individual run records](../manifests/figure_3_producers/).
+The [run table](../manifests/figure_3_tool_parameters.tsv) lists versions, commits, threads, chemistry and saved commands. [Run evidence](../manifests/figure_3_run_evidence.tsv) records executable/source hashes, input and list identities and seeds, linked to the [individual run records](../manifests/figure_3_producers/).
 
 | Analysis | RAD | BLAZE | Flexiplex |
 |---|---|---|---|
@@ -52,9 +50,10 @@ This RAGE read has one assignment in the complete RAD replicate-1 output. Its ta
 Run a complete target-level counting example with:
 
 ```bash
+mkdir -p results
 python3 scripts/revision/figure_3_example_count.py \
   data/examples/figure_03/sctagger_rad_rep1_assignments.tsv \
-  data/examples/figure_03/sctagger_rad_rep1_targets.txt /tmp/sc_counts.tsv
+  data/examples/figure_03/sctagger_rad_rep1_targets.txt results/sc_counts.tsv
 ```
 
 The [expected output](../data/examples/figure_03/sctagger_rad_rep1_counts.tsv) contains ten reads for `AAACCCACACAGTGAG`. The example includes all assignments to that target and every other record sharing one of those original identifiers. The [duplicate example](../data/examples/figure_03/actual_duplicate_assignments.tsv) contains two records for one original read; both are excluded. [Counting checks](../validation/figure_3_counting_fixtures.json) cover repeated identical targets, conflicting targets, read re-entry, zero-count targets, and concatemer records.
@@ -87,7 +86,7 @@ Tool-selected targets are joined by barcode sequence within each dataset. An uns
 
 ```bash
 python3 scripts/revision/figure_3_example_percent.py \
-  data/examples/figure_03/correction_C5_input.tsv /tmp/correction_percent.tsv
+  data/examples/figure_03/correction_C5_input.tsv results/correction_percent.tsv
 ```
 
 For the example BLAZE target, 1,861 Failure Mode 2 pairs among 13,809 total pairs give 13.4767%. [Expected output](../data/examples/figure_03/correction_C6_output.tsv), [per-target correction counts and percentages](../source_data/figure_03/correction_per_target.tsv.gz), and [correction totals](../source_data/figure_03/correction_totals.tsv) connect this calculation to panels E–G. All twelve complete per-target tables and selected target lists passed [identity checks](../validation/figure_3_reference_identity.json). Reconstruction of individual pair overlaps additionally requires the original source-bearing assignment streams, which are absent from their recorded paths.
@@ -154,4 +153,4 @@ python3 scripts/revision/figure_3.py validate
 python3 scripts/revision/figure_3.py render
 ```
 
-[Panel bindings](../source_data/figure_03/panel_data_manifest.tsv), the [schema](../source_data/figure_03/schema.json), and [checksums](../source_data/figure_03/checksums.json) identify each plot’s table, keys, metric, and units. The renderer produces numerical-check plots from these tables; the image above uses the saved Prism layout.
+[Panel bindings](../source_data/figure_03/panel_data_manifest.tsv), the [schema](../source_data/figure_03/schema.json), and [checksums](../source_data/figure_03/checksums.json) identify each plot’s table, keys, metric, and units. The renderer produces numerical-check plots from these tables.

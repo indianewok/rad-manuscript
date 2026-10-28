@@ -6,9 +6,10 @@ No positions, expression values, or missing bins are imputed.
 """
 import argparse,csv,gzip,json,sys
 from pathlib import Path
+from source_paths import data_root
 from figures_124 import REPO,sha,rows,write_rows,write_json
 p=argparse.ArgumentParser(description=__doc__)
-p.add_argument('--project-root',type=Path,default=Path('/dartfs/rc/lab/A/AckermanLab/CMV/rad_data'))
+p.add_argument('--project-root',type=Path,default=data_root())
 p.add_argument('--output-root',type=Path,default=REPO)
 a=p.parse_args();out=a.output_root
 base=a.project_root/'raw_fastq_datasets/complex_outsourced_datasets/visium_hd_lr'

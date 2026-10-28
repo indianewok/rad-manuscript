@@ -12,6 +12,7 @@ import gzip
 import hashlib
 import json
 from pathlib import Path
+from source_paths import reviewer_root
 import sys
 import numpy as np
 from figures_567 import sha, read, write
@@ -43,7 +44,7 @@ def matrix(path):
 
 def main():
     p=argparse.ArgumentParser(description=__doc__)
-    p.add_argument('--project-root',type=Path,default=Path('/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data'))
+    p.add_argument('--project-root',type=Path,default=reviewer_root())
     p.add_argument('--output-root',type=Path,default=Path(__file__).resolve().parents[2])
     a=p.parse_args();project=a.project_root;out=a.output_root
     checks=[];assets=[];cohorts=[]

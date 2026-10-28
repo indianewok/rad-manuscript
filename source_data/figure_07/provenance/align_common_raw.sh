@@ -10,17 +10,17 @@
 # Usage: align_arm.sh <arm_name> <raw_fastq.gz> [threads]
 set -uo pipefail
 
-WD=/scratch-nfs/f005f43/rad_biological_benchmark_20260731
+WD=external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_biological_benchmark_20260731
 source "$WD/scripts/lib_run.sh"
 
 ARM="$1"
 FQ="$2"
 THREADS="${3:-48}"
 
-BIN=/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/miniconda3/envs/ab_assembly/bin
+BIN=external_data/software/miniconda3/envs/ab_assembly/bin
 MINIMAP2="$BIN/minimap2"
 SAMTOOLS="$BIN/samtools"
-REF=/scratch-nfs/f005f43/longbench_full_demux_20260730/references/gencode_v44/GRCh38.primary_assembly.genome.fa
+REF=external_data/reviewer_comment_data/scratch_preservation_20260921/files/longbench_full_demux_20260730/references/gencode_v44/GRCh38.primary_assembly.genome.fa
 MMI="$WD/refs/GRCh38.primary_assembly.splice.mmi"
 
 OUT="$WD/align/$ARM"

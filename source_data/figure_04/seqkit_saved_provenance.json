@@ -1,5 +1,5 @@
 {
-  "source_prism": "/Volumes/rad_data/reviewer_comment_data/paper_revision_20261022/evidence/092126_Figure_4_CMV_V1.prism",
+  "source_prism": "external_data/reviewer_comment_data/paper_revision_20261022/evidence/092126_Figure_4_CMV_V1.prism",
   "sha256": "8d3d1b1c4dca8cfcccf7e34f5d195ebd758a6a9fd7a7a57fc66d143762bfc38b",
   "source_sheet": {
     "@class": "DataSheet",

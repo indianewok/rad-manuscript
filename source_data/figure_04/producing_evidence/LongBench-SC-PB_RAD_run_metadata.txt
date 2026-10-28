@@ -1,6 +1,6 @@
 dataset=SC_PB
-input=/scratch-nfs/f005f43/rad_longbench_20260726/data/sc_sn/raw_fastq/SC_PB.fastq.gz
-input_resolved=/dartfs-hpc/scratch/f005f43/rad_longbench_20260726/data/sc_sn/raw_fastq/SC_PB.fastq.gz
+input=external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_longbench_20260726/data/sc_sn/raw_fastq/SC_PB.fastq.gz
+input_resolved=external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_longbench_20260726/data/sc_sn/raw_fastq/SC_PB.fastq.gz
 input_size_bytes=79878370809
 rad_version=1.0.2
 rad_commit=920addacdbf40b815e13a146226e8f4b14a58aaf
@@ -9,7 +9,7 @@ rad_binary_sha256=b2feda73a4ae3acf705b724013665af35dff2534f42a568db3f168ca958a2c
 threads=32
 scan_max_error=0.1
 scan_reference=10x_3v3.1
-global_catalog=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/cellranger_whitelists/3M-february-2018-3v3.txt
+global_catalog=external_data/cellranger_whitelists/3M-february-2018-3v3.txt
 correction_mode=offensive
 whitelist_mutation=2
 generated_mutation=2

@@ -7,7 +7,7 @@ shuffled_L_lr_synth.nanopore2023_truthbc.native_unadjusted.fq.gz 2000000 records
 shuffled_L_lr_synth.nanopore2023_truthbc.native_unadjusted.fq.gz 3000000 records 206.4 seconds
 shuffled_L_lr_synth.nanopore2023_truthbc.native_unadjusted.fq.gz 4000000 records 269.9 seconds
 Full FASTQ identity audit passed
-	Command being timed: "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/miniconda3/bin/python3 scripts/revision/figures_124_fastq_audit.py"
+	Command being timed: "external_data/software/miniconda3/bin/python3 scripts/revision/figures_124_fastq_audit.py"
 	User time (seconds): 266.12
 	System time (seconds): 30.64
 	Percent of CPU this job got: 61%

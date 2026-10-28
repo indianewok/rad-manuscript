@@ -1,19 +1,19 @@
 replicate=2
 affinity=16-31,80-95
 threads=32
-input	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260731_sctagger_badread_quality_full/inputs/L/flatQ20.fq.gz
+input	external_data/reviewer_comment_data/wl_scan/20260731_sctagger_badread_quality_full/inputs/L/flatQ20.fq.gz
 input_sha256	6f7385468b607cf86c91449b095c2968ee2a5d25ab473901102b87d141543090
-global_whitelist	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/sctagger_L_false_whitelist_20260813/provenance/global_chemistry_10x3v3_bitlist.csv.gz
+global_whitelist	external_data/reviewer_comment_data/sctagger_L_false_whitelist_20260813/provenance/global_chemistry_10x3v3_bitlist.csv.gz
 global_sha256	02f771363a95e786ab1a6ab1e554c770e58cdff2fb30f2d7a9fb50a97762d452
-target_whitelist	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/sctagger_L_false_whitelist_20260813/whitelists/false_rep2.txt
+target_whitelist	external_data/reviewer_comment_data/sctagger_L_false_whitelist_20260813/whitelists/false_rep2.txt
 target_sha256	44e3f1060221037b1c851fadc555bc8b2051f49631ffab7c6483d2ba01fe6f3b
 target_rows	5000
-rad_binary	/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad/build/rad
+rad_binary	external_data/software/rad/build/rad
 rad_sha256	80a573fe05fa1a236751240fad7da17ca00e2d55a95259ca997584a8a5e0e67c
 rad_version	rad 1.0.2
 git_commit	cd0582b2440cde0f35725dc557fa47307d74d374
-layout	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/sctagger_L_fixed5000_three_tool_20260812/rad/three_prime_10x3v3_umi12_layout.csv
+layout	external_data/reviewer_comment_data/sctagger_L_fixed5000_three_tool_20260812/rad/three_prime_10x3v3_umi12_layout.csv
 layout_sha256	c5cbbb07958a9c1ca6f9c0452ad1dd01933d5a51efba6f67522897c5dd4146fb
 settings	10x3v3; bc_correction=offensive; ED=2; whitelist_mutation=2; generated_mutation=2; chunk=5000; umi_rc=default
-command	taskset -c 16-31\,80-95 /usr/bin/time -v -o time.verbose.txt -- /dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad/build/rad demux -l /dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/sctagger_L_fixed5000_three_tool_20260812/rad/three_prime_10x3v3_umi12_layout.csv -q /dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260731_sctagger_badread_quality_full/inputs/L/flatQ20.fq.gz -g /dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/sctagger_L_false_whitelist_20260813/provenance/global_chemistry_10x3v3_bitlist.csv.gz -c /dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/sctagger_L_false_whitelist_20260813/whitelists/false_rep2.txt -R offensive -M 2 -m 2 -z 5000 -o L_flatQ20_false_rep2_rad -d /dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/sctagger_L_false_whitelist_20260813/runs/rad/rep2 -F /dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/sctagger_L_false_whitelist_20260813/runs/rad/rep2/L_flatQ20_false_rep2_rad.log -t 32 -v 
+command	taskset -c 16-31\,80-95 /usr/bin/time -v -o time.verbose.txt -- external_data/software/rad/build/rad demux -l external_data/reviewer_comment_data/sctagger_L_fixed5000_three_tool_20260812/rad/three_prime_10x3v3_umi12_layout.csv -q external_data/reviewer_comment_data/wl_scan/20260731_sctagger_badread_quality_full/inputs/L/flatQ20.fq.gz -g external_data/reviewer_comment_data/sctagger_L_false_whitelist_20260813/provenance/global_chemistry_10x3v3_bitlist.csv.gz -c external_data/reviewer_comment_data/sctagger_L_false_whitelist_20260813/whitelists/false_rep2.txt -R offensive -M 2 -m 2 -z 5000 -o L_flatQ20_false_rep2_rad -d external_data/reviewer_comment_data/sctagger_L_false_whitelist_20260813/runs/rad/rep2 -F external_data/reviewer_comment_data/sctagger_L_false_whitelist_20260813/runs/rad/rep2/L_flatQ20_false_rep2_rad.log -t 32 -v 
 exit_status	0

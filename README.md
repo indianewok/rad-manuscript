@@ -19,7 +19,7 @@ the calculations that produced them.
 | [6](docs/figure_06.md) | Genotype analysis in LongBench single-nucleus data |
 | [7](docs/figure_07.md) | Differential cell-line expression in LongBench single-nucleus data |
 
-[View the figures](figures/README.md) as exported from the saved Prism projects.
+[View the figures](figures/README.md).
 
 ## Data and analysis
 

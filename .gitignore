@@ -68,3 +68,7 @@ validation/*_flexparity_*.out
 validation/*_flexparity_*.err
 validation/*_[0-9]*.out
 validation/*_[0-9]*.err
+
+/external_data/
+
+/results/

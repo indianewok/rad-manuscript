@@ -15,20 +15,21 @@ import json
 import math
 from collections import Counter, defaultdict
 from pathlib import Path
+from source_paths import reviewer_root, scratch_root, resolve_source
 
 
-DEFAULT_ROOT = Path("/scratch/f005f43/master_native_comparison_20260811")
-CORE = Path("/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv")
-TILGNER = Path("/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv")
-VISIUM = Path("/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv")
-VISIUM_MANIFEST = Path("/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/provenance/status_callset_manifest.csv")
+DEFAULT_ROOT = scratch_root() / 'master_native_comparison_20260811'
+CORE = reviewer_root() / 'whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv'
+TILGNER = reviewer_root() / 'tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv'
+VISIUM = reviewer_root() / 'visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv'
+VISIUM_MANIFEST = reviewer_root() / 'visium_three_tool_splitaware_scatter_20260802/provenance/status_callset_manifest.csv'
 TOOLS = ("RAD", "BLAZE", "Flexiplex")
 PATH_MAP = {}
 
 
 def mapped_path(value):
     """Explicit transport mapping; original provenance strings stay intact."""
-    return Path(PATH_MAP.get(str(value), str(value)))
+    return resolve_source(PATH_MAP.get(str(value), str(value)),base=reviewer_root())
 
 
 def read(path: Path, delimiter: str):

@@ -17,7 +17,7 @@
     }
   ],
   "output": {
-    "path": "/tmp/fig1_tissue_positions_16um_reconstructed.csv",
+    "path": "external_data/temporary/fig1_tissue_positions_16um_reconstructed.csv",
     "sha256": "12fccf3db188719033a38bd0a51a97ecf6090f96821f8d6a734d8bfb2a672c74"
   },
   "limitations": "Original named tissue_positions CSV not recovered. Only required barcode/array_row/array_col/in_tissue columns reconstructed exactly from deposited wide-derived data; no pixel coordinates or Seurat expression imputed."

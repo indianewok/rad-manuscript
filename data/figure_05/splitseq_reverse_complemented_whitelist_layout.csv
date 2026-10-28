@@ -1,9 +1,9 @@
 ﻿Read Layout,,,,,
 id,seq,expected_length,type,class,whitelist
 read,,,variable,read,
-barcode_1,,8,variable,barcode,/Volumes/CMV_SSD_2/benchmarks/flamesv2_splitseq_20260728/reverse_complemented_whitelist_test_20260728/splitseq_bc2_reverse_complement.txt
+barcode_1,,8,variable,barcode,external_data/workstation/benchmarks/flamesv2_splitseq_20260728/reverse_complemented_whitelist_test_20260728/splitseq_bc2_reverse_complement.txt
 linker_1,CCACAGTCTCAAGCACGTGGAT,,static,linker,
-barcode_2,,8,variable,barcode,/Volumes/CMV_SSD_2/benchmarks/flamesv2_splitseq_20260728/reverse_complemented_whitelist_test_20260728/splitseq_bc1_reverse_complement.txt
+barcode_2,,8,variable,barcode,external_data/workstation/benchmarks/flamesv2_splitseq_20260728/reverse_complemented_whitelist_test_20260728/splitseq_bc1_reverse_complement.txt
 linker_2,AGTCGTACGCCGATGCGAAACATCGGCCAC,,static,linker,
-barcode_3,,8,variable,barcode,/Volumes/CMV_SSD_2/benchmarks/flamesv2_splitseq_20260728/reverse_complemented_whitelist_test_20260728/splitseq_bc1_reverse_complement.txt
+barcode_3,,8,variable,barcode,external_data/workstation/benchmarks/flamesv2_splitseq_20260728/reverse_complemented_whitelist_test_20260728/splitseq_bc1_reverse_complement.txt
 umi,,10,variable,umi,

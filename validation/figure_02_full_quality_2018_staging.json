@@ -1,9 +1,9 @@
 {
-  "source": "/scratch/f005f43/sctagger_sl_three_tool_quality_20260731/inputs/L_variants/shuffled_L_lr_synth.badread2018_truthbc.shift_p01.fq.gz",
+  "source": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/sctagger_sl_three_tool_quality_20260731/inputs/L_variants/shuffled_L_lr_synth.badread2018_truthbc.shift_p01.fq.gz",
   "source_host": "andes8.dartmouth.edu",
   "source_bytes": 9240006410,
   "source_mtime_ns": 1785536991784458045,
-  "staged_path": "/scratch-nfs/f005f43/rad_full_barcode_quality_20261024/inputs/shuffled_L_lr_synth.badread2018_truthbc.shift_p01.fq.gz",
+  "staged_path": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_full_barcode_quality_20261024/inputs/shuffled_L_lr_synth.badread2018_truthbc.shift_p01.fq.gz",
   "staged_bytes": 9240006410,
   "copied_stream_sha256": "a58144d27a142ce4622af18bf83f3c517f5f81c4d7ce170460868d69e9a49752",
   "elapsed_seconds": 25.671958629973233,

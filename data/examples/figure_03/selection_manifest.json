@@ -3,7 +3,7 @@
   "examples": [
     {
       "example": "sctagger_rad_rep1",
-      "source": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/offlist_recount/sctagger_rad_rep1_assignments.tsv.gz",
+      "source": "checkpoints/figure_03/offlist_recount/sctagger_rad_rep1_assignments.tsv.gz",
       "source_sha256": "b18801805bb4f706231278ea7570594bb9c139332c4ce0c248490a0b7930e2dc",
       "selection": "All rows with target=AAACCCACACAGTGAG, then all rows sharing ANY selected original_id; complete identity closure, no row limit",
       "assignment_rows": 10,
@@ -18,12 +18,12 @@
         "strict_assigned": "10"
       },
       "output_sha256": "9949a60f47faf6011a87cb61a17209424ae3e3af536112ffe361c79d1004c528",
-      "producer_fastq": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/sctagger_L_false_whitelist_20260813/runs/rad/rep1/L_flatQ20_false_rep1_rad.fq.gz",
+      "producer_fastq": "external_data/reviewer_comment_data/sctagger_L_false_whitelist_20260813/runs/rad/rep1/L_flatQ20_false_rep1_rad.fq.gz",
       "producer_fastq_sha256": "b9ed42b6178359f4db4e52b11764a7d5e1d82e7cb5caa36061afc88720d3f262"
     },
     {
       "example": "longbench_flexiplex_rep1",
-      "source": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/offlist_recount/longbench_flexiplex_rep1_assignments.tsv.gz",
+      "source": "checkpoints/figure_03/offlist_recount/longbench_flexiplex_rep1_assignments.tsv.gz",
       "source_sha256": "4fb736b5c619a4345a9caddd771fb3370a451ff259746d8ff3911889b80b0534",
       "selection": "All rows with target=CCACTTGTCTTTCTTC, then all rows sharing ANY selected original_id; complete identity closure, no row limit",
       "assignment_rows": 45,
@@ -41,7 +41,7 @@
     },
     {
       "example": "actual_duplicate",
-      "source": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/offlist_recount/sctagger_rad_rep1_assignments.tsv.gz",
+      "source": "checkpoints/figure_03/offlist_recount/sctagger_rad_rep1_assignments.tsv.gz",
       "source_sha256": "b18801805bb4f706231278ea7570594bb9c139332c4ce0c248490a0b7930e2dc",
       "selection": "First physical ID in source row order having >1 assignment row; all rows for that ID",
       "original_id": "AACAACCGTGGGTATG-737",
@@ -49,7 +49,7 @@
     },
     {
       "example": "rage_raw_to_rad",
-      "source": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/inputs/pilot_10000.fastq.gz",
+      "source": "checkpoints/figure_03/rage_matched/inputs/pilot_10000.fastq.gz",
       "source_sha256": "4a1ebff6db6f3212a9e1256510dfd0edcd655c95d755190306a000cf6683fe81",
       "full_raw_sha256": "cfdba50a497dd4f6b24c2a4e730e297a09498ad5fe006f65eee01fa202bcdcec",
       "selection": "First three single-assignment physical IDs in FULL RADrep1 output order whose raw reads are in the verified first10,000raw-read slice; include every emitted full-run record for those IDs",
@@ -58,9 +58,9 @@
         "e5d9f3d1-d990-47cd-839a-0dff5da34064",
         "e7985c56-3434-4733-83c7-41fd5ab8249c"
       ],
-      "assigned_fastq_source": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/runs/rad/rep1/rage_rep1_rad.fq.gz",
+      "assigned_fastq_source": "checkpoints/figure_03/rage_matched/runs/rad/rep1/rage_rep1_rad.fq.gz",
       "assigned_fastq_sha256": "67efd06297dbcf9a4b03f613893651e6582b5199d26f3e8c483e7c26ebd2b137",
-      "full_C5_source": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/counts/per_target.tsv",
+      "full_C5_source": "checkpoints/figure_03/rage_matched/counts/per_target.tsv",
       "full_C5_sha256": "30096525f8a690d713fc3cd4d11037281111dcbbadb6d4bb33c3332b23580ac5",
       "scope": "actual full-run extraction illustration; linked complete target counts are deposited separately"
     }

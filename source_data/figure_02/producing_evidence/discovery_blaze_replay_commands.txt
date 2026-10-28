@@ -1,11 +1,11 @@
 Submission:
-sbatch --parsable /scratch-nfs/f005f43/sctagger_nanopore2023_extended_sweep_20260913/blaze_replay/scripts/replay_blaze.sbatch
+sbatch --parsable external_data/reviewer_comment_data/scratch_preservation_20260921/files/sctagger_nanopore2023_extended_sweep_20260913/blaze_replay/scripts/replay_blaze.sbatch
 Returned Slurm job ID: 9405774
 
-Batch execution (working directory /scratch-nfs/f005f43/sctagger_nanopore2023_extended_sweep_20260913/blaze_replay):
-PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 MPLBACKEND=Agg MPLCONFIGDIR=/scratch-nfs/f005f43/sctagger_nanopore2023_extended_sweep_20260913/blaze_replay/mpl /usr/bin/time -v -o logs/replay.time.txt /scratch-nfs/f005f43/sctagger_nanopore2023_unadjusted_20260913/tools/blaze_venv/bin/python scripts/replay_blaze.py
+Batch execution (working directory external_data/reviewer_comment_data/scratch_preservation_20260921/files/sctagger_nanopore2023_extended_sweep_20260913/blaze_replay):
+PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 MPLBACKEND=Agg MPLCONFIGDIR=external_data/reviewer_comment_data/scratch_preservation_20260921/files/sctagger_nanopore2023_extended_sweep_20260913/blaze_replay/mpl /usr/bin/time -v -o logs/replay.time.txt external_data/reviewer_comment_data/scratch_preservation_20260921/files/sctagger_nanopore2023_unadjusted_20260913/tools/blaze_venv/bin/python scripts/replay_blaze.py
 
 Per-condition function arguments are recorded in conditions/<condition>/selection_call.json. The unchanged staged BLAZE selection function is imported directly; the wrapper performs cached CSV counting, validation, truth scoring, and provenance output.
 
 Metadata-only correction after successful completion (no selection/count rerun):
-python /scratch-nfs/f005f43/sctagger_nanopore2023_extended_sweep_20260913/blaze_replay/scripts/correct_native_metadata.py
+python external_data/reviewer_comment_data/scratch_preservation_20260921/files/sctagger_nanopore2023_extended_sweep_20260913/blaze_replay/scripts/correct_native_metadata.py

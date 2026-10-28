@@ -6,7 +6,7 @@ No quality-model sampling or FASTQ generation is imported or executed.
 from typing import Dict, Optional, Tuple, List
 import edlib
 
-ORIGINAL_SOURCE_PATH = '/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/sctagger_nanopore2023_unadjusted_20260913/scripts/generate_truth_conditioned_qscores.py'
+ORIGINAL_SOURCE_PATH = 'scratch_preservation_20260921/files/sctagger_nanopore2023_unadjusted_20260913/scripts/generate_truth_conditioned_qscores.py'
 ORIGINAL_SOURCE_SHA256 = 'aef619a3f417c4aa4c2c9ac3bfd161916a7e85efa23720ae74a8b630a9026e49'
 COPIED_FUNCTIONS_SHA256 = '1d6e2734bb901c2bfe01b99a5aa60dfb6b51508f6dcc3d195b926d2739da4b5b'
 ADAPTER = "CTACACGACGCTCTTCCGATCT"

@@ -41,12 +41,12 @@
     }
   ],
   "command": [
-    "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/miniconda3/bin/python3",
+    "external_data/software/miniconda3/bin/python3",
     "scripts/revision/figures_124_prism_audit.py"
   ],
   "compared_values": 45000,
   "limitation": "CSV data and JSON bindings only. Separate structural duplicate-layout-ID finding and native Prism recalculation remain unresolved.",
-  "prism_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/paper_revision_20261022/prism/Figure2_corrected_20261022.prism",
+  "prism_path": "external_data/reviewer_comment_data/paper_revision_20261022/prism/Figure2_corrected_20261022.prism",
   "prism_sha256": "dded389f9d8214278f93d2669c64e704bbf2208c47db96bf57a4ce4c77d6d016",
   "script_sha256": "6cb44726694180a9f2255ae1d46775bd52f8649819ad694778af2e6ac950cc86",
   "status": "passed"

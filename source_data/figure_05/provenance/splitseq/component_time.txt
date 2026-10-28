@@ -1,4 +1,4 @@
-	Command being timed: "/usr/local/bin/Rscript /Users/cmv/Desktop/rad/benchmarks/lr_splitseq_no_polyt/run_component_no_polyt.R /Volumes/CMV_SSD_2/benchmarks/flamesv2_splitseq_20260728/FLAMES /Volumes/CMV_SSD_2/raw_fqs/splitseq.fq.gz /Volumes/CMV_SSD_2/benchmarks/flamesv2_splitseq_20260728/component_polyt_paired_t4 4 /Volumes/CMV_SSD_2/benchmarks/flamesv2_splitseq_20260728/inputs/local_whitelists/bc_8nt_v1.csv /Volumes/CMV_SSD_2/benchmarks/flamesv2_splitseq_20260728/inputs/local_whitelists/bc_8nt_v2.csv include"
+	Command being timed: "/usr/local/bin/Rscript external_data/software/rad/benchmarks/lr_splitseq_no_polyt/run_component_no_polyt.R external_data/workstation/benchmarks/flamesv2_splitseq_20260728/FLAMES external_data/workstation/raw_fqs/splitseq.fq.gz external_data/workstation/benchmarks/flamesv2_splitseq_20260728/component_polyt_paired_t4 4 external_data/workstation/benchmarks/flamesv2_splitseq_20260728/inputs/local_whitelists/bc_8nt_v1.csv external_data/workstation/benchmarks/flamesv2_splitseq_20260728/inputs/local_whitelists/bc_8nt_v2.csv include"
 	User time (seconds): 422.93
 	System time (seconds): 3.35
 	Percent of CPU this job got: 429%

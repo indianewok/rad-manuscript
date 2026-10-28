@@ -5,22 +5,22 @@ host	a02.hpcc.dartmouth.edu
 partition	preempt_lsong
 reserved_cpus	48
 cpus_allowed	0-23,64-87
-input	/scratch-nfs/f005f43/tilgner_rad_blaze_ambient_20260805/input/Hipp_SN_m1_ONT_Run3.fastq.gz
+input	external_data/reviewer_comment_data/scratch_preservation_20260921/files/tilgner_rad_blaze_ambient_20260805/input/Hipp_SN_m1_ONT_Run3.fastq.gz
 input_bytes	73988256878
 input_sha256	7b748d84de39773138b0b70fa457ccbf6c80c252af5783dccee0d750e38ead9a
-blaze_path	/scratch-nfs/f005f43/longbench_agent_runs_20260803/shared/tools/blaze2-2.5.0/venv/bin/blaze
+blaze_path	external_data/reviewer_comment_data/scratch_preservation_20260921/files/longbench_agent_runs_20260803/shared/tools/blaze2-2.5.0/venv/bin/blaze
 blaze_version	2.5.0
-blaze_wheel	/scratch-nfs/f005f43/longbench_agent_runs_20260803/shared/tools/blaze2-2.5.0/blaze2-2.5.0-py3-none-any.whl
+blaze_wheel	external_data/reviewer_comment_data/scratch_preservation_20260921/files/longbench_agent_runs_20260803/shared/tools/blaze2-2.5.0/blaze2-2.5.0-py3-none-any.whl
 blaze_wheel_sha256	9cf4d9e910894c77fd897a7008f93c1c79064af7bf43d07e998d38c83d4563b8
 kit	3v3
 expect_cells	10205
 mode	native_default_conservative
-command	/scratch-nfs/f005f43/longbench_agent_runs_20260803/shared/tools/blaze2-2.5.0/venv/bin/blaze --expect-cells 10205 --kit-version 3v3 --output-prefix /scratch-nfs/f005f43/tilgner_rad_blaze_ambient_20260805/demux/BLAZE/Hipp_SN_m1_ONT_Run3/ --output-fastq matched_reads.fastq.gz --threads 48 --minimal_stdout /scratch-nfs/f005f43/tilgner_rad_blaze_ambient_20260805/input/Hipp_SN_m1_ONT_Run3.fastq.gz
+command	external_data/reviewer_comment_data/scratch_preservation_20260921/files/longbench_agent_runs_20260803/shared/tools/blaze2-2.5.0/venv/bin/blaze --expect-cells 10205 --kit-version 3v3 --output-prefix external_data/reviewer_comment_data/scratch_preservation_20260921/files/tilgner_rad_blaze_ambient_20260805/demux/BLAZE/Hipp_SN_m1_ONT_Run3/ --output-fastq matched_reads.fastq.gz --threads 48 --minimal_stdout external_data/reviewer_comment_data/scratch_preservation_20260921/files/tilgner_rad_blaze_ambient_20260805/input/Hipp_SN_m1_ONT_Run3.fastq.gz
 started_utc	2026-08-06T05:16:00Z
-fastq	/scratch-nfs/f005f43/tilgner_rad_blaze_ambient_20260805/demux/BLAZE/Hipp_SN_m1_ONT_Run3/matched_reads.fastq.gz
-selected_barcodes	/scratch-nfs/f005f43/tilgner_rad_blaze_ambient_20260805/demux/BLAZE/Hipp_SN_m1_ONT_Run3/whitelist.csv
-read_assignment_table	/scratch-nfs/f005f43/tilgner_rad_blaze_ambient_20260805/demux/BLAZE/Hipp_SN_m1_ONT_Run3/putative_bc.csv.gz
-summary	/scratch-nfs/f005f43/tilgner_rad_blaze_ambient_20260805/demux/BLAZE/Hipp_SN_m1_ONT_Run3/summary.txt
+fastq	external_data/reviewer_comment_data/scratch_preservation_20260921/files/tilgner_rad_blaze_ambient_20260805/demux/BLAZE/Hipp_SN_m1_ONT_Run3/matched_reads.fastq.gz
+selected_barcodes	external_data/reviewer_comment_data/scratch_preservation_20260921/files/tilgner_rad_blaze_ambient_20260805/demux/BLAZE/Hipp_SN_m1_ONT_Run3/whitelist.csv
+read_assignment_table	external_data/reviewer_comment_data/scratch_preservation_20260921/files/tilgner_rad_blaze_ambient_20260805/demux/BLAZE/Hipp_SN_m1_ONT_Run3/putative_bc.csv.gz
+summary	external_data/reviewer_comment_data/scratch_preservation_20260921/files/tilgner_rad_blaze_ambient_20260805/demux/BLAZE/Hipp_SN_m1_ONT_Run3/summary.txt
 fastq_sha256	4fd6d0abaedae92b3df6cf28287069e921a991261711f4f0a42423ddf5c81752
 selected_barcode_rows	10445
 completed_utc	2026-08-06T07:30:46Z

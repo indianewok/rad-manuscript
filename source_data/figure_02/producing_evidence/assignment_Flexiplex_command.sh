@@ -3,11 +3,11 @@ set -u
 set -o pipefail
 
 ARM=${1:?arm must be S, L, or RAGE}
-W=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/sctagger_flexiplex_audit_20260812
-BIN=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/software_pins_20260810/flexiplex_raw_to_assigned_audit/bin/flexiplex_v1.02.6_raw_to_assigned_audit
-PKG=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260731_sctagger_badread_quality_full
-W2=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/flexiplex_bcrtcr_cellline_20260811
-RPKG=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260730_rageseq_ERR3268991_cellline_control
+W=external_data/reviewer_comment_data/sctagger_flexiplex_audit_20260812
+BIN=external_data/reviewer_comment_data/software_pins_20260810/flexiplex_raw_to_assigned_audit/bin/flexiplex_v1.02.6_raw_to_assigned_audit
+PKG=external_data/reviewer_comment_data/wl_scan/20260731_sctagger_badread_quality_full
+W2=external_data/reviewer_comment_data/flexiplex_bcrtcr_cellline_20260811
+RPKG=external_data/reviewer_comment_data/wl_scan/20260730_rageseq_ERR3268991_cellline_control
 
 case "$ARM" in
   S|L)
@@ -24,7 +24,7 @@ case "$ARM" in
     ;;
   RAGE)
     cd "$W2" || exit 2
-    INPUT=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/raw_fastq_datasets/rageseq.fq.gz
+    INPUT=external_data/raw_fastq_datasets/rageseq.fq.gz
     KNOWN="$RPKG/runs/flexiplex/f8_detection/selected.tsv"
     PREFIX=rage_flex_f8_audit
     SIDECAR="$W2/${PREFIX}_reads_barcodes.txt"

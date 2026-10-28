@@ -5,17 +5,17 @@
   "sources": [
     {
       "tool": "RAD",
-      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/longbench_rad_4acbe00_raw_prism_20260827/runs/SC_ONT/audit_raw_all_fast_exact/per_target.tsv",
+      "path": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/longbench_rad_4acbe00_raw_prism_20260827/runs/SC_ONT/audit_raw_all_fast_exact/per_target.tsv",
       "sha256": "a3c40f10f21bad079afa649d85b997875d30557262cd8beb8c483500a40fb1ee"
     },
     {
       "tool": "BLAZE",
-      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/LongBench_comps/full_A_to_B_audit_20260731/results/arms/blaze/SC_ONT/per_target.tsv",
+      "path": "external_data/reviewer_comment_data/LongBench_comps/full_A_to_B_audit_20260731/results/arms/blaze/SC_ONT/per_target.tsv",
       "sha256": "9fc431b2949e056cc9259a9c8df326ef9780ac8e49abad4360c39e7ee01ff1f1"
     },
     {
       "tool": "Flexiplex",
-      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/LongBench_comps/full_A_to_B_audit_20260731/results/arms/flex_v1026/SC_ONT/per_target.tsv",
+      "path": "external_data/reviewer_comment_data/LongBench_comps/full_A_to_B_audit_20260731/results/arms/flex_v1026/SC_ONT/per_target.tsv",
       "sha256": "4cf9d052b395f0830b1b25d8abc1f57dd2bd6e625e0d50a762caa9bd61993abc"
     }
   ],

@@ -1,4 +1,4 @@
-	Command being timed: "/tmp/rad-hazard-build-LAzsVX/build-system/rad scan-wl -i /dartfs/rc/lab/A/AckermanLab/CMV/rad_data/raw_fastq_datasets/complex_outsourced_datasets/measles_wgs/mmr_p8_raw_data/SRR28349076.fastq.gz -p CTACACGACGCTCTTCCGATCT -n 16 -e 0.3 -w 10x_3v3 -o /scratch-nfs/f005f43/rad_adaptive_floor_validation_20260728/measles_p8_final/scanwl -t 16 -k 5000 -v"
+	Command being timed: "external_data/temporary/rad-hazard-build-LAzsVX/build-system/rad scan-wl -i external_data/raw_fastq_datasets/complex_outsourced_datasets/measles_wgs/mmr_p8_raw_data/SRR28349076.fastq.gz -p CTACACGACGCTCTTCCGATCT -n 16 -e 0.3 -w 10x_3v3 -o external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_adaptive_floor_validation_20260728/measles_p8_final/scanwl -t 16 -k 5000 -v"
 	User time (seconds): 5051.43
 	System time (seconds): 281.60
 	Percent of CPU this job got: 483%

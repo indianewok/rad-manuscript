@@ -1,9 +1,9 @@
 {
   "status": "passed_structural_checks",
-  "source": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/docs/current_figure_legends.md",
+  "source": "docs/current_figure_legends.md",
   "source_sha256": "acc5fb726a4466d978091178f845fb3f65df3f2fbc5518b7145138c8f0739395",
   "script_sha256": "6b94d4ead185e6a59a4394a4ddc45d4a1af10d2bef87494f9e8e8879b1226572",
-  "output": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/rad_manuscript_recovery_20261023/current_revision/Current_Figure_Legends_20261023.docx",
+  "output": "external_data/reviewer_comment_data/rad_manuscript_recovery_20261023/current_revision/Current_Figure_Legends_20261023.docx",
   "output_sha256": "ad7104280bb63b368716256a1d0c16f7ec3912fd5198080b5f858c31bfae8d39",
   "figures": [
     1,

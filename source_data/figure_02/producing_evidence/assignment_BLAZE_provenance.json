@@ -1,15 +1,15 @@
 {
   "method": "Unchanged BLAZE2.6.0a0 _match_bc_row; exact incremental whitelist replay. Common iteration order retained from archived seed0 run, new candidates appended lexically. Calls reused only if no changed whitelist candidate can match at edit distance<=2.",
-  "matcher_source": "/Volumes/rad_data/reviewer_comment_data/software_pins_20260810/blaze_fast_selector/upstream_v2.6.0a0/source/read_assignment.py",
+  "matcher_source": "external_data/reviewer_comment_data/software_pins_20260810/blaze_fast_selector/upstream_v2.6.0a0/source/read_assignment.py",
   "matcher_sha256": "dc474d91f0fde73539e4ee13d1449300d4dfe2a801d8703c32f6674bb1730f11",
   "max_edit_distance": 2,
   "minQ": 0,
   "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
   "fast_edit_distance": "1.2.2",
   "inputs": {
-    "new_raw": "/Volumes/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/sctagger_nanopore2023_unadjusted_20260913/runs/L/nanopore2023_native_unadjusted/blaze/putative_bc.csv",
-    "old_raw": "/Volumes/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/sctagger_q20p18_prism_update_20260912/replay_inputs/shift_p06/putative_bc.csv.gz",
-    "old_calls": "/Volumes/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/sctagger_q20p18_prism_update_20260912/blaze_native_replay_seed0/shift_p06_Q20p1811/assignment_records.tsv.gz"
+    "new_raw": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/sctagger_nanopore2023_unadjusted_20260913/runs/L/nanopore2023_native_unadjusted/blaze/putative_bc.csv",
+    "old_raw": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/sctagger_q20p18_prism_update_20260912/replay_inputs/shift_p06/putative_bc.csv.gz",
+    "old_calls": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/sctagger_q20p18_prism_update_20260912/blaze_native_replay_seed0/shift_p06_Q20p1811/assignment_records.tsv.gz"
   },
   "audit": {
     "rows": 4993805,

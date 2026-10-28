@@ -7,13 +7,14 @@ The separate SHA-256 covers every compressed byte in each retained BAM.
 import argparse
 import json
 from pathlib import Path
+from source_paths import reviewer_root
 import subprocess
 from figures_567 import sha, write
 
 parser=argparse.ArgumentParser(description=__doc__)
-parser.add_argument('--project-root',type=Path,default=Path('/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data'))
+parser.add_argument('--project-root',type=Path,default=reviewer_root())
 parser.add_argument('--output-root',type=Path,default=Path(__file__).resolve().parents[2])
-parser.add_argument('--samtools',default='/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/miniconda3/bin/samtools')
+parser.add_argument('--samtools',default='samtools')
 a=parser.parse_args()
 root=a.project_root/'scratch_preservation_20260921/files'
 paths={t:root/('longbench_snont_postdemux_vireo_20260803/align/'+t+'/align2genome.bam') for t in ('RAD','Flexiplex')}

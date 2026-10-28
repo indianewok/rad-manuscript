@@ -1,9 +1,9 @@
 {
   "status": "passed_structural_checks",
-  "source": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/rad_manuscript_recovery_20261023/current_revision/Methods_current.paragraphs.json",
+  "source": "external_data/reviewer_comment_data/rad_manuscript_recovery_20261023/current_revision/Methods_current.paragraphs.json",
   "source_sha256": "6b2ace9b9bc9d2debcb2a9414a84f7f579b61594590a4c3a4a25bd35e8c5373e",
   "script_sha256": "6b94d4ead185e6a59a4394a4ddc45d4a1af10d2bef87494f9e8e8879b1226572",
-  "output": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/rad_manuscript_recovery_20261023/current_revision/Methods_current.docx",
+  "output": "external_data/reviewer_comment_data/rad_manuscript_recovery_20261023/current_revision/Methods_current.docx",
   "output_sha256": "6ad0c1e81c7189aa28a739af09937307a34f9aa546e2bcad9127ec478c8863f7",
   "figures": null,
   "document_scope": "Methods only",

@@ -14,6 +14,7 @@ import hashlib
 import json
 import math
 from pathlib import Path
+from source_paths import reviewer_root
 import shutil
 import subprocess
 import sys
@@ -474,7 +475,7 @@ def render(out, only=None):
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('mode',choices=['build','render','validate'])
-    p.add_argument('--project-root',type=Path,default=Path('/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data'))
+    p.add_argument('--project-root',type=Path,default=reviewer_root())
     p.add_argument('--output-root',type=Path,default=ROOT)
     args=p.parse_args();out=args.output_root.resolve()
     if args.mode=='build':

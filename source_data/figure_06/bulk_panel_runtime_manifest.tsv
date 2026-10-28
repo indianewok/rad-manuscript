@@ -9,11 +9,11 @@ vireoSNP_version	0.5.8
 samtools_version	1.6
 bgzip_version	1.23.1
 tabix_version	1.23.1
-human_genome	/scratch-nfs/f005f43/longbench_full_demux_20260730/references/gencode_v44/GRCh38.primary_assembly.genome.fa
+human_genome	external_data/reviewer_comment_data/scratch_preservation_20260921/files/longbench_full_demux_20260730/references/gencode_v44/GRCh38.primary_assembly.genome.fa
 human_genome_source_gzip_md5	9c3fc2ca260a767530dddb0f26721a6b
-human_gtf	/scratch-nfs/f005f43/longbench_full_demux_20260730/references/gencode_v44/gencode.v44.annotation.gtf
+human_gtf	external_data/reviewer_comment_data/scratch_preservation_20260921/files/longbench_full_demux_20260730/references/gencode_v44/gencode.v44.annotation.gtf
 human_gtf_source_gzip_md5	ee330cfe6d0654ba9b9cf434d5c1bfb1
-candidate_snp_vcf	/scratch-nfs/f005f43/longbench_snont_postdemux_vireo_20260803/bulk_donor_panel/reference/genome1K.phase3.SNP_AF5e2.chr1toX.hg38.vcf.gz
+candidate_snp_vcf	external_data/reviewer_comment_data/scratch_preservation_20260921/files/longbench_snont_postdemux_vireo_20260803/bulk_donor_panel/reference/genome1K.phase3.SNP_AF5e2.chr1toX.hg38.vcf.gz
 candidate_snp_vcf_bytes	92432276
 candidate_snp_vcf_sha256	88e22ea3c4d416aed925e5b3efeb371ef023c954599a325dcb334dffcf6ad707
 donor_order	H146,H1975,H211,H2228,H526,H69,HCC827,SHP77

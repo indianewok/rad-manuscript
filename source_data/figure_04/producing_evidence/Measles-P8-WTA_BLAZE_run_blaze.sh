@@ -2,9 +2,9 @@
 set -euo pipefail
 umask 007
 
-root=/scratch-nfs/f005f43/measles_p8_whole_three_tool_20260801
-input=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/raw_fastq_datasets/complex_outsourced_datasets/measles_wgs/mmr_p8_raw_data/SRR28349078.fastq.gz
-blaze=/scratch/f005f43/blaze2_260a0_native_20260727/venv/bin/blaze
+root=external_data/reviewer_comment_data/scratch_preservation_20260921/files/measles_p8_whole_three_tool_20260801
+input=external_data/raw_fastq_datasets/complex_outsourced_datasets/measles_wgs/mmr_p8_raw_data/SRR28349078.fastq.gz
+blaze=external_data/reviewer_comment_data/scratch_preservation_20260921/files/blaze2_260a0_native_20260727/venv/bin/blaze
 out="$root/runs/blaze"
 status="$root/logs/blaze.status.log"
 threads=24

@@ -9,7 +9,7 @@
     "bytes": 65392640,
     "scope": "Original incoming upload preserved externally; current selected sources promoted separately"
   },
-  "external_preservation": "/scratch/f005f43/rad_f5_incoming_07b39852_20261023",
+  "external_preservation": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_f5_incoming_07b39852_20261023",
   "package_hash_validation": {
     "status": "passed",
     "files": 180,

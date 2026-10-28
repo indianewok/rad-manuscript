@@ -1,14 +1,14 @@
 {
   "command": [
     "/usr/bin/python3",
-    "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/scripts/revision/figures_567.py",
+    "scripts/revision/figures_567.py",
     "validate",
     "--output-root",
-    "/tmp/rad_fig567_clean_render_xdimwbxl"
+    "external_data/temporary/rad_fig567_clean_render_xdimwbxl"
   ],
   "baseline_exit": 0,
   "mutation_exit": 1,
-  "mutation_stderr": "checkpoint changed after validation: /tmp/rad_fig567_clean_render_xdimwbxl/source_data/figure_07/threshold_grid.tsv\n",
+  "mutation_stderr": "checkpoint changed after validation: external_data/temporary/rad_fig567_clean_render_xdimwbxl/source_data/figure_07/threshold_grid.tsv\n",
   "restored_exit": 0,
   "scope": "source-table hash integrity guard; not global stage graph invalidation"
 }

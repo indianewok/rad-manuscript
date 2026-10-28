@@ -7,6 +7,7 @@ import json
 import sys
 import zipfile
 from pathlib import Path
+from source_paths import reviewer_root
 from figures_124 import REPO, STATES, rows, sha, write_json
 
 
@@ -16,7 +17,7 @@ def title(value):
 
 def main():
     p=argparse.ArgumentParser(description=__doc__)
-    p.add_argument('--prism',type=Path,default=Path('/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/paper_revision_20261022/prism/Figure2_corrected_20261022.prism'))
+    p.add_argument('--prism',type=Path,default=reviewer_root() / 'paper_revision_20261022/prism/Figure2_corrected_20261022.prism')
     p.add_argument('--output-root',type=Path,default=REPO)
     a=p.parse_args();out=a.output_root
     prism=a.prism

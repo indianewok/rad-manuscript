@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-root=/scratch/f005f43/promethion_four_tool_20260729
+root=external_data/reviewer_comment_data/scratch_preservation_20260921/files/promethion_four_tool_20260729
 input="$root/input/promethion.fq.gz"
 stage_status="$root/logs/input_stage.status.log"
-rad=/tmp/rad-current-f005f43.8ChwC9/build-system/rad
-blaze=/scratch/f005f43/blaze2_260a0_native_20260727/venv/bin/blaze
-flex=/tmp/flexiplex_release.GqgaKA/flexiplex/bin/flexiplex-linux
-flex_filter=/tmp/flexiplex_release.GqgaKA/flexiplex/scripts/flexiplex_filter/main.py
-python=/scratch/f005f43/rad_scmix2_20260726/tools/flexiplex-v1.02.6/.venv/bin/python
-full_3v3=/scratch/f005f43/blaze_analysis_data_20335203/data/3M-february-2018.txt
+rad=external_data/temporary/rad-current-f005f43.8ChwC9/build-system/rad
+blaze=external_data/reviewer_comment_data/scratch_preservation_20260921/files/blaze2_260a0_native_20260727/venv/bin/blaze
+flex=external_data/temporary/flexiplex_release.GqgaKA/flexiplex/bin/flexiplex-linux
+flex_filter=external_data/temporary/flexiplex_release.GqgaKA/flexiplex/scripts/flexiplex_filter/main.py
+python=external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_scmix2_20260726/tools/flexiplex-v1.02.6/.venv/bin/python
+full_3v3=external_data/reviewer_comment_data/scratch_preservation_20260921/files/blaze_analysis_data_20335203/data/3M-february-2018.txt
 status="$root/logs/selection_queue.status.log"
 
 "$python" -c 'import pandas, numpy'

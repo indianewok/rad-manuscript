@@ -2,9 +2,9 @@
 set -euo pipefail
 umask 007
 
-root=/scratch-nfs/f005f43/measles_p8_whole_three_tool_20260801
-input=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/raw_fastq_datasets/complex_outsourced_datasets/measles_wgs/mmr_p8_raw_data/SRR28349078.fastq.gz
-design=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/cellranger_whitelists/3M-february-2018-3v3.txt
+root=external_data/reviewer_comment_data/scratch_preservation_20260921/files/measles_p8_whole_three_tool_20260801
+input=external_data/raw_fastq_datasets/complex_outsourced_datasets/measles_wgs/mmr_p8_raw_data/SRR28349078.fastq.gz
+design=external_data/cellranger_whitelists/3M-february-2018-3v3.txt
 layout="$root/resources/10x_3v3_1_12nt_umi_layout.csv"
 rad="$root/tools/rad_b02ff24_build/rad"
 rad_resources="$root/tools/rad_b02ff24_src"

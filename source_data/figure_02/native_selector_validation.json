@@ -7,10 +7,10 @@
   "high_quality_candidate_reads": 227812,
   "missing_from_replay": [],
   "original_count": 5015,
-  "original_whitelist": "/scratch-nfs/f005f43/sctagger_nanopore2023_unadjusted_20260913/runs/L/nanopore2023_native_unadjusted/blaze/whitelist.csv",
+  "original_whitelist": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/sctagger_nanopore2023_unadjusted_20260913/runs/L/nanopore2023_native_unadjusted/blaze/whitelist.csv",
   "other_validation_controls_run": [],
   "passed": true,
   "replay_count": 5015,
-  "replayed_whitelist": "/scratch-nfs/f005f43/sctagger_nanopore2023_extended_sweep_20260913/blaze_replay/conditions/native_unadjusted_validation/whitelist.csv",
+  "replayed_whitelist": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/sctagger_nanopore2023_extended_sweep_20260913/blaze_replay/conditions/native_unadjusted_validation/whitelist.csv",
   "true_positives": 5000
 }

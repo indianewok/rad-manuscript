@@ -47,7 +47,7 @@ def main():
       'rage_input':'python3 scripts/revision/figure_3_rage_preflight.py',
       'rage_producer':'python3 scripts/revision/figure_3_rage_run.py TOOL REPLICATE (RAD/BLAZE/Flexiplex by1/2/3)',
       'rage_count':'python3 scripts/revision/figure_3_rage_count.py',
-      'human_example':'python3 scripts/revision/figure_3_example_count.py data/examples/figure_03/sctagger_rad_rep1_assignments.tsv data/examples/figure_03/sctagger_rad_rep1_targets.txt /tmp/sc_counts.tsv'}
+      'human_example':'python3 scripts/revision/figure_3_example_count.py data/examples/figure_03/sctagger_rad_rep1_assignments.tsv data/examples/figure_03/sctagger_rad_rep1_targets.txt validation/walkthrough/sc_counts.tsv'}
     tasks=[
       ('F3-01','passed','Selected measured definitions and common strict physical-read metric deposited. B compares strict assigned/input physical reads; raw totals remain a diagnostic companion. Author authorized matched RAGE replication and preservation of existing statistics.','None for data definitions'),
       ('F3-02','passed','Full ERR3268991 raw identity, FASTQ structure, unique physical-ID universe,4505-reference and737280-catalog identities validated for the selected current replication.','None for selected input provenance'),

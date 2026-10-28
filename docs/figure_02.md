@@ -2,9 +2,9 @@
 
 Figure 2 uses ScTagger reads with known source barcodes to examine barcode discovery as reported base quality changes, then measures correct and incorrect read assignments. The quality sweep preserves nucleotide sequences and sequencing errors across conditions.
 
-![Figure 2 exported from Prism](../figures/figure_02/prism/figure_02.png)
+![Figure 2](../figures/figure_02/prism/figure_02.png)
 
-[Prism source and export details](../manifests/prism_exports.json). The saved Dropbox layout shows 87 BLAZE false-positive barcode calls; the updated assignment tables below use 15.
+The image shows 87 BLAZE false-positive barcode calls; the current assignment tables below use 15.
 
 ## Synthetic reads and quality scores
 
@@ -12,19 +12,20 @@ ScTagger-S contains 98,873 reads from 50 source barcodes; ScTagger-L contains 4,
 
 Quality generation used Badread 0.4.1, Python 3.9.16, NumPy 1.23.5, edlib 1.3.9, and the retained Nanopore2018 and Nanopore2023 quality models. Background scores were sampled for the complete read. Within a located 16-base barcode, scores were replaced with draws conditional on local match and error patterns between the observed barcode and its known source sequence. Reads without a located barcode retained their background scores.
 
-Each of the eleven sweep conditions adds a fixed Phred-score offset to every base and clips the result to Q1–Q50. The native Nanopore2023 condition retains the original generated scores. Nanopore2018 offsets were +1, +2, +3, +4, +5, +6, +8, +10, +11, +12, and +13; matched Nanopore2023 offsets were −17, −16, −15, −14, −12, −11, −9, −7, −6, −5, and −4. The [matched-level table](../source_data/figure_02/matched_quality_levels.tsv) gives each pairing. [Generation commands](../source_data/figure_02/generation_environment.tsv) record adapter edit distance 7, boundary slop 8, a 16,777,216-score sampling tape, and four compression threads. S2018 used seed `20260727`; L2018 and L2023 used seed `20260731`. The generator derives its effective seed with BLAKE2b from the seed, `quality-tape`, and the literal model pathname, separated by NUL characters. Exact reconstruction therefore uses the pathname string in the [generation contract](../source_data/figure_02/quality_generation_contract.json).
+Each of the eleven sweep conditions adds a fixed Phred-score offset to every base and clips the result to Q1–Q50. The native Nanopore2023 condition retains the original generated scores. Nanopore2018 offsets were +1, +2, +3, +4, +5, +6, +8, +10, +11, +12, and +13; matched Nanopore2023 offsets were −17, −16, −15, −14, −12, −11, −9, −7, −6, −5, and −4. The [matched-level table](../source_data/figure_02/matched_quality_levels.tsv) gives each pairing. [Generation commands](../source_data/figure_02/generation_environment.tsv) record adapter edit distance 7, boundary slop 8, a 16,777,216-score sampling tape, and four compression threads. S2018 used seed `20260727`; L2018 and L2023 used seed `20260731`. The original generator included the model pathname in its effective quality-tape seed. The [generation contract](../source_data/figure_02/quality_generation_contract.json) records the resulting integers. The [recorded-seed adapter](../scripts/figure_02/generate_with_recorded_seed.py) overrides only the quality-tape seed with the recorded integer when model files are moved; all per-read seed calculations remain unchanged.
 
 The [paired two-read example](../data/examples/figure_02/) shows the same read sequences with uniform and sampled qualities. Compare them with:
 
 ```bash
+mkdir -p results
 python3 scripts/revision/figures_124_steps/compare_fastq_sequences.py \
   data/examples/figure_02/L_flatQ20_first2.fastq \
-  data/examples/figure_02/L_native2023_first2.fastq /tmp/figure2_two_reads.tsv
+  data/examples/figure_02/L_native2023_first2.fastq results/figure2_two_reads.tsv
 ```
 
 ## Software and settings
 
-Discovery and assignment used separate runs. The [producing-run registry](../manifests/figures_124_tool_parameters.tsv), [original commands and software identities](../source_data/figure_02/producing_evidence/), and [source hashes](../manifests/figures_124_parameter_evidence.tsv) identify each run and replay.
+Discovery and assignment used separate runs. The [run table](../manifests/figures_124_tool_parameters.tsv) lists versions, commits, threads, chemistry and saved commands. [Run evidence](../manifests/figures_124_run_evidence.tsv) records hashes, references, seeds and replay methods; [producer records](../source_data/figure_02/producing_evidence/) and [source hashes](../manifests/figures_124_parameter_evidence.tsv) identify each source.
 
 | Analysis | Tool and build | Settings |
 |---|---|---|
@@ -52,7 +53,7 @@ Run a complete ScTagger-S example with:
 ```bash
 python3 scripts/revision/figures_124_steps/score_whitelists.py \
   --truth data/examples/figure_02/S_truth_barcodes.txt \
-  --output /tmp/figure2_S_shift1.tsv \
+  --output results/figure2_S_shift1.tsv \
   RAD=data/examples/figure_02/S_shift_p01_RAD.txt \
   BLAZE=data/examples/figure_02/S_shift_p01_BLAZE.txt \
   Flexiplex_f0=data/examples/figure_02/S_shift_p01_Flexiplex_f0.txt \
@@ -83,7 +84,7 @@ Read identifiers link each output to its true source barcode. Comparing the extr
 
 ```bash
 python3 scripts/revision/figures_124_steps/classify_assignment_preview.py --tool RAD \
-  data/examples/figure_02/RAD_assignment_records_example.tsv /tmp/figure2_RAD_records.tsv
+  data/examples/figure_02/RAD_assignment_records_example.tsv results/figure2_RAD_records.tsv
 ```
 
 Full duplicate handling is performed by the [assignment audit](../scripts/revision/figures_124_assignment_audit.py). Its small counting checks run with `--fixtures-only`; full rescoring uses the mounted source paths. The [complete validation](../validation/figures_124_assignment_resume.json) checks all physical identifiers and 52,076 target/category values.
@@ -109,4 +110,4 @@ python3 scripts/revision/figures_124.py validate --output-root .
 python3 scripts/revision/figures_124.py render --output-root .
 ```
 
-[Table schemas](../source_data/figure_02/schemas.json) define all fields and units. The shared commands also process Figures 1 and 4. The figure image above is exported from the saved Prism layout.
+[Table schemas](../source_data/figure_02/schemas.json) define all fields and units. The shared commands also process Figures 1 and 4.

@@ -1,10 +1,5 @@
 # Figures
 
-The images below were exported at 300 dpi from the saved Prism projects in
-`Nat Comm/appeal/figure_revisions/CURRENT FIGURES`. Each figure links to its
-methods, source tables and analysis commands. The [export manifest](../manifests/prism_exports.json)
-records the project checksum, layout, linked graphs and image checksum.
-
 ## Figure 1: RAD workflow and computational performance
 
 [Analysis guide](../docs/figure_01.md)
@@ -24,8 +19,8 @@ tables contain 15.
 
 [Analysis guide](../docs/figure_03.md)
 
-The saved layout shows total assigned reads and the original schematic labels.
-The guide describes the matched RAGE rerun and measured correction categories.
+Panel B shows total assigned reads. Normalized assignment fractions are
+available in the guide and source tables.
 
 ![Figure 3](figure_03/prism/figure_03.png)
 
@@ -65,25 +60,3 @@ updated set of 8,135 genes.
 ### Input characteristics and modality-specific precision and recall
 
 ![Modality comparisons](figure_04/prism/figure_04_supplement.png)
-
-## Exporting the figures
-
-Run the preparation script with the path to `CURRENT FIGURES` and a new working
-directory. It copies the projects, selects layouts by their saved identifiers,
-and writes a Prism script that exports PNG images into the new working directory.
-
-```bash
-python3 scripts/export_prism_figures.py prepare \
-  --source-dir '/path/to/CURRENT FIGURES' --work /path/to/prism-export
-```
-
-Open the generated `export.pzc` through Prism's **File → Run Script** command.
-After it finishes, verify the new images and source checksums, then copy the
-verified exports into the repository:
-
-```bash
-python3 scripts/export_prism_figures.py verify --work /path/to/prism-export
-```
-
-The export script opens copies, selects layouts, exports images and closes each
-copy. It contains no data-import, analysis, formatting or save commands.

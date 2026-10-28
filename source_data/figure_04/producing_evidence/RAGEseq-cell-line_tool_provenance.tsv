@@ -1,8 +1,8 @@
 method	component	version_or_revision	executable_or_environment	sha256_or_note
-RAD	RAD binary	repo HEAD cd0582b2440cde0f35725dc557fa47307d74d374; exact current staged build	/tmp/rad-current-f005f43.8ChwC9/build-system/rad	211e75d7211aa14f844fe505cab0cbe48c095bc4bf46ca9b07f0ba7d06981f41
-BLAZE	BLAZE2	2.6.0a0	/scratch/f005f43/blaze2_260a0_native_20260727/venv/bin/blaze	native venv
-Flexiplex	Flexiplex binary	1.02.6	/tmp/flexiplex_release.GqgaKA/flexiplex/bin/flexiplex-linux	6eee3a7113044d45e106dc74a541b9a53475311449bf49bd91cc912ba911c40e
-Flexiplex	flexiplex-filter	1.01	/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/miniconda3/bin/flexiplex-filter	8d8074e50c60c3fcecffeedf23af8ecbed42b868ff73be82fe0a14abd77271ba
-FLAMESv2	FLAMES	2.6.0	/dartfs-hpc/scratch/f005f43/rad_longbench_20260726/tools/bioconductor_3.23_r4.6.1.sif	Bioconductor container
+RAD	RAD binary	repo HEAD cd0582b2440cde0f35725dc557fa47307d74d374; exact current staged build	external_data/temporary/rad-current-f005f43.8ChwC9/build-system/rad	211e75d7211aa14f844fe505cab0cbe48c095bc4bf46ca9b07f0ba7d06981f41
+BLAZE	BLAZE2	2.6.0a0	external_data/reviewer_comment_data/scratch_preservation_20260921/files/blaze2_260a0_native_20260727/venv/bin/blaze	native venv
+Flexiplex	Flexiplex binary	1.02.6	external_data/temporary/flexiplex_release.GqgaKA/flexiplex/bin/flexiplex-linux	6eee3a7113044d45e106dc74a541b9a53475311449bf49bd91cc912ba911c40e
+Flexiplex	flexiplex-filter	1.01	external_data/software/miniconda3/bin/flexiplex-filter	8d8074e50c60c3fcecffeedf23af8ecbed42b868ff73be82fe0a14abd77271ba
+FLAMESv2	FLAMES	2.6.0	external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_longbench_20260726/tools/bioconductor_3.23_r4.6.1.sif	Bioconductor container
 FLAMESv2	embedded BLAZE2	2.5.1	basilisk FLAMES 2.6.0 environment	expect-cells 4505; 10x 3v2
-Cell Ranger	short-read comparator	9.0.0	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/rageseq_single_cell_data/outs	filtered feature-barcode matrix
+Cell Ranger	short-read comparator	9.0.0	external_data/rageseq_single_cell_data/outs	filtered feature-barcode matrix

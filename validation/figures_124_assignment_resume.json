@@ -1,7 +1,7 @@
 {
   "code_sha256": "5242995f40eab522b1e3d78d332dc9aef305b1a25974e55a1efb16981c319ddb",
   "command": [
-    "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/miniconda3/bin/python3",
+    "external_data/software/miniconda3/bin/python3",
     "scripts/revision/figures_124_assignment_audit.py"
   ],
   "expected_table_hashes": {
@@ -22,19 +22,19 @@
   "sources": [
     {
       "bytes": 46703941,
-      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/sctagger_L_rad_fixed5000_adapter_fix_20260817/independent_validation/record_audit.tsv.gz",
+      "path": "external_data/reviewer_comment_data/sctagger_L_rad_fixed5000_adapter_fix_20260817/independent_validation/record_audit.tsv.gz",
       "sha256": "44c381cc8eeb4130a7eea73e604940d454b47a4cf0f167c916485c577961b7e0",
       "tool": "RAD"
     },
     {
       "bytes": 154296487,
-      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/sctagger_flexiplex_audit_20260812/L_flatQ20_audit_reads_barcodes.txt",
+      "path": "external_data/reviewer_comment_data/sctagger_flexiplex_audit_20260812/L_flatQ20_audit_reads_barcodes.txt",
       "sha256": "693d9f3362dbeea174acf8bef432a596aec3a91aa5d797125b6782e1ba424b06",
       "tool": "Flexiplex"
     },
     {
       "bytes": 102379073,
-      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/paper_revision_20261022/prism/blaze2023_assignment_replay/assignment_records.tsv.gz",
+      "path": "external_data/reviewer_comment_data/paper_revision_20261022/prism/blaze2023_assignment_replay/assignment_records.tsv.gz",
       "sha256": "23328307cdca24cdbbeced7a4841d6daada13a720165ea5dda570382796ba8f8",
       "tool": "BLAZE"
     }

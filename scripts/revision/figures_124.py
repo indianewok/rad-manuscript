@@ -25,6 +25,7 @@ import tempfile
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
+from source_paths import data_root, scratch_root, scratch_nfs_root, resolve_source
 
 REPO = Path(__file__).resolve().parents[2]
 TOOLS = ('RAD', 'BLAZE', 'Flexiplex')
@@ -95,9 +96,7 @@ class Build:
             raise ValueError(f'{key}: expected {expected}; observed {observed}')
 
     def source(self, relative, role='retained_checkpoint'):
-        p = Path(relative)
-        if not p.is_absolute():
-            p = self.base / p
+        p = resolve_source(relative, base=self.base)
         if not p.is_file():
             self.assets.append(dict(path=str(p), status='missing_at_checked_path', role=role))
             raise FileNotFoundError(p)
@@ -129,7 +128,7 @@ class Build:
         # Preservation moved nonempty files but left zero-byte COMPLETE/log
         # files on scratch. Rejoin actual files; never manufacture a marker.
         preserved=self.base/TIMING/'raw'
-        original=Path('/scratch-nfs/f005f43/three_tool_phase_benchmark_20260902_parallel_epyc7543/raw')
+        original=scratch_nfs_root() / 'three_tool_phase_benchmark_20260902_parallel_epyc7543/raw'
         recovered=[]
         with tempfile.TemporaryDirectory(prefix='rad_timing_union_') as tmp:
             union=Path(tmp)/'raw'
@@ -229,7 +228,7 @@ class Build:
         write_rows(folder/'discovery_metrics.tsv',normalized)
         truthsets={}
         for dataset in ('S','L'):
-            truthfile=self.source(Path('/scratch/f005f43/sctagger_sl_three_tool_quality_20260731/inputs')/(dataset+'_truth_barcodes.txt'),'synthetic_truth')
+            truthfile=self.source(scratch_root() / 'sctagger_sl_three_tool_quality_20260731/inputs'/(dataset+'_truth_barcodes.txt'),'synthetic_truth')
             truthsets[dataset]={x.strip() for x in truthfile.read_text().splitlines() if x.strip()}
             self.check('sweep_truth_'+dataset,len(truthsets[dataset])==(50 if dataset=='S' else 5000),
                        50 if dataset=='S' else 5000,len(truthsets[dataset]),truthfile)
@@ -247,13 +246,11 @@ class Build:
                     for r in normalized:
                         if r['model']=='nanopore2023':
                             original=source2023[(r['condition'],r['tool'])]
-                            source=Path(original)
-                            if not source.is_file():
-                                source=self.base/'scratch_preservation_20260921/files'/source.relative_to('/scratch-nfs/f005f43')
+                            source=resolve_source(original,base=self.base)
                         else:
                             filename={'RAD':'rad/scanwl.txt','BLAZE':'blaze/whitelist.csv',
                                       'Flexiplex_f0':'flex_f0/selected.txt','Flexiplex_f8':'flex_f8/selected.txt'}[r['tool']]
-                            source=Path('/scratch/f005f43/sctagger_sl_three_tool_quality_20260731/runs')/r['dataset']/r['condition']/filename
+                            source=scratch_root() / 'sctagger_sl_three_tool_quality_20260731/runs'/r['dataset']/r['condition']/filename
                             original=str(source)
                         source=self.source(source,'selected_discovery_whitelist')
                         calls=set()
@@ -358,20 +355,18 @@ class Build:
                   'Native Prism/statistical gates remain F2-04; raw tool rerun not performed.' if full_resume else
                   'Complete per-read upstream identity comparison remains; retained per-target checkpoint resumption passed.')
         contract=dict(seeds={'nanopore2018_S':20260727,'nanopore2018_L':20260731,'nanopore2023_L':20260731},
-                      literal_model_paths={'nanopore2018':'/scratch/f005f43/rad_sctagger_badread_quality_20260727/models/nanopore2018.gz',
-                      'nanopore2023':'/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/LongBench_comps/ScTagger_nanopore2023_Q15_Q20_20260819/models/nanopore2023.gz'},
-                      rng_contract='stable_seed(str(args.model), args.seed, "quality-tape"); pathname is part of historical RNG identity',
+                      effective_quality_tape_seeds={'nanopore2018_S':16211358332209865628,
+                                                   'nanopore2018_L':11835179057691093796,
+                                                   'nanopore2023_L':6475178776901811265},
+                      rng_contract='Use the explicit effective quality-tape seed for exact reproduction; the original generator derived it from the model location and run seed.',
                       changed_generator=False,raw_rerun='not run',raw_input_content_validation='not performed by compact checkpoint build')
         for filename in ('nanopore2018.gz','nanopore2023.gz'):
             self.copy(SWEEP+'/code/models/'+filename,'source_data/figure_02/models/'+filename)
-        contract['effective_quality_tape_seeds']={}
-        for key,seed in contract['seeds'].items():
-            model=key.rsplit('_',1)[0]
-            lexical=contract['literal_model_paths'][model]
-            effective=int.from_bytes(hashlib.blake2b(f'{seed}\0quality-tape\0{lexical}'.encode('ascii'),digest_size=8).digest(),'little')
-            contract['effective_quality_tape_seeds'][key]=effective
-            path=self.source(Path(lexical),'historical_literal_RNG_model_path')
-            self.check('historical_model_path_bytes_'+key,sha(path)==sha(folder/'models'/(model+'.gz')),
+        model_locations={'nanopore2018':scratch_root()/'rad_sctagger_badread_quality_20260727/models/nanopore2018.gz',
+                         'nanopore2023':self.base/'LongBench_comps/ScTagger_nanopore2023_Q15_Q20_20260819/models/nanopore2023.gz'}
+        for model,location in model_locations.items():
+            path=self.source(location,'quality_model_source')
+            self.check('quality_model_bytes_'+model,sha(path)==sha(folder/'models'/(model+'.gz')),
                        sha(folder/'models'/(model+'.gz')),sha(path),path)
         self.copy(SWEEP+'/code/SOURCE_MANIFEST.tsv','source_data/figure_02/generator_source_manifest.tsv')
         self.copy(NATIVE+'/validation/full_fastq_validation.json','source_data/figure_02/native_fastq_validation.json')
@@ -582,7 +577,7 @@ def validate(out):
 
 def render(out):
     validate(out)
-    os.environ.setdefault('MPLCONFIGDIR','/tmp/rad-manuscript-matplotlib')
+    os.environ.setdefault('MPLCONFIGDIR',str(Path(tempfile.gettempdir())/'rad-manuscript-matplotlib'))
     import matplotlib
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
@@ -682,7 +677,7 @@ def render(out):
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('mode',choices=('build','render','validate'))
-    p.add_argument('--project-root',type=Path,default=Path('/dartfs/rc/lab/A/AckermanLab/CMV/rad_data'))
+    p.add_argument('--project-root',type=Path,default=data_root())
     p.add_argument('--output-root',type=Path,default=REPO)
     args=p.parse_args();out=args.output_root.resolve()
     if args.mode=='build':

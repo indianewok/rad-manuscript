@@ -18,10 +18,12 @@ and `matched_quality_levels.tsv` record sample means and standard deviations,
 per-base quality counts and the eleven matched whole-dataset means. Shifts and
 clipping are applied to individual base scores before averages are calculated.
 
-`quality_generation_contract.json` specifies the S/L base seeds, literal model
-paths and effective quality-tape seeds. The historical generator uses both the
-model bytes and pathname to determine its output. The complete retained FASTQ
-identities are verified in
+The [generation contract](quality_generation_contract.json) specifies the S/L
+base seeds, model hashes and effective quality-tape seeds. The
+[recorded-seed adapter](../../scripts/figure_02/generate_with_recorded_seed.py)
+replaces only the quality-tape seed with its recorded integer when model files
+are moved; all per-read seed calculations remain unchanged. The complete
+retained FASTQ identities are verified in
 [the input report](../../validation/figures_124_fastq_identity.json).
 The historical `sample_replay_evidence.jsonl.gz` file is missing from its recorded
 location.

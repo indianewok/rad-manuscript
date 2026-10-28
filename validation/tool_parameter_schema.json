@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "columns": [
+    "analysis",
+    "dataset",
+    "tool",
+    "replicate",
+    "version",
+    "source_commit",
+    "threads",
+    "chemistry",
+    "command"
+  ],
+  "rows": 394,
+  "table_rows": {
+    "figures_124_tool_parameters.tsv": 337,
+    "figure_3_tool_parameters.tsv": 39,
+    "figures_567_tool_parameters.tsv": 18
+  },
+  "shell_commands": 217,
+  "unavailable_original_commands": 177,
+  "matching_deposited_evidence_hashes": 394,
+  "original_hashes_preserved_separately": true,
+  "compact_tables_match_evidence_projection": true,
+  "command_shell_syntax": "passed; no producer executed"
+}

@@ -47,7 +47,8 @@ not automatically one unique physical read.
 From the repository root:
 
 ```bash
-python3 vendor/flexiplex-audit/build_and_check.py --output /tmp/flexiplex-audit-build
+mkdir -p results
+python3 vendor/flexiplex-audit/build_and_check.py --output results/flexiplex-audit-build
 ```
 
 The script checks pinned source hashes, reapplies the patch, checks that the
@@ -64,7 +65,7 @@ For a 10x 3′ v3 supplied-list assignment run:
 
 ```bash
 env -u FLEXIPLEX_AUDIT_SOURCE_FILE \
-  /tmp/flexiplex-audit-build/audit \
+  results/flexiplex-audit-build/audit \
   -d 10x3v3 -f 8 -e 2 -p 16 \
   -k targets.txt -n sample input.fastq > sample.assigned.fastq
 ```

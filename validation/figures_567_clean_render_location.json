@@ -1,5 +1,5 @@
 {
-  "path": "/tmp/rad_fig567_clean_render_xdimwbxl",
+  "path": "external_data/temporary/rad_fig567_clean_render_xdimwbxl",
   "inputs": "copied source_data only; no raw data, matrices, RDS or project links",
   "status": "passed",
   "formats": [
@@ -8,7 +8,7 @@
     "PNG"
   ],
   "files": 27,
-  "command": "env -i PATH=/usr/bin:/bin OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 MPLCONFIGDIR=/tmp/rad_fig567_clean_render_xdimwbxl/mpl /usr/bin/python3 scripts/revision/figures_567.py render --output-root /tmp/rad_fig567_clean_render_xdimwbxl",
+  "command": "env -i PATH=/usr/bin:/bin OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 MPLCONFIGDIR=external_data/temporary/rad_fig567_clean_render_xdimwbxl/mpl /usr/bin/python3 scripts/revision/figures_567.py render --output-root external_data/temporary/rad_fig567_clean_render_xdimwbxl",
   "outputs": {
     "figures/figure_06/genotype_strict_recall.svg": "5a8df478d44710093ab656041bcf4deac5eb8e01753e330d49da29a354e147c4",
     "figures/figure_06/genotype_strict_recall.pdf": "d4dc2cf0ca499b17c7d0b3c3973f13b35e409562f66ec8a603cd790b867066e1",

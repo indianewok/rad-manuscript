@@ -5,699 +5,699 @@ global	long	unique_row_keys	PASS
 global	long	input_count	PASS	observed=36 expected=36
 global	long	three_tools_each	PASS	
 global	MPNST	four_expected_accessions	PASS	inputs=['ERR15095094_MPNST1_scNaUMIseq_MinION', 'ERR15095095_MPNST1_scNaUMIseq_PromethION', 'ERR15095096', 'ERR15095097']
-source_table	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv	bytes_and_sha256	PASS	recorded_bytes=5337; recorded_sha256=d54840d46ff2f1cc56951269b748c26bbeedbb572915aff94f437e51b774659d
-source_table	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv	rows_used_matches_master	PASS	observed=42; recorded=42
-source_table	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv	bytes_and_sha256	PASS	recorded_bytes=7665; recorded_sha256=d37544e75cc12a1d8a386f62fc42626b04566495b94748d6b77a6b4835e14e8c
-source_table	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv	rows_used_matches_master	PASS	observed=30; recorded=30
-source_table	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv	bytes_and_sha256	PASS	recorded_bytes=1985; recorded_sha256=46b2792cc1ffc0ddb9bac8338fcddf5ed03a75e53de11d90eb3c9e5c759a2d0a
-source_table	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv	rows_used_matches_master	PASS	observed=24; recorded=24
-source_table	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/provenance/status_callset_manifest.csv	bytes_and_sha256	PASS	recorded_bytes=8334; recorded_sha256=47e830335863b5a6ace4f8d17bceece162d49a804b28c972224c1534b0774464
-source_table	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/provenance/status_callset_manifest.csv	rows_used_matches_master	PASS	observed=0; recorded=0
-source_table	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/tables/mpnst_native_three_tool_metrics.tsv	bytes_and_sha256	PASS	recorded_bytes=7021; recorded_sha256=bfc52046ca980ebc2e36e60304dd055bea0bf7058762ad5c5ebbf30f587a4043
-source_table	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/tables/mpnst_native_three_tool_metrics.tsv	rows_used_matches_master	PASS	observed=12; recorded=12
-source_table	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/provenance/callset_manifest.tsv	bytes_and_sha256	PASS	recorded_bytes=3281; recorded_sha256=8c7ecbf6a809875c09a4f770c26cd3bfec45145d78f719e535c96efe3e18d88c
-source_table	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/provenance/callset_manifest.tsv	rows_used_matches_master	PASS	observed=0; recorded=0
-source_table	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/validation/validation_summary.json	bytes_and_sha256	PASS	recorded_bytes=347; recorded_sha256=c321f621faeb46cd388c0e3ffc1e4ca15db3484df23352d6fe8e5a05e38b6a7b
-source_table	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/validation/validation_summary.json	rows_used_matches_master	PASS	observed=0; recorded=0
-row	Isosceles-ovarian-GSE248115|RAD	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
+source_table	external_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv	bytes_and_sha256	PASS	recorded_bytes=5337; recorded_sha256=d54840d46ff2f1cc56951269b748c26bbeedbb572915aff94f437e51b774659d
+source_table	external_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv	rows_used_matches_master	PASS	observed=42; recorded=42
+source_table	external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv	bytes_and_sha256	PASS	recorded_bytes=7665; recorded_sha256=d37544e75cc12a1d8a386f62fc42626b04566495b94748d6b77a6b4835e14e8c
+source_table	external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv	rows_used_matches_master	PASS	observed=30; recorded=30
+source_table	external_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv	bytes_and_sha256	PASS	recorded_bytes=1985; recorded_sha256=46b2792cc1ffc0ddb9bac8338fcddf5ed03a75e53de11d90eb3c9e5c759a2d0a
+source_table	external_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv	rows_used_matches_master	PASS	observed=24; recorded=24
+source_table	external_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/provenance/status_callset_manifest.csv	bytes_and_sha256	PASS	recorded_bytes=8334; recorded_sha256=47e830335863b5a6ace4f8d17bceece162d49a804b28c972224c1534b0774464
+source_table	external_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/provenance/status_callset_manifest.csv	rows_used_matches_master	PASS	observed=0; recorded=0
+source_table	external_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/tables/mpnst_native_three_tool_metrics.tsv	bytes_and_sha256	PASS	recorded_bytes=7021; recorded_sha256=bfc52046ca980ebc2e36e60304dd055bea0bf7058762ad5c5ebbf30f587a4043
+source_table	external_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/tables/mpnst_native_three_tool_metrics.tsv	rows_used_matches_master	PASS	observed=12; recorded=12
+source_table	external_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/provenance/callset_manifest.tsv	bytes_and_sha256	PASS	recorded_bytes=3281; recorded_sha256=8c7ecbf6a809875c09a4f770c26cd3bfec45145d78f719e535c96efe3e18d88c
+source_table	external_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/provenance/callset_manifest.tsv	rows_used_matches_master	PASS	observed=0; recorded=0
+source_table	external_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/validation/validation_summary.json	bytes_and_sha256	PASS	recorded_bytes=347; recorded_sha256=c321f621faeb46cd388c0e3ffc1e4ca15db3484df23352d6fe8e5a05e38b6a7b
+source_table	external_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/validation/validation_summary.json	rows_used_matches_master	PASS	observed=0; recorded=0
+row	Isosceles-ovarian-GSE248115|RAD	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
 row	Isosceles-ovarian-GSE248115|RAD	source_counts_exact	PASS	master=(2343, 88, 119); source=(2343, 88, 119)
 row	Isosceles-ovarian-GSE248115|RAD	count_identities	PASS	calls=2431; reference_n=2462
 row	Isosceles-ovarian-GSE248115|RAD	metrics_recomputed	PASS	precision=0.963800904977; recall=0.951665312754; f1=0.957694665849
 row	Isosceles-ovarian-GSE248115|RAD	source_metrics_recomputed	PASS	
-row	Isosceles-ovarian-GSE248115|BLAZE	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
+row	Isosceles-ovarian-GSE248115|BLAZE	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
 row	Isosceles-ovarian-GSE248115|BLAZE	source_counts_exact	PASS	master=(2241, 6, 221); source=(2241, 6, 221)
 row	Isosceles-ovarian-GSE248115|BLAZE	count_identities	PASS	calls=2247; reference_n=2462
 row	Isosceles-ovarian-GSE248115|BLAZE	metrics_recomputed	PASS	precision=0.997329773031; recall=0.910235580829; f1=0.951794436186
 row	Isosceles-ovarian-GSE248115|BLAZE	source_metrics_recomputed	PASS	
-row	Isosceles-ovarian-GSE248115|Flexiplex	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
+row	Isosceles-ovarian-GSE248115|Flexiplex	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
 row	Isosceles-ovarian-GSE248115|Flexiplex	source_counts_exact	PASS	master=(2153, 0, 309); source=(2153, 0, 309)
 row	Isosceles-ovarian-GSE248115|Flexiplex	count_identities	PASS	calls=2153; reference_n=2462
 row	Isosceles-ovarian-GSE248115|Flexiplex	metrics_recomputed	PASS	precision=1.000000000000; recall=0.874492282697; f1=0.933044420368
 row	Isosceles-ovarian-GSE248115|Flexiplex	source_metrics_recomputed	PASS	
-row	LeBrigand-MOB|RAD	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
+row	LeBrigand-MOB|RAD	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
 row	LeBrigand-MOB|RAD	source_counts_exact	PASS	master=(915, 0, 3); source=(915, 0, 3)
 row	LeBrigand-MOB|RAD	count_identities	PASS	calls=915; reference_n=918
 row	LeBrigand-MOB|RAD	metrics_recomputed	PASS	precision=1.000000000000; recall=0.996732026144; f1=0.998363338789
 row	LeBrigand-MOB|RAD	source_metrics_recomputed	PASS	
-row	LeBrigand-MOB|BLAZE	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
+row	LeBrigand-MOB|BLAZE	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
 row	LeBrigand-MOB|BLAZE	source_counts_exact	PASS	master=(844, 0, 74); source=(844, 0, 74)
 row	LeBrigand-MOB|BLAZE	count_identities	PASS	calls=844; reference_n=918
 row	LeBrigand-MOB|BLAZE	metrics_recomputed	PASS	precision=1.000000000000; recall=0.919389978214; f1=0.958002270148
 row	LeBrigand-MOB|BLAZE	source_metrics_recomputed	PASS	
-row	LeBrigand-MOB|Flexiplex	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
+row	LeBrigand-MOB|Flexiplex	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
 row	LeBrigand-MOB|Flexiplex	source_counts_exact	PASS	master=(196, 0, 722); source=(196, 0, 722)
 row	LeBrigand-MOB|Flexiplex	count_identities	PASS	calls=196; reference_n=918
 row	LeBrigand-MOB|Flexiplex	metrics_recomputed	PASS	precision=1.000000000000; recall=0.213507625272; f1=0.351885098743
 row	LeBrigand-MOB|Flexiplex	source_metrics_recomputed	PASS	
-row	LongBench-SC-ONT|RAD	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
+row	LongBench-SC-ONT|RAD	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
 row	LongBench-SC-ONT|RAD	source_counts_exact	PASS	master=(5204, 416, 7); source=(5204, 416, 7)
 row	LongBench-SC-ONT|RAD	count_identities	PASS	calls=5620; reference_n=5211
 row	LongBench-SC-ONT|RAD	metrics_recomputed	PASS	precision=0.925978647687; recall=0.998656687776; f1=0.960945434401
 row	LongBench-SC-ONT|RAD	source_metrics_recomputed	PASS	
-row	LongBench-SC-ONT|BLAZE	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
+row	LongBench-SC-ONT|BLAZE	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
 row	LongBench-SC-ONT|BLAZE	source_counts_exact	PASS	master=(4897, 126, 314); source=(4897, 126, 314)
 row	LongBench-SC-ONT|BLAZE	count_identities	PASS	calls=5023; reference_n=5211
 row	LongBench-SC-ONT|BLAZE	metrics_recomputed	PASS	precision=0.974915389210; recall=0.939742851660; f1=0.957006058237
 row	LongBench-SC-ONT|BLAZE	source_metrics_recomputed	PASS	
-row	LongBench-SC-ONT|Flexiplex	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
+row	LongBench-SC-ONT|Flexiplex	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
 row	LongBench-SC-ONT|Flexiplex	source_counts_exact	PASS	master=(5210, 697, 1); source=(5210, 697, 1)
 row	LongBench-SC-ONT|Flexiplex	count_identities	PASS	calls=5907; reference_n=5211
 row	LongBench-SC-ONT|Flexiplex	metrics_recomputed	PASS	precision=0.882004401557; recall=0.999808098254; f1=0.937218924267
 row	LongBench-SC-ONT|Flexiplex	source_metrics_recomputed	PASS	
-row	LongBench-SC-PB|RAD	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
+row	LongBench-SC-PB|RAD	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
 row	LongBench-SC-PB|RAD	source_counts_exact	PASS	master=(5173, 343, 38); source=(5173, 343, 38)
 row	LongBench-SC-PB|RAD	count_identities	PASS	calls=5516; reference_n=5211
 row	LongBench-SC-PB|RAD	metrics_recomputed	PASS	precision=0.937817258883; recall=0.992707733640; f1=0.964482147851
 row	LongBench-SC-PB|RAD	source_metrics_recomputed	PASS	
-row	LongBench-SC-PB|BLAZE	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
+row	LongBench-SC-PB|BLAZE	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
 row	LongBench-SC-PB|BLAZE	source_counts_exact	PASS	master=(4877, 125, 334); source=(4877, 125, 334)
 row	LongBench-SC-PB|BLAZE	count_identities	PASS	calls=5002; reference_n=5211
 row	LongBench-SC-PB|BLAZE	metrics_recomputed	PASS	precision=0.975009996002; recall=0.935904816734; f1=0.955057279937
 row	LongBench-SC-PB|BLAZE	source_metrics_recomputed	PASS	
-row	LongBench-SC-PB|Flexiplex	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
+row	LongBench-SC-PB|Flexiplex	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
 row	LongBench-SC-PB|Flexiplex	source_counts_exact	PASS	master=(5210, 693, 1); source=(5210, 693, 1)
 row	LongBench-SC-PB|Flexiplex	count_identities	PASS	calls=5903; reference_n=5211
 row	LongBench-SC-PB|Flexiplex	metrics_recomputed	PASS	precision=0.882602066746; recall=0.999808098254; f1=0.937556235379
 row	LongBench-SC-PB|Flexiplex	source_metrics_recomputed	PASS	
-row	LongBench-SN-ONT|RAD	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
+row	LongBench-SN-ONT|RAD	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
 row	LongBench-SN-ONT|RAD	source_counts_exact	PASS	master=(11821, 602, 191); source=(11821, 602, 191)
 row	LongBench-SN-ONT|RAD	count_identities	PASS	calls=12423; reference_n=12012
 row	LongBench-SN-ONT|RAD	metrics_recomputed	PASS	precision=0.951541495613; recall=0.984099234099; f1=0.967546552077
 row	LongBench-SN-ONT|RAD	source_metrics_recomputed	PASS	
-row	LongBench-SN-ONT|BLAZE	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
+row	LongBench-SN-ONT|BLAZE	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
 row	LongBench-SN-ONT|BLAZE	source_counts_exact	PASS	master=(9979, 22, 2033); source=(9979, 22, 2033)
 row	LongBench-SN-ONT|BLAZE	count_identities	PASS	calls=10001; reference_n=12012
 row	LongBench-SN-ONT|BLAZE	metrics_recomputed	PASS	precision=0.997800219978; recall=0.830752580753; f1=0.906646072775
 row	LongBench-SN-ONT|BLAZE	source_metrics_recomputed	PASS	
-row	LongBench-SN-ONT|Flexiplex	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
+row	LongBench-SN-ONT|Flexiplex	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
 row	LongBench-SN-ONT|Flexiplex	source_counts_exact	PASS	master=(11653, 448, 359); source=(11653, 448, 359)
 row	LongBench-SN-ONT|Flexiplex	count_identities	PASS	calls=12101; reference_n=12012
 row	LongBench-SN-ONT|Flexiplex	metrics_recomputed	PASS	precision=0.962978266259; recall=0.970113220113; f1=0.966532575789
 row	LongBench-SN-ONT|Flexiplex	source_metrics_recomputed	PASS	
-row	LongBench-SN-PB|RAD	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
+row	LongBench-SN-PB|RAD	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
 row	LongBench-SN-PB|RAD	source_counts_exact	PASS	master=(12009, 1571, 3); source=(12009, 1571, 3)
 row	LongBench-SN-PB|RAD	count_identities	PASS	calls=13580; reference_n=12012
 row	LongBench-SN-PB|RAD	metrics_recomputed	PASS	precision=0.884315169367; recall=0.999750249750; f1=0.938496405127
 row	LongBench-SN-PB|RAD	source_metrics_recomputed	PASS	
-row	LongBench-SN-PB|BLAZE	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
+row	LongBench-SN-PB|BLAZE	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
 row	LongBench-SN-PB|BLAZE	source_counts_exact	PASS	master=(9974, 27, 2038); source=(9974, 27, 2038)
 row	LongBench-SN-PB|BLAZE	count_identities	PASS	calls=10001; reference_n=12012
 row	LongBench-SN-PB|BLAZE	metrics_recomputed	PASS	precision=0.997300269973; recall=0.830336330336; f1=0.906191795757
 row	LongBench-SN-PB|BLAZE	source_metrics_recomputed	PASS	
-row	LongBench-SN-PB|Flexiplex	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
+row	LongBench-SN-PB|Flexiplex	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
 row	LongBench-SN-PB|Flexiplex	source_counts_exact	PASS	master=(11578, 438, 434); source=(11578, 438, 434)
 row	LongBench-SN-PB|Flexiplex	count_identities	PASS	calls=12016; reference_n=12012
 row	LongBench-SN-PB|Flexiplex	metrics_recomputed	PASS	precision=0.963548601864; recall=0.963869463869; f1=0.963709006159
 row	LongBench-SN-PB|Flexiplex	source_metrics_recomputed	PASS	
-row	ERR15095094_MPNST1_scNaUMIseq_MinION|RAD	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/tables/mpnst_native_three_tool_metrics.tsv
+row	ERR15095094_MPNST1_scNaUMIseq_MinION|RAD	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/tables/mpnst_native_three_tool_metrics.tsv
 row	ERR15095094_MPNST1_scNaUMIseq_MinION|RAD	source_counts_exact	PASS	master=(4473, 163, 129); source=(4473, 163, 129)
 row	ERR15095094_MPNST1_scNaUMIseq_MinION|RAD	count_identities	PASS	calls=4636; reference_n=4602
 row	ERR15095094_MPNST1_scNaUMIseq_MinION|RAD	metrics_recomputed	PASS	precision=0.964840379638; recall=0.971968709257; f1=0.968391426716
 row	ERR15095094_MPNST1_scNaUMIseq_MinION|RAD	source_metrics_recomputed	PASS	
-row	ERR15095094_MPNST1_scNaUMIseq_MinION|RAD	mpnst_manifest_path	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095094_MPNST1_scNaUMIseq_MinION.RAD.RAD.txt
-row	ERR15095094_MPNST1_scNaUMIseq_MinION|RAD	mpnst_callset_regular_non_symlink	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095094_MPNST1_scNaUMIseq_MinION.RAD.RAD.txt
+row	ERR15095094_MPNST1_scNaUMIseq_MinION|RAD	mpnst_manifest_path	PASS	external_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095094_MPNST1_scNaUMIseq_MinION.RAD.RAD.txt
+row	ERR15095094_MPNST1_scNaUMIseq_MinION|RAD	mpnst_callset_regular_non_symlink	PASS	external_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095094_MPNST1_scNaUMIseq_MinION.RAD.RAD.txt
 row	ERR15095094_MPNST1_scNaUMIseq_MinION|RAD	mpnst_callset_bytes_sha256_lines	PASS	bytes=78812; lines=4636
-row	ERR15095094_MPNST1_scNaUMIseq_MinION|BLAZE	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/tables/mpnst_native_three_tool_metrics.tsv
+row	ERR15095094_MPNST1_scNaUMIseq_MinION|BLAZE	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/tables/mpnst_native_three_tool_metrics.tsv
 row	ERR15095094_MPNST1_scNaUMIseq_MinION|BLAZE	source_counts_exact	PASS	master=(4225, 55, 377); source=(4225, 55, 377)
 row	ERR15095094_MPNST1_scNaUMIseq_MinION|BLAZE	count_identities	PASS	calls=4280; reference_n=4602
 row	ERR15095094_MPNST1_scNaUMIseq_MinION|BLAZE	metrics_recomputed	PASS	precision=0.987149532710; recall=0.918079096045; f1=0.951362305787
 row	ERR15095094_MPNST1_scNaUMIseq_MinION|BLAZE	source_metrics_recomputed	PASS	
-row	ERR15095094_MPNST1_scNaUMIseq_MinION|BLAZE	mpnst_manifest_path	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095094_MPNST1_scNaUMIseq_MinION.BLAZE.BLAZE.txt
-row	ERR15095094_MPNST1_scNaUMIseq_MinION|BLAZE	mpnst_callset_regular_non_symlink	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095094_MPNST1_scNaUMIseq_MinION.BLAZE.BLAZE.txt
+row	ERR15095094_MPNST1_scNaUMIseq_MinION|BLAZE	mpnst_manifest_path	PASS	external_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095094_MPNST1_scNaUMIseq_MinION.BLAZE.BLAZE.txt
+row	ERR15095094_MPNST1_scNaUMIseq_MinION|BLAZE	mpnst_callset_regular_non_symlink	PASS	external_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095094_MPNST1_scNaUMIseq_MinION.BLAZE.BLAZE.txt
 row	ERR15095094_MPNST1_scNaUMIseq_MinION|BLAZE	mpnst_callset_bytes_sha256_lines	PASS	bytes=72760; lines=4280
-row	ERR15095094_MPNST1_scNaUMIseq_MinION|Flexiplex	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/tables/mpnst_native_three_tool_metrics.tsv
+row	ERR15095094_MPNST1_scNaUMIseq_MinION|Flexiplex	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/tables/mpnst_native_three_tool_metrics.tsv
 row	ERR15095094_MPNST1_scNaUMIseq_MinION|Flexiplex	source_counts_exact	PASS	master=(4444, 111, 158); source=(4444, 111, 158)
 row	ERR15095094_MPNST1_scNaUMIseq_MinION|Flexiplex	count_identities	PASS	calls=4555; reference_n=4602
 row	ERR15095094_MPNST1_scNaUMIseq_MinION|Flexiplex	metrics_recomputed	PASS	precision=0.975631174533; recall=0.965667101260; f1=0.970623566670
 row	ERR15095094_MPNST1_scNaUMIseq_MinION|Flexiplex	source_metrics_recomputed	PASS	
-row	ERR15095094_MPNST1_scNaUMIseq_MinION|Flexiplex	mpnst_manifest_path	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095094_MPNST1_scNaUMIseq_MinION.Flexiplex.Flexiplex.txt
-row	ERR15095094_MPNST1_scNaUMIseq_MinION|Flexiplex	mpnst_callset_regular_non_symlink	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095094_MPNST1_scNaUMIseq_MinION.Flexiplex.Flexiplex.txt
+row	ERR15095094_MPNST1_scNaUMIseq_MinION|Flexiplex	mpnst_manifest_path	PASS	external_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095094_MPNST1_scNaUMIseq_MinION.Flexiplex.Flexiplex.txt
+row	ERR15095094_MPNST1_scNaUMIseq_MinION|Flexiplex	mpnst_callset_regular_non_symlink	PASS	external_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095094_MPNST1_scNaUMIseq_MinION.Flexiplex.Flexiplex.txt
 row	ERR15095094_MPNST1_scNaUMIseq_MinION|Flexiplex	mpnst_callset_bytes_sha256_lines	PASS	bytes=77435; lines=4555
-row	ERR15095095_MPNST1_scNaUMIseq_PromethION|RAD	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/tables/mpnst_native_three_tool_metrics.tsv
+row	ERR15095095_MPNST1_scNaUMIseq_PromethION|RAD	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/tables/mpnst_native_three_tool_metrics.tsv
 row	ERR15095095_MPNST1_scNaUMIseq_PromethION|RAD	source_counts_exact	PASS	master=(4417, 139, 185); source=(4417, 139, 185)
 row	ERR15095095_MPNST1_scNaUMIseq_PromethION|RAD	count_identities	PASS	calls=4556; reference_n=4602
 row	ERR15095095_MPNST1_scNaUMIseq_PromethION|RAD	metrics_recomputed	PASS	precision=0.969490781387; recall=0.959800086919; f1=0.964621096309
 row	ERR15095095_MPNST1_scNaUMIseq_PromethION|RAD	source_metrics_recomputed	PASS	
-row	ERR15095095_MPNST1_scNaUMIseq_PromethION|RAD	mpnst_manifest_path	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095095_MPNST1_scNaUMIseq_PromethION.RAD.RAD.txt
-row	ERR15095095_MPNST1_scNaUMIseq_PromethION|RAD	mpnst_callset_regular_non_symlink	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095095_MPNST1_scNaUMIseq_PromethION.RAD.RAD.txt
+row	ERR15095095_MPNST1_scNaUMIseq_PromethION|RAD	mpnst_manifest_path	PASS	external_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095095_MPNST1_scNaUMIseq_PromethION.RAD.RAD.txt
+row	ERR15095095_MPNST1_scNaUMIseq_PromethION|RAD	mpnst_callset_regular_non_symlink	PASS	external_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095095_MPNST1_scNaUMIseq_PromethION.RAD.RAD.txt
 row	ERR15095095_MPNST1_scNaUMIseq_PromethION|RAD	mpnst_callset_bytes_sha256_lines	PASS	bytes=77452; lines=4556
-row	ERR15095095_MPNST1_scNaUMIseq_PromethION|BLAZE	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/tables/mpnst_native_three_tool_metrics.tsv
+row	ERR15095095_MPNST1_scNaUMIseq_PromethION|BLAZE	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/tables/mpnst_native_three_tool_metrics.tsv
 row	ERR15095095_MPNST1_scNaUMIseq_PromethION|BLAZE	source_counts_exact	PASS	master=(4192, 55, 410); source=(4192, 55, 410)
 row	ERR15095095_MPNST1_scNaUMIseq_PromethION|BLAZE	count_identities	PASS	calls=4247; reference_n=4602
 row	ERR15095095_MPNST1_scNaUMIseq_PromethION|BLAZE	metrics_recomputed	PASS	precision=0.987049682129; recall=0.910908300739; f1=0.947451689456
 row	ERR15095095_MPNST1_scNaUMIseq_PromethION|BLAZE	source_metrics_recomputed	PASS	
-row	ERR15095095_MPNST1_scNaUMIseq_PromethION|BLAZE	mpnst_manifest_path	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095095_MPNST1_scNaUMIseq_PromethION.BLAZE.BLAZE.txt
-row	ERR15095095_MPNST1_scNaUMIseq_PromethION|BLAZE	mpnst_callset_regular_non_symlink	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095095_MPNST1_scNaUMIseq_PromethION.BLAZE.BLAZE.txt
+row	ERR15095095_MPNST1_scNaUMIseq_PromethION|BLAZE	mpnst_manifest_path	PASS	external_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095095_MPNST1_scNaUMIseq_PromethION.BLAZE.BLAZE.txt
+row	ERR15095095_MPNST1_scNaUMIseq_PromethION|BLAZE	mpnst_callset_regular_non_symlink	PASS	external_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095095_MPNST1_scNaUMIseq_PromethION.BLAZE.BLAZE.txt
 row	ERR15095095_MPNST1_scNaUMIseq_PromethION|BLAZE	mpnst_callset_bytes_sha256_lines	PASS	bytes=72199; lines=4247
-row	ERR15095095_MPNST1_scNaUMIseq_PromethION|Flexiplex	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/tables/mpnst_native_three_tool_metrics.tsv
+row	ERR15095095_MPNST1_scNaUMIseq_PromethION|Flexiplex	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/tables/mpnst_native_three_tool_metrics.tsv
 row	ERR15095095_MPNST1_scNaUMIseq_PromethION|Flexiplex	source_counts_exact	PASS	master=(4473, 136, 129); source=(4473, 136, 129)
 row	ERR15095095_MPNST1_scNaUMIseq_PromethION|Flexiplex	count_identities	PASS	calls=4609; reference_n=4602
 row	ERR15095095_MPNST1_scNaUMIseq_PromethION|Flexiplex	metrics_recomputed	PASS	precision=0.970492514645; recall=0.971968709257; f1=0.971230051026
 row	ERR15095095_MPNST1_scNaUMIseq_PromethION|Flexiplex	source_metrics_recomputed	PASS	
-row	ERR15095095_MPNST1_scNaUMIseq_PromethION|Flexiplex	mpnst_manifest_path	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095095_MPNST1_scNaUMIseq_PromethION.Flexiplex.Flexiplex.txt
-row	ERR15095095_MPNST1_scNaUMIseq_PromethION|Flexiplex	mpnst_callset_regular_non_symlink	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095095_MPNST1_scNaUMIseq_PromethION.Flexiplex.Flexiplex.txt
+row	ERR15095095_MPNST1_scNaUMIseq_PromethION|Flexiplex	mpnst_manifest_path	PASS	external_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095095_MPNST1_scNaUMIseq_PromethION.Flexiplex.Flexiplex.txt
+row	ERR15095095_MPNST1_scNaUMIseq_PromethION|Flexiplex	mpnst_callset_regular_non_symlink	PASS	external_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095095_MPNST1_scNaUMIseq_PromethION.Flexiplex.Flexiplex.txt
 row	ERR15095095_MPNST1_scNaUMIseq_PromethION|Flexiplex	mpnst_callset_bytes_sha256_lines	PASS	bytes=78353; lines=4609
-row	ERR15095096|RAD	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/tables/mpnst_native_three_tool_metrics.tsv
+row	ERR15095096|RAD	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/tables/mpnst_native_three_tool_metrics.tsv
 row	ERR15095096|RAD	source_counts_exact	PASS	master=(10181, 485, 100); source=(10181, 485, 100)
 row	ERR15095096|RAD	count_identities	PASS	calls=10666; reference_n=10281
 row	ERR15095096|RAD	metrics_recomputed	PASS	precision=0.954528408026; recall=0.990273319716; f1=0.972072373132
 row	ERR15095096|RAD	source_metrics_recomputed	PASS	
-row	ERR15095096|RAD	mpnst_manifest_path	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095096.RAD.barcodes.txt
-row	ERR15095096|RAD	mpnst_callset_regular_non_symlink	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095096.RAD.barcodes.txt
+row	ERR15095096|RAD	mpnst_manifest_path	PASS	external_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095096.RAD.barcodes.txt
+row	ERR15095096|RAD	mpnst_callset_regular_non_symlink	PASS	external_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095096.RAD.barcodes.txt
 row	ERR15095096|RAD	mpnst_callset_bytes_sha256_lines	PASS	bytes=181322; lines=10666
-row	ERR15095096|BLAZE	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/tables/mpnst_native_three_tool_metrics.tsv
+row	ERR15095096|BLAZE	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/tables/mpnst_native_three_tool_metrics.tsv
 row	ERR15095096|BLAZE	source_counts_exact	PASS	master=(9912, 313, 369); source=(9912, 313, 369)
 row	ERR15095096|BLAZE	count_identities	PASS	calls=10225; reference_n=10281
 row	ERR15095096|BLAZE	metrics_recomputed	PASS	precision=0.969388753056; recall=0.964108549752; f1=0.966741441529
 row	ERR15095096|BLAZE	source_metrics_recomputed	PASS	
-row	ERR15095096|BLAZE	mpnst_manifest_path	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095096.BLAZE.barcodes.txt
-row	ERR15095096|BLAZE	mpnst_callset_regular_non_symlink	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095096.BLAZE.barcodes.txt
+row	ERR15095096|BLAZE	mpnst_manifest_path	PASS	external_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095096.BLAZE.barcodes.txt
+row	ERR15095096|BLAZE	mpnst_callset_regular_non_symlink	PASS	external_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095096.BLAZE.barcodes.txt
 row	ERR15095096|BLAZE	mpnst_callset_bytes_sha256_lines	PASS	bytes=173825; lines=10225
-row	ERR15095096|Flexiplex	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/tables/mpnst_native_three_tool_metrics.tsv
+row	ERR15095096|Flexiplex	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/tables/mpnst_native_three_tool_metrics.tsv
 row	ERR15095096|Flexiplex	source_counts_exact	PASS	master=(10200, 506, 81); source=(10200, 506, 81)
 row	ERR15095096|Flexiplex	count_identities	PASS	calls=10706; reference_n=10281
 row	ERR15095096|Flexiplex	metrics_recomputed	PASS	precision=0.952736783112; recall=0.992121388970; f1=0.972030304474
 row	ERR15095096|Flexiplex	source_metrics_recomputed	PASS	
-row	ERR15095096|Flexiplex	mpnst_manifest_path	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095096.Flexiplex.barcodes.txt
-row	ERR15095096|Flexiplex	mpnst_callset_regular_non_symlink	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095096.Flexiplex.barcodes.txt
+row	ERR15095096|Flexiplex	mpnst_manifest_path	PASS	external_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095096.Flexiplex.barcodes.txt
+row	ERR15095096|Flexiplex	mpnst_callset_regular_non_symlink	PASS	external_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095096.Flexiplex.barcodes.txt
 row	ERR15095096|Flexiplex	mpnst_callset_bytes_sha256_lines	PASS	bytes=182002; lines=10706
-row	ERR15095097|RAD	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/tables/mpnst_native_three_tool_metrics.tsv
+row	ERR15095097|RAD	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/tables/mpnst_native_three_tool_metrics.tsv
 row	ERR15095097|RAD	source_counts_exact	PASS	master=(17, 4759, 10264); source=(17, 4759, 10264)
 row	ERR15095097|RAD	count_identities	PASS	calls=4776; reference_n=10281
 row	ERR15095097|RAD	metrics_recomputed	PASS	precision=0.003559463987; recall=0.001653535648; f1=0.002258085940
 row	ERR15095097|RAD	source_metrics_recomputed	PASS	
-row	ERR15095097|RAD	mpnst_manifest_path	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095097.RAD.barcodes.txt
-row	ERR15095097|RAD	mpnst_callset_regular_non_symlink	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095097.RAD.barcodes.txt
+row	ERR15095097|RAD	mpnst_manifest_path	PASS	external_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095097.RAD.barcodes.txt
+row	ERR15095097|RAD	mpnst_callset_regular_non_symlink	PASS	external_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095097.RAD.barcodes.txt
 row	ERR15095097|RAD	mpnst_callset_bytes_sha256_lines	PASS	bytes=81192; lines=4776
-row	ERR15095097|BLAZE	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/tables/mpnst_native_three_tool_metrics.tsv
+row	ERR15095097|BLAZE	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/tables/mpnst_native_three_tool_metrics.tsv
 row	ERR15095097|BLAZE	source_counts_exact	PASS	master=(15, 4493, 10266); source=(15, 4493, 10266)
 row	ERR15095097|BLAZE	count_identities	PASS	calls=4508; reference_n=10281
 row	ERR15095097|BLAZE	metrics_recomputed	PASS	precision=0.003327417924; recall=0.001459002043; f1=0.002028534722
 row	ERR15095097|BLAZE	source_metrics_recomputed	PASS	
-row	ERR15095097|BLAZE	mpnst_manifest_path	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095097.BLAZE.barcodes.txt
-row	ERR15095097|BLAZE	mpnst_callset_regular_non_symlink	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095097.BLAZE.barcodes.txt
+row	ERR15095097|BLAZE	mpnst_manifest_path	PASS	external_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095097.BLAZE.barcodes.txt
+row	ERR15095097|BLAZE	mpnst_callset_regular_non_symlink	PASS	external_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095097.BLAZE.barcodes.txt
 row	ERR15095097|BLAZE	mpnst_callset_bytes_sha256_lines	PASS	bytes=76636; lines=4508
-row	ERR15095097|Flexiplex	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/tables/mpnst_native_three_tool_metrics.tsv
+row	ERR15095097|Flexiplex	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/tables/mpnst_native_three_tool_metrics.tsv
 row	ERR15095097|Flexiplex	source_counts_exact	PASS	master=(17, 4767, 10264); source=(17, 4767, 10264)
 row	ERR15095097|Flexiplex	count_identities	PASS	calls=4784; reference_n=10281
 row	ERR15095097|Flexiplex	metrics_recomputed	PASS	precision=0.003553511706; recall=0.001653535648; f1=0.002256886824
 row	ERR15095097|Flexiplex	source_metrics_recomputed	PASS	
-row	ERR15095097|Flexiplex	mpnst_manifest_path	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095097.Flexiplex.barcodes.txt
-row	ERR15095097|Flexiplex	mpnst_callset_regular_non_symlink	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095097.Flexiplex.barcodes.txt
+row	ERR15095097|Flexiplex	mpnst_manifest_path	PASS	external_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095097.Flexiplex.barcodes.txt
+row	ERR15095097|Flexiplex	mpnst_callset_regular_non_symlink	PASS	external_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095097.Flexiplex.barcodes.txt
 row	ERR15095097|Flexiplex	mpnst_callset_bytes_sha256_lines	PASS	bytes=81328; lines=4784
-row	Measles-P7|RAD	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
+row	Measles-P7|RAD	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
 row	Measles-P7|RAD	source_counts_exact	PASS	master=(916, 24, 48); source=(916, 24, 48)
 row	Measles-P7|RAD	count_identities	PASS	calls=940; reference_n=964
 row	Measles-P7|RAD	metrics_recomputed	PASS	precision=0.974468085106; recall=0.950207468880; f1=0.962184873950
 row	Measles-P7|RAD	source_metrics_recomputed	PASS	
-row	Measles-P7|BLAZE	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
+row	Measles-P7|BLAZE	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
 row	Measles-P7|BLAZE	source_counts_exact	PASS	master=(844, 2, 120); source=(844, 2, 120)
 row	Measles-P7|BLAZE	count_identities	PASS	calls=846; reference_n=964
 row	Measles-P7|BLAZE	metrics_recomputed	PASS	precision=0.997635933806; recall=0.875518672199; f1=0.932596685083
 row	Measles-P7|BLAZE	source_metrics_recomputed	PASS	
-row	Measles-P7|Flexiplex	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
+row	Measles-P7|Flexiplex	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
 row	Measles-P7|Flexiplex	source_counts_exact	PASS	master=(816, 1, 148); source=(816, 1, 148)
 row	Measles-P7|Flexiplex	count_identities	PASS	calls=817; reference_n=964
 row	Measles-P7|Flexiplex	metrics_recomputed	PASS	precision=0.998776009792; recall=0.846473029046; f1=0.916339135317
 row	Measles-P7|Flexiplex	source_metrics_recomputed	PASS	
-row	Measles-P8-VDJ-enriched|RAD	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
+row	Measles-P8-VDJ-enriched|RAD	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
 row	Measles-P8-VDJ-enriched|RAD	source_counts_exact	PASS	master=(9442, 48, 857); source=(9442, 48, 857)
 row	Measles-P8-VDJ-enriched|RAD	count_identities	PASS	calls=9490; reference_n=10299
 row	Measles-P8-VDJ-enriched|RAD	metrics_recomputed	PASS	precision=0.994942044257; recall=0.916788037674; f1=0.954267522361
 row	Measles-P8-VDJ-enriched|RAD	source_metrics_recomputed	PASS	
-row	Measles-P8-VDJ-enriched|BLAZE	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
+row	Measles-P8-VDJ-enriched|BLAZE	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
 row	Measles-P8-VDJ-enriched|BLAZE	source_counts_exact	PASS	master=(9496, 35, 803); source=(9496, 35, 803)
 row	Measles-P8-VDJ-enriched|BLAZE	count_identities	PASS	calls=9531; reference_n=10299
 row	Measles-P8-VDJ-enriched|BLAZE	metrics_recomputed	PASS	precision=0.996327772532; recall=0.922031265171; f1=0.957740796773
 row	Measles-P8-VDJ-enriched|BLAZE	source_metrics_recomputed	PASS	
-row	Measles-P8-VDJ-enriched|Flexiplex	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
+row	Measles-P8-VDJ-enriched|Flexiplex	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
 row	Measles-P8-VDJ-enriched|Flexiplex	source_counts_exact	PASS	master=(9404, 48, 895); source=(9404, 48, 895)
 row	Measles-P8-VDJ-enriched|Flexiplex	count_identities	PASS	calls=9452; reference_n=10299
 row	Measles-P8-VDJ-enriched|Flexiplex	metrics_recomputed	PASS	precision=0.994921709691; recall=0.913098359064; f1=0.952255581996
 row	Measles-P8-VDJ-enriched|Flexiplex	source_metrics_recomputed	PASS	
-row	Measles-P8-WTA|RAD	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
+row	Measles-P8-WTA|RAD	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
 row	Measles-P8-WTA|RAD	source_counts_exact	PASS	master=(9978, 122, 321); source=(9978, 122, 321)
 row	Measles-P8-WTA|RAD	count_identities	PASS	calls=10100; reference_n=10299
 row	Measles-P8-WTA|RAD	metrics_recomputed	PASS	precision=0.987920792079; recall=0.968831925430; f1=0.978283249179
 row	Measles-P8-WTA|RAD	source_metrics_recomputed	PASS	
-row	Measles-P8-WTA|BLAZE	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
+row	Measles-P8-WTA|BLAZE	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
 row	Measles-P8-WTA|BLAZE	source_counts_exact	PASS	master=(10128, 512, 171); source=(10128, 512, 171)
 row	Measles-P8-WTA|BLAZE	count_identities	PASS	calls=10640; reference_n=10299
 row	Measles-P8-WTA|BLAZE	metrics_recomputed	PASS	precision=0.951879699248; recall=0.983396446257; f1=0.967381441330
 row	Measles-P8-WTA|BLAZE	source_metrics_recomputed	PASS	
-row	Measles-P8-WTA|Flexiplex	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
+row	Measles-P8-WTA|Flexiplex	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
 row	Measles-P8-WTA|Flexiplex	source_counts_exact	PASS	master=(9549, 4, 750); source=(9549, 4, 750)
 row	Measles-P8-WTA|Flexiplex	count_identities	PASS	calls=9553; reference_n=10299
 row	Measles-P8-WTA|Flexiplex	metrics_recomputed	PASS	precision=0.999581283366; recall=0.927177395864; f1=0.962018940157
 row	Measles-P8-WTA|Flexiplex	source_metrics_recomputed	PASS	
-row	PromethION_iPSC|RAD	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
+row	PromethION_iPSC|RAD	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
 row	PromethION_iPSC|RAD	source_counts_exact	PASS	master=(848, 59, 174); source=(848, 59, 174)
 row	PromethION_iPSC|RAD	count_identities	PASS	calls=907; reference_n=1022
 row	PromethION_iPSC|RAD	metrics_recomputed	PASS	precision=0.934950385888; recall=0.829745596869; f1=0.879212026957
 row	PromethION_iPSC|RAD	source_metrics_recomputed	PASS	
-row	PromethION_iPSC|BLAZE	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
+row	PromethION_iPSC|BLAZE	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
 row	PromethION_iPSC|BLAZE	source_counts_exact	PASS	master=(799, 5, 223); source=(799, 5, 223)
 row	PromethION_iPSC|BLAZE	count_identities	PASS	calls=804; reference_n=1022
 row	PromethION_iPSC|BLAZE	metrics_recomputed	PASS	precision=0.993781094527; recall=0.781800391389; f1=0.875136911281
 row	PromethION_iPSC|BLAZE	source_metrics_recomputed	PASS	
-row	PromethION_iPSC|Flexiplex	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
+row	PromethION_iPSC|Flexiplex	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
 row	PromethION_iPSC|Flexiplex	source_counts_exact	PASS	master=(798, 3, 224); source=(798, 3, 224)
 row	PromethION_iPSC|Flexiplex	count_identities	PASS	calls=801; reference_n=1022
 row	PromethION_iPSC|Flexiplex	metrics_recomputed	PASS	precision=0.996254681648; recall=0.780821917808; f1=0.875479978058
 row	PromethION_iPSC|Flexiplex	source_metrics_recomputed	PASS	
-row	RAGEseq-TNBC-LN|RAD	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
+row	RAGEseq-TNBC-LN|RAD	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
 row	RAGEseq-TNBC-LN|RAD	source_counts_exact	PASS	master=(5585, 20, 4848); source=(5585, 20, 4848)
 row	RAGEseq-TNBC-LN|RAD	count_identities	PASS	calls=5605; reference_n=10433
 row	RAGEseq-TNBC-LN|RAD	metrics_recomputed	PASS	precision=0.996431757360; recall=0.535320617272; f1=0.696470881656
 row	RAGEseq-TNBC-LN|RAD	source_metrics_recomputed	PASS	
-row	RAGEseq-TNBC-LN|BLAZE	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
+row	RAGEseq-TNBC-LN|BLAZE	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
 row	RAGEseq-TNBC-LN|BLAZE	source_counts_exact	PASS	master=(4109, 365, 6324); source=(4109, 365, 6324)
 row	RAGEseq-TNBC-LN|BLAZE	count_identities	PASS	calls=4474; reference_n=10433
 row	RAGEseq-TNBC-LN|BLAZE	metrics_recomputed	PASS	precision=0.918417523469; recall=0.393846448768; f1=0.551284631381
 row	RAGEseq-TNBC-LN|BLAZE	source_metrics_recomputed	PASS	
-row	RAGEseq-TNBC-LN|Flexiplex	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
+row	RAGEseq-TNBC-LN|Flexiplex	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
 row	RAGEseq-TNBC-LN|Flexiplex	source_counts_exact	PASS	master=(3696, 11, 6737); source=(3696, 11, 6737)
 row	RAGEseq-TNBC-LN|Flexiplex	count_identities	PASS	calls=3707; reference_n=10433
 row	RAGEseq-TNBC-LN|Flexiplex	metrics_recomputed	PASS	precision=0.997032640950; recall=0.354260519505; f1=0.522772277228
 row	RAGEseq-TNBC-LN|Flexiplex	source_metrics_recomputed	PASS	
-row	RAGEseq-cell-line|RAD	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
+row	RAGEseq-cell-line|RAD	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
 row	RAGEseq-cell-line|RAD	source_counts_exact	PASS	master=(3854, 10, 651); source=(3854, 10, 651)
 row	RAGEseq-cell-line|RAD	count_identities	PASS	calls=3864; reference_n=4505
 row	RAGEseq-cell-line|RAD	metrics_recomputed	PASS	precision=0.997412008282; recall=0.855493895671; f1=0.921018042777
 row	RAGEseq-cell-line|RAD	source_metrics_recomputed	PASS	
-row	RAGEseq-cell-line|BLAZE	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
+row	RAGEseq-cell-line|BLAZE	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
 row	RAGEseq-cell-line|BLAZE	source_counts_exact	PASS	master=(2864, 91, 1641); source=(2864, 91, 1641)
 row	RAGEseq-cell-line|BLAZE	count_identities	PASS	calls=2955; reference_n=4505
 row	RAGEseq-cell-line|BLAZE	metrics_recomputed	PASS	precision=0.969204737733; recall=0.635738068812; f1=0.767828418231
 row	RAGEseq-cell-line|BLAZE	source_metrics_recomputed	PASS	
-row	RAGEseq-cell-line|Flexiplex	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
+row	RAGEseq-cell-line|Flexiplex	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
 row	RAGEseq-cell-line|Flexiplex	source_counts_exact	PASS	master=(3259, 0, 1246); source=(3259, 0, 1246)
 row	RAGEseq-cell-line|Flexiplex	count_identities	PASS	calls=3259; reference_n=4505
 row	RAGEseq-cell-line|Flexiplex	metrics_recomputed	PASS	precision=1.000000000000; recall=0.723418423973; f1=0.839515713550
 row	RAGEseq-cell-line|Flexiplex	source_metrics_recomputed	PASS	
-row	ScTagger-L_flatQ20|RAD	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
+row	ScTagger-L_flatQ20|RAD	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
 row	ScTagger-L_flatQ20|RAD	source_counts_exact	PASS	master=(5000, 0, 0); source=(5000, 0, 0)
 row	ScTagger-L_flatQ20|RAD	count_identities	PASS	calls=5000; reference_n=5000
 row	ScTagger-L_flatQ20|RAD	metrics_recomputed	PASS	precision=1.000000000000; recall=1.000000000000; f1=1.000000000000
 row	ScTagger-L_flatQ20|RAD	source_metrics_recomputed	PASS	
-row	ScTagger-L_flatQ20|BLAZE	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
+row	ScTagger-L_flatQ20|BLAZE	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
 row	ScTagger-L_flatQ20|BLAZE	source_counts_exact	PASS	master=(5000, 607, 0); source=(5000, 607, 0)
 row	ScTagger-L_flatQ20|BLAZE	count_identities	PASS	calls=5607; reference_n=5000
 row	ScTagger-L_flatQ20|BLAZE	metrics_recomputed	PASS	precision=0.891742464776; recall=1.000000000000; f1=0.942773640049
 row	ScTagger-L_flatQ20|BLAZE	source_metrics_recomputed	PASS	
-row	ScTagger-L_flatQ20|Flexiplex	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
+row	ScTagger-L_flatQ20|Flexiplex	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
 row	ScTagger-L_flatQ20|Flexiplex	source_counts_exact	PASS	master=(3004, 0, 1996); source=(3004, 0, 1996)
 row	ScTagger-L_flatQ20|Flexiplex	count_identities	PASS	calls=3004; reference_n=5000
 row	ScTagger-L_flatQ20|Flexiplex	metrics_recomputed	PASS	precision=1.000000000000; recall=0.600800000000; f1=0.750624687656
 row	ScTagger-L_flatQ20|Flexiplex	source_metrics_recomputed	PASS	
-row	ScTagger-S_flatQ20|RAD	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
+row	ScTagger-S_flatQ20|RAD	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
 row	ScTagger-S_flatQ20|RAD	source_counts_exact	PASS	master=(50, 3, 0); source=(50, 3, 0)
 row	ScTagger-S_flatQ20|RAD	count_identities	PASS	calls=53; reference_n=50
 row	ScTagger-S_flatQ20|RAD	metrics_recomputed	PASS	precision=0.943396226415; recall=1.000000000000; f1=0.970873786408
 row	ScTagger-S_flatQ20|RAD	source_metrics_recomputed	PASS	
-row	ScTagger-S_flatQ20|BLAZE	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
+row	ScTagger-S_flatQ20|BLAZE	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
 row	ScTagger-S_flatQ20|BLAZE	source_counts_exact	PASS	master=(50, 6, 0); source=(50, 6, 0)
 row	ScTagger-S_flatQ20|BLAZE	count_identities	PASS	calls=56; reference_n=50
 row	ScTagger-S_flatQ20|BLAZE	metrics_recomputed	PASS	precision=0.892857142857; recall=1.000000000000; f1=0.943396226415
 row	ScTagger-S_flatQ20|BLAZE	source_metrics_recomputed	PASS	
-row	ScTagger-S_flatQ20|Flexiplex	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
+row	ScTagger-S_flatQ20|Flexiplex	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/whitelist_native_three_tool_graph_ready_20260810/native_three_tool_TP_FP_FN_graph_ready.csv
 row	ScTagger-S_flatQ20|Flexiplex	source_counts_exact	PASS	master=(50, 0, 0); source=(50, 0, 0)
 row	ScTagger-S_flatQ20|Flexiplex	count_identities	PASS	calls=50; reference_n=50
 row	ScTagger-S_flatQ20|Flexiplex	metrics_recomputed	PASS	precision=1.000000000000; recall=1.000000000000; f1=1.000000000000
 row	ScTagger-S_flatQ20|Flexiplex	source_metrics_recomputed	PASS	
-row	section12|RAD	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv
+row	section12|RAD	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv
 row	section12|RAD	source_counts_exact	PASS	master=(2238, 210, 272); source=(2238, 210, 272)
 row	section12|RAD	count_identities	PASS	calls=2448; reference_n=2510
 row	section12|RAD	metrics_recomputed	PASS	precision=0.914215686275; recall=0.891633466135; f1=0.902783380395
 row	section12|RAD	source_metrics_recomputed	PASS	
 row	section12|RAD	visium_manifest_call_count	PASS	manifest_nonempty_lines=2448
-row	section12|RAD	visium_live_callset_hash	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260802_visium_b6853a3_error_sweep/e030/section12/section12_b685.txt
-row	section12|BLAZE	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv
+row	section12|RAD	visium_live_callset_hash	PASS	external_data/reviewer_comment_data/wl_scan/20260802_visium_b6853a3_error_sweep/e030/section12/section12_b685.txt
+row	section12|BLAZE	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv
 row	section12|BLAZE	source_counts_exact	PASS	master=(2296, 315, 214); source=(2296, 315, 214)
 row	section12|BLAZE	count_identities	PASS	calls=2611; reference_n=2510
 row	section12|BLAZE	metrics_recomputed	PASS	precision=0.879356568365; recall=0.914741035857; f1=0.896699863308
 row	section12|BLAZE	source_metrics_recomputed	PASS	
 row	section12|BLAZE	visium_manifest_call_count	PASS	manifest_nonempty_lines=2611
-row	section12|BLAZE	visium_live_callset_hash	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260729_spatial_vdj_single_slices_expect2500/runs/section12/blaze_expect2500/whitelist.csv
-row	section12|Flexiplex	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv
+row	section12|BLAZE	visium_live_callset_hash	PASS	external_data/reviewer_comment_data/wl_scan/20260729_spatial_vdj_single_slices_expect2500/runs/section12/blaze_expect2500/whitelist.csv
+row	section12|Flexiplex	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv
 row	section12|Flexiplex	source_counts_exact	PASS	master=(103, 0, 2407); source=(103, 0, 2407)
 row	section12|Flexiplex	count_identities	PASS	calls=103; reference_n=2510
 row	section12|Flexiplex	metrics_recomputed	PASS	precision=1.000000000000; recall=0.041035856574; f1=0.078836586299
 row	section12|Flexiplex	source_metrics_recomputed	PASS	
 row	section12|Flexiplex	visium_manifest_call_count	PASS	manifest_nonempty_lines=103
-row	section12|Flexiplex	visium_live_callset_hash	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260730_visium_flexiplex_f8_per_section_fairness/callsets/section12/flexiplex_barcodes_final.txt
-row	section16|RAD	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv
+row	section12|Flexiplex	visium_live_callset_hash	PASS	external_data/reviewer_comment_data/wl_scan/20260730_visium_flexiplex_f8_per_section_fairness/callsets/section12/flexiplex_barcodes_final.txt
+row	section16|RAD	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv
 row	section16|RAD	source_counts_exact	PASS	master=(2174, 164, 326); source=(2174, 164, 326)
 row	section16|RAD	count_identities	PASS	calls=2338; reference_n=2500
 row	section16|RAD	metrics_recomputed	PASS	precision=0.929854576561; recall=0.869600000000; f1=0.898718478710
 row	section16|RAD	source_metrics_recomputed	PASS	
 row	section16|RAD	visium_manifest_call_count	PASS	manifest_nonempty_lines=2338
-row	section16|RAD	visium_live_callset_hash	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260802_visium_b6853a3_error_sweep/e030/section16/section16_b685.txt
-row	section16|BLAZE	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv
+row	section16|RAD	visium_live_callset_hash	PASS	external_data/reviewer_comment_data/wl_scan/20260802_visium_b6853a3_error_sweep/e030/section16/section16_b685.txt
+row	section16|BLAZE	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv
 row	section16|BLAZE	source_counts_exact	PASS	master=(2226, 220, 274); source=(2226, 220, 274)
 row	section16|BLAZE	count_identities	PASS	calls=2446; reference_n=2500
 row	section16|BLAZE	metrics_recomputed	PASS	precision=0.910057236304; recall=0.890400000000; f1=0.900121310150
 row	section16|BLAZE	source_metrics_recomputed	PASS	
 row	section16|BLAZE	visium_manifest_call_count	PASS	manifest_nonempty_lines=2446
-row	section16|BLAZE	visium_live_callset_hash	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260729_spatial_vdj_single_slices_expect2500/runs/section16/blaze_expect2500/whitelist.csv
-row	section16|Flexiplex	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv
+row	section16|BLAZE	visium_live_callset_hash	PASS	external_data/reviewer_comment_data/wl_scan/20260729_spatial_vdj_single_slices_expect2500/runs/section16/blaze_expect2500/whitelist.csv
+row	section16|Flexiplex	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv
 row	section16|Flexiplex	source_counts_exact	PASS	master=(199, 0, 2301); source=(199, 0, 2301)
 row	section16|Flexiplex	count_identities	PASS	calls=199; reference_n=2500
 row	section16|Flexiplex	metrics_recomputed	PASS	precision=1.000000000000; recall=0.079600000000; f1=0.147462022971
 row	section16|Flexiplex	source_metrics_recomputed	PASS	
 row	section16|Flexiplex	visium_manifest_call_count	PASS	manifest_nonempty_lines=199
-row	section16|Flexiplex	visium_live_callset_hash	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260730_visium_flexiplex_f8_per_section_fairness/callsets/section16/flexiplex_barcodes_final.txt
-row	section17_1T_1B|RAD	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv
+row	section16|Flexiplex	visium_live_callset_hash	PASS	external_data/reviewer_comment_data/wl_scan/20260730_visium_flexiplex_f8_per_section_fairness/callsets/section16/flexiplex_barcodes_final.txt
+row	section17_1T_1B|RAD	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv
 row	section17_1T_1B|RAD	source_counts_exact	PASS	master=(2288, 417, 208); source=(2288, 417, 208)
 row	section17_1T_1B|RAD	count_identities	PASS	calls=2705; reference_n=2496
 row	section17_1T_1B|RAD	metrics_recomputed	PASS	precision=0.845841035120; recall=0.916666666667; f1=0.879830801769
 row	section17_1T_1B|RAD	source_metrics_recomputed	PASS	
 row	section17_1T_1B|RAD	visium_manifest_call_count	PASS	manifest_nonempty_lines=2705
-row	section17_1T_1B|BLAZE	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv
+row	section17_1T_1B|BLAZE	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv
 row	section17_1T_1B|BLAZE	source_counts_exact	PASS	master=(2061, 248, 435); source=(2061, 248, 435)
 row	section17_1T_1B|BLAZE	count_identities	PASS	calls=2309; reference_n=2496
 row	section17_1T_1B|BLAZE	metrics_recomputed	PASS	precision=0.892594196622; recall=0.825721153846; f1=0.857856399584
 row	section17_1T_1B|BLAZE	source_metrics_recomputed	PASS	
 row	section17_1T_1B|BLAZE	visium_manifest_call_count	PASS	manifest_nonempty_lines=2309
-row	section17_1T_1B|BLAZE	visium_live_callset_hash	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260802_visium_17_32_split_three_tool/blaze/section17_1T_1B/whitelist.csv
-row	section17_1T_1B|Flexiplex	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv
+row	section17_1T_1B|BLAZE	visium_live_callset_hash	PASS	external_data/reviewer_comment_data/wl_scan/20260802_visium_17_32_split_three_tool/blaze/section17_1T_1B/whitelist.csv
+row	section17_1T_1B|Flexiplex	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv
 row	section17_1T_1B|Flexiplex	source_counts_exact	PASS	master=(53, 0, 2443); source=(53, 0, 2443)
 row	section17_1T_1B|Flexiplex	count_identities	PASS	calls=53; reference_n=2496
 row	section17_1T_1B|Flexiplex	metrics_recomputed	PASS	precision=1.000000000000; recall=0.021233974359; f1=0.041584935269
 row	section17_1T_1B|Flexiplex	source_metrics_recomputed	PASS	
 row	section17_1T_1B|Flexiplex	visium_manifest_call_count	PASS	manifest_nonempty_lines=53
-row	section17_1T_1B|Flexiplex	visium_live_callset_hash	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260802_visium_17_32_split_three_tool/flexiplex/section17_1T_1B/f8/flexiplex_barcodes_final.txt
-row	section17_4T_1B|RAD	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv
+row	section17_1T_1B|Flexiplex	visium_live_callset_hash	PASS	external_data/reviewer_comment_data/wl_scan/20260802_visium_17_32_split_three_tool/flexiplex/section17_1T_1B/f8/flexiplex_barcodes_final.txt
+row	section17_4T_1B|RAD	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv
 row	section17_4T_1B|RAD	source_counts_exact	PASS	master=(2391, 500, 105); source=(2391, 500, 105)
 row	section17_4T_1B|RAD	count_identities	PASS	calls=2891; reference_n=2496
 row	section17_4T_1B|RAD	metrics_recomputed	PASS	precision=0.827049463853; recall=0.957932692308; f1=0.887692593280
 row	section17_4T_1B|RAD	source_metrics_recomputed	PASS	
 row	section17_4T_1B|RAD	visium_manifest_call_count	PASS	manifest_nonempty_lines=2891
-row	section17_4T_1B|BLAZE	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv
+row	section17_4T_1B|BLAZE	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv
 row	section17_4T_1B|BLAZE	source_counts_exact	PASS	master=(2074, 245, 422); source=(2074, 245, 422)
 row	section17_4T_1B|BLAZE	count_identities	PASS	calls=2319; reference_n=2496
 row	section17_4T_1B|BLAZE	metrics_recomputed	PASS	precision=0.894351013368; recall=0.830929487179; f1=0.861474558671
 row	section17_4T_1B|BLAZE	source_metrics_recomputed	PASS	
 row	section17_4T_1B|BLAZE	visium_manifest_call_count	PASS	manifest_nonempty_lines=2319
-row	section17_4T_1B|BLAZE	visium_live_callset_hash	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260802_visium_17_32_split_three_tool/blaze/section17_4T_1B/whitelist.csv
-row	section17_4T_1B|Flexiplex	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv
+row	section17_4T_1B|BLAZE	visium_live_callset_hash	PASS	external_data/reviewer_comment_data/wl_scan/20260802_visium_17_32_split_three_tool/blaze/section17_4T_1B/whitelist.csv
+row	section17_4T_1B|Flexiplex	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv
 row	section17_4T_1B|Flexiplex	source_counts_exact	PASS	master=(123, 0, 2373); source=(123, 0, 2373)
 row	section17_4T_1B|Flexiplex	count_identities	PASS	calls=123; reference_n=2496
 row	section17_4T_1B|Flexiplex	metrics_recomputed	PASS	precision=1.000000000000; recall=0.049278846154; f1=0.093928980527
 row	section17_4T_1B|Flexiplex	source_metrics_recomputed	PASS	
 row	section17_4T_1B|Flexiplex	visium_manifest_call_count	PASS	manifest_nonempty_lines=123
-row	section17_4T_1B|Flexiplex	visium_live_callset_hash	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260802_visium_17_32_split_three_tool/flexiplex/section17_4T_1B/f8/flexiplex_barcodes_final.txt
-row	section22|RAD	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv
+row	section17_4T_1B|Flexiplex	visium_live_callset_hash	PASS	external_data/reviewer_comment_data/wl_scan/20260802_visium_17_32_split_three_tool/flexiplex/section17_4T_1B/f8/flexiplex_barcodes_final.txt
+row	section22|RAD	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv
 row	section22|RAD	source_counts_exact	PASS	master=(2255, 229, 215); source=(2255, 229, 215)
 row	section22|RAD	count_identities	PASS	calls=2484; reference_n=2470
 row	section22|RAD	metrics_recomputed	PASS	precision=0.907809983897; recall=0.912955465587; f1=0.910375454178
 row	section22|RAD	source_metrics_recomputed	PASS	
 row	section22|RAD	visium_manifest_call_count	PASS	manifest_nonempty_lines=2484
-row	section22|RAD	visium_live_callset_hash	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260802_visium_b6853a3_error_sweep/e030/section22/section22_b685.txt
-row	section22|BLAZE	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv
+row	section22|RAD	visium_live_callset_hash	PASS	external_data/reviewer_comment_data/wl_scan/20260802_visium_b6853a3_error_sweep/e030/section22/section22_b685.txt
+row	section22|BLAZE	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv
 row	section22|BLAZE	source_counts_exact	PASS	master=(2259, 239, 211); source=(2259, 239, 211)
 row	section22|BLAZE	count_identities	PASS	calls=2498; reference_n=2470
 row	section22|BLAZE	metrics_recomputed	PASS	precision=0.904323458767; recall=0.914574898785; f1=0.909420289855
 row	section22|BLAZE	source_metrics_recomputed	PASS	
 row	section22|BLAZE	visium_manifest_call_count	PASS	manifest_nonempty_lines=2498
-row	section22|BLAZE	visium_live_callset_hash	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260729_spatial_vdj_single_slices_expect2500/runs/section22/blaze_expect2500/whitelist.csv
-row	section22|Flexiplex	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv
+row	section22|BLAZE	visium_live_callset_hash	PASS	external_data/reviewer_comment_data/wl_scan/20260729_spatial_vdj_single_slices_expect2500/runs/section22/blaze_expect2500/whitelist.csv
+row	section22|Flexiplex	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv
 row	section22|Flexiplex	source_counts_exact	PASS	master=(190, 0, 2280); source=(190, 0, 2280)
 row	section22|Flexiplex	count_identities	PASS	calls=190; reference_n=2470
 row	section22|Flexiplex	metrics_recomputed	PASS	precision=1.000000000000; recall=0.076923076923; f1=0.142857142857
 row	section22|Flexiplex	source_metrics_recomputed	PASS	
 row	section22|Flexiplex	visium_manifest_call_count	PASS	manifest_nonempty_lines=190
-row	section22|Flexiplex	visium_live_callset_hash	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260730_visium_flexiplex_f8_per_section_fairness/callsets/section22/flexiplex_barcodes_final.txt
-row	section31|RAD	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv
+row	section22|Flexiplex	visium_live_callset_hash	PASS	external_data/reviewer_comment_data/wl_scan/20260730_visium_flexiplex_f8_per_section_fairness/callsets/section22/flexiplex_barcodes_final.txt
+row	section31|RAD	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv
 row	section31|RAD	source_counts_exact	PASS	master=(2164, 317, 165); source=(2164, 317, 165)
 row	section31|RAD	count_identities	PASS	calls=2481; reference_n=2329
 row	section31|RAD	metrics_recomputed	PASS	precision=0.872228939944; recall=0.929154143409; f1=0.899792099792
 row	section31|RAD	source_metrics_recomputed	PASS	
 row	section31|RAD	visium_manifest_call_count	PASS	manifest_nonempty_lines=2481
-row	section31|RAD	visium_live_callset_hash	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260802_visium_b6853a3_error_sweep/e030/section31/section31_b685.txt
-row	section31|BLAZE	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv
+row	section31|RAD	visium_live_callset_hash	PASS	external_data/reviewer_comment_data/wl_scan/20260802_visium_b6853a3_error_sweep/e030/section31/section31_b685.txt
+row	section31|BLAZE	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv
 row	section31|BLAZE	source_counts_exact	PASS	master=(2208, 441, 121); source=(2208, 441, 121)
 row	section31|BLAZE	count_identities	PASS	calls=2649; reference_n=2329
 row	section31|BLAZE	metrics_recomputed	PASS	precision=0.833522083805; recall=0.948046371833; f1=0.887103254319
 row	section31|BLAZE	source_metrics_recomputed	PASS	
 row	section31|BLAZE	visium_manifest_call_count	PASS	manifest_nonempty_lines=2649
-row	section31|BLAZE	visium_live_callset_hash	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260729_spatial_vdj_single_slices_expect2500/runs/section31/blaze_expect2500/whitelist.csv
-row	section31|Flexiplex	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv
+row	section31|BLAZE	visium_live_callset_hash	PASS	external_data/reviewer_comment_data/wl_scan/20260729_spatial_vdj_single_slices_expect2500/runs/section31/blaze_expect2500/whitelist.csv
+row	section31|Flexiplex	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv
 row	section31|Flexiplex	source_counts_exact	PASS	master=(234, 1, 2095); source=(234, 1, 2095)
 row	section31|Flexiplex	count_identities	PASS	calls=235; reference_n=2329
 row	section31|Flexiplex	metrics_recomputed	PASS	precision=0.995744680851; recall=0.100472305711; f1=0.182527301092
 row	section31|Flexiplex	source_metrics_recomputed	PASS	
 row	section31|Flexiplex	visium_manifest_call_count	PASS	manifest_nonempty_lines=235
-row	section31|Flexiplex	visium_live_callset_hash	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260730_visium_flexiplex_f8_per_section_fairness/callsets/section31/flexiplex_barcodes_final.txt
-row	section32_1T_1B|RAD	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv
+row	section31|Flexiplex	visium_live_callset_hash	PASS	external_data/reviewer_comment_data/wl_scan/20260730_visium_flexiplex_f8_per_section_fairness/callsets/section31/flexiplex_barcodes_final.txt
+row	section32_1T_1B|RAD	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv
 row	section32_1T_1B|RAD	source_counts_exact	PASS	master=(2079, 862, 162); source=(2079, 862, 162)
 row	section32_1T_1B|RAD	count_identities	PASS	calls=2941; reference_n=2241
 row	section32_1T_1B|RAD	metrics_recomputed	PASS	precision=0.706902414145; recall=0.927710843373; f1=0.802392898495
 row	section32_1T_1B|RAD	source_metrics_recomputed	PASS	
 row	section32_1T_1B|RAD	visium_manifest_call_count	PASS	manifest_nonempty_lines=2941
-row	section32_1T_1B|BLAZE	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv
+row	section32_1T_1B|BLAZE	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv
 row	section32_1T_1B|BLAZE	source_counts_exact	PASS	master=(1833, 414, 408); source=(1833, 414, 408)
 row	section32_1T_1B|BLAZE	count_identities	PASS	calls=2247; reference_n=2241
 row	section32_1T_1B|BLAZE	metrics_recomputed	PASS	precision=0.815754339119; recall=0.817938420348; f1=0.816844919786
 row	section32_1T_1B|BLAZE	source_metrics_recomputed	PASS	
 row	section32_1T_1B|BLAZE	visium_manifest_call_count	PASS	manifest_nonempty_lines=2247
-row	section32_1T_1B|BLAZE	visium_live_callset_hash	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260802_visium_17_32_split_three_tool/blaze/section32_1T_1B/whitelist.csv
-row	section32_1T_1B|Flexiplex	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv
+row	section32_1T_1B|BLAZE	visium_live_callset_hash	PASS	external_data/reviewer_comment_data/wl_scan/20260802_visium_17_32_split_three_tool/blaze/section32_1T_1B/whitelist.csv
+row	section32_1T_1B|Flexiplex	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv
 row	section32_1T_1B|Flexiplex	source_counts_exact	PASS	master=(232, 1, 2009); source=(232, 1, 2009)
 row	section32_1T_1B|Flexiplex	count_identities	PASS	calls=233; reference_n=2241
 row	section32_1T_1B|Flexiplex	metrics_recomputed	PASS	precision=0.995708154506; recall=0.103525211959; f1=0.187550525465
 row	section32_1T_1B|Flexiplex	source_metrics_recomputed	PASS	
 row	section32_1T_1B|Flexiplex	visium_manifest_call_count	PASS	manifest_nonempty_lines=233
-row	section32_1T_1B|Flexiplex	visium_live_callset_hash	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260802_visium_17_32_split_three_tool/flexiplex/section32_1T_1B/f8/flexiplex_barcodes_final.txt
-row	section32_4T_1B|RAD	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv
+row	section32_1T_1B|Flexiplex	visium_live_callset_hash	PASS	external_data/reviewer_comment_data/wl_scan/20260802_visium_17_32_split_three_tool/flexiplex/section32_1T_1B/f8/flexiplex_barcodes_final.txt
+row	section32_4T_1B|RAD	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv
 row	section32_4T_1B|RAD	source_counts_exact	PASS	master=(2130, 850, 111); source=(2130, 850, 111)
 row	section32_4T_1B|RAD	count_identities	PASS	calls=2980; reference_n=2241
 row	section32_4T_1B|RAD	metrics_recomputed	PASS	precision=0.714765100671; recall=0.950468540830; f1=0.815935644513
 row	section32_4T_1B|RAD	source_metrics_recomputed	PASS	
 row	section32_4T_1B|RAD	visium_manifest_call_count	PASS	manifest_nonempty_lines=2980
-row	section32_4T_1B|BLAZE	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv
+row	section32_4T_1B|BLAZE	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv
 row	section32_4T_1B|BLAZE	source_counts_exact	PASS	master=(1871, 417, 370); source=(1871, 417, 370)
 row	section32_4T_1B|BLAZE	count_identities	PASS	calls=2288; reference_n=2241
 row	section32_4T_1B|BLAZE	metrics_recomputed	PASS	precision=0.817744755245; recall=0.834895136100; f1=0.826230956061
 row	section32_4T_1B|BLAZE	source_metrics_recomputed	PASS	
 row	section32_4T_1B|BLAZE	visium_manifest_call_count	PASS	manifest_nonempty_lines=2288
-row	section32_4T_1B|BLAZE	visium_live_callset_hash	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260802_visium_17_32_split_three_tool/blaze/section32_4T_1B/whitelist.csv
-row	section32_4T_1B|Flexiplex	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv
+row	section32_4T_1B|BLAZE	visium_live_callset_hash	PASS	external_data/reviewer_comment_data/wl_scan/20260802_visium_17_32_split_three_tool/blaze/section32_4T_1B/whitelist.csv
+row	section32_4T_1B|Flexiplex	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/visium_three_tool_splitaware_scatter_20260802/tables/visium_eight_library_three_tool_confusion.csv
 row	section32_4T_1B|Flexiplex	source_counts_exact	PASS	master=(235, 1, 2006); source=(235, 1, 2006)
 row	section32_4T_1B|Flexiplex	count_identities	PASS	calls=236; reference_n=2241
 row	section32_4T_1B|Flexiplex	metrics_recomputed	PASS	precision=0.995762711864; recall=0.104863900045; f1=0.189745660073
 row	section32_4T_1B|Flexiplex	source_metrics_recomputed	PASS	
 row	section32_4T_1B|Flexiplex	visium_manifest_call_count	PASS	manifest_nonempty_lines=236
-row	section32_4T_1B|Flexiplex	visium_live_callset_hash	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260802_visium_17_32_split_three_tool/flexiplex/section32_4T_1B/f8/flexiplex_barcodes_final.txt
-row	Hipp_SN_f1_ONT_Run1|RAD	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
+row	section32_4T_1B|Flexiplex	visium_live_callset_hash	PASS	external_data/reviewer_comment_data/wl_scan/20260802_visium_17_32_split_three_tool/flexiplex/section32_4T_1B/f8/flexiplex_barcodes_final.txt
+row	Hipp_SN_f1_ONT_Run1|RAD	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
 row	Hipp_SN_f1_ONT_Run1|RAD	source_counts_exact	PASS	master=(9038, 1469, 1299); source=(9038, 1469, 1299)
 row	Hipp_SN_f1_ONT_Run1|RAD	count_identities	PASS	calls=10507; reference_n=10337
 row	Hipp_SN_f1_ONT_Run1|RAD	metrics_recomputed	PASS	precision=0.860188445798; recall=0.874334913418; f1=0.867203991556
 row	Hipp_SN_f1_ONT_Run1|RAD	source_metrics_recomputed	PASS	
-row	Hipp_SN_f1_ONT_Run1|RAD	tilgner_callset_exists	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f1_ONT_Run1.RAD.txt
+row	Hipp_SN_f1_ONT_Run1|RAD	tilgner_callset_exists	PASS	external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f1_ONT_Run1.RAD.txt
 row	Hipp_SN_f1_ONT_Run1|RAD	tilgner_callset_line_count	PASS	observed=10507; expected=10507
-row	Hipp_SN_f1_ONT_Run1|BLAZE	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
+row	Hipp_SN_f1_ONT_Run1|BLAZE	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
 row	Hipp_SN_f1_ONT_Run1|BLAZE	source_counts_exact	PASS	master=(8784, 659, 1553); source=(8784, 659, 1553)
 row	Hipp_SN_f1_ONT_Run1|BLAZE	count_identities	PASS	calls=9443; reference_n=10337
 row	Hipp_SN_f1_ONT_Run1|BLAZE	metrics_recomputed	PASS	precision=0.930212856084; recall=0.849762987327; f1=0.888169868554
 row	Hipp_SN_f1_ONT_Run1|BLAZE	source_metrics_recomputed	PASS	
-row	Hipp_SN_f1_ONT_Run1|BLAZE	tilgner_callset_exists	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f1_ONT_Run1.BLAZE.txt
+row	Hipp_SN_f1_ONT_Run1|BLAZE	tilgner_callset_exists	PASS	external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f1_ONT_Run1.BLAZE.txt
 row	Hipp_SN_f1_ONT_Run1|BLAZE	tilgner_callset_line_count	PASS	observed=9443; expected=9443
-row	Hipp_SN_f1_ONT_Run1|Flexiplex	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
+row	Hipp_SN_f1_ONT_Run1|Flexiplex	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
 row	Hipp_SN_f1_ONT_Run1|Flexiplex	source_counts_exact	PASS	master=(8145, 1418, 2192); source=(8145, 1418, 2192)
 row	Hipp_SN_f1_ONT_Run1|Flexiplex	count_identities	PASS	calls=9563; reference_n=10337
 row	Hipp_SN_f1_ONT_Run1|Flexiplex	metrics_recomputed	PASS	precision=0.851720171494; recall=0.787946212634; f1=0.818592964824
 row	Hipp_SN_f1_ONT_Run1|Flexiplex	source_metrics_recomputed	PASS	
-row	Hipp_SN_f1_ONT_Run1|Flexiplex	tilgner_callset_exists	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f1_ONT_Run1.Flexiplex.txt
+row	Hipp_SN_f1_ONT_Run1|Flexiplex	tilgner_callset_exists	PASS	external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f1_ONT_Run1.Flexiplex.txt
 row	Hipp_SN_f1_ONT_Run1|Flexiplex	tilgner_callset_line_count	PASS	observed=9563; expected=9563
-row	Hipp_SN_f1_ONT_Run2|RAD	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
+row	Hipp_SN_f1_ONT_Run2|RAD	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
 row	Hipp_SN_f1_ONT_Run2|RAD	source_counts_exact	PASS	master=(8533, 1215, 1804); source=(8533, 1215, 1804)
 row	Hipp_SN_f1_ONT_Run2|RAD	count_identities	PASS	calls=9748; reference_n=10337
 row	Hipp_SN_f1_ONT_Run2|RAD	metrics_recomputed	PASS	precision=0.875359048010; recall=0.825481280836; f1=0.849688822504
 row	Hipp_SN_f1_ONT_Run2|RAD	source_metrics_recomputed	PASS	
-row	Hipp_SN_f1_ONT_Run2|RAD	tilgner_callset_exists	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f1_ONT_Run2.RAD.txt
+row	Hipp_SN_f1_ONT_Run2|RAD	tilgner_callset_exists	PASS	external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f1_ONT_Run2.RAD.txt
 row	Hipp_SN_f1_ONT_Run2|RAD	tilgner_callset_line_count	PASS	observed=9748; expected=9748
-row	Hipp_SN_f1_ONT_Run2|BLAZE	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
+row	Hipp_SN_f1_ONT_Run2|BLAZE	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
 row	Hipp_SN_f1_ONT_Run2|BLAZE	source_counts_exact	PASS	master=(8795, 645, 1542); source=(8795, 645, 1542)
 row	Hipp_SN_f1_ONT_Run2|BLAZE	count_identities	PASS	calls=9440; reference_n=10337
 row	Hipp_SN_f1_ONT_Run2|BLAZE	metrics_recomputed	PASS	precision=0.931673728814; recall=0.850827125859; f1=0.889416999545
 row	Hipp_SN_f1_ONT_Run2|BLAZE	source_metrics_recomputed	PASS	
-row	Hipp_SN_f1_ONT_Run2|BLAZE	tilgner_callset_exists	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f1_ONT_Run2.BLAZE.txt
+row	Hipp_SN_f1_ONT_Run2|BLAZE	tilgner_callset_exists	PASS	external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f1_ONT_Run2.BLAZE.txt
 row	Hipp_SN_f1_ONT_Run2|BLAZE	tilgner_callset_line_count	PASS	observed=9440; expected=9440
-row	Hipp_SN_f1_ONT_Run2|Flexiplex	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
+row	Hipp_SN_f1_ONT_Run2|Flexiplex	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
 row	Hipp_SN_f1_ONT_Run2|Flexiplex	source_counts_exact	PASS	master=(6368, 737, 3969); source=(6368, 737, 3969)
 row	Hipp_SN_f1_ONT_Run2|Flexiplex	count_identities	PASS	calls=7105; reference_n=10337
 row	Hipp_SN_f1_ONT_Run2|Flexiplex	metrics_recomputed	PASS	precision=0.896270232231; recall=0.616039469866; f1=0.730191491801
 row	Hipp_SN_f1_ONT_Run2|Flexiplex	source_metrics_recomputed	PASS	
-row	Hipp_SN_f1_ONT_Run2|Flexiplex	tilgner_callset_exists	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f1_ONT_Run2.Flexiplex.txt
+row	Hipp_SN_f1_ONT_Run2|Flexiplex	tilgner_callset_exists	PASS	external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f1_ONT_Run2.Flexiplex.txt
 row	Hipp_SN_f1_ONT_Run2|Flexiplex	tilgner_callset_line_count	PASS	observed=7105; expected=7105
-row	Hipp_SN_f2_ONT|RAD	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
+row	Hipp_SN_f2_ONT|RAD	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
 row	Hipp_SN_f2_ONT|RAD	source_counts_exact	PASS	master=(9067, 633, 752); source=(9067, 633, 752)
 row	Hipp_SN_f2_ONT|RAD	count_identities	PASS	calls=9700; reference_n=9819
 row	Hipp_SN_f2_ONT|RAD	metrics_recomputed	PASS	precision=0.934742268041; recall=0.923413789592; f1=0.929043496081
 row	Hipp_SN_f2_ONT|RAD	source_metrics_recomputed	PASS	
-row	Hipp_SN_f2_ONT|RAD	tilgner_callset_exists	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f2_ONT.RAD.txt
+row	Hipp_SN_f2_ONT|RAD	tilgner_callset_exists	PASS	external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f2_ONT.RAD.txt
 row	Hipp_SN_f2_ONT|RAD	tilgner_callset_line_count	PASS	observed=9700; expected=9700
-row	Hipp_SN_f2_ONT|BLAZE	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
+row	Hipp_SN_f2_ONT|BLAZE	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
 row	Hipp_SN_f2_ONT|BLAZE	source_counts_exact	PASS	master=(7262, 249, 2557); source=(7262, 249, 2557)
 row	Hipp_SN_f2_ONT|BLAZE	count_identities	PASS	calls=7511; reference_n=9819
 row	Hipp_SN_f2_ONT|BLAZE	metrics_recomputed	PASS	precision=0.966848622021; recall=0.739586515938; f1=0.838084246971
 row	Hipp_SN_f2_ONT|BLAZE	source_metrics_recomputed	PASS	
-row	Hipp_SN_f2_ONT|BLAZE	tilgner_callset_exists	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f2_ONT.BLAZE.txt
+row	Hipp_SN_f2_ONT|BLAZE	tilgner_callset_exists	PASS	external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f2_ONT.BLAZE.txt
 row	Hipp_SN_f2_ONT|BLAZE	tilgner_callset_line_count	PASS	observed=7511; expected=7511
-row	Hipp_SN_f2_ONT|Flexiplex	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
+row	Hipp_SN_f2_ONT|Flexiplex	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
 row	Hipp_SN_f2_ONT|Flexiplex	source_counts_exact	PASS	master=(8893, 469, 926); source=(8893, 469, 926)
 row	Hipp_SN_f2_ONT|Flexiplex	count_identities	PASS	calls=9362; reference_n=9819
 row	Hipp_SN_f2_ONT|Flexiplex	metrics_recomputed	PASS	precision=0.949903866695; recall=0.905693044098; f1=0.927271779365
 row	Hipp_SN_f2_ONT|Flexiplex	source_metrics_recomputed	PASS	
-row	Hipp_SN_f2_ONT|Flexiplex	tilgner_callset_exists	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f2_ONT.Flexiplex.txt
+row	Hipp_SN_f2_ONT|Flexiplex	tilgner_callset_exists	PASS	external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f2_ONT.Flexiplex.txt
 row	Hipp_SN_f2_ONT|Flexiplex	tilgner_callset_line_count	PASS	observed=9362; expected=9362
-row	Hipp_SN_f3_ONT_Run1|RAD	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
+row	Hipp_SN_f3_ONT_Run1|RAD	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
 row	Hipp_SN_f3_ONT_Run1|RAD	source_counts_exact	PASS	master=(7376, 473, 274); source=(7376, 473, 274)
 row	Hipp_SN_f3_ONT_Run1|RAD	count_identities	PASS	calls=7849; reference_n=7650
 row	Hipp_SN_f3_ONT_Run1|RAD	metrics_recomputed	PASS	precision=0.939737546184; recall=0.964183006536; f1=0.951803342151
 row	Hipp_SN_f3_ONT_Run1|RAD	source_metrics_recomputed	PASS	
-row	Hipp_SN_f3_ONT_Run1|RAD	tilgner_callset_exists	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f3_ONT_Run1.RAD.txt
+row	Hipp_SN_f3_ONT_Run1|RAD	tilgner_callset_exists	PASS	external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f3_ONT_Run1.RAD.txt
 row	Hipp_SN_f3_ONT_Run1|RAD	tilgner_callset_line_count	PASS	observed=7849; expected=7849
-row	Hipp_SN_f3_ONT_Run1|BLAZE	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
+row	Hipp_SN_f3_ONT_Run1|BLAZE	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
 row	Hipp_SN_f3_ONT_Run1|BLAZE	source_counts_exact	PASS	master=(7230, 372, 420); source=(7230, 372, 420)
 row	Hipp_SN_f3_ONT_Run1|BLAZE	count_identities	PASS	calls=7602; reference_n=7650
 row	Hipp_SN_f3_ONT_Run1|BLAZE	metrics_recomputed	PASS	precision=0.951065509077; recall=0.945098039216; f1=0.948072383950
 row	Hipp_SN_f3_ONT_Run1|BLAZE	source_metrics_recomputed	PASS	
-row	Hipp_SN_f3_ONT_Run1|BLAZE	tilgner_callset_exists	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f3_ONT_Run1.BLAZE.txt
+row	Hipp_SN_f3_ONT_Run1|BLAZE	tilgner_callset_exists	PASS	external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f3_ONT_Run1.BLAZE.txt
 row	Hipp_SN_f3_ONT_Run1|BLAZE	tilgner_callset_line_count	PASS	observed=7602; expected=7602
-row	Hipp_SN_f3_ONT_Run1|Flexiplex	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
+row	Hipp_SN_f3_ONT_Run1|Flexiplex	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
 row	Hipp_SN_f3_ONT_Run1|Flexiplex	source_counts_exact	PASS	master=(2995, 31, 4655); source=(2995, 31, 4655)
 row	Hipp_SN_f3_ONT_Run1|Flexiplex	count_identities	PASS	calls=3026; reference_n=7650
 row	Hipp_SN_f3_ONT_Run1|Flexiplex	metrics_recomputed	PASS	precision=0.989755452743; recall=0.391503267974; f1=0.561071562383
 row	Hipp_SN_f3_ONT_Run1|Flexiplex	source_metrics_recomputed	PASS	
-row	Hipp_SN_f3_ONT_Run1|Flexiplex	tilgner_callset_exists	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f3_ONT_Run1.Flexiplex.txt
+row	Hipp_SN_f3_ONT_Run1|Flexiplex	tilgner_callset_exists	PASS	external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f3_ONT_Run1.Flexiplex.txt
 row	Hipp_SN_f3_ONT_Run1|Flexiplex	tilgner_callset_line_count	PASS	observed=3026; expected=3026
-row	Hipp_SN_f3_ONT_Run2|RAD	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
+row	Hipp_SN_f3_ONT_Run2|RAD	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
 row	Hipp_SN_f3_ONT_Run2|RAD	source_counts_exact	PASS	master=(7371, 440, 279); source=(7371, 440, 279)
 row	Hipp_SN_f3_ONT_Run2|RAD	count_identities	PASS	calls=7811; reference_n=7650
 row	Hipp_SN_f3_ONT_Run2|RAD	metrics_recomputed	PASS	precision=0.943669184483; recall=0.963529411765; f1=0.953495892892
 row	Hipp_SN_f3_ONT_Run2|RAD	source_metrics_recomputed	PASS	
-row	Hipp_SN_f3_ONT_Run2|RAD	tilgner_callset_exists	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f3_ONT_Run2.RAD.txt
+row	Hipp_SN_f3_ONT_Run2|RAD	tilgner_callset_exists	PASS	external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f3_ONT_Run2.RAD.txt
 row	Hipp_SN_f3_ONT_Run2|RAD	tilgner_callset_line_count	PASS	observed=7811; expected=7811
-row	Hipp_SN_f3_ONT_Run2|BLAZE	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
+row	Hipp_SN_f3_ONT_Run2|BLAZE	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
 row	Hipp_SN_f3_ONT_Run2|BLAZE	source_counts_exact	PASS	master=(7148, 359, 502); source=(7148, 359, 502)
 row	Hipp_SN_f3_ONT_Run2|BLAZE	count_identities	PASS	calls=7507; reference_n=7650
 row	Hipp_SN_f3_ONT_Run2|BLAZE	metrics_recomputed	PASS	precision=0.952177967231; recall=0.934379084967; f1=0.943194563568
 row	Hipp_SN_f3_ONT_Run2|BLAZE	source_metrics_recomputed	PASS	
-row	Hipp_SN_f3_ONT_Run2|BLAZE	tilgner_callset_exists	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f3_ONT_Run2.BLAZE.txt
+row	Hipp_SN_f3_ONT_Run2|BLAZE	tilgner_callset_exists	PASS	external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f3_ONT_Run2.BLAZE.txt
 row	Hipp_SN_f3_ONT_Run2|BLAZE	tilgner_callset_line_count	PASS	observed=7507; expected=7507
-row	Hipp_SN_f3_ONT_Run2|Flexiplex	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
+row	Hipp_SN_f3_ONT_Run2|Flexiplex	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
 row	Hipp_SN_f3_ONT_Run2|Flexiplex	source_counts_exact	PASS	master=(2920, 27, 4730); source=(2920, 27, 4730)
 row	Hipp_SN_f3_ONT_Run2|Flexiplex	count_identities	PASS	calls=2947; reference_n=7650
 row	Hipp_SN_f3_ONT_Run2|Flexiplex	metrics_recomputed	PASS	precision=0.990838140482; recall=0.381699346405; f1=0.551099367746
 row	Hipp_SN_f3_ONT_Run2|Flexiplex	source_metrics_recomputed	PASS	
-row	Hipp_SN_f3_ONT_Run2|Flexiplex	tilgner_callset_exists	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f3_ONT_Run2.Flexiplex.txt
+row	Hipp_SN_f3_ONT_Run2|Flexiplex	tilgner_callset_exists	PASS	external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f3_ONT_Run2.Flexiplex.txt
 row	Hipp_SN_f3_ONT_Run2|Flexiplex	tilgner_callset_line_count	PASS	observed=2947; expected=2947
-row	Hipp_SN_m1_ONT_Run1|RAD	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
+row	Hipp_SN_m1_ONT_Run1|RAD	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
 row	Hipp_SN_m1_ONT_Run1|RAD	source_counts_exact	PASS	master=(12336, 1013, 169); source=(12336, 1013, 169)
 row	Hipp_SN_m1_ONT_Run1|RAD	count_identities	PASS	calls=13349; reference_n=12505
 row	Hipp_SN_m1_ONT_Run1|RAD	metrics_recomputed	PASS	precision=0.924114165855; recall=0.986485405838; f1=0.954281735902
 row	Hipp_SN_m1_ONT_Run1|RAD	source_metrics_recomputed	PASS	
-row	Hipp_SN_m1_ONT_Run1|RAD	tilgner_callset_exists	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run1.RAD.txt
+row	Hipp_SN_m1_ONT_Run1|RAD	tilgner_callset_exists	PASS	external_data/reviewer_comment_data/tilgner_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run1.RAD.txt
 row	Hipp_SN_m1_ONT_Run1|RAD	tilgner_callset_line_count	PASS	observed=13349; expected=13349
-row	Hipp_SN_m1_ONT_Run1|BLAZE	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
+row	Hipp_SN_m1_ONT_Run1|BLAZE	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
 row	Hipp_SN_m1_ONT_Run1|BLAZE	source_counts_exact	PASS	master=(10536, 386, 1969); source=(10536, 386, 1969)
 row	Hipp_SN_m1_ONT_Run1|BLAZE	count_identities	PASS	calls=10922; reference_n=12505
 row	Hipp_SN_m1_ONT_Run1|BLAZE	metrics_recomputed	PASS	precision=0.964658487457; recall=0.842542982807; f1=0.899474964784
 row	Hipp_SN_m1_ONT_Run1|BLAZE	source_metrics_recomputed	PASS	
-row	Hipp_SN_m1_ONT_Run1|BLAZE	tilgner_callset_exists	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run1.BLAZE.txt
+row	Hipp_SN_m1_ONT_Run1|BLAZE	tilgner_callset_exists	PASS	external_data/reviewer_comment_data/tilgner_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run1.BLAZE.txt
 row	Hipp_SN_m1_ONT_Run1|BLAZE	tilgner_callset_line_count	PASS	observed=10922; expected=10922
-row	Hipp_SN_m1_ONT_Run1|Flexiplex	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
+row	Hipp_SN_m1_ONT_Run1|Flexiplex	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
 row	Hipp_SN_m1_ONT_Run1|Flexiplex	source_counts_exact	PASS	master=(12065, 967, 440); source=(12065, 967, 440)
 row	Hipp_SN_m1_ONT_Run1|Flexiplex	count_identities	PASS	calls=13032; reference_n=12505
 row	Hipp_SN_m1_ONT_Run1|Flexiplex	metrics_recomputed	PASS	precision=0.925798035605; recall=0.964814074370; f1=0.944903473392
 row	Hipp_SN_m1_ONT_Run1|Flexiplex	source_metrics_recomputed	PASS	
-row	Hipp_SN_m1_ONT_Run1|Flexiplex	tilgner_callset_exists	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run1.Flexiplex_f0.tsv
+row	Hipp_SN_m1_ONT_Run1|Flexiplex	tilgner_callset_exists	PASS	external_data/reviewer_comment_data/tilgner_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run1.Flexiplex_f0.tsv
 row	Hipp_SN_m1_ONT_Run1|Flexiplex	tilgner_callset_line_count	PASS	observed=13032; expected=13032
-row	Hipp_SN_m1_ONT_Run2|RAD	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
+row	Hipp_SN_m1_ONT_Run2|RAD	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
 row	Hipp_SN_m1_ONT_Run2|RAD	source_counts_exact	PASS	master=(11991, 911, 514); source=(11991, 911, 514)
 row	Hipp_SN_m1_ONT_Run2|RAD	count_identities	PASS	calls=12902; reference_n=12505
 row	Hipp_SN_m1_ONT_Run2|RAD	metrics_recomputed	PASS	precision=0.929390792125; recall=0.958896441423; f1=0.943913094816
 row	Hipp_SN_m1_ONT_Run2|RAD	source_metrics_recomputed	PASS	
-row	Hipp_SN_m1_ONT_Run2|RAD	tilgner_callset_exists	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run2.RAD.txt
+row	Hipp_SN_m1_ONT_Run2|RAD	tilgner_callset_exists	PASS	external_data/reviewer_comment_data/tilgner_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run2.RAD.txt
 row	Hipp_SN_m1_ONT_Run2|RAD	tilgner_callset_line_count	PASS	observed=12902; expected=12902
-row	Hipp_SN_m1_ONT_Run2|BLAZE	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
+row	Hipp_SN_m1_ONT_Run2|BLAZE	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
 row	Hipp_SN_m1_ONT_Run2|BLAZE	source_counts_exact	PASS	master=(10010, 413, 2495); source=(10010, 413, 2495)
 row	Hipp_SN_m1_ONT_Run2|BLAZE	count_identities	PASS	calls=10423; reference_n=12505
 row	Hipp_SN_m1_ONT_Run2|BLAZE	metrics_recomputed	PASS	precision=0.960376091336; recall=0.800479808077; f1=0.873168178646
 row	Hipp_SN_m1_ONT_Run2|BLAZE	source_metrics_recomputed	PASS	
-row	Hipp_SN_m1_ONT_Run2|BLAZE	tilgner_callset_exists	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run2.BLAZE.txt
+row	Hipp_SN_m1_ONT_Run2|BLAZE	tilgner_callset_exists	PASS	external_data/reviewer_comment_data/tilgner_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run2.BLAZE.txt
 row	Hipp_SN_m1_ONT_Run2|BLAZE	tilgner_callset_line_count	PASS	observed=10423; expected=10423
-row	Hipp_SN_m1_ONT_Run2|Flexiplex	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
+row	Hipp_SN_m1_ONT_Run2|Flexiplex	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
 row	Hipp_SN_m1_ONT_Run2|Flexiplex	source_counts_exact	PASS	master=(11793, 1056, 712); source=(11793, 1056, 712)
 row	Hipp_SN_m1_ONT_Run2|Flexiplex	count_identities	PASS	calls=12849; reference_n=12505
 row	Hipp_SN_m1_ONT_Run2|Flexiplex	metrics_recomputed	PASS	precision=0.917814615923; recall=0.943062774890; f1=0.930267413426
 row	Hipp_SN_m1_ONT_Run2|Flexiplex	source_metrics_recomputed	PASS	
-row	Hipp_SN_m1_ONT_Run2|Flexiplex	tilgner_callset_exists	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run2.Flexiplex_f0.tsv
+row	Hipp_SN_m1_ONT_Run2|Flexiplex	tilgner_callset_exists	PASS	external_data/reviewer_comment_data/tilgner_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run2.Flexiplex_f0.tsv
 row	Hipp_SN_m1_ONT_Run2|Flexiplex	tilgner_callset_line_count	PASS	observed=12849; expected=12849
-row	Hipp_SN_m1_ONT_Run3|RAD	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
+row	Hipp_SN_m1_ONT_Run3|RAD	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
 row	Hipp_SN_m1_ONT_Run3|RAD	source_counts_exact	PASS	master=(12138, 967, 367); source=(12138, 967, 367)
 row	Hipp_SN_m1_ONT_Run3|RAD	count_identities	PASS	calls=13105; reference_n=12505
 row	Hipp_SN_m1_ONT_Run3|RAD	metrics_recomputed	PASS	precision=0.926211369706; recall=0.970651739304; f1=0.947910972276
 row	Hipp_SN_m1_ONT_Run3|RAD	source_metrics_recomputed	PASS	
-row	Hipp_SN_m1_ONT_Run3|RAD	tilgner_callset_exists	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run3.RAD.txt
+row	Hipp_SN_m1_ONT_Run3|RAD	tilgner_callset_exists	PASS	external_data/reviewer_comment_data/tilgner_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run3.RAD.txt
 row	Hipp_SN_m1_ONT_Run3|RAD	tilgner_callset_line_count	PASS	observed=13105; expected=13105
-row	Hipp_SN_m1_ONT_Run3|BLAZE	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
+row	Hipp_SN_m1_ONT_Run3|BLAZE	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
 row	Hipp_SN_m1_ONT_Run3|BLAZE	source_counts_exact	PASS	master=(10052, 393, 2453); source=(10052, 393, 2453)
 row	Hipp_SN_m1_ONT_Run3|BLAZE	count_identities	PASS	calls=10445; reference_n=12505
 row	Hipp_SN_m1_ONT_Run3|BLAZE	metrics_recomputed	PASS	precision=0.962374341790; recall=0.803838464614; f1=0.875991285403
 row	Hipp_SN_m1_ONT_Run3|BLAZE	source_metrics_recomputed	PASS	
-row	Hipp_SN_m1_ONT_Run3|BLAZE	tilgner_callset_exists	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run3.BLAZE.txt
+row	Hipp_SN_m1_ONT_Run3|BLAZE	tilgner_callset_exists	PASS	external_data/reviewer_comment_data/tilgner_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run3.BLAZE.txt
 row	Hipp_SN_m1_ONT_Run3|BLAZE	tilgner_callset_line_count	PASS	observed=10445; expected=10445
-row	Hipp_SN_m1_ONT_Run3|Flexiplex	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
+row	Hipp_SN_m1_ONT_Run3|Flexiplex	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
 row	Hipp_SN_m1_ONT_Run3|Flexiplex	source_counts_exact	PASS	master=(4925, 257, 7580); source=(4925, 257, 7580)
 row	Hipp_SN_m1_ONT_Run3|Flexiplex	count_identities	PASS	calls=5182; reference_n=12505
 row	Hipp_SN_m1_ONT_Run3|Flexiplex	metrics_recomputed	PASS	precision=0.950405248939; recall=0.393842463015; f1=0.556906202295
 row	Hipp_SN_m1_ONT_Run3|Flexiplex	source_metrics_recomputed	PASS	
-row	Hipp_SN_m1_ONT_Run3|Flexiplex	tilgner_callset_exists	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run3.Flexiplex_f0.tsv
+row	Hipp_SN_m1_ONT_Run3|Flexiplex	tilgner_callset_exists	PASS	external_data/reviewer_comment_data/tilgner_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run3.Flexiplex_f0.tsv
 row	Hipp_SN_m1_ONT_Run3|Flexiplex	tilgner_callset_line_count	PASS	observed=5182; expected=5182
-row	Hipp_SN_m2_ONT|RAD	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
+row	Hipp_SN_m2_ONT|RAD	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
 row	Hipp_SN_m2_ONT|RAD	source_counts_exact	PASS	master=(11512, 834, 368); source=(11512, 834, 368)
 row	Hipp_SN_m2_ONT|RAD	count_identities	PASS	calls=12346; reference_n=11880
 row	Hipp_SN_m2_ONT|RAD	metrics_recomputed	PASS	precision=0.932447756358; recall=0.969023569024; f1=0.950383885082
 row	Hipp_SN_m2_ONT|RAD	source_metrics_recomputed	PASS	
-row	Hipp_SN_m2_ONT|RAD	tilgner_callset_exists	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m2_ONT.RAD.txt
+row	Hipp_SN_m2_ONT|RAD	tilgner_callset_exists	PASS	external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m2_ONT.RAD.txt
 row	Hipp_SN_m2_ONT|RAD	tilgner_callset_line_count	PASS	observed=12346; expected=12346
-row	Hipp_SN_m2_ONT|BLAZE	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
+row	Hipp_SN_m2_ONT|BLAZE	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
 row	Hipp_SN_m2_ONT|BLAZE	source_counts_exact	PASS	master=(9979, 440, 1901); source=(9979, 440, 1901)
 row	Hipp_SN_m2_ONT|BLAZE	count_identities	PASS	calls=10419; reference_n=11880
 row	Hipp_SN_m2_ONT|BLAZE	metrics_recomputed	PASS	precision=0.957769459641; recall=0.839983164983; f1=0.895017713799
 row	Hipp_SN_m2_ONT|BLAZE	source_metrics_recomputed	PASS	
-row	Hipp_SN_m2_ONT|BLAZE	tilgner_callset_exists	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m2_ONT.BLAZE.txt
+row	Hipp_SN_m2_ONT|BLAZE	tilgner_callset_exists	PASS	external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m2_ONT.BLAZE.txt
 row	Hipp_SN_m2_ONT|BLAZE	tilgner_callset_line_count	PASS	observed=10419; expected=10419
-row	Hipp_SN_m2_ONT|Flexiplex	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
+row	Hipp_SN_m2_ONT|Flexiplex	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
 row	Hipp_SN_m2_ONT|Flexiplex	source_counts_exact	PASS	master=(11359, 908, 521); source=(11359, 908, 521)
 row	Hipp_SN_m2_ONT|Flexiplex	count_identities	PASS	calls=12267; reference_n=11880
 row	Hipp_SN_m2_ONT|Flexiplex	metrics_recomputed	PASS	precision=0.925980272275; recall=0.956144781145; f1=0.940820805897
 row	Hipp_SN_m2_ONT|Flexiplex	source_metrics_recomputed	PASS	
-row	Hipp_SN_m2_ONT|Flexiplex	tilgner_callset_exists	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m2_ONT.Flexiplex.txt
+row	Hipp_SN_m2_ONT|Flexiplex	tilgner_callset_exists	PASS	external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m2_ONT.Flexiplex.txt
 row	Hipp_SN_m2_ONT|Flexiplex	tilgner_callset_line_count	PASS	observed=12267; expected=12267
-row	Hipp_SN_m3_ONT|RAD	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
+row	Hipp_SN_m3_ONT|RAD	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
 row	Hipp_SN_m3_ONT|RAD	source_counts_exact	PASS	master=(10422, 354, 358); source=(10422, 354, 358)
 row	Hipp_SN_m3_ONT|RAD	count_identities	PASS	calls=10776; reference_n=10780
 row	Hipp_SN_m3_ONT|RAD	metrics_recomputed	PASS	precision=0.967149220490; recall=0.966790352505; f1=0.966969753201
 row	Hipp_SN_m3_ONT|RAD	source_metrics_recomputed	PASS	
-row	Hipp_SN_m3_ONT|RAD	tilgner_callset_exists	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m3_ONT.RAD.txt
+row	Hipp_SN_m3_ONT|RAD	tilgner_callset_exists	PASS	external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m3_ONT.RAD.txt
 row	Hipp_SN_m3_ONT|RAD	tilgner_callset_line_count	PASS	observed=10776; expected=10776
-row	Hipp_SN_m3_ONT|BLAZE	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
+row	Hipp_SN_m3_ONT|BLAZE	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
 row	Hipp_SN_m3_ONT|BLAZE	source_counts_exact	PASS	master=(10340, 414, 440); source=(10340, 414, 440)
 row	Hipp_SN_m3_ONT|BLAZE	count_identities	PASS	calls=10754; reference_n=10780
 row	Hipp_SN_m3_ONT|BLAZE	metrics_recomputed	PASS	precision=0.961502696671; recall=0.959183673469; f1=0.960341785084
 row	Hipp_SN_m3_ONT|BLAZE	source_metrics_recomputed	PASS	
-row	Hipp_SN_m3_ONT|BLAZE	tilgner_callset_exists	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m3_ONT.BLAZE.txt
+row	Hipp_SN_m3_ONT|BLAZE	tilgner_callset_exists	PASS	external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m3_ONT.BLAZE.txt
 row	Hipp_SN_m3_ONT|BLAZE	tilgner_callset_line_count	PASS	observed=10754; expected=10754
-row	Hipp_SN_m3_ONT|Flexiplex	source_row_present_unique	PASS	source=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
+row	Hipp_SN_m3_ONT|Flexiplex	source_row_present_unique	PASS	source=external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/tables/tilgner_all10_native_three_tool_metrics.tsv
 row	Hipp_SN_m3_ONT|Flexiplex	source_counts_exact	PASS	master=(10323, 747, 457); source=(10323, 747, 457)
 row	Hipp_SN_m3_ONT|Flexiplex	count_identities	PASS	calls=11070; reference_n=10780
 row	Hipp_SN_m3_ONT|Flexiplex	metrics_recomputed	PASS	precision=0.932520325203; recall=0.957606679035; f1=0.944897025172
 row	Hipp_SN_m3_ONT|Flexiplex	source_metrics_recomputed	PASS	
-row	Hipp_SN_m3_ONT|Flexiplex	tilgner_callset_exists	PASS	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m3_ONT.Flexiplex.txt
+row	Hipp_SN_m3_ONT|Flexiplex	tilgner_callset_exists	PASS	external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m3_ONT.Flexiplex.txt
 row	Hipp_SN_m3_ONT|Flexiplex	tilgner_callset_line_count	PASS	observed=11070; expected=11070
 global	wide	csv_tsv_row_identity	PASS	rows=36
 global	wide	row_count	PASS	observed=36 expected=36

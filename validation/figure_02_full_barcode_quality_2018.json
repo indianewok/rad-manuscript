@@ -34,88 +34,88 @@
   "quality_groups": "ED0 and ED>0 refer to observed truth-located 16-base barcode, independently of any tool assignment",
   "inputs": {
     "generation_summary": {
-      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_02/full_read_quality_2018/source_generation_summary.tsv",
+      "path": "source_data/figure_02/full_read_quality_2018/source_generation_summary.tsv",
       "bytes": 1546,
       "sha256": "783a9695cd1f270917f25370409c2411ab2e0900ac233c1222ebef9ff8dcac14"
     },
     "native_minimum_histogram": {
-      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_02/full_read_quality_2018/source_native_barcode_min_q.tsv",
+      "path": "source_data/figure_02/full_read_quality_2018/source_native_barcode_min_q.tsv",
       "bytes": 144,
       "sha256": "b567c5b185776a329a42e2127a255c7e7ce7e98ddc88cc32688d7a242b4ebcfb"
     },
     "source_invariants": {
-      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_02/full_read_quality_2018/source_variant_invariants.tsv",
+      "path": "source_data/figure_02/full_read_quality_2018/source_variant_invariants.tsv",
       "bytes": 3527,
       "sha256": "9ed7c41ebc4f6b88e0e21e9db94be4872d032e1af4069ccc0bdb99625fb4b00b"
     },
     "model": {
-      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_02/models/nanopore2018.gz",
+      "path": "source_data/figure_02/models/nanopore2018.gz",
       "bytes": 1343107,
       "sha256": "6f60b7db6691bdf5955da54f621776bd7584d6c21b30f7290dff82d7037a0a85"
     },
     "source_manifest": {
-      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_02/generator_source_manifest.tsv",
+      "path": "source_data/figure_02/generator_source_manifest.tsv",
       "bytes": 3755,
       "sha256": "8d676d7764ff7d61a116a61b4788dd04e7cba0d08a2ba28b4bc0e7050a0b93bb"
     },
     "quality_conditions": {
-      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_02/quality_conditions_2018.tsv",
+      "path": "source_data/figure_02/quality_conditions_2018.tsv",
       "bytes": 5637,
       "sha256": "45cfec4b3bcd5d4944f9363be7aa8a49c57b2a708e1f6895cc9b684dacf7cc9b"
     },
     "quality_summary": {
-      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_02/quality_summary.tsv",
+      "path": "source_data/figure_02/quality_summary.tsv",
       "bytes": 5972,
       "sha256": "2395f1f40dffac4eae578d5a07fcc303f38f1084955df613c83821fb60ba7d96"
     },
     "discovery_metrics": {
-      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_02/discovery_metrics.tsv",
+      "path": "source_data/figure_02/discovery_metrics.tsv",
       "bytes": 32536,
       "sha256": "e9b1dfb70a60c8dabe76c00b0e5aa0b6822b72a2197508ae9d7eb1ae9bb6e78b"
     },
     "sample_csv": {
-      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_02/paired_50000_barcode_mean_Q.csv.gz",
+      "path": "source_data/figure_02/paired_50000_barcode_mean_Q.csv.gz",
       "bytes": 2655992,
       "sha256": "93bb23eeac686cac6b1e8d2ecb9b4968bda3f7d57b6c40cacfdc856dad778e5d"
     },
     "scanner_script": {
-      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/scripts/figure_02/summarize_full_barcode_quality_2018.py",
+      "path": "scripts/figure_02/summarize_full_barcode_quality_2018.py",
       "bytes": 18393,
       "sha256": "42b4aac31e98ee426a04bb1530ee377104077f69896cc49d5dacc92b5ca76836"
     },
     "locator_script": {
-      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/scripts/figure_02/barcode_locator.py",
+      "path": "scripts/figure_02/barcode_locator.py",
       "bytes": 4646,
       "sha256": "0ead90df058cfd940befd3a0b7a659d9f030f01fc382863dcd7e67e583f0fb68"
     },
     "full_scan_receipt": {
-      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_02/full_read_quality_2018/run.json",
+      "path": "source_data/figure_02/full_read_quality_2018/run.json",
       "bytes": 5491,
       "sha256": "4dab6f4617b04d17e8711bffe0571c62c250dcf34129d08685a16986642e608f"
     },
     "full_quality_summary.tsv": {
-      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_02/full_read_quality_2018/full_quality_summary.tsv",
+      "path": "source_data/figure_02/full_read_quality_2018/full_quality_summary.tsv",
       "bytes": 2725,
       "sha256": "4c94b8975dcfc61d754bcc62654ffec1efb0977a8f820041ecaeb301854cd42f"
     },
     "barcode_quality_by_ed.tsv": {
-      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_02/full_read_quality_2018/barcode_quality_by_ed.tsv",
+      "path": "source_data/figure_02/full_read_quality_2018/barcode_quality_by_ed.tsv",
       "bytes": 4226,
       "sha256": "84d189b00d6bdc0922ae5c916668238de545ff681fcfa129297e69dea2b67406"
     },
     "barcode_minimum_quality_by_ed.tsv": {
-      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_02/full_read_quality_2018/barcode_minimum_quality_by_ed.tsv",
+      "path": "source_data/figure_02/full_read_quality_2018/barcode_minimum_quality_by_ed.tsv",
       "bytes": 1295,
       "sha256": "c26d07cfdd279cb84e08f8f4c5facc23b4cafd4b825d22193ddc97ac4277c1f1"
     },
     "barcode_edit_distance_counts.tsv": {
-      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_02/full_read_quality_2018/barcode_edit_distance_counts.tsv",
+      "path": "source_data/figure_02/full_read_quality_2018/barcode_edit_distance_counts.tsv",
       "bytes": 262,
       "sha256": "1973de93a008a0b008ac5a95c0f482e0162b54c4f24717a39987b366b56b266f"
     }
   },
   "output": {
-    "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_02/full_read_quality_2018/full_quality_with_blaze_f1.tsv",
+    "path": "source_data/figure_02/full_read_quality_2018/full_quality_with_blaze_f1.tsv",
     "rows": 12,
     "bytes": 6224,
     "sha256": "363ee659802a41aa803001cba8a61676f4812ae015b2c11a64339afdad42aa9d"

@@ -6,33 +6,33 @@
   "build_commands": [
     [
       "g++",
-      "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/vendor/flexiplex-audit/source/base/flexiplex.c++",
+      "vendor/flexiplex-audit/source/base/flexiplex.c++",
       "-Ofast",
       "-pthread",
       "-std=c++11",
       "-o",
-      "/tmp/rad_flexiplex_build_20261023/pristine",
-      "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/vendor/flexiplex-audit/source/edlib-1.2.7/edlib.cpp",
+      "external_data/temporary/rad_flexiplex_build_20261023/pristine",
+      "vendor/flexiplex-audit/source/edlib-1.2.7/edlib.cpp",
       "-I",
-      "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/vendor/flexiplex-audit/source/edlib-1.2.7"
+      "vendor/flexiplex-audit/source/edlib-1.2.7"
     ],
     [
       "g++",
-      "/tmp/rad_flexiplex_build_20261023/patched/flexiplex.c++",
+      "external_data/temporary/rad_flexiplex_build_20261023/patched/flexiplex.c++",
       "-Ofast",
       "-pthread",
       "-std=c++11",
       "-o",
-      "/tmp/rad_flexiplex_build_20261023/audit",
-      "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/vendor/flexiplex-audit/source/edlib-1.2.7/edlib.cpp",
+      "external_data/temporary/rad_flexiplex_build_20261023/audit",
+      "vendor/flexiplex-audit/source/edlib-1.2.7/edlib.cpp",
       "-I",
-      "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/vendor/flexiplex-audit/source/edlib-1.2.7"
+      "vendor/flexiplex-audit/source/edlib-1.2.7"
     ]
   ],
   "results": {
     "pristine": {
       "command": [
-        "/tmp/rad_flexiplex_build_20261023/pristine",
+        "external_data/temporary/rad_flexiplex_build_20261023/pristine",
         "-d",
         "10x3v3",
         "-f",
@@ -42,10 +42,10 @@
         "-p",
         "1",
         "-k",
-        "/tmp/rad_flexiplex_build_20261023/targets.txt",
+        "external_data/temporary/rad_flexiplex_build_20261023/targets.txt",
         "-n",
-        "/tmp/rad_flexiplex_build_20261023/pristine",
-        "/tmp/rad_flexiplex_build_20261023/fixture.fastq"
+        "external_data/temporary/rad_flexiplex_build_20261023/pristine",
+        "external_data/temporary/rad_flexiplex_build_20261023/fixture.fastq"
       ],
       "binary_sha256": "637d0d2f2eff1a7ae0d4a523dcbbc1218e96f3c67df09f80715247b5caaece5c",
       "rows": [
@@ -75,7 +75,7 @@
     },
     "audit": {
       "command": [
-        "/tmp/rad_flexiplex_build_20261023/audit",
+        "external_data/temporary/rad_flexiplex_build_20261023/audit",
         "-d",
         "10x3v3",
         "-f",
@@ -85,10 +85,10 @@
         "-p",
         "1",
         "-k",
-        "/tmp/rad_flexiplex_build_20261023/targets.txt",
+        "external_data/temporary/rad_flexiplex_build_20261023/targets.txt",
         "-n",
-        "/tmp/rad_flexiplex_build_20261023/audit",
-        "/tmp/rad_flexiplex_build_20261023/fixture.fastq"
+        "external_data/temporary/rad_flexiplex_build_20261023/audit",
+        "external_data/temporary/rad_flexiplex_build_20261023/fixture.fastq"
       ],
       "binary_sha256": "e7eaa3b3fd5ec6d7602b095fb0fb5ed0cda30fd968ba5f83e424eea9730283fb",
       "rows": [
@@ -121,7 +121,7 @@
     },
     "pinned": {
       "command": [
-        "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/vendor/flexiplex-audit/bin/flexiplex_v1.02.6_raw_to_assigned_audit",
+        "vendor/flexiplex-audit/bin/flexiplex_v1.02.6_raw_to_assigned_audit",
         "-d",
         "10x3v3",
         "-f",
@@ -131,10 +131,10 @@
         "-p",
         "1",
         "-k",
-        "/tmp/rad_flexiplex_build_20261023/targets.txt",
+        "external_data/temporary/rad_flexiplex_build_20261023/targets.txt",
         "-n",
-        "/tmp/rad_flexiplex_build_20261023/pinned",
-        "/tmp/rad_flexiplex_build_20261023/fixture.fastq"
+        "external_data/temporary/rad_flexiplex_build_20261023/pinned",
+        "external_data/temporary/rad_flexiplex_build_20261023/fixture.fastq"
       ],
       "binary_sha256": "38dccd37f1747e5105b62eacde572b7e4c5206fb925dc1fdbe8210ffe8b1e8c4",
       "rows": [

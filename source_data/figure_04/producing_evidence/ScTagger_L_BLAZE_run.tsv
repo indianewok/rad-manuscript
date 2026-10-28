@@ -1,6 +1,6 @@
 dataset	L
 case	flatQ20
-input	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/wl_scan/20260731_sctagger_badread_quality_full/inputs/L/flatQ20.fq.gz
+input	external_data/wl_scan/20260731_sctagger_badread_quality_full/inputs/L/flatQ20.fq.gz
 expected_cells	5000
 threads	8
 kit	3v3

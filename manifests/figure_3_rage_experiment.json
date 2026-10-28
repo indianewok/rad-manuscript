@@ -2,15 +2,15 @@
   "experiment_id": "rage_matched_offlist_20261023",
   "selection": "current authorized matched replication",
   "accession": "ERR3268991",
-  "input": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/raw_fastq_datasets/rageseq.fq.gz",
+  "input": "external_data/raw_fastq_datasets/rageseq.fq.gz",
   "expected_input_bytes": 16922373879,
   "expected_input_reads": 20346396,
   "expected_input_sha256": "cfdba50a497dd4f6b24c2a4e730e297a09498ad5fe006f65eee01fa202bcdcec",
   "input_validation_status": "passed",
-  "catalog": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/inputs/chemistry_3v2_catalog.txt",
+  "catalog": "checkpoints/figure_03/rage_matched/inputs/chemistry_3v2_catalog.txt",
   "catalog_sha256": "b0dda4b114d8fc7ea8def94fb472e6205c1831a72e3ac245ed13cc332d9f20d1",
   "catalog_entries": 737280,
-  "reference": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/inputs/matched_filtered_4505.txt",
+  "reference": "checkpoints/figure_03/rage_matched/inputs/matched_filtered_4505.txt",
   "reference_sha256": "93f7551ec70c57d5f9e6d8e77f4041d19c99acc9b771e16ce1acf26dfac5ba54",
   "excluded_entries": 4505,
   "whitelists": [
@@ -20,7 +20,7 @@
       "rng": "Python random.Random MT19937",
       "python": "3.9.16",
       "target_count": 4505,
-      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/inputs/false_rep1.txt",
+      "path": "checkpoints/figure_03/rage_matched/inputs/false_rep1.txt",
       "sha256": "f53d0331048592ab4f17f432d30f23444dc2a5314fe25adc63eb01e9eda128f6"
     },
     {
@@ -29,7 +29,7 @@
       "rng": "Python random.Random MT19937",
       "python": "3.9.16",
       "target_count": 4505,
-      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/inputs/false_rep2.txt",
+      "path": "checkpoints/figure_03/rage_matched/inputs/false_rep2.txt",
       "sha256": "ad84e82a4ac9ad3f4e6c5665e2d0ff438369253b851e2197b1c22e0892172864"
     },
     {
@@ -38,21 +38,21 @@
       "rng": "Python random.Random MT19937",
       "python": "3.9.16",
       "target_count": 4505,
-      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/inputs/false_rep3.txt",
+      "path": "checkpoints/figure_03/rage_matched/inputs/false_rep3.txt",
       "sha256": "6e4bf40175775b1a2d6809175eea84611cd2c6ddf42f005fd8a4ffa09344a893"
     }
   ],
-  "layout": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/inputs/rage_3v2_umi10_layout.csv",
+  "layout": "checkpoints/figure_03/rage_matched/inputs/rage_3v2_umi10_layout.csv",
   "layout_sha256": "470dbba928017e4a0d8a99fbdc0564f1b7e25e3601218f5c69197609acc2ae89",
-  "bitlist": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/inputs/chemistry_3v2_catalog_bitlist.csv.gz",
+  "bitlist": "checkpoints/figure_03/rage_matched/inputs/chemistry_3v2_catalog_bitlist.csv.gz",
   "bitlist_sha256": "d73a1414e59f21fe58058bf353312fdf64a17bd502ec9a14fba6161dc143fc13",
   "rad_commit": "cd0582b2440cde0f35725dc557fa47307d74d374",
-  "rad_binary": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_build/rad",
+  "rad_binary": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_build/rad",
   "blaze_version": "2.6.0a0",
   "blaze_commit": "af8d2cc9f6374caf4d1006d5f8a0e99097211646",
-  "blaze_python": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/bin/python",
-  "blaze_entrypoint": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/bin/blaze",
-  "flex_binary": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/software_pins_20260810/flexiplex_raw_to_assigned_audit/bin/flexiplex_v1.02.6_raw_to_assigned_audit",
+  "blaze_python": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/bin/python",
+  "blaze_entrypoint": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/bin/blaze",
+  "flex_binary": "external_data/reviewer_comment_data/software_pins_20260810/flexiplex_raw_to_assigned_audit/bin/flexiplex_v1.02.6_raw_to_assigned_audit",
   "flex_binary_sha256": "38dccd37f1747e5105b62eacde572b7e4c5206fb925dc1fdbe8210ffe8b1e8c4",
   "flex_commit": "d84c8ae4f3865052f2b5ecec816949b94682f302",
   "flex_patch_sha256": "88dc9cbad139d8ac416803c19c1d4291ebb7e3159f5a1a49205aff59319f86cb",
@@ -71,850 +71,850 @@
     },
     "locked_files": [
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/.github/ISSUE_TEMPLATE/bug_report.md",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/.github/ISSUE_TEMPLATE/bug_report.md",
         "sha256": "e2ed12e0eb330e478fd4bfb71a98a0dbf24eaeec6a84def118b38ea1daabe39b",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/.github/ISSUE_TEMPLATE/config.yml",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/.github/ISSUE_TEMPLATE/config.yml",
         "sha256": "38089b3549a2772a9e787be9f0a52cd75ff021b4b5b35d7904997c44f3ce14ce",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/.github/ISSUE_TEMPLATE/feature_request.md",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/.github/ISSUE_TEMPLATE/feature_request.md",
         "sha256": "8f89559efebd0f6151ca3f0e397c5bfc94c28aaa78f3949d969c3974889113ae",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/.github/PULL_REQUEST_TEMPLATE.md",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/.github/PULL_REQUEST_TEMPLATE.md",
         "sha256": "eeafce6612130485a11b7025b0fe49fb0a15733a428f1b73715ecd9682c4f883",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/.gitignore",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/.gitignore",
         "sha256": "c86800472379b8a613fb0388e99b398c45c4762bdc882509b38821747a84031a",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/CMakeLists.txt",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/CMakeLists.txt",
         "sha256": "c20a79c691112313e17577fb9bad1f27cfeb8fdd6c26c01d4a96d398b26c4017",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/LICENSE",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/LICENSE",
         "sha256": "bc3a6b0986defbbf69dd53d7d2bd1508276ff9fd5beed6ec5313750f779edb0c",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/README.md",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/README.md",
         "sha256": "b3d08d0ae56aea38e7ce4da7efb8ccf4dc6c8ab1a887f14f15ef0ee6297531f9",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/cmake/rad-wrapper.sh",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/cmake/rad-wrapper.sh",
         "sha256": "239f4fbe3d0c852c870621853835b6d53003152d3ef13c0a1bafd4503fb0a044",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/docs/README.md",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/docs/README.md",
         "sha256": "bb6f2bf16300e738b7f95f4a4aaf7de01d9fc5b59abfceb2ec7a17d1e82b02e3",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/docs/architecture.md",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/docs/architecture.md",
         "sha256": "fe074fd9fa5bcea9b34665c61903ab68104d5b14eb50ea2f377e3968d3b48bac",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/docs/cli-reference.md",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/docs/cli-reference.md",
         "sha256": "b577c8a4621f7201678e0a7619239bdd06420791036f30d367ae0dd91f371c98",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/docs/experimental/README.md",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/docs/experimental/README.md",
         "sha256": "8f825bebe7732f513c2c38dc4b033ba25432eef1f9a203baab2531c2c11d98be",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/docs/experimental/igzip-2.31.1-macos.md",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/docs/experimental/igzip-2.31.1-macos.md",
         "sha256": "d970adfdefa0ef89beb7e7872106f2bfe4e1b5cb32433b3f7d8a0de32037eaa8",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/docs/installation.md",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/docs/installation.md",
         "sha256": "bbc2a902345d10a9aed1152693b893d31d7b19991b2aaf7519231f9f0b5ba7bd",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/docs/layouts-and-whitelists.md",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/docs/layouts-and-whitelists.md",
         "sha256": "a7a3efcdd6a108f73322f514654982778a55afacc69f99cdd3026d3239543551",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/csv-parser/single_include/csv.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/csv-parser/single_include/csv.hpp",
         "sha256": "c7eff1ae9436e36f732e7004b4a5361e022bfca3d6ce0bcff47c1c9c40eea65e",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/edlib/include/edlib.h",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/edlib/include/edlib.h",
         "sha256": "62d0529a87aa6e701c767fb9ce3786c759068f454c129641b2be38da6237ccb5",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/edlib/src/edlib.cpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/edlib/src/edlib.cpp",
         "sha256": "a9c2b4a44820453d4991b129b373d04d82a59fc0aaabfad3d8da838c380ab0bd",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/fkYAML/node.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/fkYAML/node.hpp",
         "sha256": "bff5c74a025568a7561b131068056cac5061540d7712a24814c5b7c119e39e88",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/gzstream/gzstream.h",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/gzstream/gzstream.h",
         "sha256": "09842ac75a66798185860d6c51ba3a8b071f40e38179703ebe2dcd6c48bed0b2",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/kdepp/kde.h",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/kdepp/kde.h",
         "sha256": "accb1c27c049e8654e276d11e7720989f508d5b0b4f0e7c11db893cd7e2d214a",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/kdepp/kdemv.h",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/kdepp/kdemv.h",
         "sha256": "ddd9f125457d8089512c2051c35d566fa515e769308c92646a3e70c23ed4b4f4",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/kseq/kseq.h",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/kseq/kseq.h",
         "sha256": "4006f22a6b2a34f940c6232c8e26c6e6d6e084b48d7d452803fee7aa12a1ffef",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/parallel_hashmap/btree.h",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/parallel_hashmap/btree.h",
         "sha256": "e74bee0d946d11363d6e6f4d6c3aba0a5edb41d989ac976ead49791b4ebb5b7c",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/parallel_hashmap/meminfo.h",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/parallel_hashmap/meminfo.h",
         "sha256": "d30f96daec38d255dbf81c5bbc5d65b999f59b6d48f62f5c6e6e078b7d1ab751",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/parallel_hashmap/phmap.h",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/parallel_hashmap/phmap.h",
         "sha256": "20168524cb20deea81dee2ba33a1535f7c7efeebee00c028d292a210f3601be0",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/parallel_hashmap/phmap_base.h",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/parallel_hashmap/phmap_base.h",
         "sha256": "6e54dd34c3dbbc7c7f0adff193bd19f6df523e01e0d91c8e209f5a1ac6862dc0",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/parallel_hashmap/phmap_bits.h",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/parallel_hashmap/phmap_bits.h",
         "sha256": "3dc0cdc41b1c2b22ffc73caebd440e64aa2120c40cb870e4bf2b79bd540dcda4",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/parallel_hashmap/phmap_config.h",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/parallel_hashmap/phmap_config.h",
         "sha256": "7f01e7e420ea5dd341755a85cdc172b5c0318d2147d9e32f7e6032b5115a87ce",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/parallel_hashmap/phmap_dump.h",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/parallel_hashmap/phmap_dump.h",
         "sha256": "2b439e219753adafc581ea528aecfb8a67b28fb64bc1e7f4dab8620fbf631406",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/parallel_hashmap/phmap_fwd_decl.h",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/parallel_hashmap/phmap_fwd_decl.h",
         "sha256": "62b261cc6262fc9536c60c3ea613600ef0eaefbce7e12f5b13622a9443e25fdf",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/parallel_hashmap/phmap_utils.h",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/parallel_hashmap/phmap_utils.h",
         "sha256": "088337dbecfb814f9796771fb2b8e252318d86d183b4526b73d6ee5d2a738269",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/rad/barcode_correction.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/rad/barcode_correction.hpp",
         "sha256": "6874b97221c53e2acfa670f1af72f3c12221bcdfe7fde0bf24f304551655a7ee",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/rad/io_streaming.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/rad/io_streaming.hpp",
         "sha256": "2820e127eb51aa324e12126c2d6802cba7991ae8c2ae6f7086a8fe7983e2814e",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/rad/misc_utils.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/rad/misc_utils.hpp",
         "sha256": "1fcff2df56a619c8614ebb362c4394be40d9b4c125b545be0a112e55f59f9da8",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/rad/rad_headers.h",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/rad/rad_headers.h",
         "sha256": "1e7ed08e35061a612c1f70310205f03a999895365a56e5f76b8cb3cff122c03a",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/rad/read_layout.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/rad/read_layout.hpp",
         "sha256": "5935fc94c159adab5ea7fac27f3123d92667146b37c28d7e9eef091cc9d7d836",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/rad/seqspec.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/rad/seqspec.hpp",
         "sha256": "b712a1e5941646da9af1c4254fcc881977e152b87f9dc869e16f92051e17f923",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/rad/sigstring.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/rad/sigstring.hpp",
         "sha256": "7365e3ab162e0349f2a25d509129a865bc0d467d1f939f4b1d1da16cce9d4ae3",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/rad/whitelist_generator.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/rad/whitelist_generator.hpp",
         "sha256": "c62febd5eee4f33e208785d39170b86b57eb66cf313d0f0863e66c64b9816b0d",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/Canvas.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/Canvas.hpp",
         "sha256": "0819684bfd8181f0bd8f64e621f8f2e188b3ceb05cc51ab477c0d23324878663",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/ColumnIndex.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/ColumnIndex.hpp",
         "sha256": "11d5ccdebf890b75b292ca8ff0e24e21e542a14fde7edbd14e53c310c58ac4cf",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/Constants.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/Constants.hpp",
         "sha256": "3477b27924dccbf3f54ef01bdc117938ca17f72e4b8b5fd5fc65403c9c732238",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/Default.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/Default.hpp",
         "sha256": "86997165891e879b862c7a1b14283078c1f497f05778253fa68dc8e35b853004",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/Enums.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/Enums.hpp",
         "sha256": "a73845c62363be168c9cec2e0c25ea7c31e4b3945d3538cae41123b11c974ec8",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/Figure.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/Figure.hpp",
         "sha256": "d3ad2c62ec9301e82dbf5cde0f70a396ff9acb08e96ae19a896426c6765f860a",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/Palettes.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/Palettes.hpp",
         "sha256": "7cb3021366402b81dd248ec1a91ef734139227f17422f67f1df5d509282d0584",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/Plot.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/Plot.hpp",
         "sha256": "cfa72d731fb3beeda08df8cf4fd035bc5c49f9c6a0f84d00d0252082afa7cddd",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/Plot2D.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/Plot2D.hpp",
         "sha256": "38e2b4260920a24291790bcc7f176effec25f795ecbb1ac74b1434d0747d239b",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/Plot3D.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/Plot3D.hpp",
         "sha256": "be80e323ec28cdf62214f91bb780ebfd0bd038415275718fcdec8071b2e0b099",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/StringOrDouble.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/StringOrDouble.hpp",
         "sha256": "916e52e05ba1526f0d918462a2834b1d31cdc6ad2c6acff3999e0259f5f30a9b",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/Utils.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/Utils.hpp",
         "sha256": "a2199c4d6d718f400cb7adc9637bb32642d2c3ef7b952d6d365990b90bfc3d79",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/Vec.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/Vec.hpp",
         "sha256": "f0b15d87240bcdc42107e8c76cc4e9ee6654d79e458769066a19c421ab3c2a14",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/sciplot.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/sciplot.hpp",
         "sha256": "7ab3444a75c9bc350e9045eda953bb8ca7105cb6b67b793234094a84b0db21d8",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/AxisLabelSpecs.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/AxisLabelSpecs.hpp",
         "sha256": "8b63d05723e8b21a2664aed938bef67a515757092aa2c6be67922a2d3c697a82",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/BorderSpecs.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/BorderSpecs.hpp",
         "sha256": "efc17e8a84bbe8af2ca5ae3fad8ad79298c52e627d97d5e2e322cfb8c22fe918",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/DepthSpecsOf.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/DepthSpecsOf.hpp",
         "sha256": "4b87b7cb544fd7dfa4badcfccd7a2519a8a603c35b4bdbf4221d780378224674",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/DrawSpecs.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/DrawSpecs.hpp",
         "sha256": "964da010554efb9222dc0fa3d4d48b305d44a1c9c4b2713466a247a468ef71c6",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/FillSpecsOf.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/FillSpecsOf.hpp",
         "sha256": "8ad8c084f336249aa11a4e18031bae21878392ebf30996664f11bcccdb865e8b",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/FillStyleSpecs.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/FillStyleSpecs.hpp",
         "sha256": "46902efd3f83f14935767d332ba5bcd9d6e130abfa5df0bb27fe465cfe60e844",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/FilledCurvesSpecsOf.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/FilledCurvesSpecsOf.hpp",
         "sha256": "284c29dddfdef0e50af950adb3994ac29334aa5b95d8856a6c2cb9a4887db8c2",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/FontSpecsOf.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/FontSpecsOf.hpp",
         "sha256": "d1f29394c11ac83e06a64ba8802e1e3380103cd91e12d17c61d012a4532cd4dd",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/FrameSpecsOf.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/FrameSpecsOf.hpp",
         "sha256": "142597bb921bdd30518e40e2cbd558e6a2d8cd1e70b8a2165bf9511a4a832fb3",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/GridSpecs.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/GridSpecs.hpp",
         "sha256": "ad4ea4696bd397556738f3a326a78a18507a38710f6b49f7a93ca979030df3c1",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/GridSpecsBase.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/GridSpecsBase.hpp",
         "sha256": "e867aee0effc9474942bddc925c5508d0e05cf672ef23ebd976867383c5a0bea",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/HistogramStyleSpecs.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/HistogramStyleSpecs.hpp",
         "sha256": "250507782c3f2841c2f8407f5f39165d461c3d0020772066854708131e1cc990",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/LabelSpecs.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/LabelSpecs.hpp",
         "sha256": "9eb58f5f31d1c4f720995c9e9feb817ac8e45ebb591c8a8c48a84cc68b2708de",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/LayoutSpecs.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/LayoutSpecs.hpp",
         "sha256": "942f083f8b48ce7c2ce697073fc67a76e202ad12d9f1544c643d2fba38711f9c",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/LegendSpecs.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/LegendSpecs.hpp",
         "sha256": "fca33ff744c641b173288059b1a10a85faecbc2c54c23747b300042e17e6e679",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/LineSpecsOf.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/LineSpecsOf.hpp",
         "sha256": "a7eb91ad0791f6b9834965a1421102f177462b6497a5196ea304e11f5f6e4390",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/OffsetSpecsOf.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/OffsetSpecsOf.hpp",
         "sha256": "1dec6bdcc34eb808793ab0e4a0d8edd880455a556c65dc6470a725aa21ea9f75",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/PointSpecsOf.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/PointSpecsOf.hpp",
         "sha256": "39263820ee1f23270fb7b9e8618310e6ba70a8317b97cf5605bd2e72e5c7e3c5",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/ShowSpecsOf.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/ShowSpecsOf.hpp",
         "sha256": "e07c58c364012d508c645b7ea559bb5d5a23cbe351c34477801394baf9b954dc",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/Specs.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/Specs.hpp",
         "sha256": "190de24dad724ae40502cdf5880e139c0a7f2a5c90ec9aead4310ad3ce08b3ab",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/TextSpecsOf.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/TextSpecsOf.hpp",
         "sha256": "2779e1cbe671a971b86f3c2b4a3818d74ffa78fa94b7d337fdfaff8f3f23d566",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/TicsSpecs.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/TicsSpecs.hpp",
         "sha256": "900f2e5868ab29ca9887ff2b083ebdbbcb09ff8763386403452890b3341b7299",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/TicsSpecsBaseOf.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/TicsSpecsBaseOf.hpp",
         "sha256": "22e0f3f9320598ed402ff9d6b5ca23790b2076f90558e0eb3e9e5d9d2a01d26f",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/TicsSpecsMajor.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/TicsSpecsMajor.hpp",
         "sha256": "b7eda97160e24a834b0193bddc22e5b973b72ad046422f670300d349878f7d76",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/TicsSpecsMinor.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/TicsSpecsMinor.hpp",
         "sha256": "1cf4011c219ee6dc99f1fd3ef4ecde8762170c58974afb56849eb2510e1e3bc6",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/TitleSpecsOf.hpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/sciplot/specs/TitleSpecsOf.hpp",
         "sha256": "2ae3274192971c3cbefe4511d22d7151a07d016f53780e14f9701aecc3ddd3ae",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/ssw/sse2neon.h",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/ssw/sse2neon.h",
         "sha256": "f1cb71bafaee10dd76df3c8a51bd29c27ce13566136c32c0ba05d52b09eb5d38",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/ssw/ssw.c",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/ssw/ssw.c",
         "sha256": "690ac6bdc6d3c05789441977cf139ab78faac2724217a93815ac48dcda9d66b8",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/ssw/ssw.h",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/ssw/ssw.h",
         "sha256": "61c268dc2c516e3e8d570d08f95f74b4e33fa8b8cb445309f78aa1b37ef8b436",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/ssw/ssw_cpp.cpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/ssw/ssw_cpp.cpp",
         "sha256": "ac467fbb627c6f158258caca0a6705bc78a14444d7e14f5138b7b5675f0751b7",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/ssw/ssw_cpp.h",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/include/ssw/ssw_cpp.h",
         "sha256": "d049c40beae460f05994ab4192ac72bd8bff21d2ac77d390ad78f0a264c4470a",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/recipe/build.sh",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/recipe/build.sh",
         "sha256": "fc9140b61f04a09f237f5ec13a38291f834a8b76449e3d6c2c618fbb2d8a032b",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/recipe/meta.yaml",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/recipe/meta.yaml",
         "sha256": "833fc8187052ad901cc3e75edf9d64e824dd712cb0e7e7d0df9ffd81db12c36a",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/resources/read_layout/five_prime_read_layout.csv",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/resources/read_layout/five_prime_read_layout.csv",
         "sha256": "6096760141f30f1994afa06127fa7962d688afeeea99ddee7ef90ff8df12e22f",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/resources/read_layout/nanopore_bulk_rapid_bc_read_layout.csv",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/resources/read_layout/nanopore_bulk_rapid_bc_read_layout.csv",
         "sha256": "e492ed7977899f272a4915e7923d00ff0b2e20938e50463e35ab43e6a5e2d090",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/resources/read_layout/sctagger_sim_read_layout.csv",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/resources/read_layout/sctagger_sim_read_layout.csv",
         "sha256": "e412626bdbb7a33283c65614c55f5e165f0accd00585907e964c80bdf2b3c1b3",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/resources/read_layout/splitseq_read_layout.csv",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/resources/read_layout/splitseq_read_layout.csv",
         "sha256": "d408b318489fe69a87a3db61c3ce29c039c992e33da2c7b64e7880b426cf5cb0",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/resources/read_layout/three_prime_read_layout.csv",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/resources/read_layout/three_prime_read_layout.csv",
         "sha256": "4ff8577635d0578e4858a46182d8310ff2d5268f850af0e0d0de7d443cf2b192",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/resources/read_layout/visium_hd_read_layout.csv",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/resources/read_layout/visium_hd_read_layout.csv",
         "sha256": "1442bbb5b18b6d288e2575b5c52ae06955b9a6d5a33cd347d4684391065e9bf5",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/resources/read_layout/visium_three_prime_read_layout.csv",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/resources/read_layout/visium_three_prime_read_layout.csv",
         "sha256": "af1eaa275dc88facb250750c14d50092b219a639570121116edcc9cd8a80133b",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/resources/wl/3M-3pgex-may-2023.txt_bitlist.csv.gz",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/resources/wl/3M-3pgex-may-2023.txt_bitlist.csv.gz",
         "sha256": "d1f4fa488a0ce631b496362b6b424eb73b6593d0e5aa52dca7d0e737f750b8fe",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/resources/wl/3M-5pgex-jan-2023.txt_bitlist.csv.gz",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/resources/wl/3M-5pgex-jan-2023.txt_bitlist.csv.gz",
         "sha256": "bd987e0c0cf78f5d8952b986e3ae9e7b7beb8e16b86ad7e1d98a2480305006a4",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/resources/wl/3M-february-2018-3v3.txt_bitlist.csv.gz",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/resources/wl/3M-february-2018-3v3.txt_bitlist.csv.gz",
         "sha256": "02f771363a95e786ab1a6ab1e554c770e58cdff2fb30f2d7a9fb50a97762d452",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/resources/wl/737K-august-2016_bitlist.csv.gz",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/resources/wl/737K-august-2016_bitlist.csv.gz",
         "sha256": "d73a1414e59f21fe58058bf353312fdf64a17bd502ec9a14fba6161dc143fc13",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/resources/wl/splitseq_bc1_bitlist.csv.gz",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/resources/wl/splitseq_bc1_bitlist.csv.gz",
         "sha256": "466ffc7509c2dd6931270562a4afca176bc93a3c9b0935097b89e03c95e696c5",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/resources/wl/splitseq_bc2_bitlist.csv.gz",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/resources/wl/splitseq_bc2_bitlist.csv.gz",
         "sha256": "9f49500b17e0855db7670114186cde94fee3b44a77c733e68ae594199dcd0268",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/resources/wl/visium-v1_v2_bitlist.csv.gz",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/resources/wl/visium-v1_v2_bitlist.csv.gz",
         "sha256": "07c9b00f0d9d4375182b973478482e592450cd05393bc260222718e1b2a0d0f1",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/resources/wl/visium-v3_v4_bitlist.csv.gz",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/resources/wl/visium-v3_v4_bitlist.csv.gz",
         "sha256": "e3d432a362e145b62f4516689a651195ee97630137fea36842a11446a1f10c5e",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/resources/wl/visium-v5_bitlist.csv.gz",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/resources/wl/visium-v5_bitlist.csv.gz",
         "sha256": "c871cb4795268f5e869ea37dd4a83c8a7d200d50f6235fbb74df2fe133f1d4f7",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/resources/wl/visium_hd_bc1.csv.gz",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/resources/wl/visium_hd_bc1.csv.gz",
         "sha256": "af4e36ca296251cf0673fb66c68995c0813cc16245d63b04129ebcebbb13775d",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/resources/wl/visium_hd_bc2.csv.gz",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/resources/wl/visium_hd_bc2.csv.gz",
         "sha256": "8d1dd6291d31fc9dff01d6b3396ffa051e7311b3474a01100ce83e6502dcb5b5",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/src/config_tools.cpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/src/config_tools.cpp",
         "sha256": "7938389294532d8aa7b9d708cc4d69928f5a39c2e4cbf0a102a793c55452795d",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/src/discover_layout.cpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/src/discover_layout.cpp",
         "sha256": "2627d54c9a22f37a6b02f7d788f5019d50a9434286e65a24bfc357631cd03bcd",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/src/main.cpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/src/main.cpp",
         "sha256": "b825bd699d5e2ded86bae530b8a4ec35dcf0434d6e59f3e641975d90e8084493",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/src/whitelist_generator.cpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/src/whitelist_generator.cpp",
         "sha256": "a10505b0e6fea2939c1a9063700a8a762579623f4f1c67a4f8bfceb176a9d6a8",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/test_data/README.md",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/test_data/README.md",
         "sha256": "eb736d13efc383c91f9a3bf30961fb40dde67dcf84f76e26290dd424acc876e0",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/tests/parsed_position_empty.cpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/tests/parsed_position_empty.cpp",
         "sha256": "da2ae2823e03f135c610b6787f6cefcad2a11f2395a9553131ade13243e79bc2",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/tests/prep_max_verbose_trace.cmake",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/tests/prep_max_verbose_trace.cmake",
         "sha256": "ab366f95a3225bcfaef3bc85b38185e29494bc33c7065fa40d8b7fa6ae472d72",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/tests/prep_splitseq_terminal_anchor_priority.cmake",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/tests/prep_splitseq_terminal_anchor_priority.cmake",
         "sha256": "40fbfd804bef6c422bcb13172f43a09716f8fd09831d94ca2f2e713e97b87231",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/tests/prep_static_anchor_threshold.cmake",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/tests/prep_static_anchor_threshold.cmake",
         "sha256": "6368aceaad2b671d6e57c2009c4af616c55ccfc60ae987034b51bbb4047297f3",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/tests/splitseq_terminal_boundaries.cmake",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/tests/splitseq_terminal_boundaries.cmake",
         "sha256": "8c18accde406cedd404cfbb7781daf7e7066a785072de21fcffb2b20222037ff",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/tests/test_barcode_filter_precedence.cpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/tests/test_barcode_filter_precedence.cpp",
         "sha256": "fc7a75472a7991b672c9b1bb4520f27c6aef6a78a163f319e0538754ca2fdcbc",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/tests/test_find_poly_tails.cpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/tests/test_find_poly_tails.cpp",
         "sha256": "459bc048118ead05e2ac74ebf16fb0521f9e181d065b026f3104d5aeeae37abf",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/tests/test_generate_mutated_barcodes.cpp",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_source/tests/test_generate_mutated_barcodes.cpp",
         "sha256": "02b82c499151323f28816f0f9c316f3eb5f026d5db788c68e2e6801f12a47ac3",
         "role": "RAD pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/contourpy-1.3.0.dist-info/METADATA",
+        "path": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/contourpy-1.3.0.dist-info/METADATA",
         "sha256": "ab0120dd49923686c0ce561607c6e824d0cdab3df6347cb1ee2a52d6bc88080c",
         "role": "BLAZE dependency version metadata"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/cycler-0.12.1.dist-info/METADATA",
+        "path": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/cycler-0.12.1.dist-info/METADATA",
         "sha256": "23289e19b76f1e01394227696e6af2b6cd1ce79e89731209bf9195148b18ed36",
         "role": "BLAZE dependency version metadata"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/cython-3.2.9.dist-info/METADATA",
+        "path": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/cython-3.2.9.dist-info/METADATA",
         "sha256": "860fa42ba988c56c9b37fe517acfd3ff2975e123ffcb294fc69d48e913a17bfe",
         "role": "BLAZE dependency version metadata"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/fast_edit_distance-1.2.2.dist-info/METADATA",
+        "path": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/fast_edit_distance-1.2.2.dist-info/METADATA",
         "sha256": "781c70bcebe919ac34e39b98acf4487f7a04aa0620d77a510aa1f73c0fc03689",
         "role": "BLAZE dependency version metadata"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/fonttools-4.60.2.dist-info/METADATA",
+        "path": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/fonttools-4.60.2.dist-info/METADATA",
         "sha256": "eb060c3186eb7555a70d8adad6d2d3dd18c5b424a83c1b6801e55b5d14257a03",
         "role": "BLAZE dependency version metadata"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/importlib_resources-6.5.2.dist-info/METADATA",
+        "path": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/importlib_resources-6.5.2.dist-info/METADATA",
         "sha256": "ca0953ffb4bf3ecad241a55381929061fa26694943fa957be1fffd2ddd118e86",
         "role": "BLAZE dependency version metadata"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/kiwisolver-1.4.7.dist-info/METADATA",
+        "path": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/kiwisolver-1.4.7.dist-info/METADATA",
         "sha256": "21c9140831e45cd51baa53d19bc9674ba662edce1f90d0316138776331c8d9bf",
         "role": "BLAZE dependency version metadata"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/matplotlib-3.9.4.dist-info/METADATA",
+        "path": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/matplotlib-3.9.4.dist-info/METADATA",
         "sha256": "7a2eec23b5442d1cac788f0c25f7f5d90a10c9b7f7c861fe4faf396472baa002",
         "role": "BLAZE dependency version metadata"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/numpy-2.0.2.dist-info/METADATA",
+        "path": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/numpy-2.0.2.dist-info/METADATA",
         "sha256": "9f2501da452b612890357b918fd56a8036e6f60d04bba92de71b3e9632bd3923",
         "role": "BLAZE dependency version metadata"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/packaging-26.2.dist-info/METADATA",
+        "path": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/packaging-26.2.dist-info/METADATA",
         "sha256": "4f9cbcd7933415a4793f7767c98a2b6a512c823fc81c87337815705f230ecabf",
         "role": "BLAZE dependency version metadata"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/pandas-2.3.3.dist-info/METADATA",
+        "path": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/pandas-2.3.3.dist-info/METADATA",
         "sha256": "40ee953dc7ca155840b639a1881ff84578075187fce0ac20eeda55a7fa0d9a90",
         "role": "BLAZE dependency version metadata"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/pillow-11.3.0.dist-info/METADATA",
+        "path": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/pillow-11.3.0.dist-info/METADATA",
         "sha256": "d53d4d78f8a8efe182396711ef76840386d2ba4ccdad421f58cc00c3b3401f73",
         "role": "BLAZE dependency version metadata"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/pyparsing-3.3.2.dist-info/METADATA",
+        "path": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/pyparsing-3.3.2.dist-info/METADATA",
         "sha256": "3311a8b949d70f71a2b9788a9327f11d9d5a6a8012d6c046ca254ad2de877f45",
         "role": "BLAZE dependency version metadata"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/python_dateutil-2.9.0.post0.dist-info/METADATA",
+        "path": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/python_dateutil-2.9.0.post0.dist-info/METADATA",
         "sha256": "a9d436da322be808332f98d88325998e87cb693a678a9969feb4cfad729a6e93",
         "role": "BLAZE dependency version metadata"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/pytz-2026.3.post1.dist-info/METADATA",
+        "path": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/pytz-2026.3.post1.dist-info/METADATA",
         "sha256": "25ef8a562377a28d8c6bd8c5c9e80d761d0e22ac4a7bed24e512f589644ed33d",
         "role": "BLAZE dependency version metadata"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/six-1.17.0.dist-info/METADATA",
+        "path": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/six-1.17.0.dist-info/METADATA",
         "sha256": "562042078c2752549f6d8a7c86dbc5dd708088a7be6d80672ec7b07100b72468",
         "role": "BLAZE dependency version metadata"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/tqdm-4.70.0.dist-info/METADATA",
+        "path": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/tqdm-4.70.0.dist-info/METADATA",
         "sha256": "0d95b85b90428f8776afc4a92b17c5094f78ee98d150b3255acbcdf4e9d57941",
         "role": "BLAZE dependency version metadata"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/tzdata-2026.3.dist-info/METADATA",
+        "path": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/tzdata-2026.3.dist-info/METADATA",
         "sha256": "511c019df477939fe7f4c38e32ad74a570c4ebb05b13fd2fffd0f0f2dbe6f7b1",
         "role": "BLAZE dependency version metadata"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/zipp-3.23.1.dist-info/METADATA",
+        "path": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/zipp-3.23.1.dist-info/METADATA",
         "sha256": "420bddc234961fbdcb5abdfc42e317e0a706917a9ca163f815621e17bf4347af",
         "role": "BLAZE dependency version metadata"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/blaze/__init__.py",
+        "path": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/blaze/__init__.py",
         "sha256": "d76d58bc3ed75945121746f4ed7e28579275e5582cd7de5b0a897a8eb6396a36",
         "role": "BLAZE pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/blaze/config.py",
+        "path": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/blaze/config.py",
         "sha256": "81d56c3c62b2797aa8d3e3aa8330ad090fcfb70d0da498e2ba9d3e5e03b88776",
         "role": "BLAZE pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/blaze/find_reads.py",
+        "path": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/blaze/find_reads.py",
         "sha256": "571e457838b3cd83427098693e6c6bafd16e0a2d31b1fc7d2c24c4f2fb3c3289",
         "role": "BLAZE pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/blaze/helper.py",
+        "path": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/blaze/helper.py",
         "sha256": "03468a722de7affc1b6e00d68023ae25a8e5ca54d9140f9100c73d678d4bcb83",
         "role": "BLAZE pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/blaze/main.py",
+        "path": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/blaze/main.py",
         "sha256": "c6f596fd8d5159379f1ad525f64c991b6d381cc4bf434723a379d0241da1472d",
         "role": "BLAZE pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/blaze/parser.py",
+        "path": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/blaze/parser.py",
         "sha256": "ad92bccff3b8d959daa355c0738891e3fd002c6526bec689f2643a1809e689d9",
         "role": "BLAZE pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/blaze/polyT_adaptor_finder.py",
+        "path": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/blaze/polyT_adaptor_finder.py",
         "sha256": "d0e17667f873a230449f1bd053c7c93be0c4ec57ec19cb2e836436ff54171113",
         "role": "BLAZE pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/blaze/polyT_trimmer.py",
+        "path": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/blaze/polyT_trimmer.py",
         "sha256": "08e350e27b5e5ed0c243fccd58940f3b156b216934b9d96fc2fd5377d2aa81c2",
         "role": "BLAZE pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/blaze/read_assignment.py",
+        "path": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/blaze/read_assignment.py",
         "sha256": "dc474d91f0fde73539e4ee13d1449300d4dfe2a801d8703c32f6674bb1730f11",
         "role": "BLAZE pinned source"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_build/rad",
+        "path": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_build/rad",
         "sha256": "fc424779c1aba3f112930b4ec8c0dc874b421a217bd53ce6f227e719489a2b2d",
         "role": "RAD executable"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/bin/python",
+        "path": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/bin/python",
         "sha256": "021a0455f593f7b7a097ec3f6f8fcabd0bdf789be9883d7873083ddbd03f2988",
         "role": "BLAZE Python executable"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/bin/blaze",
+        "path": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/bin/blaze",
         "sha256": "46d36e12fb0dfd4ce3c403169bdb9a6574eddc8e5b26363afe40867471f994dc",
         "role": "BLAZE entrypoint"
       },
       {
-        "path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/software_pins_20260810/flexiplex_raw_to_assigned_audit/bin/flexiplex_v1.02.6_raw_to_assigned_audit",
+        "path": "external_data/reviewer_comment_data/software_pins_20260810/flexiplex_raw_to_assigned_audit/bin/flexiplex_v1.02.6_raw_to_assigned_audit",
         "sha256": "38dccd37f1747e5105b62eacde572b7e4c5206fb925dc1fdbe8210ffe8b1e8c4",
         "role": "Flexiplex diagnostic executable"
       }
     ],
-    "rad_binary": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/rad_cd0582_build/rad",
+    "rad_binary": "checkpoints/figure_03/rage_matched/tools/rad_cd0582_build/rad",
     "rad_build": null,
     "blaze": {
-      "package": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/blaze",
+      "package": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/blaze",
       "version": "2.6.0a0",
       "python": "3.9.16",
       "dependencies": {
         "contourpy": {
           "version": "1.3.0",
-          "metadata": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/contourpy-1.3.0.dist-info/METADATA"
+          "metadata": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/contourpy-1.3.0.dist-info/METADATA"
         },
         "cycler": {
           "version": "0.12.1",
-          "metadata": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/cycler-0.12.1.dist-info/METADATA"
+          "metadata": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/cycler-0.12.1.dist-info/METADATA"
         },
         "Cython": {
           "version": "3.2.9",
-          "metadata": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/cython-3.2.9.dist-info/METADATA"
+          "metadata": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/cython-3.2.9.dist-info/METADATA"
         },
         "fast_edit_distance": {
           "version": "1.2.2",
-          "metadata": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/fast_edit_distance-1.2.2.dist-info/METADATA"
+          "metadata": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/fast_edit_distance-1.2.2.dist-info/METADATA"
         },
         "fonttools": {
           "version": "4.60.2",
-          "metadata": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/fonttools-4.60.2.dist-info/METADATA"
+          "metadata": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/fonttools-4.60.2.dist-info/METADATA"
         },
         "importlib_resources": {
           "version": "6.5.2",
-          "metadata": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/importlib_resources-6.5.2.dist-info/METADATA"
+          "metadata": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/importlib_resources-6.5.2.dist-info/METADATA"
         },
         "kiwisolver": {
           "version": "1.4.7",
-          "metadata": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/kiwisolver-1.4.7.dist-info/METADATA"
+          "metadata": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/kiwisolver-1.4.7.dist-info/METADATA"
         },
         "matplotlib": {
           "version": "3.9.4",
-          "metadata": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/matplotlib-3.9.4.dist-info/METADATA"
+          "metadata": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/matplotlib-3.9.4.dist-info/METADATA"
         },
         "numpy": {
           "version": "2.0.2",
-          "metadata": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/numpy-2.0.2.dist-info/METADATA"
+          "metadata": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/numpy-2.0.2.dist-info/METADATA"
         },
         "packaging": {
           "version": "26.2",
-          "metadata": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/packaging-26.2.dist-info/METADATA"
+          "metadata": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/packaging-26.2.dist-info/METADATA"
         },
         "pandas": {
           "version": "2.3.3",
-          "metadata": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/pandas-2.3.3.dist-info/METADATA"
+          "metadata": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/pandas-2.3.3.dist-info/METADATA"
         },
         "pillow": {
           "version": "11.3.0",
-          "metadata": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/pillow-11.3.0.dist-info/METADATA"
+          "metadata": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/pillow-11.3.0.dist-info/METADATA"
         },
         "pyparsing": {
           "version": "3.3.2",
-          "metadata": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/pyparsing-3.3.2.dist-info/METADATA"
+          "metadata": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/pyparsing-3.3.2.dist-info/METADATA"
         },
         "python-dateutil": {
           "version": "2.9.0.post0",
-          "metadata": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/python_dateutil-2.9.0.post0.dist-info/METADATA"
+          "metadata": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/python_dateutil-2.9.0.post0.dist-info/METADATA"
         },
         "pytz": {
           "version": "2026.3.post1",
-          "metadata": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/pytz-2026.3.post1.dist-info/METADATA"
+          "metadata": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/pytz-2026.3.post1.dist-info/METADATA"
         },
         "six": {
           "version": "1.17.0",
-          "metadata": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/six-1.17.0.dist-info/METADATA"
+          "metadata": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/six-1.17.0.dist-info/METADATA"
         },
         "tqdm": {
           "version": "4.70.0",
-          "metadata": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/tqdm-4.70.0.dist-info/METADATA"
+          "metadata": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/tqdm-4.70.0.dist-info/METADATA"
         },
         "tzdata": {
           "version": "2026.3",
-          "metadata": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/tzdata-2026.3.dist-info/METADATA"
+          "metadata": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/tzdata-2026.3.dist-info/METADATA"
         },
         "zipp": {
           "version": "3.23.1",
-          "metadata": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/zipp-3.23.1.dist-info/METADATA"
+          "metadata": "checkpoints/figure_03/rage_matched/tools/blaze_2.6.0a0_env/lib/python3.9/site-packages/zipp-3.23.1.dist-info/METADATA"
         }
       }
     }
   },
   "catalog_bitlist_equivalence": "passed: validation/figure_3_rage_catalog_equivalence.json",
   "reference_original": {
-    "path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/rageseq_single_cell_data/outs/filtered_feature_bc_matrix/barcodes.tsv.gz",
+    "path": "external_data/rageseq_single_cell_data/outs/filtered_feature_bc_matrix/barcodes.tsv.gz",
     "sha256": "f3039aa1c513b2a48e511bd71b264852e76761eb72ecb7769528070c18dd4e63",
     "rows": 4505,
     "duplicate_normalized_barcodes": 0,

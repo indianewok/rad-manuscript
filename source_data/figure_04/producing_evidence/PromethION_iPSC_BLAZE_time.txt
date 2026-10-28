@@ -1,4 +1,4 @@
-	Command being timed: "/scratch/f005f43/blaze2_260a0_native_20260727/venv/bin/blaze --expect-cells 500 --10x-kit-version 3v3 --threads 32 --batch-size 1000 --no-demultiplexing --no-emtpy-drops --overwrite --output-prefix /scratch/f005f43/promethion_four_tool_20260729/results/blaze_expect500/ /scratch/f005f43/promethion_four_tool_20260729/input/promethion.fq.gz"
+	Command being timed: "external_data/reviewer_comment_data/scratch_preservation_20260921/files/blaze2_260a0_native_20260727/venv/bin/blaze --expect-cells 500 --10x-kit-version 3v3 --threads 32 --batch-size 1000 --no-demultiplexing --no-emtpy-drops --overwrite --output-prefix external_data/reviewer_comment_data/scratch_preservation_20260921/files/promethion_four_tool_20260729/results/blaze_expect500/ external_data/reviewer_comment_data/scratch_preservation_20260921/files/promethion_four_tool_20260729/input/promethion.fq.gz"
 	User time (seconds): 26981.65
 	System time (seconds): 312.89
 	Percent of CPU this job got: 1557%

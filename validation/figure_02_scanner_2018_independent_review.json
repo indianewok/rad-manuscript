@@ -7,7 +7,7 @@
     "scripts/figure_02/validate_full_barcode_quality_2018.py": "31903c288da82307c233df88d6b0ede29b0dd586dfcaa74a365b1081a5b23b89"
   },
   "original_generator": {
-    "path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/LongBench_comps/ScTagger_quality_sweep_20260731/code/original_quality_generation/generate_truth_conditioned_qscores.py",
+    "path": "external_data/reviewer_comment_data/LongBench_comps/ScTagger_quality_sweep_20260731/code/original_quality_generation/generate_truth_conditioned_qscores.py",
     "sha256": "3efcd5b677bc65b3eebcfb9ed48432829b3c3a5cbb2521807e24f85cd57c834d",
     "all_three_locator_function_ASTs_identical": true
   },
@@ -82,7 +82,7 @@
     ]
   },
   "fixture_script": {
-    "path": "/tmp/review_full2018_edges.py",
+    "path": "external_data/temporary/review_full2018_edges.py",
     "sha256": "fc06c6a6b6ddce5a2f92a84b47e863a5bebe1dc061db59903779a9fad8f69ae0"
   },
   "scope": "Read-only review of producing files; tiny designed fixture only. Full 4,993,805-read job and its selected-data validation are separate."

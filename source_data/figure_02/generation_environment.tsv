@@ -2,11 +2,12 @@ start_utc	2026-09-13T15:24:40Z
 host	s01.hpcc.dartmouth.edu
 slurm_job_id	9405347
 slurm_cpus_per_task	8
-input	/scratch-nfs/f005f43/rad_longbench_20260726/data/shuffled_L_lr_synth.fq.gz
-model_seed_path	/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/LongBench_comps/ScTagger_nanopore2023_Q15_Q20_20260819/models/nanopore2023.gz
-command	/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/miniconda3/bin/python /scratch-nfs/f005f43/sctagger_nanopore2023_unadjusted_20260913/scripts/generate_truth_conditioned_qscores.py --input /scratch-nfs/f005f43/rad_longbench_20260726/data/shuffled_L_lr_synth.fq.gz --output-dir /scratch-nfs/f005f43/sctagger_nanopore2023_unadjusted_20260913/inputs/L_variants --model /dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/LongBench_comps/ScTagger_nanopore2023_Q15_Q20_20260819/models/nanopore2023.gz --model-label nanopore2023 --native-unadjusted --seed 20260731 --adapter-max-ed 7 --boundary-slop 8 --tape-size 16777216 --pigz-threads 4 --progress-every 100000
+input	external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_longbench_20260726/data/shuffled_L_lr_synth.fq.gz
+model_file	external_data/reviewer_comment_data/LongBench_comps/ScTagger_nanopore2023_Q15_Q20_20260819/models/nanopore2023.gz
+command	external_data/software/miniconda3/bin/python external_data/reviewer_comment_data/scratch_preservation_20260921/files/sctagger_nanopore2023_unadjusted_20260913/scripts/generate_truth_conditioned_qscores.py --input external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_longbench_20260726/data/shuffled_L_lr_synth.fq.gz --output-dir external_data/reviewer_comment_data/scratch_preservation_20260921/files/sctagger_nanopore2023_unadjusted_20260913/inputs/L_variants --model external_data/reviewer_comment_data/LongBench_comps/ScTagger_nanopore2023_Q15_Q20_20260819/models/nanopore2023.gz --model-label nanopore2023 --native-unadjusted --seed 20260731 --adapter-max-ed 7 --boundary-slop 8 --tape-size 16777216 --pigz-threads 4 --progress-every 100000
 python	3.9.16
 badread	0.4.1
-edlib_module	/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/miniconda3/lib/python3.9/site-packages/edlib.cpython-39-x86_64-linux-gnu.so
+edlib_module	external_data/software/miniconda3/lib/python3.9/site-packages/edlib.cpython-39-x86_64-linux-gnu.so
 numpy	1.23.5
 finish_utc	2026-09-13T15:48:44Z
+quality_tape_seed	6475178776901811265

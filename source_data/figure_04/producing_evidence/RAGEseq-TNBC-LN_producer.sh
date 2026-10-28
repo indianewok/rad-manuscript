@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-ROOT=/scratch/f005f43/rageseq_tnbc_ln_four_tool_20260730
-SOURCE_PART=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/raw_fastq_datasets/rageseq_tnbc_draining_lymphnode_ERR3268990.fastq.gz.part
-SOURCE_FINAL=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/raw_fastq_datasets/rageseq_tnbc_draining_lymphnode_ERR3268990.fastq.gz
+ROOT=external_data/reviewer_comment_data/scratch_preservation_20260921/files/rageseq_tnbc_ln_four_tool_20260730
+SOURCE_PART=external_data/raw_fastq_datasets/rageseq_tnbc_draining_lymphnode_ERR3268990.fastq.gz.part
+SOURCE_FINAL=external_data/raw_fastq_datasets/rageseq_tnbc_draining_lymphnode_ERR3268990.fastq.gz
 SOURCE=$SOURCE_PART
 INPUT="$ROOT/input/ERR3268990.fastq.gz"
 EXPECTED_BYTES=24090380952
@@ -15,19 +15,19 @@ BLAZE_THREADS=16
 FLEX_THREADS=10
 FLEX_PIGZ_THREADS=2
 FLAMES_THREADS=24
-PROMETH_ROOT=/scratch/f005f43/promethion_four_tool_20260729
+PROMETH_ROOT=external_data/reviewer_comment_data/scratch_preservation_20260921/files/promethion_four_tool_20260729
 PROMETH_SELECTION_STATUS="$PROMETH_ROOT/logs/selection_queue.status.log"
 PROMETH_SENSITIVITY_STATUS="$PROMETH_ROOT/logs/blaze_expect1022_sensitivity.status.log"
 
-RAD=/tmp/rad-current-f005f43.8ChwC9/build-system/rad
-BLAZE=/scratch/f005f43/blaze2_260a0_native_20260727/venv/bin/blaze
-FLEX=/tmp/flexiplex_release.GqgaKA/flexiplex/bin/flexiplex-linux
-FLEX_FILTER=/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/miniconda3/bin/flexiplex-filter
-FLEX_LIB=/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/miniconda3/lib
-SEQKIT=/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/miniconda3/bin/seqkit
-CONTAINER=/dartfs-hpc/scratch/f005f43/rad_longbench_20260726/tools/bioconductor_3.23_r4.6.1.sif
-R_LIB=/dartfs-hpc/scratch/f005f43/rad_longbench_20260726/tools/Rlib_bioc_3.23
-BASILISK_ROOT=/tmp/flamesv2_expect2500.2jtbob
+RAD=external_data/temporary/rad-current-f005f43.8ChwC9/build-system/rad
+BLAZE=external_data/reviewer_comment_data/scratch_preservation_20260921/files/blaze2_260a0_native_20260727/venv/bin/blaze
+FLEX=external_data/temporary/flexiplex_release.GqgaKA/flexiplex/bin/flexiplex-linux
+FLEX_FILTER=external_data/software/miniconda3/bin/flexiplex-filter
+FLEX_LIB=external_data/software/miniconda3/lib
+SEQKIT=external_data/software/miniconda3/bin/seqkit
+CONTAINER=external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_longbench_20260726/tools/bioconductor_3.23_r4.6.1.sif
+R_LIB=external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_longbench_20260726/tools/Rlib_bioc_3.23
+BASILISK_ROOT=external_data/temporary/flamesv2_expect2500.2jtbob
 STATUS="$ROOT/run_status.log"
 
 status() {
@@ -201,7 +201,7 @@ run_flex() {
 
 run_flames() {
     local temp_root
-    temp_root=$(mktemp -d /tmp/rageseq_ln_flames.XXXXXX) || return
+    temp_root=$(mktemp -d external_data/temporary/rageseq_ln_flames.XXXXXX) || return
     mkdir -p "$temp_root/tmp" "$temp_root/xdg-data" "$temp_root/xdg-cache"
     status "FLAMESv2/BLAZE 2.5.1 expect10433 started (temp=$temp_root)"
     /usr/bin/time -v -o "$ROOT/runs/flamesv2/time.txt" \

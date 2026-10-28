@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Check independent small walkthrough transforms against full checkpoint tables.
 
-Run the documented Figure 6/7 commands first to create the /tmp comparison files.
+Run the documented Figure 6/7 commands first to create the comparison files under validation/walkthrough/.
 This checker reads them and records evidence; it does not rerun upstream analyses.
 """
 import argparse,csv,gzip,hashlib,json,math
@@ -9,9 +9,9 @@ from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[2]
 p=argparse.ArgumentParser(description=__doc__)
-p.add_argument('--genotype-summary',type=Path,default=Path('/tmp/figure06_all_summary.tsv'))
-p.add_argument('--adjusted-genes',type=Path,default=Path('/tmp/figure07_adjusted.tsv'))
-p.add_argument('--thresholds',type=Path,default=Path('/tmp/figure07_thresholds.tsv'))
+p.add_argument('--genotype-summary',type=Path,default=ROOT/'validation/walkthrough/figure06_all_summary.tsv')
+p.add_argument('--adjusted-genes',type=Path,default=ROOT/'validation/walkthrough/figure07_adjusted.tsv')
+p.add_argument('--thresholds',type=Path,default=ROOT/'validation/walkthrough/figure07_thresholds.tsv')
 a=p.parse_args(); checks=[]
 def read(path):
     with (gzip.open(str(path),'rt') if str(path).endswith('.gz') else path.open()) as f:return list(csv.DictReader(f,delimiter='\t'))

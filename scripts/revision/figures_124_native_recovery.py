@@ -10,6 +10,7 @@ import subprocess
 import sys
 import tempfile
 from pathlib import Path
+from source_paths import data_root, scratch_root, resolve_source
 from figures_124 import REPO, sha, write_json
 
 
@@ -21,7 +22,7 @@ def barcodes(p):
 
 def main():
     ap=argparse.ArgumentParser(description=__doc__)
-    ap.add_argument('--project-root',type=Path,default=Path('/dartfs/rc/lab/A/AckermanLab/CMV/rad_data'))
+    ap.add_argument('--project-root',type=Path,default=data_root())
     ap.add_argument('--output-root',type=Path,default=REPO)
     a=ap.parse_args();base=a.project_root/'reviewer_comment_data';out=a.output_root
     dest=Path(tempfile.mkdtemp(prefix='rad_current_native_validation_'));original=base/'master_native_comparison_20260811'
@@ -31,7 +32,7 @@ def main():
     p=base/'tilgner_all10_native_three_tool_whitelist_20260810'
     index=list(csv.DictReader((p/'provenance/SOURCE_INDEX.tsv').open(),delimiter='\t'))
     for r in index:
-        old=Path(r['SourceCallset'])
+        old=resolve_source(r['SourceCallset'],base=base)
         target=old if old.is_file() else p/'callsets'/f"{r['Dataset']}.{r['Tool']}.txt"
         digest=sha(target)
         identity='byte-identical' if digest==r['SourceSHA256'] else 'normalized retained copy; independently rescored below'
@@ -40,7 +41,9 @@ def main():
                            expected_original_sha256=r['SourceSHA256'],identity=identity))
     manifest=base/'visium_three_tool_splitaware_scatter_20260802/provenance/status_callset_manifest.csv'
     for r in csv.DictReader(manifest.open()):
-        target=Path(r['path'].replace('/rad_data/wl_scan/','/rad_data/reviewer_comment_data/wl_scan/'))
+        target=resolve_source(r['path'],base=base)
+        if not target.is_file() and 'wl_scan' in target.parts:
+            target=base/'wl_scan'/Path(*target.parts[target.parts.index('wl_scan')+1:])
         if not target.is_file():
             missing.append(dict(original_path=r['path'],checked_path=str(target),expected_sha256=r['sha256'],
                                 reason='not at checked original or mapped path; retained metric table still available'))
@@ -72,7 +75,7 @@ def main():
         'RAD': base/'scratch_preservation_20260921/files/rad_scmix2_20260726/results/fixed_scmix2_scanwl_e03_t24_full_20260726/cases/01_full/output/scanwl.txt',
         'BLAZE': base/'blaze_single_cell_expect_sweep_20260810/exploratory/scmixology2/callsets/expect500_whitelist.txt',
         'Flexiplex': base/'wl_scan/20260804_common_count_selector_ablation/full37/selector_membership.tsv.gz',
-        'truth': Path('/scratch/f005f43/blaze_analysis_data_20335203/data/scmixology/cellranger/whitelist.tsv'),
+        'truth': scratch_root() / 'blaze_analysis_data_20335203/data/scmixology/cellranger/whitelist.tsv',
         'RDS': base/'reviewer_response_20260804/objects/other_streams/objects/scmixology2_performance.rds',
     }
     truth=barcodes(sources['truth'])

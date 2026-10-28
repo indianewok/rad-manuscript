@@ -8,6 +8,7 @@ import re
 import sys
 import time
 from pathlib import Path
+from source_paths import data_root
 import numpy as np
 from figures_124 import REPO, sha, write_json
 
@@ -52,7 +53,7 @@ def inspect(path,flat=False):
 
 def main():
     p=argparse.ArgumentParser(description=__doc__)
-    p.add_argument('--project-root',type=Path,default=Path('/dartfs/rc/lab/A/AckermanLab/CMV/rad_data'))
+    p.add_argument('--project-root',type=Path,default=data_root())
     p.add_argument('--output-root',type=Path,default=REPO)
     a=p.parse_args();b=a.project_root/'reviewer_comment_data/scratch_preservation_20260921/files'
     sources={'S_flatQ20':b/'rad_longbench_20260726/data/shuffled_S_lr_synth.fq.gz',

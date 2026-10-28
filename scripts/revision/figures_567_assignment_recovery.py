@@ -2,9 +2,10 @@
 """Validate the recovered selected RAD emitted-assignment checkpoint in full."""
 import argparse,collections,csv,datetime,gzip,hashlib,json,os,socket
 from pathlib import Path
+from source_paths import reviewer_root
 ROOT=Path(__file__).resolve().parents[2]
 p=argparse.ArgumentParser(description=__doc__)
-p.add_argument('--input',type=Path,default=Path('/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/SN_ONT_RAD_4acbe00_full_matrix_rebuild_20260828/assignments/RAD_4acbe00.assign.tsv.gz'))
+p.add_argument('--input',type=Path,default=reviewer_root() / 'scratch_preservation_20260921/files/SN_ONT_RAD_4acbe00_full_matrix_rebuild_20260828/assignments/RAD_4acbe00.assign.tsv.gz')
 p.add_argument('--barcodes',type=Path,default=ROOT/'checkpoints/figure_07/native/RAD/all/barcodes.tsv.gz')
 a=p.parse_args();started=datetime.datetime.utcnow().isoformat()+'Z'
 h=hashlib.sha256()

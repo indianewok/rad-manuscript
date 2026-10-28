@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "source": "/tmp/Manuscript_methods_working_2026-10-22_v3.paragraphs.json",
+  "source": "external_data/temporary/Manuscript_methods_working_2026-10-22_v3.paragraphs.json",
   "source_sha256": "80468a1367dfa263676b3a913b5b25afb052c2ff4049e61e52520dbbd186392f",
   "source_paragraph_range_zero_based": [
     59,
@@ -12,7 +12,7 @@
   ],
   "core_algorithm_exact": true,
   "statistical_paragraph_121_exact": true,
-  "output_json": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/rad_manuscript_recovery_20261023/current_revision/Methods_current.paragraphs.json",
+  "output_json": "external_data/reviewer_comment_data/rad_manuscript_recovery_20261023/current_revision/Methods_current.paragraphs.json",
   "output_sha256": "6b2ace9b9bc9d2debcb2a9414a84f7f579b61594590a4c3a4a25bd35e8c5373e",
   "output_paragraphs": 71,
   "changes": [

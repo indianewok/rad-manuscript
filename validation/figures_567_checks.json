@@ -5,7 +5,7 @@
     "expected": "c4c038bffcc1db6a98444e12b74cc3a5b6dc85f329defeb87eeec1084c75ef48",
     "tolerance": "0",
     "status": "passed",
-    "evidence": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_07/direct_H146_vs_H526_plot_data.tsv.gz"
+    "evidence": "source_data/figure_07/direct_H146_vs_H526_plot_data.tsv.gz"
   },
   {
     "check_id": "copy_RAD_emitted_segment_source_manifest.tsv",
@@ -13,7 +13,7 @@
     "expected": "711209398cb8e0fc7644f6414edda9ad251154ab6575ff3a3072c505896b7bfa",
     "tolerance": "0",
     "status": "passed",
-    "evidence": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_07/RAD_emitted_segment_source_manifest.tsv"
+    "evidence": "source_data/figure_07/RAD_emitted_segment_source_manifest.tsv"
   },
   {
     "check_id": "F7_selected_matrix_molecules",
@@ -309,7 +309,7 @@
     "expected": "707e95996a5e96edfdc80db72ffbf0402f1372e85b2bb5c3b91a0eca4e103a5f",
     "tolerance": "0",
     "status": "passed",
-    "evidence": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_06/bulk_panel_runtime_manifest.tsv"
+    "evidence": "source_data/figure_06/bulk_panel_runtime_manifest.tsv"
   },
   {
     "check_id": "F6_coordinate_identity",
@@ -373,7 +373,7 @@
     "expected": "5d398b62c37b10e0a080f7e84321c11edb7fb0a1e2badef27209186e57e80f95",
     "tolerance": 0,
     "status": "passed",
-    "evidence": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_05/candidate_cell_identity_map.csv"
+    "evidence": "source_data/figure_05/candidate_cell_identity_map.csv"
   },
   {
     "check_id": "F5_candidate_identity_map_rows",
@@ -389,7 +389,7 @@
     "expected": "ee703c44f62eb1ae8c239567d8594b2b0114a7afa486a1236d384e688738f064",
     "tolerance": 0,
     "status": "passed",
-    "evidence": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_05/splitseq_reference_568_cells.csv"
+    "evidence": "source_data/figure_05/splitseq_reference_568_cells.csv"
   },
   {
     "check_id": "F5_split_reference_cells",

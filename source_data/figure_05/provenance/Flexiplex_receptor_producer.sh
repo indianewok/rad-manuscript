@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
 
-WORK=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/flexiplex_bcrtcr_cellline_20260811
-FASTQ=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/raw_fastq_datasets/rageseq.fq.gz
-SEL=/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260730_rageseq_ERR3268991_cellline_control/runs/flexiplex/f8_detection/selected.tsv
-FLEXIPLEX=/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/miniconda3/pkgs/flexiplex-1.02.5-py39h2de1943_0/bin/flexiplex
-MINIMAP2=/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/miniconda3/pkgs/minimap2-2.26-he4a0461_1/bin/minimap2
-LIBSTDCPP=/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/miniconda3/pkgs/libstdcxx-ng-13.2.0-hc0a3c3a_7/lib
-CONDA_LIB=/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/miniconda3/lib
-PYTHON=/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/miniconda3/bin/python3
+WORK=external_data/reviewer_comment_data/flexiplex_bcrtcr_cellline_20260811
+FASTQ=external_data/raw_fastq_datasets/rageseq.fq.gz
+SEL=external_data/reviewer_comment_data/wl_scan/20260730_rageseq_ERR3268991_cellline_control/runs/flexiplex/f8_detection/selected.tsv
+FLEXIPLEX=external_data/software/miniconda3/pkgs/flexiplex-1.02.5-py39h2de1943_0/bin/flexiplex
+MINIMAP2=external_data/software/miniconda3/pkgs/minimap2-2.26-he4a0461_1/bin/minimap2
+LIBSTDCPP=external_data/software/miniconda3/pkgs/libstdcxx-ng-13.2.0-hc0a3c3a_7/lib
+CONDA_LIB=external_data/software/miniconda3/lib
+PYTHON=external_data/software/miniconda3/bin/python3
 FLEX_THREADS=56
 MM2_THREADS=20
 

@@ -1,7 +1,7 @@
 {
   "checks": [
     {
-      "callset_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f1_ONT_Run1.RAD.txt",
+      "callset_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f1_ONT_Run1.RAD.txt",
       "callset_sha256": "da593da7dbe0075cf5e1534f62db00d42a8301892ee83fc48e76cb27cb74a3a0",
       "counts": [
         10507,
@@ -11,13 +11,13 @@
         1299
       ],
       "input_id": "Hipp_SN_f1_ONT_Run1",
-      "reference_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/f1.cellranger_filtered_barcodes.txt.gz",
+      "reference_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/f1.cellranger_filtered_barcodes.txt.gz",
       "reference_sha256": "c48d601447ea8014fb071a8dc49de557549f5e9712576e181dafc8eeca52cdf4",
       "status": "passed",
       "tool": "RAD"
     },
     {
-      "callset_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f1_ONT_Run1.BLAZE.txt",
+      "callset_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f1_ONT_Run1.BLAZE.txt",
       "callset_sha256": "480d0d7d8d4db40cbbe7d0394609667b8ea1cbdb88362f93e3dcc82aab1d59f1",
       "counts": [
         9443,
@@ -27,13 +27,13 @@
         1553
       ],
       "input_id": "Hipp_SN_f1_ONT_Run1",
-      "reference_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/f1.cellranger_filtered_barcodes.txt.gz",
+      "reference_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/f1.cellranger_filtered_barcodes.txt.gz",
       "reference_sha256": "c48d601447ea8014fb071a8dc49de557549f5e9712576e181dafc8eeca52cdf4",
       "status": "passed",
       "tool": "BLAZE"
     },
     {
-      "callset_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f1_ONT_Run1.Flexiplex.txt",
+      "callset_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f1_ONT_Run1.Flexiplex.txt",
       "callset_sha256": "1e9a5ff4d762bf050bdfce63a1beb4e13be414e12e7ba7062f4b94813208d53a",
       "counts": [
         9563,
@@ -43,13 +43,13 @@
         2192
       ],
       "input_id": "Hipp_SN_f1_ONT_Run1",
-      "reference_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/f1.cellranger_filtered_barcodes.txt.gz",
+      "reference_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/f1.cellranger_filtered_barcodes.txt.gz",
       "reference_sha256": "c48d601447ea8014fb071a8dc49de557549f5e9712576e181dafc8eeca52cdf4",
       "status": "passed",
       "tool": "Flexiplex"
     },
     {
-      "callset_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f1_ONT_Run2.RAD.txt",
+      "callset_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f1_ONT_Run2.RAD.txt",
       "callset_sha256": "ced47771c59ea43f6f9564ea996c1e73839b161e71cbf9675b4fe84d586e19c9",
       "counts": [
         9748,
@@ -59,13 +59,13 @@
         1804
       ],
       "input_id": "Hipp_SN_f1_ONT_Run2",
-      "reference_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/f1.cellranger_filtered_barcodes.txt.gz",
+      "reference_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/f1.cellranger_filtered_barcodes.txt.gz",
       "reference_sha256": "c48d601447ea8014fb071a8dc49de557549f5e9712576e181dafc8eeca52cdf4",
       "status": "passed",
       "tool": "RAD"
     },
     {
-      "callset_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f1_ONT_Run2.BLAZE.txt",
+      "callset_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f1_ONT_Run2.BLAZE.txt",
       "callset_sha256": "57addbe249db92b31626fbfefd80c59227a4e64ac656b3f8cd02cdf66cfe1107",
       "counts": [
         9440,
@@ -75,13 +75,13 @@
         1542
       ],
       "input_id": "Hipp_SN_f1_ONT_Run2",
-      "reference_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/f1.cellranger_filtered_barcodes.txt.gz",
+      "reference_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/f1.cellranger_filtered_barcodes.txt.gz",
       "reference_sha256": "c48d601447ea8014fb071a8dc49de557549f5e9712576e181dafc8eeca52cdf4",
       "status": "passed",
       "tool": "BLAZE"
     },
     {
-      "callset_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f1_ONT_Run2.Flexiplex.txt",
+      "callset_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f1_ONT_Run2.Flexiplex.txt",
       "callset_sha256": "5a32cb6b9f63e0ca9ba974318639342aab35fb306570d8de67a923eb4238c42c",
       "counts": [
         7105,
@@ -91,13 +91,13 @@
         3969
       ],
       "input_id": "Hipp_SN_f1_ONT_Run2",
-      "reference_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/f1.cellranger_filtered_barcodes.txt.gz",
+      "reference_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/f1.cellranger_filtered_barcodes.txt.gz",
       "reference_sha256": "c48d601447ea8014fb071a8dc49de557549f5e9712576e181dafc8eeca52cdf4",
       "status": "passed",
       "tool": "Flexiplex"
     },
     {
-      "callset_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f2_ONT.RAD.txt",
+      "callset_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f2_ONT.RAD.txt",
       "callset_sha256": "f8adced4a8004361d7b4d84f7c642c8b23c78d9c13f7c1d5069e2e1486597939",
       "counts": [
         9700,
@@ -107,13 +107,13 @@
         752
       ],
       "input_id": "Hipp_SN_f2_ONT",
-      "reference_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/f2.cellranger_filtered_barcodes.txt.gz",
+      "reference_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/f2.cellranger_filtered_barcodes.txt.gz",
       "reference_sha256": "c191bd554ab7111ee346b2d608c37b02c3a158f0590364a85eba757e6872d06e",
       "status": "passed",
       "tool": "RAD"
     },
     {
-      "callset_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f2_ONT.BLAZE.txt",
+      "callset_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f2_ONT.BLAZE.txt",
       "callset_sha256": "a3b0328b316f47ed465963a1e300ea74eed2348380878c109e2c6ba1de435327",
       "counts": [
         7511,
@@ -123,13 +123,13 @@
         2557
       ],
       "input_id": "Hipp_SN_f2_ONT",
-      "reference_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/f2.cellranger_filtered_barcodes.txt.gz",
+      "reference_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/f2.cellranger_filtered_barcodes.txt.gz",
       "reference_sha256": "c191bd554ab7111ee346b2d608c37b02c3a158f0590364a85eba757e6872d06e",
       "status": "passed",
       "tool": "BLAZE"
     },
     {
-      "callset_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f2_ONT.Flexiplex.txt",
+      "callset_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f2_ONT.Flexiplex.txt",
       "callset_sha256": "6d979d6a28bd08e898f4cfd7c21be4dc8a975b573f56ae40249214e4ddcf3cb1",
       "counts": [
         9362,
@@ -139,13 +139,13 @@
         926
       ],
       "input_id": "Hipp_SN_f2_ONT",
-      "reference_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/f2.cellranger_filtered_barcodes.txt.gz",
+      "reference_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/f2.cellranger_filtered_barcodes.txt.gz",
       "reference_sha256": "c191bd554ab7111ee346b2d608c37b02c3a158f0590364a85eba757e6872d06e",
       "status": "passed",
       "tool": "Flexiplex"
     },
     {
-      "callset_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f3_ONT_Run1.RAD.txt",
+      "callset_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f3_ONT_Run1.RAD.txt",
       "callset_sha256": "cecdd0625173b2461aeb81899039daa3384d2d1f2e6276c0faada13afd649bbd",
       "counts": [
         7849,
@@ -155,13 +155,13 @@
         274
       ],
       "input_id": "Hipp_SN_f3_ONT_Run1",
-      "reference_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/f3.cellranger_filtered_barcodes.txt.gz",
+      "reference_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/f3.cellranger_filtered_barcodes.txt.gz",
       "reference_sha256": "66168e0bf39ceb63dac65e8f4a34f12f866287f6557ac8f4c2294d9b003f1533",
       "status": "passed",
       "tool": "RAD"
     },
     {
-      "callset_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f3_ONT_Run1.BLAZE.txt",
+      "callset_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f3_ONT_Run1.BLAZE.txt",
       "callset_sha256": "94673e6977b0e3c47536f5f8cd2680e70bdb318902303b6318bf97a88900a5c1",
       "counts": [
         7602,
@@ -171,13 +171,13 @@
         420
       ],
       "input_id": "Hipp_SN_f3_ONT_Run1",
-      "reference_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/f3.cellranger_filtered_barcodes.txt.gz",
+      "reference_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/f3.cellranger_filtered_barcodes.txt.gz",
       "reference_sha256": "66168e0bf39ceb63dac65e8f4a34f12f866287f6557ac8f4c2294d9b003f1533",
       "status": "passed",
       "tool": "BLAZE"
     },
     {
-      "callset_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f3_ONT_Run1.Flexiplex.txt",
+      "callset_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f3_ONT_Run1.Flexiplex.txt",
       "callset_sha256": "a8392c63de1d732ab4b934de5af18ad7b3a4fb83938d8a40e820843e6282f458",
       "counts": [
         3026,
@@ -187,13 +187,13 @@
         4655
       ],
       "input_id": "Hipp_SN_f3_ONT_Run1",
-      "reference_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/f3.cellranger_filtered_barcodes.txt.gz",
+      "reference_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/f3.cellranger_filtered_barcodes.txt.gz",
       "reference_sha256": "66168e0bf39ceb63dac65e8f4a34f12f866287f6557ac8f4c2294d9b003f1533",
       "status": "passed",
       "tool": "Flexiplex"
     },
     {
-      "callset_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f3_ONT_Run2.RAD.txt",
+      "callset_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f3_ONT_Run2.RAD.txt",
       "callset_sha256": "aa695dd0d654a2f29b69536281e785c1feb97172d7072dce613ee5a9600f2d7d",
       "counts": [
         7811,
@@ -203,13 +203,13 @@
         279
       ],
       "input_id": "Hipp_SN_f3_ONT_Run2",
-      "reference_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/f3.cellranger_filtered_barcodes.txt.gz",
+      "reference_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/f3.cellranger_filtered_barcodes.txt.gz",
       "reference_sha256": "66168e0bf39ceb63dac65e8f4a34f12f866287f6557ac8f4c2294d9b003f1533",
       "status": "passed",
       "tool": "RAD"
     },
     {
-      "callset_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f3_ONT_Run2.BLAZE.txt",
+      "callset_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f3_ONT_Run2.BLAZE.txt",
       "callset_sha256": "c89bfee54e37769df31962f727c79192cfa21d4c2522ce7d0e2bd8f15779df04",
       "counts": [
         7507,
@@ -219,13 +219,13 @@
         502
       ],
       "input_id": "Hipp_SN_f3_ONT_Run2",
-      "reference_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/f3.cellranger_filtered_barcodes.txt.gz",
+      "reference_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/f3.cellranger_filtered_barcodes.txt.gz",
       "reference_sha256": "66168e0bf39ceb63dac65e8f4a34f12f866287f6557ac8f4c2294d9b003f1533",
       "status": "passed",
       "tool": "BLAZE"
     },
     {
-      "callset_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f3_ONT_Run2.Flexiplex.txt",
+      "callset_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_f3_ONT_Run2.Flexiplex.txt",
       "callset_sha256": "e41829761384dff46ed7e6c133ee919be6f457a169fecc243e6d00d9641c01a7",
       "counts": [
         2947,
@@ -235,13 +235,13 @@
         4730
       ],
       "input_id": "Hipp_SN_f3_ONT_Run2",
-      "reference_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/f3.cellranger_filtered_barcodes.txt.gz",
+      "reference_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/f3.cellranger_filtered_barcodes.txt.gz",
       "reference_sha256": "66168e0bf39ceb63dac65e8f4a34f12f866287f6557ac8f4c2294d9b003f1533",
       "status": "passed",
       "tool": "Flexiplex"
     },
     {
-      "callset_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run1.RAD.txt",
+      "callset_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run1.RAD.txt",
       "callset_sha256": "39ebae62780cc9ea383032e3978909da25603089beb8e0c01becee36cd1f22f5",
       "counts": [
         13349,
@@ -251,13 +251,13 @@
         169
       ],
       "input_id": "Hipp_SN_m1_ONT_Run1",
-      "reference_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/m1.cellranger_filtered_barcodes.txt.gz",
+      "reference_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/m1.cellranger_filtered_barcodes.txt.gz",
       "reference_sha256": "ffd6a16280dea20340d7d0ab27315e82c709838b045c4f4a89cb9ca3221249da",
       "status": "passed",
       "tool": "RAD"
     },
     {
-      "callset_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run1.BLAZE.txt",
+      "callset_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run1.BLAZE.txt",
       "callset_sha256": "34d005329a7ce53f2f53c257c651fff5f46d2d4859373163a5fcdfc58784885f",
       "counts": [
         10922,
@@ -267,13 +267,13 @@
         1969
       ],
       "input_id": "Hipp_SN_m1_ONT_Run1",
-      "reference_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/m1.cellranger_filtered_barcodes.txt.gz",
+      "reference_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/m1.cellranger_filtered_barcodes.txt.gz",
       "reference_sha256": "ffd6a16280dea20340d7d0ab27315e82c709838b045c4f4a89cb9ca3221249da",
       "status": "passed",
       "tool": "BLAZE"
     },
     {
-      "callset_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run1.Flexiplex.txt",
+      "callset_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run1.Flexiplex.txt",
       "callset_sha256": "23ecda7320c45e461060190a2a01e83ba7e4f0c640c40ac2298b8757620021b8",
       "counts": [
         13032,
@@ -283,13 +283,13 @@
         440
       ],
       "input_id": "Hipp_SN_m1_ONT_Run1",
-      "reference_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/m1.cellranger_filtered_barcodes.txt.gz",
+      "reference_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/m1.cellranger_filtered_barcodes.txt.gz",
       "reference_sha256": "ffd6a16280dea20340d7d0ab27315e82c709838b045c4f4a89cb9ca3221249da",
       "status": "passed",
       "tool": "Flexiplex"
     },
     {
-      "callset_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run2.RAD.txt",
+      "callset_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run2.RAD.txt",
       "callset_sha256": "bdd14602a194c04dd034373bed45a95809ae1b62ca5adfa43ac9f6366aa7bf2d",
       "counts": [
         12902,
@@ -299,13 +299,13 @@
         514
       ],
       "input_id": "Hipp_SN_m1_ONT_Run2",
-      "reference_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/m1.cellranger_filtered_barcodes.txt.gz",
+      "reference_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/m1.cellranger_filtered_barcodes.txt.gz",
       "reference_sha256": "ffd6a16280dea20340d7d0ab27315e82c709838b045c4f4a89cb9ca3221249da",
       "status": "passed",
       "tool": "RAD"
     },
     {
-      "callset_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run2.BLAZE.txt",
+      "callset_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run2.BLAZE.txt",
       "callset_sha256": "a49485707fd470b15259da4d9eca661ad68f4550dc1caaea45ed25b0ff433faf",
       "counts": [
         10423,
@@ -315,13 +315,13 @@
         2495
       ],
       "input_id": "Hipp_SN_m1_ONT_Run2",
-      "reference_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/m1.cellranger_filtered_barcodes.txt.gz",
+      "reference_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/m1.cellranger_filtered_barcodes.txt.gz",
       "reference_sha256": "ffd6a16280dea20340d7d0ab27315e82c709838b045c4f4a89cb9ca3221249da",
       "status": "passed",
       "tool": "BLAZE"
     },
     {
-      "callset_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run2.Flexiplex.txt",
+      "callset_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run2.Flexiplex.txt",
       "callset_sha256": "e60558fc3ffac35d2952d1178d5bbfd625d04f43d1b3d969fe5d527bb6de3b60",
       "counts": [
         12849,
@@ -331,13 +331,13 @@
         712
       ],
       "input_id": "Hipp_SN_m1_ONT_Run2",
-      "reference_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/m1.cellranger_filtered_barcodes.txt.gz",
+      "reference_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/m1.cellranger_filtered_barcodes.txt.gz",
       "reference_sha256": "ffd6a16280dea20340d7d0ab27315e82c709838b045c4f4a89cb9ca3221249da",
       "status": "passed",
       "tool": "Flexiplex"
     },
     {
-      "callset_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run3.RAD.txt",
+      "callset_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run3.RAD.txt",
       "callset_sha256": "b342e3a59d146eff8fa0e5f38c96be95d1d7d13c7467dbff97a428f3bd725b3c",
       "counts": [
         13105,
@@ -347,13 +347,13 @@
         367
       ],
       "input_id": "Hipp_SN_m1_ONT_Run3",
-      "reference_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/m1.cellranger_filtered_barcodes.txt.gz",
+      "reference_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/m1.cellranger_filtered_barcodes.txt.gz",
       "reference_sha256": "ffd6a16280dea20340d7d0ab27315e82c709838b045c4f4a89cb9ca3221249da",
       "status": "passed",
       "tool": "RAD"
     },
     {
-      "callset_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run3.BLAZE.txt",
+      "callset_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run3.BLAZE.txt",
       "callset_sha256": "6bcf93e1977d397478f964cc064152ca5fb24c101aeda227518fba5323cea29e",
       "counts": [
         10445,
@@ -363,13 +363,13 @@
         2453
       ],
       "input_id": "Hipp_SN_m1_ONT_Run3",
-      "reference_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/m1.cellranger_filtered_barcodes.txt.gz",
+      "reference_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/m1.cellranger_filtered_barcodes.txt.gz",
       "reference_sha256": "ffd6a16280dea20340d7d0ab27315e82c709838b045c4f4a89cb9ca3221249da",
       "status": "passed",
       "tool": "BLAZE"
     },
     {
-      "callset_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run3.Flexiplex.txt",
+      "callset_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m1_ONT_Run3.Flexiplex.txt",
       "callset_sha256": "ccf9c4b7790889f28ea2484351c11358ac8efa3ce7be6bffee19636d84e38d42",
       "counts": [
         5182,
@@ -379,13 +379,13 @@
         7580
       ],
       "input_id": "Hipp_SN_m1_ONT_Run3",
-      "reference_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/m1.cellranger_filtered_barcodes.txt.gz",
+      "reference_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/m1.cellranger_filtered_barcodes.txt.gz",
       "reference_sha256": "ffd6a16280dea20340d7d0ab27315e82c709838b045c4f4a89cb9ca3221249da",
       "status": "passed",
       "tool": "Flexiplex"
     },
     {
-      "callset_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m2_ONT.RAD.txt",
+      "callset_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m2_ONT.RAD.txt",
       "callset_sha256": "f5bed135da36a371118e7e520dad19d48b750166dfcadef4517356cb369bc676",
       "counts": [
         12346,
@@ -395,13 +395,13 @@
         368
       ],
       "input_id": "Hipp_SN_m2_ONT",
-      "reference_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/m2.cellranger_filtered_barcodes.txt.gz",
+      "reference_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/m2.cellranger_filtered_barcodes.txt.gz",
       "reference_sha256": "ce8c104da01a558d6a442015f234f39610c733e06e9f300e180d37516744d6ae",
       "status": "passed",
       "tool": "RAD"
     },
     {
-      "callset_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m2_ONT.BLAZE.txt",
+      "callset_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m2_ONT.BLAZE.txt",
       "callset_sha256": "43a001cbe1bf20ccefb8fb76ab20be292fc178919ad95b56edffaa94e74986e5",
       "counts": [
         10419,
@@ -411,13 +411,13 @@
         1901
       ],
       "input_id": "Hipp_SN_m2_ONT",
-      "reference_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/m2.cellranger_filtered_barcodes.txt.gz",
+      "reference_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/m2.cellranger_filtered_barcodes.txt.gz",
       "reference_sha256": "ce8c104da01a558d6a442015f234f39610c733e06e9f300e180d37516744d6ae",
       "status": "passed",
       "tool": "BLAZE"
     },
     {
-      "callset_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m2_ONT.Flexiplex.txt",
+      "callset_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m2_ONT.Flexiplex.txt",
       "callset_sha256": "22a6f2fe0a744db454f6c7a66485792a333098f39d1c453a89df22e3713ceaa6",
       "counts": [
         12267,
@@ -427,13 +427,13 @@
         521
       ],
       "input_id": "Hipp_SN_m2_ONT",
-      "reference_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/m2.cellranger_filtered_barcodes.txt.gz",
+      "reference_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/m2.cellranger_filtered_barcodes.txt.gz",
       "reference_sha256": "ce8c104da01a558d6a442015f234f39610c733e06e9f300e180d37516744d6ae",
       "status": "passed",
       "tool": "Flexiplex"
     },
     {
-      "callset_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m3_ONT.RAD.txt",
+      "callset_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m3_ONT.RAD.txt",
       "callset_sha256": "a3e83f4d88a854fbd1b8117f8994e1b9aae89445768f624826538b40e4d6dbf6",
       "counts": [
         10776,
@@ -443,13 +443,13 @@
         358
       ],
       "input_id": "Hipp_SN_m3_ONT",
-      "reference_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/m3.cellranger_filtered_barcodes.txt.gz",
+      "reference_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/m3.cellranger_filtered_barcodes.txt.gz",
       "reference_sha256": "0e86c5d5621b00e710b54d2e1115708ed61e8e060413161cd9d66404a5375df7",
       "status": "passed",
       "tool": "RAD"
     },
     {
-      "callset_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m3_ONT.BLAZE.txt",
+      "callset_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m3_ONT.BLAZE.txt",
       "callset_sha256": "937bdc133f1cdf1bc2b8071abbb203a6729b00e0504428a27b5d1f86292227f6",
       "counts": [
         10754,
@@ -459,13 +459,13 @@
         440
       ],
       "input_id": "Hipp_SN_m3_ONT",
-      "reference_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/m3.cellranger_filtered_barcodes.txt.gz",
+      "reference_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/m3.cellranger_filtered_barcodes.txt.gz",
       "reference_sha256": "0e86c5d5621b00e710b54d2e1115708ed61e8e060413161cd9d66404a5375df7",
       "status": "passed",
       "tool": "BLAZE"
     },
     {
-      "callset_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m3_ONT.Flexiplex.txt",
+      "callset_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/callsets/Hipp_SN_m3_ONT.Flexiplex.txt",
       "callset_sha256": "a39eb6847d2e0bb33dd2e605de1fd73c1a183e448acda8c5deeefef8556ddff3",
       "counts": [
         11070,
@@ -475,7 +475,7 @@
         457
       ],
       "input_id": "Hipp_SN_m3_ONT",
-      "reference_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/m3.cellranger_filtered_barcodes.txt.gz",
+      "reference_path": "external_data/reviewer_comment_data/tilgner_all10_native_three_tool_whitelist_20260810/reference/m3.cellranger_filtered_barcodes.txt.gz",
       "reference_sha256": "0e86c5d5621b00e710b54d2e1115708ed61e8e060413161cd9d66404a5375df7",
       "status": "passed",
       "tool": "Flexiplex"

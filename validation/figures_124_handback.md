@@ -35,7 +35,7 @@ The public-identifier comparison can be repeated with:
 
 ```bash
 python3 scripts/revision/figures_124_steps/rescore_public_identifiers.py \
-  --output /tmp/figure4_identifier_rescore.tsv
+  --output external_data/temporary/figure4_identifier_rescore.tsv
 ```
 
 [Public identifier lineage](figures_124_public_identifier_export.json) records the source hashes and normalization. One normalized Tilgner copy differs in raw-file bytes but reproduces the reference-set scores; the [path recovery report](figures_124_native_master_path_recovery.json) identifies it.

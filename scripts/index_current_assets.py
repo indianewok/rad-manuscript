@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 """Index selected source receipts and panel dependencies without rehashing raw data."""
 import csv
+import sys
 from collections import defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / 'scripts/revision'))
+from source_paths import resolve_source
 
 
 def read(name):
@@ -28,10 +31,8 @@ sources = [
     ('manifests/figures_567_checkpoint_assets.tsv','path','Figures 6–7 checkpoint')]
 for index, column, default_role in sources:
     for row in read(index):
-        path = Path(row[column])
-        if not path.is_absolute():
-            path = ROOT/path
-        assets.append(dict(path=str(path), role=row.get('role',default_role),
+        path = resolve_source(row[column])
+        assets.append(dict(path=row[column], role=row.get('role',default_role),
             sha256=row.get('sha256','unrecorded'), bytes=row.get('bytes','unrecorded'),
             available_at_index_time=path.is_file(), receipt=index,
             validation_scope='Hash and scientific status inherited from linked receipt; indexing does not revalidate bytes.'))

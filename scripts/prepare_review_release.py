@@ -15,6 +15,7 @@ import json
 import subprocess
 import tarfile
 from pathlib import Path
+from published_files import published_source_files
 
 ROOT = Path(__file__).resolve().parents[1]
 DIRECTORIES = ('data', 'docs', 'environments', 'figures', 'manifests', 'scripts',
@@ -90,14 +91,14 @@ if {row['group'] for row in render_report['runs']} != {'124','3','5','567'}:
     raise ValueError('Clean rendering must cover every current figure group')
 if not render_report.get('source_files'):
     raise ValueError('Clean rendering must record its source-table hashes')
-current_sources = {str(p.relative_to(ROOT)) for p in (ROOT/'source_data').rglob('*') if p.is_file()}
+current_sources = {str(p.relative_to(ROOT)) for p in published_source_files(ROOT)}
 if current_sources != {row['path'] for row in render_report['source_files']}:
     raise ValueError('Source-data file inventory changed after clean rendering')
 for row in render_report['source_files']:
     if sha(ROOT/row['path']) != row['sha256']:
         raise ValueError('Source changed after clean rendering: '+row['path'])
 for row in render_report['runs']:
-    if sha(Path(row['command'][1])) != row['renderer_sha256']:
+    if sha(ROOT/row['command'][1]) != row['renderer_sha256']:
         raise ValueError('Renderer changed after clean rendering: '+row['command'][1])
 expected_exports = {row['path'] for row in render_report['exports']}
 current_exports = {str(p.relative_to(ROOT)) for p in (ROOT/'figures').rglob('*')
@@ -110,7 +111,8 @@ for row in render_report['exports']:
 paths = [ROOT/name for name in FILES if (ROOT/name).is_file()]
 for directory in DIRECTORIES:
     paths.extend(p for p in (ROOT/directory).rglob('*') if p.is_file() and not p.is_symlink())
-paths = sorted(set(paths))
+paths = sorted(p for p in set(paths)
+               if not p.is_relative_to(ROOT/'source_data') or str(p.relative_to(ROOT)) in current_sources)
 relative = [str(p.relative_to(ROOT)) for p in paths]
 ignored_result = subprocess.run(['git','check-ignore','--stdin'], input='\n'.join(relative)+'\n',
                                 text=True, stdout=subprocess.PIPE, cwd=str(ROOT))

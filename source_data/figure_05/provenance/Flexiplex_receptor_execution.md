@@ -4,11 +4,11 @@ This analysis was completed on 11 August 2026.
 
 ## Inputs and integrity
 
-- WORK: `/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/flexiplex_bcrtcr_cellline_20260811`
-- FASTQ: `/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/raw_fastq_datasets/rageseq.fq.gz`
+- WORK: `external_data/reviewer_comment_data/flexiplex_bcrtcr_cellline_20260811`
+- FASTQ: `external_data/raw_fastq_datasets/rageseq.fq.gz`
   - 16,922,373,879 bytes; `gzip -t` exit 0 (10m26.619s)
   - SHA-256: `cfdba50a497dd4f6b24c2a4e730e297a09498ad5fe006f65eee01fa202bcdcec`
-- selected.tsv: `/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260730_rageseq_ERR3268991_cellline_control/runs/flexiplex/f8_detection/selected.tsv`
+- selected.tsv: `external_data/reviewer_comment_data/wl_scan/20260730_rageseq_ERR3268991_cellline_control/runs/flexiplex/f8_detection/selected.tsv`
   - 3,259 lines / unique barcodes; 2,762,471 count sum; 69,318 bytes
   - SHA-256: `6efd9352872b06db447e540457757c3a5e50b00d654bfcd7c6e658e8786a41b9`
 - `hg38_bcrtcr.fa` SHA-256: `615152a7481d0a68557ab0a84b735d8f25fc1ee9d5076af3b8d31aa7792dc3df`
@@ -19,9 +19,9 @@ This analysis was completed on 11 August 2026.
 
 The run used Flexiplex 1.02.5 with the cached libstdc++ 13.2 runtime.
 
-- Flexiplex 1.02.5: `/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/miniconda3/pkgs/flexiplex-1.02.5-py39h2de1943_0/bin/flexiplex`
-- minimap2 2.26-r1175: `/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/miniconda3/pkgs/minimap2-2.26-he4a0461_1/bin/minimap2`
-- Python 3.9.16: `/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/miniconda3/bin/python3`
+- Flexiplex 1.02.5: `external_data/software/miniconda3/pkgs/flexiplex-1.02.5-py39h2de1943_0/bin/flexiplex`
+- minimap2 2.26-r1175: `external_data/software/miniconda3/pkgs/minimap2-2.26-he4a0461_1/bin/minimap2`
+- Python 3.9.16: `external_data/software/miniconda3/bin/python3`
 - gzip 1.9 (`/usr/bin/gzip`), GNU bash 4.4.20, GNU Awk 4.2.1
 - 128 online CPUs; worker allocation: Flexiplex `-p 56`, minimap2 `-t 20` (76 workers)
 

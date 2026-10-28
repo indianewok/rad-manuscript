@@ -1,6 +1,6 @@
 metric	value
-input	/scratch-nfs/f005f43/rad_longbench_20260726/data/shuffled_L_lr_synth.fq.gz
-model	/scratch/f005f43/rad_sctagger_badread_quality_20260727/models/nanopore2018.gz
+input	external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_longbench_20260726/data/shuffled_L_lr_synth.fq.gz
+model	external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_sctagger_badread_quality_20260727/models/nanopore2018.gz
 seed	20260731
 reads	4993805
 bases	8394808882

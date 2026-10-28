@@ -4,12 +4,12 @@
     "sbatch",
     "--parsable",
     "--output",
-    "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/validation/figure_02_full_quality_%j.log",
+    "validation/figure_02_full_quality_%j.log",
     "scripts/figure_02/summarize_full_barcode_quality.sbatch",
-    "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/sctagger_nanopore2023_unadjusted_20260913/inputs/L_variants/shuffled_L_lr_synth.nanopore2023_truthbc.native_unadjusted.fq.gz",
-    "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_02/full_read_quality"
+    "external_data/reviewer_comment_data/scratch_preservation_20260921/files/sctagger_nanopore2023_unadjusted_20260913/inputs/L_variants/shuffled_L_lr_synth.nanopore2023_truthbc.native_unadjusted.fq.gz",
+    "source_data/figure_02/full_read_quality"
   ],
-  "python": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/miniconda3/bin/python",
+  "python": "external_data/software/miniconda3/bin/python",
   "partition": "standard",
   "account": "lsonglab",
   "cpus_per_task": 8,
@@ -17,8 +17,8 @@
   "time_limit": "01:00:00",
   "gres": "gpu:0",
   "qos": "inherited from association",
-  "input": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/sctagger_nanopore2023_unadjusted_20260913/inputs/L_variants/shuffled_L_lr_synth.nanopore2023_truthbc.native_unadjusted.fq.gz",
-  "output": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_02/full_read_quality",
+  "input": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/sctagger_nanopore2023_unadjusted_20260913/inputs/L_variants/shuffled_L_lr_synth.nanopore2023_truthbc.native_unadjusted.fq.gz",
+  "output": "source_data/figure_02/full_read_quality",
   "files": {
     "scripts/figure_02/summarize_full_barcode_quality.py": "841e1111fa541e4d587e677814a8e8975d174700a697764bf69d1bfbc23ab9de",
     "scripts/figure_02/barcode_locator.py": "0ead90df058cfd940befd3a0b7a659d9f030f01fc382863dcd7e67e583f0fb68",

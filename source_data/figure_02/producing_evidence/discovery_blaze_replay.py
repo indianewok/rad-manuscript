@@ -15,8 +15,8 @@ from datetime import datetime, timezone
 
 import pandas as pd
 
-ROOT = pathlib.Path('/scratch-nfs/f005f43/sctagger_nanopore2023_extended_sweep_20260913/blaze_replay')
-NATIVE = pathlib.Path('/scratch-nfs/f005f43/sctagger_nanopore2023_unadjusted_20260913')
+ROOT = pathlib.Path('external_data/reviewer_comment_data/scratch_preservation_20260921/files/sctagger_nanopore2023_extended_sweep_20260913/blaze_replay')
+NATIVE = pathlib.Path('external_data/reviewer_comment_data/scratch_preservation_20260921/files/sctagger_nanopore2023_unadjusted_20260913')
 NATIVE_RUN = NATIVE / 'runs/L/nanopore2023_native_unadjusted/blaze'
 CANDIDATES = NATIVE_RUN / 'putative_bc.csv'
 TRUTH = NATIVE / 'metadata/L_truth_barcodes.txt'

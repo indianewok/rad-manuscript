@@ -4,11 +4,11 @@
   "replicate": 2,
   "scope": "full input",
   "argv": [
-    "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/software_pins_20260810/flexiplex_raw_to_assigned_audit/bin/flexiplex_v1.02.6_raw_to_assigned_audit",
+    "external_data/reviewer_comment_data/software_pins_20260810/flexiplex_raw_to_assigned_audit/bin/flexiplex_v1.02.6_raw_to_assigned_audit",
     "-d",
     "10x3v2",
     "-k",
-    "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/inputs/false_rep2.txt",
+    "checkpoints/figure_03/rage_matched/inputs/false_rep2.txt",
     "-f",
     "8",
     "-e",
@@ -16,10 +16,10 @@
     "-p",
     "16",
     "-n",
-    "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/runs/flexiplex/rep2/rage_rep2_flexiplex"
+    "checkpoints/figure_03/rage_matched/runs/flexiplex/rep2/rage_rep2_flexiplex"
   ],
-  "cwd": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/runs/flexiplex/rep2",
-  "input": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/raw_fastq_datasets/rageseq.fq.gz",
+  "cwd": "checkpoints/figure_03/rage_matched/runs/flexiplex/rep2",
+  "input": "external_data/raw_fastq_datasets/rageseq.fq.gz",
   "input_sha256": "cfdba50a497dd4f6b24c2a4e730e297a09498ad5fe006f65eee01fa202bcdcec",
   "input_reads": 20346396,
   "target_sha256": "ad84e82a4ac9ad3f4e6c5665e2d0ff438369253b851e2197b1c22e0892172864",
@@ -49,14 +49,14 @@
       "-dc",
       "-p",
       "2",
-      "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/raw_fastq_datasets/rageseq.fq.gz"
+      "external_data/raw_fastq_datasets/rageseq.fq.gz"
     ],
     [
-      "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/software_pins_20260810/flexiplex_raw_to_assigned_audit/bin/flexiplex_v1.02.6_raw_to_assigned_audit",
+      "external_data/reviewer_comment_data/software_pins_20260810/flexiplex_raw_to_assigned_audit/bin/flexiplex_v1.02.6_raw_to_assigned_audit",
       "-d",
       "10x3v2",
       "-k",
-      "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/inputs/false_rep2.txt",
+      "checkpoints/figure_03/rage_matched/inputs/false_rep2.txt",
       "-f",
       "8",
       "-e",
@@ -64,7 +64,7 @@
       "-p",
       "16",
       "-n",
-      "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/runs/flexiplex/rep2/rage_rep2_flexiplex"
+      "checkpoints/figure_03/rage_matched/runs/flexiplex/rep2/rage_rep2_flexiplex"
     ],
     [
       "pigz",
@@ -75,12 +75,12 @@
   "exit_status": 0,
   "outputs": [
     {
-      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/runs/flexiplex/rep2/rage_rep2_flexiplex.fastq.gz",
+      "path": "checkpoints/figure_03/rage_matched/runs/flexiplex/rep2/rage_rep2_flexiplex.fastq.gz",
       "sha256": "3a7d4d62b3d78310d888fb8028a8f3b29d18e514b442a6a8553b46be4dc0a300",
       "bytes": 1317390812
     },
     {
-      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/checkpoints/figure_03/rage_matched/runs/flexiplex/rep2/rage_rep2_flexiplex_reads_barcodes.txt",
+      "path": "checkpoints/figure_03/rage_matched/runs/flexiplex/rep2/rage_rep2_flexiplex_reads_barcodes.txt",
       "sha256": "da6bf5ec06b2feb6f226f33e2660903f17686910826c596849727a1be3c0cf0b",
       "bytes": 143293438
     }

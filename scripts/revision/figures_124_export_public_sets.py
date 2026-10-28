@@ -11,6 +11,7 @@ import hashlib
 import json
 import re
 from pathlib import Path
+from source_paths import data_root, scratch_root, resolve_source
 from figures_124 import REPO, rows, sha, write_json, write_rows
 
 
@@ -28,7 +29,7 @@ def identifiers(path, column=None, where=None):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--project-root', type=Path, default=Path('/dartfs/rc/lab/A/AckermanLab/CMV/rad_data'))
+    parser.add_argument('--project-root', type=Path, default=data_root())
     parser.add_argument('--output-root', type=Path, default=REPO)
     args = parser.parse_args()
     b = args.project_root / 'reviewer_comment_data'
@@ -68,7 +69,7 @@ def main():
         first = 'MPNST1' in r['physical_input_run']
         group, name = ('MPNST1', 'MPNST1_2020_23') if first else ('MPNST2', 'MPNST2_2022_26')
         ref = preserved / f'mpnst_native_three_tool_whitelist_20260811/{group}/reference/{name}.CellRanger9_GRCm39.filtered_barcodes.tsv.gz'
-        add(r['physical_input_run'], r['tool'], Path(r['path']), ref)
+        add(r['physical_input_run'], r['tool'], resolve_source(r['path'],base=b), ref)
     p = b / 'wl_scan/20260730_rageseq_ERR3268991_cellline_control'
     for tool, sub in [('RAD','rad/scan/rageseq.txt'), ('BLAZE','blaze/whitelist.csv'), ('Flexiplex','flexiplex/f8_detection/selected.tsv')]:
         add('RAGEseq-cell-line', tool, p / 'runs' / sub, p / 'input/cellranger_filtered_barcodes.txt')
@@ -86,7 +87,7 @@ def main():
     for tool, name in [('RAD','RAD'), ('BLAZE','BLAZE_expect918'), ('Flexiplex','Flexiplex_f8')]:
         add('LeBrigand-MOB', tool, p / 'callsets' / (name+'.txt'), p / 'tables/per_barcode_membership.tsv',
             ref_column='barcode', ref_filter=lambda r:r['in_tissue']=='1', note='Reference = saved in_tissue membership, 918 identifiers; combined two-accession producer')
-    p = Path('/scratch/f005f43/measles_p7_p8_four_tool_20260730')
+    p = scratch_root() / 'measles_p7_p8_four_tool_20260730'
     for short, sample in [('p7','Measles-P7'), ('p8','Measles-P8-VDJ-enriched')]:
         ref = p / 'input_links' / (short+'_shortread_cells.txt')
         for tool, sub in [('RAD', f'input_links/{short}_rad_scanwl.txt'), ('BLAZE', f'runs/{short}/blaze/whitelist.csv'), ('Flexiplex', f'runs/{short}/flexiplex/detection/selected.tsv')]:
@@ -104,7 +105,7 @@ def main():
         add('Isosceles-ovarian-GSE248115', tool, p / 'runs/GSE248115' / sub, ref,
             note='RAD calls are exact saved true_barcode column' if tool=='RAD' else '')
     scmix = json.loads((out / 'validation/figures_124_scmix_rescore.json').read_text())
-    sources = {r['role']:Path(r['path']) for r in scmix['sources']}
+    sources = {r['role']:resolve_source(r['path'],base=b) for r in scmix['sources']}
     for tool in ('RAD','BLAZE','Flexiplex'):
         add('ScMixology2', tool, sources[tool], sources['truth'],
             'barcode' if tool=='Flexiplex' else None,

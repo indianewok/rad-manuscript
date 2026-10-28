@@ -1,10 +1,10 @@
 {
-  "validator": "/dartfs-hpc/rc/home/3/f005f43/.codex/skills/prism-files/scripts/prism_tool.py",
+  "validator": "external_data/software/prism-files/scripts/prism_tool.py",
   "validator_sha256": "78bb1461efb876d60eb2e2ab08e6497284807775edbd39eb42122687443676c6",
   "native_Prism_recalculation": "not performed",
   "results": {
     "original_V18": {
-      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/paper_revision_20261022/evidence/092126_Figure_2_CMV_V18.prism",
+      "path": "external_data/reviewer_comment_data/paper_revision_20261022/evidence/092126_Figure_2_CMV_V18.prism",
       "sha256": "d8cc036cdca79d607be863fd15a9bc4721c4e86d09721ea4b368401fa9b3a10c",
       "exit_code": 1,
       "failures": [
@@ -14,7 +14,7 @@
       "log": "validation/figures_124_prism_original_V18.log"
     },
     "corrected_copy": {
-      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/paper_revision_20261022/prism/Figure2_corrected_20261022.prism",
+      "path": "external_data/reviewer_comment_data/paper_revision_20261022/prism/Figure2_corrected_20261022.prism",
       "sha256": "dded389f9d8214278f93d2669c64e704bbf2208c47db96bf57a4ce4c77d6d016",
       "exit_code": 1,
       "failures": [

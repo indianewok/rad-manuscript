@@ -1,5 +1,5 @@
 {
-  "command": "/scratch/f005f43/rad-manuscript-render-env-20261023/bin/python scripts/revision/figures_124_steps/rescore_public_identifiers.py --output /tmp/figure4_identifier_rescore.tsv",
+  "command": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad-manuscript-render-env-20261023/bin/python scripts/revision/figures_124_steps/rescore_public_identifiers.py --output external_data/temporary/figure4_identifier_rescore.tsv",
   "controlled_rows_aggregate_only": 24,
   "counts": "exact equality",
   "floating_metric_tolerance": 1e-09,

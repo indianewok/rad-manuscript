@@ -1,6 +1,6 @@
-Loading known barcodes from /Volumes/CMV_SSD_2/benchmarks/flamesv2_splitseq_20260728/inputs/local_whitelists/bc_8nt_v1.csv
+Loading known barcodes from external_data/workstation/benchmarks/flamesv2_splitseq_20260728/inputs/local_whitelists/bc_8nt_v1.csv
 Number of known barcodes: 96
-Loading known barcodes from /Volumes/CMV_SSD_2/benchmarks/flamesv2_splitseq_20260728/inputs/local_whitelists/bc_8nt_v2.csv
+Loading known barcodes from external_data/workstation/benchmarks/flamesv2_splitseq_20260728/inputs/local_whitelists/bc_8nt_v2.csv
 Number of known barcodes: 96
 FLEXIPLEX 1.02.6
 Setting max flanking sequence edit distance to 3
@@ -14,7 +14,7 @@ linker2: ATCCACGTGCTTGAGACTGTGG
 BC3: NNNNNNNN
 polyT: TTTTTTTT
 CB:Z: tag field: BC1,BC2,BC3
-Processing file: /Volumes/CMV_SSD_2/raw_fqs/splitseq.fq.gz
+Processing file: external_data/workstation/raw_fqs/splitseq.fq.gz
 Searching for barcodes...
 0.1 million reads processed..
 0.2 million reads processed..

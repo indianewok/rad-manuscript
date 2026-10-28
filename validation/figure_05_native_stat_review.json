@@ -1,7 +1,7 @@
 {
   "status": "passed",
   "scope": "Independent validation of the existing saved test and source linkage; no new statistical choice",
-  "native_archive": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/081926_rebuttal_RAD4acbe_rawLongBench_updated_20260827.prism",
+  "native_archive": "external_data/reviewer_comment_data/081926_rebuttal_RAD4acbe_rawLongBench_updated_20260827.prism",
   "native_archive_sha256": "2987ae97728ff61488a861b305aa2b9fb356f51ba860c084e9c06c823765572b",
   "analysis_uid": "F616A250-536B-42B0-B4E6-23C2BF786E46",
   "analysis_title": "Paired t test of SPLIT-seq benchmarking, continued",
@@ -93,15 +93,15 @@
   },
   "inputs": [
     {
-      "path": "/scratch/f005f43/rad_f5_incoming_07b39852_20261023/hpc_handoff_20261023/recovered/lr_splitseq_20261023/prism/rad_vs_component_polyT_by_prism_row.csv",
+      "path": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_f5_incoming_07b39852_20261023/hpc_handoff_20261023/recovered/lr_splitseq_20261023/prism/rad_vs_component_polyT_by_prism_row.csv",
       "sha256": "01a8fae268906bb379657c55287ed23dd999be8bf18d532e24c76fe19d1bdecf"
     },
     {
-      "path": "/scratch/f005f43/rad_f5_incoming_07b39852_20261023/hpc_handoff_20261023/recovered/lr_splitseq_20261023/prism/prism_row_to_cell.csv",
+      "path": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_f5_incoming_07b39852_20261023/hpc_handoff_20261023/recovered/lr_splitseq_20261023/prism/prism_row_to_cell.csv",
       "sha256": "99d9ccd7868a94b03417dcac5d92799f1944500146442d6ee59ac0c083b84e70"
     },
     {
-      "path": "/scratch/f005f43/rad_f5_incoming_07b39852_20261023/hpc_handoff_20261023/recovered/lr_splitseq_20261023/tables/splitseq_published_barcode_read_counts.csv",
+      "path": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_f5_incoming_07b39852_20261023/hpc_handoff_20261023/recovered/lr_splitseq_20261023/tables/splitseq_published_barcode_read_counts.csv",
       "sha256": "8a26f5537b50c2f3199f03b5613622d02cf4d0c9dadf5a0091c2fb2a3841a2ff"
     }
   ],

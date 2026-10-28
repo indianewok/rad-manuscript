@@ -10,6 +10,7 @@ import sys
 import time
 from collections import Counter, defaultdict
 from pathlib import Path
+from source_paths import data_root
 from figures_124 import NREADS, REPO, STATES, TOOLS, rows, sha, write_json, write_rows
 
 FIELDS=('native_correct','corrected_correct','native_incorrect','corrected_incorrect')
@@ -49,7 +50,7 @@ def fixtures():
 
 def main():
     p=argparse.ArgumentParser(description=__doc__)
-    p.add_argument('--project-root',type=Path,default=Path('/dartfs/rc/lab/A/AckermanLab/CMV/rad_data'))
+    p.add_argument('--project-root',type=Path,default=data_root())
     p.add_argument('--output-root',type=Path,default=REPO)
     p.add_argument('--fixtures-only',action='store_true')
     a=p.parse_args();f=fixtures()

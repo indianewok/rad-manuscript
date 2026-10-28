@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-root=/scratch-nfs/f005f43/blaze_single_cell_expect_sweep_20260810/scmixology2_exploratory
-python=/scratch/f005f43/blaze2_250_probe_20260727/venv/bin/python
+root=external_data/reviewer_comment_data/scratch_preservation_20260921/files/blaze_single_cell_expect_sweep_20260810/scmixology2_exploratory
+python=external_data/reviewer_comment_data/scratch_preservation_20260921/files/blaze2_250_probe_20260727/venv/bin/python
 script="${root}/scripts/reconstruct_expect_sweep.py"
-raw=/scratch/f005f43/blaze_analysis_data_20335203/data/scmixology/blaze/raw_bc.csv.gz
-reference=/scratch/f005f43/blaze_analysis_data_20335203/data/scmixology/cellranger/whitelist.tsv
-design=/scratch/f005f43/blaze_analysis_data_20335203/data/3M-february-2018.txt.gz
+raw=external_data/reviewer_comment_data/scratch_preservation_20260921/files/blaze_analysis_data_20335203/data/scmixology/blaze/raw_bc.csv.gz
+reference=external_data/reviewer_comment_data/scratch_preservation_20260921/files/blaze_analysis_data_20335203/data/scmixology/cellranger/whitelist.tsv
+design=external_data/reviewer_comment_data/scratch_preservation_20260921/files/blaze_analysis_data_20335203/data/3M-february-2018.txt.gz
 
 mkdir -p "${root}/logs" "${root}/tables" "${root}/callsets" "${root}/evidence"
 exec 9>"${root}/run.lock"

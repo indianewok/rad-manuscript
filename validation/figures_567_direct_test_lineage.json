@@ -8,7 +8,7 @@
   },
   "inputs": [
     {
-      "path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/082426_volcano_plots/three_tool_overlay_and_H146_vs_H526_20260825/tables/direct_H146_vs_H526_all_deg_results.tsv.gz",
+      "path": "external_data/reviewer_comment_data/082426_volcano_plots/three_tool_overlay_and_H146_vs_H526_20260825/tables/direct_H146_vs_H526_all_deg_results.tsv.gz",
       "sha256": "2cb1cd59158ed89b6b0444a80ce1d91e4088b0abff6bbaf6d2024353283be17f"
     },
     {

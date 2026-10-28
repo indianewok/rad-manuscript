@@ -9,19 +9,19 @@ fi
 arm=$1
 case "${arm}" in
     SC_ONT)
-        raw=/dartfs-hpc/scratch/f005f43/rad_longbench_20260726/data/SC_ONT.fastq.gz
+        raw=external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_longbench_20260726/data/SC_ONT.fastq.gz
         expected_reads=117002380
         ;;
     SN_ONT)
-        raw=/dartfs-hpc/scratch/f005f43/rad_longbench_20260726/data/sc_sn/raw_fastq/SN_ONT.fastq.gz
+        raw=external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_longbench_20260726/data/sc_sn/raw_fastq/SN_ONT.fastq.gz
         expected_reads=119016231
         ;;
     SC_PB)
-        raw=/dartfs-hpc/scratch/f005f43/rad_longbench_20260726/data/sc_sn/raw_fastq/SC_PB.fastq.gz
+        raw=external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_longbench_20260726/data/sc_sn/raw_fastq/SC_PB.fastq.gz
         expected_reads=195242482
         ;;
     SN_PB)
-        raw=/dartfs-hpc/scratch/f005f43/rad_longbench_20260726/data/sc_sn/raw_fastq/SN_PB.fastq.gz
+        raw=external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_longbench_20260726/data/sc_sn/raw_fastq/SN_PB.fastq.gz
         expected_reads=161917662
         ;;
     *)
@@ -30,7 +30,7 @@ case "${arm}" in
         ;;
 esac
 
-root=/scratch-nfs/f005f43/longbench_rad_4acbe00_raw_prism_20260827
+root=external_data/reviewer_comment_data/scratch_preservation_20260921/files/longbench_rad_4acbe00_raw_prism_20260827
 rad=${root}/tools/rad_4acbe00
 layout=${root}/inputs/common/longbench_three_prime_v31.csv
 global=${root}/inputs/common/3M-february-2018-3v3.txt

@@ -2,11 +2,11 @@ field	value
 upstream_tool	Flexiplex
 upstream_version	v1.02.6
 upstream_commit	d84c8ae4f3865052f2b5ecec816949b94682f302
-upstream_binary	/scratch/f005f43/rad_scmix2_20260726/tools/flexiplex-v1.02.6/flexiplex
+upstream_binary	external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_scmix2_20260726/tools/flexiplex-v1.02.6/flexiplex
 upstream_binary_sha256	62a41db2407e2675b8d1bc4201839c9d47b8d102116a0f1d504346ecfc753e10
-diagnostic_source	/scratch/f005f43/rad_longbench_20260726/benchmarks/flexiplex_valid_to_valid_correction_audit_20260728/tools/flexiplex-v1.02.6-audit/flexiplex.c++
+diagnostic_source	external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_longbench_20260726/benchmarks/flexiplex_valid_to_valid_correction_audit_20260728/tools/flexiplex-v1.02.6-audit/flexiplex.c++
 diagnostic_source_sha256	fb3f841074f39c3b56af4979adf850066d9215afe227111280ba14ed46c47541
-diagnostic_binary	/scratch/f005f43/rad_longbench_20260726/benchmarks/flexiplex_valid_to_valid_correction_audit_20260728/tools/flexiplex-v1.02.6-audit/flexiplex
+diagnostic_binary	external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_longbench_20260726/benchmarks/flexiplex_valid_to_valid_correction_audit_20260728/tools/flexiplex-v1.02.6-audit/flexiplex
 diagnostic_binary_sha256	38dccd37f1747e5105b62eacde572b7e4c5206fb925dc1fdbe8210ffe8b1e8c4
 build_command	g++ flexiplex.c++ -Ofast -pthread -std=c++11 -o flexiplex edlib-1.2.7/edlib.cpp -I edlib-1.2.7/
 matching_change	none when FLEXIPLEX_AUDIT_SOURCE_FILE is unset

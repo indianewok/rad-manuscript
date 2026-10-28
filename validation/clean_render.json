@@ -1,11 +1,11 @@
 {
   "status": "passed",
   "scope": "render only; no raw or matrix producer rerun",
-  "temporary_tree": "/scratch/f005f43/rad-source-only-render-8qw8khk_",
+  "temporary_tree": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad-source-only-render-8qw8khk_",
   "environment": {
     "PATH": "/usr/bin:/bin",
     "LANG": "C.UTF-8",
-    "MPLCONFIGDIR": "/scratch/f005f43/rad-source-only-render-8qw8khk_/matplotlib",
+    "MPLCONFIGDIR": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad-source-only-render-8qw8khk_/matplotlib",
     "OMP_NUM_THREADS": "1",
     "OPENBLAS_NUM_THREADS": "1",
     "MKL_NUM_THREADS": "1"
@@ -14,69 +14,69 @@
     {
       "group": "124",
       "command": [
-        "/scratch/f005f43/rad-manuscript-render-env-20261023/bin/python",
-        "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/scripts/revision/figures_124.py",
+        "external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad-manuscript-render-env-20261023/bin/python",
+        "scripts/revision/figures_124.py",
         "render",
         "--output-root",
-        "/scratch/f005f43/rad-source-only-render-8qw8khk_"
+        "external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad-source-only-render-8qw8khk_"
       ],
       "exit_code": 0,
       "renderer_sha256": "9fa1cbc58a99e23214c6f7358be711935c19eee5fb126bc11da28219e1849103",
       "forbidden_project_reads": [],
-      "log": "/scratch/f005f43/rad-source-only-render-8qw8khk_/render_124.log",
-      "trace": "/scratch/f005f43/rad-source-only-render-8qw8khk_/access_124.strace"
+      "log": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad-source-only-render-8qw8khk_/render_124.log",
+      "trace": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad-source-only-render-8qw8khk_/access_124.strace"
     },
     {
       "group": "3",
       "command": [
-        "/scratch/f005f43/rad-manuscript-render-env-20261023/bin/python",
-        "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/scripts/revision/figure_3.py",
+        "external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad-manuscript-render-env-20261023/bin/python",
+        "scripts/revision/figure_3.py",
         "render",
         "--output",
-        "/scratch/f005f43/rad-source-only-render-8qw8khk_/source_data/figure_03",
+        "external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad-source-only-render-8qw8khk_/source_data/figure_03",
         "--figures",
-        "/scratch/f005f43/rad-source-only-render-8qw8khk_/figures/figure_03"
+        "external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad-source-only-render-8qw8khk_/figures/figure_03"
       ],
       "exit_code": 0,
       "renderer_sha256": "8bdedf256f2992cfe485d6748dd5491bd001dacec629017467947a705b3746bc",
       "forbidden_project_reads": [],
-      "log": "/scratch/f005f43/rad-source-only-render-8qw8khk_/render_3.log",
-      "trace": "/scratch/f005f43/rad-source-only-render-8qw8khk_/access_3.strace"
+      "log": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad-source-only-render-8qw8khk_/render_3.log",
+      "trace": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad-source-only-render-8qw8khk_/access_3.strace"
     },
     {
       "group": "5",
       "command": [
-        "/scratch/f005f43/rad-manuscript-render-env-20261023/bin/python",
-        "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/scripts/figure_05/render_candidate_counts.py",
+        "external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad-manuscript-render-env-20261023/bin/python",
+        "scripts/figure_05/render_candidate_counts.py",
         "--input",
-        "/scratch/f005f43/rad-source-only-render-8qw8khk_/source_data/figure_05/candidate_receptor_totals.tsv",
+        "external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad-source-only-render-8qw8khk_/source_data/figure_05/candidate_receptor_totals.tsv",
         "--splitseq-input",
-        "/scratch/f005f43/rad-source-only-render-8qw8khk_/source_data/figure_05/splitseq_reads_umis_568.tsv",
+        "external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad-source-only-render-8qw8khk_/source_data/figure_05/splitseq_reads_umis_568.tsv",
         "--splitseq-summary",
-        "/scratch/f005f43/rad-source-only-render-8qw8khk_/source_data/figure_05/splitseq_summary.tsv",
+        "external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad-source-only-render-8qw8khk_/source_data/figure_05/splitseq_summary.tsv",
         "--output-dir",
-        "/scratch/f005f43/rad-source-only-render-8qw8khk_/figures/figure_05"
+        "external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad-source-only-render-8qw8khk_/figures/figure_05"
       ],
       "exit_code": 0,
       "renderer_sha256": "6a803d16d3f38af6e7db7bde982ab41bbf3dd251b2059df070360b89f7ab9fae",
       "forbidden_project_reads": [],
-      "log": "/scratch/f005f43/rad-source-only-render-8qw8khk_/render_5.log",
-      "trace": "/scratch/f005f43/rad-source-only-render-8qw8khk_/access_5.strace"
+      "log": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad-source-only-render-8qw8khk_/render_5.log",
+      "trace": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad-source-only-render-8qw8khk_/access_5.strace"
     },
     {
       "group": "567",
       "command": [
-        "/scratch/f005f43/rad-manuscript-render-env-20261023/bin/python",
-        "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/scripts/revision/figures_567.py",
+        "external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad-manuscript-render-env-20261023/bin/python",
+        "scripts/revision/figures_567.py",
         "render",
         "--output-root",
-        "/scratch/f005f43/rad-source-only-render-8qw8khk_"
+        "external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad-source-only-render-8qw8khk_"
       ],
       "exit_code": 0,
       "renderer_sha256": "c6837bb9fb1440c32c92fa0ae17c82e15919f58a22c92a1c66fb78464fc9ffef",
       "forbidden_project_reads": [],
-      "log": "/scratch/f005f43/rad-source-only-render-8qw8khk_/render_567.log",
-      "trace": "/scratch/f005f43/rad-source-only-render-8qw8khk_/access_567.strace"
+      "log": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad-source-only-render-8qw8khk_/render_567.log",
+      "trace": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad-source-only-render-8qw8khk_/access_567.strace"
     }
   ],
   "exports": [

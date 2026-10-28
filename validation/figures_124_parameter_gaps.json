@@ -2177,8 +2177,8 @@
     }
   ],
   "checked_missing_Tilgner_producer_roots": [
-    "/scratch-nfs/f005f43/tilgner_native_wl_missing7_20260810",
-    "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/scratch_preservation_20260921/files/tilgner_native_wl_missing7_20260810"
+    "external_data/reviewer_comment_data/scratch_preservation_20260921/files/tilgner_native_wl_missing7_20260810",
+    "external_data/reviewer_comment_data/scratch_preservation_20260921/files/tilgner_native_wl_missing7_20260810"
   ],
   "LongBench_Flexiplex_gap": "Native discovery callsets retained; later diagnostic assignment producer is not substituted."
 }

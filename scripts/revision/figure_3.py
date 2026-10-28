@@ -13,6 +13,7 @@ import hashlib
 import io
 import json
 import os
+import tempfile
 from pathlib import Path
 import subprocess
 import sys
@@ -226,7 +227,7 @@ def validate(a):
 
 def render(a):
     validate(a)
-    os.environ.setdefault('MPLCONFIGDIR','/tmp/rad-figure3-matplotlib')
+    os.environ.setdefault('MPLCONFIGDIR',str(Path(tempfile.gettempdir())/'rad-figure3-matplotlib'))
     import matplotlib;matplotlib.use('Agg')
     import matplotlib.pyplot as plt
     import numpy as np

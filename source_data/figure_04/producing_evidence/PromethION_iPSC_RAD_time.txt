@@ -1,4 +1,4 @@
-	Command being timed: "/tmp/rad-current-f005f43.8ChwC9/build-system/rad scan-wl -i /scratch/f005f43/promethion_four_tool_20260729/input/promethion.fq.gz -p CTACACGACGCTCTTCCGATCT -n 16 -w 10x_3v3 -o /scratch/f005f43/promethion_four_tool_20260729/results/rad_scan_e01/promethion -e 0.1 -t 32 -k 10000"
+	Command being timed: "external_data/temporary/rad-current-f005f43.8ChwC9/build-system/rad scan-wl -i external_data/reviewer_comment_data/scratch_preservation_20260921/files/promethion_four_tool_20260729/input/promethion.fq.gz -p CTACACGACGCTCTTCCGATCT -n 16 -w 10x_3v3 -o external_data/reviewer_comment_data/scratch_preservation_20260921/files/promethion_four_tool_20260729/results/rad_scan_e01/promethion -e 0.1 -t 32 -k 10000"
 	User time (seconds): 3221.83
 	System time (seconds): 176.75
 	Percent of CPU this job got: 517%

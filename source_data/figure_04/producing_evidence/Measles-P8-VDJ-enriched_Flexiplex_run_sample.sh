@@ -2,19 +2,19 @@
 set -euo pipefail
 
 sample="${1:?usage: run_sample.sh p7|p8}"
-root=/scratch/f005f43/measles_p7_p8_four_tool_20260730
+root=external_data/reviewer_comment_data/scratch_preservation_20260921/files/measles_p7_p8_four_tool_20260730
 threads=24
 flex_threads=16
 adapter=CTACACGACGCTCTTCCGATCT
 design="$root/input_links/10x_3v3_full_whitelist.txt"
-rad=/scratch-nfs/f005f43/longbench_full_demux_20260730/tools/rad_920adda_edlibfix/build_release/rad
-blaze=/scratch/f005f43/blaze2_260a0_native_20260727/venv/bin/blaze
+rad=external_data/reviewer_comment_data/scratch_preservation_20260921/files/longbench_full_demux_20260730/tools/rad_920adda_edlibfix/build_release/rad
+blaze=external_data/reviewer_comment_data/scratch_preservation_20260921/files/blaze2_260a0_native_20260727/venv/bin/blaze
 flex="$root/tools/flexiplex-v1.02.6/flexiplex-linux"
 flex_audit="$root/tools/flexiplex-v1.02.6/flexiplex-audit"
-flex_filter=/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/miniconda3/bin/flexiplex-filter
-container=/dartfs-hpc/scratch/f005f43/rad_longbench_20260726/tools/bioconductor_3.23_r4.6.1.sif
-r_lib=/dartfs-hpc/scratch/f005f43/rad_longbench_20260726/tools/Rlib_bioc_3.23
-basilisk_root=/tmp/flamesv2_expect2500.2jtbob
+flex_filter=external_data/software/miniconda3/bin/flexiplex-filter
+container=external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_longbench_20260726/tools/bioconductor_3.23_r4.6.1.sif
+r_lib=external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_longbench_20260726/tools/Rlib_bioc_3.23
+basilisk_root=external_data/temporary/flamesv2_expect2500.2jtbob
 
 case "$sample" in
     p7)
@@ -81,7 +81,7 @@ if [[ ! -f "$sample_root/flexiplex/detection/DONE" ]]; then
         bash "$input" "$flex" "$flex_threads" "$flex_prefix" \
         > "$sample_root/flexiplex/detection/stdout.log" \
         2> "$sample_root/flexiplex/detection/stderr.log"
-    LD_LIBRARY_PATH=/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/miniconda3/lib \
+    LD_LIBRARY_PATH=external_data/software/miniconda3/lib \
         /usr/bin/time -v -o "$sample_root/flexiplex/detection/filter.time.txt" \
         "$flex_filter" \
         --whitelist "$design" \
@@ -134,7 +134,7 @@ if [[ ! -f "$sample_root/flexiplex/demux/DONE" ]]; then
 fi
 
 if [[ ! -f "$sample_root/flamesv2/DONE" ]]; then
-    temp_root=$(mktemp -d "/tmp/measles_${sample}_flames.XXXXXX")
+    temp_root=$(mktemp -d "external_data/temporary/measles_${sample}_flames.XXXXXX")
     mkdir -p "$temp_root/tmp" "$temp_root/xdg-data" "$temp_root/xdg-cache"
     status "FLAMES 2.6.0 embedded BLAZE 2.5.1 started threads=$threads temp=$temp_root"
     /usr/bin/time -v -o "$sample_root/flamesv2/time.txt" \

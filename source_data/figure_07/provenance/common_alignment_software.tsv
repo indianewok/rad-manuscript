@@ -1,5 +1,5 @@
 component	role	version	path_or_source	checksum_sha256	notes
-minimap2	aligner (controlled arm)	2.30-r1287	/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/miniconda3/envs/ab_assembly/bin/minimap2	5ef4a631a6318c66d1184007f87bedc55f712c27472d141da4d35e80df82e3cc	
-samtools	BAM handling	1.22.1 (htslib 1.22.1)	/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/miniconda3/envs/ab_assembly/bin/samtools	c88c19bd86108aa676075c64bba91807a03b528a984eed1c9b70b448ddd6d3aa	
-GRCh38 reference	genome + annotation	GENCODE v44 primary assembly	/scratch-nfs/f005f43/longbench_full_demux_20260730/references/gencode_v44	NA	used for all human controlled-arm alignment
-GRCh38 splice index	minimap2 index	built from the above	/scratch-nfs/f005f43/rad_biological_benchmark_20260731/refs/GRCh38.primary_assembly.splice.mmi	c10ef7c90bd53ec6b71baa6e572ffedaeb1afa53c16562e224f1ec3cca1b1c2f	
+minimap2	aligner (controlled arm)	2.30-r1287	external_data/software/miniconda3/envs/ab_assembly/bin/minimap2	5ef4a631a6318c66d1184007f87bedc55f712c27472d141da4d35e80df82e3cc	
+samtools	BAM handling	1.22.1 (htslib 1.22.1)	external_data/software/miniconda3/envs/ab_assembly/bin/samtools	c88c19bd86108aa676075c64bba91807a03b528a984eed1c9b70b448ddd6d3aa	
+GRCh38 reference	genome + annotation	GENCODE v44 primary assembly	external_data/reviewer_comment_data/scratch_preservation_20260921/files/longbench_full_demux_20260730/references/gencode_v44	NA	used for all human controlled-arm alignment
+GRCh38 splice index	minimap2 index	built from the above	external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_biological_benchmark_20260731/refs/GRCh38.primary_assembly.splice.mmi	c10ef7c90bd53ec6b71baa6e572ffedaeb1afa53c16562e224f1ec3cca1b1c2f	

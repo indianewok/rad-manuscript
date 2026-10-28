@@ -25,11 +25,11 @@
         "paired_input_id",
         "inferential_status"
       ],
-      "excerpt_sha256": "f1e7d992b6adeecb09368bb47fbd550770b2ba33abe2997b3b035bd3717fad41",
+      "excerpt_sha256": "d4a23d4c519a240a0671c934503143c513fd8bfdfcc47cec30f8276a81b3f151",
       "file": "three_input_metrics_example.tsv",
       "header_excluded_from_row_count": true,
       "scope": "bounded actual source excerpt; not a representative statistical sample",
-      "source_bytes": 84275,
+      "source_bytes": 78278,
       "source_data_row_numbers_1_based": [
         1,
         2,
@@ -41,8 +41,8 @@
         23,
         24
       ],
-      "source_path": "/dartfs/rc/lab/A/AckermanLab/CMV/PostRot/cmv/rad-manuscript/source_data/figure_04/barcode_detection_metrics.tsv",
-      "source_sha256": "fef92287def3e62e746e494ce445c7e5b8903f3d46bd75e8f8bb4e37746b33b2"
+      "source_path": "source_data/figure_04/barcode_detection_metrics.tsv",
+      "source_sha256": "fd309207f1012194470f73901f0dab694a330dfb29c9ec7b41d77ed667c26fc7"
     },
     {
       "columns": [
@@ -65,7 +65,7 @@
         10,
         150
       ],
-      "source_path": "/dartfs/rc/lab/A/AckermanLab/CMV/rad_data/reviewer_comment_data/wl_scan/20260730_rageseq_ERR3268990_tnbc_lymphnode_four_tool/analysis/barcode_level_annotations.tsv",
+      "source_path": "external_data/reviewer_comment_data/wl_scan/20260730_rageseq_ERR3268990_tnbc_lymphnode_four_tool/analysis/barcode_level_annotations.tsv",
       "source_sha256": "aa01982ec5eefb365a4ad5a2fc7899b4d5ecaa24e2be0ef308df5530840f955c"
     }
   ]
