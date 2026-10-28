@@ -6,16 +6,18 @@ Figure 5 compares recovery of receptor reads from a mixture of Ramos B cells, Ju
 
 ## Software and inputs
 
-| Analysis | Software and settings | Run records |
+| Analysis | Software and settings | Code and command |
 |---|---|---|
 | RAD receptor counts | Intended settings: 10x 3′ layout, offensive correction, generated/whitelist edit distance 2, chunk size 10,000, 32 threads. The successful producing run is still needed. | [Retained execution log](../source_data/figure_05/provenance/RAD_candidate_producer_failure.txt) |
 | BLAZE receptor counts | BLAZE 2.6.0a0; 4,505 expected cells, 10x 3v2, 32 threads, edit distance 2 | [Executed command](../source_data/figure_05/provenance/BLAZE_receptor_command.txt) |
 | Flexiplex receptor counts | Flexiplex 1.02.5; 10x3v2, flank edit distance 8, 56 threads, 3,259 selected barcodes. Barcode discovery used 1.02.6. | [Wrapper](../source_data/figure_05/provenance/Flexiplex_receptor_producer.sh), [execution and input hashes](../source_data/figure_05/provenance/Flexiplex_receptor_execution.md) |
 | Receptor alignment | minimap2 2.26-r1175, `-x map-ont --secondary=no -t 20`; TRUST4 human BCR/TCR reference | Reference SHA-256 `615152a7481d0a68557ab0a84b735d8f25fc1ee9d5076af3b8d31aa7792dc3df` |
-| LR-Split-seq RAD | RAD 1.0.2, commit `b6853a3d3d1818130ac364f7937bd0690ae9e385`; strict joint-barcode matching, defensive correction, generated/whitelist edit distance 2, minimum read length 0, chunk size 5,000, four threads | [Command](../source_data/figure_05/provenance/splitseq/RAD_time.txt), [manifest](../source_data/figure_05/provenance/splitseq/RAD_run_manifest.txt), [layout](../data/figure_05/splitseq_reverse_complemented_whitelist_layout.csv) |
-| LR-Split-seq component workflow | FLAMES 2.7.1, commit `bf2211a8da1e1c7327370ab12479ae70e1d37cd8`, embedded Flexiplex 1.02.6; three separately matched 8-nt barcode components, barcode edit distance 1 and buffer 1, flank edit distance 3, 10-nt UMI template, terminal fixed eight-thymidine segment, `reverse_complement=FALSE`, four threads | [Command](../source_data/figure_05/provenance/splitseq/component_time.txt), [R wrapper](../source_data/figure_05/provenance/splitseq/component_runner.R), [manifest](../source_data/figure_05/provenance/splitseq/component_run_manifest.txt), [version log](../source_data/figure_05/provenance/splitseq/component_stdout.log) |
+| LR-Split-seq RAD | RAD 1.0.2, commit `b6853a3d3d1818130ac364f7937bd0690ae9e385`; `--joint-bc-mode strict`, defensive correction, generated/whitelist edit distance 2, minimum read length 0, chunk size 5,000, four threads | [Barcode processing and strict component acceptance](https://github.com/indianewok/rad/blob/b6853a3d3d1818130ac364f7937bd0690ae9e385/include/rad/sigstring.hpp#L3173-L3288), [barcode/UMI output](https://github.com/indianewok/rad/blob/b6853a3d3d1818130ac364f7937bd0690ae9e385/include/rad/sigstring.hpp#L4377-L4519), [command](../source_data/figure_05/provenance/splitseq/RAD_time.txt), [layout](../data/figure_05/splitseq_reverse_complemented_whitelist_layout.csv) |
+| LR-Split-seq component workflow | FLAMES 2.7.1, commit `bf2211a8da1e1c7327370ab12479ae70e1d37cd8`, embedded Flexiplex 1.02.6; three separately matched 8-nt barcode components, barcode edit distance 1 and buffer 1, flank edit distance 3, 10-nt UMI template, terminal fixed eight-thymidine segment, `reverse_complement=FALSE`, four threads | [Executed layout and processing call](https://github.com/indianewok/rad-manuscript/blob/90f819fde9bdf7cf72cb965ff9a9c386c9f588a7/source_data/figure_05/provenance/splitseq/component_runner.R#L67-L107), [FLAMES segment definitions](https://github.com/mritchielab/FLAMES/blob/bf2211a8da1e1c7327370ab12479ae70e1d37cd8/R/find_barcode.R#L87-L143), [component matching](https://github.com/mritchielab/FLAMES/blob/bf2211a8da1e1c7327370ab12479ae70e1d37cd8/src/main-functions/flexiplex.cpp#L305-L362), [command](../source_data/figure_05/provenance/splitseq/component_time.txt) |
 
 The component catalogs contain [96 ligation sequences](../data/figure_05/bc_8nt_v1.csv) and [96 reverse-transcription sequences](../data/figure_05/bc_8nt_v2.csv). The two reverse-transcription primers from each well map to one of 48 physical wells. The long-read input SHA-256 is `62acb6d466c37ba89632081526410bdc3ef73c0c68d778d40e05f03181f2a4f7`.
+
+The LR-Split-seq wrapper calls the FLAMES [C++ demultiplexing entrypoint](https://github.com/mritchielab/FLAMES/blob/bf2211a8da1e1c7327370ab12479ae70e1d37cd8/src/main-functions/flexiplex.cpp#L955-L981) through its [Rcpp binding](https://github.com/indianewok/rad-manuscript/blob/90f819fde9bdf7cf72cb965ff9a9c386c9f588a7/source_data/figure_05/provenance/splitseq/component_runner.R#L41-L65).
 
 ## Receptor-read counts
 
@@ -48,7 +50,7 @@ The [cell list](../data/figure_05/splitseq_cells.tsv) identifies all 568 publish
 | RAD `normalized_barcode`, `umi`, `read_id` | Saved normalized assignments |
 | `prism_row_1based`, `sample` | Original Prism row and published sample annotation |
 
-Records with a nonempty barcode and UMI contribute to the comparison. Reads are counted as distinct original read IDs within each physical cell; molecules are counted as distinct exact UMI strings within each cell. Thus, summed read counts represent read–cell pairs. UMI inclusion uses the saved nonempty-string rule.
+Records with a nonempty barcode and UMI contribute to the comparison. The [normalization code](../scripts/figure_05/normalize_component_stats.py#L17-L24) constructs the barcode and UMI fields; the [cell-level aggregation code](../scripts/figure_05/aggregate_splitseq.py#L30-L67) counts distinct original read IDs and exact UMI strings within each physical cell. Thus, summed read counts represent read–cell pairs. UMI inclusion uses the saved nonempty-string rule.
 
 Normalize the [component example records](../data/examples/figure_05/splitseq/component_native_stats.tsv), then aggregate them by cell:
 
@@ -96,4 +98,4 @@ To extract the examples again, run `python3 scripts/figure_05/extract_splitseq_e
 
 ## Additional source records
 
-Complete reconstruction of the receptor panels requires the successful RAD producing run and the mapping between the retained receptor tables and the plotted datasets. The long-read/short-read UMI comparison also requires its depth-matched short-read checkpoint or the sampling rule and seed. The complete short-read FASTQ/BAM summaries and the older RAD ED1 UMI intersection are retained as separate processing stages.
+Complete reconstruction of the receptor panels requires the successful RAD producing run and the mapping between the retained receptor tables and the plotted datasets. The long-read/short-read UMI comparison also requires its depth-matched short-read checkpoint or the sampling rule and seed.
