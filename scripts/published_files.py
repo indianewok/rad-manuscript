@@ -1,12 +1,11 @@
 """Select published source files without including unrelated local analyses."""
-import csv
 from pathlib import Path
 import shutil
 import subprocess
 
 
 def published_source_files(root):
-    """Use the Git index in checkouts, or the deposited inventory in archives."""
+    """Use the Git index in checkouts, or the included source files in archives."""
     root = Path(root)
     result = None
     if (root / '.git').exists() and shutil.which('git'):
@@ -15,8 +14,8 @@ def published_source_files(root):
     if result is not None and result.returncode == 0:
         names = [x.decode() for x in result.stdout.split(b'\0') if x]
     else:
-        with (root / 'manifests/data_files.tsv').open(newline='') as handle:
-            names = [row['file'] for row in csv.DictReader(handle, delimiter='\t')]
+        names = [str(path.relative_to(root)) for path in (root / 'source_data').rglob('*')
+                 if path.is_file()]
     files = [root / name for name in names]
     missing = [str(path.relative_to(root)) for path in files if not path.is_file()]
     if missing:

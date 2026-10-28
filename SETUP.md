@@ -76,8 +76,8 @@ Configure archive locations with these variables, or a script's input options:
 
 Source tables and small examples work without external files. Locations in
 copied command/log records are normalized; original-source hashes identify the
-producer records, while the [file inventory](manifests/data_files.tsv) identifies
-the deposited copies.
+producer records. Run `python3 scripts/check_data_inventory.py` to generate the
+local file inventory with checksums for the deposited copies.
 
 ScTagger's [generation contract](source_data/figure_02/quality_generation_contract.json)
 retains the exact effective quality-tape seeds. Use the

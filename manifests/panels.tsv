@@ -18,17 +18,17 @@ panel	experiment_id	dataset_ids	guide	source_directory	task_ids	completion
 3E	figure_03	LongBench-SC-ONT; LongBench-SN-ONT; LongBench-SC-PB; LongBench-SN-PB	docs/figure_03.md	source_data/figure_03	F3-01; F3-06; F3-07; F3-08; F3-09	See task_status.tsv; source-verification proofs do not imply final artwork.
 3F	figure_03	LongBench-SC-ONT; LongBench-SN-ONT; LongBench-SC-PB; LongBench-SN-PB	docs/figure_03.md	source_data/figure_03	F3-01; F3-06; F3-07; F3-08; F3-09	See task_status.tsv; source-verification proofs do not imply final artwork.
 3G	figure_03	LongBench-SC-ONT; LongBench-SN-ONT; LongBench-SC-PB; LongBench-SN-PB	docs/figure_03.md	source_data/figure_03	F3-01; F3-06; F3-07; F3-08; F3-09	See task_status.tsv; source-verification proofs do not imply final artwork.
-4A	figure_04	all 37 inputs marked figure_04_input=yes in datasets.tsv	docs/figure_04.md	source_data/figure_04	F4-01	See task_status.tsv; source-verification proofs do not imply final artwork.
-4B	figure_04	all 37 inputs marked figure_04_input=yes in datasets.tsv	docs/figure_04.md	source_data/figure_04	F4-01; F4-02	See task_status.tsv; source-verification proofs do not imply final artwork.
-4C	figure_04	all 37 inputs marked figure_04_input=yes in datasets.tsv	docs/figure_04.md	source_data/figure_04	F4-02	See task_status.tsv; source-verification proofs do not imply final artwork.
-4D	figure_04	all 37 inputs marked figure_04_input=yes in datasets.tsv	docs/figure_04.md	source_data/figure_04	F4-02	See task_status.tsv; source-verification proofs do not imply final artwork.
-4E	figure_04	all 37 inputs marked figure_04_input=yes in datasets.tsv	docs/figure_04.md	source_data/figure_04	F4-02	See task_status.tsv; source-verification proofs do not imply final artwork.
-4F	figure_04	all 37 inputs marked figure_04_input=yes in datasets.tsv	docs/figure_04.md	source_data/figure_04	F4-01; F4-03	See task_status.tsv; source-verification proofs do not imply final artwork.
-4G	figure_04	all 37 inputs marked figure_04_input=yes in datasets.tsv	docs/figure_04.md	source_data/figure_04	F4-01; F4-03	See task_status.tsv; source-verification proofs do not imply final artwork.
-4H	figure_04	all 37 inputs marked figure_04_input=yes in datasets.tsv	docs/figure_04.md	source_data/figure_04	F4-01; F4-03	See task_status.tsv; source-verification proofs do not imply final artwork.
-4I	figure_04	all 37 inputs marked figure_04_input=yes in datasets.tsv	docs/figure_04.md	source_data/figure_04	F4-03	See task_status.tsv; source-verification proofs do not imply final artwork.
-4J	figure_04	all 37 inputs marked figure_04_input=yes in datasets.tsv	docs/figure_04.md	source_data/figure_04	F4-03	See task_status.tsv; source-verification proofs do not imply final artwork.
-4K	figure_04	all 37 inputs marked figure_04_input=yes in datasets.tsv	docs/figure_04.md	source_data/figure_04	F4-03	See task_status.tsv; source-verification proofs do not imply final artwork.
+4A	figure_04	37 inputs in source_data/figure_04/barcode_detection_metrics.tsv	docs/figure_04.md	source_data/figure_04	F4-01	See task_status.tsv; source-verification proofs do not imply final artwork.
+4B	figure_04	37 inputs in source_data/figure_04/barcode_detection_metrics.tsv	docs/figure_04.md	source_data/figure_04	F4-01; F4-02	See task_status.tsv; source-verification proofs do not imply final artwork.
+4C	figure_04	37 inputs in source_data/figure_04/barcode_detection_metrics.tsv	docs/figure_04.md	source_data/figure_04	F4-02	See task_status.tsv; source-verification proofs do not imply final artwork.
+4D	figure_04	37 inputs in source_data/figure_04/barcode_detection_metrics.tsv	docs/figure_04.md	source_data/figure_04	F4-02	See task_status.tsv; source-verification proofs do not imply final artwork.
+4E	figure_04	37 inputs in source_data/figure_04/barcode_detection_metrics.tsv	docs/figure_04.md	source_data/figure_04	F4-02	See task_status.tsv; source-verification proofs do not imply final artwork.
+4F	figure_04	37 inputs in source_data/figure_04/barcode_detection_metrics.tsv	docs/figure_04.md	source_data/figure_04	F4-01; F4-03	See task_status.tsv; source-verification proofs do not imply final artwork.
+4G	figure_04	37 inputs in source_data/figure_04/barcode_detection_metrics.tsv	docs/figure_04.md	source_data/figure_04	F4-01; F4-03	See task_status.tsv; source-verification proofs do not imply final artwork.
+4H	figure_04	37 inputs in source_data/figure_04/barcode_detection_metrics.tsv	docs/figure_04.md	source_data/figure_04	F4-01; F4-03	See task_status.tsv; source-verification proofs do not imply final artwork.
+4I	figure_04	37 inputs in source_data/figure_04/barcode_detection_metrics.tsv	docs/figure_04.md	source_data/figure_04	F4-03	See task_status.tsv; source-verification proofs do not imply final artwork.
+4J	figure_04	37 inputs in source_data/figure_04/barcode_detection_metrics.tsv	docs/figure_04.md	source_data/figure_04	F4-03	See task_status.tsv; source-verification proofs do not imply final artwork.
+4K	figure_04	37 inputs in source_data/figure_04/barcode_detection_metrics.tsv	docs/figure_04.md	source_data/figure_04	F4-03	See task_status.tsv; source-verification proofs do not imply final artwork.
 5A	figure_05	RAGEseq-cell-line; matched cell labels	docs/figure_05.md	source_data/figure_05	F5-01	See task_status.tsv; source-verification proofs do not imply final artwork.
 5B	figure_05	RAGEseq-cell-line; matched cell labels	docs/figure_05.md	source_data/figure_05	F5-01	See task_status.tsv; source-verification proofs do not imply final artwork.
 5C	figure_05	RAGEseq-cell-line; matched cell labels	docs/figure_05.md	source_data/figure_05	F5-01	See task_status.tsv; source-verification proofs do not imply final artwork.

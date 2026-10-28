@@ -53,7 +53,7 @@ for panel, tasks in sorted(panel_tasks.items()):
       '1':'LongBench-SN-ONT; LongBench-SC-PB; Visium-HD-3p-mouse-brain',
       '2':'ScTagger-S_flatQ20; ScTagger-L_flatQ20',
       '3':'ScTagger-L_flatQ20; RAGEseq-cell-line; four LongBench inputs',
-      '4':'all 37 inputs marked figure_04_input=yes in datasets.tsv',
+      '4':'37 inputs in source_data/figure_04/barcode_detection_metrics.tsv',
       '5':'RAGEseq-cell-line; LR-Split-seq',
       '6':'LongBench-SN-ONT; matched Illumina SN and eight bulk genotype references',
       '7':'LongBench-SN-ONT; matched Illumina SN'}[figure]

@@ -8,8 +8,8 @@ identifiers used in those steps.
 |---|---|
 | [`examples/`](examples/) | Selected source records, extraction rules, hashes and expected outputs |
 | [`../source_data/`](../source_data/) | Complete plotting and metric tables with schemas |
-| [`../manifests/datasets.tsv`](../manifests/datasets.tsv) | Dataset IDs, accessions, access requirements and reference types |
-| [`../manifests/data_files.tsv`](../manifests/data_files.tsv) | Columns, row counts, file sizes and SHA-256 hashes |
+| [`../manifests/datasets.tsv`](../manifests/datasets.tsv) | Dataset IDs, families and accessions |
+| `../manifests/data_files.tsv` (generated locally) | Columns, row counts, file sizes and SHA-256 hashes |
 | `../checkpoints/` | Large read ledgers, sparse matrices and reference files restored from the checkpoint archives |
 
 ## File formats and identifiers
@@ -45,8 +45,8 @@ inventory supplies descriptive column names for those files.
 ## Dataset sources
 
 The [dataset registry](../manifests/datasets.tsv) identifies the 37 Figure 4
-inputs, Visium HD and LR-Split-seq. Each entry gives the acquisition source and
-matched reference. Figure-specific manifests record file hashes and processing
+inputs, Visium HD and LR-Split-seq. Each entry gives the dataset family and
+acquisition accessions. Figure-specific manifests record references, file hashes and processing
 commands. ScMixology2 uses the reconstructed input described in the Figure 4
 guide.
 

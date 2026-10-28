@@ -44,10 +44,13 @@ def main():
     args = parser.parse_args()
     root = args.root.resolve()
     inventory = rows(root / 'manifests/datasets.tsv')
-    selected = [row for row in inventory if row['figure_04_input'] == 'yes']
-    ids = [row['dataset_id'] for row in selected]
-    assert len(ids) == len(set(ids)) == 37, 'Figure 4 must retain exactly 37 distinct input identities'
     metrics = rows(root / 'source_data/figure_04/barcode_detection_metrics.tsv')
+    registered_ids = [row['dataset_id'] for row in inventory]
+    assert len(registered_ids) == len(set(registered_ids)), 'Dataset IDs must be unique'
+    benchmark_ids = {row['canonical_id'] for row in metrics}
+    assert benchmark_ids.issubset(set(registered_ids)), 'Every benchmark input must be registered'
+    ids = sorted(benchmark_ids)
+    assert len(ids) == 37, 'Figure 4 must retain exactly 37 distinct input identities'
     assert len(metrics) == 111
     for dataset in ids:
         tools = [row['tool'] for row in metrics if row['canonical_id'] == dataset]

@@ -36,7 +36,14 @@ def main():
     preserved = b / 'scratch_preservation_20260921/files'
     out = args.output_root
     current = rows(out / 'source_data/figure_04/barcode_detection_metrics.tsv')
-    access = {r['dataset_id']: r['access'] for r in rows(out / 'manifests/datasets.tsv')}
+    policy_rows = rows(REPO / 'data/figure_04/identifier_manifest.tsv')
+    publication_status = {(r['canonical_id'], r['tool']): r['status'] for r in policy_rows}
+    expected_keys = {(r['canonical_id'], r['tool']) for r in current}
+    if len(publication_status) != len(policy_rows) or set(publication_status) != expected_keys:
+        raise ValueError('Identifier manifest must cover every selected input/tool exactly once')
+    allowed_statuses = {'public-identifiers-recomputed', 'aggregate-only-controlled-access'}
+    if not set(publication_status.values()).issubset(allowed_statuses):
+        raise ValueError('Identifier manifest contains an unknown publication status')
     mapping = {}
 
     def add(sample, tool, path, ref, call_column=None, call_filter=None, ref_column=None, ref_filter=None, note=''):
@@ -127,7 +134,7 @@ def main():
                     original_source_sha256=sha(source), selection=selection)
     for expected in current:
         sample, tool = expected['canonical_id'], expected['tool']
-        if access[sample] != 'public':
+        if publication_status[sample, tool] == 'aggregate-only-controlled-access':
             manifest.append(dict(canonical_id=sample, tool=tool, status='aggregate-only-controlled-access',
                 callset_path='', reference_path='', callset_sha256='', reference_sha256='',
                 reason='Controlled identifier files excluded; four original Visium RAD callsets also unavailable'))

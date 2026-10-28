@@ -28,11 +28,11 @@ from source tables, saved checkpoints or raw reads. The figure guides specify
 the software versions and parameters used for each experiment.
 
 - [Data guide](data/README.md): file formats, identifiers and acquisition sources.
-- [Dataset registry](manifests/datasets.tsv): input identities, accessions and reference datasets.
+- [Dataset registry](manifests/datasets.tsv): dataset IDs, families and accessions.
 - [Examples](data/examples/): selected source records with extraction rules and expected outputs.
 - [Source tables](source_data/): complete tables used to calculate the plotted metrics.
 - [Figure 4 barcode lists](data/figure_04/README.md): tool and reference lists for the 29 public inputs.
-- [File inventory](manifests/data_files.tsv): schemas, row counts and SHA-256 hashes.
+- Generate a local file inventory with `python3 scripts/check_data_inventory.py`.
 - [Reproducibility checks](docs/validation.md): numerical checks and the inputs needed to repeat each analysis.
 - [Data packages](docs/release_review.md): checkpoint archives and their contents.
 
