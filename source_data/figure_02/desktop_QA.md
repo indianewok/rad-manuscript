@@ -6,9 +6,9 @@ The numerical comparison in this record used the corrected project `Figure2_corr
 
 Each physical-read partition sums to 4,993,805. The target sets contain 5,000 supplied truth barcodes for RAD, 3,004 native selected barcodes for Flexiplex, and 5,015 selected barcodes for BLAZE, including 15 outside the truth set. Unselected Flexiplex truth targets are blank; a selected target with no reads in a category has zero.
 
-Correction-only plots use the corrected states and exclude native, ambiguous, and unassigned states. Their denominators are 2,135,825 for RAD, 1,680,396 for Flexiplex, and 2,014,432 for BLAZE. The checked display proportions were RAD 91.03/8.97%, Flexiplex 83.24/16.76%, and BLAZE 93.4/6.6%. The separately labeled Flexiplex full-truth increment of 222,371 comes from the full-truth reference comparison.
+Correction-only plots use the corrected states and exclude native and unassigned states. Their denominators are 2,135,825 for RAD, 1,680,396 for Flexiplex, and 2,014,432 for BLAZE. The checked display proportions were RAD 91.03/8.97%, Flexiplex 83.24/16.76%, and BLAZE 93.4/6.6%. The separately labeled Flexiplex full-truth increment of 222,371 comes from the full-truth reference comparison.
 
-The value comparison matched all 45,000 inspected selected-truth values and blanks to the reconstructed arrays. Relevant tables are [assignment states](assignment_six_states.tsv), [per-target assignments](assignment_per_target.tsv), and [correction proportions](correction_only.tsv).
+The value comparison matched all 45,000 inspected selected-truth values and blanks to the reconstructed arrays. Relevant tables are [assignment states](assignment_states.tsv), [per-target assignments](assignment_per_target.tsv), and [correction proportions](correction_only.tsv).
 
 ## Statistics
 

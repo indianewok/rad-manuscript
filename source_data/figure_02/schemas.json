@@ -19,7 +19,7 @@
     "missing_value": "empty field; not zero",
     "hash_scope": "plain file bytes"
   },
-  "assignment_six_states.tsv": {
+  "assignment_states.tsv": {
     "fields": [
       "tool",
       "state",
@@ -35,7 +35,19 @@
     "encoding": "UTF-8",
     "delimiter": "tab",
     "missing_value": "empty field; not zero",
-    "hash_scope": "plain file bytes"
+    "hash_scope": "plain file bytes",
+    "rows": 15,
+    "rows_per_tool": 5,
+    "state_values": [
+      "native_correct",
+      "corrected_correct",
+      "corrected_incorrect",
+      "native_incorrect",
+      "unassigned"
+    ],
+    "count_unit": "unique physical read",
+    "denominator": 4993805,
+    "unassigned_definition": "Reads without a retained assignment, including reads excluded for multiple output assignments."
   },
   "correction_only.tsv": {
     "fields": [

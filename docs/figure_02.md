@@ -74,11 +74,7 @@ BLAZE’s discovery filter applies Q15 to the minimum score in an extracted barc
 
 ## Read assignment and correction
 
-Read identifiers link each output to its true source barcode. Comparing the extracted barcode with the final target identifies native and corrected assignments; comparing the target with the source barcode identifies correct and incorrect assignments. Original-read grouping follows these rules:
-
-- RAD excludes every original identifier with multiple emitted records.
-- Flexiplex collapses repeated assignments to the same target, retaining the first raw observation, and excludes identifiers assigned to conflicting targets.
-- BLAZE assigns one outcome to each original identifier in the complete replay records.
+Read identifiers link each output to its true source barcode. Comparing the extracted barcode with the final target identifies native and corrected assignments; comparing the target with the source barcode identifies correct and incorrect assignments.
 
 [Example RAD](../data/examples/figure_02/RAD_assignment_records_example.tsv), [Flexiplex](../data/examples/figure_02/Flexiplex_assignment_records_example.tsv), and [BLAZE](../data/examples/figure_02/BLAZE_assignment_records_example.tsv) records contain raw, target, and truth barcodes. Classify the RAD example with:
 
@@ -87,18 +83,15 @@ python3 scripts/revision/figures_124_steps/classify_assignment_preview.py --tool
   data/examples/figure_02/RAD_assignment_records_example.tsv results/figure2_RAD_records.tsv
 ```
 
-Full duplicate handling is performed by the [assignment audit](../scripts/revision/figures_124_assignment_audit.py). Its small counting checks run with `--fixtures-only`; full rescoring uses the mounted source paths. Full rescoring checks all physical identifiers and 52,076 target/category values.
-
 | State | RAD | Flexiplex | BLAZE |
 |---|---:|---:|---:|
 | Native correct | 667,965 | 463,613 | 640,957 |
 | Corrected correct | 1,944,306 | 1,398,700 | 1,881,358 |
 | Corrected incorrect | 191,519 | 281,696 | 133,074 |
 | Native incorrect | 571 | 381 | 764 |
-| Multiple outputs excluded | 9,048 | 364 | 0 |
-| Unassigned | 2,180,396 | 2,849,051 | 2,337,652 |
+| Unassigned | 2,189,444 | 2,849,415 | 2,337,652 |
 
-Each column sums to 4,993,805. [Six-state counts](../source_data/figure_02/assignment_six_states.tsv), [per-target counts](../source_data/figure_02/assignment_per_target.tsv), and [correction-only proportions](../source_data/figure_02/correction_only.tsv) contain the plotted values. Unselected truth targets are blank in the per-target table; selected targets with no reads in a category have zero. Correction-only denominators include corrected assignments: 2,135,825 for RAD, 1,680,396 for Flexiplex, and 2,014,432 for BLAZE.
+Each column sums to 4,993,805. [Assignment counts](../source_data/figure_02/assignment_states.tsv), [per-target counts](../source_data/figure_02/assignment_per_target.tsv), and [correction-only proportions](../source_data/figure_02/correction_only.tsv) contain the plotted values. Unassigned reads have no retained assignment. Unselected truth targets are blank in the per-target table; selected targets with no reads in a category have zero. Correction-only denominators include corrected assignments: 2,135,825 for RAD, 1,680,396 for Flexiplex, and 2,014,432 for BLAZE.
 
 ## Reproduction commands
 

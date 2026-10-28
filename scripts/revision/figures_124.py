@@ -32,7 +32,7 @@ TOOLS = ('RAD', 'BLAZE', 'Flexiplex')
 COLORS = {'RAD':'#A3392C', 'BLAZE':'#336B87', 'Flexiplex':'#568A55',
           'Flexiplex_f0':'#94A66F', 'Flexiplex_f8':'#568A55'}
 STATES = ('native_correct', 'corrected_correct', 'corrected_incorrect',
-          'native_incorrect', 'excluded_multiple_outputs', 'unassigned')
+          'native_incorrect', 'unassigned')
 NREADS = 4993805
 TIMING = 'scratch_preservation_20260921/files/three_tool_phase_benchmark_20260902_parallel_epyc7543'
 SWEEP = 'LongBench_comps/ScTagger_quality_sweep_20260731'
@@ -40,6 +40,20 @@ EXTENDED = 'scratch_preservation_20260921/files/sctagger_nanopore2023_extended_s
 NATIVE = 'scratch_preservation_20260921/files/sctagger_nanopore2023_unadjusted_20260913'
 REVISION = 'paper_revision_20261022'
 COMPLETE = 'three_tool_whitelist_complete_rageseq_immune_20260901'
+
+
+
+def assignment_state_counts(raw_counts):
+    """Combine discarded multiple-output reads with other unassigned reads.
+
+    Producer checkpoints call discarded reads ``ambiguous``; the independent
+    read-table audit calls them ``excluded_multiple_outputs``. Neither is a
+    separate plotted state. Their tool-specific duplicate rules are unchanged.
+    """
+    counts = {state: int(raw_counts.get(state, 0)) for state in STATES}
+    counts['unassigned'] += int(raw_counts.get('excluded_multiple_outputs', 0))
+    counts['unassigned'] += int(raw_counts.get('ambiguous', 0))
+    return counts
 
 
 def sha(path):
@@ -308,16 +322,16 @@ class Build:
                    'exact truth target set equality',len(truth),truth_path)
         self.check('sctagger_L_truth_size',len(truth)==5000,5000,len(truth),source_arrays['RAD'])
         arrays=[];states=[];correction=[]
-        expected={'RAD':[667965,1944306,191519,571,9048,2180396],
-                  'Flexiplex':[463613,1398700,281696,381,364,2849051],
-                  'BLAZE':[640957,1881358,133074,764,0,2337652]}
+        expected={'RAD':[667965,1944306,191519,571,2189444],
+                  'Flexiplex':[463613,1398700,281696,381,2849415],
+                  'BLAZE':[640957,1881358,133074,764,2337652]}
         for tool in TOOLS:
             source=rows(self.source(source_arrays[tool]))
             self.check(tool+'_unique_selected_targets',len({r['barcode'] for r in source})==len(source),
                        len(source),len({r['barcode'] for r in source}),source_arrays[tool])
             d=canonical[tool]['counts'] if tool!='BLAZE' else blaze
-            counts={s:int(d.get('ambiguous',0) if s=='excluded_multiple_outputs' else d[s]) for s in STATES}
-            self.check(tool+'_six_states',list(counts.values())==expected[tool] and sum(counts.values())==NREADS,
+            counts=assignment_state_counts(d)
+            self.check(tool+'_assignment_states',list(counts.values())==expected[tool] and sum(counts.values())==NREADS,
                        expected[tool],list(counts.values()),source_arrays[tool])
             for state,n in counts.items():
                 states.append(dict(tool=tool,state=state,reads=n,denominator=NREADS,fraction=n/NREADS,count_unit='unique physical read'))
@@ -332,7 +346,7 @@ class Build:
             denom=counts['corrected_correct']+counts['corrected_incorrect']
             for state in ('corrected_correct','corrected_incorrect'):
                 correction.append(dict(tool=tool,state=state,reads=counts[state],denominator=denom,fraction=counts[state]/denom))
-        write_rows(folder/'assignment_six_states.tsv',states)
+        write_rows(folder/'assignment_states.tsv',states)
         write_rows(folder/'assignment_per_target.tsv',arrays)
         write_rows(folder/'correction_only.tsv',correction)
         write_rows(folder/'truth_barcodes.tsv',[dict(barcode=x) for x in sorted(truth)])
@@ -350,8 +364,8 @@ class Build:
                          all(sha(self.out/p)==h for p,h in report.get('expected_table_hashes',{}).items()) and
                          all(r['status']=='passed' for r in report.get('tools',{}).values()) and len(report.get('tools',{}))==3)
         self.task('F2-03','passed' if full_resume else 'ready',
-                  'Complete read-table resumption and all 52,076 selected-target category values match; six-state totals/missingness reconcile.' if full_resume else
-                  'All six-state totals, selected-target arrays, missing-target policy and BLAZE extra targets independently reconcile.',
+                  'Complete read-table resumption and all 52,076 selected-target category values match; five-state totals/missingness reconcile.' if full_resume else
+                  'All five-state totals, selected-target arrays, missing-target policy and BLAZE extra targets independently reconcile.',
                   'Native Prism/statistical gates remain F2-04; raw tool rerun not performed.' if full_resume else
                   'Complete per-read upstream identity comparison remains; retained per-target checkpoint resumption passed.')
         contract=dict(seeds={'nanopore2018_S':20260727,'nanopore2018_L':20260731,'nanopore2023_L':20260731},
@@ -548,10 +562,10 @@ def validate(out):
     sweeps=rows(out/'source_data/figure_02/discovery_metrics.tsv')
     record('discovery_complete_grid',len(sweeps)==144 and len({tuple(r[k] for k in ('dataset','model','condition','tool')) for r in sweeps})==144,len(sweeps))
     for r in sweeps: check_metrics(r,50 if r['dataset']=='S' else 5000)
-    assignments=rows(out/'source_data/figure_02/assignment_six_states.tsv')
+    assignments=rows(out/'source_data/figure_02/assignment_states.tsv')
     for tool in TOOLS:
         rr=[r for r in assignments if r['tool']==tool]
-        record('state_conservation_'+tool,{r['state'] for r in rr}==set(STATES) and sum(int(r['reads']) for r in rr)==NREADS,len(rr))
+        record('state_conservation_'+tool,len(rr)==len(STATES) and {r['state'] for r in rr}==set(STATES) and sum(int(r['reads']) for r in rr)==NREADS,len(rr))
     arrays=rows(out/'source_data/figure_02/assignment_per_target.tsv')
     record('array_unique_keys',len(arrays)==len({(r['tool'],r['barcode']) for r in arrays}),len(arrays))
     for r in arrays:
@@ -634,9 +648,9 @@ def render(out):
             ax.plot([float(r['full_dataset_mean_Q']) for r in group],[float(r['f1']) for r in group],'.-',label=tool,color=COLORS[tool])
         ax.set_title(f'ScTagger-{dataset}: {model}');ax.set_xlabel('Whole-dataset mean base quality');ax.set_ylabel('Barcode discovery F1');ax.set_ylim(-.03,1.03)
     axs[0].legend(frameon=False,fontsize=8);save(fig,2,'quality_discovery_sweeps')
-    states=rows(out/'source_data/figure_02/assignment_six_states.tsv')
+    states=rows(out/'source_data/figure_02/assignment_states.tsv')
     fig,axs=plt.subplots(1,2,figsize=(9,4),constrained_layout=True)
-    statecolors=['#4A6F91','#74A889','#C78350','#B64A49','#888888','#DDDDDD']
+    statecolors=['#4A6F91','#74A889','#C78350','#B64A49','#DDDDDD']
     bottom=np.zeros(3)
     for s,color in zip(STATES,statecolors):
         vals=np.array([float(next(r['fraction'] for r in states if r['tool']==t and r['state']==s)) for t in TOOLS])

@@ -30,14 +30,11 @@ The complete-dataset barcode-quality analyses are described separately for
 
 ## Read assignments
 
-`assignment_six_states.tsv` partitions all 4,993,805 physical reads for each
-tool. RAD excludes IDs with multiple output records. Flexiplex collapses
-repeated assignments to the same target and excludes IDs assigned to different
-targets. Ambiguous BLAZE matcher records remain unassigned.
+`assignment_states.tsv` partitions all 4,993,805 physical reads for each tool
+into five states. Unassigned reads have no retained assignment.
 
 `assignment_per_target.tsv` records selected-list and truth-set membership;
-counts are blank for unselected targets. Recounting the retained read-level
-records reproduces all 52,076 selected-target category values.
+counts are blank for unselected targets.
 
 `correction_only.tsv` uses corrected-correct plus corrected-incorrect reads as
 its denominator. BLAZE selected 15 targets outside the truth set, containing

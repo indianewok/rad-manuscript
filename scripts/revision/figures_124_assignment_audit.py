@@ -11,13 +11,13 @@ import time
 from collections import Counter, defaultdict
 from pathlib import Path
 from source_paths import data_root
-from figures_124 import NREADS, REPO, STATES, TOOLS, rows, sha, write_json, write_rows
+from figures_124 import NREADS, REPO, STATES, TOOLS, rows, sha, write_json, write_rows, assignment_state_counts
 
 FIELDS=('native_correct','corrected_correct','native_incorrect','corrected_incorrect')
 
 
 def count_records(records,tool,truth,selected):
-    """Retain historical tool-specific physical-ID duplicate contracts."""
+    """Count assignments using each tool's physical-read duplicate rules."""
     seen={};per=defaultdict(Counter);counts=Counter();n=0
     for rid,target,source,corrected in records:
         n+=1
@@ -44,7 +44,13 @@ def fixtures():
         raise ValueError('RAD duplicate fixture failed')
     if flex['excluded_multiple_outputs']!=1 or flex['corrected_incorrect']!=1 or flex['native_correct']!=1:
         raise ValueError('Flex same-target collapse fixture failed')
-    return {'RAD_identical_duplicate_excluded':'passed','Flex_same_target_duplicate_collapsed':'passed',
+    for tool, raw, assigned in [('RAD',rad,1),('Flexiplex',flex,2)]:
+        grouped=assignment_state_counts(raw)
+        if set(grouped)!=set(STATES) or len(grouped)!=5 or sum(grouped.values())!=NREADS:
+            raise ValueError(tool+' five-state conservation fixture failed')
+        if grouped['unassigned']!=NREADS-assigned:
+            raise ValueError(tool+' discarded reads were not included in unassigned')
+    return {'five_state_unassigned_includes_discarded_outputs':'passed','RAD_identical_duplicate_excluded':'passed','Flex_same_target_duplicate_collapsed':'passed',
             'different_target_id_excluded_after_later_repeat':'passed'}
 
 
@@ -62,11 +68,11 @@ def main():
     sources={'RAD':b/'sctagger_L_rad_fixed5000_adapter_fix_20260817/independent_validation/record_audit.tsv.gz',
              'Flexiplex':b/'sctagger_flexiplex_audit_20260812/L_flatQ20_audit_reads_barcodes.txt',
              'BLAZE':b/'paper_revision_20261022/prism/blaze2023_assignment_replay/assignment_records.tsv.gz'}
-    expectedstates=rows(out/'source_data/figure_02/assignment_six_states.tsv')
+    expectedstates=rows(out/'source_data/figure_02/assignment_states.tsv')
     report={'command':[sys.executable,*sys.argv],'code_sha256':sha(Path(__file__)),'fixtures':f,'sources':[],
             'scope':'complete retained read-table resumption, not tool execution from raw FASTQ','tools':{},
             'expected_table_hashes':{str(x.relative_to(out)):sha(x) for x in
-                [out/'source_data/figure_02/assignment_per_target.tsv',out/'source_data/figure_02/assignment_six_states.tsv']}}
+                [out/'source_data/figure_02/assignment_per_target.tsv',out/'source_data/figure_02/assignment_states.tsv']}}
     rebuilt=[]
     for tool in ('RAD','Flexiplex','BLAZE'):
         start=time.time();path=sources[tool]
@@ -101,7 +107,8 @@ def main():
             ids=len(seen)
             if ids!=NREADS:raise ValueError('BLAZE input universe incomplete')
         want={r['state']:int(r['reads']) for r in expectedstates if r['tool']==tool}
-        got={s:counts[s] for s in STATES}
+        got=assignment_state_counts(counts)
+        if sum(got.values())!=NREADS:raise ValueError((tool,'assignment count conservation'))
         if got!=want:raise ValueError((tool,'state mismatch',got,want))
         compared=0
         for r in expectedrows:

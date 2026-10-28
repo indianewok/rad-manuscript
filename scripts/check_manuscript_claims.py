@@ -39,11 +39,11 @@ for row in read(timing):
             'threads=16; metric=total_wall_hours; dataset='+row['dataset']+'; tool='+row['tool'],
             'Mean discovery plus assignment time; repetitions are not biological samples.')
 
-assignment = 'source_data/figure_02/assignment_six_states.tsv'
+assignment = 'source_data/figure_02/assignment_states.tsv'
 assignment_rows = read(assignment)
 for tool in ('RAD', 'BLAZE', 'Flexiplex'):
     selected = [r for r in assignment_rows if r['tool'] == tool]
-    assert len(selected) == 6
+    assert len(selected) == 5
     assert sum(int(r['reads']) for r in selected) == 4993805
     for row in selected:
         add('F2_'+tool+'_'+row['state'], '2', row['reads'], 'physical reads',
