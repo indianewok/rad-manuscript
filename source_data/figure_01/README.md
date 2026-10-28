@@ -36,6 +36,4 @@ in `hd_grid_reference_sources.json`. Nonpositive counts have empty transformed
 values and are omitted from logarithmic plots.
 
 A complete spatial-count reconstruction also requires the original positions
-file, count-to-bin generation code and selected Seurat count values. The
-[reproducibility checks](../../docs/validation.md) summarize those input
-requirements.
+file, count-to-bin generation code and selected Seurat count values. The [Figure 1 guide](../../docs/figure_01.md) describes those input requirements.

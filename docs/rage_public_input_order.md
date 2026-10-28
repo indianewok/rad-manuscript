@@ -4,7 +4,7 @@ The ENA submission for **ERR3268991** contains the reads used in the manuscript'
 
 ## Input files
 
-Download the public FASTQ and restore the selected-order checkpoint and its `input_id_validation.json` receipt under `checkpoints/figure_03/rage_matched/counts/` from the [checkpoint package](release_review.md).
+Download the public FASTQ and restore the selected-order checkpoint and its `input_id_validation.json` receipt under `checkpoints/figure_03/rage_matched/counts/`.
 
 | File or fingerprint | Expected identity |
 |---|---|

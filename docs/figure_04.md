@@ -52,16 +52,7 @@ python3 scripts/revision/figures_124_steps/recompute_detection_metrics.py \
 
 A [three-input example](../data/examples/figure_04/three_input_metrics_example.tsv) contains the complete tool triples for ScTagger-S, ScTagger-L, and RAGE-seq TNBC lymph node. Its [expected output](../data/examples/figure_04/three_input_metrics_recomputed.tsv) can be reproduced with the same command and `--expected-inputs 3`.
 
-## Reproduce scores from the barcode lists
-
-The [public identifier collection](../data/figure_04/README.md) contains selected callsets and references for 29 inputs, covering 87 tool observations. The [identifier manifest](../data/figure_04/identifier_manifest.tsv) records hashes and the controlled-access status of the eight Visium inputs. Identical sets are stored once.
-
-```bash
-python3 scripts/revision/figures_124_steps/rescore_public_identifiers.py \
-  --output results/figure4_identifier_rescore.tsv
-```
-
-The scorer verifies each file hash and reconstructs TP, FP, and FN directly from set membership. All 87 public observations match the saved counts exactly, with metric differences below 1e-9. The output also includes the 24 controlled-access aggregate observations.
+## Construct the immune reference
 
 The immune-reference example follows annotation labels through reference selection and scoring:
 

@@ -69,7 +69,7 @@ The [expected component counts](../data/examples/figure_05/splitseq/component_bo
 
 ## Reproduce the complete comparison
 
-Restore the RAD and component Flexiplex assignment checkpoints using the [data-package instructions](release_review.md), then run:
+Restore the RAD and component Flexiplex assignment checkpoints under `checkpoints/figure_05/`, then run:
 
 ```bash
 python3 scripts/figure_05/replay_splitseq.py --root .

@@ -32,9 +32,8 @@ directories contain selected records, extraction rules, source hashes and
 expected outputs. Run the numbered steps in a figure guide to follow the
 calculation from these inputs.
 
-**Saved checkpoints.** Restore the files listed in the figure's checkpoint
-manifest, verify their SHA-256 hashes, and run the linked counting or metric
-scripts. The `scripts/revision/` commands rebuild the full checkpoint tables.
+**Saved checkpoints.** Restore the required saved files, verify their SHA-256
+hashes, and run the linked counting or metric scripts. The `scripts/revision/` commands rebuild the full checkpoint tables.
 
 **Raw reads.** Follow the producing-run commands in the figure guide. Each run
 requires its specified raw input, reference, barcode list and software version.
@@ -42,28 +41,18 @@ requires its specified raw input, reference, barcode list and software version.
 ## Restore checkpoint files
 
 Large FASTQ, BAM, assignment-ledger and sparse-matrix files are stored in
-`checkpoints/`, which is excluded from Git. The [data-package guide](docs/release_review.md)
-lists the archives and their contents. After obtaining an archive and its
-SHA-256 manifest, verify the archive and restore its checkpoint payload from the
-repository root. For example:
+`checkpoints/`, which is excluded from Git. Restore the required inputs under
+the paths used by each figure's scripts and verify their SHA-256 hashes.
 
-```bash
-shasum -a 256 /path/to/rad-manuscript-checkpoints-05.tar.gz
-tar -tzf /path/to/rad-manuscript-checkpoints-05.tar.gz
-tar -xzf /path/to/rad-manuscript-checkpoints-05.tar.gz \
-  --strip-components=1 --wildcards 'rad-manuscript/checkpoints/*'
-```
-
-Use the corresponding archive for Figures 3, 6/7, Visium HD or RAGE-seq. Figure
-manifests give the restored relative paths and file hashes. RAGE-seq raw-read
-runs require the [input-order reconstruction](docs/rage_public_input_order.md),
-which restores the read order used in the benchmark from the public ENA file.
+RAGE-seq raw-read runs require the
+[input-order reconstruction](docs/rage_public_input_order.md), which restores
+the read order used in the benchmark from the public ENA file.
 
 ## Portable input locations
 
 Files included in Git use paths relative to the repository root. External
 records use `external_data/` as a location label; those files are obtained
-separately using the dataset accession, filename and SHA-256 in the manifests.
+separately using the dataset accession, filename and SHA-256.
 Configure archive locations with these variables, or a script's input options:
 
 | Variable | Default relative to the repository |
@@ -91,4 +80,4 @@ manuscript assignment runs.
 
 Adapt the Slurm templates to your cluster's account and CPU-only partition.
 Set explicit CPU, memory and time requests, and verify the selected nodes'
-hardware. The figure registries record the producing runs' thread settings.
+hardware. The figure guides record the producing runs' thread settings.

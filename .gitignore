@@ -75,3 +75,7 @@ validation/*_[0-9]*.err
 /manifests/*
 !/manifests/datasets.tsv
 /validation/
+/docs/validation.md
+/docs/release_review.md
+/data/README.md
+/data/figure_04/

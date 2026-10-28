@@ -17,10 +17,8 @@ ScMixology2 combines native RAD calls with a BLAZE expected-500 selector replay
 and a Flexiplex filter replay on common RAD counts. All three sets are rescored
 against the reference, and RAD calls are checked against the retained RDS.
 
-Complete public barcode lists and references are in
-[data/figure_04](../../data/figure_04/README.md). The portable scorer reproduces
-all 87 public input–tool comparisons. The other 24 rows contain aggregate
-metrics for controlled-access Visium inputs.
+The table contains 87 observations from public inputs and 24 aggregate
+observations from controlled-access Visium inputs.
 
 ## Paired metrics and input characteristics
 

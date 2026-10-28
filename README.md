@@ -27,13 +27,9 @@ the calculations that produced them.
 from source tables, saved checkpoints or raw reads. The figure guides specify
 the software versions and parameters used for each experiment.
 
-- [Data guide](data/README.md): file formats, identifiers and acquisition sources.
 - [Dataset registry](manifests/datasets.tsv): dataset IDs, families and accessions.
 - [Examples](data/examples/): selected source records with extraction rules and expected outputs.
 - [Source tables](source_data/): complete tables used to calculate the plotted metrics.
-- [Figure 4 barcode lists](data/figure_04/README.md): tool and reference lists for the 29 public inputs.
-- [Reproducibility checks](docs/validation.md): numerical checks and the inputs needed to repeat each analysis.
-- [Data packages](docs/release_review.md): checkpoint archives and their contents.
 
 The [diagnostic Flexiplex build](vendor/flexiplex-audit/README.md) records the
 barcode sequence before correction. Its source, patch, build instructions and

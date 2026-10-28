@@ -7,9 +7,11 @@ from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
-pages = [ROOT/'README.md', ROOT/'SETUP.md', ROOT/'data/README.md']
+pages = [ROOT/'README.md', ROOT/'SETUP.md']
 for directory in ('docs', 'data', 'source_data', 'figures', 'vendor/flexiplex-audit'):
     pages.extend((ROOT/directory).rglob('*.md'))
+tracked = set(subprocess.check_output(['git', 'ls-files', '-z'], cwd=str(ROOT)).decode().split('\0'))
+pages = [page for page in pages if page.relative_to(ROOT).as_posix() in tracked]
 checks = []
 for page in sorted(set(pages)):
     text = re.sub(r'```.*?```', '', page.read_text(), flags=re.S)
