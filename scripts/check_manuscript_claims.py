@@ -159,11 +159,14 @@ for tool in ('RAD', 'BLAZE', 'Flexiplex'):
             'Existing concordance statistic; no P value or new test family is introduced.')
 
 destination = ROOT/'manifests/results_claims.tsv'
+destination.parent.mkdir(parents=True, exist_ok=True)
 with destination.open('w', newline='') as handle:
     writer = csv.DictWriter(handle, fieldnames=list(claims[0]), delimiter='\t')
     writer.writeheader()
     writer.writerows(claims)
-(ROOT/'validation/manuscript_claims.json').write_text(json.dumps(
+report_path = ROOT/'validation/manuscript_claims.json'
+report_path.parent.mkdir(parents=True, exist_ok=True)
+report_path.write_text(json.dumps(
     dict(status='passed', claims=len(claims), new_inferential_tests=0,
          scope='Figures 1–7 selected numeric claims; raw execution is separately validated; unresolved receptor and Figure 5H claims excluded'), indent=2)+'\n')
 print('Wrote', len(claims), 'traceable current claims to', destination)

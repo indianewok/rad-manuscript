@@ -8,8 +8,7 @@ identifiers used in those steps.
 |---|---|
 | [`examples/`](examples/) | Selected source records, extraction rules, hashes and expected outputs |
 | [`../source_data/`](../source_data/) | Complete plotting and metric tables with schemas |
-| [`../manifests/datasets.tsv`](../manifests/datasets.tsv) | Dataset IDs, families and accessions |
-| `../manifests/data_files.tsv` (generated locally) | Columns, row counts, file sizes and SHA-256 hashes |
+| [Dataset registry](../manifests/datasets.tsv) | Dataset IDs, families and accessions |
 | `../checkpoints/` | Large read ledgers, sparse matrices and reference files restored from the checkpoint archives |
 
 ## File formats and identifiers
@@ -38,9 +37,7 @@ reports both record counts and unique variant keys.
 **Plot tables.** Input, barcode and gene keys identify observations. Local
 schemas define numerators, denominators, transformations and missing values.
 Zero represents an observed zero; empty or null fields represent missing or
-undefined values. The file inventory's `header_present` field identifies tables
-without headers, including barcode lists and `samtools idxstats` output. The
-inventory supplies descriptive column names for those files.
+undefined values. Barcode lists and `samtools idxstats` output have no header row.
 
 ## Dataset sources
 

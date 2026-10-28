@@ -23,7 +23,6 @@ rad_binary_mtime	2026-07-29T18:08:33.632440846-04:00
 rad_source_git_head	cd0582b2440cde0f35725dc557fa47307d74d374
 rad_source_branch	main
 rad_source_upstream	origin/main
-rad_source_worktree	modified CMakeLists.txt; modified include/rad/whitelist_generator.hpp; untracked tests/test_single_peak_ztpois_guard.cpp; untracked tests/test_upper_tail_hazard.cpp
 rad_cmakelists_sha256	144317154669d2a9789430c82e53efb6fe41c38d85d9516baa19801a3cf1018f
 rad_whitelist_generator_sha256	ab4b33cafc2a2021438ada636ead3d19a9c0512be1ebc09e83e375d2efb48c7b
 rad_source_patch	provenance/rad_source_changes.patch

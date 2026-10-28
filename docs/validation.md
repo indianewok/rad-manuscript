@@ -1,8 +1,8 @@
 # Reproducibility checks
 
 The checks below compare source records, intermediate counts and calculated
-metrics with the retained analysis outputs. Detailed reports, input hashes and
-commands are linked from each figure guide.
+metrics with the retained analysis outputs. Each figure guide describes its
+inputs and commands.
 
 | Figure | Completed checks | Additional inputs needed for a full reconstruction |
 |---|---|---|
@@ -14,15 +14,14 @@ commands are linked from each figure guide.
 | [6](figure_06.md) | Verified donor and CellSNP contents, 12,012 reference identities, BAM/BAI hashes, index/header consistency and fixed-coordinate comparisons | Raw alignment, CellSNP and Vireo reruns use the inputs and commands in the figure guide |
 | [7](figure_07.md) | Checked 57,885,606 RAD assignment rows and the count matrices; matched all 24,405 effects and P values; recalculated common-gene BH values and all 594 threshold combinations | Emitted FASTQ and read-to-gene files, segment/orientation identifiers and the selected panel C fit |
 
-The [task registry](../manifests/task_status.tsv) records the corresponding
-analysis steps and their dependencies. Controlled-access Figure 4 inputs retain
+Controlled-access Figure 4 inputs retain
 24 aggregate metric rows; the public barcode-list comparisons can be rerun from
 files in this repository.
 
 ## Source-table rendering
 
-The [clean-render report](../validation/clean_render.json) records calculations
-and plots produced in a separate output directory with the pinned
+The rendering check produces calculations and plots in a separate output
+directory with the pinned
 [Python 3.11 environment](../environments/render-python311.lock.txt). File-access
 tracing verifies that the scripts read the declared repository inputs. To repeat
 those checks:
@@ -32,23 +31,15 @@ python3 scripts/check_render_isolation.py \
   --python /path/to/render-environment/bin/python --groups 124 3 5 567
 ```
 
-The report records the script versions, input hashes and generated files for
-each group. Figure images exported from the original Prism projects are shown
-in the figure guides.
-
 ## Data and numerical checks
 
-The [numerical-claim registry](../manifests/results_claims.tsv) links reported
-values to their units, denominators, selection rules and source hashes. The file
-inventory records the schema and identity of each source table. Rebuild both
-with:
+Check the reported numerical results and source-table schemas with:
 
 ```bash
 python3 scripts/check_manuscript_claims.py
 python3 scripts/check_data_inventory.py
 ```
 
-The [Flexiplex build check](../validation/software/flexiplex_audit_build.json)
-compares upstream and diagnostic builds with the pinned binary on a four-read
+The Flexiplex build check compares upstream and diagnostic builds with the pinned binary on a four-read
 fixture. It verifies the pre-correction barcode output used by the assignment
 audits.

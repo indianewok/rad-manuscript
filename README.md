@@ -32,7 +32,6 @@ the software versions and parameters used for each experiment.
 - [Examples](data/examples/): selected source records with extraction rules and expected outputs.
 - [Source tables](source_data/): complete tables used to calculate the plotted metrics.
 - [Figure 4 barcode lists](data/figure_04/README.md): tool and reference lists for the 29 public inputs.
-- Generate a local file inventory with `python3 scripts/check_data_inventory.py`.
 - [Reproducibility checks](docs/validation.md): numerical checks and the inputs needed to repeat each analysis.
 - [Data packages](docs/release_review.md): checkpoint archives and their contents.
 
@@ -47,5 +46,4 @@ Methods and figure descriptions are grouped by analysis: [Figures 1, 2 and 4](do
 The [figure legends](docs/current_figure_legends.md) describe each panel.
 
 Citation information is in [CITATION.cff](CITATION.cff). Repository code is
-covered by the [MIT license](LICENSE); third-party software notices are in
-[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+covered by the [MIT license](LICENSE).

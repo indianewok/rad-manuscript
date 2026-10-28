@@ -42,10 +42,8 @@ then reads each member back and checks its bytes against the manifest.
 ## Archival metadata
 
 [Record 20189813](https://zenodo.org/records/20189813) identifies the manuscript
-preprint with DOI **10.64898/2026.05.29.728810**. The
-[data-package metadata](../manifests/zenodo_metadata.draft.json) records that DOI
-as a related publication. A separate archival identifier for these analysis
-packages has not yet been assigned.
+preprint with DOI **10.64898/2026.05.29.728810**. A separate archival identifier
+for these analysis packages has not yet been assigned.
 
 The repository contains aggregate metrics for the eight EGA-controlled Visium
 inputs. Their raw reads are obtained through the access route in the

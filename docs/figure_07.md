@@ -8,8 +8,6 @@ Panels A and C show the earlier analysis. The source tables and methods below us
 
 ## Software and parameters
 
-The [run table](../manifests/figures_567_tool_parameters.tsv) lists versions, commits, threads, chemistry and saved commands. [Run evidence](../manifests/figures_567_run_evidence.tsv) records hashes, references, seeds and execution limitations.
-
 | Stage | Software and settings | Source record |
 |---|---|---|
 | RAD assignments | RAD 1.0.2, commit `4acbe004ba11b150d6832395452632f367a6e6c1`; 10x 3v3.1, offensive correction, generated/whitelist edit distance 2, minimum read length 85, chunk size 5,000, 60 RAD and four pigz threads; all emitted records retained | [Run metadata](../source_data/figure_07/provenance/RAD_run_metadata.txt), [command](../source_data/figure_07/provenance/RAD_demux_command.txt) |
@@ -28,7 +26,7 @@ Each RAD concatemer segment inherits the gene assigned to its original read. The
 
 The retained RAD assignment ledger contains 57,885,606 emitted rows: 49,555,699 exact-barcode rows and 8,329,907 corrected-barcode rows. Each row contains original read ID, cell barcode, UMI, raw barcode and correction flag. The ledger covers all 12,423 selected barcodes and retains 12-base UMIs. Its SHA-256 is `a5dc369445826fdd36541a301b1b85448438fb52d351ce8883a12ef456457c48`.
 
-[Ten example assignments](../data/examples/figure_07/RAD_emitted_assignment_rows.tsv), their [extraction receipt](../data/examples/figure_07/assignment_extraction.json), and [per-barcode row counts](../source_data/figure_07/RAD_assignment_rows_by_barcode.tsv) connect individual records to the complete stream. The [access manifest](../manifests/figures_567_assignment_access.tsv) locates the 2.36 GB compressed checkpoint; [validation](../validation/figures_567_assignment_recovery.json) covers its hash, gzip integrity, schema, counts and barcode membership.
+[Ten example assignments](../data/examples/figure_07/RAD_emitted_assignment_rows.tsv), their [extraction receipt](../data/examples/figure_07/assignment_extraction.json), and [per-barcode row counts](../source_data/figure_07/RAD_assignment_rows_by_barcode.tsv) connect individual records to the complete stream.
 
 ## Molecule matrices and normalization
 
@@ -40,7 +38,7 @@ Matrix Market files store a one-based gene index, cell index and integer molecul
 | BLAZE | 44,807 × 10,001 | 17,301,003 | 27,350,119 |
 | Flexiplex | 45,939 × 12,101 | 21,582,352 | 35,106,495 |
 
-The [checkpoint manifest](../manifests/figures_567_staged_checkpoints.tsv) lists the matrices and labels stored under `checkpoints/figure_07/`. The [cohort table](../source_data/figure_07/native_positive_depth_cohorts.tsv) records cell IDs, named genotypes and complete-library depths for 9,404 RAD, 6,478 BLAZE and 7,125 Flexiplex nuclei.
+The matrices and labels are stored under `checkpoints/figure_07/`. The [cohort table](../source_data/figure_07/native_positive_depth_cohorts.tsv) records cell IDs, named genotypes and complete-library depths for 9,404 RAD, 6,478 BLAZE and 7,125 Flexiplex nuclei.
 
 Counts are normalized to 10,000 molecules per nucleus using each nucleus's complete library total before gene filtering, then transformed as `log2(1 + CP10K)`. For example, the retained RAD entry for PTPRJ (`ENSG00000149177.15`) in barcode `CATACCCAGCGTGAGT` contains two molecules in a 2,400-molecule library:
 
@@ -93,7 +91,7 @@ python3 scripts/figure_07/score_directional_calls.py \
   --input results/figure07_adjusted.tsv --output results/figure07_thresholds.tsv
 ```
 
-The output contains 24,405 adjusted rows and 594 directional threshold rows. Counts match the [deposited threshold grid](../source_data/figure_07/threshold_grid.tsv) exactly, and metrics match within 1e-12. The [direct-test comparison](../validation/figures_567_direct_test_lineage.json) verifies every retained P value and effect against the native test output; its [script](../scripts/figure_07/check_direct_test_provenance.py) records both source hashes.
+The output contains 24,405 adjusted rows and 594 directional threshold rows. Counts match the [deposited threshold grid](../source_data/figure_07/threshold_grid.tsv) exactly, and metrics match within 1e-12. The [direct-test comparison script](../scripts/figure_07/check_direct_test_provenance.py) checks every retained P value and effect against the native test output.
 
 ## Connect the tests to panels A–D
 
@@ -113,4 +111,4 @@ python3 scripts/figure_07/render_source_proofs.py
 
 ## Additional source records
 
-Reconstruction from emitted sequences requires the emitted FASTQ and frozen original-read-to-gene table listed in the [source manifest](../source_data/figure_07/RAD_emitted_segment_source_manifest.tsv). The available assignment ledger normalizes orientation and concatemer suffixes and stores barcode/UMI assignments keyed to original reads. Reproducing the saved Panel C regression annotations requires its executed fit specification. The [checkpoint checks](../validation/figures_567_checkpoint_checks.tsv) record the available matrices, assignments and test outputs.
+Reconstruction from emitted sequences requires the emitted FASTQ and frozen original-read-to-gene table listed in the [source manifest](../source_data/figure_07/RAD_emitted_segment_source_manifest.tsv). The available assignment ledger normalizes orientation and concatemer suffixes and stores barcode/UMI assignments keyed to original reads. Reproducing the saved Panel C regression annotations requires its executed fit specification.

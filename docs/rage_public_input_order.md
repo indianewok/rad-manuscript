@@ -14,7 +14,7 @@ Download the public FASTQ and restore the selected-order checkpoint and its `inp
 | Ordered canonical records | SHA-256 `a5f866d6180b46e0acbd3aa2526364060c152380714b00ec0ed74b8c1e8c24af` |
 | Exact decompressed FASTQ | SHA-256 `2f4f7e469795b23c15209547909ec791e937058497328ba69d0855274eb380f7` |
 
-The [acquisition receipt](../validation/rage_public_acquisition.json) verifies ENA's published MD5. The [complete comparison](../validation/rage_public_payload_comparison.json) records the matching canonical and decompressed FASTQ hashes. The [identity script](../scripts/revision/figure_3_fastq_identity.py) defines the fingerprints.
+The [identity script](../scripts/revision/figure_3_fastq_identity.py) defines the canonical and decompressed FASTQ fingerprints.
 
 ## Download the public FASTQ
 
@@ -30,7 +30,7 @@ The downloader retrieves [ENA's submitted file](https://ftp.sra.ebi.ac.uk/vol1/r
 
 ## Restore the benchmark read order
 
-The reconstruction requires Python 3, GNU `sort` and `pigz`. Allow 24 GB RAM and at least 100 GB of temporary disk space. The [cluster template](../scripts/revision/rage_public_reorder.sbatch) requests six CPUs for verification. The complete verification took about 11 minutes with Python 3.6.8, GNU sort 8.30 and pigz 2.4; writing and compressing the output requires additional time. The [execution record](../validation/rage_public_reorder_submission.json) retains the command and script hashes.
+The reconstruction requires Python 3, GNU `sort` and `pigz`. Allow 24 GB RAM and at least 100 GB of temporary disk space. The [cluster template](../scripts/revision/rage_public_reorder.sbatch) requests six CPUs for verification. The complete verification took about 11 minutes with Python 3.6.8, GNU sort 8.30 and pigz 2.4; writing and compressing the output requires additional time.
 
 ```bash
 python3 scripts/figure_03/reorder_public_fastq.py \
@@ -62,4 +62,4 @@ Canonical records are encoded as `uint64be(ID byte length) + ID + uint64be(seque
 python3 scripts/revision/rage_public_reorder_fixtures.py
 ```
 
-The [fixture results](../validation/rage_public_reorder_fixtures.json) cover reversed order, changed header annotations, duplicate/missing/extra IDs, altered sequence or quality, malformed FASTQ, edited order files and external merging. The complete dataset is checked against the fingerprints above before demultiplexing.
+The complete dataset is checked against the fingerprints above before demultiplexing.

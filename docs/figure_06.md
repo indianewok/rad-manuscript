@@ -6,11 +6,9 @@ Figure 6 measures recovery of cell-line identity from the LongBench single-nucle
 
 ## Software and parameters
 
-The [run table](../manifests/figures_567_tool_parameters.tsv) lists versions, commits, threads, chemistry and saved commands. [Run evidence](../manifests/figures_567_run_evidence.tsv) records hashes, references, seeds and execution limitations.
-
 | Stage | Software and settings | Source record |
 |---|---|---|
-| RAD demultiplexing | RAD 1.0.2, commit `920addacdbf40b815e13a146226e8f4b14a58aaf`, with empty-stream/edlib-null guards; 10x 3v3.1, offensive correction, generated/whitelist edit distance 2, chunk size 5,000, 32 threads; 12,423 selected barcodes | [Metadata](../source_data/figure_06/provenance/RAD_run_metadata.txt), [command](../source_data/figure_06/provenance/RAD_demux_command.txt) |
+| RAD demultiplexing | RAD 1.0.2, commit `920addacdbf40b815e13a146226e8f4b14a58aaf`; 10x 3v3.1, offensive correction, generated/whitelist edit distance 2, chunk size 5,000, 32 threads; 12,423 selected barcodes | [Metadata](../source_data/figure_06/provenance/RAD_run_metadata.txt), [command](../source_data/figure_06/provenance/RAD_demux_command.txt) |
 | BLAZE demultiplexing | BLAZE 2.5.0; `--force-cells 10000 --threads 48 --minimal_stdout`, 3v3 default; 10,001 selected barcodes; `PYTHONHASHSEED=UNSET` | [Metadata](../source_data/figure_06/provenance/BLAZE_run_metadata.txt), [command](../source_data/figure_06/provenance/BLAZE_demux_command.txt) |
 | Flexiplex demultiplexing | Flexiplex 1.02.6 audit build `d84c8ae4f3865052f2b5ecec816949b94682f302`; `-d 10x3v3 -f 8 -e 2 -k SELECTED -p 16`; 12,101 selected barcodes | [Execution metadata](../source_data/figure_06/provenance/Flexiplex_run_metadata.txt) |
 | Native alignment | FLAMES 2.0.1, minimap2 2.28-r1209, samtools 1.21; GENCODE v44; `-ax splice -y -t 32 -k14 --secondary=no --seed 2023 --junc-bed … --junc-bonus 1` | BAM headers: [RAD](../source_data/figure_06/RAD_alignment_header.sam), [BLAZE](../source_data/figure_06/BLAZE_alignment_header.sam), [Flexiplex](../source_data/figure_06/Flexiplex_alignment_header.sam) |
@@ -32,7 +30,7 @@ The fixed donor VCF contains 360,814 records and 360,809 unique chromosome/posit
 | BLAZE | 118,378 | 10,001 |
 | Flexiplex | 129,712 | 12,101 |
 
-The [matrix summary](../source_data/figure_06/cellsnp_matrix_summary.tsv) and [checkpoint checks](../validation/figures_567_checkpoint_checks.tsv) cover dimensions, integer counts, allele identities and barcode order. The donor VCF, index and matrices are stored under `checkpoints/figure_06/`; the [checkpoint manifest](../manifests/figures_567_staged_checkpoints.tsv) records their sizes and hashes.
+The [matrix summary](../source_data/figure_06/cellsnp_matrix_summary.tsv) gives the matrix dimensions and counts. The donor VCF, index and matrices are stored under `checkpoints/figure_06/`.
 
 The [data preview](../data/examples/figure_06/PREVIEW.md) follows individual allele counts through genotype assignment and UMAP placement. For example, chr1:14464 A/T has one alternate-allele molecule in barcode `AAAGTGACAAACGGCA`. Both query and reference assign that nucleus to H69, at fixed coordinates `(3.4304353354217, 5.11612037766271)`. The [joined records](../data/examples/figure_06/allele_to_genotype.tsv), [extraction receipt](../data/examples/figure_06/allele_extraction.json) and [extraction script](../scripts/figure_06/extract_allele_examples.py) retain each matrix row and cell column.
 
@@ -81,8 +79,8 @@ The source-table plotting command is:
 python3 scripts/figure_06/render_source_proofs.py
 ```
 
-It uses matplotlib and numpy and reads the portable Figure 6 tables. The [BAM checks](../validation/figures_567_bam_checks.tsv) and [producer manifest](../manifests/figures_567_selected_provenance.tsv) provide upstream file identities.
+It uses matplotlib and numpy and reads the portable Figure 6 tables.
 
 ## Statistical records
 
-The figure specifies ANOVA with Dunnett comparisons. Reproducing those annotations requires the executed analysis settings linked to the current Panel C counts. The retained candidate Prism analysis uses a different count table, as recorded in the [analysis-binding check](../validation/figures_567_native_anova_binding.json). Cell-line strata come from a single mixed library.
+The figure specifies ANOVA with Dunnett comparisons. Reproducing those annotations requires the executed analysis settings linked to the current Panel C counts. The retained candidate Prism analysis uses a different count table. Cell-line strata come from a single mixed library.

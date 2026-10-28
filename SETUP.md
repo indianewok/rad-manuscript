@@ -21,9 +21,8 @@ checks, limit numerical-library threads with:
 export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
 ```
 
-The original HPC checks used system Python 3.6.8. Producing-run versions for RAD,
-BLAZE, Flexiplex and other analysis tools are recorded separately in each figure
-guide.
+Tool versions for RAD, BLAZE, Flexiplex and other analysis tools are recorded
+in each figure guide.
 
 ## Choose the starting data
 
@@ -74,10 +73,7 @@ Configure archive locations with these variables, or a script's input options:
 | `RAD_SCRATCH_ROOT` | `external_data/reviewer_comment_data/scratch_preservation_20260921/files` |
 | `RAD_SCRATCH_NFS_ROOT` | Same as `RAD_SCRATCH_ROOT` |
 
-Source tables and small examples work without external files. Locations in
-copied command/log records are normalized; original-source hashes identify the
-producer records. Run `python3 scripts/check_data_inventory.py` to generate the
-local file inventory with checksums for the deposited copies.
+Source tables and small examples work without external files.
 
 ScTagger's [generation contract](source_data/figure_02/quality_generation_contract.json)
 retains the exact effective quality-tape seeds. Use the

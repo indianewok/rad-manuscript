@@ -47,7 +47,9 @@ def main():
         'scope': 'Git-indexed text and gzip text; local archives and Git history excluded',
         'failures': failures,
     }
-    (ROOT / 'validation/portable_paths.json').write_text(
+    report_path = ROOT / 'validation/portable_paths.json'
+    report_path.parent.mkdir(parents=True, exist_ok=True)
+    report_path.write_text(
         json.dumps(report, indent=2) + '\n'
     )
     print(json.dumps(report, indent=2))

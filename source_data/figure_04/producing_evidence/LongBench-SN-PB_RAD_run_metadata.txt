@@ -4,7 +4,6 @@ input_resolved=external_data/reviewer_comment_data/scratch_preservation_20260921
 input_size_bytes=69255302528
 rad_version=1.0.2
 rad_commit=920addacdbf40b815e13a146226e8f4b14a58aaf
-rad_patch_label=empty_stream_guard_plus_edlib_null_guard
 rad_binary_sha256=b2feda73a4ae3acf705b724013665af35dff2534f42a568db3f168ca958a2c9e
 threads=32
 scan_max_error=0.1

@@ -10,11 +10,11 @@ The [sample inventory](../source_data/figure_04/sample_inventory.tsv) identifies
 
 Known source barcodes define the synthetic references. Biological inputs use matched filtered short-read barcodes or published spatial masks. For the RAGE-seq TNBC lymph node, the reference comprises deposited short-read barcodes annotated as `T_cell*`, `B_cell*`, or `T_B_doublet`, with `in_deposited_shortread_list=True`. This gives 5,978 reference barcodes: 4,255 T-cell, 1,637 B-cell, and 86 T/B-doublet barcodes. The RAGE-seq cell-line input uses its own 4,505-barcode reference.
 
-ScMixology2 combines a native RAD callset with a BLAZE selector replay on retained BLAZE counts and a Flexiplex filter replay on the common RAD count table. Its matched Cell Ranger reference contains 248 barcodes. RAD selected 279 barcodes, including 233 reference members; BLAZE selected 188, all in the reference; Flexiplex selected 184, including 183 reference members. The [ScMixology2 comparison](../validation/figures_124_scmix_rescore.json) records these sets and transformations.
+ScMixology2 combines a native RAD callset with a BLAZE selector replay on retained BLAZE counts and a Flexiplex filter replay on the common RAD count table. Its matched Cell Ranger reference contains 248 barcodes. RAD selected 279 barcodes, including 233 reference members; BLAZE selected 188, all in the reference; Flexiplex selected 184, including 183 reference members.
 
 ## Software and parameters
 
-The [run table](../manifests/figures_124_tool_parameters.tsv) lists each input’s versions, commits, threads, chemistry and saved commands. [Run evidence](../manifests/figures_124_run_evidence.tsv) records hashes, references, seeds and execution limitations. The [producer records](../source_data/figure_04/producing_evidence/) and [source hashes](../manifests/figures_124_parameter_evidence.tsv) identify the supporting files.
+The [producer records](../source_data/figure_04/producing_evidence/) contain the commands and software identities for each input.
 
 | Input group | RAD | BLAZE | Flexiplex and key settings |
 |---|---|---|---|
@@ -27,9 +27,9 @@ The [run table](../manifests/figures_124_tool_parameters.tsv) lists each input�
 | Eight Visium inputs | `5cf1ee6`; error 0.30, Visium 3′ layout | 2.6.0a0; expected cells 2,500 | 1.02.6; 3v2, flank distance 8, selected-list barcode distance 2 |
 | ScMixology2 | `2c5a7936e630ccc46548c133855b4bfb4e50f058`; error 0.3, 3v3, chunks of 10,000, 24 threads | Expected-cell-500 selector replay | 1.02.6 filter replay on common counts |
 
-LongBench used RAD `920addacdbf40b815e13a146226e8f4b14a58aaf` with empty-stream and edlib guards, 32 threads, and scan error 0.1; BLAZE 2.5.0 used 48 threads, expected cells 5,000 for single cells and forced cells 10,000 for nuclei. PromethION used modified RAD `cd0582b`, scan error 0.1 and 32 threads; BLAZE 2.6.0a0 expected 500 cells; Flexiplex 1.02.6 used flank distance 8. P8-WTA used RAD `b02ff24110fe45873811d5389d2e58c338045f05`. LeBrigand combined two accessions and used RAD `920adda_edlibfix`, BLAZE expected cells 918, and Flexiplex flank distance 8, with 12 threads.
+LongBench used RAD `920addacdbf40b815e13a146226e8f4b14a58aaf`, 32 threads, and scan error 0.1; BLAZE 2.5.0 used 48 threads, expected cells 5,000 for single cells and forced cells 10,000 for nuclei. PromethION used RAD `cd0582b`, scan error 0.1 and 32 threads; BLAZE 2.6.0a0 expected 500 cells; Flexiplex 1.02.6 used flank distance 8. P8-WTA used RAD `b02ff24110fe45873811d5389d2e58c338045f05`. LeBrigand combined two accessions and used RAD `920addacdbf40b815e13a146226e8f4b14a58aaf`, BLAZE expected cells 918, and Flexiplex flank distance 8, with 12 threads.
 
-Unrecorded commands are marked unavailable in the run table; the supporting run evidence identifies other missing fields. They include the original Measles P7/P8 RAD build, some Tilgner and LongBench discovery software identities, and the original SeqKit version and full command. Four original Visium RAD split callsets also require recovery; their aggregate metrics and recorded hashes are retained.
+Unrecorded fields include the original Measles P7/P8 RAD build, some Tilgner and LongBench discovery software identities, and the original SeqKit version and full command. Four original Visium RAD split callsets also require recovery; their aggregate metrics and recorded hashes are retained.
 
 ## Barcode-set scoring
 
@@ -61,7 +61,7 @@ python3 scripts/revision/figures_124_steps/rescore_public_identifiers.py \
   --output results/figure4_identifier_rescore.tsv
 ```
 
-The scorer verifies each file hash and reconstructs TP, FP, and FN directly from set membership. All 87 public observations match the saved counts exactly, with metric differences below 1e-9. The output also includes the 24 controlled-access aggregate observations. [Identifier lineage](../validation/figures_124_public_identifier_export.json) records source hashes and membership filters.
+The scorer verifies each file hash and reconstructs TP, FP, and FN directly from set membership. All 87 public observations match the saved counts exactly, with metric differences below 1e-9. The output also includes the 24 controlled-access aggregate observations.
 
 The immune-reference example follows annotation labels through reference selection and scoring:
 
@@ -96,4 +96,4 @@ python3 scripts/revision/figures_124.py validate --output-root .
 python3 scripts/revision/figures_124.py render --output-root .
 ```
 
-The [independent checks](../validation/figures_124_native_independent_validation_summary.json), [Tilgner comparisons](../validation/figures_124_tilgner_rescore.json), and [path mappings](../validation/figures_124_native_master_path_recovery.json) record the source-table validation. Statistical annotations are retained in the Prism figure; their original analysis settings are required to reproduce those annotations.
+Statistical annotations are retained in the Prism figure; their original analysis settings are required to reproduce those annotations.

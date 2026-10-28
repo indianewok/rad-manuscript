@@ -93,6 +93,3 @@ python scripts/figure_02/validate_full_barcode_quality.py \
   --output results/full_barcode_quality/full_quality_with_blaze_f1.tsv \
   --report results/full_barcode_quality/validation.json
 ```
-
-The [validation report](../../../validation/figure_02_full_barcode_quality.json)
-records the comparisons and SHA-256 hashes of the inputs and outputs.

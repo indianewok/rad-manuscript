@@ -72,4 +72,6 @@ validation/*_[0-9]*.err
 /external_data/
 
 /results/
-/manifests/data_files.tsv
+/manifests/*
+!/manifests/datasets.tsv
+/validation/

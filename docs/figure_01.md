@@ -14,7 +14,7 @@ The [algorithm crosswalk](../source_data/figure_01/algorithm_crosswalk.tsv) link
 | BLAZE | 2.5.0; `11994f9c12a6664dfe1679576aaca19b6bfd35c1` | Detection: `--force-cells 10000` for SN-ONT and `--expect-cells 5000` for SC-PB; 3v3, minimum Q15, edit distance 2, batch size 1,000. Demultiplexing: `--no-whitelisting --known-bc-list` with the detected whitelist. `PYTHONHASHSEED=0`; SC-PB uses the saved FIFO launcher. |
 | Flexiplex | 1.02.6; `d84c8ae4f3865052f2b5ecec816949b94682f302` | Discovery: flank distance 0 and the pinned global 3v3 filter. Demultiplexing: `-d 10x3v3 -e 2 -f 8 -k SELECTED`; one compression thread. |
 
-The [run table](../manifests/figures_124_tool_parameters.tsv) lists versions, commits, threads, chemistry and saved commands for all 108 accepted phases. [Run evidence](../manifests/figures_124_run_evidence.tsv) records executable and whitelist hashes, references and seeds. [Software and resources](../source_data/figure_01/software_and_resources.tsv) identifies the binaries and reference files.
+[Software and resources](../source_data/figure_01/software_and_resources.tsv) identifies the binaries and reference files.
 
 ## Runtime and memory
 
@@ -48,7 +48,7 @@ Expected outputs are [parsed measurements](../data/examples/figure_01/parsed_gnu
 
 The spatial analysis uses 16 µm bins. The selected wide matrix contains whitelist-detection counts. Its four flow-cell totals match the original valid-pair tables: PBC44593, 45,979,761; PBC44760, 39,268,207; PBC49262, 41,679,323; and PBC52788, 47,990,983. Demultiplexing counts describe a later processing stage; for PBC44593 they total 67,872,744. The [count definition](../source_data/figure_01/producing_evidence/HD_selected_count_definition.json), [stage counts](../source_data/figure_01/hd_stage_counts.tsv), and [stage differences](../source_data/figure_01/hd_stage_differences.tsv) identify these quantities.
 
-The matrix contains 175,561 bins in a complete 419 × 419 grid. Its 123,658 in-tissue bin identifiers match the saved Space Ranger filtered barcode set; the complete grid also matches the raw barcode set. Space Ranger used converted Nanopore data. The large matrix is stored as `checkpoints/figure_01/sample_bin_matrix_16um.csv.gz`; its source hash is recorded in the [build report](../validation/figures_124_build.json).
+The matrix contains 175,561 bins in a complete 419 × 419 grid. Its 123,658 in-tissue bin identifiers match the saved Space Ranger filtered barcode set; the complete grid also matches the raw barcode set. Space Ranger used converted Nanopore data. The large matrix is stored as `checkpoints/figure_01/sample_bin_matrix_16um.csv.gz`.
 
 Reconstruct the grid and verify its tissue mask from the deposited identifiers:
 
@@ -61,7 +61,7 @@ python3 scripts/revision/figures_124_steps/recover_hd_grid.py \
   --report results/figure1_grid_receipt.json
 ```
 
-[Eight example bins](../data/examples/figure_01/hd_grid_example.tsv) show the grid and tissue-mask fields. [Grid validation](../validation/figures_124_hd_grid_reconstruction.json) and [reference hashes](../source_data/figure_01/hd_grid_reference_sources.json) record the complete comparisons. To reconstruct the shared-scale spatial triptych, the remaining required inputs are the Seurat `nCount_Spatial` values and the code and RAD invocation that created the barcode-to-bin matrix.
+[Eight example bins](../data/examples/figure_01/hd_grid_example.tsv) show the grid and tissue-mask fields. [Reference hashes](../source_data/figure_01/hd_grid_reference_sources.json) identify the input files. To reconstruct the shared-scale spatial triptych, the remaining required inputs are the Seurat `nCount_Spatial` values and the code and RAD invocation that created the barcode-to-bin matrix.
 
 ## Reproduction commands
 
@@ -79,4 +79,4 @@ python3 scripts/revision/figures_124.py validate --output-root .
 python3 scripts/revision/figures_124.py render --output-root .
 ```
 
-The shared commands also process Figures 2 and 4. [Table schemas](../source_data/figure_01/schemas.json) define units and keys; [portable validation](../validation/figures_124_portable.json) records the numerical comparisons.
+The shared commands also process Figures 2 and 4. [Table schemas](../source_data/figure_01/schemas.json) define units and keys.

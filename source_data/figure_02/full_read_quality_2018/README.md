@@ -34,9 +34,7 @@ with scores from Q2 to Q29. Subtracting one recovers the native scores exactly.
 The scan uses edlib 1.3.9 and the original barcode locator. It searches both
 orientations for adapter `CTACACGACGCTCTTCCGATCT`, with a maximum adapter edit
 distance of 7 and boundary slop of 8. Each window contains 16 bases. The known
-source barcode in the read header resolves its location. The
-[locator check](../../../validation/figure_02_scanner_2018_independent_review.json)
-verifies the copied functions against the original generator.
+source barcode in the read header resolves its location.
 
 BLAZE 2.6.0a0 discovery used `--expect-cells 5000`, `--10x-kit-version 3v3` and
 `--minQ 15`, with empty-droplet output and demultiplexing disabled. F1 values
@@ -83,8 +81,6 @@ The [scanner](../../../scripts/figure_02/summarize_full_barcode_quality_2018.py)
 reads the FASTQ once, checks every input score and records separate hashes for
 the stored and recovered native qualities. The [run record](run.json) contains
 counts, versions, source identities and sample checks. The
-[input record](../../../validation/figure_02_full_quality_2018_staging.json)
-identifies the compressed FASTQ and its SHA-256 hash. The
 [Dartmouth submission script](../../../scripts/figure_02/summarize_full_barcode_quality_2018.sbatch)
 requests eight CPUs.
 
@@ -106,6 +102,3 @@ python scripts/figure_02/validate_full_barcode_quality_2018.py \
   --output results/full_barcode_quality_2018/full_quality_with_blaze_f1.tsv \
   --report results/full_barcode_quality_2018/validation.json
 ```
-
-The [validation report](../../../validation/figure_02_full_barcode_quality_2018.json)
-records the comparisons and their results.

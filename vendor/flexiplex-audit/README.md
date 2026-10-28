@@ -58,8 +58,7 @@ a corrected barcode, a reverse-strand read and a read without the adapter.
 It checks that the rebuilt and pinned diagnostic binaries agree, that all common
 sidecar columns and emitted FASTQs match the upstream binary, and that the new
 column records the actual extracted sequence. This is a small behavioral test,
-not a claim of full-data equivalence. The executed check is recorded in
-[the build report](../../validation/software/flexiplex_audit_build.json).
+not a claim of full-data equivalence.
 
 For a 10x 3′ v3 supplied-list assignment run:
 

@@ -1,6 +1,6 @@
 # Computational efficiency, synthetic benchmarks, and barcode discovery
 
-These passages describe the analyses for Figures 1, 2, and 4. Numerical results are linked to their source tables in the [results registry](../manifests/results_claims.tsv).
+These passages describe the analyses for Figures 1, 2, and 4.
 
 ## Computational efficiency
 

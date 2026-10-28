@@ -20,7 +20,7 @@ from published_files import published_source_files
 ROOT = Path(__file__).resolve().parents[1]
 DIRECTORIES = ('data', 'docs', 'environments', 'figures', 'manifests', 'scripts',
                'source_data', 'validation', 'vendor')
-FILES = ('README.md', 'SETUP.md', 'CITATION.cff', 'LICENSE', 'THIRD_PARTY_NOTICES.md', '.gitignore')
+FILES = ('README.md', 'SETUP.md', 'CITATION.cff', 'LICENSE', '.gitignore')
 
 
 def sha(path):
@@ -134,7 +134,7 @@ for path in paths:
         raise ValueError('Python cache must be ignored: '+str(path))
 result = dict(status='review only; unpublished', archives=[package(paths, args.output/'rad-manuscript-current.tar.gz')])
 flex_paths = [p for p in paths if p.is_relative_to(ROOT/'vendor/flexiplex-audit')]
-flex_paths += [p for p in (ROOT/'THIRD_PARTY_NOTICES.md', ROOT/'LICENSE',
+flex_paths += [p for p in (ROOT/'LICENSE',
                           ROOT/'validation/software/flexiplex_audit_build.json') if p.is_file()]
 result['archives'].append(package(sorted(flex_paths), args.output/'flexiplex-1.02.6-rad-audit.1.tar.gz'))
 if args.include_checkpoints:

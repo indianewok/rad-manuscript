@@ -8,7 +8,7 @@ The image shows 87 BLAZE false-positive barcode calls; the current assignment ta
 
 ## Synthetic reads and quality scores
 
-ScTagger-S contains 98,873 reads from 50 source barcodes; ScTagger-L contains 4,993,805 reads from 5,000 source barcodes. The L input contains 8,394,808,882 bases. The uniform-Q20 and Nanopore2023 L files have the same ordered headers and sequences, with SHA-256 `ca3073f0a44d03b40a5919e01e59a8df89ceceafa086ee7580fae2daa3bf2f61`. The [complete FASTQ check](../validation/figures_124_fastq_identity.json) records counts, unique identifiers, gzip integrity, and sequence–quality length checks.
+ScTagger-S contains 98,873 reads from 50 source barcodes; ScTagger-L contains 4,993,805 reads from 5,000 source barcodes. The L input contains 8,394,808,882 bases. The uniform-Q20 and Nanopore2023 L files have the same ordered headers and sequences, with SHA-256 `ca3073f0a44d03b40a5919e01e59a8df89ceceafa086ee7580fae2daa3bf2f61`.
 
 Quality generation used Badread 0.4.1, Python 3.9.16, NumPy 1.23.5, edlib 1.3.9, and the retained Nanopore2018 and Nanopore2023 quality models. Background scores were sampled for the complete read. Within a located 16-base barcode, scores were replaced with draws conditional on local match and error patterns between the observed barcode and its known source sequence. Reads without a located barcode retained their background scores.
 
@@ -25,11 +25,11 @@ python3 scripts/revision/figures_124_steps/compare_fastq_sequences.py \
 
 ## Software and settings
 
-Discovery and assignment used separate runs. The [run table](../manifests/figures_124_tool_parameters.tsv) lists versions, commits, threads, chemistry and saved commands. [Run evidence](../manifests/figures_124_run_evidence.tsv) records hashes, references, seeds and replay methods; [producer records](../source_data/figure_02/producing_evidence/) and [source hashes](../manifests/figures_124_parameter_evidence.tsv) identify each source.
+Discovery and assignment used separate runs. [Producer records](../source_data/figure_02/producing_evidence/) contain the commands and software identities.
 
 | Analysis | Tool and build | Settings |
 |---|---|---|
-| Discovery | RAD 1.0.2, `920addacdbf40b815e13a146226e8f4b14a58aaf`, with empty-stream and edlib guards | `scan-wl -p CTACACGACGCTCTTCCGATCT -n 16 -e 0.3 -w 10x_3v3 -t 8 -k 10000 -v` |
+| Discovery | RAD 1.0.2, `920addacdbf40b815e13a146226e8f4b14a58aaf` | `scan-wl -p CTACACGACGCTCTTCCGATCT -n 16 -e 0.3 -w 10x_3v3 -t 8 -k 10000 -v` |
 | Discovery | BLAZE 2.6.0a0 | Expected cells 50 for S and 5,000 for L; 3v3, minimum Q15, 8 threads, `--no-emtpy-drops --no-demultiplexing`. Nanopore2023 conditions replay the native extraction cache through the pinned selector. |
 | Discovery | Flexiplex 1.02.6 | `-d 10x3v3 -e 2 -p 8`, with separate flank-distance-0 and flank-distance-8 tracks, followed by the global 3v3 filter. |
 | Assignment | RAD 1.0.2, `24d5ce47e172222c96cd7dd19e94758d32aa5009` | Uniform Q20; 3v3 layout with 12-base UMI; all 5,000 truth barcodes supplied as global and custom whitelists; `-R offensive -M 2 -m 2 -z 5000 -t 64`. |
@@ -87,7 +87,7 @@ python3 scripts/revision/figures_124_steps/classify_assignment_preview.py --tool
   data/examples/figure_02/RAD_assignment_records_example.tsv results/figure2_RAD_records.tsv
 ```
 
-Full duplicate handling is performed by the [assignment audit](../scripts/revision/figures_124_assignment_audit.py). Its small counting checks run with `--fixtures-only`; full rescoring uses the mounted source paths. The [complete validation](../validation/figures_124_assignment_resume.json) checks all physical identifiers and 52,076 target/category values.
+Full duplicate handling is performed by the [assignment audit](../scripts/revision/figures_124_assignment_audit.py). Its small counting checks run with `--fixtures-only`; full rescoring uses the mounted source paths. Full rescoring checks all physical identifiers and 52,076 target/category values.
 
 | State | RAD | Flexiplex | BLAZE |
 |---|---:|---:|---:|

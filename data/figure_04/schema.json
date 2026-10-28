@@ -20,6 +20,5 @@
       "reference_sha256": "SHA256 of deposited compressed bytes",
       "reason": "Selection origin or explicit exclusion reason"
     }
-  },
-  "source_lineage": "../../validation/figures_124_public_identifier_export.json"
+  }
 }

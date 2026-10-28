@@ -30,4 +30,4 @@ The table shows mean percentages and the minimum–maximum range across the thre
 | LongBench SC-ONT | 0.467 (0.465–0.470) | 10.425 (10.054–10.976) | 13.858 (13.644–14.226) |
 | RAGE-seq | 0.248 (0.247–0.250) | 6.889 (6.733–6.975) | 8.035 (7.838–8.144) |
 
-The [27 observations](../source_data/figure_03/offlist_totals.tsv) and [results registry](../manifests/results_claims.tsv) contain the counts, denominators, and arithmetic. The [Figure 3 guide](figure_03.md) links the complete run and counting checks.
+The [27 observations](../source_data/figure_03/offlist_totals.tsv) contain the counts, denominators, and arithmetic. The [Figure 3 guide](figure_03.md) links the complete run and counting checks.

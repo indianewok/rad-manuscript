@@ -8,7 +8,7 @@ from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 pages = [ROOT/'README.md', ROOT/'SETUP.md', ROOT/'data/README.md']
-for directory in ('docs', 'data', 'source_data', 'figures', 'validation', 'vendor/flexiplex-audit'):
+for directory in ('docs', 'data', 'source_data', 'figures', 'vendor/flexiplex-audit'):
     pages.extend((ROOT/directory).rglob('*.md'))
 checks = []
 for page in sorted(set(pages)):
@@ -38,6 +38,8 @@ for result in checks:
         result['available_in_working_tree'] = False
 failed = [r for r in checks if not r['available_in_working_tree']]
 report = dict(status='failed' if failed else 'passed', pages=len(set(pages)), links=len(checks), failures=failed)
-(ROOT/'validation/repository_links.json').write_text(json.dumps(report, indent=2)+'\n')
+report_path = ROOT/'validation/repository_links.json'
+report_path.parent.mkdir(parents=True, exist_ok=True)
+report_path.write_text(json.dumps(report, indent=2)+'\n')
 print(json.dumps(report, indent=2))
 raise SystemExit(1 if failed else 0)

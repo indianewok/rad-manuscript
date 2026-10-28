@@ -17,7 +17,7 @@ This analysis was completed on 11 August 2026.
 
 ## Tools and execution
 
-The run used Flexiplex 1.02.5 with the cached libstdc++ 13.2 runtime.
+The run used Flexiplex 1.02.5 with libstdc++ 13.2.
 
 - Flexiplex 1.02.5: `external_data/software/miniconda3/pkgs/flexiplex-1.02.5-py39h2de1943_0/bin/flexiplex`
 - minimap2 2.26-r1175: `external_data/software/miniconda3/pkgs/minimap2-2.26-he4a0461_1/bin/minimap2`

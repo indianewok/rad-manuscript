@@ -14,11 +14,9 @@ Three target lists were sampled independently for each dataset after removing it
 | LongBench SC-ONT | 10,000,000 | 6,794,880 3v3 barcodes | 5,211 filtered Cell Ranger barcodes | 5,211 | 2026081301, 2026081302, 2026081303 |
 | RAGE-seq cell-line mixture, ERR3268991 | 20,346,396 | 737,280 3v2 barcodes | 4,505 filtered Cell Ranger barcodes | 4,505 | 2026102301, 2026102302, 2026102303 |
 
-The LongBench subsample used SeqKit 2.8.2 with seed `2026081326`. List sampling used Python 3.9.16 `random.Random`. The RAGE preparation samples without replacement from the sorted catalog after reference exclusion and barcode-suffix normalization. The [experiment manifest](../manifests/figure_3_rage_experiment.json) records the input, reference, catalog, and three target-list hashes.
+The LongBench subsample used SeqKit 2.8.2 with seed `2026081326`. List sampling used Python 3.9.16 `random.Random`. The RAGE preparation samples without replacement from the sorted catalog after reference exclusion and barcode-suffix normalization.
 
 ## Software and parameters
-
-The [run table](../manifests/figure_3_tool_parameters.tsv) lists versions, commits, threads, chemistry and saved commands. [Run evidence](../manifests/figure_3_run_evidence.tsv) records executable/source hashes, input and list identities and seeds, linked to the [individual run records](../manifests/figure_3_producers/).
 
 | Analysis | RAD | BLAZE | Flexiplex |
 |---|---|---|---|
@@ -28,7 +26,7 @@ The [run table](../manifests/figure_3_tool_parameters.tsv) lists versions, commi
 
 Flexiplex’s diagnostic field `RawCellBarcode` records the extracted sequence before correction. The [source, patch, binary, and build instructions](../vendor/flexiplex-audit/) define the modified build. Its binary SHA-256 is `38dccd37f1747e5105b62eacde572b7e4c5206fb925dc1fdbe8210ffe8b1e8c4`. Keep `FLEXIPLEX_AUDIT_SOURCE_FILE` unset in the RAGE challenge; the reference is used to exclude targets during list preparation.
 
-The RAGE RAD build has SHA-256 `fc424779c1aba3f112930b4ec8c0dc874b421a217bd53ce6f227e719489a2b2d`. [Build details](../validation/figure_3_rage_build_identity.json), [BLAZE source checks](../validation/figure_3_blaze_source_identity.json), and the [BLAZE dependency lock](../environments/figure_3_blaze_2.6.0a0.txt) identify its environment. The retained ScTagger/LongBench off-list records omit the BLAZE hash seed and optional Flexiplex source-filter environment setting. The LongBench correction records preserve BLAZE 2.5.0 and recovered source commit `11994f9c12a6664dfe1679576aaca19b6bfd35c1`, but omit an executable hash.
+The RAGE RAD build has SHA-256 `fc424779c1aba3f112930b4ec8c0dc874b421a217bd53ce6f227e719489a2b2d`. The [BLAZE dependency lock](../environments/figure_3_blaze_2.6.0a0.txt) specifies the environment. The retained ScTagger/LongBench off-list records omit the BLAZE hash seed and optional Flexiplex source-filter environment setting. The LongBench correction records preserve BLAZE 2.5.0 and recovered source commit `11994f9c12a6664dfe1679576aaca19b6bfd35c1`, but omit an executable hash.
 
 ## From output records to physical-read counts
 
@@ -56,9 +54,9 @@ python3 scripts/revision/figure_3_example_count.py \
   data/examples/figure_03/sctagger_rad_rep1_targets.txt results/sc_counts.tsv
 ```
 
-The [expected output](../data/examples/figure_03/sctagger_rad_rep1_counts.tsv) contains ten reads for `AAACCCACACAGTGAG`. The example includes all assignments to that target and every other record sharing one of those original identifiers. The [duplicate example](../data/examples/figure_03/actual_duplicate_assignments.tsv) contains two records for one original read; both are excluded. [Counting checks](../validation/figure_3_counting_fixtures.json) cover repeated identical targets, conflicting targets, read re-entry, zero-count targets, and concatemer records.
+The [expected output](../data/examples/figure_03/sctagger_rad_rep1_counts.tsv) contains ten reads for `AAACCCACACAGTGAG`. The example includes all assignments to that target and every other record sharing one of those original identifiers. The [duplicate example](../data/examples/figure_03/actual_duplicate_assignments.tsv) contains two records for one original read; both are excluded.
 
-Flexiplex counts use its diagnostic stream. The [diagnostic example](../data/examples/figure_03/longbench_flexiplex_rep1_diagnostic.tsv) contains the fields `Read`, `CellBarcode`, `RawCellBarcode`, `FlankEditDist`, `BarcodeEditDist`, and `UMI`. The [complete stream comparison](../validation/figure_3_flexparity.json) found 4/1/0 diagnostic-only assignments in the three retained LongBench challenges and zero in ScTagger. The matched RAGE runs contain 119/149/156 diagnostic-only assignments. These records contribute to the diagnostic assignment counts.
+Flexiplex counts use its diagnostic stream. The [diagnostic example](../data/examples/figure_03/longbench_flexiplex_rep1_diagnostic.tsv) contains the fields `Read`, `CellBarcode`, `RawCellBarcode`, `FlankEditDist`, `BarcodeEditDist`, and `UMI`. The complete stream comparison found 4/1/0 diagnostic-only assignments in the three retained LongBench challenges and zero in ScTagger. The matched RAGE runs contain 119/149/156 diagnostic-only assignments. These records contribute to the diagnostic assignment counts.
 
 The complete counting workflow checks conservation of the input read universe:
 
@@ -89,7 +87,7 @@ python3 scripts/revision/figure_3_example_percent.py \
   data/examples/figure_03/correction_C5_input.tsv results/correction_percent.tsv
 ```
 
-For the example BLAZE target, 1,861 Failure Mode 2 pairs among 13,809 total pairs give 13.4767%. [Expected output](../data/examples/figure_03/correction_C6_output.tsv), [per-target correction counts and percentages](../source_data/figure_03/correction_per_target.tsv.gz), and [correction totals](../source_data/figure_03/correction_totals.tsv) connect this calculation to panels E–G. All twelve complete per-target tables and selected target lists passed [identity checks](../validation/figure_3_reference_identity.json). Reconstruction of individual pair overlaps additionally requires the original source-bearing assignment streams, which are absent from their recorded paths.
+For the example BLAZE target, 1,861 Failure Mode 2 pairs among 13,809 total pairs give 13.4767%. [Expected output](../data/examples/figure_03/correction_C6_output.tsv), [per-target correction counts and percentages](../source_data/figure_03/correction_per_target.tsv.gz), and [correction totals](../source_data/figure_03/correction_totals.tsv) connect this calculation to panels E–G. All twelve complete per-target tables and selected target lists passed identity checks. Reconstruction of individual pair overlaps additionally requires the original source-bearing assignment streams, which are absent from their recorded paths.
 
 ## Repeat the matched RAGE experiment
 
@@ -132,7 +130,7 @@ python3 scripts/revision/figure_3_rage_run.py Flexiplex 1
 python3 scripts/revision/figure_3_rage_count.py
 ```
 
-The [scheduler array](../scripts/revision/figure_3_rage_array.sbatch) runs these nine combinations. Complete assignment ledgers and input identifiers are stored under `checkpoints/figure_03/rage_matched/`. [Complete-run validation](../validation/figure_3_rage_complete.json) records input identities and read conservation for all nine runs. The retained ScTagger and LongBench streams can be recounted with `python3 scripts/revision/figure_3_count.py offlist`; [all eighteen comparisons](../validation/figure_3_c2_recount.json) matched.
+The [scheduler array](../scripts/revision/figure_3_rage_array.sbatch) runs these nine combinations. Complete assignment ledgers and input identifiers are stored under `checkpoints/figure_03/rage_matched/`. The retained ScTagger and LongBench streams can be recounted with `python3 scripts/revision/figure_3_count.py offlist`; all eighteen comparisons matched.
 
 ## Summaries and source-table reconstruction
 

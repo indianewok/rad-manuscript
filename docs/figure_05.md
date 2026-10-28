@@ -6,8 +6,6 @@ Figure 5 compares recovery of receptor reads from a mixture of Ramos B cells, Ju
 
 ## Software and inputs
 
-The [run table](../manifests/figures_567_tool_parameters.tsv) lists versions, commits, threads, chemistry and saved commands. [Run evidence](../manifests/figures_567_run_evidence.tsv) records hashes, references, seeds and execution limitations.
-
 | Analysis | Software and settings | Run records |
 |---|---|---|
 | RAD receptor counts | Intended settings: 10x 3′ layout, offensive correction, generated/whitelist edit distance 2, chunk size 10,000, 32 threads. The successful producing run is still needed. | [Retained execution log](../source_data/figure_05/provenance/RAD_candidate_producer_failure.txt) |
@@ -71,13 +69,13 @@ The [expected component counts](../data/examples/figure_05/splitseq/component_bo
 
 ## Reproduce the complete comparison
 
-Restore the three compressed checkpoints listed in the [checkpoint manifest](../manifests/figure_05_staged_checkpoints.tsv) using the [data-package instructions](release_review.md), then run:
+Restore the RAD and component Flexiplex assignment checkpoints using the [data-package instructions](release_review.md), then run:
 
 ```bash
 python3 scripts/figure_05/replay_splitseq.py --root .
 ```
 
-This recounts the complete RAD and component assignment ledgers and compares every read and UMI count with the [568-cell source table](../source_data/figure_05/splitseq_reads_umis_568.tsv). All 2,272 counts match. The [validation report](../validation/figure_05_splitseq_counts.json), [RAD aggregation](../validation/figure_05_rad_aggregation.json) and [component aggregation](../validation/figure_05_component_aggregation.json) record the inputs and results.
+This recounts the complete RAD and component assignment ledgers and compares every read and UMI count with the [568-cell source table](../source_data/figure_05/splitseq_reads_umis_568.tsv). All 2,272 counts match.
 
 | Quantity | RAD ED2 | Component Flexiplex + poly-T |
 |---|---:|---:|
@@ -92,9 +90,9 @@ This recounts the complete RAD and component assignment ledgers and compares eve
 
 The [summary table](../source_data/figure_05/splitseq_summary.tsv) retains exact numerators and denominators. The component workflow's full-input fraction is 23.22% for distinct reads and 23.34% for assignment rows; the earlier 23.35% annotation requires correction.
 
-The saved read-count comparison uses a [two-sided paired t-test](../source_data/figure_05/splitseq_saved_paired_t_test.json): 568 cell pairs, t = 14.959474687143327, df = 567 and P = 6.890554214980993e-43. The [independent check](../validation/figure_05_native_stat_review.json) reproduces the statistic and verifies the paired datasets.
+The saved read-count comparison uses a [two-sided paired t-test](../source_data/figure_05/splitseq_saved_paired_t_test.json): 568 cell pairs, t = 14.959474687143327, df = 567 and P = 6.890554214980993e-43.
 
-To extract the examples again, run `python3 scripts/figure_05/extract_splitseq_examples.py`. The [source manifest](../manifests/figure_05_splitseq_sources.tsv) provides source identities and hashes.
+To extract the examples again, run `python3 scripts/figure_05/extract_splitseq_examples.py`.
 
 ## Additional source records
 

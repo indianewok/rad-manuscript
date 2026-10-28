@@ -12,9 +12,7 @@ their files and SHA-256 hashes. The eight controlled-access Visium inputs have
 included in the source tables, and the dataset registry gives the EGA access
 identifiers.
 
-The [source and equality report](../../validation/figures_124_public_identifier_export.json)
-records the original file identities, selection rules, normalized-content
-hashes and TP/FP/FN counts. The RAGE immune reference contains 5,978 barcodes
+The RAGE immune reference contains 5,978 barcodes
 selected from the membership table. ScMixology2 retains native RAD calls and
 reconstructed BLAZE/Flexiplex calls, as described in the [Figure 4 guide](../../docs/figure_04.md).
 

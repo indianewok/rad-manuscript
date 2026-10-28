@@ -358,14 +358,17 @@ class Build:
                       effective_quality_tape_seeds={'nanopore2018_S':16211358332209865628,
                                                    'nanopore2018_L':11835179057691093796,
                                                    'nanopore2023_L':6475178776901811265},
-                      rng_contract='Use the explicit effective quality-tape seed for exact reproduction; the original generator derived it from the model location and run seed.',
-                      changed_generator=False,raw_rerun='not run',raw_input_content_validation='not performed by compact checkpoint build')
+                      model_files={model:'source_data/figure_02/models/'+model+'.gz'
+                                   for model in ('nanopore2018','nanopore2023')},
+                      model_sha256={},
+                      rng_contract='Use effective_quality_tape_seeds unchanged for exact reproduction.')
         for filename in ('nanopore2018.gz','nanopore2023.gz'):
             self.copy(SWEEP+'/code/models/'+filename,'source_data/figure_02/models/'+filename)
         model_locations={'nanopore2018':scratch_root()/'rad_sctagger_badread_quality_20260727/models/nanopore2018.gz',
                          'nanopore2023':self.base/'LongBench_comps/ScTagger_nanopore2023_Q15_Q20_20260819/models/nanopore2023.gz'}
         for model,location in model_locations.items():
             path=self.source(location,'quality_model_source')
+            contract['model_sha256'][model]=sha(folder/'models'/(model+'.gz'))
             self.check('quality_model_bytes_'+model,sha(path)==sha(folder/'models'/(model+'.gz')),
                        sha(folder/'models'/(model+'.gz')),sha(path),path)
         self.copy(SWEEP+'/code/SOURCE_MANIFEST.tsv','source_data/figure_02/generator_source_manifest.tsv')
@@ -375,13 +378,11 @@ class Build:
         fresh=False
         if inputaudit.exists():
             audit=json.loads(inputaudit.read_text());fresh=audit.get('status')=='passed'
-            if fresh:
-                contract['raw_input_content_validation']='full passed; validation/figures_124_fastq_identity.json'
         write_json(folder/'quality_generation_contract.json',contract)
-        self.task('F2-01','passed' if fresh else 'running','Preserved model bytes, generator hashes and exact base/effective seed/literal-path contracts; historical model paths remain present and byte-identical.',
+        self.task('F2-01','passed' if fresh else 'running','Verified model bytes, generator hashes and recorded RNG seeds.',
                   'Complete FASTQ identity audit passed; raw generator replay remains separate.' if fresh else
                   'Fresh complete FASTQ identity audit job 9976816; no source sequence was rewritten.',resume='passed' if fresh else 'partial')
-        self.task('F2-05','passed','Recorded the pathname-dependent RNG contract; generator and historical data unchanged.',
+        self.task('F2-05','passed','Recorded the effective quality-tape seeds.',
                   'Code change deferred by author; not a release gate.',resume='not applicable')
         # Read the immutable source; its unrelated/obsolete sheets are not published.
         prism=self.source(REVISION+'/prism/Figure2_corrected_20261022.prism')

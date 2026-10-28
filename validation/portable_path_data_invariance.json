@@ -1,9 +1,0 @@
-{
-  "status": "passed",
-  "baseline_commit": "c365c61ea5fe1e3d6fa73038c5ebba76aba2f3d2",
-  "tabular_files_checked": 59,
-  "numeric_cells_unchanged": 6098,
-  "recorded_rng_seeds_unchanged": true,
-  "all_figure_images_unchanged": true,
-  "scope": "Path and documentation cleanup; no scientific analysis or image export rerun"
-}

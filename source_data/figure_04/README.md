@@ -9,9 +9,7 @@ barcode-set comparisons.
 ## Reference sets and barcode calls
 
 The RAGE lymph-node reference contains 5,978 barcodes annotated as T/B-containing.
-All 30 Tilgner callsets use donor-matched references. Source-path recovery and
-rescoring are recorded in the
-[703-check validation report](../../validation/figures_124_native_master_path_recovery.json).
+All 30 Tilgner callsets use donor-matched references.
 Four original Visium RAD callsets are missing from their temporary locations;
 their metrics and recorded hashes are retained.
 

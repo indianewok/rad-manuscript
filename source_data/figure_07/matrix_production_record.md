@@ -23,11 +23,4 @@ absent. The checkpoint supports assignment-level summaries.
 
 - [Current direct comparison source](direct_H146_vs_H526_plot_data.tsv.gz)
 - [Selected matrix production fields](RAD_emitted_segment_build_summary.json)
-- [Matrix and label content validation](../../validation/figures_567_checkpoint_checks.tsv)
-- [Direct P-value/effect lineage validation](../../validation/figures_567_direct_test_lineage.json)
-- [Recovered assignment validation](../../validation/figures_567_assignment_recovery.json)
-- [Recovered assignment access and hash](../../manifests/figures_567_assignment_access.tsv)
 - [Current walkthrough and exact producer parameters](../../docs/figure_07.md)
-
-The original production receipt is indexed by SHA-256 in the matrix summary
-and input manifest.

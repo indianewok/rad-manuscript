@@ -22,11 +22,7 @@ The [generation contract](quality_generation_contract.json) specifies the S/L
 base seeds, model hashes and effective quality-tape seeds. The
 [recorded-seed adapter](../../scripts/figure_02/generate_with_recorded_seed.py)
 replaces only the quality-tape seed with its recorded integer when model files
-are moved; all per-read seed calculations remain unchanged. The complete
-retained FASTQ identities are verified in
-[the input report](../../validation/figures_124_fastq_identity.json).
-The historical `sample_replay_evidence.jsonl.gz` file is missing from its recorded
-location.
+are moved; all per-read seed calculations remain unchanged.
 
 The complete-dataset barcode-quality analyses are described separately for
 [Nanopore2018](full_read_quality_2018/README.md) and
@@ -41,9 +37,7 @@ targets. Ambiguous BLAZE matcher records remain unassigned.
 
 `assignment_per_target.tsv` records selected-list and truth-set membership;
 counts are blank for unselected targets. Recounting the retained read-level
-records reproduces all 52,076 selected-target category values. The
-[assignment report](../../validation/figures_124_assignment_resume.json) gives
-the source hashes and command.
+records reproduces all 52,076 selected-target category values.
 
 `correction_only.tsv` uses corrected-correct plus corrected-incorrect reads as
 its denominator. BLAZE selected 15 targets outside the truth set, containing

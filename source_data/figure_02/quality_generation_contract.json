@@ -1,5 +1,4 @@
 {
-  "changed_generator": false,
   "effective_quality_tape_seeds": {
     "nanopore2018_L": 11835179057691093796,
     "nanopore2018_S": 16211358332209865628,
@@ -13,9 +12,7 @@
     "nanopore2018": "6f60b7db6691bdf5955da54f621776bd7584d6c21b30f7290dff82d7037a0a85",
     "nanopore2023": "75182dbd45424f811b5ad5f95b1606900a8900b5565075001011433c03478f90"
   },
-  "raw_input_content_validation": "full passed; validation/figures_124_fastq_identity.json",
-  "raw_rerun": "not run",
-  "rng_contract": "Use effective_quality_tape_seeds unchanged for exact reproduction. The original generator derived these integers from its model-location label and run seed.",
+  "rng_contract": "Use effective_quality_tape_seeds unchanged for exact reproduction.",
   "seeds": {
     "nanopore2018_L": 20260731,
     "nanopore2018_S": 20260727,

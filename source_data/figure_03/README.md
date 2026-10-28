@@ -18,8 +18,7 @@ LongBench assignments were recounted across their 18 combinations.
 
 TSV files use UTF-8, one header row and empty fields for null numeric values.
 The [schema](schema.json) defines the columns; [checksums](checksums.json) identify
-the files. The [descriptive summaries](../../validation/figure_3_offlist_metric_summary.tsv)
-give the values for all three target-list draws, their arithmetic means and ranges.
+the files.
 
 Off-list counting retains a physical read only when it has exactly one
 assignment row. The correction analysis deduplicates `(original_id, target)`
