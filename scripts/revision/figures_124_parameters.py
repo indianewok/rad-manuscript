@@ -74,6 +74,9 @@ bl=B/'paper_revision_20261022/prism/blaze2023_assignment_replay';bp=json.loads((
 add(figure='02',experiment='physical-read assignment',producing_run='L_native2023_BLAZE_incremental_matcher_replay',tool='BLAZE',version='2.6.0a0 _match_bc_row',commit_or_build='exact stock matcher source; commit unrecovered',binary_or_source_sha256=bp['matcher_sha256'],exact_command_or_recorded_settings='max_edit_distance=2; minQ=0; retained seed0 candidate order; incremental exact replay method: '+bp['method'],command_status='matcher parameters/method recovered; entrypoint argv unrecovered',chemistry_layout='native2023 extraction 10x3v3; unchanged sequence/error collection',reference_whitelist='5015 selected targets=5000truth+15extra; iteration order deposited',seed='retained archived seed0 order; appended new candidates lexically',threads='unrecovered for matcher replay',evidence=ev,evidence_sha256=sha(O/ev),applies_to='assignment states/per-selected-target/correction proportions',limitation='Full source assignment records independently rescored; not new FASTQ extraction')
 # Figure4 settings come only from the current per-input table and receipts.
 current=rows(O/'source_data/figure_04/tool_parameters.tsv')
+current_fields=['dataset','tool','version','source_commit','threads','chemistry','command']
+if current and list(current[0])!=current_fields:
+ raise ValueError('Figure4 uses the seven-column parameter table')
 selected=rows(O/'source_data/figure_04/barcode_detection_metrics.tsv')
 keys={(r['canonical_id'],r['tool']) for r in selected}
 if len(current)!=111 or {(r['dataset'],r['tool']) for r in current}!=keys:
@@ -90,6 +93,14 @@ for r in current:
   if r['source_commit']!='4acbe004ba11b150d6832395452632f367a6e6c1' or receipt['max_error']!=0.3:
    raise ValueError('Current Figure4 RAD source/error pin differs: '+dataset)
   ev=str(receipt_path.relative_to(O));digest=receipt['binary_sha256']
+ elif dataset=='ScMixology2':
+  native_path=O/selected_row['source_path']
+  native=json.loads(native_path.read_text())
+  if native['dataset_id']!=dataset or native['tool']!=tool or native['source_commit']!=r['source_commit']:
+   raise ValueError('Current ScMixology2 native provenance differs: '+tool)
+  software=native['software']
+  digest=software['wheel']['sha256'] if tool=='BLAZE' else software['binary']['sha256']
+  ev=str(native_path.relative_to(O))
  else:
   previous=wide_current.get((dataset,tool))
   if previous:

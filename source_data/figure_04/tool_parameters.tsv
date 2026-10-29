@@ -1,112 +1,112 @@
-analysis	dataset	tool	replicate	version	source_commit	threads	chemistry	command
-Figure 4 barcode discovery across37inputs	ScTagger-S_flatQ20	RAD	not_applicable	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x_3v3; adapter=CTACACGACGCTCTTCCGATCT; barcode16; left_margin=0; right_margin=0	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --barcode-length 16 --left-margin 0 --right-margin 0 --max-error 0.3 --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz --threads 16 --chunk-size 10000
-Figure 4 barcode discovery across37inputs	ScTagger-S_flatQ20	BLAZE	not_applicable	2.6.0a0	not_recorded	8	10x3v3; RAD resource10x_3v3.1; barcode16; adapter CTACACGACGCTCTTCCGATCT	blaze --expect-cells 50 --10x-kit-version 3v3 --minQ 15 --threads 8 --no-emtpy-drops --minimal_stdout --no-demultiplexing
-Figure 4 barcode discovery across37inputs	ScTagger-S_flatQ20	Flexiplex	not_applicable	1.02.6	not_recorded	16	10x3v3; RAD resource10x_3v3.1; barcode16; adapter CTACACGACGCTCTTCCGATCT	flexiplex -d 10x3v3 -p 16; flexiplex-filter --whitelist 3M-february-2018-3v3.txt
-Figure 4 barcode discovery across37inputs	ScTagger-L_flatQ20	RAD	not_applicable	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x_3v3; adapter=CTACACGACGCTCTTCCGATCT; barcode16; left_margin=0; right_margin=0	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --barcode-length 16 --left-margin 0 --right-margin 0 --max-error 0.3 --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz --threads 16 --chunk-size 10000
-Figure 4 barcode discovery across37inputs	ScTagger-L_flatQ20	BLAZE	not_applicable	2.6.0a0	not_recorded	8	10x3v3; RAD resource10x_3v3.1; barcode16; adapter CTACACGACGCTCTTCCGATCT	blaze --expect-cells 5000 --10x-kit-version 3v3 --minQ 15 --threads 8 --no-emtpy-drops --minimal_stdout --no-demultiplexing
-Figure 4 barcode discovery across37inputs	ScTagger-L_flatQ20	Flexiplex	not_applicable	1.02.6	not_recorded	16	10x3v3; RAD resource10x_3v3.1; barcode16; adapter CTACACGACGCTCTTCCGATCT	flexiplex -d 10x3v3 -p 16; flexiplex-filter --whitelist 3M-february-2018-3v3.txt
-Figure 4 barcode discovery across37inputs	Measles-P7	RAD	not_applicable	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x_3v3; adapter=CTACACGACGCTCTTCCGATCT; barcode16; left_margin=0; right_margin=0	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --barcode-length 16 --left-margin 0 --right-margin 0 --max-error 0.3 --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz --threads 16 --chunk-size 10000
-Figure 4 barcode discovery across37inputs	Measles-P7	BLAZE	not_applicable	2.6.0a0	not_recorded	24	10x3v3;16nt barcode;10nt UMI as source manifest	blaze --expect-cells 964 --10x-kit-version 3v3 --threads 24 --max-edit-distance 2 --minimal_stdout --overwrite
-Figure 4 barcode discovery across37inputs	Measles-P7	Flexiplex	not_applicable	1.02.6 release	not_recorded	16	10x3v3;16nt barcode;10nt UMI as source manifest	flexiplex -d 10x3v3 -e 2 -f 8 -p 16; flexiplex-filter --whitelist 10x_3v3_full_whitelist.txt
-Figure 4 barcode discovery across37inputs	Measles-P8-VDJ-enriched	RAD	not_applicable	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x_3v3; adapter=CTACACGACGCTCTTCCGATCT; barcode16; left_margin=0; right_margin=0	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --barcode-length 16 --left-margin 0 --right-margin 0 --max-error 0.3 --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz --threads 16 --chunk-size 10000
-Figure 4 barcode discovery across37inputs	Measles-P8-VDJ-enriched	BLAZE	not_applicable	2.6.0a0	not_recorded	24	10x3v3;16nt barcode;10nt UMI as source manifest	blaze --expect-cells 10299 --10x-kit-version 3v3 --threads 24 --max-edit-distance 2 --minimal_stdout --overwrite
-Figure 4 barcode discovery across37inputs	Measles-P8-VDJ-enriched	Flexiplex	not_applicable	1.02.6 release	not_recorded	16	10x3v3;16nt barcode;10nt UMI as source manifest	flexiplex -d 10x3v3 -e 2 -f 8 -p 16; flexiplex-filter --whitelist 10x_3v3_full_whitelist.txt
-Figure 4 barcode discovery across37inputs	Measles-P8-WTA	RAD	not_applicable	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	32	10x_3v3; adapter=CTACACGACGCTCTTCCGATCT; barcode16; left_margin=0; right_margin=0	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --barcode-length 16 --left-margin 0 --right-margin 0 --max-error 0.3 --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz --threads 32 --chunk-size 10000
-Figure 4 barcode discovery across37inputs	Measles-P8-WTA	BLAZE	not_applicable	2.6.0a0	not_recorded	24	10x Chromium Next GEM Single Cell 3-prime v3.1;16nt barcode/12nt UMI	blaze --expect-cells 10299 --10x-kit-version 3v3 --minQ 15 --max-edit-distance 2 --threads 24 --minimal_stdout --overwrite
-Figure 4 barcode discovery across37inputs	Measles-P8-WTA	Flexiplex	not_applicable	1.02.6	not_recorded	24	10x Chromium Next GEM Single Cell 3-prime v3.1;16nt barcode/12nt UMI	flexiplex -d 10x3v3 -e 2 -f 8 -p 24; flexiplex-filter --whitelist 3M-february-2018-3v3.txt
-Figure 4 barcode discovery across37inputs	PromethION_iPSC	RAD	not_applicable	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x_3v3; adapter=CTACACGACGCTCTTCCGATCT; barcode16; left_margin=0; right_margin=0	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --barcode-length 16 --left-margin 0 --right-margin 0 --max-error 0.3 --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz --threads 16 --chunk-size 10000
-Figure 4 barcode discovery across37inputs	PromethION_iPSC	BLAZE	not_applicable	2.6.0a0	not_recorded	32	10x3v3;barcode16/UMI12;Flexf8	blaze --expect-cells 500 --10x-kit-version 3v3 --threads 32 --batch-size 1000 --no-demultiplexing --no-emtpy-drops --overwrite
-Figure 4 barcode discovery across37inputs	PromethION_iPSC	Flexiplex	not_applicable	1.02.6	not_recorded	32	10x3v3;barcode16/UMI12;Flexf8	flexiplex -d 10x3v3 -f 8 -p 32; flexiplex-filter -v -w 3M-february-2018.txt
-Figure 4 barcode discovery across37inputs	RAGEseq-cell-line	RAD	not_applicable	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x_3v2; adapter=CTACACGACGCTCTTCCGATCT; barcode16; left_margin=0; right_margin=0	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --barcode-length 16 --left-margin 0 --right-margin 0 --max-error 0.3 --whitelist 737K-august-2016.txt --threads 16 --chunk-size 10000
-Figure 4 barcode discovery across37inputs	RAGEseq-cell-line	BLAZE	not_applicable	2.6.0a0	not_recorded	32	10x3v2;16nt barcode/10nt UMI; adapter CTACACGACGCTCTTCCGATCT	blaze; blaze --expect-cells 4505 --10x-kit-version 3v2 --threads 32 --max-edit-distance 2 --overwrite
-Figure 4 barcode discovery across37inputs	RAGEseq-cell-line	Flexiplex	not_applicable	1.02.6	not_recorded	32	10x3v2;16nt barcode/10nt UMI; adapter CTACACGACGCTCTTCCGATCT	flexiplex -d 10x3v2 -f 8 -p 32; flexiplex-filter --whitelist 10x_3v2_full_whitelist.txt
-Figure 4 barcode discovery across37inputs	RAGEseq-TNBC-LN	RAD	not_applicable	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x_3v2; adapter=CTACACGACGCTCTTCCGATCT; barcode16; left_margin=0; right_margin=0	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --barcode-length 16 --left-margin 0 --right-margin 0 --max-error 0.3 --whitelist 737K-august-2016.txt --threads 16 --chunk-size 10000
-Figure 4 barcode discovery across37inputs	RAGEseq-TNBC-LN	BLAZE	not_applicable	2.6.0a0	not_recorded	16	10x3v2;16nt barcode/10nt UMI; adapter CTACACGACGCTCTTCCGATCT	blaze --expect-cells 10433 --10x-kit-version 3v2 --threads 16 --max-edit-distance 2 --overwrite
-Figure 4 barcode discovery across37inputs	RAGEseq-TNBC-LN	Flexiplex	not_applicable	1.02.6	not_recorded	10	10x3v2;16nt barcode/10nt UMI; adapter CTACACGACGCTCTTCCGATCT	flexiplex -d 10x3v2 -f 8 -p 10; flexiplex-filter --whitelist 10x_3v2_full_whitelist.txt
-Figure 4 barcode discovery across37inputs	LongBench-SC-ONT	RAD	not_applicable	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x_3v3.1; adapter=CTACACGACGCTCTTCCGATCT; barcode16; left_margin=0; right_margin=0	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --barcode-length 16 --left-margin 0 --right-margin 0 --max-error 0.3 --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz --threads 16 --chunk-size 10000
-Figure 4 barcode discovery across37inputs	LongBench-SC-ONT	BLAZE	not_applicable	2.5.0	not_recorded	48	3v3 default; full_bc_whitelist=none (bundled design)	blaze --expect-cells 5000 --threads 48 --minimal_stdout
-Figure 4 barcode discovery across37inputs	LongBench-SC-ONT	Flexiplex	not_applicable	1.02.6	not_recorded	16	10x3v3	flexiplex -d 10x3v3 -f 0 -p 16
-Figure 4 barcode discovery across37inputs	LongBench-SN-ONT	RAD	not_applicable	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x_3v3.1; adapter=CTACACGACGCTCTTCCGATCT; barcode16; left_margin=0; right_margin=0	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --barcode-length 16 --left-margin 0 --right-margin 0 --max-error 0.3 --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz --threads 16 --chunk-size 10000
-Figure 4 barcode discovery across37inputs	LongBench-SN-ONT	BLAZE	not_applicable	2.5.0	not_recorded	48	3v3 default; full_bc_whitelist=none (bundled design)	blaze --force-cells 10000 --threads 48 --minimal_stdout
-Figure 4 barcode discovery across37inputs	LongBench-SN-ONT	Flexiplex	not_applicable	1.02.6	not_recorded	16	10x3v3	flexiplex -d 10x3v3 -f 0 -p 16
-Figure 4 barcode discovery across37inputs	LongBench-SC-PB	RAD	not_applicable	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	64	10x_3v3.1; adapter=CTACACGACGCTCTTCCGATCT; barcode16; left_margin=0; right_margin=0	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --barcode-length 16 --max-error 0.3 --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz --threads 64 --chunk-size 10000
-Figure 4 barcode discovery across37inputs	LongBench-SC-PB	BLAZE	not_applicable	2.5.0	not_recorded	48	3v3 default; full_bc_whitelist=none (bundled design)	blaze --expect-cells 5000 --threads 48 --minimal_stdout
-Figure 4 barcode discovery across37inputs	LongBench-SC-PB	Flexiplex	not_applicable	1.02.6	not_recorded	16	10x3v3	flexiplex -d 10x3v3 -f 0 -p 16
-Figure 4 barcode discovery across37inputs	LongBench-SN-PB	RAD	not_applicable	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x_3v3.1; adapter=CTACACGACGCTCTTCCGATCT; barcode16; left_margin=0; right_margin=0	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --barcode-length 16 --left-margin 0 --right-margin 0 --max-error 0.3 --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz --threads 16 --chunk-size 10000
-Figure 4 barcode discovery across37inputs	LongBench-SN-PB	BLAZE	not_applicable	2.5.0	not_recorded	48	3v3 default; full_bc_whitelist=none (bundled design)	blaze --force-cells 10000 --threads 48 --minimal_stdout
-Figure 4 barcode discovery across37inputs	LongBench-SN-PB	Flexiplex	not_applicable	1.02.6	not_recorded	16	10x3v3	flexiplex -d 10x3v3 -f 0 -p 16
-Figure 4 barcode discovery across37inputs	LeBrigand-MOB	RAD	not_applicable	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	Visium_v2_full4992; adapter=CTACACGACGCTCTTCCGATCT; barcode16; left_margin=0; right_margin=0	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --barcode-length 16 --left-margin 0 --right-margin 0 --max-error 0.3 --whitelist visium_v2_full_4992.txt --threads 16 --chunk-size 10000
-Figure 4 barcode discovery across37inputs	LeBrigand-MOB	BLAZE	not_applicable	2.6.0a0 native executable	not_recorded	12	Visium combined SRR12157794+SRR12157795; full4992 design; selected calls RAD915/BLAZE844/Flex196	blaze --expect-cells 918 --full-bc-whitelist visium_v2_full_4992.txt --umi-len 12 --threads 12 --batch-size 1000 --no-emtpy-drops --no-demultiplexing
-Figure 4 barcode discovery across37inputs	LeBrigand-MOB	Flexiplex	not_applicable	1.02.6 release executable	not_recorded	12	Visium combined SRR12157794+SRR12157795; full4992 design; selected calls RAD915/BLAZE844/Flex196	flexiplex -d 10x3v3 -e 2 -p 12
-Figure 4 barcode discovery across37inputs	Isosceles-ovarian-GSE248115	RAD	not_applicable	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x_3v3; adapter=CTACACGACGCTCTTCCGATCT; barcode16; left_margin=0; right_margin=0	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --barcode-length 16 --left-margin 0 --right-margin 0 --max-error 0.3 --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz --threads 16 --chunk-size 10000
-Figure 4 barcode discovery across37inputs	Isosceles-ovarian-GSE248115	BLAZE	not_applicable	2.6.0a0 native executable	not_recorded	20	10x3v3; RAD auto-wl; BLAZEexpect2462/ED2; Flexf8/e2	blaze --expect-cells 2462 --10x-kit-version 3v3 --threads 20 --max-edit-distance 2 --minimal_stdout --overwrite
-Figure 4 barcode discovery across37inputs	Isosceles-ovarian-GSE248115	Flexiplex	not_applicable	1.02.6 release executable	not_recorded	20	10x3v3; RAD auto-wl; BLAZEexpect2462/ED2; Flexf8/e2	flexiplex -d 10x3v3 -e 2 -f 8 -p 20
-Figure 4 barcode discovery across37inputs	Hipp_SN_m1_ONT_Run1	RAD	not_applicable	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x_3v3.1; adapter=CTACACGACGCTCTTCCGATCT; barcode16; left_margin=0; right_margin=0	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --barcode-length 16 --left-margin 0 --right-margin 0 --max-error 0.3 --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz --threads 16 --chunk-size 10000
-Figure 4 barcode discovery across37inputs	Hipp_SN_m1_ONT_Run1	BLAZE	not_applicable	2.5.0	not_recorded	48	10x3v3 native default;expect10205	blaze --expect-cells 10205 --kit-version 3v3 --threads 48 --minimal_stdout
-Figure 4 barcode discovery across37inputs	Hipp_SN_m1_ONT_Run1	Flexiplex	not_applicable	1.02.6	not_recorded	20	10x3v3;catalog SHA256 843a6f7038db8cb3c06f3dc21cc69d04139ffa10689780518d7a9e42dc2e819b	flexiplex -d 10x3v3 -f 0 -p 20; flexiplex-filter --whitelist 3M-february-2018-3v3.txt
-Figure 4 barcode discovery across37inputs	Hipp_SN_m1_ONT_Run2	RAD	not_applicable	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x_3v3.1; adapter=CTACACGACGCTCTTCCGATCT; barcode16; left_margin=0; right_margin=0	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --barcode-length 16 --left-margin 0 --right-margin 0 --max-error 0.3 --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz --threads 16 --chunk-size 10000
-Figure 4 barcode discovery across37inputs	Hipp_SN_m1_ONT_Run2	BLAZE	not_applicable	2.5.0	not_recorded	48	10x3v3 native default;expect10205	blaze --expect-cells 10205 --kit-version 3v3 --threads 48 --minimal_stdout
-Figure 4 barcode discovery across37inputs	Hipp_SN_m1_ONT_Run2	Flexiplex	not_applicable	1.02.6	not_recorded	20	10x3v3;catalog SHA256 843a6f7038db8cb3c06f3dc21cc69d04139ffa10689780518d7a9e42dc2e819b	flexiplex -d 10x3v3 -f 0 -p 20; flexiplex-filter --whitelist 3M-february-2018-3v3.txt
-Figure 4 barcode discovery across37inputs	Hipp_SN_m1_ONT_Run3	RAD	not_applicable	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x_3v3.1; adapter=CTACACGACGCTCTTCCGATCT; barcode16; left_margin=0; right_margin=0	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --barcode-length 16 --left-margin 0 --right-margin 0 --max-error 0.3 --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz --threads 16 --chunk-size 10000
-Figure 4 barcode discovery across37inputs	Hipp_SN_m1_ONT_Run3	BLAZE	not_applicable	2.5.0	not_recorded	48	10x3v3 native default;expect10205	blaze --expect-cells 10205 --kit-version 3v3 --threads 48 --minimal_stdout
-Figure 4 barcode discovery across37inputs	Hipp_SN_m1_ONT_Run3	Flexiplex	not_applicable	1.02.6	not_recorded	20	10x3v3;catalog SHA256 843a6f7038db8cb3c06f3dc21cc69d04139ffa10689780518d7a9e42dc2e819b	flexiplex -d 10x3v3 -f 0 -p 20; flexiplex-filter --whitelist 3M-february-2018-3v3.txt
-Figure 4 barcode discovery across37inputs	ERR15095094_MPNST1_scNaUMIseq_MinION	RAD	not_applicable	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x_3v3.1; adapter=CTACACGACGCTCTTCCGATCT; barcode16; left_margin=0; right_margin=0	rad scan-wl -p CTACACGACGCTCTTCCGATCT -n 16 -e 0.3 -w 10x_3v3.1 -t 16 -k 10000
-Figure 4 barcode discovery across37inputs	ERR15095094_MPNST1_scNaUMIseq_MinION	BLAZE	not_applicable	2.5.0	not_recorded	unrecovered	unrecovered unless stated in settings	blaze --expect-cells 4500 --minQ 15 --max-edit-distance 2 --kit-version 3v3 --threads 16 --no-demultiplexing
-Figure 4 barcode discovery across37inputs	ERR15095094_MPNST1_scNaUMIseq_MinION	Flexiplex	not_applicable	1.02.6	not_recorded	unrecovered	unrecovered unless stated in settings	flexiplex -d 10x3v3 -f 0 -p 16; flexiplex-filter --whitelist 3M-february-2018-3v3
-Figure 4 barcode discovery across37inputs	ERR15095095_MPNST1_scNaUMIseq_PromethION	RAD	not_applicable	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x_3v3.1; adapter=CTACACGACGCTCTTCCGATCT; barcode16; left_margin=0; right_margin=0	rad scan-wl -p CTACACGACGCTCTTCCGATCT -n 16 -e 0.3 -w 10x_3v3.1 -t 16 -k 10000
-Figure 4 barcode discovery across37inputs	ERR15095095_MPNST1_scNaUMIseq_PromethION	BLAZE	not_applicable	2.5.0	not_recorded	unrecovered	unrecovered unless stated in settings	blaze --expect-cells 4500 --minQ 15 --max-edit-distance 2 --kit-version 3v3 --threads 16 --no-demultiplexing
-Figure 4 barcode discovery across37inputs	ERR15095095_MPNST1_scNaUMIseq_PromethION	Flexiplex	not_applicable	1.02.6	not_recorded	unrecovered	unrecovered unless stated in settings	flexiplex -d 10x3v3 -f 0 -p 16; flexiplex-filter --whitelist 3M-february-2018-3v3
-Figure 4 barcode discovery across37inputs	ERR15095096	RAD	not_applicable	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	20	10x_3v3; adapter=CTACACGACGCTCTTCCGATCT; barcode16; left_margin=0; right_margin=0	rad scan-wl -p CTACACGACGCTCTTCCGATCT -n 16 -w 10x_3v3 -e 0.3 -t 20 -k 10000 --hs-bcs -v
-Figure 4 barcode discovery across37inputs	ERR15095096	BLAZE	not_applicable	BLAZE 2.5.0	not_recorded	20	unrecovered unless stated in settings	blaze --expect-cells 11000 --minQ 15 --max-edit-distance 2 --kit-version 3v3 --threads 20 --no-demultiplexing
-Figure 4 barcode discovery across37inputs	ERR15095096	Flexiplex	not_applicable	Flexiplex 1.02.6	not_recorded	20	unrecovered unless stated in settings	flexiplex -d 10x3v3 -f 0 -p 20; flexiplex-filter --whitelist 3M-february-2018-3v3
-Figure 4 barcode discovery across37inputs	ERR15095097	RAD	not_applicable	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	20	10x_3v3; adapter=CTACACGACGCTCTTCCGATCT; barcode16; left_margin=0; right_margin=0	rad scan-wl -p CTACACGACGCTCTTCCGATCT -n 16 -w 10x_3v3 -e 0.3 -t 20 -k 10000 --hs-bcs -v
-Figure 4 barcode discovery across37inputs	ERR15095097	BLAZE	not_applicable	BLAZE 2.5.0	not_recorded	20	unrecovered unless stated in settings	blaze --expect-cells 11000 --minQ 15 --max-edit-distance 2 --kit-version 3v3 --threads 20 --no-demultiplexing
-Figure 4 barcode discovery across37inputs	ERR15095097	Flexiplex	not_applicable	Flexiplex 1.02.6	not_recorded	20	unrecovered unless stated in settings	flexiplex -d 10x3v3 -f 0 -p 20; flexiplex-filter --whitelist 3M-february-2018-3v3
-Figure 4 barcode discovery across37inputs	section12	RAD	not_applicable	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	4	10x_Vis_V1; adapter=CTACACGACGCTCTTCCGATCT; barcode16; left_margin=0; right_margin=0	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --barcode-length 16 --left-margin 0 --right-margin 0 --max-error 0.3 --whitelist visium-v1_v2_bitlist.csv.gz --threads 4 --chunk-size 10000
-Figure 4 barcode discovery across37inputs	section12	BLAZE	not_applicable	2.6.0a0	not_recorded	unrecovered	unrecovered unless stated in settings	blaze --expect-cells 2500
-Figure 4 barcode discovery across37inputs	section12	Flexiplex	not_applicable	1.02.6	not_recorded	unrecovered	unrecovered unless stated in settings	flexiplex -d 10x3v2 -f 8
-Figure 4 barcode discovery across37inputs	section16	RAD	not_applicable	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	4	10x_Vis_V1; adapter=CTACACGACGCTCTTCCGATCT; barcode16; left_margin=0; right_margin=0	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --barcode-length 16 --left-margin 0 --right-margin 0 --max-error 0.3 --whitelist visium-v1_v2_bitlist.csv.gz --threads 4 --chunk-size 10000
-Figure 4 barcode discovery across37inputs	section16	BLAZE	not_applicable	2.6.0a0	not_recorded	unrecovered	unrecovered unless stated in settings	blaze --expect-cells 2500
-Figure 4 barcode discovery across37inputs	section16	Flexiplex	not_applicable	1.02.6	not_recorded	unrecovered	unrecovered unless stated in settings	flexiplex -d 10x3v2 -f 8
-Figure 4 barcode discovery across37inputs	section17_1T_1B	RAD	not_applicable	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	4	10x_Vis_V1; adapter=CTACACGACGCTCTTCCGATCT; barcode16; left_margin=0; right_margin=0	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --barcode-length 16 --left-margin 0 --right-margin 0 --max-error 0.3 --whitelist visium-v1_v2_bitlist.csv.gz --threads 4 --chunk-size 10000
-Figure 4 barcode discovery across37inputs	section17_1T_1B	BLAZE	not_applicable	2.6.0a0	not_recorded	unrecovered	unrecovered unless stated in settings	blaze --expect-cells 2500
-Figure 4 barcode discovery across37inputs	section17_1T_1B	Flexiplex	not_applicable	1.02.6	not_recorded	unrecovered	unrecovered unless stated in settings	flexiplex -d 10x3v2 -f 8
-Figure 4 barcode discovery across37inputs	section17_4T_1B	RAD	not_applicable	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	4	10x_Vis_V1; adapter=CTACACGACGCTCTTCCGATCT; barcode16; left_margin=0; right_margin=0	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --barcode-length 16 --left-margin 0 --right-margin 0 --max-error 0.3 --whitelist visium-v1_v2_bitlist.csv.gz --threads 4 --chunk-size 10000
-Figure 4 barcode discovery across37inputs	section17_4T_1B	BLAZE	not_applicable	2.6.0a0	not_recorded	unrecovered	unrecovered unless stated in settings	blaze --expect-cells 2500
-Figure 4 barcode discovery across37inputs	section17_4T_1B	Flexiplex	not_applicable	1.02.6	not_recorded	unrecovered	unrecovered unless stated in settings	flexiplex -d 10x3v2 -f 8
-Figure 4 barcode discovery across37inputs	section22	RAD	not_applicable	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	4	10x_Vis_V1; adapter=CTACACGACGCTCTTCCGATCT; barcode16; left_margin=0; right_margin=0	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --barcode-length 16 --left-margin 0 --right-margin 0 --max-error 0.3 --whitelist visium-v1_v2_bitlist.csv.gz --threads 4 --chunk-size 10000
-Figure 4 barcode discovery across37inputs	section22	BLAZE	not_applicable	2.6.0a0	not_recorded	unrecovered	unrecovered unless stated in settings	blaze --expect-cells 2500
-Figure 4 barcode discovery across37inputs	section22	Flexiplex	not_applicable	1.02.6	not_recorded	unrecovered	unrecovered unless stated in settings	flexiplex -d 10x3v2 -f 8
-Figure 4 barcode discovery across37inputs	section31	RAD	not_applicable	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	4	10x_Vis_V1; adapter=CTACACGACGCTCTTCCGATCT; barcode16; left_margin=0; right_margin=0	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --barcode-length 16 --left-margin 0 --right-margin 0 --max-error 0.3 --whitelist visium-v1_v2_bitlist.csv.gz --threads 4 --chunk-size 10000
-Figure 4 barcode discovery across37inputs	section31	BLAZE	not_applicable	2.6.0a0	not_recorded	unrecovered	unrecovered unless stated in settings	blaze --expect-cells 2500
-Figure 4 barcode discovery across37inputs	section31	Flexiplex	not_applicable	1.02.6	not_recorded	unrecovered	unrecovered unless stated in settings	flexiplex -d 10x3v2 -f 8
-Figure 4 barcode discovery across37inputs	section32_1T_1B	RAD	not_applicable	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	4	10x_Vis_V1; adapter=CTACACGACGCTCTTCCGATCT; barcode16; left_margin=0; right_margin=0	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --barcode-length 16 --left-margin 0 --right-margin 0 --max-error 0.3 --whitelist visium-v1_v2_bitlist.csv.gz --threads 4 --chunk-size 10000
-Figure 4 barcode discovery across37inputs	section32_1T_1B	BLAZE	not_applicable	2.6.0a0	not_recorded	unrecovered	unrecovered unless stated in settings	blaze --expect-cells 2500
-Figure 4 barcode discovery across37inputs	section32_1T_1B	Flexiplex	not_applicable	1.02.6	not_recorded	unrecovered	unrecovered unless stated in settings	flexiplex -d 10x3v2 -f 8
-Figure 4 barcode discovery across37inputs	section32_4T_1B	RAD	not_applicable	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	4	10x_Vis_V1; adapter=CTACACGACGCTCTTCCGATCT; barcode16; left_margin=0; right_margin=0	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --barcode-length 16 --left-margin 0 --right-margin 0 --max-error 0.3 --whitelist visium-v1_v2_bitlist.csv.gz --threads 4 --chunk-size 10000
-Figure 4 barcode discovery across37inputs	section32_4T_1B	BLAZE	not_applicable	2.6.0a0	not_recorded	unrecovered	unrecovered unless stated in settings	blaze --expect-cells 2500
-Figure 4 barcode discovery across37inputs	section32_4T_1B	Flexiplex	not_applicable	1.02.6	not_recorded	unrecovered	unrecovered unless stated in settings	flexiplex -d 10x3v2 -f 8
-Figure 4 barcode discovery across37inputs	Hipp_SN_f1_ONT_Run1	RAD	not_applicable	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	20	10x_3v3.1; adapter=CTACACGACGCTCTTCCGATCT; barcode16; left_margin=0; right_margin=0	rad scan-wl -p CTACACGACGCTCTTCCGATCT -n 16 -e 0.3 -w 10x_3v3.1 -t 20 -k 10000
-Figure 4 barcode discovery across37inputs	Hipp_SN_f1_ONT_Run1	BLAZE	not_applicable	unrecovered	not_recorded	unrecovered	unrecovered unless stated in settings	blaze --expect-cells 8975 --minQ 15 --max-edit-distance 2
-Figure 4 barcode discovery across37inputs	Hipp_SN_f1_ONT_Run1	Flexiplex	not_applicable	unrecovered	not_recorded	unrecovered	unrecovered unless stated in settings	flexiplex -f 0
-Figure 4 barcode discovery across37inputs	Hipp_SN_f1_ONT_Run2	RAD	not_applicable	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	20	10x_3v3.1; adapter=CTACACGACGCTCTTCCGATCT; barcode16; left_margin=0; right_margin=0	rad scan-wl -p CTACACGACGCTCTTCCGATCT -n 16 -e 0.3 -w 10x_3v3.1 -t 20 -k 10000
-Figure 4 barcode discovery across37inputs	Hipp_SN_f1_ONT_Run2	BLAZE	not_applicable	unrecovered	not_recorded	unrecovered	unrecovered unless stated in settings	blaze --expect-cells 8975 --minQ 15 --max-edit-distance 2
-Figure 4 barcode discovery across37inputs	Hipp_SN_f1_ONT_Run2	Flexiplex	not_applicable	unrecovered	not_recorded	unrecovered	unrecovered unless stated in settings	flexiplex -f 0
-Figure 4 barcode discovery across37inputs	Hipp_SN_f2_ONT	RAD	not_applicable	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	20	10x_3v3.1; adapter=CTACACGACGCTCTTCCGATCT; barcode16; left_margin=0; right_margin=0	rad scan-wl -p CTACACGACGCTCTTCCGATCT -n 16 -e 0.3 -w 10x_3v3.1 -t 20 -k 10000
-Figure 4 barcode discovery across37inputs	Hipp_SN_f2_ONT	BLAZE	not_applicable	unrecovered	not_recorded	unrecovered	unrecovered unless stated in settings	blaze --expect-cells 8850 --minQ 15 --max-edit-distance 2
-Figure 4 barcode discovery across37inputs	Hipp_SN_f2_ONT	Flexiplex	not_applicable	unrecovered	not_recorded	unrecovered	unrecovered unless stated in settings	flexiplex -f 0
-Figure 4 barcode discovery across37inputs	Hipp_SN_f3_ONT_Run1	RAD	not_applicable	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	20	10x_3v3.1; adapter=CTACACGACGCTCTTCCGATCT; barcode16; left_margin=0; right_margin=0	rad scan-wl -p CTACACGACGCTCTTCCGATCT -n 16 -e 0.3 -w 10x_3v3.1 -t 20 -k 10000
-Figure 4 barcode discovery across37inputs	Hipp_SN_f3_ONT_Run1	BLAZE	not_applicable	unrecovered	not_recorded	unrecovered	unrecovered unless stated in settings	blaze --expect-cells 6680 --minQ 15 --max-edit-distance 2
-Figure 4 barcode discovery across37inputs	Hipp_SN_f3_ONT_Run1	Flexiplex	not_applicable	unrecovered	not_recorded	unrecovered	unrecovered unless stated in settings	flexiplex -f 0
-Figure 4 barcode discovery across37inputs	Hipp_SN_f3_ONT_Run2	RAD	not_applicable	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	20	10x_3v3.1; adapter=CTACACGACGCTCTTCCGATCT; barcode16; left_margin=0; right_margin=0	rad scan-wl -p CTACACGACGCTCTTCCGATCT -n 16 -e 0.3 -w 10x_3v3.1 -t 20 -k 10000
-Figure 4 barcode discovery across37inputs	Hipp_SN_f3_ONT_Run2	BLAZE	not_applicable	unrecovered	not_recorded	unrecovered	unrecovered unless stated in settings	blaze --expect-cells 6680 --minQ 15 --max-edit-distance 2
-Figure 4 barcode discovery across37inputs	Hipp_SN_f3_ONT_Run2	Flexiplex	not_applicable	unrecovered	not_recorded	unrecovered	unrecovered unless stated in settings	flexiplex -f 0
-Figure 4 barcode discovery across37inputs	Hipp_SN_m2_ONT	RAD	not_applicable	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	20	10x_3v3.1; adapter=CTACACGACGCTCTTCCGATCT; barcode16; left_margin=0; right_margin=0	rad scan-wl -p CTACACGACGCTCTTCCGATCT -n 16 -e 0.3 -w 10x_3v3.1 -t 20 -k 10000
-Figure 4 barcode discovery across37inputs	Hipp_SN_m2_ONT	BLAZE	not_applicable	unrecovered	not_recorded	unrecovered	unrecovered unless stated in settings	blaze --expect-cells 10427 --minQ 15 --max-edit-distance 2
-Figure 4 barcode discovery across37inputs	Hipp_SN_m2_ONT	Flexiplex	not_applicable	unrecovered	not_recorded	unrecovered	unrecovered unless stated in settings	flexiplex -f 0
-Figure 4 barcode discovery across37inputs	Hipp_SN_m3_ONT	RAD	not_applicable	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	20	10x_3v3.1; adapter=CTACACGACGCTCTTCCGATCT; barcode16; left_margin=0; right_margin=0	rad scan-wl -p CTACACGACGCTCTTCCGATCT -n 16 -e 0.3 -w 10x_3v3.1 -t 20 -k 10000
-Figure 4 barcode discovery across37inputs	Hipp_SN_m3_ONT	BLAZE	not_applicable	unrecovered	not_recorded	unrecovered	unrecovered unless stated in settings	blaze --expect-cells 10574 --minQ 15 --max-edit-distance 2
-Figure 4 barcode discovery across37inputs	Hipp_SN_m3_ONT	Flexiplex	not_applicable	unrecovered	not_recorded	unrecovered	unrecovered unless stated in settings	flexiplex -f 0
-Figure 4 barcode discovery across37inputs	ScMixology2	RAD	not_applicable	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x_3v3; adapter=CTACACGACGCTCTTCCGATCT; barcode16; left_margin=0; right_margin=0	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --barcode-length 16 --left-margin 0 --right-margin 0 --max-error 0.3 --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz --threads 16 --chunk-size 10000
-Figure 4 barcode discovery across37inputs	ScMixology2	BLAZE	not_applicable	published selector reconstruction; BLAZE2.5.0 cross-check library	90e4cebcbf8dedb787272be0f2ded4c5bb21e468	see executed launch; selector worker count not specified	10x3v3 design; Q>=15 native raw-barcode cache	python reconstruct_expect_sweep.py --expected-data-rows 25164948 --expected-reference-count 248 --min-q 15 --chunksize 1000000
-Figure 4 barcode discovery across37inputs	ScMixology2	Flexiplex	not_applicable	1.02.6 filter reconstruction on RAD counts	not_recorded	no worker count in saved argv	Per-dataset observed whitelist derived only from replay_scanwl.csv. Current replay tables already contain chemistry-valid rows, making the selector whitelist intersection an identity operation.	python run_flexiplex_selector.py --input-format rad-scanwl-csv --chemistry-whitelist observed_chemistry_valid_barcodes.txt --selector flexiplex-filter
+dataset	tool	version	source_commit	threads	chemistry	command
+ScTagger-S_flatQ20	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x3v3	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
+ScTagger-S_flatQ20	BLAZE	2.6.0a0	not_recorded	8	10x3v3	blaze --expect-cells 50 --no-emtpy-drops --minimal_stdout --no-demultiplexing
+ScTagger-S_flatQ20	Flexiplex	1.02.6	not_recorded	16	10x3v3	flexiplex; flexiplex-filter --whitelist 3M-february-2018-3v3.txt
+ScTagger-L_flatQ20	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x3v3	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
+ScTagger-L_flatQ20	BLAZE	2.6.0a0	not_recorded	8	10x3v3	blaze --expect-cells 5000 --no-emtpy-drops --minimal_stdout --no-demultiplexing
+ScTagger-L_flatQ20	Flexiplex	1.02.6	not_recorded	16	10x3v3	flexiplex; flexiplex-filter --whitelist 3M-february-2018-3v3.txt
+Measles-P7	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x3v3	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
+Measles-P7	BLAZE	2.6.0a0	not_recorded	24	10x3v3	blaze --expect-cells 964 --minimal_stdout --overwrite
+Measles-P7	Flexiplex	1.02.6 release	not_recorded	16	10x3v3	flexiplex; flexiplex-filter --whitelist 10x_3v3_full_whitelist.txt
+Measles-P8-VDJ-enriched	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x3v3	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
+Measles-P8-VDJ-enriched	BLAZE	2.6.0a0	not_recorded	24	10x3v3	blaze --expect-cells 10299 --minimal_stdout --overwrite
+Measles-P8-VDJ-enriched	Flexiplex	1.02.6 release	not_recorded	16	10x3v3	flexiplex; flexiplex-filter --whitelist 10x_3v3_full_whitelist.txt
+Measles-P8-WTA	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	32	10x3v3	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
+Measles-P8-WTA	BLAZE	2.6.0a0	not_recorded	24	10x3v3	blaze --expect-cells 10299 --minimal_stdout --overwrite
+Measles-P8-WTA	Flexiplex	1.02.6	not_recorded	24	10x3v3	flexiplex; flexiplex-filter --whitelist 3M-february-2018-3v3.txt
+PromethION_iPSC	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x3v3	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
+PromethION_iPSC	BLAZE	2.6.0a0	not_recorded	32	10x3v3	blaze --expect-cells 500 --no-demultiplexing --no-emtpy-drops --overwrite
+PromethION_iPSC	Flexiplex	1.02.6	not_recorded	32	10x3v3	flexiplex; flexiplex-filter -v -w 3M-february-2018.txt
+RAGEseq-cell-line	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x3v2	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 737K-august-2016.txt
+RAGEseq-cell-line	BLAZE	2.6.0a0	not_recorded	32	10x3v2	blaze; blaze --expect-cells 4505 --10x-kit-version 3v2 --overwrite
+RAGEseq-cell-line	Flexiplex	1.02.6	not_recorded	32	10x3v2	flexiplex -d 10x3v2; flexiplex-filter --whitelist 10x_3v2_full_whitelist.txt
+RAGEseq-TNBC-LN	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x3v2	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 737K-august-2016.txt
+RAGEseq-TNBC-LN	BLAZE	2.6.0a0	not_recorded	16	10x3v2	blaze --expect-cells 10433 --10x-kit-version 3v2 --overwrite
+RAGEseq-TNBC-LN	Flexiplex	1.02.6	not_recorded	10	10x3v2	flexiplex -d 10x3v2; flexiplex-filter --whitelist 10x_3v2_full_whitelist.txt
+LongBench-SC-ONT	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x3v3	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
+LongBench-SC-ONT	BLAZE	2.5.0	not_recorded	48	10x3v3	blaze --expect-cells 5000 --minimal_stdout
+LongBench-SC-ONT	Flexiplex	1.02.6	not_recorded	16	10x3v3	flexiplex -f 0
+LongBench-SN-ONT	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x3v3	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
+LongBench-SN-ONT	BLAZE	2.5.0	not_recorded	48	10x3v3	blaze --force-cells 10000 --minimal_stdout
+LongBench-SN-ONT	Flexiplex	1.02.6	not_recorded	16	10x3v3	flexiplex -f 0
+LongBench-SC-PB	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	64	10x3v3	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
+LongBench-SC-PB	BLAZE	2.5.0	not_recorded	48	10x3v3	blaze --expect-cells 5000 --minimal_stdout
+LongBench-SC-PB	Flexiplex	1.02.6	not_recorded	16	10x3v3	flexiplex -f 0
+LongBench-SN-PB	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x3v3	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
+LongBench-SN-PB	BLAZE	2.5.0	not_recorded	48	10x3v3	blaze --force-cells 10000 --minimal_stdout
+LongBench-SN-PB	Flexiplex	1.02.6	not_recorded	16	10x3v3	flexiplex -f 0
+LeBrigand-MOB	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	Visium	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist visium_v2_full_4992.txt
+LeBrigand-MOB	BLAZE	2.6.0a0 native executable	not_recorded	12	Visium	blaze --expect-cells 918 --full-bc-whitelist visium_v2_full_4992.txt --no-emtpy-drops --no-demultiplexing
+LeBrigand-MOB	Flexiplex	1.02.6 release executable	not_recorded	12	Visium	flexiplex
+Isosceles-ovarian-GSE248115	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x3v3	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
+Isosceles-ovarian-GSE248115	BLAZE	2.6.0a0 native executable	not_recorded	20	10x3v3	blaze --expect-cells 2462 --minimal_stdout --overwrite
+Isosceles-ovarian-GSE248115	Flexiplex	1.02.6 release executable	not_recorded	20	10x3v3	flexiplex
+Hipp_SN_m1_ONT_Run1	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x3v3	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
+Hipp_SN_m1_ONT_Run1	BLAZE	2.5.0	not_recorded	48	10x3v3	blaze --expect-cells 10205 --minimal_stdout
+Hipp_SN_m1_ONT_Run1	Flexiplex	1.02.6	not_recorded	20	10x3v3	flexiplex -f 0; flexiplex-filter --whitelist 3M-february-2018-3v3.txt
+Hipp_SN_m1_ONT_Run2	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x3v3	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
+Hipp_SN_m1_ONT_Run2	BLAZE	2.5.0	not_recorded	48	10x3v3	blaze --expect-cells 10205 --minimal_stdout
+Hipp_SN_m1_ONT_Run2	Flexiplex	1.02.6	not_recorded	20	10x3v3	flexiplex -f 0; flexiplex-filter --whitelist 3M-february-2018-3v3.txt
+Hipp_SN_m1_ONT_Run3	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x3v3	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
+Hipp_SN_m1_ONT_Run3	BLAZE	2.5.0	not_recorded	48	10x3v3	blaze --expect-cells 10205 --minimal_stdout
+Hipp_SN_m1_ONT_Run3	Flexiplex	1.02.6	not_recorded	20	10x3v3	flexiplex -f 0; flexiplex-filter --whitelist 3M-february-2018-3v3.txt
+ERR15095094_MPNST1_scNaUMIseq_MinION	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x3v3	rad scan-wl -p CTACACGACGCTCTTCCGATCT -w 10x_3v3.1
+ERR15095094_MPNST1_scNaUMIseq_MinION	BLAZE	2.5.0	not_recorded	16	10x3v3	blaze --expect-cells 4500 --no-demultiplexing
+ERR15095094_MPNST1_scNaUMIseq_MinION	Flexiplex	1.02.6	not_recorded	16	10x3v3	flexiplex -f 0; flexiplex-filter --whitelist 3M-february-2018-3v3
+ERR15095095_MPNST1_scNaUMIseq_PromethION	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x3v3	rad scan-wl -p CTACACGACGCTCTTCCGATCT -w 10x_3v3.1
+ERR15095095_MPNST1_scNaUMIseq_PromethION	BLAZE	2.5.0	not_recorded	16	10x3v3	blaze --expect-cells 4500 --no-demultiplexing
+ERR15095095_MPNST1_scNaUMIseq_PromethION	Flexiplex	1.02.6	not_recorded	16	10x3v3	flexiplex -f 0; flexiplex-filter --whitelist 3M-february-2018-3v3
+ERR15095096	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	20	10x3v3	rad scan-wl -p CTACACGACGCTCTTCCGATCT -w 10x_3v3 -v
+ERR15095096	BLAZE	BLAZE 2.5.0	not_recorded	20	10x3v3	blaze --expect-cells 11000 --no-demultiplexing
+ERR15095096	Flexiplex	Flexiplex 1.02.6	not_recorded	20	10x3v3	flexiplex -f 0; flexiplex-filter --whitelist 3M-february-2018-3v3
+ERR15095097	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	20	10x3v3	rad scan-wl -p CTACACGACGCTCTTCCGATCT -w 10x_3v3 -v
+ERR15095097	BLAZE	BLAZE 2.5.0	not_recorded	20	10x3v3	blaze --expect-cells 11000 --no-demultiplexing
+ERR15095097	Flexiplex	Flexiplex 1.02.6	not_recorded	20	10x3v3	flexiplex -f 0; flexiplex-filter --whitelist 3M-february-2018-3v3
+section12	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	4	Visium	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist visium-v1_v2_bitlist.csv.gz
+section12	BLAZE	2.6.0a0	not_recorded	unrecovered	Visium	blaze --expect-cells 2500
+section12	Flexiplex	1.02.6	not_recorded	unrecovered	Visium	flexiplex -d 10x3v2
+section16	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	4	Visium	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist visium-v1_v2_bitlist.csv.gz
+section16	BLAZE	2.6.0a0	not_recorded	unrecovered	Visium	blaze --expect-cells 2500
+section16	Flexiplex	1.02.6	not_recorded	unrecovered	Visium	flexiplex -d 10x3v2
+section17_1T_1B	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	4	Visium	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist visium-v1_v2_bitlist.csv.gz
+section17_1T_1B	BLAZE	2.6.0a0	not_recorded	unrecovered	Visium	blaze --expect-cells 2500
+section17_1T_1B	Flexiplex	1.02.6	not_recorded	unrecovered	Visium	flexiplex -d 10x3v2
+section17_4T_1B	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	4	Visium	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist visium-v1_v2_bitlist.csv.gz
+section17_4T_1B	BLAZE	2.6.0a0	not_recorded	unrecovered	Visium	blaze --expect-cells 2500
+section17_4T_1B	Flexiplex	1.02.6	not_recorded	unrecovered	Visium	flexiplex -d 10x3v2
+section22	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	4	Visium	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist visium-v1_v2_bitlist.csv.gz
+section22	BLAZE	2.6.0a0	not_recorded	unrecovered	Visium	blaze --expect-cells 2500
+section22	Flexiplex	1.02.6	not_recorded	unrecovered	Visium	flexiplex -d 10x3v2
+section31	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	4	Visium	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist visium-v1_v2_bitlist.csv.gz
+section31	BLAZE	2.6.0a0	not_recorded	unrecovered	Visium	blaze --expect-cells 2500
+section31	Flexiplex	1.02.6	not_recorded	unrecovered	Visium	flexiplex -d 10x3v2
+section32_1T_1B	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	4	Visium	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist visium-v1_v2_bitlist.csv.gz
+section32_1T_1B	BLAZE	2.6.0a0	not_recorded	unrecovered	Visium	blaze --expect-cells 2500
+section32_1T_1B	Flexiplex	1.02.6	not_recorded	unrecovered	Visium	flexiplex -d 10x3v2
+section32_4T_1B	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	4	Visium	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist visium-v1_v2_bitlist.csv.gz
+section32_4T_1B	BLAZE	2.6.0a0	not_recorded	unrecovered	Visium	blaze --expect-cells 2500
+section32_4T_1B	Flexiplex	1.02.6	not_recorded	unrecovered	Visium	flexiplex -d 10x3v2
+Hipp_SN_f1_ONT_Run1	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	20	10x3v3	rad scan-wl -p CTACACGACGCTCTTCCGATCT -w 10x_3v3.1
+Hipp_SN_f1_ONT_Run1	BLAZE	unrecovered	not_recorded	unrecovered	10x3v3	blaze --expect-cells 8975
+Hipp_SN_f1_ONT_Run1	Flexiplex	unrecovered	not_recorded	unrecovered	10x3v3	flexiplex -f 0
+Hipp_SN_f1_ONT_Run2	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	20	10x3v3	rad scan-wl -p CTACACGACGCTCTTCCGATCT -w 10x_3v3.1
+Hipp_SN_f1_ONT_Run2	BLAZE	unrecovered	not_recorded	unrecovered	10x3v3	blaze --expect-cells 8975
+Hipp_SN_f1_ONT_Run2	Flexiplex	unrecovered	not_recorded	unrecovered	10x3v3	flexiplex -f 0
+Hipp_SN_f2_ONT	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	20	10x3v3	rad scan-wl -p CTACACGACGCTCTTCCGATCT -w 10x_3v3.1
+Hipp_SN_f2_ONT	BLAZE	unrecovered	not_recorded	unrecovered	10x3v3	blaze --expect-cells 8850
+Hipp_SN_f2_ONT	Flexiplex	unrecovered	not_recorded	unrecovered	10x3v3	flexiplex -f 0
+Hipp_SN_f3_ONT_Run1	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	20	10x3v3	rad scan-wl -p CTACACGACGCTCTTCCGATCT -w 10x_3v3.1
+Hipp_SN_f3_ONT_Run1	BLAZE	unrecovered	not_recorded	unrecovered	10x3v3	blaze --expect-cells 6680
+Hipp_SN_f3_ONT_Run1	Flexiplex	unrecovered	not_recorded	unrecovered	10x3v3	flexiplex -f 0
+Hipp_SN_f3_ONT_Run2	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	20	10x3v3	rad scan-wl -p CTACACGACGCTCTTCCGATCT -w 10x_3v3.1
+Hipp_SN_f3_ONT_Run2	BLAZE	unrecovered	not_recorded	unrecovered	10x3v3	blaze --expect-cells 6680
+Hipp_SN_f3_ONT_Run2	Flexiplex	unrecovered	not_recorded	unrecovered	10x3v3	flexiplex -f 0
+Hipp_SN_m2_ONT	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	20	10x3v3	rad scan-wl -p CTACACGACGCTCTTCCGATCT -w 10x_3v3.1
+Hipp_SN_m2_ONT	BLAZE	unrecovered	not_recorded	unrecovered	10x3v3	blaze --expect-cells 10427
+Hipp_SN_m2_ONT	Flexiplex	unrecovered	not_recorded	unrecovered	10x3v3	flexiplex -f 0
+Hipp_SN_m3_ONT	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	20	10x3v3	rad scan-wl -p CTACACGACGCTCTTCCGATCT -w 10x_3v3.1
+Hipp_SN_m3_ONT	BLAZE	unrecovered	not_recorded	unrecovered	10x3v3	blaze --expect-cells 10574
+Hipp_SN_m3_ONT	Flexiplex	unrecovered	not_recorded	unrecovered	10x3v3	flexiplex -f 0
+ScMixology2	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x3v3	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
+ScMixology2	BLAZE	2.5.1	9845ec129624f2210c389e67506e29fab849a23d	16	10x3v3	blaze --expect-cells 500 --no-demultiplexing
+ScMixology2	Flexiplex	1.02.7 (release v1.02.7.1)	c85543d820030ae970d6ed8d18d6f1ad9f631911	16	10x3v3	flexiplex -f 0; flexiplex-filter --whitelist 3M-february-2018-3v3.txt

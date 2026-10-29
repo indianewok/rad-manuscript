@@ -35,4 +35,4 @@ Hipp_SN_f3_ONT_Run1	0.939737546	0.951065509	0.989755453	native	physical or techn
 Hipp_SN_f3_ONT_Run2	0.943669184	0.952177967	0.990838140	native	physical or technical input; not asserted independent biological replicate
 Hipp_SN_m2_ONT	0.932447756	0.957769460	0.925980272	native	physical or technical input; not asserted independent biological replicate
 Hipp_SN_m3_ONT	0.967149220	0.961502697	0.932520325	native	physical or technical input; not asserted independent biological replicate
-ScMixology2	0.835125448	1.000000000	0.994565217	reconstructed	physical or technical input; not asserted independent biological replicate
+ScMixology2	0.835125448	1.000000000	1.000000000	native	physical or technical input; not asserted independent biological replicate

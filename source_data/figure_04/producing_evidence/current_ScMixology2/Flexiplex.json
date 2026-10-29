@@ -1,0 +1,108 @@
+{
+  "dataset_id": "ScMixology2",
+  "tool": "Flexiplex",
+  "version": "1.02.7 (release v1.02.7.1)",
+  "source_commit": "c85543d820030ae970d6ed8d18d6f1ad9f631911",
+  "threads": 16,
+  "software": {
+    "version": "1.02.7 (release v1.02.7.1)",
+    "source_commit": "c85543d820030ae970d6ed8d18d6f1ad9f631911",
+    "release": "v1.02.7.1",
+    "binary": {
+      "bytes": 205192,
+      "sha256": "df5ba03078384cd589f54c7927a730147b9a76b8b25c035ab150eeec735384ff",
+      "filename": "flexiplex-linux"
+    },
+    "release_archive": {
+      "bytes": 2142253,
+      "sha256": "74ab5b1794a94a357cf8d69be0aed8216ed6511961c484f177129adb4cbdc541",
+      "filename": "flexiplex-v1.02.7.1.tar.gz",
+      "download_url": "https://github.com/DavidsonGroup/flexiplex/releases/download/v1.02.7.1/flexiplex-v1.02.7.1.tar.gz"
+    },
+    "filter_source": {
+      "bytes": 15547,
+      "sha256": "672ab65cc2fe6fe9f48319a632d72e73c75a1d699b04d6b0f4ec887f5e6bfca0",
+      "filename": "main.py"
+    },
+    "python_version": "Python 3.9.16",
+    "python_binary_sha256": "021a0455f593f7b7a097ec3f6f8fcabd0bdf789be9883d7873083ddbd03f2988"
+  },
+  "input": {
+    "path": "external_data/figure_04/inputs/ScMixology2.fastq.gz",
+    "input_format": "fastq.gz",
+    "bytes": 25955360585,
+    "sha256": "97c03138bd24d33ee63df5ea7a3aadef1b14b4a8271c87e232065363c88107ae",
+    "md5": "484ecae82cebc65584f844c7714566de",
+    "records": 25164948,
+    "quality_handling": "Original full-quality FASTQ; no subsampling or quality replacement"
+  },
+  "chemistry": "10x3v3",
+  "chemistry_catalogue": {
+    "path": "external_data/figure_04/catalogues/3M-february-2018-3v3.txt",
+    "sha256": "843a6f7038db8cb3c06f3dc21cc69d04139ffa10689780518d7a9e42dc2e819b",
+    "barcodes": 6794880
+  },
+  "reference": {
+    "path": "external_data/figure_04/references/ScMixology2.reference.txt.gz",
+    "sha256": "45f58f0b2f193135b2af503174c6a4c3665ededa8d4fba6dd81a3eca63fcd34f",
+    "barcode_sha256": "f9db9041753aabdde48539845174b5b299c0725c5f846df3d0ee35b424d56c50",
+    "barcodes": 248,
+    "role": "Scoring only"
+  },
+  "commands": [
+    [
+      "gzip",
+      "-cd",
+      "external_data/figure_04/inputs/ScMixology2.fastq.gz"
+    ],
+    [
+      "flexiplex",
+      "-d",
+      "10x3v3",
+      "-f",
+      "0",
+      "-e",
+      "2",
+      "-p",
+      "16",
+      "-n",
+      "results/figure_04/ScMixology2/Flexiplex/ScMixology2"
+    ],
+    [
+      "flexiplex-filter",
+      "--whitelist",
+      "external_data/figure_04/catalogues/3M-february-2018-3v3.txt",
+      "--outfile",
+      "results/figure_04/ScMixology2/Flexiplex/selected_native.tsv",
+      "results/figure_04/ScMixology2/Flexiplex/ScMixology2_barcodes_counts.txt"
+    ]
+  ],
+  "command": "gzip -cd external_data/figure_04/inputs/ScMixology2.fastq.gz | flexiplex -d 10x3v3 -f 0 -e 2 -p 16 -n results/figure_04/ScMixology2/Flexiplex/ScMixology2; flexiplex-filter --whitelist external_data/figure_04/catalogues/3M-february-2018-3v3.txt --outfile results/figure_04/ScMixology2/Flexiplex/selected_native.tsv results/figure_04/ScMixology2/Flexiplex/ScMixology2_barcodes_counts.txt",
+  "environment": {
+    "PYTHONHASHSEED": "0",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "MPLBACKEND": "Agg",
+    "LANG": "C.UTF-8",
+    "LC_ALL": "C.UTF-8",
+    "TZ": "UTC"
+  },
+  "native_exit_code": 0,
+  "input_reads": 25164948,
+  "selected_barcode_sha256": "08c893a82952176abc1d934c2b72bb815b4e5dbd5b20a21a54aa3a06d601caa2",
+  "metrics": {
+    "calls": 182,
+    "reference_n": 248,
+    "tp": 182,
+    "fp": 0,
+    "fn": 66,
+    "precision": 1.0,
+    "recall": 0.7338709677419355,
+    "f1": 0.8465116279069768
+  },
+  "native_receipt_sha256": "b49d53105df7eb3915976baddb671b0dafda2043b591f8f5db49ad5760ad7328",
+  "dependency_lock": "scripts/figure_04/scmixology2/requirements.txt",
+  "dependency_lock_sha256": "2d5f9074e3a48dc4dad2ac3749b8bf79c4a0af0efa937ec9c45113b129272d86"
+}

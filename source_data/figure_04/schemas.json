@@ -128,10 +128,8 @@
   },
   "tool_parameters.tsv": {
     "fields": [
-      "analysis",
       "dataset",
       "tool",
-      "replicate",
       "version",
       "source_commit",
       "threads",
@@ -139,15 +137,19 @@
       "command"
     ],
     "primary_key": [
-      "analysis",
       "dataset",
-      "tool",
-      "replicate"
+      "tool"
     ],
     "rows": 111,
     "encoding": "UTF-8",
     "delimiter": "tab",
-    "missing_value": "Explicit not_recorded where an execution detail was not recorded"
+    "missing_value": "Explicit not_recorded where an execution detail was not recorded",
+    "chemistry_values": [
+      "10x3v3",
+      "10x3v2",
+      "Visium",
+      "not_recorded"
+    ]
   },
   "run_records/*.json": {
     "format": "JSON",

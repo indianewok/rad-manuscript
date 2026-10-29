@@ -1,0 +1,94 @@
+{
+  "dataset_id": "ScMixology2",
+  "tool": "BLAZE",
+  "version": "2.5.1",
+  "source_commit": "9845ec129624f2210c389e67506e29fab849a23d",
+  "threads": 16,
+  "software": {
+    "version": "2.5.1",
+    "source_commit": "9845ec129624f2210c389e67506e29fab849a23d",
+    "wheel": {
+      "bytes": 45699386,
+      "sha256": "f09e985c6984ff1811a23a238c05b5914a81df69eb980c0e66d524fcd3f5d1cc",
+      "filename": "blaze2-2.5.1-py3-none-any.whl",
+      "download_url": "https://files.pythonhosted.org/packages/59/a0/4b8aee6426f0760ecc66016a58bffefb283b07803e1fa21eb1a15ca8283d/blaze2-2.5.1-py3-none-any.whl"
+    },
+    "python_version": "Python 3.9.16",
+    "python_binary_sha256": "021a0455f593f7b7a097ec3f6f8fcabd0bdf789be9883d7873083ddbd03f2988"
+  },
+  "input": {
+    "path": "external_data/figure_04/inputs/ScMixology2.fastq.gz",
+    "input_format": "fastq.gz",
+    "bytes": 25955360585,
+    "sha256": "97c03138bd24d33ee63df5ea7a3aadef1b14b4a8271c87e232065363c88107ae",
+    "md5": "484ecae82cebc65584f844c7714566de",
+    "records": 25164948,
+    "quality_handling": "Original full-quality FASTQ; no subsampling or quality replacement"
+  },
+  "chemistry": "10x3v3",
+  "chemistry_catalogue": {
+    "source": "Bundled BLAZE2.5.1 10x3v3 catalogue",
+    "software_relative_path": "blaze/10X_bc/3M-february-2018.zip",
+    "archive_sha256": "06af0b2b5ed3294977aa5a5be86a4c9852b7ec1b26ac4a28a6edc08e588066f3",
+    "member": "3M-february-2018.txt",
+    "uncompressed_sha256": "843a6f7038db8cb3c06f3dc21cc69d04139ffa10689780518d7a9e42dc2e819b",
+    "barcodes": 6794880,
+    "identical_to_external_Flex_catalogue": true
+  },
+  "reference": {
+    "path": "external_data/figure_04/references/ScMixology2.reference.txt.gz",
+    "sha256": "45f58f0b2f193135b2af503174c6a4c3665ededa8d4fba6dd81a3eca63fcd34f",
+    "barcode_sha256": "f9db9041753aabdde48539845174b5b299c0725c5f846df3d0ee35b424d56c50",
+    "barcodes": 248,
+    "role": "Scoring only"
+  },
+  "commands": [
+    [
+      "blaze",
+      "--expect-cells",
+      "500",
+      "--10x-kit-version",
+      "3v3",
+      "--minQ",
+      "15",
+      "--max-edit-distance",
+      "2",
+      "--threads",
+      "16",
+      "--batch-size",
+      "1000",
+      "--no-demultiplexing",
+      "--output-prefix",
+      "results/figure_04/ScMixology2/BLAZE/",
+      "external_data/figure_04/inputs/ScMixology2.fastq.gz"
+    ]
+  ],
+  "command": "blaze --expect-cells 500 --10x-kit-version 3v3 --minQ 15 --max-edit-distance 2 --threads 16 --batch-size 1000 --no-demultiplexing --output-prefix results/figure_04/ScMixology2/BLAZE/ external_data/figure_04/inputs/ScMixology2.fastq.gz",
+  "environment": {
+    "PYTHONHASHSEED": "0",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "MPLBACKEND": "Agg",
+    "LANG": "C.UTF-8",
+    "LC_ALL": "C.UTF-8",
+    "TZ": "UTC"
+  },
+  "native_exit_code": 0,
+  "input_reads": 25164948,
+  "selected_barcode_sha256": "4ac4566fb59630ff1314da1586023f31e79188d0f07e2fa841fec866a1a36910",
+  "metrics": {
+    "calls": 188,
+    "reference_n": 248,
+    "tp": 188,
+    "fp": 0,
+    "fn": 60,
+    "precision": 1.0,
+    "recall": 0.7580645161290323,
+    "f1": 0.8623853211009175
+  },
+  "native_receipt_sha256": "601f7fc8c18a4da62cb524f652c5926b3378b7efe22e39412e27f73d0386077b",
+  "dependency_lock": "scripts/figure_04/scmixology2/requirements.txt",
+  "dependency_lock_sha256": "2d5f9074e3a48dc4dad2ac3749b8bf79c4a0af0efa937ec9c45113b129272d86"
+}

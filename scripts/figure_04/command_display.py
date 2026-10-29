@@ -6,8 +6,9 @@ from pathlib import Path, PurePosixPath
 import re
 import shlex
 
-FIELDS = ['analysis', 'dataset', 'tool', 'replicate', 'version',
-          'source_commit', 'threads', 'chemistry', 'command']
+FIELDS = ['dataset', 'tool', 'version', 'source_commit', 'threads', 'chemistry', 'command']
+LEGACY_FIELDS = ['analysis', 'dataset', 'tool', 'replicate', 'version',
+                 'source_commit', 'threads', 'chemistry', 'command']
 OPERATORS = {';', '&&', '||', '|', '&'}
 REDIRECTS = {'>', '>>', '<', '<<', '>&', '&>'}
 
@@ -97,12 +98,12 @@ def shorten(value):
     return PurePosixPath(value).name if '/' in value else value
 
 
-def compact_command(command, tool):
+def compact_command(command, tool, version=''):
     commands = tool_commands(command, tool)
-    return '; '.join(shlex.join(display_argv(argv)) for argv in commands) or 'not_recorded'
+    return '; '.join(shlex.join(display_argv(argv, version)) for argv in commands) or 'not_recorded'
 
 
-def display_argv(argv):
+def display_argv(argv, version=''):
     """Keep recorded tool options; omit file inputs and output destinations."""
     io_flags = {'--input', '-i', '--output-prefix', '--output-fastq', '--outfile',
                 '--output', '--counts', '--raw-bc', '--cellranger-reference',
@@ -115,6 +116,21 @@ def display_argv(argv):
         io_flags.add('-o')
     boolean_flags = {'--minimal_stdout', '--no-demultiplexing', '--no-emtpy-drops',
                      '--no-empty-drops', '--overwrite', '--verbose', '-v', '--hs-bcs'}
+    tool = argv[0]
+    io_flags.add('--threads')
+    if tool == 'rad':
+        io_flags.update({'-t', '--chunk-size', '--chunks', '-k'})
+    elif tool == 'flexiplex':
+        io_flags.add('-p')
+    defaults = {}
+    if tool == 'rad':
+        defaults = {'--max-error': '0.3', '-e': '0.3', '--barcode-length': '16', '-n': '16', '--left-margin': '0', '--right-margin': '0'}
+    elif tool == 'blaze':
+        defaults = {'--minQ': '15', '--max-edit-distance': '2'}
+        if re.search(r'2\.(?:5|6)\.', version):
+            defaults.update({'--10x-kit-version': '3v3', '--kit-version': '3v3', '--umi-len': '12', '--batch-size': '1000'})
+    elif tool == 'flexiplex' and re.search(r'1\.02\.(?:6|7)(?:\D|$)', version):
+        defaults = {'-e': '2', '-f': '8', '-d': '10x3v3'}
     prefix = 2 if argv[0] == 'python' else 1
     output = argv[:prefix]
     index = prefix
@@ -122,6 +138,12 @@ def display_argv(argv):
         flag = argv[index]
         if flag == 'scan-wl' and argv[0] == 'rad':
             output.append(flag);index += 1;continue
+        if tool == 'rad' and flag == '--hs-bcs':
+            index += 1;continue
+        if flag in defaults and index+1 < len(argv) and argv[index+1] == defaults[flag]:
+            index += 2;continue
+        if any(flag == key+'='+value for key, value in defaults.items()):
+            index += 1;continue
         if flag in io_flags:
             index += 2;continue
         if any(flag.startswith(key+'=') for key in io_flags):
@@ -134,6 +156,38 @@ def display_argv(argv):
     return output
 
 
+
+def compact_chemistry(dataset, chemistry, same_input_chemistry=''):
+    """Name the input library chemistry; retain tool-specific presets in flags."""
+    if dataset.startswith('section') or dataset == 'LeBrigand-MOB':
+        return 'Visium'
+    for value in [chemistry, same_input_chemistry]:
+        if re.search(r'10x[_ ]?3v2', value, re.I):
+            return '10x3v2'
+        if re.search(r'10x[_ ]?3v3', value, re.I):
+            return '10x3v3'
+        if 'visium' in value.lower():
+            return 'Visium'
+    return 'not_recorded'
+
+
+def recorded_threads(command, tool):
+    """Move an explicitly recorded thread count into its dedicated column."""
+    flags = {'--threads'}
+    if tool == 'RAD': flags.add('-t')
+    if tool == 'Flexiplex': flags.add('-p')
+    values = set()
+    for argv in tool_commands(command, tool):
+        for index, token in enumerate(argv):
+            if token in flags and index+1 < len(argv):
+                values.add(argv[index+1])
+            elif any(token.startswith(flag+'=') for flag in flags):
+                values.add(token.split('=',1)[1])
+    if len(values)>1:
+        raise ValueError('Conflicting recorded thread counts')
+    return next(iter(values)) if values else None
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--input', type=Path, default=Path('source_data/figure_04/tool_parameters.tsv'))
@@ -141,11 +195,20 @@ def main():
     args = parser.parse_args()
     with args.input.open(newline='') as handle:
         reader = csv.DictReader(handle, delimiter='\t')
-        if reader.fieldnames != FIELDS:
-            raise ValueError('Require the exact nine-column tool-parameter schema')
+        if reader.fieldnames not in (FIELDS, LEGACY_FIELDS):
+            raise ValueError('Require the seven-column table or its nine-column input format')
         rows = list(reader)
-    for row in rows:
-        row['command'] = compact_command(row['command'], row['tool'])
+    chemistry = {row['dataset']: row['chemistry'] for row in rows if row['tool'] == 'RAD'}
+    projected = []
+    for source in rows:
+        row = {key: source[key] for key in FIELDS}
+        row['chemistry'] = compact_chemistry(row['dataset'], row['chemistry'], chemistry.get(row['dataset'], ''))
+        threads = recorded_threads(row['command'], row['tool'])
+        if threads is not None and not row['threads'].isdigit():
+            row['threads'] = threads
+        row['command'] = compact_command(row['command'], row['tool'], row['version'])
+        projected.append(row)
+    rows = projected
     args.output.parent.mkdir(parents=True, exist_ok=True)
     with args.output.open('w', newline='') as handle:
         writer = csv.DictWriter(handle, FIELDS, delimiter='\t', lineterminator='\n')

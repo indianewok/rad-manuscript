@@ -418,11 +418,15 @@ class Build:
         self.check('F4_current_parameter_pairs',len(parameters)==111 and
                    {(r['dataset'],r['tool']) for r in parameters}==keys,
                    'same111 input/tool records',len(parameters),folder/'tool_parameters.tsv')
+        parameter_fields=['dataset','tool','version','source_commit','threads','chemistry','command']
+        self.check('F4_current_parameter_columns',bool(parameters) and list(parameters[0])==parameter_fields,
+                   parameter_fields,list(parameters[0]) if parameters else [],folder/'tool_parameters.tsv')
         rad=[r for r in parameters if r['tool']=='RAD']
+        receipts={r['dataset']:json.loads((folder/'producing_evidence/current_RAD'/(r['dataset']+'.json')).read_text()) for r in rad}
         self.check('F4_current_RAD_source',len(rad)==37 and all(
-                   r['source_commit']=='4acbe004ba11b150d6832395452632f367a6e6c1' and
-                   re.search(r'(?:^|\s)(?:-e|--max-error)(?:\s+|=)0\.3(?:0)?(?:\s|$)',r['command'])
-                   for r in rad),'RAD4acbe00, explicit error0.3',len(rad),folder/'tool_parameters.tsv')
+                   r['source_commit']==receipts[r['dataset']]['source_commit']=='4acbe004ba11b150d6832395452632f367a6e6c1' and
+                   receipts[r['dataset']]['dataset_id']==r['dataset'] and receipts[r['dataset']]['max_error']==0.3
+                   for r in rad),'RAD4acbe00, recorded error0.3',len(rad),folder/'tool_parameters.tsv')
         for metric in ('precision','recall','f1'):
             paired=rows(folder/('paired_'+metric+'.tsv'))
             self.check('F4_current_paired_'+metric,[r['paired_input_id'] for r in paired]==ids,
