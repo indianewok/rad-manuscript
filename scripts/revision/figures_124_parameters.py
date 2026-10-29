@@ -115,6 +115,7 @@ for r in current:
    if tool=='BLAZE' and dataset in ('Measles-P7','Measles-P8-VDJ-enriched'):
     payload['evidence']='source_data/figure_04/producing_evidence/'+dataset+'_BLAZE_run_sample.sh'
    payload.update(version=version if version!='not_recorded' else previous['version'],exact_command_or_recorded_settings=r['command'])
+   if dataset=='ERR15095097':payload['reference_whitelist']='MPNST1 (2020_23); n='+selected_row['reference_n']
    if previous.get('evidence_original_sha256'):payload['evidence_original_sha256']=previous['evidence_original_sha256']
    add(**payload)
    continue

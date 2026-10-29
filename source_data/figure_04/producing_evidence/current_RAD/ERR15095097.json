@@ -31,8 +31,22 @@
   "input_record_count_basis": "Native nonempty sequence count; physical FASTQ record count not recorded",
   "selected_barcodes": 4776,
   "selected_barcode_sha256": "13c53abcadbc4a7624ccac3e4551172b26089c4b85934c4d79cdb9159b962486",
-  "reference_barcodes": 10281,
+  "reference_barcodes": 4602,
   "native_receipt_sha256": "d4e1429ea2d66c060b6e5e60245634276d13cc5fb5225b8caef196bb11b3f9b9",
-  "reference_sha256": "5f1d2aeb0c1261e2092e1069e34a8de7af96cdc4da197241e23ee8ffd6224bf7",
-  "reference_barcode_sha256": "b63e5a89df2457f853d386d132636c67c3bead75f53b6e874a6977d6a84eba7d"
+  "reference_sha256": "3c9d29a0a4cc1b5a1360ec98557f72fee9404d805f78ec7dbfed339dda2f9896",
+  "reference_barcode_sha256": "999dbf531a350fab6219f1b9331dc915fb33b1beadb04886a62bc1f897e9ea08",
+  "scoring": {
+    "receipt": "source_data/figure_04/reference_scoring/ERR15095097.json",
+    "reference": "MPNST1_2020_23",
+    "metrics": {
+      "calls": 4776,
+      "reference_n": 4602,
+      "tp": 4588,
+      "fp": 188,
+      "fn": 14,
+      "precision": 0.9606365159128978,
+      "recall": 0.9969578444154715,
+      "f1": 0.9784602260609938
+    }
+  }
 }

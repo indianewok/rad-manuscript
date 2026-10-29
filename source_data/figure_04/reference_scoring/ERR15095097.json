@@ -1,0 +1,79 @@
+{
+  "dataset_id": "ERR15095097",
+  "reference": {
+    "name": "MPNST1_2020_23",
+    "path": "external_data/figure_04/references/ERR15095094_MPNST1_scNaUMIseq_MinION.reference.txt.gz",
+    "barcodes": 4602,
+    "file_sha256": "3c9d29a0a4cc1b5a1360ec98557f72fee9404d805f78ec7dbfed339dda2f9896",
+    "barcode_sha256": "999dbf531a350fab6219f1b9331dc915fb33b1beadb04886a62bc1f897e9ea08",
+    "role": "Matched to the raw-read barcode identity"
+  },
+  "tool_parameters": {
+    "path": "source_data/figure_04/tool_parameters.tsv",
+    "sha256": "81d8233a75892d16080adf402e2de286659473267b85f9b0af08d5a6d1bb9693"
+  },
+  "tools": {
+    "RAD": {
+      "version": "1.0.2",
+      "selected_list": {
+        "path": "results/figure_04/ERR15095097/rad.txt",
+        "barcodes": 4776,
+        "barcode_sha256": "13c53abcadbc4a7624ccac3e4551172b26089c4b85934c4d79cdb9159b962486"
+      },
+      "metrics": {
+        "calls": 4776,
+        "reference_n": 4602,
+        "tp": 4588,
+        "fp": 188,
+        "fn": 14,
+        "precision": 0.9606365159128978,
+        "recall": 0.9969578444154715,
+        "f1": 0.9784602260609938
+      }
+    },
+    "BLAZE": {
+      "version": "2.5.0",
+      "selected_list": {
+        "path": "external_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095097.BLAZE.barcodes.txt",
+        "barcodes": 4508,
+        "barcode_sha256": "4977b9ce969eab2212c4993ec6ef57740b7981f5ee51fb4ccf7172742b377a0f"
+      },
+      "metrics": {
+        "calls": 4508,
+        "reference_n": 4602,
+        "tp": 4430,
+        "fp": 78,
+        "fn": 172,
+        "precision": 0.9826974267968057,
+        "recall": 0.9626249456757932,
+        "f1": 0.9725576289791438
+      }
+    },
+    "Flexiplex": {
+      "version": "1.02.6",
+      "selected_list": {
+        "path": "external_data/reviewer_comment_data/mpnst_native_three_tool_whitelist_20260811/callsets/ERR15095097.Flexiplex.barcodes.txt",
+        "barcodes": 4784,
+        "barcode_sha256": "6597f1f1a0d9fc187ecfc9f76273812426f271b973c816a020c9a924593c52ed"
+      },
+      "metrics": {
+        "calls": 4784,
+        "reference_n": 4602,
+        "tp": 4590,
+        "fp": 194,
+        "fn": 12,
+        "precision": 0.9594481605351171,
+        "recall": 0.9973924380704041,
+        "f1": 0.9780524184956317
+      }
+    }
+  },
+  "scoring_script": {
+    "path": "scripts/figure_04/rescore_reference.py",
+    "sha256": "a3e92f4d7e2543587dbfe5f9bd579dd2e31532f29657989384a9005b44f947fa"
+  },
+  "dataset_record": {
+    "path": "source_data/figure_04/run_records/ERR15095097.json",
+    "sha256": "de9dca9b9e63f117b891f0f75efbd11da0c4b6664b9e962632e0edb937940423"
+  }
+}

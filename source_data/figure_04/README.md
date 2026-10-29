@@ -23,7 +23,7 @@ each input. ScMixology2 uses complete-input native runs for all three tools; [it
 Synthetic references contain known source barcodes. Biological references use
 matched filtered short-read barcodes or published spatial masks. The RAGE
 lymph-node reference contains 5,978 barcodes annotated as T/B-containing.
-The guide describes the unresolved ERR15095097 sample/reference pairing.
+The guide specifies the MPNST1 barcode reference used for ERR15095097.
 
 The comparison contains 87 observations from public inputs and 24 from
 controlled-access Visium inputs. Complete barcode lists are external inputs.

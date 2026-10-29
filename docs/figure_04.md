@@ -36,7 +36,26 @@ ScMixology2 uses the same complete 25,164,948-read FASTQ for native RAD, BLAZE 2
 
 P7, P8-enriched, P8 and Isosceles ovarian use Flexiplex 1.02.6 with `-d 10x3v3 -f 0 -e 2`, followed by filter 1.02 against the complete chemistry catalogue. Each run uses the complete input and 16 tool threads. [Per-input commands](../scripts/figure_04/flexiplex_f0/README.md) and [execution records](../source_data/figure_04/producing_evidence/current_Flexiplex_f0/) give the input identities and selected-barcode results.
 
-ERR15095097 is deposited as MPNST2, but its raw FASTQ barcode identities disagree with the deposited MPNST2 processed-cell set. All three tools are scored against the deposited MPNST2 reference. This unresolved sample/reference pairing affects interpretation of that input. The public [library metadata](https://www.ebi.ac.uk/biostudies/files/E-MTAB-15190/E-MTAB-15190.sdrf.txt) and [processed MPNST2 barcodes](https://www.ebi.ac.uk/biostudies/files/E-MTAB-15190/MPNST2_scNaUmiSeq_PromethION_barcodes.tsv.gz) identify the deposited sample.
+ERR15095097 uses the 4,602-barcode MPNST1 (2020_23) short-read reference, matching its raw-read barcode identities. The accession retains its deposited [MPNST2 sample label](https://www.ebi.ac.uk/biostudies/files/E-MTAB-15190/E-MTAB-15190.sdrf.txt). ERR15095096 uses the MPNST2 reference. The [scoring record](../source_data/figure_04/reference_scoring/ERR15095097.json) binds the native selected lists to the MPNST1 reference.
+
+To reproduce ERR15095097's scoring, use the selected barcode list from each native tool run and the MPNST1 short-read reference identified in its [dataset record](../source_data/figure_04/run_records/ERR15095097.json). The [scoring script](../scripts/figure_04/rescore_reference.py) checks the reference barcode identity before calculating TP, FP, FN, precision, recall and F1:
+
+```bash
+REFERENCE=external_data/figure_04/references/ERR15095094_MPNST1_scNaUMIseq_MinION.reference.txt.gz
+RECORD=source_data/figure_04/run_records/ERR15095097.json
+
+python3 scripts/figure_04/rescore_reference.py --dataset-record "$RECORD" \
+  --tool RAD --selected "$RAD_SELECTED" --reference "$REFERENCE" \
+  --output results/figure_04/ERR15095097/RAD_metrics.tsv
+python3 scripts/figure_04/rescore_reference.py --dataset-record "$RECORD" \
+  --tool BLAZE --selected "$BLAZE_SELECTED" --reference "$REFERENCE" \
+  --output results/figure_04/ERR15095097/BLAZE_metrics.tsv
+python3 scripts/figure_04/rescore_reference.py --dataset-record "$RECORD" \
+  --tool Flexiplex --selected "$FLEXIPLEX_SELECTED" --reference "$REFERENCE" \
+  --output results/figure_04/ERR15095097/Flexiplex_metrics.tsv
+```
+
+Set `RAD_SELECTED`, `BLAZE_SELECTED` and `FLEXIPLEX_SELECTED` to their emitted selected-list files. The script accepts plain or gzipped lists, with optional counts after each barcode. It removes a terminal `-1` suffix when reading the matched short-read reference.
 
 ## Walk through one dataset
 
