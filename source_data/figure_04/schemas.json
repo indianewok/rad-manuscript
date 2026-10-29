@@ -131,9 +131,6 @@
       "dataset",
       "tool",
       "version",
-      "source_commit",
-      "threads",
-      "chemistry",
       "command"
     ],
     "primary_key": [
@@ -143,13 +140,7 @@
     "rows": 111,
     "encoding": "UTF-8",
     "delimiter": "tab",
-    "missing_value": "Explicit not_recorded where an execution detail was not recorded",
-    "chemistry_values": [
-      "10x3v3",
-      "10x3v2",
-      "Visium",
-      "not_recorded"
-    ]
+    "missing_value": "NA indicates an unavailable version"
   },
   "run_records/*.json": {
     "format": "JSON",

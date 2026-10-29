@@ -4,9 +4,9 @@ All 37 RAD discovery results use RAD 1.0.2 at commit
 `4acbe004ba11b150d6832395452632f367a6e6c1`, explicit adapter error `0.3`,
 and the complete selected input.
 
-The `command` column shows the analysis flags with defaults omitted; threads and chemistry have separate columns. Flexiplex’s preset default is `-f 8`; `-f 0` remains explicit when used. The [run records](run_records/) and [producing evidence](producing_evidence/) retain the full commands and settings.
+The `command` column shows the analysis flags with defaults omitted. Flexiplex’s preset default is `-f 8`; `-f 0` remains explicit when used. The [run records](run_records/) and [producing evidence](producing_evidence/) retain the full commands and settings.
 
-- [Tool versions and flags](tool_parameters.tsv): all 111 input–tool records, with seven columns.
+- [Tool versions and flags](tool_parameters.tsv): all 111 input–tool records, with four columns.
 - [Metrics](barcode_detection_metrics.tsv): calls, reference size, TP, FP, FN, precision, recall and F1 for each input and tool.
 - [Friedman](friedman.tsv) and [Dunn](dunn.tsv) results: the existing tests recalculated from all 37 paired inputs.
 - [Run records](run_records/): per-dataset RAD input identities, full chemistry catalogues and matched references.

@@ -74,9 +74,9 @@ bl=B/'paper_revision_20261022/prism/blaze2023_assignment_replay';bp=json.loads((
 add(figure='02',experiment='physical-read assignment',producing_run='L_native2023_BLAZE_incremental_matcher_replay',tool='BLAZE',version='2.6.0a0 _match_bc_row',commit_or_build='exact stock matcher source; commit unrecovered',binary_or_source_sha256=bp['matcher_sha256'],exact_command_or_recorded_settings='max_edit_distance=2; minQ=0; retained seed0 candidate order; incremental exact replay method: '+bp['method'],command_status='matcher parameters/method recovered; entrypoint argv unrecovered',chemistry_layout='native2023 extraction 10x3v3; unchanged sequence/error collection',reference_whitelist='5015 selected targets=5000truth+15extra; iteration order deposited',seed='retained archived seed0 order; appended new candidates lexically',threads='unrecovered for matcher replay',evidence=ev,evidence_sha256=sha(O/ev),applies_to='assignment states/per-selected-target/correction proportions',limitation='Full source assignment records independently rescored; not new FASTQ extraction')
 # Figure4 settings come only from the current per-input table and receipts.
 current=rows(O/'source_data/figure_04/tool_parameters.tsv')
-current_fields=['dataset','tool','version','source_commit','threads','chemistry','command']
+current_fields=['dataset','tool','version','command']
 if current and list(current[0])!=current_fields:
- raise ValueError('Figure4 uses the seven-column parameter table')
+ raise ValueError('Figure4 uses the four-column parameter table')
 selected=rows(O/'source_data/figure_04/barcode_detection_metrics.tsv')
 keys={(r['canonical_id'],r['tool']) for r in selected}
 if len(current)!=111 or {(r['dataset'],r['tool']) for r in current}!=keys:
@@ -86,18 +86,24 @@ wide_current=O/'manifests'/details_path_name('124')
 wide_current={(row['applies_to'],row['tool']):row for row in rows(wide_current) if row['figure']=='04'} if wide_current.exists() else {}
 for r in current:
  dataset,tool=r['dataset'],r['tool']
+ version=r['version'] if r['version'] not in ('','NA','unrecovered','not_recorded') else 'not_recorded'
+ commit=threads=chemistry='not_recorded'
  selected_row=next(x for x in selected if x['canonical_id']==dataset and x['tool']==tool)
  receipt_path=O/'source_data/figure_04/producing_evidence/current_RAD'/(dataset+'.json')
  if tool=='RAD':
   receipt=json.loads(receipt_path.read_text())
-  if r['source_commit']!='4acbe004ba11b150d6832395452632f367a6e6c1' or receipt['max_error']!=0.3:
+  if receipt['source_commit']!='4acbe004ba11b150d6832395452632f367a6e6c1' or receipt['max_error']!=0.3:
    raise ValueError('Current Figure4 RAD source/error pin differs: '+dataset)
+  version=receipt['version'];commit=receipt['source_commit']
+  threads=str(receipt.get('threads','not_recorded'));chemistry=receipt.get('chemistry','not_recorded')
   ev=str(receipt_path.relative_to(O));digest=receipt['binary_sha256']
  elif dataset=='ScMixology2':
   native_path=O/selected_row['source_path']
   native=json.loads(native_path.read_text())
-  if native['dataset_id']!=dataset or native['tool']!=tool or native['source_commit']!=r['source_commit']:
+  if native['dataset_id']!=dataset or native['tool']!=tool:
    raise ValueError('Current ScMixology2 native provenance differs: '+tool)
+  version=native['version'];commit=native['source_commit']
+  threads=str(native.get('threads','not_recorded'));chemistry=native.get('chemistry','not_recorded')
   software=native['software']
   digest=software['wheel']['sha256'] if tool=='BLAZE' else software['binary']['sha256']
   ev=str(native_path.relative_to(O))
@@ -105,16 +111,16 @@ for r in current:
   previous=wide_current.get((dataset,tool))
   if previous:
    payload={key:previous[key] for key in fields}
-   payload.update(version=r['version'],exact_command_or_recorded_settings=r['command'],threads=r['threads'],chemistry_layout=r['chemistry'])
+   payload.update(version=version if version!='not_recorded' else previous['version'],exact_command_or_recorded_settings=r['command'])
    if previous.get('evidence_original_sha256'):payload['evidence_original_sha256']=previous['evidence_original_sha256']
    add(**payload)
    continue
   ev=str(producers.relative_to(O));digest='not_recorded'
  add(figure='04',experiment='barcode discovery across37inputs',producing_run=dataset+'|'+tool,
-     tool=tool,version=r['version'],commit_or_build=r['source_commit'],binary_or_source_sha256=digest,
+     tool=tool,version=version,commit_or_build=commit,binary_or_source_sha256=digest,
      exact_command_or_recorded_settings=r['command'],command_status='current per-input command record',
-     chemistry_layout=r['chemistry'],reference_whitelist=selected_row['reference_type']+'; n='+selected_row['reference_n'],
-     seed='not_recorded',threads=r['threads'],evidence=ev,evidence_sha256=sha(O/ev),
+     chemistry_layout=chemistry,reference_whitelist=selected_row['reference_type']+'; n='+selected_row['reference_n'],
+     seed='not_recorded',threads=threads,evidence=ev,evidence_sha256=sha(O/ev),
      applies_to=dataset,limitation='Descriptive matched-reference barcode-set comparison')
 output=prepare_evidence_rows(output,O)
 write_rows(O/'manifests'/details_path_name('124'),output,fields+['evidence_original_sha256'])

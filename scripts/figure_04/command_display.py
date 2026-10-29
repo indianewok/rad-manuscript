@@ -6,7 +6,8 @@ from pathlib import Path, PurePosixPath
 import re
 import shlex
 
-FIELDS = ['dataset', 'tool', 'version', 'source_commit', 'threads', 'chemistry', 'command']
+FIELDS = ['dataset', 'tool', 'version', 'command']
+SEVEN_FIELDS = ['dataset', 'tool', 'version', 'source_commit', 'threads', 'chemistry', 'command']
 LEGACY_FIELDS = ['analysis', 'dataset', 'tool', 'replicate', 'version',
                  'source_commit', 'threads', 'chemistry', 'command']
 OPERATORS = {';', '&&', '||', '|', '&'}
@@ -59,7 +60,7 @@ def command_segments(tokens):
 
 def tool_commands(command, tool):
     """Return only the recorded software argv, excluding transport/wrappers."""
-    if not command or command.startswith(('unavailable:', 'not_recorded')):
+    if not command or command.strip().lower() in {'na', 'unrecovered', 'not_recorded'} or command.startswith('unavailable:'):
         return []
     commands = []
     for segment in command_segments(shell_tokens(command)):
@@ -100,7 +101,7 @@ def shorten(value):
 
 def compact_command(command, tool, version=''):
     commands = tool_commands(command, tool)
-    return '; '.join(shlex.join(display_argv(argv, version)) for argv in commands) or 'not_recorded'
+    return '; '.join(shlex.join(display_argv(argv, version)) for argv in commands) or 'NA'
 
 
 def display_argv(argv, version=''):
@@ -188,6 +189,12 @@ def recorded_threads(command, tool):
     return next(iter(values)) if values else None
 
 
+def display_version(value):
+    """Keep the software version alone when projecting a supported input table."""
+    match = re.search(r'\b\d+\.\d+(?:\.\d+)+(?:[a-z]+\d*)?\b', value)
+    return match.group(0) if match else 'NA'
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--input', type=Path, default=Path('source_data/figure_04/tool_parameters.tsv'))
@@ -195,17 +202,13 @@ def main():
     args = parser.parse_args()
     with args.input.open(newline='') as handle:
         reader = csv.DictReader(handle, delimiter='\t')
-        if reader.fieldnames not in (FIELDS, LEGACY_FIELDS):
-            raise ValueError('Require the seven-column table or its nine-column input format')
+        if reader.fieldnames not in (FIELDS, SEVEN_FIELDS, LEGACY_FIELDS):
+            raise ValueError('Require the four-column table or a seven/nine-column input format')
         rows = list(reader)
-    chemistry = {row['dataset']: row['chemistry'] for row in rows if row['tool'] == 'RAD'}
     projected = []
     for source in rows:
         row = {key: source[key] for key in FIELDS}
-        row['chemistry'] = compact_chemistry(row['dataset'], row['chemistry'], chemistry.get(row['dataset'], ''))
-        threads = recorded_threads(row['command'], row['tool'])
-        if threads is not None and not row['threads'].isdigit():
-            row['threads'] = threads
+        row['version'] = display_version(row['version'])
         row['command'] = compact_command(row['command'], row['tool'], row['version'])
         projected.append(row)
     rows = projected

@@ -2,7 +2,7 @@
 
 **RAD 1.0.2, commit [`4acbe004ba11b150d6832395452632f367a6e6c1`](https://github.com/indianewok/rad/commit/4acbe004ba11b150d6832395452632f367a6e6c1), `scan-wl --max-error 0.3`, complete inputs.**
 
-The [per-input tool table](../source_data/figure_04/tool_parameters.tsv) records the RAD, BLAZE and Flexiplex versions, source commits, threads, chemistry and available commands; unrecovered comparator entries are marked explicitly. BLAZE and Flexiplex settings vary by input. The [RAD run records](../source_data/figure_04/run_records/) specify each input, catalogue and matched reference; [execution records](../source_data/figure_04/producing_evidence/current_RAD/) report the selected build and output counts.
+The [per-input tool table](../source_data/figure_04/tool_parameters.tsv) records the RAD, BLAZE and Flexiplex versions and analysis flags; unavailable versions are marked `NA`. BLAZE and Flexiplex settings vary by input. The [RAD run records](../source_data/figure_04/run_records/) specify each input, catalogue and matched reference; [execution records](../source_data/figure_04/producing_evidence/current_RAD/) report the selected build and output counts.
 
 ![Paired barcode discovery metrics](../figures/figure_04/barcode_discovery_paired.png)
 

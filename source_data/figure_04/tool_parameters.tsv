@@ -1,112 +1,112 @@
-dataset	tool	version	source_commit	threads	chemistry	command
-ScTagger-S_flatQ20	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x3v3	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
-ScTagger-S_flatQ20	BLAZE	2.6.0a0	not_recorded	8	10x3v3	blaze --expect-cells 50 --no-emtpy-drops --minimal_stdout --no-demultiplexing
-ScTagger-S_flatQ20	Flexiplex	1.02.6	not_recorded	16	10x3v3	flexiplex; flexiplex-filter --whitelist 3M-february-2018-3v3.txt
-ScTagger-L_flatQ20	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x3v3	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
-ScTagger-L_flatQ20	BLAZE	2.6.0a0	not_recorded	8	10x3v3	blaze --expect-cells 5000 --no-emtpy-drops --minimal_stdout --no-demultiplexing
-ScTagger-L_flatQ20	Flexiplex	1.02.6	not_recorded	16	10x3v3	flexiplex; flexiplex-filter --whitelist 3M-february-2018-3v3.txt
-Measles-P7	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x3v3	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
-Measles-P7	BLAZE	2.6.0a0	not_recorded	24	10x3v3	blaze --expect-cells 964 --minimal_stdout --overwrite
-Measles-P7	Flexiplex	1.02.6 release	not_recorded	16	10x3v3	flexiplex; flexiplex-filter --whitelist 10x_3v3_full_whitelist.txt
-Measles-P8-VDJ-enriched	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x3v3	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
-Measles-P8-VDJ-enriched	BLAZE	2.6.0a0	not_recorded	24	10x3v3	blaze --expect-cells 10299 --minimal_stdout --overwrite
-Measles-P8-VDJ-enriched	Flexiplex	1.02.6 release	not_recorded	16	10x3v3	flexiplex; flexiplex-filter --whitelist 10x_3v3_full_whitelist.txt
-Measles-P8-WTA	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	32	10x3v3	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
-Measles-P8-WTA	BLAZE	2.6.0a0	not_recorded	24	10x3v3	blaze --expect-cells 10299 --minimal_stdout --overwrite
-Measles-P8-WTA	Flexiplex	1.02.6	not_recorded	24	10x3v3	flexiplex; flexiplex-filter --whitelist 3M-february-2018-3v3.txt
-PromethION_iPSC	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x3v3	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
-PromethION_iPSC	BLAZE	2.6.0a0	not_recorded	32	10x3v3	blaze --expect-cells 500 --no-demultiplexing --no-emtpy-drops --overwrite
-PromethION_iPSC	Flexiplex	1.02.6	not_recorded	32	10x3v3	flexiplex; flexiplex-filter -v -w 3M-february-2018.txt
-RAGEseq-cell-line	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x3v2	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 737K-august-2016.txt
-RAGEseq-cell-line	BLAZE	2.6.0a0	not_recorded	32	10x3v2	blaze; blaze --expect-cells 4505 --10x-kit-version 3v2 --overwrite
-RAGEseq-cell-line	Flexiplex	1.02.6	not_recorded	32	10x3v2	flexiplex -d 10x3v2; flexiplex-filter --whitelist 10x_3v2_full_whitelist.txt
-RAGEseq-TNBC-LN	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x3v2	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 737K-august-2016.txt
-RAGEseq-TNBC-LN	BLAZE	2.6.0a0	not_recorded	16	10x3v2	blaze --expect-cells 10433 --10x-kit-version 3v2 --overwrite
-RAGEseq-TNBC-LN	Flexiplex	1.02.6	not_recorded	10	10x3v2	flexiplex -d 10x3v2; flexiplex-filter --whitelist 10x_3v2_full_whitelist.txt
-LongBench-SC-ONT	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x3v3	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
-LongBench-SC-ONT	BLAZE	2.5.0	not_recorded	48	10x3v3	blaze --expect-cells 5000 --minimal_stdout
-LongBench-SC-ONT	Flexiplex	1.02.6	not_recorded	16	10x3v3	flexiplex -f 0
-LongBench-SN-ONT	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x3v3	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
-LongBench-SN-ONT	BLAZE	2.5.0	not_recorded	48	10x3v3	blaze --force-cells 10000 --minimal_stdout
-LongBench-SN-ONT	Flexiplex	1.02.6	not_recorded	16	10x3v3	flexiplex -f 0
-LongBench-SC-PB	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	64	10x3v3	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
-LongBench-SC-PB	BLAZE	2.5.0	not_recorded	48	10x3v3	blaze --expect-cells 5000 --minimal_stdout
-LongBench-SC-PB	Flexiplex	1.02.6	not_recorded	16	10x3v3	flexiplex -f 0
-LongBench-SN-PB	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x3v3	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
-LongBench-SN-PB	BLAZE	2.5.0	not_recorded	48	10x3v3	blaze --force-cells 10000 --minimal_stdout
-LongBench-SN-PB	Flexiplex	1.02.6	not_recorded	16	10x3v3	flexiplex -f 0
-LeBrigand-MOB	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	Visium	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist visium_v2_full_4992.txt
-LeBrigand-MOB	BLAZE	2.6.0a0 native executable	not_recorded	12	Visium	blaze --expect-cells 918 --full-bc-whitelist visium_v2_full_4992.txt --no-emtpy-drops --no-demultiplexing
-LeBrigand-MOB	Flexiplex	1.02.6 release executable	not_recorded	12	Visium	flexiplex
-Isosceles-ovarian-GSE248115	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x3v3	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
-Isosceles-ovarian-GSE248115	BLAZE	2.6.0a0 native executable	not_recorded	20	10x3v3	blaze --expect-cells 2462 --minimal_stdout --overwrite
-Isosceles-ovarian-GSE248115	Flexiplex	1.02.6 release executable	not_recorded	20	10x3v3	flexiplex
-Hipp_SN_m1_ONT_Run1	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x3v3	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
-Hipp_SN_m1_ONT_Run1	BLAZE	2.5.0	not_recorded	48	10x3v3	blaze --expect-cells 10205 --minimal_stdout
-Hipp_SN_m1_ONT_Run1	Flexiplex	1.02.6	not_recorded	20	10x3v3	flexiplex -f 0; flexiplex-filter --whitelist 3M-february-2018-3v3.txt
-Hipp_SN_m1_ONT_Run2	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x3v3	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
-Hipp_SN_m1_ONT_Run2	BLAZE	2.5.0	not_recorded	48	10x3v3	blaze --expect-cells 10205 --minimal_stdout
-Hipp_SN_m1_ONT_Run2	Flexiplex	1.02.6	not_recorded	20	10x3v3	flexiplex -f 0; flexiplex-filter --whitelist 3M-february-2018-3v3.txt
-Hipp_SN_m1_ONT_Run3	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x3v3	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
-Hipp_SN_m1_ONT_Run3	BLAZE	2.5.0	not_recorded	48	10x3v3	blaze --expect-cells 10205 --minimal_stdout
-Hipp_SN_m1_ONT_Run3	Flexiplex	1.02.6	not_recorded	20	10x3v3	flexiplex -f 0; flexiplex-filter --whitelist 3M-february-2018-3v3.txt
-ERR15095094_MPNST1_scNaUMIseq_MinION	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x3v3	rad scan-wl -p CTACACGACGCTCTTCCGATCT -w 10x_3v3.1
-ERR15095094_MPNST1_scNaUMIseq_MinION	BLAZE	2.5.0	not_recorded	16	10x3v3	blaze --expect-cells 4500 --no-demultiplexing
-ERR15095094_MPNST1_scNaUMIseq_MinION	Flexiplex	1.02.6	not_recorded	16	10x3v3	flexiplex -f 0; flexiplex-filter --whitelist 3M-february-2018-3v3
-ERR15095095_MPNST1_scNaUMIseq_PromethION	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x3v3	rad scan-wl -p CTACACGACGCTCTTCCGATCT -w 10x_3v3.1
-ERR15095095_MPNST1_scNaUMIseq_PromethION	BLAZE	2.5.0	not_recorded	16	10x3v3	blaze --expect-cells 4500 --no-demultiplexing
-ERR15095095_MPNST1_scNaUMIseq_PromethION	Flexiplex	1.02.6	not_recorded	16	10x3v3	flexiplex -f 0; flexiplex-filter --whitelist 3M-february-2018-3v3
-ERR15095096	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	20	10x3v3	rad scan-wl -p CTACACGACGCTCTTCCGATCT -w 10x_3v3 -v
-ERR15095096	BLAZE	BLAZE 2.5.0	not_recorded	20	10x3v3	blaze --expect-cells 11000 --no-demultiplexing
-ERR15095096	Flexiplex	Flexiplex 1.02.6	not_recorded	20	10x3v3	flexiplex -f 0; flexiplex-filter --whitelist 3M-february-2018-3v3
-ERR15095097	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	20	10x3v3	rad scan-wl -p CTACACGACGCTCTTCCGATCT -w 10x_3v3 -v
-ERR15095097	BLAZE	BLAZE 2.5.0	not_recorded	20	10x3v3	blaze --expect-cells 11000 --no-demultiplexing
-ERR15095097	Flexiplex	Flexiplex 1.02.6	not_recorded	20	10x3v3	flexiplex -f 0; flexiplex-filter --whitelist 3M-february-2018-3v3
-section12	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	4	Visium	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist visium-v1_v2_bitlist.csv.gz
-section12	BLAZE	2.6.0a0	not_recorded	unrecovered	Visium	blaze --expect-cells 2500
-section12	Flexiplex	1.02.6	not_recorded	unrecovered	Visium	flexiplex -d 10x3v2
-section16	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	4	Visium	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist visium-v1_v2_bitlist.csv.gz
-section16	BLAZE	2.6.0a0	not_recorded	unrecovered	Visium	blaze --expect-cells 2500
-section16	Flexiplex	1.02.6	not_recorded	unrecovered	Visium	flexiplex -d 10x3v2
-section17_1T_1B	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	4	Visium	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist visium-v1_v2_bitlist.csv.gz
-section17_1T_1B	BLAZE	2.6.0a0	not_recorded	unrecovered	Visium	blaze --expect-cells 2500
-section17_1T_1B	Flexiplex	1.02.6	not_recorded	unrecovered	Visium	flexiplex -d 10x3v2
-section17_4T_1B	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	4	Visium	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist visium-v1_v2_bitlist.csv.gz
-section17_4T_1B	BLAZE	2.6.0a0	not_recorded	unrecovered	Visium	blaze --expect-cells 2500
-section17_4T_1B	Flexiplex	1.02.6	not_recorded	unrecovered	Visium	flexiplex -d 10x3v2
-section22	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	4	Visium	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist visium-v1_v2_bitlist.csv.gz
-section22	BLAZE	2.6.0a0	not_recorded	unrecovered	Visium	blaze --expect-cells 2500
-section22	Flexiplex	1.02.6	not_recorded	unrecovered	Visium	flexiplex -d 10x3v2
-section31	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	4	Visium	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist visium-v1_v2_bitlist.csv.gz
-section31	BLAZE	2.6.0a0	not_recorded	unrecovered	Visium	blaze --expect-cells 2500
-section31	Flexiplex	1.02.6	not_recorded	unrecovered	Visium	flexiplex -d 10x3v2
-section32_1T_1B	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	4	Visium	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist visium-v1_v2_bitlist.csv.gz
-section32_1T_1B	BLAZE	2.6.0a0	not_recorded	unrecovered	Visium	blaze --expect-cells 2500
-section32_1T_1B	Flexiplex	1.02.6	not_recorded	unrecovered	Visium	flexiplex -d 10x3v2
-section32_4T_1B	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	4	Visium	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist visium-v1_v2_bitlist.csv.gz
-section32_4T_1B	BLAZE	2.6.0a0	not_recorded	unrecovered	Visium	blaze --expect-cells 2500
-section32_4T_1B	Flexiplex	1.02.6	not_recorded	unrecovered	Visium	flexiplex -d 10x3v2
-Hipp_SN_f1_ONT_Run1	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	20	10x3v3	rad scan-wl -p CTACACGACGCTCTTCCGATCT -w 10x_3v3.1
-Hipp_SN_f1_ONT_Run1	BLAZE	unrecovered	not_recorded	unrecovered	10x3v3	blaze --expect-cells 8975
-Hipp_SN_f1_ONT_Run1	Flexiplex	unrecovered	not_recorded	unrecovered	10x3v3	flexiplex -f 0
-Hipp_SN_f1_ONT_Run2	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	20	10x3v3	rad scan-wl -p CTACACGACGCTCTTCCGATCT -w 10x_3v3.1
-Hipp_SN_f1_ONT_Run2	BLAZE	unrecovered	not_recorded	unrecovered	10x3v3	blaze --expect-cells 8975
-Hipp_SN_f1_ONT_Run2	Flexiplex	unrecovered	not_recorded	unrecovered	10x3v3	flexiplex -f 0
-Hipp_SN_f2_ONT	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	20	10x3v3	rad scan-wl -p CTACACGACGCTCTTCCGATCT -w 10x_3v3.1
-Hipp_SN_f2_ONT	BLAZE	unrecovered	not_recorded	unrecovered	10x3v3	blaze --expect-cells 8850
-Hipp_SN_f2_ONT	Flexiplex	unrecovered	not_recorded	unrecovered	10x3v3	flexiplex -f 0
-Hipp_SN_f3_ONT_Run1	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	20	10x3v3	rad scan-wl -p CTACACGACGCTCTTCCGATCT -w 10x_3v3.1
-Hipp_SN_f3_ONT_Run1	BLAZE	unrecovered	not_recorded	unrecovered	10x3v3	blaze --expect-cells 6680
-Hipp_SN_f3_ONT_Run1	Flexiplex	unrecovered	not_recorded	unrecovered	10x3v3	flexiplex -f 0
-Hipp_SN_f3_ONT_Run2	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	20	10x3v3	rad scan-wl -p CTACACGACGCTCTTCCGATCT -w 10x_3v3.1
-Hipp_SN_f3_ONT_Run2	BLAZE	unrecovered	not_recorded	unrecovered	10x3v3	blaze --expect-cells 6680
-Hipp_SN_f3_ONT_Run2	Flexiplex	unrecovered	not_recorded	unrecovered	10x3v3	flexiplex -f 0
-Hipp_SN_m2_ONT	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	20	10x3v3	rad scan-wl -p CTACACGACGCTCTTCCGATCT -w 10x_3v3.1
-Hipp_SN_m2_ONT	BLAZE	unrecovered	not_recorded	unrecovered	10x3v3	blaze --expect-cells 10427
-Hipp_SN_m2_ONT	Flexiplex	unrecovered	not_recorded	unrecovered	10x3v3	flexiplex -f 0
-Hipp_SN_m3_ONT	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	20	10x3v3	rad scan-wl -p CTACACGACGCTCTTCCGATCT -w 10x_3v3.1
-Hipp_SN_m3_ONT	BLAZE	unrecovered	not_recorded	unrecovered	10x3v3	blaze --expect-cells 10574
-Hipp_SN_m3_ONT	Flexiplex	unrecovered	not_recorded	unrecovered	10x3v3	flexiplex -f 0
-ScMixology2	RAD	1.0.2	4acbe004ba11b150d6832395452632f367a6e6c1	16	10x3v3	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
-ScMixology2	BLAZE	2.5.1	9845ec129624f2210c389e67506e29fab849a23d	16	10x3v3	blaze --expect-cells 500 --no-demultiplexing
-ScMixology2	Flexiplex	1.02.7 (release v1.02.7.1)	c85543d820030ae970d6ed8d18d6f1ad9f631911	16	10x3v3	flexiplex -f 0; flexiplex-filter --whitelist 3M-february-2018-3v3.txt
+dataset	tool	version	command
+ScTagger-S_flatQ20	RAD	1.0.2	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
+ScTagger-S_flatQ20	BLAZE	2.6.0a0	blaze --expect-cells 50 --no-emtpy-drops --minimal_stdout --no-demultiplexing
+ScTagger-S_flatQ20	Flexiplex	1.02.6	flexiplex; flexiplex-filter --whitelist 3M-february-2018-3v3.txt
+ScTagger-L_flatQ20	RAD	1.0.2	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
+ScTagger-L_flatQ20	BLAZE	2.6.0a0	blaze --expect-cells 5000 --no-emtpy-drops --minimal_stdout --no-demultiplexing
+ScTagger-L_flatQ20	Flexiplex	1.02.6	flexiplex; flexiplex-filter --whitelist 3M-february-2018-3v3.txt
+Measles-P7	RAD	1.0.2	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
+Measles-P7	BLAZE	2.6.0a0	blaze --expect-cells 964 --minimal_stdout --overwrite
+Measles-P7	Flexiplex	1.02.6	flexiplex; flexiplex-filter --whitelist 10x_3v3_full_whitelist.txt
+Measles-P8-VDJ-enriched	RAD	1.0.2	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
+Measles-P8-VDJ-enriched	BLAZE	2.6.0a0	blaze --expect-cells 10299 --minimal_stdout --overwrite
+Measles-P8-VDJ-enriched	Flexiplex	1.02.6	flexiplex; flexiplex-filter --whitelist 10x_3v3_full_whitelist.txt
+Measles-P8-WTA	RAD	1.0.2	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
+Measles-P8-WTA	BLAZE	2.6.0a0	blaze --expect-cells 10299 --minimal_stdout --overwrite
+Measles-P8-WTA	Flexiplex	1.02.6	flexiplex; flexiplex-filter --whitelist 3M-february-2018-3v3.txt
+PromethION_iPSC	RAD	1.0.2	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
+PromethION_iPSC	BLAZE	2.6.0a0	blaze --expect-cells 500 --no-demultiplexing --no-emtpy-drops --overwrite
+PromethION_iPSC	Flexiplex	1.02.6	flexiplex; flexiplex-filter -v -w 3M-february-2018.txt
+RAGEseq-cell-line	RAD	1.0.2	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 737K-august-2016.txt
+RAGEseq-cell-line	BLAZE	2.6.0a0	blaze; blaze --expect-cells 4505 --10x-kit-version 3v2 --overwrite
+RAGEseq-cell-line	Flexiplex	1.02.6	flexiplex -d 10x3v2; flexiplex-filter --whitelist 10x_3v2_full_whitelist.txt
+RAGEseq-TNBC-LN	RAD	1.0.2	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 737K-august-2016.txt
+RAGEseq-TNBC-LN	BLAZE	2.6.0a0	blaze --expect-cells 10433 --10x-kit-version 3v2 --overwrite
+RAGEseq-TNBC-LN	Flexiplex	1.02.6	flexiplex -d 10x3v2; flexiplex-filter --whitelist 10x_3v2_full_whitelist.txt
+LongBench-SC-ONT	RAD	1.0.2	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
+LongBench-SC-ONT	BLAZE	2.5.0	blaze --expect-cells 5000 --minimal_stdout
+LongBench-SC-ONT	Flexiplex	1.02.6	flexiplex -f 0
+LongBench-SN-ONT	RAD	1.0.2	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
+LongBench-SN-ONT	BLAZE	2.5.0	blaze --force-cells 10000 --minimal_stdout
+LongBench-SN-ONT	Flexiplex	1.02.6	flexiplex -f 0
+LongBench-SC-PB	RAD	1.0.2	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
+LongBench-SC-PB	BLAZE	2.5.0	blaze --expect-cells 5000 --minimal_stdout
+LongBench-SC-PB	Flexiplex	1.02.6	flexiplex -f 0
+LongBench-SN-PB	RAD	1.0.2	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
+LongBench-SN-PB	BLAZE	2.5.0	blaze --force-cells 10000 --minimal_stdout
+LongBench-SN-PB	Flexiplex	1.02.6	flexiplex -f 0
+LeBrigand-MOB	RAD	1.0.2	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist visium_v2_full_4992.txt
+LeBrigand-MOB	BLAZE	2.6.0a0	blaze --expect-cells 918 --full-bc-whitelist visium_v2_full_4992.txt --no-emtpy-drops --no-demultiplexing
+LeBrigand-MOB	Flexiplex	1.02.6	flexiplex
+Isosceles-ovarian-GSE248115	RAD	1.0.2	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
+Isosceles-ovarian-GSE248115	BLAZE	2.6.0a0	blaze --expect-cells 2462 --minimal_stdout --overwrite
+Isosceles-ovarian-GSE248115	Flexiplex	1.02.6	flexiplex
+Hipp_SN_m1_ONT_Run1	RAD	1.0.2	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
+Hipp_SN_m1_ONT_Run1	BLAZE	2.5.0	blaze --expect-cells 10205 --minimal_stdout
+Hipp_SN_m1_ONT_Run1	Flexiplex	1.02.6	flexiplex -f 0; flexiplex-filter --whitelist 3M-february-2018-3v3.txt
+Hipp_SN_m1_ONT_Run2	RAD	1.0.2	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
+Hipp_SN_m1_ONT_Run2	BLAZE	2.5.0	blaze --expect-cells 10205 --minimal_stdout
+Hipp_SN_m1_ONT_Run2	Flexiplex	1.02.6	flexiplex -f 0; flexiplex-filter --whitelist 3M-february-2018-3v3.txt
+Hipp_SN_m1_ONT_Run3	RAD	1.0.2	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
+Hipp_SN_m1_ONT_Run3	BLAZE	2.5.0	blaze --expect-cells 10205 --minimal_stdout
+Hipp_SN_m1_ONT_Run3	Flexiplex	1.02.6	flexiplex -f 0; flexiplex-filter --whitelist 3M-february-2018-3v3.txt
+ERR15095094_MPNST1_scNaUMIseq_MinION	RAD	1.0.2	rad scan-wl -p CTACACGACGCTCTTCCGATCT -w 10x_3v3.1
+ERR15095094_MPNST1_scNaUMIseq_MinION	BLAZE	2.5.0	blaze --expect-cells 4500 --no-demultiplexing
+ERR15095094_MPNST1_scNaUMIseq_MinION	Flexiplex	1.02.6	flexiplex -f 0; flexiplex-filter --whitelist 3M-february-2018-3v3
+ERR15095095_MPNST1_scNaUMIseq_PromethION	RAD	1.0.2	rad scan-wl -p CTACACGACGCTCTTCCGATCT -w 10x_3v3.1
+ERR15095095_MPNST1_scNaUMIseq_PromethION	BLAZE	2.5.0	blaze --expect-cells 4500 --no-demultiplexing
+ERR15095095_MPNST1_scNaUMIseq_PromethION	Flexiplex	1.02.6	flexiplex -f 0; flexiplex-filter --whitelist 3M-february-2018-3v3
+ERR15095096	RAD	1.0.2	rad scan-wl -p CTACACGACGCTCTTCCGATCT -w 10x_3v3 -v
+ERR15095096	BLAZE	2.5.0	blaze --expect-cells 11000 --no-demultiplexing
+ERR15095096	Flexiplex	1.02.6	flexiplex -f 0; flexiplex-filter --whitelist 3M-february-2018-3v3
+ERR15095097	RAD	1.0.2	rad scan-wl -p CTACACGACGCTCTTCCGATCT -w 10x_3v3 -v
+ERR15095097	BLAZE	2.5.0	blaze --expect-cells 11000 --no-demultiplexing
+ERR15095097	Flexiplex	1.02.6	flexiplex -f 0; flexiplex-filter --whitelist 3M-february-2018-3v3
+section12	RAD	1.0.2	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist visium-v1_v2_bitlist.csv.gz
+section12	BLAZE	2.6.0a0	blaze --expect-cells 2500
+section12	Flexiplex	1.02.6	flexiplex -d 10x3v2
+section16	RAD	1.0.2	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist visium-v1_v2_bitlist.csv.gz
+section16	BLAZE	2.6.0a0	blaze --expect-cells 2500
+section16	Flexiplex	1.02.6	flexiplex -d 10x3v2
+section17_1T_1B	RAD	1.0.2	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist visium-v1_v2_bitlist.csv.gz
+section17_1T_1B	BLAZE	2.6.0a0	blaze --expect-cells 2500
+section17_1T_1B	Flexiplex	1.02.6	flexiplex -d 10x3v2
+section17_4T_1B	RAD	1.0.2	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist visium-v1_v2_bitlist.csv.gz
+section17_4T_1B	BLAZE	2.6.0a0	blaze --expect-cells 2500
+section17_4T_1B	Flexiplex	1.02.6	flexiplex -d 10x3v2
+section22	RAD	1.0.2	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist visium-v1_v2_bitlist.csv.gz
+section22	BLAZE	2.6.0a0	blaze --expect-cells 2500
+section22	Flexiplex	1.02.6	flexiplex -d 10x3v2
+section31	RAD	1.0.2	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist visium-v1_v2_bitlist.csv.gz
+section31	BLAZE	2.6.0a0	blaze --expect-cells 2500
+section31	Flexiplex	1.02.6	flexiplex -d 10x3v2
+section32_1T_1B	RAD	1.0.2	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist visium-v1_v2_bitlist.csv.gz
+section32_1T_1B	BLAZE	2.6.0a0	blaze --expect-cells 2500
+section32_1T_1B	Flexiplex	1.02.6	flexiplex -d 10x3v2
+section32_4T_1B	RAD	1.0.2	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist visium-v1_v2_bitlist.csv.gz
+section32_4T_1B	BLAZE	2.6.0a0	blaze --expect-cells 2500
+section32_4T_1B	Flexiplex	1.02.6	flexiplex -d 10x3v2
+Hipp_SN_f1_ONT_Run1	RAD	1.0.2	rad scan-wl -p CTACACGACGCTCTTCCGATCT -w 10x_3v3.1
+Hipp_SN_f1_ONT_Run1	BLAZE	NA	blaze --expect-cells 8975
+Hipp_SN_f1_ONT_Run1	Flexiplex	NA	flexiplex -f 0
+Hipp_SN_f1_ONT_Run2	RAD	1.0.2	rad scan-wl -p CTACACGACGCTCTTCCGATCT -w 10x_3v3.1
+Hipp_SN_f1_ONT_Run2	BLAZE	NA	blaze --expect-cells 8975
+Hipp_SN_f1_ONT_Run2	Flexiplex	NA	flexiplex -f 0
+Hipp_SN_f2_ONT	RAD	1.0.2	rad scan-wl -p CTACACGACGCTCTTCCGATCT -w 10x_3v3.1
+Hipp_SN_f2_ONT	BLAZE	NA	blaze --expect-cells 8850
+Hipp_SN_f2_ONT	Flexiplex	NA	flexiplex -f 0
+Hipp_SN_f3_ONT_Run1	RAD	1.0.2	rad scan-wl -p CTACACGACGCTCTTCCGATCT -w 10x_3v3.1
+Hipp_SN_f3_ONT_Run1	BLAZE	NA	blaze --expect-cells 6680
+Hipp_SN_f3_ONT_Run1	Flexiplex	NA	flexiplex -f 0
+Hipp_SN_f3_ONT_Run2	RAD	1.0.2	rad scan-wl -p CTACACGACGCTCTTCCGATCT -w 10x_3v3.1
+Hipp_SN_f3_ONT_Run2	BLAZE	NA	blaze --expect-cells 6680
+Hipp_SN_f3_ONT_Run2	Flexiplex	NA	flexiplex -f 0
+Hipp_SN_m2_ONT	RAD	1.0.2	rad scan-wl -p CTACACGACGCTCTTCCGATCT -w 10x_3v3.1
+Hipp_SN_m2_ONT	BLAZE	NA	blaze --expect-cells 10427
+Hipp_SN_m2_ONT	Flexiplex	NA	flexiplex -f 0
+Hipp_SN_m3_ONT	RAD	1.0.2	rad scan-wl -p CTACACGACGCTCTTCCGATCT -w 10x_3v3.1
+Hipp_SN_m3_ONT	BLAZE	NA	blaze --expect-cells 10574
+Hipp_SN_m3_ONT	Flexiplex	NA	flexiplex -f 0
+ScMixology2	RAD	1.0.2	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
+ScMixology2	BLAZE	2.5.1	blaze --expect-cells 500 --no-demultiplexing
+ScMixology2	Flexiplex	1.02.7	flexiplex -f 0; flexiplex-filter --whitelist 3M-february-2018-3v3.txt
