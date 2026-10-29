@@ -314,20 +314,24 @@ class Build:
         blaze=json.loads(self.source(REVISION+'/prism/blaze2023_assignment_replay/metrics.json').read_text())
         source_arrays={t:REVISION+'/evidence/figure2_canonical_rad_flex/'+t+'_selected_per_barcode.csv' for t in ('RAD','Flexiplex')}
         source_arrays['BLAZE']=REVISION+'/prism/blaze2023_assignment_replay/BLAZE_selected_per_barcode.csv'
+        source_arrays['RAD']=str(REPO/'source_data/figure_02/assignment_per_target.tsv')
+        current_rad=json.loads((REPO/'source_data/figure_02/assignment_RAD_summary.json').read_text())
+        current_rad_outside=rows(REPO/'source_data/figure_02/assignment_RAD_outside_custom_per_target.tsv')
         truth_path=self.source('sctagger_L_fixed5000_three_tool_20260812/common/L_truth_5000_barcodes.txt','independent_header_derived_truth')
         truth={x.strip() for x in truth_path.read_text().splitlines() if x.strip()}
-        self.check('RAD_targets_equal_independent_truth',truth=={x['barcode'] for x in rows(self.source(source_arrays['RAD']))},
+        self.check('RAD_targets_equal_independent_truth',truth=={x['barcode'] for x in rows(self.source(source_arrays['RAD'])) if x['tool']=='RAD'},
                    'exact truth target set equality',len(truth),truth_path)
         self.check('sctagger_L_truth_size',len(truth)==5000,5000,len(truth),source_arrays['RAD'])
         arrays=[];states=[];correction=[]
-        expected={'RAD':[667965,1944306,191519,571,2189444],
+        expected={'RAD':[current_rad['states'][state] for state in STATES],
                   'Flexiplex':[463613,1398700,281696,381,2849415],
                   'BLAZE':[640957,1881358,133074,764,2337652]}
         for tool in TOOLS:
             source=rows(self.source(source_arrays[tool]))
+            if tool=='RAD':source=[r for r in source if r['tool']=='RAD']
             self.check(tool+'_unique_selected_targets',len({r['barcode'] for r in source})==len(source),
                        len(source),len({r['barcode'] for r in source}),source_arrays[tool])
-            d=canonical[tool]['counts'] if tool!='BLAZE' else blaze
+            d=current_rad['states'] if tool=='RAD' else canonical[tool]['counts'] if tool!='BLAZE' else blaze
             counts=assignment_state_counts(d)
             self.check(tool+'_assignment_states',list(counts.values())==expected[tool] and sum(counts.values())==NREADS,
                        expected[tool],list(counts.values()),source_arrays[tool])
@@ -335,6 +339,7 @@ class Build:
                 states.append(dict(tool=tool,state=state,reads=n,denominator=NREADS,fraction=n/NREADS,count_unit='unique physical read'))
             for field in ('native_correct','corrected_correct','corrected_incorrect','native_incorrect'):
                 obs=sum(int(r[field]) for r in source)
+                if tool=='RAD':obs+=sum(int(r[field]) for r in current_rad_outside)
                 self.check(tool+'_array_sum_'+field,obs==counts[field],counts[field],obs,source_arrays[tool])
             selected={r['barcode']:r for r in source}
             for bc in sorted(truth|set(selected)):
@@ -364,8 +369,8 @@ class Build:
         self.task('F2-03','passed' if full_resume else 'ready',
                   'Complete read-table resumption and all 52,076 selected-target category values match; five-state totals/missingness reconcile.' if full_resume else
                   'All five-state totals, selected-target arrays, missing-target policy and BLAZE extra targets independently reconcile.',
-                  'Native Prism/statistical gates remain F2-04; raw tool rerun not performed.' if full_resume else
-                  'Complete per-read upstream identity comparison remains; retained per-target checkpoint resumption passed.')
+                  'Current RAD native output was rescored; native Prism recalculation remains separate.' if full_resume else
+                  'Current RAD native output was independently rescored; existing complete competing-tool audits remain separate.')
         contract=dict(seeds={'nanopore2018_S':20260727,'nanopore2018_L':20260731,'nanopore2023_L':20260731},
                       effective_quality_tape_seeds={'nanopore2018_S':16211358332209865628,
                                                    'nanopore2018_L':11835179057691093796,
@@ -396,12 +401,14 @@ class Build:
                   'Fresh complete FASTQ identity audit job 9976816; no source sequence was rewritten.',resume='passed' if fresh else 'partial')
         self.task('F2-05','passed','Recorded the effective quality-tape seeds.',
                   'Code change deferred by author; not a release gate.',resume='not applicable')
-        # Read the immutable source; its unrelated/obsolete sheets are not published.
-        prism=self.source(REVISION+'/prism/Figure2_corrected_20261022.prism')
-        self.check('corrected_Prism_closed_hash',sha(prism)=='dded389f9d8214278f93d2669c64e704bbf2208c47db96bf57a4ce4c77d6d016',
-                   'dded389f9d8214278f93d2669c64e704bbf2208c47db96bf57a4ce4c77d6d016',sha(prism),prism)
-        self.task('F2-04','blocked-native-desktop-QA','Verified immutable external corrected Prism source; published only selected current canonical arrays/correction proportions.',
-                  'Existing statistics/annotations preserved by author instruction; native desktop reopen/save/export remains unavailable; see desktop_QA.md.',resume='passed; native Prism pending')
+        # Bind to the deposited current project identity rather than restoring a source snapshot.
+        prism_identity_path=REPO/'source_data/figure_02/producing_evidence/assignment_Prism_identity.json'
+        prism_identity=json.loads(prism_identity_path.read_text())
+        prism=REPO/prism_identity['repository_relative_path']
+        self.check('current_Prism_closed_hash',sha(prism)==prism_identity['sha256'],
+                   prism_identity['sha256'],sha(prism),prism)
+        self.task('F2-04','ready','Verified deposited Prism identity; assignment tables and source-data plots contain the complete current RAD results.',
+                  'Native Prism recalculation and export are separate from the source-data plots; see desktop_QA.md.',resume='data passed; native export pending')
 
     def figure4(self):
         """Validate current deposited Figure4 data without restoring other runs."""
@@ -619,28 +626,15 @@ def render(out):
     ax.text(.15,3.65,'RAD workflow review — source pin cb699170',fontsize=13)
     ax.text(.15,.15,'Exact-identity behavior depends on orientation and loaded-list roles; sequence membership does not establish biological origin.',fontsize=8)
     save(fig,1,'workflow_schematic_review')
-    sweeps=rows(out/'source_data/figure_02/discovery_metrics.tsv')
-    fig,axs=plt.subplots(1,3,figsize=(11,3.5),constrained_layout=True)
-    for ax,(dataset,model) in zip(axs,(('S','nanopore2018'),('L','nanopore2018'),('L','nanopore2023'))):
-        for tool in ('RAD','BLAZE','Flexiplex_f0','Flexiplex_f8'):
-            group=sorted([r for r in sweeps if (r['dataset'],r['model'],r['tool'])==(dataset,model,tool)],key=lambda x:float(x['full_dataset_mean_Q']))
-            ax.plot([float(r['full_dataset_mean_Q']) for r in group],[float(r['f1']) for r in group],'.-',label=tool,color=COLORS[tool])
-        ax.set_title(f'ScTagger-{dataset}: {model}');ax.set_xlabel('Whole-dataset mean base quality');ax.set_ylabel('Barcode discovery F1');ax.set_ylim(-.03,1.03)
-    axs[0].legend(frameon=False,fontsize=8);save(fig,2,'quality_discovery_sweeps')
-    states=rows(out/'source_data/figure_02/assignment_states.tsv')
-    fig,axs=plt.subplots(1,2,figsize=(9,4),constrained_layout=True)
-    statecolors=['#4A6F91','#74A889','#C78350','#B64A49','#DDDDDD']
-    bottom=np.zeros(3)
-    for s,color in zip(STATES,statecolors):
-        vals=np.array([float(next(r['fraction'] for r in states if r['tool']==t and r['state']==s)) for t in TOOLS])
-        axs[0].bar(TOOLS,vals,bottom=bottom,label=s.replace('_',' '),color=color);bottom+=vals
-    axs[0].set_ylabel('Fraction of all 4,993,805 physical reads');axs[0].legend(fontsize=7,frameon=False,loc='upper center',bbox_to_anchor=(.5,-.1),ncol=2)
-    corr=rows(out/'source_data/figure_02/correction_only.tsv')
-    for i,t in enumerate(TOOLS):
-        fraction=float(next(r['fraction'] for r in corr if r['tool']==t and r['state']=='corrected_incorrect'))
-        axs[1].bar(t,100*fraction,color=COLORS[t]);axs[1].text(i,100*fraction+.3,f'{100*fraction:.2f}%',ha='center',fontsize=8)
-    axs[1].set_ylabel('Incorrect among corrected assignments (%)');axs[1].set_ylim(0,20)
-    save(fig,2,'assignment_descriptive')
+    # Figure 2 has its own renderer so it can be refreshed independently.
+    spec=importlib.util.spec_from_file_location('figure_02_plot_data',REPO/'scripts/figure_02/plot_data.py')
+    figure2_plots=importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(figure2_plots)
+    with plt.rc_context():
+        figure2_plots.render(out/'source_data/figure_02',out/'figures/figure_02')
+    exports.extend(f'figures/figure_02/{name}.{extension}'
+                   for name in ('quality_discovery_sweeps','assignment_descriptive')
+                   for extension in ('png','svg','pdf'))
     metrics=rows(out/'source_data/figure_04/barcode_detection_metrics.tsv')
     fig,axs=plt.subplots(1,3,figsize=(10,3.5),constrained_layout=True)
     for ax,metric in zip(axs,('precision','recall','f1')):

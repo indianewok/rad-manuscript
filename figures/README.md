@@ -8,12 +8,11 @@
 
 ## Figure 2: Synthetic barcode discovery and read assignment
 
-[Analysis guide](../docs/figure_02.md)
+[Analysis guide](../docs/figure_02.md) · [Editable Prism project](figure_02/Figure_02.prism)
 
-The saved layout shows 87 BLAZE false-positive barcodes; the updated source
-tables contain 15.
+![Barcode discovery across quality conditions](figure_02/quality_discovery_sweeps.png)
 
-![Figure 2](figure_02/prism/figure_02.png)
+![Physical-read assignments and correction outcomes](figure_02/assignment_descriptive.png)
 
 ## Figure 3: Off-list assignments and barcode correction
 

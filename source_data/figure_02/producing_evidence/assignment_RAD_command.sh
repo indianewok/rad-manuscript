@@ -1,1 +1,13 @@
-taskset -c 0-63 /usr/bin/time -v -o external_data/reviewer_comment_data/scratch_preservation_20260921/files/sctagger_L_rad_fixed5000_adapter_fix_20260817/time.verbose.txt -- external_data/temporary/rad_rcforw_fix_20260817/build/rad demux -l external_data/reviewer_comment_data/sctagger_L_fixed5000_three_tool_20260812/rad/three_prime_10x3v3_umi12_layout.csv -q external_data/reviewer_comment_data/wl_scan/20260731_sctagger_badread_quality_full/inputs/L/flatQ20.fq.gz -g external_data/reviewer_comment_data/sctagger_L_fixed5000_three_tool_20260812/rad/L_truth_5000_rad_global.csv -c external_data/reviewer_comment_data/sctagger_L_fixed5000_three_tool_20260812/rad/L_truth_5000_rad_custom.csv -R offensive -M 2 -m 2 -z 5000 -o L_flatQ20_rad_adapter_fix -d external_data/reviewer_comment_data/scratch_preservation_20260921/files/sctagger_L_rad_fixed5000_adapter_fix_20260817 -F external_data/reviewer_comment_data/scratch_preservation_20260921/files/sctagger_L_rad_fixed5000_adapter_fix_20260817/L_flatQ20_rad_adapter_fix.log -t 64 -v 
+#!/usr/bin/env bash
+set -euo pipefail
+# RAD 1.0.2, commit 24d5ce47e172222c96cd7dd19e94758d32aa5009
+mkdir -p results/figure_02/RAD_full_global
+rad demux \
+  -l source_data/figure_02/producing_evidence/assignment_RAD_input_layout.csv \
+  -q external_data/figure_02/L_flatQ20.fq.gz \
+  -g external_data/figure_02/3M-february-2018-3v3.txt \
+  -c external_data/figure_02/L_truth_5000_rad_custom.csv \
+  -R offensive -M 2 -m 2 -z 5000 \
+  -o L_RAD_full_global -d results/figure_02/RAD_full_global \
+  -F results/figure_02/RAD_full_global/L_RAD_full_global.log \
+  -t 64 -v

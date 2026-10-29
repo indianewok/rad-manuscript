@@ -1,0 +1,48 @@
+{
+  "status": "complete",
+  "input_reads": 4993805,
+  "input_read_ids_sha256": "43d1fdf1ad5658f682ff0466ba79022bce73d2b00372f1f4fbe88c766b579116",
+  "truth_barcodes": 5000,
+  "truth_barcode_sha256": "2418b849f88ce6f28cf8c702acab795e4b483f6b2da17953675fce96b405899e",
+  "catalogue_barcodes": 6794880,
+  "catalogue_barcode_sha256": "843a6f7038db8cb3c06f3dc21cc69d04139ffa10689780518d7a9e42dc2e819b",
+  "output_records": 2712224,
+  "unique_emitted_input_ids": 2703571,
+  "assigned_physical_reads": 2694918,
+  "excluded_multiple_outputs": 8653,
+  "input_ids_with_no_output": 2290234,
+  "states": {
+    "native_correct": 667984,
+    "corrected_correct": 1846854,
+    "corrected_incorrect": 179509,
+    "native_incorrect": 571,
+    "unassigned": 2298887
+  },
+  "record_level_states": {
+    "corrected_incorrect": 188730,
+    "corrected_correct": 1852772,
+    "native_correct": 670149,
+    "native_incorrect": 573
+  },
+  "distinct_emitted_targets": 5000,
+  "emitted_targets_outside_custom": 0,
+  "emitted_targets_outside_catalogue": 0,
+  "all_emitted_targets_in_custom": true,
+  "all_emitted_targets_in_catalogue": true,
+  "strict_raw_source_membership": {
+    "truth": {
+      "native_correct": 667984
+    },
+    "other_custom_truth": {
+      "native_incorrect": 571
+    },
+    "global_catalogue_outside_custom": {},
+    "outside_global_catalogue": {
+      "corrected_incorrect": 179509,
+      "corrected_correct": 1846854
+    }
+  },
+  "global_catalogue_outside_custom_assigned_reads": 0,
+  "scoring_script_sha256": "5e39c3bed849c3da1a7a6b451a258747855e581be89a96b15175163d4bb5d29d",
+  "scope": "Complete physical-read scoring; multiple emitted records for one original ID are unassigned"
+}

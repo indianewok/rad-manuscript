@@ -2,9 +2,7 @@
 
 Figure 2 uses ScTagger reads with known source barcodes to examine barcode discovery as reported base quality changes, then measures correct and incorrect read assignments. The quality sweep preserves nucleotide sequences and sequencing errors across conditions.
 
-![Figure 2](../figures/figure_02/prism/figure_02.png)
-
-The image shows 87 BLAZE false-positive barcode calls; the current assignment tables below use 15.
+[Download the editable Figure 2 Prism project](../figures/figure_02/Figure_02.prism).
 
 ## Synthetic reads and quality scores
 
@@ -32,7 +30,7 @@ Discovery and assignment used separate runs. [Producer records](../source_data/f
 | Discovery | RAD 1.0.2, `920addacdbf40b815e13a146226e8f4b14a58aaf` | `scan-wl -p CTACACGACGCTCTTCCGATCT -n 16 -e 0.3 -w 10x_3v3 -t 8 -k 10000 -v` |
 | Discovery | BLAZE 2.6.0a0 | Expected cells 50 for S and 5,000 for L; 3v3, minimum Q15, 8 threads, `--no-emtpy-drops --no-demultiplexing`. Nanopore2023 conditions replay the native extraction cache through the pinned selector. |
 | Discovery | Flexiplex 1.02.6 | `-d 10x3v3 -e 2 -p 8`, with separate flank-distance-0 and flank-distance-8 tracks, followed by the global 3v3 filter. |
-| Assignment | RAD 1.0.2, `24d5ce47e172222c96cd7dd19e94758d32aa5009` | Uniform Q20; 3v3 layout with 12-base UMI; all 5,000 truth barcodes supplied as global and custom whitelists; `-R offensive -M 2 -m 2 -z 5000 -t 64`. |
+| Assignment | RAD 1.0.2, `24d5ce47e172222c96cd7dd19e94758d32aa5009` | Uniform Q20; 3v3 layout with 12-base UMI; the original 6,794,880-barcode Cell Ranger catalogue supplied globally and all 5,000 truth barcodes supplied as the custom whitelist; `-R offensive -M 2 -m 2 -z 5000 -t 64`. |
 | Assignment | Flexiplex 1.02.6, `d84c8ae4f3865052f2b5ecec816949b94682f302`, with raw-barcode diagnostic patch | Uniform Q20; `-d 10x3v3 -p 16 -k SELECTED`, flank distance 8, barcode distance 2; 3,004 native selected targets and four compression threads. |
 | Assignment | BLAZE 2.6.0a0 matching-function replay | Native Nanopore2023 extractions, barcode distance 2, minimum Q0, 5,015 selected targets; retained seed-0 candidate order with new candidates appended lexically. |
 
@@ -85,13 +83,27 @@ python3 scripts/revision/figures_124_steps/classify_assignment_preview.py --tool
 
 | State | RAD | Flexiplex | BLAZE |
 |---|---:|---:|---:|
-| Native correct | 667,965 | 463,613 | 640,957 |
-| Corrected correct | 1,944,306 | 1,398,700 | 1,881,358 |
-| Corrected incorrect | 191,519 | 281,696 | 133,074 |
+| Native correct | 667,984 | 463,613 | 640,957 |
+| Corrected correct | 1,846,854 | 1,398,700 | 1,881,358 |
+| Corrected incorrect | 179,509 | 281,696 | 133,074 |
 | Native incorrect | 571 | 381 | 764 |
-| Unassigned | 2,189,444 | 2,849,415 | 2,337,652 |
+| Unassigned | 2,298,887 | 2,849,415 | 2,337,652 |
 
-Each column sums to 4,993,805. [Assignment counts](../source_data/figure_02/assignment_states.tsv), [per-target counts](../source_data/figure_02/assignment_per_target.tsv), and [correction-only proportions](../source_data/figure_02/correction_only.tsv) contain the plotted values. Unassigned reads have no retained assignment. Unselected truth targets are blank in the per-target table; selected targets with no reads in a category have zero. Correction-only denominators include corrected assignments: 2,135,825 for RAD, 1,680,396 for Flexiplex, and 2,014,432 for BLAZE.
+Each column sums to 4,993,805. [Assignment counts](../source_data/figure_02/assignment_states.tsv), [per-target counts](../source_data/figure_02/assignment_per_target.tsv), and [correction-only proportions](../source_data/figure_02/correction_only.tsv) contain the plotted values. Unassigned reads have no retained assignment. Unselected truth targets are blank in the per-target table; selected targets with no reads in a category have zero. Correction-only denominators include corrected assignments: 2,026,363 for RAD, 1,680,396 for Flexiplex, and 2,014,432 for BLAZE.
+
+RAD uses the original full Cell Ranger catalogue and the 5,000 supplied custom truth barcodes. [Its native command](../source_data/figure_02/producing_evidence/assignment_RAD_command.sh), [execution record](../source_data/figure_02/producing_evidence/assignment_RAD_run.json) and [original-catalogue identity](../source_data/figure_02/producing_evidence/assignment_RAD_original_catalogue.json) specify the exact inputs. Run the command with RAD commit `24d5ce47e172222c96cd7dd19e94758d32aa5009` on `PATH`. The [scoring script](../scripts/figure_02/score_rad_assignments.py) reads the complete input and emitted output; its literal arguments are in the execution record. The per-target RAD arrays cover the supplied 5,000 truth targets. [Outside-custom targets](../source_data/figure_02/assignment_RAD_outside_custom_per_target.tsv) are reported separately; the five-state totals include every retained emitted assignment.
+
+## Current source-data plots
+
+![Barcode discovery across quality conditions](../figures/figure_02/quality_discovery_sweeps.png)
+
+![Physical-read assignments and correction outcomes](../figures/figure_02/assignment_descriptive.png)
+
+Render these plots directly from the deposited tables:
+
+```bash
+python3 scripts/figure_02/plot_data.py
+```
 
 ## Reproduction commands
 
@@ -100,7 +112,7 @@ Rebuild source tables from the mounted project files, or check and plot the depo
 ```bash
 python3 scripts/revision/figures_124.py build --project-root /path/to/rad_data --output-root .
 python3 scripts/revision/figures_124.py validate --output-root .
-python3 scripts/revision/figures_124.py render --output-root .
+python3 scripts/figure_02/plot_data.py
 ```
 
 [Table schemas](../source_data/figure_02/schemas.json) define all fields and units. The shared commands also process Figures 1 and 4.

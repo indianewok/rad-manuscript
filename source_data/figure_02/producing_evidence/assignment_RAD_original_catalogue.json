@@ -1,0 +1,36 @@
+{
+  "original_sampling_catalogue": {
+    "cellranger_commit": "5f5a6293bbc067e1965e50f0277286914b96c908",
+    "url": "https://raw.githubusercontent.com/10XGenomics/cellranger/5f5a6293bbc067e1965e50f0277286914b96c908/lib/python/cellranger/barcodes/3M-february-2018.txt.gz",
+    "file": "CellRanger_5f5a6293_3M-february-2018.original.txt.gz",
+    "gzip_bytes": 18350152,
+    "gzip_sha256": "6f5c08bd6c0c63e7cd4f62bc5ec47024baaf6b230524f313799b9f5431df7b37",
+    "decoded_bytes": 115512960,
+    "decoded_sha256": "843a6f7038db8cb3c06f3dc21cc69d04139ffa10689780518d7a9e42dc2e819b",
+    "barcodes": 6794880,
+    "orientation": "Original 10x catalogue DNA strings; no reverse complement or suffix transform"
+  },
+  "simulation_source": {
+    "repository": "https://github.com/vpc-ccg/scTagger",
+    "paper_commit": "6cad9fd981f3d42bff03ae96b012599c14dbd669",
+    "download_rule": "https://github.com/vpc-ccg/scTagger/blob/6cad9fd981f3d42bff03ae96b012599c14dbd669/Snakefile-simulate#L84-L90",
+    "minnow_whitelist_argument": "https://github.com/vpc-ccg/scTagger/blob/6cad9fd981f3d42bff03ae96b012599c14dbd669/Snakefile-simulate#L223-L251",
+    "config_whitelist": "data/annotations/3M-february-2018.txt"
+  },
+  "custom_whitelist": {
+    "file": "external_data/figure_02/L_truth_5000_rad_custom.csv",
+    "barcodes": 5000,
+    "sha256": "2418b849f88ce6f28cf8c702acab795e4b483f6b2da17953675fce96b405899e",
+    "matches_generation_truth_set": true,
+    "all_barcodes_in_original_catalogue": true,
+    "matching_barcodes": 5000
+  },
+  "matching_RAD_catalogue": {
+    "file": "external_data/software/rad/resources/wl/3M-february-2018-3v3.txt_bitlist.csv.gz",
+    "sha256": "02f771363a95e786ab1a6ab1e554c770e58cdff2fb30f2d7a9fb50a97762d452",
+    "barcodes": 6794880,
+    "custom_barcodes_present": 5000,
+    "encoding": "16-base 2-bit integers, A=0 C=1 T=2 G=3; first base most significant"
+  },
+  "current_text_catalogue_identical_to_original_decoded_bytes": true
+}

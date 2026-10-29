@@ -16,7 +16,7 @@ ScTagger-L contained 4,993,805 reads from 5,000 known source barcodes; ScTagger-
 
 Barcode discovery was scored by comparison of the selected barcode set with the known source set. Precision was the fraction of selected barcodes present in the source set, recall was the fraction of source barcodes selected, and F1 was the harmonic mean of precision and recall.
 
-Read assignment used RAD `24d5ce4` with all 5,000 source barcodes supplied as both global and custom lists; diagnostic Flexiplex 1.02.6 with its 3,004 selected targets; and the BLAZE 2.6.0a0 matching-function replay on native Nanopore2023 extractions with 5,015 selected targets. RAD and Flexiplex used the sequence-identical uniform-Q20 input. Flexiplex’s diagnostic field recorded the raw barcode before correction.
+Read assignment used RAD `24d5ce4` with the original 6,794,880-barcode Cell Ranger catalogue supplied globally and all 5,000 source barcodes supplied as its custom list; diagnostic Flexiplex 1.02.6 with its 3,004 selected targets; and the BLAZE 2.6.0a0 matching-function replay on native Nanopore2023 extractions with 5,015 selected targets. RAD and Flexiplex used the sequence-identical uniform-Q20 input. Flexiplex’s diagnostic field recorded the raw barcode before correction.
 
 Each original read was classified as native-correct, corrected-correct, native-incorrect, corrected-incorrect, or unassigned. Each tool’s state counts summed to the complete input. Per-target tables represented unselected source barcodes as blank and selected targets with no reads in a category as zero. Correction-only fractions used the sum of correct and incorrect corrected assignments as their denominator. Source tables, counting rules, and numerical checks are provided in the Figure 2 guide.
 

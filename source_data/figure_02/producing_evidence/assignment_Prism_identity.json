@@ -1,0 +1,109 @@
+{
+  "file_name": "Figure_02.prism",
+  "sha256": "75d9e179a866c50c671dbe29b225da551a1c0d470f6675e9813ac9884f7b01b7",
+  "assignment_tables": [
+    {
+      "sheet_uid": "63D81234-28AC-46E8-8332-CB1AE2FC1AFF",
+      "table_uid": "454FDFB2-AEAA-4BE0-B7FD-78208EC7D650",
+      "title": "Native correct reads per true barcode: detected lists and fixed-5K controls",
+      "assignment_field": "native_correct",
+      "physical_columns": [
+        "barcode",
+        "BLAZE",
+        "RAD",
+        "Flexiplex detected list (3,004)",
+        "Flexiplex fixed truth list (5,000)",
+        "BLAZE fixed truth list (5,000)"
+      ],
+      "RAD_column_0based": 2,
+      "data_set_uids": [
+        "55733904-0FA1-4462-9987-5CDECF83A340",
+        "B7A95E01-DCE4-4964-ADD1-71CF919FE6DE",
+        "8C506AC1-3D51-473C-A40B-39448CBDE59D",
+        "7A817AB2-8B3F-4B5F-85FB-0984A7A35D99",
+        "365F4A1A-9C12-456C-B7E6-6C2296A826E3"
+      ],
+      "data_set_titles": [
+        "BLAZE",
+        "RAD",
+        "Flexiplex",
+        "Flexiplex",
+        "BLAZE fixed truth list (5,000)"
+      ]
+    },
+    {
+      "sheet_uid": "66EF3D96-C86B-4FA9-ACE5-53621808DA50",
+      "table_uid": "9B38C59C-7023-4935-BC85-6E5F22DE25C4",
+      "title": "Corrected correct reads per true barcode: detected lists and fixed-5K controls",
+      "assignment_field": "corrected_correct",
+      "physical_columns": [
+        "barcode",
+        "BLAZE",
+        "RAD",
+        "Flexiplex detected list (3,004)",
+        "Flexiplex fixed truth list (5,000)",
+        "BLAZE fixed truth list (5,000)"
+      ],
+      "RAD_column_0based": 2,
+      "data_set_uids": [
+        "25C79583-B71F-4587-A42E-2C295A006D14",
+        "FF40BBC9-474C-49EC-85C5-707493619F18",
+        "197C841C-A1D9-4BF7-AF25-60A713172056",
+        "33CFF86A-A5F5-4454-B030-E0492F0A9B49",
+        "69914275-8015-4D28-BC42-DA5324C12274"
+      ],
+      "data_set_titles": [
+        "BLAZE",
+        "RAD",
+        "Flexiplex",
+        "Flexiplex",
+        "BLAZE"
+      ]
+    },
+    {
+      "sheet_uid": "98505F94-3866-4F00-A8CD-E076CF542357",
+      "table_uid": "8761666A-E513-4EA1-ADC3-E148DD37108C",
+      "title": "Corrected incorrect reads per true barcode: detected lists and fixed-5K controls",
+      "assignment_field": "corrected_incorrect",
+      "physical_columns": [
+        "barcode",
+        "BLAZE",
+        "RAD",
+        "Flexiplex detected list (3,004)",
+        "Flexiplex fixed truth list (5,000)",
+        "BLAZE fixed truth list (5,000)"
+      ],
+      "RAD_column_0based": 2,
+      "data_set_uids": [
+        "9EAF2EAD-1268-45DD-A97B-95FB03243A40",
+        "BA645DAC-CA07-4E30-82F8-81C9505CB8BF",
+        "594B2375-BAC7-43FF-8B3D-89B48CF0526B",
+        "06A86DEC-700A-4815-A53A-023C6531060E",
+        "6D3A1C79-1223-46FF-9280-23BED90EA394"
+      ],
+      "data_set_titles": [
+        "BLAZE",
+        "RAD",
+        "Flexiplex",
+        "Flexiplex",
+        "BLAZE"
+      ]
+    }
+  ],
+  "input_reads": 4993805,
+  "source_tables": {
+    "assignment_states.tsv": "1a198f41d73ee9c896fff87edbd0279d309908270ff24f666f0ea949704aa65b",
+    "assignment_per_target.tsv": "d0610c15147231d97013a665e7e5d1f216fd43ae9e53fa85691ef0dd6814afb6",
+    "correction_only.tsv": "2b4fffcbceaad84fb2b207bbf70914f96b7bbb7012c457efca3e76dfbcabfbcf"
+  },
+  "control_policy": "Existing fixed-5000 competitor controls retained as separately labelled columns.",
+  "repository_relative_path": "figures/figure_02/Figure_02.prism",
+  "native_Prism_analysis_state": {
+    "software": "Prism 11.0.0.93",
+    "saved_at_utc": "2026-10-29T19:07:30Z",
+    "repeated_measures_ANOVA_calculated": 3,
+    "mixed_effects_pending": 2,
+    "methods_changed": false
+  },
+  "native_Prism_export_verified": false
+}

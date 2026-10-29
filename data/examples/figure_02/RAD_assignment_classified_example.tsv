@@ -1,9 +1,9 @@
 tool	read_id	truth_barcode	raw_barcode_or_CR	target_barcode	record_state	interpretation	duplicate_status
-RAD	AAACGAACACAGCTGC-938	AAACGAACACAGCTGC	GCAGCGCTGTGTTCGT	ACGATCACAGTCGCTG	corrected_incorrect	RAD nonempty CR tag indicates corrected; raw tag can be reverse orientation	not assessed from bounded excerpt
-RAD	AATGCCACACCCTATC-220	AATGCCACACCCTATC	AATAGGGTGTGGCATT	AATGCCACACCCTATC	corrected_correct	RAD nonempty CR tag indicates corrected; raw tag can be reverse orientation	not assessed from bounded excerpt
-RAD	AATGGAATCCATGAGT-901	AATGGAATCCATGAGT	ATGGAATCATGAGTTG	AATGGAATCCATGAGT	corrected_correct	RAD nonempty CR tag indicates corrected; raw tag can be reverse orientation	not assessed from bounded excerpt
-RAD	AAAGTGATCAGTCCGG-837	AAAGTGATCAGTCCGG	AAGTGATCAGTCCGGT	AAAGTGATCAGTCCGG	corrected_correct	RAD nonempty CR tag indicates corrected; raw tag can be reverse orientation	not assessed from bounded excerpt
-RAD	ACGTTCCCACTGCGAC-43	ACGTTCCCACTGCGAC	TCACAGTGGGAACGTA	ACGTTCCCACTGCGAC	corrected_correct	RAD nonempty CR tag indicates corrected; raw tag can be reverse orientation	not assessed from bounded excerpt
-RAD	ACACCAACAAACATCC-885	ACACCAACAAACATCC	ACGCAGCAAGCATCCG	AAGCGAGCATCCGCGA	corrected_incorrect	RAD nonempty CR tag indicates corrected; raw tag can be reverse orientation	not assessed from bounded excerpt
-RAD	AATCGACGTTGGGAAC-450	AATCGACGTTGGGAAC		AATCGACGTTGGGAAC	native_correct	RAD nonempty CR tag indicates corrected; raw tag can be reverse orientation	not assessed from bounded excerpt
-RAD	AATGGCTTCCGTAATG-69	AATGGCTTCCGTAATG	CATTGCGGAAGCCATT	AATGGCTTCCGTAATG	corrected_correct	RAD nonempty CR tag indicates corrected; raw tag can be reverse orientation	not assessed from bounded excerpt
+RAD	AACGAAACAGTGTGGA-223	AACGAAACAGTGTGGA	AACGAAACAGTGATTT	AACGAAACAGGTGTTT	corrected_incorrect	RAD nonempty CR tag indicates corrected; raw tag can be reverse orientation	not assessed from bounded excerpt
+RAD	AATCACGAGATCACAG-570	AATCACGAGATCACAG	CAATCACGAGATCACA	AATCACGAGATCACAG	corrected_correct	RAD nonempty CR tag indicates corrected; raw tag can be reverse orientation	not assessed from bounded excerpt
+RAD	AAATGGATCAAGTGGG-103	AAATGGATCAAGTGGG	AATGGATCAGGGGTTT	AAATGGATCAAGTGGG	corrected_correct	RAD nonempty CR tag indicates corrected; raw tag can be reverse orientation	not assessed from bounded excerpt
+RAD	ACTTATCTCTGGTGGC-887	ACTTATCTCTGGTGGC	CGCCACCGAGATAAGT	ACTTATCTCTGGTGGC	corrected_correct	RAD nonempty CR tag indicates corrected; raw tag can be reverse orientation	not assessed from bounded excerpt
+RAD	ACTGATGCATAACTCG-1059	ACTGATGCATAACTCG	AGAGTTATGCATCAGT	ACTGATGCATAACTCG	corrected_correct	RAD nonempty CR tag indicates corrected; raw tag can be reverse orientation	not assessed from bounded excerpt
+RAD	AACACACGTTACCTGA-15	AACACACGTTACCTGA	AACACACGTTACACGA	AACACACGTTACCTGA	corrected_correct	RAD nonempty CR tag indicates corrected; raw tag can be reverse orientation	not assessed from bounded excerpt
+RAD	ACTTTGTCATCTGAGT-479	ACTTTGTCATCTGAGT	GCTGTGTCATCTGAGT	ACTTTGTCATCTGAGT	corrected_correct	RAD nonempty CR tag indicates corrected; raw tag can be reverse orientation	not assessed from bounded excerpt
+RAD	AAGACTCGTGGTACAG-954	AAGACTCGTGGTACAG	AAGACCGTGGTACAGG	AAGACTCGTGGTACAG	corrected_correct	RAD nonempty CR tag indicates corrected; raw tag can be reverse orientation	not assessed from bounded excerpt

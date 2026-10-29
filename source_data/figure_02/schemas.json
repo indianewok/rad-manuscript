@@ -17,7 +17,8 @@
     "encoding": "UTF-8",
     "delimiter": "tab",
     "missing_value": "empty field; not zero",
-    "hash_scope": "plain file bytes"
+    "hash_scope": "plain file bytes",
+    "RAD_row_scope": "The 5000 supplied custom truth targets; outside-custom targets are in assignment_RAD_outside_custom_per_target.tsv"
   },
   "assignment_states.tsv": {
     "fields": [
@@ -283,5 +284,37 @@
     "delimiter": "tab",
     "missing_value": "empty field; not zero",
     "hash_scope": "plain file bytes"
+  },
+  "assignment_RAD_outside_custom_per_target.tsv": {
+    "fields": [
+      "barcode",
+      "in_catalogue",
+      "native_correct",
+      "corrected_correct",
+      "native_incorrect",
+      "corrected_incorrect"
+    ],
+    "primary_key": [
+      "barcode"
+    ],
+    "encoding": "UTF-8",
+    "delimiter": "tab",
+    "rows": 0,
+    "count_unit": "unique physical read after duplicate exclusion"
+  },
+  "assignment_RAD_raw_source_membership.tsv": {
+    "fields": [
+      "raw_source_class",
+      "state",
+      "reads"
+    ],
+    "primary_key": [
+      "raw_source_class",
+      "state"
+    ],
+    "encoding": "UTF-8",
+    "delimiter": "tab",
+    "rows": 16,
+    "count_unit": "unique physical read after duplicate exclusion"
   }
 }

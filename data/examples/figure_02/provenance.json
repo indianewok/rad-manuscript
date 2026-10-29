@@ -74,11 +74,11 @@
         "strand",
         "record_category"
       ],
-      "excerpt_sha256": "0f8d57521dbe217490a34b40edb3d4e22b08adfc170a7aba8817244ff14768e0",
+      "excerpt_sha256": "e6e0043745e6203ffb79a6273315e1e2aad88cbadadb9441eec881363f3fb875",
       "file": "RAD_assignment_records_example.tsv",
       "header_excluded_from_row_count": true,
       "scope": "bounded actual source excerpt; not a representative statistical sample",
-      "source_bytes": 46703941,
+      "source_bytes": 59429022,
       "source_data_row_numbers_1_based": [
         1,
         2,
@@ -89,8 +89,8 @@
         7,
         8
       ],
-      "source_path": "external_data/reviewer_comment_data/sctagger_L_rad_fixed5000_adapter_fix_20260817/independent_validation/record_audit.tsv.gz",
-      "source_sha256": "44c381cc8eeb4130a7eea73e604940d454b47a4cf0f167c916485c577961b7e0"
+      "source_path": "external_data/figure_02/RAD_full_global/scoring/record_audit.tsv.gz",
+      "source_sha256": "b0f11f0d9403ab508ebc5a548f4485fd5d7941ba6b4e336385501934ee62eec2"
     },
     {
       "columns": [

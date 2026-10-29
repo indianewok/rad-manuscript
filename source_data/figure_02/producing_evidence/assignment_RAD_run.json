@@ -1,0 +1,85 @@
+{
+  "dataset": "ScTagger-L",
+  "tool": "RAD",
+  "version": "1.0.2",
+  "source_commit": "24d5ce47e172222c96cd7dd19e94758d32aa5009",
+  "binary_sha256": "83145cdd59fcd829e3cef0565787ba16c11c335a329e49692e5c942a3cf306cf",
+  "input": {
+    "path": "external_data/figure_02/L_flatQ20.fq.gz",
+    "sha256": "6f7385468b607cf86c91449b095c2968ee2a5d25ab473901102b87d141543090",
+    "bytes": 3074597647,
+    "reads": 4993805,
+    "quality": "Uniform Q20; unchanged ScTagger sequences"
+  },
+  "layout": {
+    "path": "source_data/figure_02/producing_evidence/assignment_RAD_input_layout.csv",
+    "sha256": "c5cbbb07958a9c1ca6f9c0452ad1dd01933d5a51efba6f67522897c5dd4146fb",
+    "calibrated_layout_sha256": "39ddcdf9a19c9724fa148f8402fe56eaa4bd49f94c71d4e0eeed096911c9026e"
+  },
+  "global_whitelist": {
+    "path": "external_data/figure_02/3M-february-2018-3v3.txt",
+    "sha256": "843a6f7038db8cb3c06f3dc21cc69d04139ffa10689780518d7a9e42dc2e819b",
+    "barcodes": 6794880,
+    "source": "Original Cell Ranger catalogue used by the ScTagger simulator"
+  },
+  "custom_whitelist": {
+    "path": "external_data/figure_02/L_truth_5000_rad_custom.csv",
+    "sha256": "2418b849f88ce6f28cf8c702acab795e4b483f6b2da17953675fce96b405899e",
+    "barcodes": 5000
+  },
+  "threads": 64,
+  "command": "rad demux -l source_data/figure_02/producing_evidence/assignment_RAD_input_layout.csv -q external_data/figure_02/L_flatQ20.fq.gz -g external_data/figure_02/3M-february-2018-3v3.txt -c external_data/figure_02/L_truth_5000_rad_custom.csv -R offensive -M 2 -m 2 -z 5000 -o L_RAD_full_global -d results/figure_02/RAD_full_global -F results/figure_02/RAD_full_global/L_RAD_full_global.log -t 64 -v",
+  "argv": [
+    "rad",
+    "demux",
+    "-l",
+    "source_data/figure_02/producing_evidence/assignment_RAD_input_layout.csv",
+    "-q",
+    "external_data/figure_02/L_flatQ20.fq.gz",
+    "-g",
+    "external_data/figure_02/3M-february-2018-3v3.txt",
+    "-c",
+    "external_data/figure_02/L_truth_5000_rad_custom.csv",
+    "-R",
+    "offensive",
+    "-M",
+    "2",
+    "-m",
+    "2",
+    "-z",
+    "5000",
+    "-o",
+    "L_RAD_full_global",
+    "-d",
+    "results/figure_02/RAD_full_global",
+    "-F",
+    "results/figure_02/RAD_full_global/L_RAD_full_global.log",
+    "-t",
+    "64",
+    "-v"
+  ],
+  "scoring_command": [
+    "python3",
+    "scripts/figure_02/score_rad_assignments.py",
+    "--input-fastq",
+    "external_data/figure_02/L_flatQ20.fq.gz",
+    "--output-fastq",
+    "results/figure_02/RAD_full_global/L_RAD_full_global.fq.gz",
+    "--truth-barcodes",
+    "external_data/figure_02/L_truth_5000_rad_custom.csv",
+    "--catalogue-barcodes",
+    "external_data/figure_02/3M-february-2018-3v3.txt",
+    "--output-dir",
+    "results/figure_02/RAD_full_global/scoring"
+  ],
+  "scoring_script_sha256": "5e39c3bed849c3da1a7a6b451a258747855e581be89a96b15175163d4bb5d29d",
+  "scoring": {
+    "summary_path": "source_data/figure_02/assignment_RAD_summary.json",
+    "summary_sha256": "2e5952d39d90cb163fefb2dc19a506ce231ba36fe0bb5bfbd15092160a6733f6",
+    "record_audit": "external_data/figure_02/RAD_full_global/scoring/record_audit.tsv.gz",
+    "record_audit_sha256": "b0f11f0d9403ab508ebc5a548f4485fd5d7941ba6b4e336385501934ee62eec2"
+  },
+  "native_exit_code": 0,
+  "per_target_scope": "The 5000 supplied custom truth targets; every outside-custom target is reported separately",
+  "scope": "Complete input; all retained emitted assignments included in five-state totals"
+}

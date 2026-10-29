@@ -1,0 +1,17 @@
+raw_source_class	state	reads
+truth	native_correct	667984
+truth	corrected_correct	0
+truth	native_incorrect	0
+truth	corrected_incorrect	0
+other_custom_truth	native_correct	0
+other_custom_truth	corrected_correct	0
+other_custom_truth	native_incorrect	571
+other_custom_truth	corrected_incorrect	0
+global_catalogue_outside_custom	native_correct	0
+global_catalogue_outside_custom	corrected_correct	0
+global_catalogue_outside_custom	native_incorrect	0
+global_catalogue_outside_custom	corrected_incorrect	0
+outside_global_catalogue	native_correct	0
+outside_global_catalogue	corrected_correct	1846854
+outside_global_catalogue	native_incorrect	0
+outside_global_catalogue	corrected_incorrect	179509

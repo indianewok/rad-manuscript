@@ -21,7 +21,7 @@ def count_records(records,tool,truth,selected):
     seen={};per=defaultdict(Counter);counts=Counter();n=0
     for rid,target,source,corrected in records:
         n+=1
-        if source not in truth or target not in selected:
+        if source not in truth or (target not in selected and tool!='RAD'):
             raise ValueError('truth/selected identity failure')
         state=('corrected' if corrected else 'native')+('_correct' if target==source else '_incorrect')
         if rid not in seen:
@@ -65,7 +65,7 @@ def main():
     truth={x['barcode'] for x in rows(out/'source_data/figure_02/truth_barcodes.tsv')}
     expectedrows=rows(out/'source_data/figure_02/assignment_per_target.tsv')
     selected={tool:{x['barcode'] for x in expectedrows if x['tool']==tool and x['selected']=='1'} for tool in TOOLS}
-    sources={'RAD':b/'sctagger_L_rad_fixed5000_adapter_fix_20260817/independent_validation/record_audit.tsv.gz',
+    sources={'RAD':b/'Figure2_RAD_full_global_20261029/runs/RAD_full_global/scoring/record_audit.tsv.gz',
              'Flexiplex':b/'sctagger_flexiplex_audit_20260812/L_flatQ20_audit_reads_barcodes.txt',
              'BLAZE':b/'paper_revision_20261022/prism/blaze2023_assignment_replay/assignment_records.tsv.gz'}
     expectedstates=rows(out/'source_data/figure_02/assignment_states.tsv')

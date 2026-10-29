@@ -1,5 +1,7 @@
 # Figure 2 source data
 
+[Editable Figure 2 Prism project](../../figures/figure_02/Figure_02.prism)
+
 The [Figure 2 guide](../../docs/figure_02.md) describes the ScTagger quality
 sweeps, barcode discovery and read-assignment analysis.
 
@@ -40,3 +42,5 @@ counts are blank for unselected targets.
 its denominator. BLAZE selected 15 targets outside the truth set, containing
 908 incorrect corrections and 183 native incorrect assignments. Restricting
 incorrect corrections to truth-set targets removes those 908 events.
+
+RAD uses the full 6,794,880-barcode Cell Ranger catalogue with its supplied 5,000-barcode custom list. [Execution details](producing_evidence/assignment_RAD_run.json) and the [literal command](producing_evidence/assignment_RAD_command.sh) identify both lists. `assignment_RAD_summary.json` records the complete physical-read audit. RAD per-target rows describe the 5,000 supplied truth targets; `assignment_RAD_outside_custom_per_target.tsv` separately reports all emitted targets outside that list. The five-state totals include all retained assignments.

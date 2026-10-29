@@ -1,17 +1,23 @@
-# Figure 2 Prism data checks
+# Figure 2 data checks
 
-The numerical comparison in this record used the corrected project `Figure2_corrected_20261022.prism`, SHA-256 `dded389f9d8214278f93d2669c64e704bbf2208c47db96bf57a4ce4c77d6d016`.
+The current RAD assignment uses the complete 6,794,880-barcode Cell Ranger catalogue and the supplied 5,000-barcode custom truth list. The [execution record](producing_evidence/assignment_RAD_run.json) identifies the exact binary, input, layout and both barcode lists.
 
 ## Assignment tables
 
-Each physical-read partition sums to 4,993,805. The target sets contain 5,000 supplied truth barcodes for RAD, 3,004 native selected barcodes for Flexiplex, and 5,015 selected barcodes for BLAZE, including 15 outside the truth set. Unselected Flexiplex truth targets are blank; a selected target with no reads in a category has zero.
+Each tool's five-state partition sums to 4,993,805 physical reads. RAD per-target rows cover the 5,000 supplied truth targets; every emitted outside-custom target is reported separately. Flexiplex has 3,004 native selected targets. BLAZE has 5,015 selected targets, including 15 outside the truth set. Unselected truth targets are blank; a selected target with no reads in a category has zero.
 
-Correction-only plots use the corrected states and exclude native and unassigned states. Their denominators are 2,135,825 for RAD, 1,680,396 for Flexiplex, and 2,014,432 for BLAZE. The checked display proportions were RAD 91.03/8.97%, Flexiplex 83.24/16.76%, and BLAZE 93.4/6.6%. The separately labeled Flexiplex full-truth increment of 222,371 comes from the full-truth reference comparison.
+Correction-only fractions use corrected-correct plus corrected-incorrect reads:
 
-The value comparison matched all 45,000 inspected selected-truth values and blanks to the reconstructed arrays. Relevant tables are [assignment states](assignment_states.tsv), [per-target assignments](assignment_per_target.tsv), and [correction proportions](correction_only.tsv).
+| Tool | Corrected assignments | Correct (%) | Incorrect (%) |
+|---|---:|---:|---:|
+| RAD | 2,026,363 | 91.14 | 8.86 |
+| Flexiplex | 1,680,396 | 83.24 | 16.76 |
+| BLAZE | 2,014,432 | 93.39 | 6.61 |
 
-## Statistics
+[Assignment counts](assignment_states.tsv), [per-target counts](assignment_per_target.tsv) and [correction proportions](correction_only.tsv) provide the complete numerical inputs. The separately labelled Flexiplex full-truth reference increment remains 222,371 reads.
 
-The quality conditions share the same sequences and error patterns. Assignment proportions use the denominators above. The native analysis settings are required to reproduce the statistical calculations.
+## Plotting and editable project
 
-The [Figure 2 guide](../../docs/figure_02.md) describes the complete analysis, software versions, and reproduction commands.
+The [editable Prism project](../../figures/figure_02/Figure_02.prism) contains the current data in the existing graphs and layouts. The repository plots are rendered from these source tables with [plot_data.py](../../scripts/figure_02/plot_data.py).
+
+Existing statistical methods and quality-sweep inputs are retained. The [Figure 2 guide](../../docs/figure_02.md) provides the experiment and reproduction commands.

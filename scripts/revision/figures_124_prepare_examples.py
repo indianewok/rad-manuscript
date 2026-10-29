@@ -81,7 +81,7 @@ for key,name in [('L_flatQ20','L_flatQ20_first2.fastq'),('L_native2023','L_nativ
  with gzip.open(source,'rt') as f:content=''.join(itertools.islice(f,8))
  dest.write_text(content)
  provenance[2].append(dict(file=name,source_path=source_label(source),source_sha256=info.get('sha256',info.get('compressed_sha256')),source_bytes=source.stat().st_size,source_fastq_record_numbers_1_based=[1,2],excerpt_sha256=sha(dest),scope='public ScTagger synthetic sequences; first two records only; full-stream hash from completed audit9976816'))
-excerpt(2,B/'sctagger_L_rad_fixed5000_adapter_fix_20260817/independent_validation/record_audit.tsv.gz','RAD_assignment_records_example.tsv')
+excerpt(2,B/'Figure2_RAD_full_global_20261029/runs/RAD_full_global/scoring/record_audit.tsv.gz','RAD_assignment_records_example.tsv',fields=['read_id','truth_barcode','rad_cb','rad_cr','strand','record_category'])
 excerpt(2,B/'sctagger_flexiplex_audit_20260812/L_flatQ20_audit_reads_barcodes.txt','Flexiplex_assignment_records_example.tsv',delimiter='\t')
 excerpt(2,B/'paper_revision_20261022/prism/blaze2023_assignment_replay/assignment_records.tsv.gz','BLAZE_assignment_records_example.tsv')
 excerpt(2,R/'source_data/figure_02/paired_50000_barcode_mean_Q.csv.gz','paired_quality_example.tsv')
