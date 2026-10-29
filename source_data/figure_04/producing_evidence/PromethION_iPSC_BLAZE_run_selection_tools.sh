@@ -4,7 +4,6 @@ set -euo pipefail
 root=external_data/reviewer_comment_data/scratch_preservation_20260921/files/promethion_four_tool_20260729
 input="$root/input/promethion.fq.gz"
 stage_status="$root/logs/input_stage.status.log"
-rad=external_data/temporary/rad-current-f005f43.8ChwC9/build-system/rad
 blaze=external_data/reviewer_comment_data/scratch_preservation_20260921/files/blaze2_260a0_native_20260727/venv/bin/blaze
 flex=external_data/temporary/flexiplex_release.GqgaKA/flexiplex/bin/flexiplex-linux
 flex_filter=external_data/temporary/flexiplex_release.GqgaKA/flexiplex/scripts/flexiplex_filter/main.py
@@ -24,43 +23,9 @@ while true; do
 done
 
 mkdir -p \
-    "$root/results/rad_scan_e01" \
-    "$root/results/rad_scan_e03" \
     "$root/results/blaze_expect500" \
     "$root/results/flexiplex_f0" \
     "$root/results/flexiplex_f8"
-
-printf '%s\tstart\trad-scan-e01\n' "$(date -Is)" >> "$status"
-/usr/bin/time -v -o "$root/results/rad_scan_e01/time.txt" \
-    "$rad" scan-wl \
-    -i "$input" \
-    -p CTACACGACGCTCTTCCGATCT \
-    -n 16 \
-    -w 10x_3v3 \
-    -o "$root/results/rad_scan_e01/promethion" \
-    -e 0.1 \
-    -t 32 \
-    -k 10000 \
-    > "$root/results/rad_scan_e01/stdout.log" \
-    2> "$root/results/rad_scan_e01/stderr.log"
-printf '%s\tcomplete\trad-scan-e01\n' "$(date -Is)" >> "$status"
-
-printf '%s\tstart\trad-scan-e03\n' "$(date -Is)" >> "$status"
-/usr/bin/time -v -o "$root/results/rad_scan_e03/time.txt" \
-    "$rad" scan-wl \
-    -i "$input" \
-    -p CTACACGACGCTCTTCCGATCT \
-    -n 16 \
-    -w 10x_3v3 \
-    -o "$root/results/rad_scan_e03/promethion" \
-    -e 0.3 \
-    -t 32 \
-    -k 10000 \
-    > "$root/results/rad_scan_e03/stdout.log" \
-    2> "$root/results/rad_scan_e03/stderr.log"
-test -s "$root/results/rad_scan_e03/promethion.txt"
-test -s "$root/results/rad_scan_e03/promethion.csv"
-printf '%s\tcomplete\trad-scan-e03\n' "$(date -Is)" >> "$status"
 
 printf '%s\tstart\tblaze-expect500-selection\n' "$(date -Is)" >> "$status"
 /usr/bin/time -v -o "$root/results/blaze_expect500/time.txt" \

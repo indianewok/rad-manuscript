@@ -1,0 +1,33 @@
+{
+  "dataset_id": "section12",
+  "input_sha256": "53871368be44c03fe3d79796c71cae9132c4627248f89ac27f26b7ed443b6722",
+  "input_bytes": 730457210,
+  "adapter_seq": "CTACACGACGCTCTTCCGATCT",
+  "barcode_length": 16,
+  "left_margin": 0,
+  "right_margin": 0,
+  "reference_sha256": "3f78dc4e0bf99e27167fdcb14d2d51caf47487c6326a28915de01ed581d09c93",
+  "input_md5": "dc1864625e736e32de29576db9d3fb06",
+  "input_records": 364903,
+  "input_format": "fastq",
+  "reference_barcode_sha256": "3f78dc4e0bf99e27167fdcb14d2d51caf47487c6326a28915de01ed581d09c93",
+  "input_acquisition": {
+    "method": "complete_fastq_input",
+    "source": "Controlled EGA file EGAF00008107352",
+    "output": {
+      "input_format": "fastq",
+      "bytes": 730457210,
+      "sha256": "53871368be44c03fe3d79796c71cae9132c4627248f89ac27f26b7ed443b6722",
+      "md5": "dc1864625e736e32de29576db9d3fb06"
+    }
+  },
+  "reference_source": "Author Seurat/on-tissue mask within the complete 4,992-barcode Visium-v1 design; off-mask does not prove biological emptiness.",
+  "dataset_source_accessions": "EGAD00001011062; EGAS00001007337; EGAC00001003294; 10.5281/zenodo.7961605",
+  "chemistry": "10x_Vis_V1",
+  "scan_mode": "single",
+  "adapter_mode": "alignment",
+  "catalogue_sha256": "07c9b00f0d9d4375182b973478482e592450cd05393bc260222718e1b2a0d0f1",
+  "input_source": "Controlled EGA file EGAF00008107352",
+  "input_selection_contract": "Complete full-quality FASTQ in the specified input_format; no subsampling or quality-score replacement",
+  "reference_path": "external_data/figure_04/references/section12.txt"
+}

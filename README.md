@@ -14,7 +14,7 @@ the calculations that produced them.
 | [1](docs/figure_01.md) | RAD workflow, computational efficiency and Visium HD |
 | [2](docs/figure_02.md) | Barcode discovery and read assignment in the ScTagger simulation |
 | [3](docs/figure_03.md) | Off-list barcode challenges and barcode correction in LongBench |
-| [4](docs/figure_04.md) | Barcode detection across 37 sequencing inputs |
+| [4](docs/figure_04.md) | Barcode detection across 37 inputs; RAD `4acbe00`, error `0.3`; [tool versions and commands](source_data/figure_04/tool_parameters.tsv) |
 | [5](docs/figure_05.md) | Receptor recovery and LR-Split-seq read and molecule counts |
 | [6](docs/figure_06.md) | Genotype analysis in LongBench single-nucleus data |
 | [7](docs/figure_07.md) | Differential cell-line expression in LongBench single-nucleus data |

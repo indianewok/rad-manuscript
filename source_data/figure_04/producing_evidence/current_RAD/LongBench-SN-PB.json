@@ -1,0 +1,38 @@
+{
+  "dataset_id": "LongBench-SN-PB",
+  "tool": "RAD",
+  "version": "1.0.2",
+  "source_commit": "4acbe004ba11b150d6832395452632f367a6e6c1",
+  "binary_sha256": "01ae4700f329593487e1b0a3528da009d7e47c82bf213a5f53ba98acad6fda0e",
+  "threads": 16,
+  "chemistry": "10x_3v3.1",
+  "command": "rad scan-wl --input external_data/figure_04/inputs/LongBench-SN-PB.fastq.gz --output-prefix results/figure_04/LongBench-SN-PB/rad --adapter_seq CTACACGACGCTCTTCCGATCT --barcode-length 16 --left-margin 0 --right-margin 0 --max-error 0.3 --whitelist external_data/figure_04/catalogues/3M-february-2018-3v3.txt_bitlist.csv.gz --threads 16 --chunk-size 10000",
+  "input_acquisition": {
+    "method": "complete_fastq_input",
+    "source": "https://longbench-data.s3.ap-southeast-2.amazonaws.com/raw/fastq/SN_PB.fastq.gz",
+    "output": {
+      "input_format": "fastq.gz",
+      "bytes": 69255302528,
+      "sha256": "58f2e870816f84b4cb4491da2b36e6fc64f268272cba5bb4a93fd59f893a53db",
+      "md5": "ff63d1e85eb12f20ee83961f0003a4ee"
+    }
+  },
+  "adapter_seq": "CTACACGACGCTCTTCCGATCT",
+  "barcode_length": 16,
+  "left_margin": 0,
+  "right_margin": 0,
+  "max_error": 0.3,
+  "input_format": "fastq.gz",
+  "input_bytes": 69255302528,
+  "input_sha256": "58f2e870816f84b4cb4491da2b36e6fc64f268272cba5bb4a93fd59f893a53db",
+  "processed_nonempty_sequences": 161917662,
+  "input_records": 161917664,
+  "skipped_empty_records": 2,
+  "input_record_count_basis": "FASTQ records equal native nonempty sequences plus skipped empty records",
+  "selected_barcodes": 13278,
+  "selected_barcode_sha256": "cda954bdcd5ef1187fca75e770600e51e2de54f1b8cf0358009068fe98c5a733",
+  "reference_barcodes": 12012,
+  "native_receipt_sha256": "43a1d893b6abc0b4c6efb6e42d3a08853b716f851388e589045c900a1f773240",
+  "reference_sha256": "24b99c2f8c89c502d0230bb3ebf528ed8ab65910cd9b58cbdadbe187b2010f43",
+  "reference_barcode_sha256": "fc0cd1bed64e1daa374237cfd03c95707ec6f2eacd7bc277b6ee9a0484e8eaa1"
+}

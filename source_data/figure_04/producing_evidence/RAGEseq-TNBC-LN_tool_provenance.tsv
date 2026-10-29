@@ -1,5 +1,4 @@
 method	component	version_or_revision	executable_or_environment	sha256_or_note
-RAD	RAD binary	repo HEAD cd0582b2440cde0f35725dc557fa47307d74d374; exact current staged build	external_data/temporary/rad-current-f005f43.8ChwC9/build-system/rad	211e75d7211aa14f844fe505cab0cbe48c095bc4bf46ca9b07f0ba7d06981f41
 BLAZE	BLAZE2	2.6.0a0	external_data/reviewer_comment_data/scratch_preservation_20260921/files/blaze2_260a0_native_20260727/venv/bin/blaze	native venv
 BLAZE	entry-point script	2.6.0a0	venv/bin/blaze	SHA256 46d36e12fb0dfd4ce3c403169bdb9a6574eddc8e5b26363afe40867471f994dc
 BLAZE	selection constants source	2.6.0a0	blaze/config.py	SHA256 81d56c3c62b2797aa8d3e3aa8330ad090fcfb70d0da498e2ba9d3e5e03b88776

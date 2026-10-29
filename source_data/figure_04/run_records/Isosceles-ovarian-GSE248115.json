@@ -1,0 +1,73 @@
+{
+  "dataset_id": "Isosceles-ovarian-GSE248115",
+  "input_sha256": "ddcde280a82d4ad72255b0271381ea3f5c5bffa3b46b7a96df3827e8c13e1a44",
+  "input_bytes": 225493407326,
+  "adapter_seq": "CTACACGACGCTCTTCCGATCT",
+  "barcode_length": 16,
+  "left_margin": 0,
+  "right_margin": 0,
+  "reference_sha256": "f3c98f0dded31160fc9df50d1e7f0ae16f4b7e4b6eccb6e054a3f83a8931f6f9",
+  "input_md5": null,
+  "input_records": 89816471,
+  "input_format": "fastq",
+  "reference_barcode_sha256": "de2f3ba458688e83c6b71afa5148e370975f2d32cd14d5478733c152a07c65a1",
+  "input_acquisition": {
+    "method": "full_quality_sra_to_fastq",
+    "archive": {
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR26865982/SRR26865982",
+      "bytes": 96310494332,
+      "md5": "ba4878474cea19d5468a52644e5bcdb6",
+      "sha256": "1fbd926dc41248b873664c72c47a82cfeab17aa94bd99205f71e9f26a36cd6a0",
+      "basename": "SRR26865982.sra",
+      "quality": "full"
+    },
+    "converter": {
+      "executable": "fasterq-dump-orig.3.4.1",
+      "version": "3.4.1",
+      "binary_sha256": "b3a4dcd4078c1867bc980fecde4333efadd435e5867d7a834cd3b0a40c419d9f",
+      "distribution_url": "https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/3.4.1/sratoolkit.3.4.1-alma_linux64.tar.gz",
+      "distribution_sha256": "f4850a32975596ca0755d928b166ecb0095918284ea992fba10f1acb3fcff64d"
+    },
+    "compressor": {
+      "method": "none",
+      "version": "none; plain FASTQ"
+    },
+    "commands": {
+      "fasterq": [
+        "fasterq-dump-orig.3.4.1",
+        "SRR26865982.sra",
+        "--split-spot",
+        "--include-technical",
+        "--min-read-len",
+        "0",
+        "--threads",
+        "16",
+        "--mem",
+        "256M",
+        "--temp",
+        "tmp",
+        "--outfile",
+        "Isosceles-ovarian-GSE248115.local3.4.1.fastq.partial"
+      ],
+      "pigz": []
+    },
+    "expected_records": 89816471,
+    "expected_bases": 106160676518,
+    "sequence_quality_sha256": "c19aced80de64a70a82eabc31d706c2c091c2a2b9fca025fb2619aadc3ed79b0",
+    "output": {
+      "input_format": "fastq",
+      "bytes": 225493407326,
+      "sha256": "ddcde280a82d4ad72255b0271381ea3f5c5bffa3b46b7a96df3827e8c13e1a44",
+      "md5": null
+    }
+  },
+  "reference_source": "Matched short-read retained barcodes are a positive proxy, not literal biological ground truth.",
+  "dataset_source_accessions": "GSE248115; PRJNA1041796",
+  "chemistry": "10x_3v3",
+  "scan_mode": "single",
+  "adapter_mode": "alignment",
+  "catalogue_sha256": "02f771363a95e786ab1a6ab1e554c770e58cdff2fb30f2d7a9fb50a97762d452",
+  "input_source": "NCBI SRA SRR26865982",
+  "input_selection_contract": "Complete full-quality FASTQ in the specified input_format; no subsampling or quality-score replacement",
+  "reference_path": "external_data/figure_04/references/Isosceles-ovarian-GSE248115.reference.txt.gz"
+}

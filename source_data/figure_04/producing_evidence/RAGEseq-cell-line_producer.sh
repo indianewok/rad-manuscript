@@ -1,4 +1,4 @@
-# RAGE-seq four-tool benchmark commands
+# RAGE-seq comparator commands
 
 Working directory:
 
@@ -6,26 +6,6 @@ Working directory:
 
 All primary runs used 32 requested threads and 10x 3' v2 structure:
 adapter `CTACACGACGCTCTTCCGATCT`, 16-nt barcode, and 10-nt UMI.
-
-## RAD
-
-```bash
-/usr/bin/time -v -o runs/rad/scan/time.txt \
-  external_data/temporary/rad-current-f005f43.8ChwC9/build-system/rad scan-wl \
-  -i input/rageseq.fq.gz \
-  -o runs/rad/scan/rageseq \
-  -p CTACACGACGCTCTTCCGATCT -n 16 -e 0.3 \
-  -w input/10x_3v2_full_whitelist.txt -t 32 -k 10000
-
-/usr/bin/time -v -o runs/rad/demux/time.txt \
-  external_data/temporary/rad-current-f005f43.8ChwC9/build-system/rad demux \
-  -l three_prime -q input/rageseq.fq.gz \
-  -g input/10x_3v2_full_whitelist.txt \
-  -c runs/rad/scan/rageseq.txt \
-  -R offensive -M 2 -m 2 -z 10000 \
-  -o rageseq -d runs/rad/demux \
-  -F runs/rad/demux/run.log -t 32
-```
 
 ## BLAZE
 
@@ -81,16 +61,3 @@ Rscript external_data/reviewer_comment_data/scratch_preservation_20260921/files/
 
 The driver calls `FLAMES::blaze()` with `expect_cells=4505`,
 `max-edit-distance=2`, `threads=32`, and the 10x 3v2 kit.
-
-## Analysis
-
-```bash
-python3 scripts/analyze_callsets.py
-python3 scripts/analyze_demux_assignments.py
-python3 scripts/make_timing_summary.py
-python3 scripts/plot_selection_umap.py
-```
-
-Wall times are descriptive shared-node timings. The four tools were run with
-overlap to finish the biological benchmark promptly, so the measurements are
-not an isolated performance ranking.

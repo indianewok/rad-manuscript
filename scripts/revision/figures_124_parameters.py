@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Recover producing-run settings without borrowing versions from other runs."""
-import argparse,csv,json,re,shutil
+import argparse,json,shutil
 from pathlib import Path
 from source_paths import data_root, resolve_source
-from figures_124 import REPO,sha,rows,write_rows,write_json,TIMING,NATIVE,EXTENDED,SWEEP
+from figures_124 import REPO,sha,rows,write_rows,write_json,NATIVE,EXTENDED,SWEEP
 from tool_parameter_schema import FIELDS, project_parameters, details_path_name, prepare_evidence_rows
 p=argparse.ArgumentParser(description=__doc__)
 p.add_argument('--project-root',type=Path,default=data_root())
@@ -72,36 +72,42 @@ command=next(x[len('command='):] for x in (flex/'L_audit.runner.log').read_text(
 add(figure='02',experiment='physical-read assignment',producing_run='L_flatQ20_Flexiplex_raw_to_assigned_audit',tool='Flexiplex',version=fk['upstream_version']+' diagnostic raw-to-assigned build',commit_or_build=fk['upstream_commit'],binary_or_source_sha256=fk['diagnostic_binary_sha256'],exact_command_or_recorded_settings=command,command_status='exact saved command; defaults retained from pinned source',chemistry_layout='10x3v3; default f8/e2; 16nt barcode/12nt UMI',reference_whitelist='own native selected3004; filename in exact command',seed='no explicit seed',threads='16; pigz4',evidence=ev,evidence_sha256=sha(O/ev),applies_to='assignment states/per-selected-target/correction proportions',limitation='Identical-target duplicate IDs collapsed; conflicting-target IDs excluded; diagnostic output adds RawCellBarcode')
 bl=B/'paper_revision_20261022/prism/blaze2023_assignment_replay';bp=json.loads((bl/'provenance.json').read_text());ev=keep(bl/'provenance.json','02_assignment_BLAZE_provenance.json');keep(bl/'matcher_whitelist_iteration_order.txt','02_assignment_BLAZE_iteration_order.txt')
 add(figure='02',experiment='physical-read assignment',producing_run='L_native2023_BLAZE_incremental_matcher_replay',tool='BLAZE',version='2.6.0a0 _match_bc_row',commit_or_build='exact stock matcher source; commit unrecovered',binary_or_source_sha256=bp['matcher_sha256'],exact_command_or_recorded_settings='max_edit_distance=2; minQ=0; retained seed0 candidate order; incremental exact replay method: '+bp['method'],command_status='matcher parameters/method recovered; entrypoint argv unrecovered',chemistry_layout='native2023 extraction 10x3v3; unchanged sequence/error collection',reference_whitelist='5015 selected targets=5000truth+15extra; iteration order deposited',seed='retained archived seed0 order; appended new candidates lexically',threads='unrecovered for matcher replay',evidence=ev,evidence_sha256=sha(O/ev),applies_to='assignment states/per-selected-target/correction proportions',limitation='Full source assignment records independently rescored; not new FASTQ extraction')
-# Figure4: attach settings to each selected input/tool observation, not one global pin.
-master_path=B/'master_native_comparison_20260811/tables/master_native_comparison_long.tsv';master={(r['physical_input_run'],r['tool']):r for r in rows(master_path)}
+# Figure4 settings come only from the current per-input table and receipts.
+current=rows(O/'source_data/figure_04/tool_parameters.tsv')
 selected=rows(O/'source_data/figure_04/barcode_detection_metrics.tsv')
-current_evidence=[]
-for r in selected:
- m=master.get((r['canonical_id'],r['tool']),{});settings=m.get('tool_settings') or 'unrecovered';version=m.get('tool_version') or 'unrecovered'
- current_evidence.append(dict(canonical_id=r['canonical_id'],tool=r['tool'],tool_version=version,tool_settings=settings,source_table_path=m.get('source_table_path',r['source_path']),source_callset_path=m.get('source_callset_path',''),reference_type=r['reference_type'],reference_n=r['reference_n'],source_method=r['source_method']))
- ev='source_data/figure_04/producing_run_evidence.tsv'
- add(figure='04',experiment='barcode discovery across37inputs',producing_run=r['canonical_id']+'|'+r['tool'],tool=r['tool'],version=version,commit_or_build='unrecovered unless explicit in version/settings',binary_or_source_sha256='unrecovered',exact_command_or_recorded_settings=settings,command_status='recorded source-table settings only; exact expanded argv unrecovered',chemistry_layout='unrecovered unless stated in settings',reference_whitelist=r['reference_type']+'; n='+r['reference_n']+'; '+r['reference_description'],seed='unrecovered',threads=(re.search(r'threads[=:]([0-9]+)',settings).group(1) if re.search(r'threads[=:]([0-9]+)',settings) else 'unrecovered'),evidence=ev,evidence_sha256='filled after writing evidence',applies_to=r['canonical_id'],limitation=r['source_method']+'; '+r['input_status']+'; no versions inferred from README or other experiments')
-write_rows(O/'source_data/figure_04/producing_run_evidence.tsv',current_evidence)
-for r in output:
- if r['figure']=='04':r['evidence_sha256']=sha(O/r['evidence'])
-# Preserve exact primary LN commands as additional current provenance without borrowing binary identities.
-keep(B/'wl_scan/20260730_rageseq_ERR3268990_tnbc_lymphnode_four_tool/COMMANDS.md','04_RAGE_TNBC_commands.md')
-keep(B/'wl_scan/20260730_rageseq_ERR3268990_tnbc_lymphnode_four_tool/run_after_download.sh','04_RAGE_TNBC_executed.sh')
-for r in output:
- if r['figure']=='04' and r['applies_to']=='RAGEseq-TNBC-LN':
-  r['evidence']+='; source_data/figure_04/producing_evidence/RAGE_TNBC_commands.md; source_data/figure_04/producing_evidence/RAGE_TNBC_executed.sh'
-  r['chemistry_layout']='10x3v2; 16nt barcode/10nt UMI; adapter CTACACGACGCTCTTCCGATCT'
-  r['exact_command_or_recorded_settings']='exact executed shell template: source_data/figure_04/producing_evidence/RAGE_TNBC_executed.sh; primary RADscan e0.3/t16; BLAZEexpect10433/kit3v2/t16/ED2; Flexf8/t10/defaultED2 plus native filter'
-  r['command_status']='exact shell template; binary versions/hashes unrecovered except BLAZE2.6.0a0 label'
-  r['threads']='10' if r['tool']=='Flexiplex' else '16'
-  if r['tool']=='BLAZE':r['version']='2.6.0a0'
-from figures_124_parameters_details import recover
-details=recover(B,O,keep)
-for r in output:
- if r['figure']=='04':r.update(details.get((r['applies_to'],r['tool']),{}))
+keys={(r['canonical_id'],r['tool']) for r in selected}
+if len(current)!=111 or {(r['dataset'],r['tool']) for r in current}!=keys:
+ raise ValueError('Current Figure4 tool parameters must cover all37 three-tool inputs')
+producers=O/'source_data/figure_04/producing_run_evidence.tsv'
+wide_current=O/'manifests'/details_path_name('124')
+wide_current={(row['applies_to'],row['tool']):row for row in rows(wide_current) if row['figure']=='04'} if wide_current.exists() else {}
+for r in current:
+ dataset,tool=r['dataset'],r['tool']
+ selected_row=next(x for x in selected if x['canonical_id']==dataset and x['tool']==tool)
+ receipt_path=O/'source_data/figure_04/producing_evidence/current_RAD'/(dataset+'.json')
+ if tool=='RAD':
+  receipt=json.loads(receipt_path.read_text())
+  if r['source_commit']!='4acbe004ba11b150d6832395452632f367a6e6c1' or receipt['max_error']!=0.3:
+   raise ValueError('Current Figure4 RAD source/error pin differs: '+dataset)
+  ev=str(receipt_path.relative_to(O));digest=receipt['binary_sha256']
+ else:
+  previous=wide_current.get((dataset,tool))
+  if previous:
+   payload={key:previous[key] for key in fields}
+   payload.update(version=r['version'],exact_command_or_recorded_settings=r['command'],threads=r['threads'],chemistry_layout=r['chemistry'])
+   if previous.get('evidence_original_sha256'):payload['evidence_original_sha256']=previous['evidence_original_sha256']
+   add(**payload)
+   continue
+  ev=str(producers.relative_to(O));digest='not_recorded'
+ add(figure='04',experiment='barcode discovery across37inputs',producing_run=dataset+'|'+tool,
+     tool=tool,version=r['version'],commit_or_build=r['source_commit'],binary_or_source_sha256=digest,
+     exact_command_or_recorded_settings=r['command'],command_status='current per-input command record',
+     chemistry_layout=r['chemistry'],reference_whitelist=selected_row['reference_type']+'; n='+selected_row['reference_n'],
+     seed='not_recorded',threads=r['threads'],evidence=ev,evidence_sha256=sha(O/ev),
+     applies_to=dataset,limitation='Descriptive matched-reference barcode-set comparison')
 output=prepare_evidence_rows(output,O)
 write_rows(O/'manifests'/details_path_name('124'),output,fields+['evidence_original_sha256'])
 write_rows(O/'manifests/figures_124_tool_parameters.tsv',project_parameters(output,'124',O),FIELDS)
 write_rows(O/'manifests/figures_124_parameter_evidence.tsv',evidence)
-write_json(O/'validation/figures_124_parameter_recovery.json',dict(status='recorded with explicit unresolved identities',producing_runs=len(output),figure_counts={f:sum(r['figure']==f for r in output) for f in ['01','02','04']},source_master=dict(path=str(master_path),sha256=sha(master_path)),no_global_version_imputation=True))
+write_json(O/'validation/figures_124_parameter_recovery.json',dict(status='recorded with explicit unresolved identities',producing_runs=len(output),figure_counts={f:sum(r['figure']==f for r in output) for f in ['01','02','04']},figure4_source_parameters=dict(path='source_data/figure_04/tool_parameters.tsv',sha256=sha(O/'source_data/figure_04/tool_parameters.tsv')),no_global_version_imputation=True))
 print('Recorded',len(output),'producing-run rows; unknown means unrecovered, not default.')

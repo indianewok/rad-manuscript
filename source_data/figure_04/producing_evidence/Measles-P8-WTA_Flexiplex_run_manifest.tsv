@@ -12,7 +12,6 @@ global_design	external_data/cellranger_whitelists/3M-february-2018-3v3.txt
 global_design_barcodes	6794880
 scoring_truth	external_data/barcode_whitelists/mmr_p8_sc_bcs.txt
 scoring_truth_barcodes	10299
-rad_commit	b02ff24110fe45873811d5389d2e58c338045f05
 blaze_version	2.6.0a0
 blaze_selector	expect-cells=10299;minQ=15;kit=3v3;max_edit_distance=2
 flexiplex_version	1.02.6

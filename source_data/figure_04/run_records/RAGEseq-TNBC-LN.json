@@ -1,0 +1,33 @@
+{
+  "dataset_id": "RAGEseq-TNBC-LN",
+  "input_sha256": "ffa2403ea0a870cf01e0f80c451aa831fb79f56714d67f7e589ff6e20997669a",
+  "input_bytes": 24090380952,
+  "adapter_seq": "CTACACGACGCTCTTCCGATCT",
+  "barcode_length": 16,
+  "left_margin": 0,
+  "right_margin": 0,
+  "reference_sha256": "95e4d81c69b55a673aeaea8955693ab27e6b8b53fc95a29355fc6f13fd4be898",
+  "input_md5": "23177cd143a521db1d7e41fd3e7d1981",
+  "input_records": 23044761,
+  "input_format": "fastq.gz",
+  "reference_barcode_sha256": "6b858038b0807a61acce0ad66a9f920df42cf140582040d07fa0d9dc99595f70",
+  "input_acquisition": {
+    "method": "complete_fastq_input",
+    "source": "PRJEB28878",
+    "output": {
+      "input_format": "fastq.gz",
+      "bytes": 24090380952,
+      "sha256": "ffa2403ea0a870cf01e0f80c451aa831fb79f56714d67f7e589ff6e20997669a",
+      "md5": "23177cd143a521db1d7e41fd3e7d1981"
+    }
+  },
+  "reference_source": "Explicitly annotated B-cell, T-cell, and T/B-doublet barcodes from the matched RAGE-seq TNBC draining-lymph-node short-read table (n=5,978). Epithelial_Cancer and the 4,433 numeric/unannotated barcodes are not credited as positives; therefore precision is conservative. Calls outside this named positive proxy are operational FPs, not proven biological negatives.",
+  "dataset_source_accessions": "PRJEB28878",
+  "chemistry": "10x_3v2",
+  "scan_mode": "single",
+  "adapter_mode": "alignment",
+  "catalogue_sha256": "b0dda4b114d8fc7ea8def94fb472e6205c1831a72e3ac245ed13cc332d9f20d1",
+  "input_source": "PRJEB28878",
+  "input_selection_contract": "Complete full-quality FASTQ in the specified input_format; no subsampling or quality-score replacement",
+  "reference_path": "external_data/figure_04/references/RAGEseq-TNBC-LN.reference.txt.gz"
+}

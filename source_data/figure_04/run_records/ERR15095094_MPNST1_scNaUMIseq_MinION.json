@@ -1,0 +1,33 @@
+{
+  "dataset_id": "ERR15095094_MPNST1_scNaUMIseq_MinION",
+  "input_sha256": null,
+  "input_bytes": 11293958727,
+  "adapter_seq": "CTACACGACGCTCTTCCGATCT",
+  "barcode_length": 16,
+  "left_margin": 0,
+  "right_margin": 0,
+  "reference_sha256": "3c9d29a0a4cc1b5a1360ec98557f72fee9404d805f78ec7dbfed339dda2f9896",
+  "input_md5": null,
+  "input_records": null,
+  "input_format": "fastq.gz",
+  "reference_barcode_sha256": "999dbf531a350fab6219f1b9331dc915fb33b1beadb04886a62bc1f897e9ea08",
+  "input_acquisition": {
+    "method": "complete_fastq_input",
+    "source": "ENA ERR15095094",
+    "output": {
+      "input_format": "fastq.gz",
+      "bytes": 11293958727,
+      "sha256": null,
+      "md5": null
+    }
+  },
+  "reference_source": "MPNST1_2020_23 Cell Ranger 9 GRCm39 filtered barcodes (4602 retained cells)",
+  "dataset_source_accessions": "E-MTAB-15190/PRJEB90127; E-MTAB-14222/PRJEB77277",
+  "chemistry": "10x_3v3.1",
+  "scan_mode": "single",
+  "adapter_mode": "alignment",
+  "catalogue_sha256": "02f771363a95e786ab1a6ab1e554c770e58cdff2fb30f2d7a9fb50a97762d452",
+  "input_source": "ENA ERR15095094",
+  "input_selection_contract": "Complete full-quality FASTQ in the specified input_format; no subsampling or quality-score replacement",
+  "reference_path": "external_data/figure_04/references/ERR15095094_MPNST1_scNaUMIseq_MinION.reference.txt.gz"
+}

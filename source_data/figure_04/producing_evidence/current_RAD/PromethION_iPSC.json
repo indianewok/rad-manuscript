@@ -1,0 +1,38 @@
+{
+  "dataset_id": "PromethION_iPSC",
+  "tool": "RAD",
+  "version": "1.0.2",
+  "source_commit": "4acbe004ba11b150d6832395452632f367a6e6c1",
+  "binary_sha256": "01ae4700f329593487e1b0a3528da009d7e47c82bf213a5f53ba98acad6fda0e",
+  "threads": 16,
+  "chemistry": "10x_3v3",
+  "command": "rad scan-wl --input external_data/figure_04/inputs/PromethION_iPSC.fastq.gz --output-prefix results/figure_04/PromethION_iPSC/rad --adapter_seq CTACACGACGCTCTTCCGATCT --barcode-length 16 --left-margin 0 --right-margin 0 --max-error 0.3 --whitelist external_data/figure_04/catalogues/3M-february-2018-3v3.txt_bitlist.csv.gz --threads 16 --chunk-size 10000",
+  "input_acquisition": {
+    "method": "complete_fastq_input",
+    "source": "https://ftp.sra.ebi.ac.uk/vol1/run/ERR995/ERR9958135/LR_sc-RNA-seq_promethION_LSK110_pass.fastq.gz",
+    "output": {
+      "input_format": "fastq.gz",
+      "bytes": 73030652509,
+      "sha256": "fccd246e777a00dd6fa69e36b412f2d285048d8beecf7e5aa05bef1c896d645a",
+      "md5": "9673bd0e626a4fe22fd89a1f98a7130c"
+    }
+  },
+  "adapter_seq": "CTACACGACGCTCTTCCGATCT",
+  "barcode_length": 16,
+  "left_margin": 0,
+  "right_margin": 0,
+  "max_error": 0.3,
+  "input_format": "fastq.gz",
+  "input_bytes": 73030652509,
+  "input_sha256": "fccd246e777a00dd6fa69e36b412f2d285048d8beecf7e5aa05bef1c896d645a",
+  "processed_nonempty_sequences": 61967455,
+  "input_records": 61967455,
+  "skipped_empty_records": 0,
+  "input_record_count_basis": "FASTQ records equal native nonempty sequences plus skipped empty records",
+  "selected_barcodes": 899,
+  "selected_barcode_sha256": "e5cca5b438432f4c445fd800442c79d99720efefa6592d69ca1196392f541028",
+  "reference_barcodes": 1022,
+  "native_receipt_sha256": "d03b89bf2dea1ff8e849ee7d8322cc4956b6cf5dbf96183c5ad19b29337d5059",
+  "reference_sha256": "835f9f7b778d80374e2b0a589fc2226d46f2ab2cd184c0324b0bc3873504f1c3",
+  "reference_barcode_sha256": "4599106cee0f2dcf33ae35584509c55c405ea1676f2387bfc5f1152884f3c7c5"
+}

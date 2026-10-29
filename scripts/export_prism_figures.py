@@ -9,16 +9,15 @@ import struct
 import zipfile
 
 
+# Figure4 uses its separate current-table-validated native bundle.
 SELECTIONS = [
     ('figure_1/Figure 1.prism', '8525848D-FB3C-42CC-9F1C-6F7F5A67F4CE', 'figure_01'),
     ('Figure 2.prism', '30A33090-FD85-4730-B1A1-CDE05A559C52', 'figure_02'),
     ('Figure 3.prism', '4B74E124-3EC5-4749-A164-AA426B306E0C', 'figure_03'),
-    ('Figure 4.prism', 'A832BFDA-4E92-4AB6-BA27-1DC54997A075', 'figure_04'),
     ('Figure 5.prism', '5D32AC1F-A6CB-47FA-929D-4FF453617D61', 'figure_05'),
     ('Figure 6.prism', '2DD8E8CE-1D8F-41E1-A0CF-8B152558EA0C', 'figure_06'),
     ('Figure 7.prism', 'C3B5C198-E4BA-4C34-9580-B55EA23BE9C3', 'figure_07'),
     ('Supplemental 2ish V2.prism', '0EA6984E-96DB-4417-AB20-179C0558851D', 'figure_02_supplement'),
-    ('Supplemental Related to Figure 4.prism', '59488B30-603A-4CD5-A1CF-9EEC86EFAC02', 'figure_04_supplement'),
 ]
 
 
@@ -80,6 +79,8 @@ def verify(args, root):
         raise ValueError('Prism completion record is empty')
     rows = json.loads((work / 'plan.json').read_text())
     for row in rows:
+        if row.get('source_file') in ('Figure 4.prism', 'Supplemental Related to Figure 4.prism') or row.get('image', '').startswith('figures/figure_04/'):
+            raise ValueError('Figure4 native exports require the separately validated current-data native bundle; this generic exporter cannot restore them')
         for field in ('source_path', 'copy_path'):
             if sha256(Path(row[field])) != row['source_sha256']:
                 raise ValueError('Prism source changed: ' + row[field])

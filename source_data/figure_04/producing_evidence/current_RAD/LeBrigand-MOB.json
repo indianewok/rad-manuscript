@@ -1,0 +1,51 @@
+{
+  "dataset_id": "LeBrigand-MOB",
+  "tool": "RAD",
+  "version": "1.0.2",
+  "source_commit": "4acbe004ba11b150d6832395452632f367a6e6c1",
+  "binary_sha256": "01ae4700f329593487e1b0a3528da009d7e47c82bf213a5f53ba98acad6fda0e",
+  "threads": 16,
+  "chemistry": "Visium_v2_full4992",
+  "command": "rad scan-wl --input external_data/figure_04/inputs/LeBrigand-MOB.fastq.gz --output-prefix results/figure_04/LeBrigand-MOB/rad --adapter_seq CTACACGACGCTCTTCCGATCT --barcode-length 16 --left-margin 0 --right-margin 0 --max-error 0.3 --whitelist external_data/figure_04/catalogues/visium_v2_full_4992.txt --threads 16 --chunk-size 10000",
+  "input_acquisition": {
+    "method": "concatenate_complete_gzip_files_in_order",
+    "components": [
+      {
+        "accession": "SRR12157794",
+        "bytes": 20885878201,
+        "md5": "ac05146de32ac04bc42e5b6ef36d1a5a",
+        "sha256": "c11cde218e14b2e99a4f207abfc794cd5b508ec92bb1b0bf794f20c7260fcfe5"
+      },
+      {
+        "accession": "SRR12157795",
+        "bytes": 13367463313,
+        "md5": "d1cd65d8f5a55fb1b189c0019204f872",
+        "sha256": "7b2bca383819a05588d0ffe711153e715f1fe9872173f361f16b0f88ffe6b20c"
+      }
+    ],
+    "output": {
+      "input_format": "fastq.gz",
+      "bytes": 34253341514,
+      "sha256": "c5a4e19475ef8fdfe159c01dcdb0fa6d7029548d41beb51698cecbcf3f561f32",
+      "md5": "79b7b21ac8aeb01d368814fe17737009"
+    }
+  },
+  "adapter_seq": "CTACACGACGCTCTTCCGATCT",
+  "barcode_length": 16,
+  "left_margin": 0,
+  "right_margin": 0,
+  "max_error": 0.3,
+  "input_format": "fastq.gz",
+  "input_bytes": 34253341514,
+  "input_sha256": "c5a4e19475ef8fdfe159c01dcdb0fa6d7029548d41beb51698cecbcf3f561f32",
+  "processed_nonempty_sequences": 29045593,
+  "input_records": 29045593,
+  "skipped_empty_records": 0,
+  "input_record_count_basis": "FASTQ records equal native nonempty sequences plus skipped empty records",
+  "selected_barcodes": 915,
+  "selected_barcode_sha256": "0fd8ad4826d39a54362b6f0a3ece90983cd1663f9b7b662c7d4ba3bdc7639a5b",
+  "reference_barcodes": 918,
+  "native_receipt_sha256": "d94698415b883e808d7a6a3fb585e4aebb05cc78ff81ab06e618502d90ca7f5e",
+  "reference_sha256": "a30c7cc8c3cc7c96b0564c1675397076649c27ccec8e7c292254f7ed336751ac",
+  "reference_barcode_sha256": "d6b0e3ab1665cfaeb73539508614da493356b7f103b0d23e96b98fa65eb559cc"
+}

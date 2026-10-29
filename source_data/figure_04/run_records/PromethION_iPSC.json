@@ -1,0 +1,33 @@
+{
+  "dataset_id": "PromethION_iPSC",
+  "input_sha256": "fccd246e777a00dd6fa69e36b412f2d285048d8beecf7e5aa05bef1c896d645a",
+  "input_bytes": 73030652509,
+  "adapter_seq": "CTACACGACGCTCTTCCGATCT",
+  "barcode_length": 16,
+  "left_margin": 0,
+  "right_margin": 0,
+  "reference_sha256": "835f9f7b778d80374e2b0a589fc2226d46f2ab2cd184c0324b0bc3873504f1c3",
+  "input_md5": "9673bd0e626a4fe22fd89a1f98a7130c",
+  "input_records": 61967455,
+  "input_format": "fastq.gz",
+  "reference_barcode_sha256": "4599106cee0f2dcf33ae35584509c55c405ea1676f2387bfc5f1152884f3c7c5",
+  "input_acquisition": {
+    "method": "complete_fastq_input",
+    "source": "https://ftp.sra.ebi.ac.uk/vol1/run/ERR995/ERR9958135/LR_sc-RNA-seq_promethION_LSK110_pass.fastq.gz",
+    "output": {
+      "input_format": "fastq.gz",
+      "bytes": 73030652509,
+      "sha256": "fccd246e777a00dd6fa69e36b412f2d285048d8beecf7e5aa05bef1c896d645a",
+      "md5": "9673bd0e626a4fe22fd89a1f98a7130c"
+    }
+  },
+  "reference_source": "Matched short-read retained barcodes are a positive proxy, not literal biological ground truth.",
+  "dataset_source_accessions": "PRJEB54718/ERR9958135; 10.26188/20335203.v1",
+  "chemistry": "10x_3v3",
+  "scan_mode": "single",
+  "adapter_mode": "alignment",
+  "catalogue_sha256": "02f771363a95e786ab1a6ab1e554c770e58cdff2fb30f2d7a9fb50a97762d452",
+  "input_source": "https://ftp.sra.ebi.ac.uk/vol1/run/ERR995/ERR9958135/LR_sc-RNA-seq_promethION_LSK110_pass.fastq.gz",
+  "input_selection_contract": "Complete full-quality FASTQ in the specified input_format; no subsampling or quality-score replacement",
+  "reference_path": "external_data/figure_04/references/PromethION_iPSC.reference.txt.gz"
+}

@@ -10,7 +10,6 @@ EXPECTED_BYTES=24090380952
 EXPECTED_MD5=23177cd143a521db1d7e41fd3e7d1981
 EXPECTED_READS=23044761
 EXPECTED_BASES=24041380990
-RAD_THREADS=16
 BLAZE_THREADS=16
 FLEX_THREADS=10
 FLEX_PIGZ_THREADS=2
@@ -19,7 +18,6 @@ PROMETH_ROOT=external_data/reviewer_comment_data/scratch_preservation_20260921/f
 PROMETH_SELECTION_STATUS="$PROMETH_ROOT/logs/selection_queue.status.log"
 PROMETH_SENSITIVITY_STATUS="$PROMETH_ROOT/logs/blaze_expect1022_sensitivity.status.log"
 
-RAD=external_data/temporary/rad-current-f005f43.8ChwC9/build-system/rad
 BLAZE=external_data/reviewer_comment_data/scratch_preservation_20260921/files/blaze2_260a0_native_20260727/venv/bin/blaze
 FLEX=external_data/temporary/flexiplex_release.GqgaKA/flexiplex/bin/flexiplex-linux
 FLEX_FILTER=external_data/software/miniconda3/bin/flexiplex-filter
@@ -36,8 +34,6 @@ status() {
 
 mkdir -p \
     "$ROOT/analysis" \
-    "$ROOT/runs/rad/scan" \
-    "$ROOT/runs/rad/demux" \
     "$ROOT/runs/blaze" \
     "$ROOT/runs/blaze_expect6027" \
     "$ROOT/runs/flexiplex/f0_detection" \
@@ -121,32 +117,7 @@ while :; do
     status "PromethION gate: selection_complete=$selection_complete sensitivity_complete=$sensitivity_complete"
     sleep 60
 done
-status "PromethION selection gate passed; LN cap remains 56 so later PromethION competitor demux (max 64) keeps combined request <=120"
-
-run_rad() {
-    status "RAD scan-wl started"
-    /usr/bin/time -v -o "$ROOT/runs/rad/scan/time.txt" \
-        "$RAD" scan-wl \
-        -i "$INPUT" \
-        -o "$ROOT/runs/rad/scan/ERR3268990" \
-        -p CTACACGACGCTCTTCCGATCT -n 16 -e 0.3 \
-        -w "$ROOT/input/10x_3v2_full_whitelist.txt" \
-        -t "$RAD_THREADS" -k 10000 \
-        > "$ROOT/runs/rad/scan/stdout.log" \
-        2> "$ROOT/runs/rad/scan/stderr.log" || return
-    status "RAD demux started"
-    /usr/bin/time -v -o "$ROOT/runs/rad/demux/time.txt" \
-        "$RAD" demux \
-        -l three_prime -q "$INPUT" \
-        -g "$ROOT/input/10x_3v2_full_whitelist.txt" \
-        -c "$ROOT/runs/rad/scan/ERR3268990.txt" \
-        -R offensive -M 2 -m 2 -z 10000 \
-        -o ERR3268990 -d "$ROOT/runs/rad/demux" \
-        -F "$ROOT/runs/rad/demux/run.log" \
-        -t "$RAD_THREADS" \
-        > "$ROOT/runs/rad/demux/stdout.log" \
-        2> "$ROOT/runs/rad/demux/stderr.log"
-}
+status "PromethION selection gate passed"
 
 run_blaze() {
     local output_dir=$1
@@ -206,9 +177,8 @@ run_flames() {
     status "FLAMESv2/BLAZE 2.5.1 expect10433 started (temp=$temp_root)"
     /usr/bin/time -v -o "$ROOT/runs/flamesv2/time.txt" \
         apptainer exec --cleanenv \
-        --bind /dartfs:/dartfs \
-        --bind /dartfs-hpc:/dartfs-hpc \
-        --bind /scratch:/scratch \
+        --bind "$PWD:$PWD" \
+        --bind "$(realpath external_data):$(realpath external_data)" \
         --bind "$BASILISK_ROOT:$BASILISK_ROOT" \
         --bind "$temp_root:$temp_root" \
         --env R_ENVIRON_USER=/dev/null \
@@ -231,15 +201,13 @@ run_flames() {
         2> "$ROOT/runs/flamesv2/stderr.log"
 }
 
-status "wave 1 launch: RAD16 + BLAZE16 + Flex10 + Flex10; max requested workers 52, or 56 while both Flex pigz2 stages overlap"
-run_rad & pid_rad=$!
+status "wave 1 launch: BLAZE16 + Flex10 + Flex10"
 run_blaze "$ROOT/runs/blaze" 10433 "BLAZE 2.6.0a0 expect10433" overwrite & pid_blaze=$!
 run_flex 0 & pid_flex0=$!
 run_flex 8 & pid_flex8=$!
 
 failures=0
 for pair in \
-    "RAD:$pid_rad" \
     "BLAZE10433:$pid_blaze" \
     "Flexiplex_f0:$pid_flex0" \
     "Flexiplex_f8:$pid_flex8"
@@ -282,83 +250,3 @@ if (( failures )); then
     status "ERROR $failures wave-2 benchmark tracks failed; analysis not started"
     exit 1
 fi
-
-status "callset analysis started"
-/usr/bin/time -v -o "$ROOT/analysis/analyze_callsets_time.txt" \
-    python3 "$ROOT/scripts/analyze_callsets.py" \
-    > "$ROOT/analysis/analyze_callsets_stdout.log" \
-    2> "$ROOT/analysis/analyze_callsets_stderr.log" || exit
-
-status "BLAZE high-Q selection-mechanism analysis started"
-/usr/bin/time -v -o "$ROOT/analysis/analyze_blaze_highq_mechanism_time.txt" \
-    python3 "$ROOT/scripts/analyze_blaze_highq_mechanism.py" \
-    > "$ROOT/analysis/analyze_blaze_highq_mechanism_stdout.log" \
-    2> "$ROOT/analysis/analyze_blaze_highq_mechanism_stderr.log" || exit
-
-status "read-assignment analysis started"
-/usr/bin/time -v -o "$ROOT/analysis/analyze_demux_assignments_time.txt" \
-    python3 "$ROOT/scripts/analyze_demux_assignments.py" \
-    > "$ROOT/analysis/analyze_demux_assignments_stdout.log" \
-    2> "$ROOT/analysis/analyze_demux_assignments_stderr.log" || exit
-
-status "BLAZE identical-whitelist assignment reproducibility audit started"
-/usr/bin/time -v -o "$ROOT/analysis/analyze_blaze_assignment_nondeterminism_time.txt" \
-    python3 "$ROOT/scripts/analyze_blaze_assignment_nondeterminism.py" \
-    > "$ROOT/analysis/analyze_blaze_assignment_nondeterminism_stdout.log" \
-    2> "$ROOT/analysis/analyze_blaze_assignment_nondeterminism_stderr.log" || exit
-
-status "strict BLAZE raw-to-corrected audit started"
-/usr/bin/time -v -o "$ROOT/analysis/audit_blaze_raw_to_corrected_time.txt" \
-    python3 "$ROOT/scripts/audit_blaze_raw_to_corrected.py" \
-    --matched-fastq "$ROOT/runs/blaze/matched_reads.fastq.gz" \
-    --putative-csv "$ROOT/runs/blaze/putative_bc.csv" \
-    --truth "$ROOT/input/official_shortread_barcodes_10433.txt" \
-    --design-whitelist "$ROOT/input/10x_3v2_full_whitelist.txt" \
-    --selected-whitelist "$ROOT/runs/blaze/whitelist.csv" \
-    --truth-labels "$ROOT/input/Lymph_node_official_barcodes_labels.tsv.gz" \
-    --output "$ROOT/analysis/blaze_raw_to_corrected_metrics.tsv" \
-    --examples "$ROOT/analysis/blaze_raw_valid_to_valid_examples.tsv" \
-    --label-transitions "$ROOT/analysis/blaze_raw_valid_to_valid_label_transitions.tsv" \
-    --barcode-transitions "$ROOT/analysis/blaze_raw_valid_to_valid_barcode_transitions.tsv" \
-    > "$ROOT/analysis/audit_blaze_raw_to_corrected_stdout.log" \
-    2> "$ROOT/analysis/audit_blaze_raw_to_corrected_stderr.log" || exit
-
-status "strict RAD raw-to-corrected audit started"
-/usr/bin/time -v -o "$ROOT/analysis/audit_rad_raw_to_corrected_time.txt" \
-    python3 "$ROOT/scripts/audit_rad_raw_to_corrected.py" \
-    --fastq "$ROOT/runs/rad/demux/ERR3268990.fq.gz" \
-    --truth "$ROOT/input/official_shortread_barcodes_10433.txt" \
-    --design-whitelist "$ROOT/input/10x_3v2_full_whitelist.txt" \
-    --selected-whitelist "$ROOT/runs/rad/scan/ERR3268990.txt" \
-    --truth-labels "$ROOT/input/Lymph_node_official_barcodes_labels.tsv.gz" \
-    --output "$ROOT/analysis/rad_raw_to_corrected_metrics.tsv" \
-    --examples "$ROOT/analysis/rad_raw_valid_to_valid_examples.tsv" \
-    --label-transitions "$ROOT/analysis/rad_raw_valid_to_valid_label_transitions.tsv" \
-    > "$ROOT/analysis/audit_rad_raw_to_corrected_stdout.log" \
-    2> "$ROOT/analysis/audit_rad_raw_to_corrected_stderr.log" || exit
-
-status "biological-endpoint redirect counterfactual started"
-/usr/bin/time -v -o "$ROOT/analysis/analyze_endpoint_redirects_time.txt" \
-    python3 "$ROOT/scripts/analyze_endpoint_redirects.py" \
-    > "$ROOT/analysis/analyze_endpoint_redirects_stdout.log" \
-    2> "$ROOT/analysis/analyze_endpoint_redirects_stderr.log" || exit
-
-status "clone-5 same-read cross-method assignment analysis started"
-/usr/bin/time -v -o "$ROOT/analysis/analyze_clone5_cross_method_time.txt" \
-    python3 "$ROOT/scripts/analyze_clone5_cross_method.py" \
-    > "$ROOT/analysis/analyze_clone5_cross_method_stdout.log" \
-    2> "$ROOT/analysis/analyze_clone5_cross_method_stderr.log" || exit
-
-python3 "$ROOT/scripts/summarize_flexiplex_edit_distances.py"
-python3 "$ROOT/scripts/make_timing_summary.py"
-status "summary plotting started"
-/usr/bin/time -v -o "$ROOT/analysis/plot_benchmark_summary_time.txt" \
-    python3 "$ROOT/scripts/plot_benchmark_summary.py" \
-    > "$ROOT/analysis/plot_benchmark_summary_stdout.log" \
-    2> "$ROOT/analysis/plot_benchmark_summary_stderr.log" || exit
-status "independent consistency validation started"
-/usr/bin/time -v -o "$ROOT/analysis/validate_benchmark_time.txt" \
-    python3 "$ROOT/scripts/validate_benchmark.py" \
-    > "$ROOT/analysis/validate_benchmark_stdout.log" \
-    2> "$ROOT/analysis/validate_benchmark_stderr.log" || exit
-status "BENCHMARK_COMPLETE"

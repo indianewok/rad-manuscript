@@ -26,9 +26,11 @@ available in the guide and source tables.
 
 ## Figure 4: Barcode detection across sequencing modalities
 
-[Analysis guide](../docs/figure_04.md)
+[Analysis guide](../docs/figure_04.md) · [Tool versions and commands](../source_data/figure_04/tool_parameters.tsv)
 
-![Figure 4](figure_04/prism/figure_04.png)
+Current source-data plots use RAD `4acbe00` with adapter error `0.3` across all 37 inputs.
+
+![Paired barcode-discovery metrics](figure_04/barcode_discovery_paired.png)
 
 ## Figure 5: Receptor recovery and LR-Split-seq
 
@@ -57,6 +59,6 @@ updated set of 8,135 genes.
 
 ![ScTagger quality sweep](figure_02/prism/figure_02_supplement.png)
 
-### Input characteristics and modality-specific precision and recall
+### Barcode-discovery metrics for every input
 
-![Modality comparisons](figure_04/prism/figure_04_supplement.png)
+![Per-input precision, recall and F1](figure_04/barcode_discovery_by_input.png)

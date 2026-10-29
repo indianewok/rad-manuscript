@@ -1,0 +1,38 @@
+{
+  "dataset_id": "ScMixology2",
+  "tool": "RAD",
+  "version": "1.0.2",
+  "source_commit": "4acbe004ba11b150d6832395452632f367a6e6c1",
+  "binary_sha256": "01ae4700f329593487e1b0a3528da009d7e47c82bf213a5f53ba98acad6fda0e",
+  "threads": 16,
+  "chemistry": "10x_3v3",
+  "command": "rad scan-wl --input external_data/figure_04/inputs/ScMixology2.fastq.gz --output-prefix results/figure_04/ScMixology2/rad --adapter_seq CTACACGACGCTCTTCCGATCT --barcode-length 16 --left-margin 0 --right-margin 0 --max-error 0.3 --whitelist external_data/figure_04/catalogues/3M-february-2018-3v3.txt_bitlist.csv.gz --threads 16 --chunk-size 10000",
+  "input_acquisition": {
+    "method": "complete_fastq_input",
+    "source": "GSE154870; PRJEB54718/ERR9958136; 10.26188/20335203.v1",
+    "output": {
+      "input_format": "fastq.gz",
+      "bytes": 25955360585,
+      "sha256": "97c03138bd24d33ee63df5ea7a3aadef1b14b4a8271c87e232065363c88107ae",
+      "md5": "484ecae82cebc65584f844c7714566de"
+    }
+  },
+  "adapter_seq": "CTACACGACGCTCTTCCGATCT",
+  "barcode_length": 16,
+  "left_margin": 0,
+  "right_margin": 0,
+  "max_error": 0.3,
+  "input_format": "fastq.gz",
+  "input_bytes": 25955360585,
+  "input_sha256": "97c03138bd24d33ee63df5ea7a3aadef1b14b4a8271c87e232065363c88107ae",
+  "processed_nonempty_sequences": 25164948,
+  "input_records": 25164948,
+  "skipped_empty_records": 0,
+  "input_record_count_basis": "FASTQ records equal native nonempty sequences plus skipped empty records",
+  "selected_barcodes": 279,
+  "selected_barcode_sha256": "e3494f19b98741da2e3ef2ef608a57bf1069474cb2ae9be4e10b1d97c6eda383",
+  "reference_barcodes": 248,
+  "native_receipt_sha256": "b90f8f41974dc61d3ea888a2233fba240fb0e78c25e966ed28416e7379b4037e",
+  "reference_sha256": "45f58f0b2f193135b2af503174c6a4c3665ededa8d4fba6dd81a3eca63fcd34f",
+  "reference_barcode_sha256": "f9db9041753aabdde48539845174b5b299c0725c5f846df3d0ee35b424d56c50"
+}

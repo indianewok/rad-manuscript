@@ -1,0 +1,39 @@
+{
+  "dataset_id": "Hipp_SN_m1_ONT_Run1",
+  "input_sha256": "30bd63def1599440784c50bafef4afe9ba561b68970ad66168188d6d9adf1750",
+  "input_bytes": 35117122487,
+  "adapter_seq": "CTACACGACGCTCTTCCGATCT",
+  "barcode_length": 16,
+  "left_margin": 0,
+  "right_margin": 0,
+  "reference_sha256": "212b4f130ae1bcfc1cbf2c0fe7803eb90608167eaa2ee1b379daed1b3a6bac28",
+  "input_md5": "25191af8e26592f61549ddd38ce07e4c",
+  "input_records": 42648788,
+  "input_format": "fastq.gz",
+  "reference_barcode_sha256": "3ff8601a41f06703c5f23e34080651e25c6f8cf1e95975baa599bad11096002b",
+  "input_acquisition": {
+    "method": "exact_tar_member",
+    "archive": {
+      "url": "https://data.nemoarchive.org/biccn/grant/rf1_tilgner/tilgner/transcriptome/sncell/oxford_nanopore/human/raw/Hipp_SN_m1_ONT_Run1.fastq.tar",
+      "bytes": 35117127680,
+      "md5": "ffeae54a96743a6ab00cc996f182752b",
+      "sha256": "cebf0a5abe2068399d2c564440935c48c81d22a2b6c11851e8d9cd576b2fb3f5"
+    },
+    "member": "Hipp_SN_m1_ONT_Run1/Hipp_SN_m1_ONT_Run1.fastq.gz",
+    "output": {
+      "input_format": "fastq.gz",
+      "bytes": 35117122487,
+      "sha256": "30bd63def1599440784c50bafef4afe9ba561b68970ad66168188d6d9adf1750",
+      "md5": "25191af8e26592f61549ddd38ce07e4c"
+    }
+  },
+  "reference_source": "Released matched Cell Ranger 3.1.0 filtered-MEX barcodes are a positive proxy, not literal biological ground truth.",
+  "dataset_source_accessions": "NeMO dat-717krsa; https://data.nemoarchive.org/biccn/grant/rf1_tilgner/tilgner/transcriptome/sncell/",
+  "chemistry": "10x_3v3.1",
+  "scan_mode": "single",
+  "adapter_mode": "alignment",
+  "catalogue_sha256": "02f771363a95e786ab1a6ab1e554c770e58cdff2fb30f2d7a9fb50a97762d452",
+  "input_source": "https://data.nemoarchive.org/biccn/grant/rf1_tilgner/tilgner/transcriptome/sncell/oxford_nanopore/human/raw/Hipp_SN_m1_ONT_Run1.fastq.tar",
+  "input_selection_contract": "Complete full-quality FASTQ in the specified input_format; no subsampling or quality-score replacement",
+  "reference_path": "external_data/figure_04/references/Hipp_SN_m1_ONT_Run1.reference.txt.gz"
+}

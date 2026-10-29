@@ -1,0 +1,44 @@
+{
+  "dataset_id": "Hipp_SN_m1_ONT_Run1",
+  "tool": "RAD",
+  "version": "1.0.2",
+  "source_commit": "4acbe004ba11b150d6832395452632f367a6e6c1",
+  "binary_sha256": "01ae4700f329593487e1b0a3528da009d7e47c82bf213a5f53ba98acad6fda0e",
+  "threads": 16,
+  "chemistry": "10x_3v3.1",
+  "command": "rad scan-wl --input external_data/figure_04/inputs/Hipp_SN_m1_ONT_Run1.fastq.gz --output-prefix results/figure_04/Hipp_SN_m1_ONT_Run1/rad --adapter_seq CTACACGACGCTCTTCCGATCT --barcode-length 16 --left-margin 0 --right-margin 0 --max-error 0.3 --whitelist external_data/figure_04/catalogues/3M-february-2018-3v3.txt_bitlist.csv.gz --threads 16 --chunk-size 10000",
+  "input_acquisition": {
+    "method": "exact_tar_member",
+    "archive": {
+      "url": "https://data.nemoarchive.org/biccn/grant/rf1_tilgner/tilgner/transcriptome/sncell/oxford_nanopore/human/raw/Hipp_SN_m1_ONT_Run1.fastq.tar",
+      "bytes": 35117127680,
+      "md5": "ffeae54a96743a6ab00cc996f182752b",
+      "sha256": "cebf0a5abe2068399d2c564440935c48c81d22a2b6c11851e8d9cd576b2fb3f5"
+    },
+    "member": "Hipp_SN_m1_ONT_Run1/Hipp_SN_m1_ONT_Run1.fastq.gz",
+    "output": {
+      "input_format": "fastq.gz",
+      "bytes": 35117122487,
+      "sha256": "30bd63def1599440784c50bafef4afe9ba561b68970ad66168188d6d9adf1750",
+      "md5": "25191af8e26592f61549ddd38ce07e4c"
+    }
+  },
+  "adapter_seq": "CTACACGACGCTCTTCCGATCT",
+  "barcode_length": 16,
+  "left_margin": 0,
+  "right_margin": 0,
+  "max_error": 0.3,
+  "input_format": "fastq.gz",
+  "input_bytes": 35117122487,
+  "input_sha256": "30bd63def1599440784c50bafef4afe9ba561b68970ad66168188d6d9adf1750",
+  "processed_nonempty_sequences": 42648788,
+  "input_records": 42648788,
+  "skipped_empty_records": 0,
+  "input_record_count_basis": "FASTQ records equal native nonempty sequences plus skipped empty records",
+  "selected_barcodes": 13349,
+  "selected_barcode_sha256": "1f9d214123c6d9fc3f6e89f253ffe970ead22c70d2f05c5b2525febf12d32a10",
+  "reference_barcodes": 12505,
+  "native_receipt_sha256": "91c95d4380fb9483db88f26b092d865c691bd694af6a9a5b879d41fce85381d1",
+  "reference_sha256": "212b4f130ae1bcfc1cbf2c0fe7803eb90608167eaa2ee1b379daed1b3a6bac28",
+  "reference_barcode_sha256": "3ff8601a41f06703c5f23e34080651e25c6f8cf1e95975baa599bad11096002b"
+}

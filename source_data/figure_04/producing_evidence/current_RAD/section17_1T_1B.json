@@ -1,0 +1,38 @@
+{
+  "dataset_id": "section17_1T_1B",
+  "tool": "RAD",
+  "version": "1.0.2",
+  "source_commit": "4acbe004ba11b150d6832395452632f367a6e6c1",
+  "binary_sha256": "01ae4700f329593487e1b0a3528da009d7e47c82bf213a5f53ba98acad6fda0e",
+  "threads": 4,
+  "chemistry": "10x_Vis_V1",
+  "command": "rad scan-wl --input external_data/figure_04/inputs/section17_1T_1B.fastq.gz --output-prefix results/figure_04/section17_1T_1B/rad --adapter_seq CTACACGACGCTCTTCCGATCT --barcode-length 16 --left-margin 0 --right-margin 0 --max-error 0.3 --whitelist external_data/figure_04/catalogues/visium-v1_v2_bitlist.csv.gz --threads 4 --chunk-size 10000",
+  "input_acquisition": {
+    "method": "complete_fastq_input",
+    "source": "Controlled EGA file EGAF00008107340",
+    "output": {
+      "input_format": "fastq.gz",
+      "bytes": 52140284,
+      "sha256": "4b56c15c09ec51a4704ac8a2e3b1b62b74e6b7afbe5918fedb15c19b80d8bf4d",
+      "md5": "cdfc6b050a4c4098da1344cef49e7443"
+    }
+  },
+  "adapter_seq": "CTACACGACGCTCTTCCGATCT",
+  "barcode_length": 16,
+  "left_margin": 0,
+  "right_margin": 0,
+  "max_error": 0.3,
+  "input_format": "fastq.gz",
+  "input_bytes": 52140284,
+  "input_sha256": "4b56c15c09ec51a4704ac8a2e3b1b62b74e6b7afbe5918fedb15c19b80d8bf4d",
+  "processed_nonempty_sequences": 168876,
+  "input_records": 168876,
+  "skipped_empty_records": 0,
+  "input_record_count_basis": "FASTQ records equal native nonempty sequences plus skipped empty records",
+  "selected_barcodes": 2705,
+  "selected_barcode_sha256": "6266520b773a5aa7c9640c03381c6af3bfab86dfda8bcdc9f86d350fc85346b3",
+  "reference_barcodes": 2496,
+  "native_receipt_sha256": "08c36d57922824f3ac68521c476723adf7f54d29e8ebf434194adef6ba2cda67",
+  "reference_sha256": "9d6af67ddcc4255dad638a581fe3928d694bc406a84ddb47c0748f286d55f55a",
+  "reference_barcode_sha256": "9d6af67ddcc4255dad638a581fe3928d694bc406a84ddb47c0748f286d55f55a"
+}

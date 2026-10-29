@@ -1,0 +1,38 @@
+{
+  "dataset_id": "Hipp_SN_f1_ONT_Run2",
+  "tool": "RAD",
+  "version": "1.0.2",
+  "source_commit": "4acbe004ba11b150d6832395452632f367a6e6c1",
+  "binary_sha256": "e49f0d8513eae31759998f1f306230b803e131aa2941fa7bfec0d0de22432cf3",
+  "threads": 20,
+  "chemistry": "10x_3v3.1",
+  "command": "rad scan-wl -i external_data/figure_04/inputs/Hipp_SN_f1_ONT_Run2.fastq.gz -o results/figure_04/Hipp_SN_f1_ONT_Run2/rad -p CTACACGACGCTCTTCCGATCT -n 16 -e 0.3 -w 10x_3v3.1 -t 20 -k 10000",
+  "input_acquisition": {
+    "method": "complete_fastq_input",
+    "source": "https://data.nemoarchive.org/biccn/grant/rf1_tilgner/tilgner/transcriptome/sncell/oxford_nanopore/human/raw/Hipp_SN_f1_ONT_Run2.fastq.tar",
+    "output": {
+      "input_format": "fastq.gz",
+      "bytes": 80833288040,
+      "sha256": null,
+      "md5": "00ee30b753ec9a29c958b02d341016ef"
+    }
+  },
+  "adapter_seq": "CTACACGACGCTCTTCCGATCT",
+  "barcode_length": 16,
+  "left_margin": 0,
+  "right_margin": 0,
+  "max_error": 0.3,
+  "input_format": "fastq.gz",
+  "input_bytes": 80833288040,
+  "input_sha256": null,
+  "processed_nonempty_sequences": 69500833,
+  "input_records": null,
+  "skipped_empty_records": null,
+  "input_record_count_basis": "Native nonempty sequence count; physical FASTQ record count not recorded",
+  "selected_barcodes": 9748,
+  "selected_barcode_sha256": "ced47771c59ea43f6f9564ea996c1e73839b161e71cbf9675b4fe84d586e19c9",
+  "reference_barcodes": 10337,
+  "native_receipt_sha256": "252d178c7f7dacb1a28ed31ac4b227dc9fc116fe3badfa00dd3b9dcc1855eb7e",
+  "reference_sha256": "0c1a3ceccb04b34324ce7be7f466d4db03ef645156863f8a69b1ef1e389cac1a",
+  "reference_barcode_sha256": "6d5e74d4dc1ff7396e2b64890a2d07b2984086d90fc07e1ea432e428e40406cb"
+}

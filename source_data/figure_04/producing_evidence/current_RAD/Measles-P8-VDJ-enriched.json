@@ -1,0 +1,78 @@
+{
+  "dataset_id": "Measles-P8-VDJ-enriched",
+  "tool": "RAD",
+  "version": "1.0.2",
+  "source_commit": "4acbe004ba11b150d6832395452632f367a6e6c1",
+  "binary_sha256": "01ae4700f329593487e1b0a3528da009d7e47c82bf213a5f53ba98acad6fda0e",
+  "threads": 16,
+  "chemistry": "10x_3v3",
+  "command": "rad scan-wl --input external_data/figure_04/inputs/Measles-P8-VDJ-enriched.fastq --output-prefix results/figure_04/Measles-P8-VDJ-enriched/rad --adapter_seq CTACACGACGCTCTTCCGATCT --barcode-length 16 --left-margin 0 --right-margin 0 --max-error 0.3 --whitelist external_data/figure_04/catalogues/3M-february-2018-3v3.txt_bitlist.csv.gz --threads 16 --chunk-size 10000",
+  "input_acquisition": {
+    "method": "full_quality_sra_to_fastq",
+    "archive": {
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28349076/SRR28349076",
+      "bytes": 86074282350,
+      "md5": "8500c6af9503e6099f6cada3cdff30f0",
+      "sha256": "1259c3180eab41963e945227a0713f78911ac2ed44fc164bccf72c49860fdb8c",
+      "basename": "SRR28349076.sra",
+      "quality": "full"
+    },
+    "converter": {
+      "executable": "fasterq-dump-orig.3.4.1",
+      "version": "3.4.1",
+      "binary_sha256": "b3a4dcd4078c1867bc980fecde4333efadd435e5867d7a834cd3b0a40c419d9f",
+      "distribution_url": "https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/3.4.1/sratoolkit.3.4.1-alma_linux64.tar.gz",
+      "distribution_sha256": "f4850a32975596ca0755d928b166ecb0095918284ea992fba10f1acb3fcff64d"
+    },
+    "compressor": {
+      "method": "none",
+      "version": "none; plain FASTQ"
+    },
+    "commands": {
+      "fasterq": [
+        "fasterq-dump-orig.3.4.1",
+        "SRR28349076.sra",
+        "--split-spot",
+        "--include-technical",
+        "--min-read-len",
+        "0",
+        "--threads",
+        "16",
+        "--mem",
+        "256M",
+        "--temp",
+        "tmp",
+        "--outfile",
+        "Measles-P8-VDJ-enriched.local3.4.1.fastq.partial"
+      ],
+      "pigz": []
+    },
+    "expected_records": 92337198,
+    "expected_bases": 98723180989,
+    "sequence_quality_sha256": "96e83a36acf7c43abaeef5f4b3c40d682ece1417e812f96996dc3d00ac0e6969",
+    "output": {
+      "input_format": "fastq",
+      "bytes": 211042427474,
+      "sha256": "dfcbd0e59e1f8fb4fe5e3e2346239a73c790a8e11cbc4720777c7605c91c4034",
+      "md5": null
+    }
+  },
+  "adapter_seq": "CTACACGACGCTCTTCCGATCT",
+  "barcode_length": 16,
+  "left_margin": 0,
+  "right_margin": 0,
+  "max_error": 0.3,
+  "input_format": "fastq",
+  "input_bytes": 211042427474,
+  "input_sha256": "dfcbd0e59e1f8fb4fe5e3e2346239a73c790a8e11cbc4720777c7605c91c4034",
+  "processed_nonempty_sequences": 92337198,
+  "input_records": 92337198,
+  "skipped_empty_records": 0,
+  "input_record_count_basis": "FASTQ records equal native nonempty sequences plus skipped empty records",
+  "selected_barcodes": 9490,
+  "selected_barcode_sha256": "80232ae3d903af29801a432ae956fe2bcf992a2388b5235aa8629840ca4a818a",
+  "reference_barcodes": 10299,
+  "native_receipt_sha256": "5af07530f6ad49aeb1b6460a6e37d7b0a21b58445c8bd1892a9617b0cdbc8f29",
+  "reference_sha256": "8ff0d70fd2e341993c4275e346181804399b234efb0f0d31cffb1a30fbc4a60b",
+  "reference_barcode_sha256": "89fb0507741f155b077180758f1cd2356199584f8c7f2af47eea6abae5558c54"
+}

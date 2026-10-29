@@ -1,0 +1,38 @@
+{
+  "dataset_id": "ERR15095095_MPNST1_scNaUMIseq_PromethION",
+  "tool": "RAD",
+  "version": "1.0.2",
+  "source_commit": "4acbe004ba11b150d6832395452632f367a6e6c1",
+  "binary_sha256": "e49f0d8513eae31759998f1f306230b803e131aa2941fa7bfec0d0de22432cf3",
+  "threads": 16,
+  "chemistry": "10x_3v3.1",
+  "command": "rad scan-wl -i external_data/figure_04/inputs/ERR15095095_MPNST1_scNaUMIseq_PromethION.fastq.gz -o results/figure_04/ERR15095095_MPNST1_scNaUMIseq_PromethION/rad -p CTACACGACGCTCTTCCGATCT -n 16 -e 0.3 -w 10x_3v3.1 -t 16 -k 10000",
+  "input_acquisition": {
+    "method": "complete_fastq_input",
+    "source": "ENA ERR15095095",
+    "output": {
+      "input_format": "fastq.gz",
+      "bytes": 203690681410,
+      "sha256": null,
+      "md5": null
+    }
+  },
+  "adapter_seq": "CTACACGACGCTCTTCCGATCT",
+  "barcode_length": 16,
+  "left_margin": 0,
+  "right_margin": 0,
+  "max_error": 0.3,
+  "input_format": "fastq.gz",
+  "input_bytes": 203690681410,
+  "input_sha256": null,
+  "processed_nonempty_sequences": 151334327,
+  "input_records": null,
+  "skipped_empty_records": null,
+  "input_record_count_basis": "Native nonempty sequence count; physical FASTQ record count not recorded",
+  "selected_barcodes": 4556,
+  "selected_barcode_sha256": "6fcebbb2d6d9ae6de294b694af29730970366c74e236a5500720096cb533b058",
+  "reference_barcodes": 4602,
+  "native_receipt_sha256": "9daa26adf0db8b364a76fd836b33f034a6a5f9451ce1478eb79f3b227612ef4e",
+  "reference_sha256": "3c9d29a0a4cc1b5a1360ec98557f72fee9404d805f78ec7dbfed339dda2f9896",
+  "reference_barcode_sha256": "999dbf531a350fab6219f1b9331dc915fb33b1beadb04886a62bc1f897e9ea08"
+}

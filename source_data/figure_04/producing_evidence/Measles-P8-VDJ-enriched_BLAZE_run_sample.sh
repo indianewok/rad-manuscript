@@ -7,7 +7,6 @@ threads=24
 flex_threads=16
 adapter=CTACACGACGCTCTTCCGATCT
 design="$root/input_links/10x_3v3_full_whitelist.txt"
-rad=external_data/reviewer_comment_data/scratch_preservation_20260921/files/longbench_full_demux_20260730/tools/rad_920adda_edlibfix/build_release/rad
 blaze=external_data/reviewer_comment_data/scratch_preservation_20260921/files/blaze2_260a0_native_20260727/venv/bin/blaze
 flex="$root/tools/flexiplex-v1.02.6/flexiplex-linux"
 flex_audit="$root/tools/flexiplex-v1.02.6/flexiplex-audit"
@@ -20,13 +19,11 @@ case "$sample" in
     p7)
         input="$root/input_links/p7_SRR28349077.fastq.gz"
         truth="$root/input_links/p7_shortread_cells.txt"
-        rad_calls="$root/input_links/p7_rad_scanwl.txt"
         expected=964
         ;;
     p8)
         input="$root/input_links/p8_vdj_SRR28349076.fastq.gz"
         truth="$root/input_links/p8_shortread_cells.txt"
-        rad_calls="$root/input_links/p8_rad_scanwl.txt"
         expected=10299
         ;;
     *)
@@ -38,7 +35,6 @@ esac
 sample_root="$root/runs/$sample"
 status_file="$sample_root/status.log"
 mkdir -p \
-    "$sample_root/rad/demux" \
     "$sample_root/blaze" \
     "$sample_root/flexiplex/detection" \
     "$sample_root/flexiplex/demux" \
@@ -51,7 +47,6 @@ status() {
 }
 
 status "START sample=$sample expected_cells=$expected input=$input"
-ln -sf "$rad_calls" "$sample_root/rad/scanwl.txt"
 
 if [[ ! -f "$sample_root/blaze/DONE" ]]; then
     status "BLAZE 2.6.0a0 selection+demux started threads=$threads"
@@ -93,28 +88,6 @@ if [[ ! -f "$sample_root/flexiplex/detection/DONE" ]]; then
     status "Flexiplex f8 discovery+filter completed"
 fi
 
-if [[ ! -f "$sample_root/rad/demux/DONE" ]]; then
-    status "RAD demux started threads=$threads"
-    /usr/bin/time -v -o "$sample_root/rad/demux/time.txt" \
-        "$rad" demux \
-        -l three_prime \
-        -q "$input" \
-        -g "$design" \
-        -c "$rad_calls" \
-        -R offensive \
-        -M 2 \
-        -m 2 \
-        -z 5000 \
-        -o "$sample" \
-        -d "$sample_root/rad/demux" \
-        -F "$sample_root/rad/demux/run.log" \
-        -t "$threads" \
-        > "$sample_root/rad/demux/stdout.log" \
-        2> "$sample_root/rad/demux/stderr.log"
-    touch "$sample_root/rad/demux/DONE"
-    status "RAD demux completed"
-fi
-
 if [[ ! -f "$sample_root/flexiplex/demux/DONE" ]]; then
     status "Flexiplex f8 demux started threads=$flex_threads"
     /usr/bin/time -v -o "$sample_root/flexiplex/demux/time.txt" \
@@ -139,9 +112,8 @@ if [[ ! -f "$sample_root/flamesv2/DONE" ]]; then
     status "FLAMES 2.6.0 embedded BLAZE 2.5.1 started threads=$threads temp=$temp_root"
     /usr/bin/time -v -o "$sample_root/flamesv2/time.txt" \
         apptainer exec --cleanenv \
-        --bind /dartfs:/dartfs \
-        --bind /dartfs-hpc:/dartfs-hpc \
-        --bind /scratch:/scratch \
+        --bind "$PWD:$PWD" \
+        --bind "$(realpath external_data):$(realpath external_data)" \
         --bind "$basilisk_root:$basilisk_root" \
         --bind "$temp_root:$temp_root" \
         --env R_ENVIRON_USER=/dev/null \
@@ -165,24 +137,6 @@ if [[ ! -f "$sample_root/flamesv2/DONE" ]]; then
     touch "$sample_root/flamesv2/DONE"
     status "FLAMESv2 completed"
 fi
-
-status "callset scoring started"
-python3 "$root/scripts/score_callsets.py" \
-    --sample "$sample" \
-    --truth "$truth" \
-    --output "$root/analysis/$sample/callset_metrics.tsv" \
-    --callset RAD "$rad_calls" \
-    --callset BLAZE "$sample_root/blaze/whitelist.csv" \
-    --callset Flexiplex_f8 "$sample_root/flexiplex/detection/selected.tsv" \
-    --callset FLAMESv2 "$sample_root/flamesv2/whitelist.csv"
-
-status "RAD correction-flow audit started"
-python3 "$root/scripts/audit_rad_flows.py" \
-    --fastq "$sample_root/rad/demux/$sample.fq.gz" \
-    --truth "$truth" \
-    --design "$design" \
-    --selected "$rad_calls" \
-    --output-dir "$root/analysis/$sample/rad_flow"
 
 status "BLAZE correction-flow audit started"
 python3 "$root/scripts/audit_blaze_flows.py" \

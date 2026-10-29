@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "metrics_sha256": "383dea6a7652e86cac307990821ebaa795236e0a8022dbec7a8e0672eb9150e0",
+  "method_settings": {
+    "matched_inputs": 37,
+    "tools": [
+      "RAD",
+      "BLAZE",
+      "Flexiplex"
+    ],
+    "metrics": [
+      "precision",
+      "recall",
+      "f1"
+    ],
+    "control": "RAD",
+    "comparisons_per_metric": 2,
+    "alpha": 0.05,
+    "friedman": "within-row average ranks; tie-corrected; chi-square df2 approximation",
+    "dunn": "two-sided normal; adjusted P=min(1,2*P_raw)"
+  },
+  "outputs": {
+    "friedman.tsv": {
+      "rows": 3,
+      "sha256": "0e9bb697cf55aed718bb79b43889ce9fec303290018158561d14e15ff3d5742f"
+    },
+    "dunn.tsv": {
+      "rows": 6,
+      "sha256": "2bb59f0d851ca6eac5f80f45985a4043e99a7bc5aa137141f440dda51ac68385"
+    }
+  }
+}

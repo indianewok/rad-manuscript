@@ -1,0 +1,46 @@
+{
+  "dataset_id": "LeBrigand-MOB",
+  "input_sha256": "c5a4e19475ef8fdfe159c01dcdb0fa6d7029548d41beb51698cecbcf3f561f32",
+  "input_bytes": 34253341514,
+  "adapter_seq": "CTACACGACGCTCTTCCGATCT",
+  "barcode_length": 16,
+  "left_margin": 0,
+  "right_margin": 0,
+  "reference_sha256": "a30c7cc8c3cc7c96b0564c1675397076649c27ccec8e7c292254f7ed336751ac",
+  "input_md5": "79b7b21ac8aeb01d368814fe17737009",
+  "input_records": 29045593,
+  "input_format": "fastq.gz",
+  "reference_barcode_sha256": "d6b0e3ab1665cfaeb73539508614da493356b7f103b0d23e96b98fa65eb559cc",
+  "input_acquisition": {
+    "method": "concatenate_complete_gzip_files_in_order",
+    "components": [
+      {
+        "accession": "SRR12157794",
+        "bytes": 20885878201,
+        "md5": "ac05146de32ac04bc42e5b6ef36d1a5a",
+        "sha256": "c11cde218e14b2e99a4f207abfc794cd5b508ec92bb1b0bf794f20c7260fcfe5"
+      },
+      {
+        "accession": "SRR12157795",
+        "bytes": 13367463313,
+        "md5": "d1cd65d8f5a55fb1b189c0019204f872",
+        "sha256": "7b2bca383819a05588d0ffe711153e715f1fe9872173f361f16b0f88ffe6b20c"
+      }
+    ],
+    "output": {
+      "input_format": "fastq.gz",
+      "bytes": 34253341514,
+      "sha256": "c5a4e19475ef8fdfe159c01dcdb0fa6d7029548d41beb51698cecbcf3f561f32",
+      "md5": "79b7b21ac8aeb01d368814fe17737009"
+    }
+  },
+  "reference_source": "Short-read on-tissue mask is an operational spatial reference, not proof that off-mask spots are biologically empty.",
+  "dataset_source_accessions": "GSE153859; PRJNA644362",
+  "chemistry": "Visium_v2_full4992",
+  "scan_mode": "single",
+  "adapter_mode": "alignment",
+  "catalogue_sha256": "4006cceb0ae50b716ded1efa2452b4b4471aaf10c4551f3ddfd269e019853906",
+  "input_source": "GSE153859; PRJNA644362",
+  "input_selection_contract": "Complete full-quality FASTQ in the specified input_format; no subsampling or quality-score replacement",
+  "reference_path": "external_data/figure_04/references/LeBrigand-MOB.reference.txt.gz"
+}

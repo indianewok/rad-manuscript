@@ -1,0 +1,33 @@
+{
+  "dataset_id": "ERR15095097",
+  "input_sha256": null,
+  "input_bytes": 21179623060,
+  "adapter_seq": "CTACACGACGCTCTTCCGATCT",
+  "barcode_length": 16,
+  "left_margin": 0,
+  "right_margin": 0,
+  "reference_sha256": "5f1d2aeb0c1261e2092e1069e34a8de7af96cdc4da197241e23ee8ffd6224bf7",
+  "input_md5": "b6af595a902ccf05d168c8225914a968",
+  "input_records": null,
+  "input_format": "fastq.gz",
+  "reference_barcode_sha256": "b63e5a89df2457f853d386d132636c67c3bead75f53b6e874a6977d6a84eba7d",
+  "input_acquisition": {
+    "method": "complete_fastq_input",
+    "source": "ENA ERR15095097",
+    "output": {
+      "input_format": "fastq.gz",
+      "bytes": 21179623060,
+      "sha256": null,
+      "md5": "b6af595a902ccf05d168c8225914a968"
+    }
+  },
+  "reference_source": "Matched Illumina 10x 3' v3 MPNST2 (2022_26) Cell Ranger 9.0.0 GRCm39 filtered cell barcodes using default cell calling; positive-proxy reference, not literal biological ground truth.",
+  "dataset_source_accessions": "E-MTAB-15190/PRJEB90127; E-MTAB-14222/PRJEB77277",
+  "chemistry": "10x_3v3",
+  "scan_mode": "single",
+  "adapter_mode": "alignment",
+  "catalogue_sha256": "02f771363a95e786ab1a6ab1e554c770e58cdff2fb30f2d7a9fb50a97762d452",
+  "input_source": "ENA ERR15095097",
+  "input_selection_contract": "Complete full-quality FASTQ in the specified input_format; no subsampling or quality-score replacement",
+  "reference_path": "external_data/figure_04/references/ERR15095096.reference.txt.gz"
+}

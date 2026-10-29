@@ -1,0 +1,33 @@
+{
+  "dataset_id": "ScMixology2",
+  "input_sha256": "97c03138bd24d33ee63df5ea7a3aadef1b14b4a8271c87e232065363c88107ae",
+  "input_bytes": 25955360585,
+  "adapter_seq": "CTACACGACGCTCTTCCGATCT",
+  "barcode_length": 16,
+  "left_margin": 0,
+  "right_margin": 0,
+  "reference_sha256": "45f58f0b2f193135b2af503174c6a4c3665ededa8d4fba6dd81a3eca63fcd34f",
+  "input_md5": "484ecae82cebc65584f844c7714566de",
+  "input_records": 25164948,
+  "input_format": "fastq.gz",
+  "reference_barcode_sha256": "f9db9041753aabdde48539845174b5b299c0725c5f846df3d0ee35b424d56c50",
+  "input_acquisition": {
+    "method": "complete_fastq_input",
+    "source": "GSE154870; PRJEB54718/ERR9958136; 10.26188/20335203.v1",
+    "output": {
+      "input_format": "fastq.gz",
+      "bytes": 25955360585,
+      "sha256": "97c03138bd24d33ee63df5ea7a3aadef1b14b4a8271c87e232065363c88107ae",
+      "md5": "484ecae82cebc65584f844c7714566de"
+    }
+  },
+  "reference_source": "Matched Cell Ranger whitelist of 248 retained barcodes is a positive proxy, not exhaustive biological negative truth. Metrics are an operational concordance comparison, and tool execution sources are heterogeneous; see validation_tier and source_method.",
+  "dataset_source_accessions": "GSE154870; PRJEB54718/ERR9958136; 10.26188/20335203.v1",
+  "chemistry": "10x_3v3",
+  "scan_mode": "single",
+  "adapter_mode": "alignment",
+  "catalogue_sha256": "02f771363a95e786ab1a6ab1e554c770e58cdff2fb30f2d7a9fb50a97762d452",
+  "input_source": "GSE154870; PRJEB54718/ERR9958136; 10.26188/20335203.v1",
+  "input_selection_contract": "Complete full-quality FASTQ in the specified input_format; no subsampling or quality-score replacement",
+  "reference_path": "external_data/figure_04/references/ScMixology2.reference.txt.gz"
+}

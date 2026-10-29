@@ -13,7 +13,7 @@
           "units_or_semantics": "public deposited short-read cell-type label; blank means absent/unlabeled, not numeric zero"
         },
         "called_RAD": {
-          "units_or_semantics": "literal source boolean True/False; membership in named deposited/selected set"
+          "units_or_semantics": "True/False membership in the current RAD4acbe00/e0.3 selected barcode set"
         },
         "called_BLAZE_2.6.0a0_expect10433": {
           "units_or_semantics": "literal source boolean True/False; membership in named deposited/selected set"

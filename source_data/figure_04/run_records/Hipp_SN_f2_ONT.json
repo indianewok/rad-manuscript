@@ -1,0 +1,33 @@
+{
+  "dataset_id": "Hipp_SN_f2_ONT",
+  "input_sha256": null,
+  "input_bytes": 78303568213,
+  "adapter_seq": "CTACACGACGCTCTTCCGATCT",
+  "barcode_length": 16,
+  "left_margin": 0,
+  "right_margin": 0,
+  "reference_sha256": "3f751125dbffb4323822a3402f21a4c67e0ce12a7a4d01bbe7617bf06c1609f3",
+  "input_md5": "7294032c341099f488a0490af6aeb08b",
+  "input_records": null,
+  "input_format": "fastq.gz",
+  "reference_barcode_sha256": "f3c94c64256ae17d9ddf3be1f0eda512ba52949b4b4ae71922eba5ebce5b1c31",
+  "input_acquisition": {
+    "method": "complete_fastq_input",
+    "source": "https://data.nemoarchive.org/biccn/grant/rf1_tilgner/tilgner/transcriptome/sncell/oxford_nanopore/human/raw/Hipp_SN_f2_ONT.fastq.tar",
+    "output": {
+      "input_format": "fastq.gz",
+      "bytes": 78303568213,
+      "sha256": null,
+      "md5": "7294032c341099f488a0490af6aeb08b"
+    }
+  },
+  "reference_source": "Released matched Cell Ranger 3.1.0 filtered-MEX barcodes are a positive proxy, not literal biological ground truth.",
+  "dataset_source_accessions": "NeMO dat-717krsa; https://data.nemoarchive.org/biccn/grant/rf1_tilgner/tilgner/transcriptome/sncell/",
+  "chemistry": "10x_3v3.1",
+  "scan_mode": "single",
+  "adapter_mode": "alignment",
+  "catalogue_sha256": "02f771363a95e786ab1a6ab1e554c770e58cdff2fb30f2d7a9fb50a97762d452",
+  "input_source": "https://data.nemoarchive.org/biccn/grant/rf1_tilgner/tilgner/transcriptome/sncell/oxford_nanopore/human/raw/Hipp_SN_f2_ONT.fastq.tar",
+  "input_selection_contract": "Complete full-quality FASTQ in the specified input_format; no subsampling or quality-score replacement",
+  "reference_path": "external_data/figure_04/references/Hipp_SN_f2_ONT.reference.txt.gz"
+}

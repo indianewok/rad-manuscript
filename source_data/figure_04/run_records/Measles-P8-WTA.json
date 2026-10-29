@@ -1,0 +1,77 @@
+{
+  "dataset_id": "Measles-P8-WTA",
+  "input_sha256": "2b3816937fb8182d484f8682935687d7207752e3707bcde251632082de1f9f38",
+  "input_bytes": 197324862394,
+  "adapter_seq": "CTACACGACGCTCTTCCGATCT",
+  "barcode_length": 16,
+  "left_margin": 0,
+  "right_margin": 0,
+  "reference_sha256": "8ff0d70fd2e341993c4275e346181804399b234efb0f0d31cffb1a30fbc4a60b",
+  "input_md5": "d16d4a10d29f54c062b4dfd262d0b7c8",
+  "input_records": 270994675,
+  "input_format": "fastq.gz",
+  "reference_barcode_sha256": "89fb0507741f155b077180758f1cd2356199584f8c7f2af47eea6abae5558c54",
+  "input_acquisition": {
+    "method": "full_quality_sra_to_fastq",
+    "archive": {
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28349078/SRR28349078",
+      "bytes": 196245252908,
+      "md5": "a5731b1276dc33ddade6fa0123907e48",
+      "sha256": "9ca84f0e59c9e370baa55573a4cf8345259193cb1356e8ab147b3f0f6ac5ed0d",
+      "basename": "SRR28349078.sra",
+      "quality": "full"
+    },
+    "converter": {
+      "executable": "fasterq-dump-orig.3.4.1",
+      "version": "3.4.1",
+      "binary_sha256": "b3a4dcd4078c1867bc980fecde4333efadd435e5867d7a834cd3b0a40c419d9f",
+      "distribution_url": "https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/3.4.1/sratoolkit.3.4.1-alma_linux64.tar.gz",
+      "distribution_sha256": "f4850a32975596ca0755d928b166ecb0095918284ea992fba10f1acb3fcff64d"
+    },
+    "compressor": {
+      "executable": "pigz",
+      "version": "pigz 2.4"
+    },
+    "commands": {
+      "fasterq": [
+        "fasterq-dump-orig.3.4.1",
+        "SRR28349078.sra",
+        "--split-spot",
+        "--include-technical",
+        "--min-read-len",
+        "0",
+        "--stdout",
+        "--threads",
+        "16",
+        "--mem",
+        "256M",
+        "--temp",
+        "fasterq_tmp"
+      ],
+      "pigz": [
+        "pigz",
+        "-n",
+        "-c",
+        "-p",
+        "8"
+      ]
+    },
+    "expected_records": 270994675,
+    "expected_bases": 218767452454,
+    "output": {
+      "input_format": "fastq.gz",
+      "bytes": 197324862394,
+      "sha256": "2b3816937fb8182d484f8682935687d7207752e3707bcde251632082de1f9f38",
+      "md5": "d16d4a10d29f54c062b4dfd262d0b7c8"
+    }
+  },
+  "reference_source": "Matched short-read retained barcodes are a positive proxy, not literal biological ground truth.",
+  "dataset_source_accessions": "PRJNA1087553",
+  "chemistry": "10x_3v3",
+  "scan_mode": "single",
+  "adapter_mode": "alignment",
+  "catalogue_sha256": "02f771363a95e786ab1a6ab1e554c770e58cdff2fb30f2d7a9fb50a97762d452",
+  "input_source": "PRJNA1087553",
+  "input_selection_contract": "Complete full-quality FASTQ in the specified input_format; no subsampling or quality-score replacement",
+  "reference_path": "external_data/figure_04/references/Measles-P8-VDJ-enriched.reference.txt.gz"
+}

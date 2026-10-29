@@ -1,0 +1,33 @@
+{
+  "dataset_id": "LongBench-SC-ONT",
+  "input_sha256": "4c18dc2fab3a5bda29b4ade6fb5d27f65d9ce6f87e110d7dad8f5de6d61ddade",
+  "input_bytes": 88257731285,
+  "adapter_seq": "CTACACGACGCTCTTCCGATCT",
+  "barcode_length": 16,
+  "left_margin": 0,
+  "right_margin": 0,
+  "reference_sha256": "487437a2846e1e49d4434c8d237bee62574e5011f22de7446a808e04b1f48ca7",
+  "input_md5": "c21e87fb6f1339dd06c199e536b92492",
+  "input_records": 117002380,
+  "input_format": "fastq.gz",
+  "reference_barcode_sha256": "a91808ee31395ed98a9b7dbbce398d7a71776d7ec0e61a10e003979ca0339187",
+  "input_acquisition": {
+    "method": "complete_fastq_input",
+    "source": "https://longbench-data.s3.ap-southeast-2.amazonaws.com/raw/fastq/SC_ONT.fastq.gz",
+    "output": {
+      "input_format": "fastq.gz",
+      "bytes": 88257731285,
+      "sha256": "4c18dc2fab3a5bda29b4ade6fb5d27f65d9ce6f87e110d7dad8f5de6d61ddade",
+      "md5": "c21e87fb6f1339dd06c199e536b92492"
+    }
+  },
+  "reference_source": "Matched short-read retained barcodes are a positive proxy, not literal biological ground truth.",
+  "dataset_source_accessions": "GSE303762; PRJNA1171488; https://mritchielab.github.io/LongBench.io/",
+  "chemistry": "10x_3v3.1",
+  "scan_mode": "single",
+  "adapter_mode": "alignment",
+  "catalogue_sha256": "02f771363a95e786ab1a6ab1e554c770e58cdff2fb30f2d7a9fb50a97762d452",
+  "input_source": "https://longbench-data.s3.ap-southeast-2.amazonaws.com/raw/fastq/SC_ONT.fastq.gz",
+  "input_selection_contract": "Complete full-quality FASTQ in the specified input_format; no subsampling or quality-score replacement",
+  "reference_path": "external_data/figure_04/references/LongBench-SC-ONT.reference.txt.gz"
+}

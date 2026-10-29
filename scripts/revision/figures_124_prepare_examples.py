@@ -1,12 +1,41 @@
 #!/usr/bin/env python3
 """Extract bounded actual evidence examples; retain source SHA256 and row lineage."""
-import sys,csv,gzip,json,hashlib,shutil,itertools
+import argparse,sys,csv,gzip,json,hashlib,shutil,itertools,re
 from pathlib import Path
-from source_paths import reviewer_root, scratch_root, resolve_source
+from source_paths import data_root, reviewer_root, scratch_root, scratch_nfs_root, resolve_source
 R=Path(__file__).resolve().parents[2];B=reviewer_root()
 sys.path.insert(0,str(R/'scripts/revision'))
 from figures_124 import sha,rows,write_rows,write_json
+parser=argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--figure4-rad-callset',type=Path,required=True,
+                    help='Current verified RAD4acbe00/e0.3 RAGEseq-TNBC-LN selected barcode list')
+args=parser.parse_args()
+rad_path=args.figure4_rad_callset.resolve()
+op=gzip.open if rad_path.suffix=='.gz' else open
+with op(rad_path,'rt') as handle:rad_values=[line.strip() for line in handle if line.strip()]
+if len(rad_values)!=len(set(rad_values)) or not all(re.fullmatch('[ACGT]{16}',x) for x in rad_values):
+ raise ValueError('Require a strict unique16nt current RAD selected list')
+current_rad=set(rad_values)
+rad_receipt=json.loads((R/'source_data/figure_04/producing_evidence/current_RAD/RAGEseq-TNBC-LN.json').read_text())
+canonical_rad_sha=hashlib.sha256(('\n'.join(sorted(current_rad))+'\n').encode()).hexdigest()
+if rad_receipt['source_commit']!='4acbe004ba11b150d6832395452632f367a6e6c1' or rad_receipt['max_error']!=0.3 or canonical_rad_sha!=rad_receipt['selected_barcode_sha256']:
+ raise ValueError('Example RAD input differs from the current verified Figure4 selected set')
+selected_metrics=next(r for r in rows(R/'source_data/figure_04/barcode_detection_metrics.tsv')
+                      if r['canonical_id']=='RAGEseq-TNBC-LN' and r['tool']=='RAD')
+if len(current_rad)!=int(selected_metrics['calls']):raise ValueError('RAD callset count differs from current Figure4')
 provenance={i:[] for i in (1,2,4)}
+def source_label(source):
+ source=Path(source).resolve()
+ locations=[(R,''),(B,'external_data/reviewer_comment_data'),
+            (scratch_root(),'external_data/reviewer_comment_data/scratch_preservation_20260921/files'),
+            (scratch_nfs_root(),'external_data/reviewer_comment_data/scratch_preservation_20260921/files'),
+            (data_root(),'external_data')]
+ for root,label in sorted(locations,key=lambda item:len(str(Path(item[0]).resolve())),reverse=True):
+  try:relative=source.relative_to(Path(root).resolve())
+  except ValueError:continue
+  return (Path(label)/relative).as_posix()
+ raise ValueError('Source must be inside the repository or a configured external data root')
+
 def excerpt(i,source,name,predicate=lambda r,n: n<=8,fields=None,limit=None,delimiter=None):
  source=resolve_source(source,base=B);op=gzip.open if source.suffix=='.gz' else open
  delimiter=delimiter or ('\t' if '.tsv' in source.name else ',')
@@ -17,12 +46,12 @@ def excerpt(i,source,name,predicate=lambda r,n: n<=8,fields=None,limit=None,deli
     chosen.append({k:r[k] for k in fields} if fields else r);numbers.append(n)
     if limit and len(chosen)>=limit:break
  dest=R/f'data/examples/figure_{i:02d}'/name;write_rows(dest,chosen)
- provenance[i].append(dict(file=name,source_path=str(source),source_sha256=sha(source),source_bytes=source.stat().st_size,source_data_row_numbers_1_based=numbers,header_excluded_from_row_count=True,columns=fields or list(chosen[0]),excerpt_sha256=sha(dest),scope='bounded actual source excerpt; not a representative statistical sample'))
+ provenance[i].append(dict(file=name,source_path=source_label(source),source_sha256=sha(source),source_bytes=source.stat().st_size,source_data_row_numbers_1_based=numbers,header_excluded_from_row_count=True,columns=fields or list(chosen[0]),excerpt_sha256=sha(dest),scope='bounded actual source excerpt; not a representative statistical sample'))
  return dest
 
 def copy(i,source,name,**extra):
  source=resolve_source(source,base=B);dest=R/f'data/examples/figure_{i:02d}'/name;dest.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(source,dest)
- provenance[i].append(dict(file=name,source_path=str(source),source_sha256=sha(source),source_bytes=source.stat().st_size,excerpt_sha256=sha(dest),scope='complete compact input, copied byte-identically',**extra))
+ provenance[i].append(dict(file=name,source_path=source_label(source),source_sha256=sha(source),source_bytes=source.stat().st_size,excerpt_sha256=sha(dest),scope='complete compact input, copied byte-identically',**extra))
  return dest
 
 # Timing logs are small real root evidence; the COMPLETE marker may be empty.
@@ -51,7 +80,7 @@ for key,name in [('L_flatQ20','L_flatQ20_first2.fastq'),('L_native2023','L_nativ
  info=audit['sources'][key];source=resolve_source(info['path'],base=B);dest=R/'data/examples/figure_02'/name
  with gzip.open(source,'rt') as f:content=''.join(itertools.islice(f,8))
  dest.write_text(content)
- provenance[2].append(dict(file=name,source_path=str(source),source_sha256=info.get('sha256',info.get('compressed_sha256')),source_bytes=source.stat().st_size,source_fastq_record_numbers_1_based=[1,2],excerpt_sha256=sha(dest),scope='public ScTagger synthetic sequences; first two records only; full-stream hash from completed audit9976816'))
+ provenance[2].append(dict(file=name,source_path=source_label(source),source_sha256=info.get('sha256',info.get('compressed_sha256')),source_bytes=source.stat().st_size,source_fastq_record_numbers_1_based=[1,2],excerpt_sha256=sha(dest),scope='public ScTagger synthetic sequences; first two records only; full-stream hash from completed audit9976816'))
 excerpt(2,B/'sctagger_L_rad_fixed5000_adapter_fix_20260817/independent_validation/record_audit.tsv.gz','RAD_assignment_records_example.tsv')
 excerpt(2,B/'sctagger_flexiplex_audit_20260812/L_flatQ20_audit_reads_barcodes.txt','Flexiplex_assignment_records_example.tsv',delimiter='\t')
 excerpt(2,B/'paper_revision_20261022/prism/blaze2023_assignment_replay/assignment_records.tsv.gz','BLAZE_assignment_records_example.tsv')
@@ -65,7 +94,15 @@ def label_examples(r,n):
  key=(kind,r['in_deposited_shortread_list'])
  if key in seen:return False
  seen.add(key);return True
-excerpt(4,source,'immune_reference_annotation_example.tsv',label_examples,fields=['barcode','in_deposited_shortread_list','deposited_label','called_RAD','called_BLAZE_2.6.0a0_expect10433','called_Flexiplex_f8'])
+example=excerpt(4,source,'immune_reference_annotation_example.tsv',label_examples,fields=['barcode','in_deposited_shortread_list','deposited_label','called_BLAZE_2.6.0a0_expect10433','called_Flexiplex_f8'])
+example_rows=rows(example)
+for row in example_rows:row['called_RAD']=str(row['barcode'] in current_rad)
+fields=['barcode','in_deposited_shortread_list','deposited_label','called_RAD','called_BLAZE_2.6.0a0_expect10433','called_Flexiplex_f8']
+write_rows(example,example_rows,fields)
+provenance[4][-1].update(columns=fields,excerpt_sha256=sha(example),
+    RAD_callset_sha256=sha(rad_path),RAD_source_commit='4acbe004ba11b150d6832395452632f367a6e6c1',
+    RAD_definition='Membership in the explicitly supplied current selected set',
+    source_path='external_data/reviewer_comment_data/wl_scan/20260730_rageseq_ERR3268990_tnbc_lymphnode_four_tool/analysis/barcode_level_annotations.tsv')
 for i,entries in provenance.items():
  write_json(R/f'data/examples/figure_{i:02d}/provenance.json',dict(scope='root evidence excerpts for human inspection; quantitative conclusions use complete source_data tables',sources=entries))
 print({i:len(x) for i,x in provenance.items()})

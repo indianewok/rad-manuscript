@@ -1,90 +1,83 @@
 # Figure 4 — barcode discovery across 37 inputs
 
-Figure 4 compares the precision, recall, and F1 score of barcode discovery across synthetic, single-cell, single-nucleus, targeted long-read, and Visium datasets. Each input has a common reference set and one callset per tool.
+**RAD 1.0.2, commit [`4acbe004ba11b150d6832395452632f367a6e6c1`](https://github.com/indianewok/rad/commit/4acbe004ba11b150d6832395452632f367a6e6c1), `scan-wl --max-error 0.3`, complete inputs.**
 
-![Figure 4](../figures/figure_04/prism/figure_04.png)
+The [per-input tool table](../source_data/figure_04/tool_parameters.tsv) records the RAD, BLAZE and Flexiplex versions, source commits, threads, chemistry and available commands; unrecovered comparator entries are marked explicitly. BLAZE and Flexiplex settings vary by input. The [RAD run records](../source_data/figure_04/run_records/) specify each input, catalogue and matched reference; [execution records](../source_data/figure_04/producing_evidence/current_RAD/) report the selected build and output counts.
 
-## Inputs and reference sets
+![Paired barcode discovery metrics](../figures/figure_04/barcode_discovery_paired.png)
 
-The [sample inventory](../source_data/figure_04/sample_inventory.tsv) identifies the 37 scored inputs and their library, donor, and sequencing-run relationships. The [metrics table](../source_data/figure_04/barcode_detection_metrics.tsv) contains all 111 input–tool observations. Separate technical libraries and sequencing runs retain separate input identifiers.
+Each point is one sequencing input. Lines join the three tools on that input; black bars show medians. Labels show Dunn-adjusted P-values for the two RAD comparisons within each metric. Individual libraries and technical runs retain their own input identifiers.
 
-Known source barcodes define the synthetic references. Biological inputs use matched filtered short-read barcodes or published spatial masks. For the RAGE-seq TNBC lymph node, the reference comprises deposited short-read barcodes annotated as `T_cell*`, `B_cell*`, or `T_B_doublet`, with `in_deposited_shortread_list=True`. This gives 5,978 reference barcodes: 4,255 T-cell, 1,637 B-cell, and 86 T/B-doublet barcodes. The RAGE-seq cell-line input uses its own 4,505-barcode reference.
+## Read the results
 
-ScMixology2 combines a native RAD callset with a BLAZE selector replay on retained BLAZE counts and a Flexiplex filter replay on the common RAD count table. Its matched Cell Ranger reference contains 248 barcodes. RAD selected 279 barcodes, including 233 reference members; BLAZE selected 188, all in the reference; Flexiplex selected 184, including 183 reference members.
+The [metrics table](../source_data/figure_04/barcode_detection_metrics.tsv) contains 111 observations: 37 inputs × three tools. For each observation it reports called barcodes, reference barcodes, TP, FP, FN, precision, recall and F1. The [sample inventory](../source_data/figure_04/sample_inventory.tsv) identifies the input, donor, library and sequencing-run relationships.
 
-## Software and parameters
+![Metrics for every input](../figures/figure_04/barcode_discovery_by_input.png)
 
-The [producer records](../source_data/figure_04/producing_evidence/) contain the commands and software identities for each input.
+The [paired precision](../source_data/figure_04/paired_precision.tsv), [recall](../source_data/figure_04/paired_recall.tsv) and [F1](../source_data/figure_04/paired_f1.tsv) tables use the same 37 input rows. The [input-characteristics table](../source_data/figure_04/input_characteristics.tsv) contains the saved full-input SeqKit summaries, including read counts, lengths, GC and quality statistics. Its `AvgQual` field follows SeqKit's definition; the original SeqKit version and invocation are unavailable.
 
-| Input group | RAD | BLAZE | Flexiplex and key settings |
-|---|---|---|---|
-| ScTagger S/L, uniform Q20 | 1.0.2, `b02ff24110fe45873811d5389d2e58c338045f05`; error 0.3, 3v3.1, chunks of 10,000, 8 threads | 2.6.0a0; expected cells 50/5,000, minimum Q15, 8 threads | 1.02.6; flank distance 8, barcode distance 2, 16 threads |
-| RAGE cell line and TNBC lymph node | `cd0582b2440cde0f35725dc557fa47307d74d374` | 2.6.0a0; TNBC expected cells 10,433 | 1.02.6, filter 1.01; 3v2 chemistry, 16-base barcode and 10-base UMI |
-| Tilgner m1, three runs | 1.0.2, `613a72e90cb5dfc206db113fd98bca656f0ee6c3`; automatic whitelist, 30 threads | 2.5.0; expected cells 10,205, Q15, barcode distance 2, 48 threads | 1.02.6; discovery flank distance 0, 20 threads |
-| Other seven Tilgner inputs | `4acbe00` | Expected cells: f1 8,975; f2 8,850; f3 6,680; m2 10,427; m3 10,574 | Discovery flank distance 0; donor-matched references shared across technical runs |
-| MPNST1, two inputs | 1.0.2, `4acbe004ba11b150d6832395452632f367a6e6c1`; error 0.3, 3v3.1, 16 threads | 2.5.0; expected cells 4,500, Q15, barcode distance 2, 16 threads | 1.02.6; 3v3, discovery flank distance 0, 16 threads |
-| MPNST2, two inputs | Same RAD build; error 0.3, 3v3, high-specificity mode, 20 threads | 2.5.0; expected cells 11,000, Q15, barcode distance 2, 20 threads | 1.02.6; 3v3, discovery flank distance 0, 20 threads |
-| Eight Visium inputs | `5cf1ee6`; error 0.30, Visium 3′ layout | 2.6.0a0; expected cells 2,500 | 1.02.6; 3v2, flank distance 8, selected-list barcode distance 2 |
-| ScMixology2 | `2c5a7936e630ccc46548c133855b4bfb4e50f058`; error 0.3, 3v3, chunks of 10,000, 24 threads | Expected-cell-500 selector replay | 1.02.6 filter replay on common counts |
+The statistical analysis uses the existing Friedman test across the three tools, followed by two Dunn comparisons per metric: RAD versus BLAZE and RAD versus Flexiplex. Adjustment is within each metric's two-comparison family. The [Friedman results](../source_data/figure_04/friedman.tsv) and [Dunn results](../source_data/figure_04/dunn.tsv) give the statistics and P-values. The [calculation script](../scripts/figure_04/statistics.py) implements [GraphPad's documented Dunn calculation](https://www.graphpad.com/guides/prism/latest/statistics/stat_how_the_dunn_method_for_nonpar.htm).
 
-LongBench used RAD `920addacdbf40b815e13a146226e8f4b14a58aaf`, 32 threads, and scan error 0.1; BLAZE 2.5.0 used 48 threads, expected cells 5,000 for single cells and forced cells 10,000 for nuclei. PromethION used RAD `cd0582b`, scan error 0.1 and 32 threads; BLAZE 2.6.0a0 expected 500 cells; Flexiplex 1.02.6 used flank distance 8. P8-WTA used RAD `b02ff24110fe45873811d5389d2e58c338045f05`. LeBrigand combined two accessions and used RAD `920addacdbf40b815e13a146226e8f4b14a58aaf`, BLAZE expected cells 918, and Flexiplex flank distance 8, with 12 threads.
+## What the reference means
 
-Unrecorded fields include the original Measles P7/P8 RAD build, some Tilgner and LongBench discovery software identities, and the original SeqKit version and full command. Four original Visium RAD split callsets also require recovery; their aggregate metrics and recorded hashes are retained.
-
-## Barcode-set scoring
-
-For a tool callset and its matched reference, true positives are their intersection, false positives are called barcodes outside the reference, and false negatives are reference barcodes absent from the callset. Metrics use distinct barcode identities:
+Synthetic inputs use their known source barcode sets. Biological inputs use matched filtered short-read barcodes or published spatial masks. TP is the intersection between a tool's selected set and its reference; FP is selected barcodes outside that reference; FN is reference barcodes not selected. These metrics measure agreement with the stated reference.
 
 ```text
 precision = TP / (TP + FP)
-recall = TP / (TP + FN)
-F1 = 2TP / (2TP + FP + FN)
+recall    = TP / (TP + FN)
+F1        = 2TP / (2TP + FP + FN)
 ```
 
-[Paired precision](../source_data/figure_04/paired_precision.tsv), [recall](../source_data/figure_04/paired_recall.tsv), and [F1](../source_data/figure_04/paired_f1.tsv) use the same 37 input rows. Recalculate all metrics and check complete three-tool pairing with:
+The RAGE-seq TNBC lymph-node reference includes deposited short-read barcodes annotated as `T_cell*`, `B_cell*` or `T_B_doublet`, with `in_deposited_shortread_list=True`: 5,978 barcodes comprising 4,255 T-cell, 1,637 B-cell and 86 T/B-doublet barcodes. The cell-line input has a separate 4,505-barcode reference.
+
+ScMixology2 uses a complete-input native RAD scan, a BLAZE expected-cell-500 selector replay on its retained counts, and a Flexiplex filter replay on the recorded common extraction count table. Its matched Cell Ranger reference contains 248 barcodes. The [tool records](../source_data/figure_04/tool_parameters.tsv) and [comparator source files](../source_data/figure_04/producing_evidence/) identify these operations.
+
+ERR15095097 is deposited as MPNST2, but its raw FASTQ barcode identities disagree with the deposited MPNST2 processed-cell set. All three tools are scored against the deposited MPNST2 reference. This unresolved sample/reference pairing affects interpretation of that input. The public [library metadata](https://www.ebi.ac.uk/biostudies/files/E-MTAB-15190/E-MTAB-15190.sdrf.txt) and [processed MPNST2 barcodes](https://www.ebi.ac.uk/biostudies/files/E-MTAB-15190/MPNST2_scNaUmiSeq_PromethION_barcodes.tsv.gz) identify the deposited sample.
+
+## Walk through one dataset
+
+Start with [ScTagger-S's run record](../source_data/figure_04/run_records/ScTagger-S_flatQ20.json) and its row in the tool table. Its complete input has 98,873 reads from 50 true barcodes, with uniform Q20 scores. RAD selects 53 barcodes: 50 TP, three FP and zero FN, giving precision 50/53, recall 50/50 and F1 100/103. The [two ScTagger-L FASTQ records](../data/examples/figure_02/L_flatQ20_first2.fastq) show the read format used by the uniform-Q20 simulation: identifier, nucleotide sequence, `+`, and one quality character per base.
+
+Build the pinned source using the [single-dataset instructions](../scripts/figure_04/README.md). The native command for ScTagger-S is:
+
+```bash
+mkdir -p results/figure_04/ScTagger-S_flatQ20
+external_data/software/rad_build_4acbe00/rad scan-wl \
+  --input external_data/figure_04/inputs/ScTagger-S_flatQ20.fastq.gz \
+  --output-prefix results/figure_04/ScTagger-S_flatQ20/rad \
+  --adapter_seq CTACACGACGCTCTTCCGATCT \
+  --barcode-length 16 --left-margin 0 --right-margin 0 \
+  --max-error 0.3 \
+  --whitelist external_data/figure_04/catalogues/3M-february-2018-3v3.txt_bitlist.csv.gz \
+  --threads 16 --chunk-size 10000
+```
+
+The chemistry catalogue is the full set of allowed barcode sequences. It is separate from the matched reference used for scoring. All RAD scans use the complete selected input and high-specificity selection, without a read cap. ScTagger's uniform-Q20 input is specified explicitly; biological inputs retain their native qualities.
+
+The [single-dataset runner](../scripts/figure_04/run_scan.py) verifies the build and inputs, saves the native command and output, and writes a metrics CSV plus a barcode-membership CSV. The latter shows which selected barcodes match the reference. Complete barcode lists and external input files are kept outside Git. Controlled-access spatial data require their registered access process.
+
+## Recalculate the deposited tables
+
+The [small example](../data/examples/figure_04/three_input_metrics_example.tsv) contains all three tools for ScTagger-S, ScTagger-L and the RAGE-seq lymph node. Recalculate its metrics from TP, FP and FN:
 
 ```bash
 mkdir -p results
 python3 scripts/revision/figures_124_steps/recompute_detection_metrics.py \
-  source_data/figure_04/barcode_detection_metrics.tsv \
-  results/figure4_all37.tsv --expected-inputs 37
+  data/examples/figure_04/three_input_metrics_example.tsv \
+  results/figure4_example.tsv --expected-inputs 3
 ```
 
-A [three-input example](../data/examples/figure_04/three_input_metrics_example.tsv) contains the complete tool triples for ScTagger-S, ScTagger-L, and RAGE-seq TNBC lymph node. Its [expected output](../data/examples/figure_04/three_input_metrics_recomputed.tsv) can be reproduced with the same command and `--expected-inputs 3`.
-
-## Construct the immune reference
-
-The immune-reference example follows annotation labels through reference selection and scoring:
+Compare this with the [expected output](../data/examples/figure_04/three_input_metrics_recomputed.tsv). Use `source_data/figure_04/barcode_detection_metrics.tsv` and `--expected-inputs 37` to check the complete comparison. The [immune-reference example](../data/examples/figure_04/immune_reference_annotation_example.tsv) shows how annotation labels select the lymph-node reference:
 
 ```bash
 python3 scripts/revision/figures_124_steps/rescore_immune_reference.py \
   data/examples/figure_04/immune_reference_annotation_example.tsv \
   results/figure4_immune_example.tsv
+python3 scripts/figure_04/statistics.py \
+  --output-dir results/figure_04/statistics
+python3 scripts/figure_04/plot_discovery.py \
+  --statistics-dir results/figure_04/statistics \
+  --output-dir results/figure_04/plots
 ```
 
-The complete TNBC reference produces these counts:
-
-| Tool | Calls | TP | FP | FN |
-|---|---:|---:|---:|---:|
-| RAD | 5,605 | 5,490 | 115 | 488 |
-| BLAZE | 4,474 | 3,908 | 566 | 2,070 |
-| Flexiplex | 3,707 | 3,677 | 30 | 2,301 |
-
-## Input characteristics and reproduction
-
-The [input-characteristics table](../source_data/figure_04/input_characteristics.tsv) joins saved all-read SeqKit summaries to the 37 canonical input identifiers. It includes read counts, total bases, read-length summaries, GC percentage, and quality statistics. ScTagger inputs use uniform Q20. [Schemas](../source_data/figure_04/schemas.json) define all fields and units, and [SeqKit provenance](../source_data/figure_04/seqkit_saved_provenance.json) identifies the saved source.
-
-With the project inputs mounted, reconstruct the source comparisons:
-
-```bash
-python3 scripts/revision/figures_124_native_recovery.py --project-root /path/to/rad_data --output-root .
-```
-
-Check and plot the deposited tables with:
-
-```bash
-python3 scripts/revision/figures_124.py validate --output-root .
-python3 scripts/revision/figures_124.py render --output-root .
-```
-
-Statistical annotations are retained in the Prism figure; their original analysis settings are required to reproduce those annotations.
+The plotted points and labelled matrices above are generated directly from the current source table. [Schemas](../source_data/figure_04/schemas.json) define its fields.

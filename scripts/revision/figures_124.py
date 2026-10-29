@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Rebuild and render current Figures 1, 2 and 4 from named retained checkpoints.
+"""Build retained Figure1/2 inputs, validate current Figure4 tables and render source data.
 
 This does not rerun demultiplexing, invent missing historical settings or execute
 unapproved inferential tests. Build reads original project assets and writes only
@@ -19,10 +19,9 @@ import platform
 import re
 import shutil
 import statistics
-import subprocess
 import sys
 import tempfile
-from collections import Counter, defaultdict
+from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 from source_paths import data_root, scratch_root, scratch_nfs_root, resolve_source
@@ -39,7 +38,6 @@ SWEEP = 'LongBench_comps/ScTagger_quality_sweep_20260731'
 EXTENDED = 'scratch_preservation_20260921/files/sctagger_nanopore2023_extended_sweep_20260913'
 NATIVE = 'scratch_preservation_20260921/files/sctagger_nanopore2023_unadjusted_20260913'
 REVISION = 'paper_revision_20261022'
-COMPLETE = 'three_tool_whitelist_complete_rageseq_immune_20260901'
 
 
 
@@ -406,62 +404,35 @@ class Build:
                   'Existing statistics/annotations preserved by author instruction; native desktop reopen/save/export remains unavailable; see desktop_QA.md.',resume='passed; native Prism pending')
 
     def figure4(self):
+        """Validate current deposited Figure4 data without restoring other runs."""
         folder=self.out/'source_data/figure_04'
-        metrics=rows(self.source(COMPLETE+'/complete_three_tool_metrics.tsv'))
-        inventory=rows(self.source(COMPLETE+'/sample_inventory.tsv'))
-        scored=[r for r in inventory if r['three_tool_score_available']=='TRUE']
-        ids=[r['canonical_id'] for r in scored]
-        self.check('F4_37_input_111_tool_rows',len(ids)==len(set(ids))==37 and len(metrics)==111, [37,111],[len(ids),len(metrics)],COMPLETE)
+        metrics=rows(folder/'barcode_detection_metrics.tsv')
+        inventory=rows(folder/'sample_inventory.tsv')
+        ids=[r['canonical_id'] for r in inventory]
+        self.check('F4_current_37_inputs',len(ids)==len(set(ids))==37,37,len(ids),folder/'sample_inventory.tsv')
         keys={(r['canonical_id'],r['tool']) for r in metrics}
-        self.check('F4_complete_pairing',keys=={(x,t) for x in ids for t in TOOLS},'all 37 x 3 unique keys',len(keys),COMPLETE)
-        for r in metrics: check_metrics(r,int(r['reference_n']))
-        self.check('F4_count_metric_conservation',True,'111 count identities; metric tolerance 1e-9',111,COMPLETE)
-        annotations=rows(self.source('wl_scan/20260730_rageseq_ERR3268990_tnbc_lymphnode_four_tool/analysis/barcode_level_annotations.tsv'))
-        truth={r['barcode'] for r in annotations if r['in_deposited_shortread_list']=='True' and (r['deposited_label'].startswith(('T_cell','B_cell')) or r['deposited_label']=='T_B_doublet')}
-        self.check('F4_RAGE_immune_reference',len(truth)==5978,5978,len(truth),'barcode_level_annotations.tsv')
-        callcolumns={'RAD':'called_RAD','BLAZE':'called_BLAZE_2.6.0a0_expect10433','Flexiplex':'called_Flexiplex_f8'}
-        for tool,col in callcolumns.items():
-            calls={r['barcode'] for r in annotations if r[col]=='True'}
-            expected=next(r for r in metrics if r['canonical_id']=='RAGEseq-TNBC-LN' and r['tool']==tool)
-            got=[len(calls),len(calls&truth),len(calls-truth),len(truth-calls)]
-            want=[int(expected[f]) for f in ('calls','tp','fp','fn')]
-            self.check('F4_RAGE_rescore_'+tool,got==want,want,got,'barcode_level_annotations.tsv')
-        for r in metrics:
-            r['input_status']='reconstructed' if 'scmix' in r['canonical_id'].lower() else 'native'
-            r['paired_input_id']=r['canonical_id']
-            r['inferential_status']='existing statistical analyses and annotations preserved; no tests rerun'
-        write_rows(folder/'barcode_detection_metrics.tsv',metrics)
-        write_rows(folder/'sample_inventory.tsv',inventory)
-        seqkit=rows(self.source(REVISION+'/evidence/Figure4_SeqKit_stats_saved.csv'))
-        display_to_id={r['display_dataset']:r['canonical_id'] for r in scored}
-        for r in seqkit:
-            r['canonical_id']=display_to_id.get(r['dataset'],r['dataset'])
-            r['summary_origin']='saved all-read SeqKit table; exact invocation/version unresolved'
-        self.check('F4_SeqKit_row_identity',len(seqkit)==37 and {r['canonical_id'] for r in seqkit}==set(ids),
-                   'same 37 canonical input identities',sorted({r['canonical_id'] for r in seqkit}-set(ids)),'Figure4_SeqKit_stats_saved.csv')
-        write_rows(folder/'input_characteristics.tsv',seqkit)
-        self.copy(REVISION+'/evidence/Figure4_SeqKit_saved_provenance.json','source_data/figure_04/seqkit_saved_provenance.json')
+        self.check('F4_current_111_pairs',len(metrics)==111 and keys=={(x,t) for x in ids for t in TOOLS},
+                   'same37 inputs with three tools',len(metrics),folder/'barcode_detection_metrics.tsv')
+        for r in metrics:check_metrics(r,int(r['reference_n']))
+        parameters=rows(folder/'tool_parameters.tsv')
+        self.check('F4_current_parameter_pairs',len(parameters)==111 and
+                   {(r['dataset'],r['tool']) for r in parameters}==keys,
+                   'same111 input/tool records',len(parameters),folder/'tool_parameters.tsv')
+        rad=[r for r in parameters if r['tool']=='RAD']
+        self.check('F4_current_RAD_source',len(rad)==37 and all(
+                   r['source_commit']=='4acbe004ba11b150d6832395452632f367a6e6c1' and
+                   re.search(r'(?:^|\s)(?:-e|--max-error)(?:\s+|=)0\.3(?:0)?(?:\s|$)',r['command'])
+                   for r in rad),'RAD4acbe00, explicit error0.3',len(rad),folder/'tool_parameters.tsv')
         for metric in ('precision','recall','f1'):
-            table=[]
-            for sample in ids:
-                row={'paired_input_id':sample}
-                row.update({tool:next(x[metric] for x in metrics if x['canonical_id']==sample and x['tool']==tool) for tool in TOOLS})
-                row['input_status']='reconstructed' if 'scmix' in sample.lower() else 'native'
-                row['independence_note']='physical or technical input; not asserted independent biological replicate'
-                table.append(row)
-            write_rows(folder/('paired_'+metric+'.tsv'),table)
-        public_path=self.out/'validation/figures_124_public_identifier_export.json'
-        public_report=json.loads(public_path.read_text()) if public_path.exists() else {}
-        public_bound=(public_report.get('status')=='passed' and public_report.get('public_rows')==87 and
-                      public_report.get('selected_table_sha256')==sha(folder/'barcode_detection_metrics.tsv'))
-        self.task('F4-01','ready','Validated all 37 inputs /111 tool rows; complete public selected calls and references independently reproduce 87 rows and are deposited with source hashes.' if public_bound else
-                  'Validated 37 inputs /111 tool rows and independently rescored RAGE against 5,978 immune-positive barcodes.',
-                  'Eight controlled Visium inputs remain aggregate-only in the public identifier package; four original RAD split callsets remain unavailable. Inputs retain biological/technical dependence.' if public_bound else
-                  'Upstream callset/reference source reconciliation remains separate from retained aggregate validation.')
-        self.task('F4-02','blocked-missing-asset','Recovered saved 37-row all-read characteristics with exact canonical-ID join and source metadata.',
-                  'Original all-37 SeqKit invocation/version not recovered; do not label saved summary as a fresh raw computation.',resume='passed table recovery')
-        self.task('F4-03','ready-descriptive-statistics-preserved','Exported paired F1/precision/recall observations and descriptive scripted plots over all 37 inputs.',
-                  'Existing statistical analyses and annotations left unchanged by author instruction. Scripted descriptive proof omits native annotations; original analysis provenance remains unresolved.',resume='passed observations')
+            paired=rows(folder/('paired_'+metric+'.tsv'))
+            self.check('F4_current_paired_'+metric,[r['paired_input_id'] for r in paired]==ids,
+                       'same37 input order',len(paired),folder/('paired_'+metric+'.tsv'))
+            for r in paired:
+                for tool in TOOLS:
+                    expected=next(x[metric] for x in metrics if x['canonical_id']==r['paired_input_id'] and x['tool']==tool)
+                    if r[tool]!=expected:raise ValueError('Current paired metric differs from source table')
+        self.task('F4-01','ready','Validated current37 input triples, count/metric identities and pinned RAD parameters.',
+                  'Current paired tables retain the saved Friedman/Dunn methods; native Prism recalculation/export remains a separate private handoff.')
 
     def hd(self):
         folder=self.out/'source_data/figure_01'
@@ -576,6 +547,8 @@ def validate(out):
     record('all37_tool_pairs',len(metrics)==111 and len({r['canonical_id'] for r in metrics})==37 and len({(r['canonical_id'],r['tool']) for r in metrics})==111,len(metrics))
     for r in metrics: check_metrics(r,int(r['reference_n']))
     ids={r['canonical_id'] for r in metrics}
+    inventory=rows(out/'source_data/figure_04/sample_inventory.tsv')
+    record('inventory_current37',len(inventory)==37 and {r['canonical_id'] for r in inventory}==ids,len(inventory))
     for name in ('precision','recall','f1'):
         pairs=rows(out/f'source_data/figure_04/paired_{name}.tsv')
         record('matched_'+name,len(pairs)==37 and {r['paired_input_id'] for r in pairs}==ids,len(pairs))

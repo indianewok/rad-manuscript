@@ -113,22 +113,167 @@
       "display_dataset",
       "dataset_family",
       "unit_type",
-      "in_frozen_paper_v1",
-      "paper_dataset",
-      "paper_use",
-      "in_original_prism",
-      "processed",
-      "processed_not_original_prism",
-      "three_tool_score_available",
-      "score_panel",
       "reference_type",
       "validation_tier",
       "notes"
     ],
-    "primary_key": [],
+    "primary_key": [
+      "canonical_id"
+    ],
     "encoding": "UTF-8",
     "delimiter": "tab",
     "missing_value": "empty field; not zero",
-    "hash_scope": "plain file bytes"
+    "hash_scope": "plain file bytes",
+    "rows": 37,
+    "description": "Current scored sequencing inputs; technical-library and run identity retained in canonical_id, display_dataset and unit_type"
+  },
+  "tool_parameters.tsv": {
+    "fields": [
+      "analysis",
+      "dataset",
+      "tool",
+      "replicate",
+      "version",
+      "source_commit",
+      "threads",
+      "chemistry",
+      "command"
+    ],
+    "primary_key": [
+      "analysis",
+      "dataset",
+      "tool",
+      "replicate"
+    ],
+    "rows": 111,
+    "encoding": "UTF-8",
+    "delimiter": "tab",
+    "missing_value": "Explicit not_recorded where an execution detail was not recorded"
+  },
+  "run_records/*.json": {
+    "format": "JSON",
+    "records": 37,
+    "input_format": "fastq means exact uncompressed FASTQ bytes; fastq.gz means exact gzip container bytes",
+    "reference_identity": "Exact reference file SHA256 or SHA256 of the sorted unique16ntbarcode list with one LF after every barcode",
+    "missing_original_input_digest": "null only with an exact full-input selection contract"
+  },
+  "friedman.tsv": {
+    "encoding": "UTF-8",
+    "delimiter": "tab",
+    "missing_value": "none",
+    "hash_scope": "plain file bytes",
+    "metric_values": [
+      "precision",
+      "recall",
+      "f1"
+    ],
+    "fields": [
+      "metric",
+      "matched_inputs",
+      "groups",
+      "rank_sum_RAD",
+      "rank_sum_BLAZE",
+      "rank_sum_Flexiplex",
+      "mean_rank_RAD",
+      "mean_rank_BLAZE",
+      "mean_rank_Flexiplex",
+      "tie_sum",
+      "tie_correction",
+      "statistic",
+      "df",
+      "p_value",
+      "alpha",
+      "significant"
+    ],
+    "primary_key": [
+      "metric"
+    ],
+    "rows": 3,
+    "matched_inputs": 37,
+    "groups": 3,
+    "alpha": 0.05,
+    "description": "One omnibus Friedman result per metric across the same 37 paired inputs and three tools",
+    "statistic_definition": "Average within-input ranks, tie correction and chi-square approximation with 2 degrees of freedom"
+  },
+  "dunn.tsv": {
+    "encoding": "UTF-8",
+    "delimiter": "tab",
+    "missing_value": "none",
+    "hash_scope": "plain file bytes",
+    "metric_values": [
+      "precision",
+      "recall",
+      "f1"
+    ],
+    "fields": [
+      "metric",
+      "control",
+      "comparator",
+      "matched_inputs",
+      "groups",
+      "comparisons_in_family",
+      "control_rank_sum",
+      "comparator_rank_sum",
+      "control_mean_rank",
+      "comparator_mean_rank",
+      "mean_rank_difference",
+      "standard_error",
+      "z",
+      "p_raw",
+      "p_adjusted",
+      "alpha",
+      "significant"
+    ],
+    "primary_key": [
+      "metric",
+      "control",
+      "comparator"
+    ],
+    "rows": 6,
+    "matched_inputs": 37,
+    "groups": 3,
+    "alpha": 0.05,
+    "description": "Two Dunn comparisons per metric: RAD versus BLAZE and RAD versus Flexiplex",
+    "control": "RAD",
+    "comparator_values": [
+      "BLAZE",
+      "Flexiplex"
+    ],
+    "comparisons_in_family": 2,
+    "p_adjusted_definition": "min(1, 2 * two-sided normal P); each metric is a separate comparison family"
+  },
+  "statistics.json": {
+    "format": "JSON",
+    "schema_version": 1,
+    "fields": [
+      "schema_version",
+      "metrics_sha256",
+      "method_settings",
+      "outputs"
+    ],
+    "hash_scope": "plain file bytes",
+    "description": "Receipt binding the saved Friedman/Dunn settings and both result tables to the exact current barcode_detection_metrics.tsv bytes",
+    "metrics_sha256": "SHA256 of barcode_detection_metrics.tsv",
+    "output_names": [
+      "friedman.tsv",
+      "dunn.tsv"
+    ],
+    "method_settings": {
+      "matched_inputs": 37,
+      "tools": [
+        "RAD",
+        "BLAZE",
+        "Flexiplex"
+      ],
+      "metrics": [
+        "precision",
+        "recall",
+        "f1"
+      ],
+      "control": "RAD",
+      "comparisons_per_metric": 2,
+      "alpha": 0.05
+    },
+    "native_prism_execution_claimed": false
   }
 }

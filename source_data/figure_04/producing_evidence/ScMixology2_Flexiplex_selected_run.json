@@ -21,7 +21,6 @@
     ],
     "current_csv": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_splitaware37_current_main_script_validation_20260802/scMixology2/replay_scanwl.csv",
     "dataset": "scMixology2",
-    "delta_flexiplex_minus_rad": -95,
     "elapsed_seconds": 2.836174838244915,
     "family": "scmixology2",
     "final_barcode_tokens": [
@@ -29,21 +28,11 @@
       "TRUE"
     ],
     "flexiplex_n": 184,
-    "flexiplex_only_n": 0,
-    "flexiplex_precision_vs_rad": 1.0,
-    "flexiplex_recall_vs_rad": 0.6594982078853047,
-    "flexiplex_subset_of_rad": true,
     "inflection_rank": 184,
     "input_rows": 151139,
-    "jaccard": 0.6594982078853047,
     "observed_whitelist": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_count_selector_orthogonal_20260804/flexiplex/full37/runs/scMixology2/observed_chemistry_valid_barcodes.txt",
     "observed_whitelist_rows": 151139,
     "observed_whitelist_sha256": "bdb5f0a8b30b13209ca890dc5beccc26ff9128ca758b5234363ec98f42a90561",
-    "rad_current_n": 279,
-    "rad_only_n": 95,
-    "rad_subset_of_flexiplex": false,
-    "reference_strength": "biological_proxy",
-    "reference_type": "flexiplex_positive_proxy",
     "reference_whitelist_size": 6794880,
     "reused_existing_run": true,
     "selected_rows": 184,
@@ -52,9 +41,7 @@
     "selector_output_sha256": "8ba7a9c7be484c15e5b7f93a7813e72050264acb5019963260160d0ef2400d1b",
     "selector_provenance": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_count_selector_orthogonal_20260804/flexiplex/full37/runs/scMixology2/selector_on_RAD_counts.tsv.provenance.json",
     "selector_stderr": "external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_count_selector_orthogonal_20260804/flexiplex/full37/runs/scMixology2/selector_on_RAD_counts.tsv.stderr.log",
-    "shared_n": 184,
-    "source_sha256": "eec374c05e2dcb849f2b7bb3d58a00ca2b979d4325046dffe4de9079750ab70c",
-    "union_n": 279
+    "source_sha256": "eec374c05e2dcb849f2b7bb3d58a00ca2b979d4325046dffe4de9079750ab70c"
   },
   "selection": "datasets row with dataset=scMixology2",
   "source_analysis": "Flexiplex v1.02.6 selector on current RAD count tables"

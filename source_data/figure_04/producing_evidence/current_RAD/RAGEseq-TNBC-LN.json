@@ -1,0 +1,38 @@
+{
+  "dataset_id": "RAGEseq-TNBC-LN",
+  "tool": "RAD",
+  "version": "1.0.2",
+  "source_commit": "4acbe004ba11b150d6832395452632f367a6e6c1",
+  "binary_sha256": "01ae4700f329593487e1b0a3528da009d7e47c82bf213a5f53ba98acad6fda0e",
+  "threads": 16,
+  "chemistry": "10x_3v2",
+  "command": "rad scan-wl --input external_data/figure_04/inputs/RAGEseq-TNBC-LN.fastq.gz --output-prefix results/figure_04/RAGEseq-TNBC-LN/rad --adapter_seq CTACACGACGCTCTTCCGATCT --barcode-length 16 --left-margin 0 --right-margin 0 --max-error 0.3 --whitelist external_data/figure_04/catalogues/737K-august-2016.txt --threads 16 --chunk-size 10000",
+  "input_acquisition": {
+    "method": "complete_fastq_input",
+    "source": "PRJEB28878",
+    "output": {
+      "input_format": "fastq.gz",
+      "bytes": 24090380952,
+      "sha256": "ffa2403ea0a870cf01e0f80c451aa831fb79f56714d67f7e589ff6e20997669a",
+      "md5": "23177cd143a521db1d7e41fd3e7d1981"
+    }
+  },
+  "adapter_seq": "CTACACGACGCTCTTCCGATCT",
+  "barcode_length": 16,
+  "left_margin": 0,
+  "right_margin": 0,
+  "max_error": 0.3,
+  "input_format": "fastq.gz",
+  "input_bytes": 24090380952,
+  "input_sha256": "ffa2403ea0a870cf01e0f80c451aa831fb79f56714d67f7e589ff6e20997669a",
+  "processed_nonempty_sequences": 23044761,
+  "input_records": 23044761,
+  "skipped_empty_records": 0,
+  "input_record_count_basis": "FASTQ records equal native nonempty sequences plus skipped empty records",
+  "selected_barcodes": 6153,
+  "selected_barcode_sha256": "4b130c9217d08319e709d0bb250b30082f0094d4ff166cb92893362d7573075e",
+  "reference_barcodes": 5978,
+  "native_receipt_sha256": "52c65f2e37ca22e8aee3084ad46c41fcee69731e82ee60ebfea6e2cdfe268473",
+  "reference_sha256": "95e4d81c69b55a673aeaea8955693ab27e6b8b53fc95a29355fc6f13fd4be898",
+  "reference_barcode_sha256": "6b858038b0807a61acce0ad66a9f920df42cf140582040d07fa0d9dc99595f70"
+}

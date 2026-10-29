@@ -1,0 +1,33 @@
+{
+  "dataset_id": "RAGEseq-cell-line",
+  "input_sha256": "cfdba50a497dd4f6b24c2a4e730e297a09498ad5fe006f65eee01fa202bcdcec",
+  "input_bytes": 16922373879,
+  "adapter_seq": "CTACACGACGCTCTTCCGATCT",
+  "barcode_length": 16,
+  "left_margin": 0,
+  "right_margin": 0,
+  "reference_sha256": "f9d2b3f9be2e1aeb18438c577234f7eef710e486bf515389e171a6ce77847049",
+  "input_md5": "a8a33c79fb71d8fadff6d98bd7403a3a",
+  "input_records": 20346396,
+  "input_format": "fastq.gz",
+  "reference_barcode_sha256": "93f7551ec70c57d5f9e6d8e77f4041d19c99acc9b771e16ce1acf26dfac5ba54",
+  "input_acquisition": {
+    "method": "complete_fastq_input",
+    "source": "PRJEB28878",
+    "output": {
+      "input_format": "fastq.gz",
+      "bytes": 16922373879,
+      "sha256": "cfdba50a497dd4f6b24c2a4e730e297a09498ad5fe006f65eee01fa202bcdcec",
+      "md5": "a8a33c79fb71d8fadff6d98bd7403a3a"
+    }
+  },
+  "reference_source": "Matched short-read retained barcodes are a positive proxy, not literal biological ground truth.",
+  "dataset_source_accessions": "PRJEB28878",
+  "chemistry": "10x_3v2",
+  "scan_mode": "single",
+  "adapter_mode": "alignment",
+  "catalogue_sha256": "b0dda4b114d8fc7ea8def94fb472e6205c1831a72e3ac245ed13cc332d9f20d1",
+  "input_source": "PRJEB28878",
+  "input_selection_contract": "Complete full-quality FASTQ in the specified input_format; no subsampling or quality-score replacement",
+  "reference_path": "external_data/figure_04/references/RAGEseq-cell-line.reference.txt.gz"
+}

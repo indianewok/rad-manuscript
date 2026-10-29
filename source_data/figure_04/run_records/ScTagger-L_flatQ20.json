@@ -1,0 +1,33 @@
+{
+  "dataset_id": "ScTagger-L_flatQ20",
+  "input_sha256": "6f7385468b607cf86c91449b095c2968ee2a5d25ab473901102b87d141543090",
+  "input_bytes": 3074597647,
+  "adapter_seq": "CTACACGACGCTCTTCCGATCT",
+  "barcode_length": 16,
+  "left_margin": 0,
+  "right_margin": 0,
+  "reference_sha256": "bca6f83ffd0316fb6127d25d7003136a82148a573b3c9d7f1778a2bac4911f1b",
+  "input_md5": "54b10d8d9988cf27852a1a8d5746aa2f",
+  "input_records": 4993805,
+  "input_format": "fastq.gz",
+  "reference_barcode_sha256": "2418b849f88ce6f28cf8c702acab795e4b483f6b2da17953675fce96b405899e",
+  "input_acquisition": {
+    "method": "complete_fastq_input",
+    "source": "10.6084/m9.figshare.19740475.v1",
+    "output": {
+      "input_format": "fastq.gz",
+      "bytes": 3074597647,
+      "sha256": "6f7385468b607cf86c91449b095c2968ee2a5d25ab473901102b87d141543090",
+      "md5": "54b10d8d9988cf27852a1a8d5746aa2f"
+    }
+  },
+  "reference_source": "Exact known barcode truth from a synthetic benchmark.",
+  "dataset_source_accessions": "10.6084/m9.figshare.19740475.v1",
+  "chemistry": "10x_3v3",
+  "scan_mode": "single",
+  "adapter_mode": "alignment",
+  "catalogue_sha256": "02f771363a95e786ab1a6ab1e554c770e58cdff2fb30f2d7a9fb50a97762d452",
+  "input_source": "10.6084/m9.figshare.19740475.v1",
+  "input_selection_contract": "Complete generated ScTagger flatQ20 input; preserve its preset sequences and quality strings",
+  "reference_path": "external_data/figure_04/references/ScTagger-L_flatQ20.RAD.txt.gz"
+}

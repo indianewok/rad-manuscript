@@ -9,15 +9,12 @@ combined="${root}/MOB_SRR12157794_SRR12157795.fastq.gz"
 design=external_data/reviewer_comment_data/scratch_preservation_20260921/files/visium_lebrigand_mob_redirect_audit_20260730/inputs/visium_v2_full_4992.txt
 truth=external_data/reviewer_comment_data/scratch_preservation_20260921/files/visium_lebrigand_mob_redirect_audit_20260730/inputs/MOB_in_tissue_918.txt
 positions="${input_dir}/mob164315-spatial-illumina/spatial/tissue_positions_list.csv"
-rad=external_data/reviewer_comment_data/scratch_preservation_20260921/files/longbench_full_demux_20260730/tools/rad_920adda_edlibfix/build_release/rad
 blaze=external_data/reviewer_comment_data/scratch_preservation_20260921/files/blaze2_260a0_native_20260727/venv/bin/blaze
 flex_root=external_data/temporary/flexiplex_release.GqgaKA/flexiplex
 flex="${flex_root}/bin/flexiplex-linux"
-analysis_script=external_data/reviewer_comment_data/scratch_preservation_20260921/files/visium_lebrigand_full_auto_wl_20260731/analyze_callsets.py
-figure_script=external_data/reviewer_comment_data/scratch_preservation_20260921/files/visium_lebrigand_full_auto_wl_20260731/render_figures.py
 threads=${LEBRIGAND_THREADS:-12}
 
-mkdir -p "${root}/logs" "${root}/rad" "${root}/blaze_expect918" \
+mkdir -p "${root}/logs" "${root}/blaze_expect918" \
     "${root}/flex_f0" "${root}/flex_f8"
 exec >>"${root}/logs/controller.log" 2>&1
 
@@ -36,18 +33,6 @@ if [[ ! -e "${root}/COMBINED_FASTQ_DONE" ]]; then
     [[ "$(stat --printf='%s' "${combined}")" -eq 34253341514 ]]
     touch "${root}/COMBINED_FASTQ_DONE"
 fi
-
-run_rad() {
-    if [[ -e "${root}/rad/DONE" ]]; then return; fi
-    /usr/bin/time -v -o "${root}/rad/time.txt" \
-        "${rad}" scan-wl \
-        -i "${combined}" -o "${root}/rad/MOB_RAD" \
-        -p CTACACGACGCTCTTCCGATCT -n 16 -e 0.3 \
-        -w "${design}" -t "${threads}" -k 10000 -v \
-        >"${root}/rad/stdout.log" 2>"${root}/rad/stderr.log"
-    test -s "${root}/rad/MOB_RAD.txt"
-    touch "${root}/rad/DONE"
-}
 
 run_blaze() {
     if [[ -e "${root}/blaze_expect918/DONE" ]]; then return; fi
@@ -83,14 +68,13 @@ run_flex() {
     )
 }
 
-echo "$(date -u +%FT%TZ) starting four complete-data selectors"
-run_rad & pid_rad=$!
+echo "$(date -u +%FT%TZ) starting BLAZE and Flexiplex complete-data selectors"
 run_blaze & pid_blaze=$!
 run_flex 0 & pid_f0=$!
 run_flex 8 & pid_f8=$!
 
 status=0
-for item in "rad:${pid_rad}" "blaze:${pid_blaze}" "flex_f0:${pid_f0}" "flex_f8:${pid_f8}"; do
+for item in "blaze:${pid_blaze}" "flex_f0:${pid_f0}" "flex_f8:${pid_f8}"; do
     label=${item%%:*}
     pid=${item##*:}
     if wait "${pid}"; then
@@ -102,73 +86,3 @@ for item in "rad:${pid_rad}" "blaze:${pid_blaze}" "flex_f0:${pid_f0}" "flex_f8:$
     fi
 done
 [[ "${status}" -eq 0 ]]
-
-if [[ -e "${root}/analysis_stage.tmp" ]]; then
-    mv "${root}/analysis_stage.tmp" \
-        "${root}/analysis_stage.tmp.stale.$(date -u +%Y%m%dT%H%M%SZ)"
-fi
-if [[ -e "${root}/analysis_stage" ]]; then
-    echo "Refusing to overwrite existing analysis_stage" >&2
-    exit 4
-fi
-python3 "${analysis_script}" --run-root "${root}" --truth "${truth}" \
-    --design "${design}" --output "${root}/analysis_stage.tmp" \
-    --expect-cells 918 \
-    --input-label "complete SRR12157794 plus SRR12157795 concatenated input"
-python3 "${figure_script}" --analysis "${root}/analysis_stage.tmp" \
-    --positions "${positions}"
-python3 "${root}/scripts/generate_report.py" \
-    --analysis "${root}/analysis_stage.tmp"
-
-mkdir -p "${root}/analysis_stage.tmp/scripts" \
-    "${root}/analysis_stage.tmp/source_outputs" \
-    "${root}/analysis_stage.tmp/provenance/logs"
-cp "${analysis_script}" "${root}/analysis_stage.tmp/scripts/analyze_callsets.py"
-cp "${figure_script}" "${root}/analysis_stage.tmp/scripts/render_figures.py"
-cp "${root}/scripts/generate_report.py" \
-    "${root}/analysis_stage.tmp/scripts/generate_report.py"
-cp "${root}/scripts/run_combined_benchmark.sh" \
-    "${root}/analysis_stage.tmp/scripts/run_combined_benchmark.sh"
-cp "${root}/rad/MOB_RAD.csv" \
-    "${root}/analysis_stage.tmp/source_outputs/RAD_barcode_counts.csv"
-cp "${root}/blaze_expect918/hq_design_counts.tsv" \
-    "${root}/analysis_stage.tmp/source_outputs/BLAZE_hq_design_counts.tsv"
-cp "${root}/flex_f0/MOB_f0_barcodes_counts.txt" \
-    "${root}/analysis_stage.tmp/source_outputs/Flexiplex_f0_barcode_counts.txt"
-cp "${root}/flex_f8/MOB_f8_barcodes_counts.txt" \
-    "${root}/analysis_stage.tmp/source_outputs/Flexiplex_f8_barcode_counts.txt"
-cp "${root}/rad/stdout.log" \
-    "${root}/analysis_stage.tmp/provenance/logs/RAD.stdout.log"
-cp "${root}/rad/stderr.log" \
-    "${root}/analysis_stage.tmp/provenance/logs/RAD.stderr.log"
-cp "${root}/blaze_expect918/stdout.log" \
-    "${root}/analysis_stage.tmp/provenance/logs/BLAZE.stdout.log"
-cp "${root}/blaze_expect918/stderr.log" \
-    "${root}/analysis_stage.tmp/provenance/logs/BLAZE.stderr.log"
-cp "${root}/flex_f0/stdout.log" \
-    "${root}/analysis_stage.tmp/provenance/logs/Flexiplex_f0.stdout.log"
-cp "${root}/flex_f0/stderr.log" \
-    "${root}/analysis_stage.tmp/provenance/logs/Flexiplex_f0.stderr.log"
-cp "${root}/flex_f8/stdout.log" \
-    "${root}/analysis_stage.tmp/provenance/logs/Flexiplex_f8.stdout.log"
-cp "${root}/flex_f8/stderr.log" \
-    "${root}/analysis_stage.tmp/provenance/logs/Flexiplex_f8.stderr.log"
-(
-    cd "${root}/analysis_stage.tmp"
-    find . -type f ! -name SHA256SUMS.txt -print0 |
-        sort -z | xargs -0 sha256sum > SHA256SUMS.txt
-)
-mv "${root}/analysis_stage.tmp" "${root}/analysis_stage"
-
-destination=external_data/wl_scan/20260731_lebrigand_MOB_complete_two_accession_benchmark
-if [[ -e "${destination}" ]]; then
-    echo "Refusing to overwrite existing durable export: ${destination}" >&2
-    exit 5
-fi
-staging="${destination}.staging.$$"
-mkdir -p "$(dirname "${destination}")" "${staging}"
-rsync -a --no-group "${root}/analysis_stage/" "${staging}/"
-mv "${staging}" "${destination}"
-touch "${root}/EXPORT_DONE"
-touch "${root}/DONE"
-echo "$(date -u +%FT%TZ) combined benchmark complete"
