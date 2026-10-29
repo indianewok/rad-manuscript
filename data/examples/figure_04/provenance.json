@@ -29,7 +29,7 @@
       "file": "three_input_metrics_example.tsv",
       "header_excluded_from_row_count": true,
       "scope": "bounded actual source excerpt; not a representative statistical sample",
-      "source_bytes": 72371,
+      "source_bytes": 72016,
       "source_data_row_numbers_1_based": [
         1,
         2,
@@ -42,7 +42,7 @@
         24
       ],
       "source_path": "source_data/figure_04/barcode_detection_metrics.tsv",
-      "source_sha256": "3b430a00f2c3a326e362e862f68cbd344813e7553bf8f03513080c9e6b8f37a4"
+      "source_sha256": "ae69d00e2265f911b1f5f3dc1015d1ba1f156fadfc1d96debc14630b886ba3b1"
     },
     {
       "columns": [

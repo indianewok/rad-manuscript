@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "metrics_sha256": "3b430a00f2c3a326e362e862f68cbd344813e7553bf8f03513080c9e6b8f37a4",
+  "metrics_sha256": "ae69d00e2265f911b1f5f3dc1015d1ba1f156fadfc1d96debc14630b886ba3b1",
   "method_settings": {
     "matched_inputs": 37,
     "tools": [
@@ -22,11 +22,11 @@
   "outputs": {
     "friedman.tsv": {
       "rows": 3,
-      "sha256": "44205056569c6aa7d15a87857952208f497facdfa1c15fe4ec44e58a12c05536"
+      "sha256": "0d9408782bf7270dcde2a86b1c7ad9c4590a37c831100441f58306affcea477a"
     },
     "dunn.tsv": {
       "rows": 6,
-      "sha256": "a0fbb65f6403c72fc151183970a445b821f3d163b0fd0e869a4867c641731e10"
+      "sha256": "10b3b0d16ce8c01aa99bb492b63b5a167d4bb3156a943b37f54feabe526e51a2"
     }
   }
 }

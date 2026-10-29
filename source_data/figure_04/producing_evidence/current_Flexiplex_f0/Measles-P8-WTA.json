@@ -1,0 +1,122 @@
+{
+  "dataset_id": "Measles-P8-WTA",
+  "tool": "Flexiplex",
+  "version": "1.02.6",
+  "threads": 16,
+  "software": {
+    "version": "1.02.6",
+    "binary": {
+      "filename": "flexiplex-linux",
+      "sha256": "6eee3a7113044d45e106dc74a541b9a53475311449bf49bd91cc912ba911c40e"
+    },
+    "filter_source": {
+      "filename": "main.py",
+      "version": "1.02",
+      "sha256": "672ab65cc2fe6fe9f48319a632d72e73c75a1d699b04d6b0f4ec887f5e6bfca0"
+    },
+    "dependency_versions": {
+      "python": "3.9.16 | packaged by conda-forge | (main, Feb  1 2023, 21:39:03) \n[GCC 11.3.0]",
+      "numpy": "1.23.5",
+      "pandas": "2.2.1"
+    },
+    "release": "v1.02.6",
+    "source_url": "https://github.com/DavidsonGroup/flexiplex/tree/v1.02.6",
+    "release_archive": {
+      "filename": "flexiplex-v1.02.6.tar.gz",
+      "download_url": "https://github.com/DavidsonGroup/flexiplex/releases/download/v1.02.6/flexiplex-v1.02.6.tar.gz",
+      "sha256": "21940bf4aaab28819728d22ebae3fafc3ecc8596948b7007d1f30fca64b5d16c",
+      "bytes": 2139131
+    },
+    "input_decoder": {
+      "name": "rapidgzip",
+      "version": "0.16.0",
+      "wheel_sha256": "85348bcd159ed5c5f7b4a92d8598d402cc24c24d921c7138e61a3915baf192be",
+      "wheel_download_url": "https://files.pythonhosted.org/packages/31/f8/db0c0f932d12e79e54501fc860af0ec7f3ca622f6f4a5446cdc0d8b1364f/rapidgzip-0.16.0-cp39-cp39-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "source_url": "https://github.com/mxmlnkn/rapidgzip"
+    }
+  },
+  "input": {
+    "path": "external_data/figure_04/inputs/Measles-P8-WTA.fastq.gz",
+    "input_format": "fastq.gz",
+    "sha256": "2b3816937fb8182d484f8682935687d7207752e3707bcde251632082de1f9f38",
+    "bytes": 197324862394,
+    "records": 270994675,
+    "quality_handling": "Complete native quality strings and read order",
+    "acquisition_record": "source_data/figure_04/run_records/Measles-P8-WTA.json"
+  },
+  "chemistry": "10x3v3",
+  "chemistry_catalogue": {
+    "path": "external_data/figure_04/catalogues/3M-february-2018-3v3.txt",
+    "sha256": "843a6f7038db8cb3c06f3dc21cc69d04139ffa10689780518d7a9e42dc2e819b",
+    "barcodes": 6794880
+  },
+  "reference": {
+    "path": "external_data/figure_04/references/Measles-P8-VDJ-enriched.reference.txt.gz",
+    "barcode_sha256": "89fb0507741f155b077180758f1cd2356199584f8c7f2af47eea6abae5558c54",
+    "barcodes": 10299,
+    "role": "Scoring only"
+  },
+  "commands": {
+    "input_stream": [
+      "rapidgzip",
+      "-d",
+      "-c",
+      "-P",
+      "16",
+      "--verify",
+      "external_data/figure_04/inputs/Measles-P8-WTA.fastq.gz"
+    ],
+    "discovery": [
+      "flexiplex",
+      "-d",
+      "10x3v3",
+      "-f",
+      "0",
+      "-e",
+      "2",
+      "-p",
+      "16",
+      "-n",
+      "results/figure_04/Measles-P8-WTA/Flexiplex/barcodes"
+    ],
+    "filter": [
+      "python3",
+      "external_data/software/flexiplex/scripts/flexiplex_filter/main.py",
+      "--whitelist",
+      "external_data/figure_04/catalogues/3M-february-2018-3v3.txt",
+      "--outfile",
+      "results/figure_04/Measles-P8-WTA/Flexiplex/selected_native.tsv",
+      "results/figure_04/Measles-P8-WTA/Flexiplex/barcodes_barcodes_counts.txt"
+    ]
+  },
+  "command": "rapidgzip -d -c -P 16 --verify external_data/figure_04/inputs/Measles-P8-WTA.fastq.gz | flexiplex -d 10x3v3 -f 0 -e 2 -p 16 -n results/figure_04/Measles-P8-WTA/Flexiplex/barcodes; python3 external_data/software/flexiplex/scripts/flexiplex_filter/main.py --whitelist external_data/figure_04/catalogues/3M-february-2018-3v3.txt --outfile results/figure_04/Measles-P8-WTA/Flexiplex/selected_native.tsv results/figure_04/Measles-P8-WTA/Flexiplex/barcodes_barcodes_counts.txt",
+  "environment": {
+    "PYTHONHASHSEED": "0",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "LANG": "C.UTF-8",
+    "LC_ALL": "C.UTF-8",
+    "TZ": "UTC",
+    "PYTHONNOUSERSITE": "1"
+  },
+  "native_exit_code": 0,
+  "filter_exit_code": 0,
+  "input_reads": 270994675,
+  "selected_barcode_sha256": "54ee75b800717a9d33d0668f70707dd824d11bbdae5c8885a496084c0274b80e",
+  "metrics": {
+    "calls": 9735,
+    "reference_n": 10299,
+    "tp": 9706,
+    "fp": 29,
+    "fn": 593,
+    "precision": 0.9970210580380072,
+    "recall": 0.9424215943295465,
+    "f1": 0.968952780273535
+  },
+  "native_receipt_sha256": "278bc07411f4f56ad0ea9f905f90ade2d9ca0a009ef5b9c99f5badd072e3141b",
+  "dependency_lock": "scripts/figure_04/flexiplex_f0/requirements.txt",
+  "scope": "Whitelist detection and filtering",
+  "display_dataset": "P8"
+}

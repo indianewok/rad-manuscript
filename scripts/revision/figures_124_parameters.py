@@ -98,12 +98,12 @@ for r in current:
   version=receipt['version'];commit=receipt['source_commit']
   threads=str(receipt.get('threads','not_recorded'));chemistry=receipt.get('chemistry','not_recorded')
   ev=str(receipt_path.relative_to(O));digest=receipt['binary_sha256']
- elif dataset=='ScMixology2':
+ elif dataset=='ScMixology2' or (tool=='Flexiplex' and selected_row['source_path'].startswith('source_data/figure_04/producing_evidence/current_Flexiplex_f0/')):
   native_path=O/selected_row['source_path']
   native=json.loads(native_path.read_text())
   if native['dataset_id']!=dataset or native['tool']!=tool:
-   raise ValueError('Current ScMixology2 native provenance differs: '+tool)
-  version=native['version'];commit=native['source_commit']
+   raise ValueError('Current native comparator provenance differs: '+tool)
+  version=native['version'];commit=native.get('source_commit','not_recorded')
   threads=str(native.get('threads','not_recorded'));chemistry=native.get('chemistry','not_recorded')
   software=native['software']
   digest=software['wheel']['sha256'] if tool=='BLAZE' else software['binary']['sha256']
@@ -112,6 +112,8 @@ for r in current:
   previous=wide_current.get((dataset,tool))
   if previous:
    payload={key:previous[key] for key in fields}
+   if tool=='BLAZE' and dataset in ('Measles-P7','Measles-P8-VDJ-enriched'):
+    payload['evidence']='source_data/figure_04/producing_evidence/'+dataset+'_BLAZE_run_sample.sh'
    payload.update(version=version if version!='not_recorded' else previous['version'],exact_command_or_recorded_settings=r['command'])
    if previous.get('evidence_original_sha256'):payload['evidence_original_sha256']=previous['evidence_original_sha256']
    add(**payload)

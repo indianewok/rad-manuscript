@@ -1,9 +1,9 @@
 paired_input_id	RAD	BLAZE	Flexiplex	input_status	independence_note
 ScTagger-S_flatQ20	0.970873786	0.943396226	1.000000000	native	physical or technical input; not asserted independent biological replicate
 ScTagger-L_flatQ20	1.000000000	0.942773640	0.750624688	native	physical or technical input; not asserted independent biological replicate
-P7	0.962184874	0.932596685	0.916339135	native	physical or technical input; not asserted independent biological replicate
-P8-enriched	0.954267522	0.957740797	0.952255582	native	physical or technical input; not asserted independent biological replicate
-P8	0.978283249	0.967381441	0.962018940	native	physical or technical input; not asserted independent biological replicate
+P7	0.962184874	0.932596685	0.915635546	native	physical or technical input; not asserted independent biological replicate
+P8-enriched	0.954267522	0.957740797	0.948268839	native	physical or technical input; not asserted independent biological replicate
+P8	0.978283249	0.967381441	0.968952780	native	physical or technical input; not asserted independent biological replicate
 PromethION_iPSC	0.880791255	0.875136911	0.875479978	native	physical or technical input; not asserted independent biological replicate
 RAGEseq-cell-line	0.921146953	0.767828418	0.839515714	native	physical or technical input; not asserted independent biological replicate
 RAGEseq-TNBC-LN	0.966944193	0.747799464	0.759318534	native	physical or technical input; not asserted independent biological replicate
@@ -12,7 +12,7 @@ LongBench-SN-ONT	0.965206132	0.906646073	0.966532576	native	physical or technica
 LongBench-SC-PB	0.963903363	0.955057280	0.937556235	native	physical or technical input; not asserted independent biological replicate
 LongBench-SN-PB	0.949308027	0.906191796	0.963709006	native	physical or technical input; not asserted independent biological replicate
 LeBrigand-MOB	0.998363339	0.958002270	0.351885099	native	physical or technical input; not asserted independent biological replicate
-Isosceles-ovarian-GSE248115	0.957694666	0.951794436	0.933044420	native	physical or technical input; not asserted independent biological replicate
+Isosceles-ovarian-GSE248115	0.957694666	0.951794436	0.934660320	native	physical or technical input; not asserted independent biological replicate
 Hipp_SN_m1_ONT_Run1	0.954281736	0.899474965	0.944903473	native	physical or technical input; not asserted independent biological replicate
 Hipp_SN_m1_ONT_Run2	0.943913095	0.873168179	0.930267413	native	physical or technical input; not asserted independent biological replicate
 Hipp_SN_m1_ONT_Run3	0.947910972	0.875991285	0.556906202	native	physical or technical input; not asserted independent biological replicate

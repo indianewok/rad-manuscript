@@ -14,6 +14,4 @@ scoring_truth	external_data/barcode_whitelists/mmr_p8_sc_bcs.txt
 scoring_truth_barcodes	10299
 blaze_version	2.6.0a0
 blaze_selector	expect-cells=10299;minQ=15;kit=3v3;max_edit_distance=2
-flexiplex_version	1.02.6
-flexiplex_selector	10x3v3;f=8;edit_distance=2
 scope	complete FASTQ; de novo whitelist selection and full demultiplexing

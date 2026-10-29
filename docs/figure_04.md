@@ -34,6 +34,8 @@ The RAGE-seq TNBC lymph-node reference includes deposited short-read barcodes an
 
 ScMixology2 uses the same complete 25,164,948-read FASTQ for native RAD, BLAZE 2.5.1 and Flexiplex 1.02.7 (release v1.02.7.1) runs. BLAZE uses `--expect-cells 500 --minQ 15 --max-edit-distance 2`; Flexiplex uses `-d 10x3v3 -f 0 -e 2` followed by `flexiplex-filter` against the complete chemistry catalogue. Both comparators use 16 threads. The matched 248-barcode Cell Ranger reference is used for scoring. [Commands and outputs](../scripts/figure_04/scmixology2/README.md) provide the per-tool steps and pinned software identities.
 
+P7, P8-enriched, P8 and Isosceles ovarian use Flexiplex 1.02.6 with `-d 10x3v3 -f 0 -e 2`, followed by filter 1.02 against the complete chemistry catalogue. Each run uses the complete input and 16 tool threads. [Per-input commands](../scripts/figure_04/flexiplex_f0/README.md) and [execution records](../source_data/figure_04/producing_evidence/current_Flexiplex_f0/) give the input identities and selected-barcode results.
+
 ERR15095097 is deposited as MPNST2, but its raw FASTQ barcode identities disagree with the deposited MPNST2 processed-cell set. All three tools are scored against the deposited MPNST2 reference. This unresolved sample/reference pairing affects interpretation of that input. The public [library metadata](https://www.ebi.ac.uk/biostudies/files/E-MTAB-15190/E-MTAB-15190.sdrf.txt) and [processed MPNST2 barcodes](https://www.ebi.ac.uk/biostudies/files/E-MTAB-15190/MPNST2_scNaUmiSeq_PromethION_barcodes.tsv.gz) identify the deposited sample.
 
 ## Walk through one dataset
