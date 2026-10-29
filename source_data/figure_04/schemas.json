@@ -114,8 +114,7 @@
       "dataset_family",
       "unit_type",
       "reference_type",
-      "validation_tier",
-      "notes"
+      "validation_tier"
     ],
     "primary_key": [
       "canonical_id"
