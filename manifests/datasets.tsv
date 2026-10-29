@@ -1,9 +1,9 @@
 dataset_id	family	accessions
 ScTagger-S_flatQ20	ScTagger	10.6084/m9.figshare.19740475.v1
 ScTagger-L_flatQ20	ScTagger	10.6084/m9.figshare.19740475.v1
-Measles-P7	Measles	PRJNA1087553
-Measles-P8-VDJ-enriched	Measles	PRJNA1087553
-Measles-P8-WTA	Measles	PRJNA1087553
+P7	Measles	PRJNA1087553
+P8-enriched	Measles	PRJNA1087553
+P8	Measles	PRJNA1087553
 PromethION_iPSC	PromethION iPSC	PRJEB54718/ERR9958135; 10.26188/20335203.v1
 RAGEseq-cell-line	RAGE-seq	PRJEB28878
 RAGEseq-TNBC-LN	RAGE-seq	PRJEB28878

@@ -101,7 +101,7 @@ def main():
         values = np.array([[float(by_key[dataset, tool][key]) for tool in TOOLS] for dataset in datasets])
         axis.imshow(values, cmap='YlGnBu', vmin=0, vmax=1, aspect='auto')
         axis.set(xticks=range(3), xticklabels=TOOLS, yticks=range(len(datasets)),
-                 yticklabels=datasets if index == 0 else [], title=title)
+                 yticklabels=[by_key[dataset, 'RAD']['display_dataset'] for dataset in datasets] if index == 0 else [], title=title)
         axis.tick_params(axis='y', length=0, labelsize=8)
         axis.tick_params(axis='x', bottom=False, top=True, labelbottom=False, labeltop=True)
         for row in range(len(datasets)):

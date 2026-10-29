@@ -4,6 +4,8 @@
 
 The [per-input tool table](../source_data/figure_04/tool_parameters.tsv) records the RAD, BLAZE and Flexiplex versions and analysis flags; unavailable versions are marked `NA`. BLAZE and Flexiplex settings vary by input. The [RAD run records](../source_data/figure_04/run_records/) specify each input, catalogue and matched reference; [execution records](../source_data/figure_04/producing_evidence/current_RAD/) report the selected build and output counts.
 
+P8 denotes the whole-transcriptome library; P8-enriched denotes its VDJ-enriched library.
+
 ![Paired barcode discovery metrics](../figures/figure_04/barcode_discovery_paired.png)
 
 Each point is one sequencing input. Lines join the three tools on that input; black bars show medians. Labels show Dunn-adjusted P-values for the two RAD comparisons within each metric. Individual libraries and technical runs retain their own input identifiers.

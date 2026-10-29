@@ -50,7 +50,8 @@ def main():
     if inventory is not None:
         registered_ids = [row['dataset_id'] for row in inventory]
         assert len(registered_ids) == len(set(registered_ids)), 'Dataset IDs must be unique'
-        assert benchmark_ids.issubset(set(registered_ids)), 'Every benchmark input must be registered'
+        benchmark_labels = {row.get('display_dataset', row['canonical_id']) for row in metrics}
+        assert benchmark_labels.issubset(set(registered_ids)), 'Every benchmark input must be registered'
         assert all(row['accessions'] for row in inventory)
     ids = sorted(benchmark_ids)
     assert len(ids) == 37, 'Figure 4 must retain exactly 37 distinct input identities'

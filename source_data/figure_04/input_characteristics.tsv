@@ -1,9 +1,9 @@
 dataset	num_seqs	sum_len	min_len	avg_len	max_len	Q1	Q2	Q3	sum_gap	N50	N50_num	Q20(%)	Q30(%)	AvgQual	GC(%)	canonical_id	summary_origin
 ScTagger-S_flatQ20	98873	320489068	189	3241.4	11252	628.0	1365.0	5709.0	0	5780	1894	100.00	0.00	20.00	44.85	ScTagger-S_flatQ20	saved all-read SeqKit table; exact invocation/version unresolved
 ScTagger-L_flatQ20	4993805	8394808882	160	1681.0	21207	653.0	974.0	2037.0	0	2547	13478	100.00	0.00	20.00	49.14	ScTagger-L_flatQ20	saved all-read SeqKit table; exact invocation/version unresolved
-Measles-P7	106009315	120879259896	18	1140.3	1462675	728.0	992.0	1351.0	0	1218	17996	46.32	7.93	10.25	47.29	Measles-P7	saved all-read SeqKit table; exact invocation/version unresolved
-Measles-P8-VDJ-enriched	92337198	98723180989	20	1069.2	694917	997.0	1046.0	1084.0	0	1061	5655	47.52	4.10	11.88	53.67	Measles-P8-VDJ-enriched	saved all-read SeqKit table; exact invocation/version unresolved
-Measles-P8-WTA	270994675	218767452454	20	807.3	749939	600.0	753.0	946.0	0	847	10712	61.18	13.37	12.25	43.76	Measles-P8-WTA	saved all-read SeqKit table; exact invocation/version unresolved
+P7	106009315	120879259896	18	1140.3	1462675	728.0	992.0	1351.0	0	1218	17996	46.32	7.93	10.25	47.29	Measles-P7	saved all-read SeqKit table; exact invocation/version unresolved
+P8-enriched	92337198	98723180989	20	1069.2	694917	997.0	1046.0	1084.0	0	1061	5655	47.52	4.10	11.88	53.67	Measles-P8-VDJ-enriched	saved all-read SeqKit table; exact invocation/version unresolved
+P8	270994675	218767452454	20	807.3	749939	600.0	753.0	946.0	0	847	10712	61.18	13.37	12.25	43.76	Measles-P8-WTA	saved all-read SeqKit table; exact invocation/version unresolved
 PromethION_iPSC	61967455	77717428051	9	1254.2	807745	743.0	1066.0	1641.0	0	1510	7611	57.59	14.28	13.03	44.99	PromethION_iPSC	saved all-read SeqKit table; exact invocation/version unresolved
 RAGEseq-cell-line	20346396	16466857803	5	809.3	486586	585.0	768.0	996.0	0	912	4553	12.62	0.00	7.86	52.35	RAGEseq-cell-line	saved all-read SeqKit table; exact invocation/version unresolved
 RAGEseq-TNBC-LN	23044761	24041380990	5	1043.2	34818	768.0	1010.0	1237.0	0	1082	4837	14.31	0.00	8.97	52.20	RAGEseq-TNBC-LN	saved all-read SeqKit table; exact invocation/version unresolved

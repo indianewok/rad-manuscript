@@ -6,6 +6,13 @@ from pathlib import Path, PurePosixPath
 import re
 import shlex
 
+DATASET_LABELS = {'Measles-P7': 'P7', 'Measles-P8-WTA': 'P8', 'Measles-P8-VDJ-enriched': 'P8-enriched'}
+
+
+def display_dataset(dataset):
+    return DATASET_LABELS.get(dataset, dataset)
+
+
 FIELDS = ['dataset', 'tool', 'version', 'command']
 SEVEN_FIELDS = ['dataset', 'tool', 'version', 'source_commit', 'threads', 'chemistry', 'command']
 LEGACY_FIELDS = ['analysis', 'dataset', 'tool', 'replicate', 'version',
@@ -210,6 +217,7 @@ def main():
     projected = []
     for source in rows:
         row = {key: source[key] for key in FIELDS}
+        row['dataset'] = display_dataset(row['dataset'])
         row['version'] = display_version(row['version'])
         row['command'] = compact_command(row['command'], row['tool'], row['version'])
         projected.append(row)

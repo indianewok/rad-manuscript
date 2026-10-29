@@ -16,6 +16,8 @@ from pathlib import Path
 FIELDS = ['analysis', 'dataset', 'tool', 'replicate', 'version',
           'source_commit', 'threads', 'chemistry', 'command']
 UNAVAILABLE = 'unavailable: original expanded command was not recorded'
+DATASET_LABELS = {'Measles-P7': 'P7', 'Measles-P8-WTA': 'P8', 'Measles-P8-VDJ-enriched': 'P8-enriched'}
+CANONICAL_DATASETS = {label: dataset for dataset, label in DATASET_LABELS.items()}
 
 
 def details_path_name(family):
@@ -165,6 +167,8 @@ def _script_commands(script, tool, overrides=None, flank=None, discovery_only=Fa
 def _evidence_command(row, root):
     tool = row.get('tool', row.get('component', ''))
     run = row.get('producing_run', '')
+    parts = run.split('|', 1)
+    run = CANONICAL_DATASETS.get(parts[0], parts[0]) + ('|' + parts[1] if len(parts) == 2 else '')
     candidates = [_text(x) for x in row.get('evidence', '').split(';')]
     discovery = row.get('experiment', '').startswith('barcode discovery')
     if tool == 'CellSNP-lite / Vireo':
@@ -290,7 +294,7 @@ def project_parameters(rows, family, repo_root):
             analysis = 'Figure '+str(int(row['figure']))+' '+row['experiment']
             if row['experiment'] == 'complete-input timing':
                 analysis += ' / '+parts[-1]
-            dataset = parts[0]
+            dataset = DATASET_LABELS.get(parts[0], parts[0]) if row['figure'] == '04' else parts[0]
             if row['figure'] == '02' and len(parts) == 4:
                 dataset = 'ScTagger-'+parts[0]+' / '+parts[1]+' / '+parts[2]
             result = dict(analysis=analysis, dataset=dataset, tool=row['tool'],
@@ -314,7 +318,7 @@ def project_parameters(rows, family, repo_root):
         if family == '567' and row['component'] == 'RAD' and 'candidate receptor' in row['panels']:
             result['threads'] = 'not_recorded'
         if family == '124' and row['tool'] == 'BLAZE' and row['producing_run'].startswith(
-                ('Measles-P7|', 'Measles-P8-VDJ-enriched|')):
+                ('Measles-P7|', 'Measles-P8-VDJ-enriched|', 'P7|', 'P8-enriched|')):
             # The executed run_sample.sh sets threads=24. Older summary rows
             # incorrectly said 32; their original values remain in evidence.
             if re.search(r'--threads\s+"?24\b', result['command']):

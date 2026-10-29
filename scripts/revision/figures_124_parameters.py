@@ -79,13 +79,14 @@ if current and list(current[0])!=current_fields:
  raise ValueError('Figure4 uses the four-column parameter table')
 selected=rows(O/'source_data/figure_04/barcode_detection_metrics.tsv')
 keys={(r['canonical_id'],r['tool']) for r in selected}
-if len(current)!=111 or {(r['dataset'],r['tool']) for r in current}!=keys:
+canonical_by_display={r['display_dataset']:r['canonical_id'] for r in selected}
+if len(current)!=111 or {(canonical_by_display.get(r['dataset'],r['dataset']),r['tool']) for r in current}!=keys:
  raise ValueError('Current Figure4 tool parameters must cover all37 three-tool inputs')
 producers=O/'source_data/figure_04/producing_run_evidence.tsv'
 wide_current=O/'manifests'/details_path_name('124')
 wide_current={(row['applies_to'],row['tool']):row for row in rows(wide_current) if row['figure']=='04'} if wide_current.exists() else {}
 for r in current:
- dataset,tool=r['dataset'],r['tool']
+ dataset,tool=canonical_by_display.get(r['dataset'],r['dataset']),r['tool']
  version=r['version'] if r['version'] not in ('','NA','unrecovered','not_recorded') else 'not_recorded'
  commit=threads=chemistry='not_recorded'
  selected_row=next(x for x in selected if x['canonical_id']==dataset and x['tool']==tool)

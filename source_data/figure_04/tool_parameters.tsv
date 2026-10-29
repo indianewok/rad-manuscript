@@ -5,15 +5,15 @@ ScTagger-S_flatQ20	Flexiplex	1.02.6	flexiplex; flexiplex-filter --whitelist 3M-f
 ScTagger-L_flatQ20	RAD	1.0.2	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
 ScTagger-L_flatQ20	BLAZE	2.6.0a0	blaze --expect-cells 5000 --no-emtpy-drops --minimal_stdout --no-demultiplexing
 ScTagger-L_flatQ20	Flexiplex	1.02.6	flexiplex; flexiplex-filter --whitelist 3M-february-2018-3v3.txt
-Measles-P7	RAD	1.0.2	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
-Measles-P7	BLAZE	2.6.0a0	blaze --expect-cells 964 --minimal_stdout --overwrite
-Measles-P7	Flexiplex	1.02.6	flexiplex; flexiplex-filter --whitelist 10x_3v3_full_whitelist.txt
-Measles-P8-VDJ-enriched	RAD	1.0.2	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
-Measles-P8-VDJ-enriched	BLAZE	2.6.0a0	blaze --expect-cells 10299 --minimal_stdout --overwrite
-Measles-P8-VDJ-enriched	Flexiplex	1.02.6	flexiplex; flexiplex-filter --whitelist 10x_3v3_full_whitelist.txt
-Measles-P8-WTA	RAD	1.0.2	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
-Measles-P8-WTA	BLAZE	2.6.0a0	blaze --expect-cells 10299 --minimal_stdout --overwrite
-Measles-P8-WTA	Flexiplex	1.02.6	flexiplex; flexiplex-filter --whitelist 3M-february-2018-3v3.txt
+P7	RAD	1.0.2	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
+P7	BLAZE	2.6.0a0	blaze --expect-cells 964 --minimal_stdout --overwrite
+P7	Flexiplex	1.02.6	flexiplex; flexiplex-filter --whitelist 10x_3v3_full_whitelist.txt
+P8-enriched	RAD	1.0.2	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
+P8-enriched	BLAZE	2.6.0a0	blaze --expect-cells 10299 --minimal_stdout --overwrite
+P8-enriched	Flexiplex	1.02.6	flexiplex; flexiplex-filter --whitelist 10x_3v3_full_whitelist.txt
+P8	RAD	1.0.2	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
+P8	BLAZE	2.6.0a0	blaze --expect-cells 10299 --minimal_stdout --overwrite
+P8	Flexiplex	1.02.6	flexiplex; flexiplex-filter --whitelist 3M-february-2018-3v3.txt
 PromethION_iPSC	RAD	1.0.2	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 3M-february-2018-3v3.txt_bitlist.csv.gz
 PromethION_iPSC	BLAZE	2.6.0a0	blaze --expect-cells 500 --no-demultiplexing --no-emtpy-drops --overwrite
 PromethION_iPSC	Flexiplex	1.02.6	flexiplex; flexiplex-filter -v -w 3M-february-2018.txt

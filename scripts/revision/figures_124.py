@@ -408,6 +408,8 @@ class Build:
         folder=self.out/'source_data/figure_04'
         metrics=rows(folder/'barcode_detection_metrics.tsv')
         inventory=rows(folder/'sample_inventory.tsv')
+        canonical_by_display={r['display_dataset']:r['canonical_id'] for r in inventory}
+        canonical_dataset=lambda value: canonical_by_display.get(value,value)
         ids=[r['canonical_id'] for r in inventory]
         self.check('F4_current_37_inputs',len(ids)==len(set(ids))==37,37,len(ids),folder/'sample_inventory.tsv')
         keys={(r['canonical_id'],r['tool']) for r in metrics}
@@ -416,24 +418,24 @@ class Build:
         for r in metrics:check_metrics(r,int(r['reference_n']))
         parameters=rows(folder/'tool_parameters.tsv')
         self.check('F4_current_parameter_pairs',len(parameters)==111 and
-                   {(r['dataset'],r['tool']) for r in parameters}==keys,
+                   {(canonical_dataset(r['dataset']),r['tool']) for r in parameters}==keys,
                    'same111 input/tool records',len(parameters),folder/'tool_parameters.tsv')
         parameter_fields=['dataset','tool','version','command']
         self.check('F4_current_parameter_columns',bool(parameters) and list(parameters[0])==parameter_fields,
                    parameter_fields,list(parameters[0]) if parameters else [],folder/'tool_parameters.tsv')
         rad=[r for r in parameters if r['tool']=='RAD']
-        receipts={r['dataset']:json.loads((folder/'producing_evidence/current_RAD'/(r['dataset']+'.json')).read_text()) for r in rad}
+        receipts={canonical_dataset(r['dataset']):json.loads((folder/'producing_evidence/current_RAD'/(canonical_dataset(r['dataset'])+'.json')).read_text()) for r in rad}
         self.check('F4_current_RAD_source',len(rad)==37 and all(
-                   receipts[r['dataset']]['source_commit']=='4acbe004ba11b150d6832395452632f367a6e6c1' and
-                   receipts[r['dataset']]['dataset_id']==r['dataset'] and receipts[r['dataset']]['max_error']==0.3
+                   receipts[canonical_dataset(r['dataset'])]['source_commit']=='4acbe004ba11b150d6832395452632f367a6e6c1' and
+                   receipts[canonical_dataset(r['dataset'])]['dataset_id']==canonical_dataset(r['dataset']) and receipts[canonical_dataset(r['dataset'])]['max_error']==0.3
                    for r in rad),'RAD4acbe00, recorded error0.3',len(rad),folder/'tool_parameters.tsv')
         for metric in ('precision','recall','f1'):
             paired=rows(folder/('paired_'+metric+'.tsv'))
-            self.check('F4_current_paired_'+metric,[r['paired_input_id'] for r in paired]==ids,
+            self.check('F4_current_paired_'+metric,[canonical_dataset(r['paired_input_id']) for r in paired]==ids,
                        'same37 input order',len(paired),folder/('paired_'+metric+'.tsv'))
             for r in paired:
                 for tool in TOOLS:
-                    expected=next(x[metric] for x in metrics if x['canonical_id']==r['paired_input_id'] and x['tool']==tool)
+                    expected=next(x[metric] for x in metrics if x['canonical_id']==canonical_dataset(r['paired_input_id']) and x['tool']==tool)
                     if r[tool]!=expected:raise ValueError('Current paired metric differs from source table')
         self.task('F4-01','ready','Validated current37 input triples, count/metric identities and pinned RAD parameters.',
                   'Current paired tables retain the saved Friedman/Dunn methods; native Prism recalculation/export remains a separate private handoff.')
