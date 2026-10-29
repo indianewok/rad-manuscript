@@ -64,6 +64,8 @@ def tool_commands(command, tool):
         return []
     commands = []
     for segment in command_segments(shell_tokens(command)):
+        if segment[0] == "cd":
+            continue
         for index, token in enumerate(segment):
             name = PurePosixPath(token).name
             prefix = None

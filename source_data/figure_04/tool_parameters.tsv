@@ -18,7 +18,7 @@ PromethION_iPSC	RAD	1.0.2	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whi
 PromethION_iPSC	BLAZE	2.6.0a0	blaze --expect-cells 500 --no-demultiplexing --no-emtpy-drops --overwrite
 PromethION_iPSC	Flexiplex	1.02.6	flexiplex; flexiplex-filter -v -w 3M-february-2018.txt
 RAGEseq-cell-line	RAD	1.0.2	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 737K-august-2016.txt
-RAGEseq-cell-line	BLAZE	2.6.0a0	blaze; blaze --expect-cells 4505 --10x-kit-version 3v2 --overwrite
+RAGEseq-cell-line	BLAZE	2.6.0a0	blaze --expect-cells 4505 --10x-kit-version 3v2 --overwrite
 RAGEseq-cell-line	Flexiplex	1.02.6	flexiplex -d 10x3v2; flexiplex-filter --whitelist 10x_3v2_full_whitelist.txt
 RAGEseq-TNBC-LN	RAD	1.0.2	rad scan-wl --adapter_seq CTACACGACGCTCTTCCGATCT --whitelist 737K-august-2016.txt
 RAGEseq-TNBC-LN	BLAZE	2.6.0a0	blaze --expect-cells 10433 --10x-kit-version 3v2 --overwrite
