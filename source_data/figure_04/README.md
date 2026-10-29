@@ -4,7 +4,9 @@ All 37 RAD discovery results use RAD 1.0.2 at commit
 `4acbe004ba11b150d6832395452632f367a6e6c1`, explicit adapter error `0.3`,
 and the complete selected input.
 
-- [Tool versions and literal commands](tool_parameters.tsv): all 111 input–tool records, with nine columns.
+The `command` column shows recorded tool flags; the [run records](run_records/) and [producing evidence](producing_evidence/) contain the supporting commands and settings.
+
+- [Tool versions and flags](tool_parameters.tsv): all 111 input–tool records, with nine columns.
 - [Metrics](barcode_detection_metrics.tsv): calls, reference size, TP, FP, FN, precision, recall and F1 for each input and tool.
 - [Friedman](friedman.tsv) and [Dunn](dunn.tsv) results: the existing tests recalculated from all 37 paired inputs.
 - [Run records](run_records/): per-dataset RAD input identities, full chemistry catalogues and matched references.

@@ -1,0 +1,31 @@
+{
+  "dataset": "LongBench-SN-PB",
+  "tool": "Flexiplex",
+  "version": "1.02.6",
+  "source_commit": "not_recorded",
+  "selected_barcodes": 12016,
+  "selected_set_sha256": "8e6fc261538b7f8e180d6261f74de2d63ee7124777ffccf804da66eef16207d1",
+  "selected_set_matches_current_figure4": true,
+  "current_callset_path": "data/figure_04/identifier_sets/LongBench-SN-PB.Flexiplex.txt.gz",
+  "current_callset_sha256": "fe93726082151af54759a720e71fb62f0978ac84e1b7fae23c2335436c66370b",
+  "source_selected_list": {
+    "path": "external_data/reviewer_comment_data/LongBench_comps/full_A_to_B_audit_20260731/provenance/selected_whitelists/flex_v1026/SN_PB/SN_PB_flexiplex_whitelist.txt",
+    "sha256": "8e6fc261538b7f8e180d6261f74de2d63ee7124777ffccf804da66eef16207d1"
+  },
+  "source_producer_metadata": {
+    "path": "external_data/reviewer_comment_data/LongBench_comps/full_A_to_B_audit_20260731/provenance/producers/flex_v1026/SN_PB/run_metadata.txt",
+    "sha256": "60b15d51d53d0e8bd6db3743eaad9a94866a4d1d6a956d8eaadc60b39e859680"
+  },
+  "deposited_producer_metadata": {
+    "path": "source_data/figure_04/producing_evidence/LongBench-SN-PB_Flexiplex_producer_metadata.txt",
+    "sha256": "2339c8a86c79b46e0e3d6554ca8c6f16eeeeb6b77d0ba1f7187e41c13fca1887"
+  },
+  "source_runbook": {
+    "path": "external_data/reviewer_comment_data/LongBench_comps/runbooks_20260803/05_SN_PB_ALL_TOOLS_TO_VIREO.md",
+    "sha256": "4b22c9c57f93b08c7ea9808edd47fc8311115b2a2eb19b8689a60de61c71b6ea"
+  },
+  "recorded_discovery_flank_edit_distance": 0,
+  "recorded_producer_threads": 16,
+  "demultiplexing_binary_sha256": "38dccd37f1747e5105b62eacde572b7e4c5206fb925dc1fdbe8210ffe8b1e8c4",
+  "demultiplexing_flank_edit_distance": 8
+}

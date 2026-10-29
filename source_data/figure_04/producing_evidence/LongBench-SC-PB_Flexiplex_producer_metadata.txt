@@ -1,0 +1,10 @@
+dataset=LongBench-SC-PB
+flexiplex_version=1.02.6
+input=external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_longbench_20260726/data/sc_sn/raw_fastq/SC_PB.fastq.gz
+selected_whitelist=external_data/reviewer_comment_data/scratch_preservation_20260921/files/rad_longbench_20260726/benchmarks/flexiplex_valid_to_valid_correction_audit_20260728/inputs/SC_PB_flexiplex_whitelist.txt
+selected_barcodes=5903
+recorded_threads=16
+discovery_flank_edit_distance=0
+demultiplexing_flank_edit_distance=8
+demultiplexing_command=pigz -dc INPUT | flexiplex-audit -d 10x3v3 -f 8 -e 2 -k SELECTED -p THREADS -n PREFIX > /dev/null
+demultiplexing_binary_sha256=38dccd37f1747e5105b62eacde572b7e4c5206fb925dc1fdbe8210ffe8b1e8c4
