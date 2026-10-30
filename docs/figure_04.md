@@ -6,6 +6,13 @@ The [per-input tool table](../source_data/figure_04/tool_parameters.tsv) records
 
 P8 denotes the whole-transcriptome library; P8-enriched denotes its VDJ-enriched library.
 
+Flexiplex barcode discovery used these flank-distance conditions. The [per-input tool table](../source_data/figure_04/tool_parameters.tsv) explicitly lists `-f` for every Flexiplex result.
+
+| Flexiplex condition | Inputs | Number of inputs |
+|---|---|---:|
+| `-f 0` | P7, P8-enriched and P8; all four LongBench inputs; Isosceles ovarian; all ten Tilgner hippocampus inputs; all four MPNST inputs; ScMixology2 | 23 |
+| `-f 8` | ScTagger-S and ScTagger-L (flat Q20); PromethION iPSC; both RAGE-seq inputs; LeBrigand-MOB; all eight Engblom tonsil inputs | 14 |
+
 ![Paired barcode discovery metrics](../figures/figure_04/barcode_discovery_paired.png)
 
 Each point is one sequencing input. Lines join the three tools on that input; black bars show medians. Labels show Dunn-adjusted P-values for the two RAD comparisons within each metric. Individual libraries and technical runs retain their own input identifiers.
