@@ -1,0 +1,18 @@
+{
+	"@class": "FENGraphSheet",
+	"$id": "sheets/graph_sheet.schema.json",
+	"uid": "238E2DC1-408E-4BA9-9C65-DC5397A1F59D",
+	"fenID": 36,
+	"title": "Primary ED2 - Myoblast cells",
+	"isCustomTitle": true,
+	"isAutoCreated": true,
+	"floatingNotes": [
+		"62D68233-4C46-441C-8C75-65655144B5F3"
+	],
+	"inputDataSets": [
+		"6BAB354C-AEB6-4CF1-B036-D56C965FDCD6",
+		"3FF32FF6-851D-49D1-A832-512275EC4FAE",
+		"50F45BE9-8C70-4F40-BDD7-58DF9777A132",
+		"24F1CC25-EB26-43BA-B27B-4EAB024E812A"
+	]
+}

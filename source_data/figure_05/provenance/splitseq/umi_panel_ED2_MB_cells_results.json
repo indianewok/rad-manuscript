@@ -1,0 +1,149 @@
+{
+	"@class": "AnalysisResults",
+	"$id": "analyses/simple_linear_regression/results.schema.json",
+	"version": "0.0.0",
+	"content": {
+		"status": {
+			"error": "VALID",
+			"warning": []
+		},
+		"models": {
+			"5adc47cc-57b2-5668-b8d2-25ca4abc91a7": {
+				"id": {
+					"col": {
+						"uid": "6BAB354C-AEB6-4CF1-B036-D56C965FDCD6",
+						"title": "RAD ED2 LR",
+						"idx": 0
+					}
+				},
+				"value": {
+					"model": {
+						"status": "COMPLETED",
+						"equation": "Y = 0.1638*X + 310.0",
+						"parameters": {
+							"Slope": {
+								"estimate": 0.1638184114207894,
+								"se": 0.0026738514733303568,
+								"ci": {
+									"lower": 0.15851946540136538,
+									"upper": 0.16911735744021342,
+									"level": 95.0
+								},
+								"significanceTest": {
+									"status": "VALID",
+									"f": 3753.6248138183073,
+									"dfNumerator": 1.0,
+									"dfDenominator": 110.0,
+									"pValue": {
+										"value": 7.555980008778685e-87,
+										"level": 0.05,
+										"isSignificant": true,
+										"state": "P_VALUE_EQUAL"
+									}
+								}
+							},
+							"Y-intercept": {
+								"estimate": 310.0281708816874,
+								"se": 117.53287831952231,
+								"ci": {
+									"lower": 77.10559311899468,
+									"upper": 542.9507486443802,
+									"level": 95.0
+								}
+							},
+							"X-intercept": {
+								"estimate": -1892.5111542275843,
+								"se": "undefined",
+								"ci": {
+									"lower": -3405.8944873127184,
+									"upper": -458.50528498408244,
+									"level": 95.0
+								}
+							}
+						},
+						"goodnessOfFit": {
+							"df": 110.0,
+							"lfv": 56031315.82106137,
+							"r2": 0.9715293266554808,
+							"syx": 713.7055403829265
+						}
+					},
+					"dataSummary": {
+						"xValues": 112,
+						"yReplicates": 1,
+						"pointsAnalyzed": 112,
+						"pointsSkipped": 0
+					}
+				}
+			},
+			"5c46cb95-053a-5033-8316-fe1e35cda47b": {
+				"id": {
+					"col": {
+						"uid": "3FF32FF6-851D-49D1-A832-512275EC4FAE",
+						"title": "FLAMESv2 (Flexiplex)\rED2 + poly(T): LR UMIs",
+						"idx": 1
+					}
+				},
+				"value": {
+					"model": {
+						"status": "COMPLETED",
+						"equation": "Y = 0.08928*X + 800.2",
+						"parameters": {
+							"Slope": {
+								"estimate": 0.08927667494834547,
+								"se": 0.004625621672325014,
+								"ci": {
+									"lower": 0.08010977850985367,
+									"upper": 0.09844357138683728,
+									"level": 95.0
+								},
+								"significanceTest": {
+									"status": "VALID",
+									"f": 372.5081641707152,
+									"dfNumerator": 1.0,
+									"dfDenominator": 110.0,
+									"pValue": {
+										"value": 4.160489524748333e-37,
+										"level": 0.05,
+										"isSignificant": true,
+										"state": "P_VALUE_EQUAL"
+									}
+								}
+							},
+							"Y-intercept": {
+								"estimate": 800.2101463495437,
+								"se": 203.32566508953252,
+								"ci": {
+									"lower": 397.26640230867764,
+									"upper": 1203.1538903904097,
+									"level": 95.0
+								}
+							},
+							"X-intercept": {
+								"estimate": -8963.261084852642,
+								"se": "undefined",
+								"ci": {
+									"lower": -14785.620776109467,
+									"upper": -4099.119336967341,
+									"level": 95.0
+								}
+							}
+						},
+						"goodnessOfFit": {
+							"df": 110.0,
+							"lfv": 167685874.73197496,
+							"r2": 0.7720245828605686,
+							"syx": 1234.6728485789076
+						}
+					},
+					"dataSummary": {
+						"xValues": 112,
+						"yReplicates": 1,
+						"pointsAnalyzed": 112,
+						"pointsSkipped": 0
+					}
+				}
+			}
+		}
+	}
+}

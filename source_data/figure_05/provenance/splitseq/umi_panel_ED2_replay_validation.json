@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "script_sha256": "46011425a048f01f2aee5b9979e9a4411e1e2797841d4d4644953833f6c41a23",
+  "cells": 568,
+  "count_values_compared": 2272,
+  "table_sha256": "a5830d892b4424133b568f5bcdbe817c299b54f9a40525a445bd978e1edd4ff6",
+  "complete_replay": "PASS",
+  "mutation_guard": {
+    "changed_value": "One expected RAD UMI count increased by one",
+    "exit_code": 1,
+    "status": "FAILED",
+    "mismatches": 1,
+    "output_valid": false
+  },
+  "rad_ed2": {
+    "assignment_rows": 2536299,
+    "published_assignment_rows": 2079870,
+    "published_10nt_umi_rows": 2011781,
+    "outside_published_cells_rows": 456429,
+    "published_other_umi_length_rows": 68089,
+    "globally_distinct_source_reads": 2498488,
+    "published_distinct_source_reads": 2063573,
+    "published_read_cell_pairs": 2078171,
+    "published_cell_umi_pairs": 1891704,
+    "published_cells": 568,
+    "cells_with_reads": 568,
+    "median_reads_per_cell": 1979.5,
+    "median_umis_per_cell": 1866.0,
+    "repeated_read_cell_records": 1699
+  },
+  "flexiplex_ed2_polyt": {
+    "assignment_rows": 1353290,
+    "published_assignment_rows": 1159697,
+    "published_10nt_umi_rows": 1126075,
+    "outside_published_cells_rows": 193593,
+    "published_other_umi_length_rows": 33622,
+    "globally_distinct_source_reads": 1346238,
+    "published_distinct_source_reads": 1154817,
+    "published_read_cell_pairs": 1158825,
+    "published_cell_umi_pairs": 1052744,
+    "published_cells": 568,
+    "cells_with_reads": 568,
+    "median_reads_per_cell": 1104.0,
+    "median_umis_per_cell": 1044.5,
+    "repeated_read_cell_records": 872
+  }
+}

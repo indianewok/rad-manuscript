@@ -1,0 +1,18 @@
+{
+	"@class": "FENGraphSheet",
+	"$id": "sheets/graph_sheet.schema.json",
+	"uid": "FCCCEDCE-0FE1-48BE-9B33-2F5336CFDD7A",
+	"fenID": 37,
+	"title": "Primary ED2 - Myoblast nuclei",
+	"isCustomTitle": true,
+	"isAutoCreated": true,
+	"floatingNotes": [
+		"3DCA6569-3850-4C35-B86C-BB95C35777FD"
+	],
+	"inputDataSets": [
+		"F437DD31-76B1-49BF-960D-2E684CC295E7",
+		"60F50F33-79CD-42E4-A4E6-91DF93322CDA",
+		"77CFCD4D-A21F-4AC9-B0A9-B8CA243AF88D",
+		"C02D5E17-72CA-4710-9C2F-BDA0E0C3FEE3"
+	]
+}

@@ -1,0 +1,7 @@
+sample	tool	n	slope	intercept	r_squared	fit	independent_fit_match
+MB_cells	RAD ED2	112	0.1638184114207894	310.0281708816874	0.9715293266554808	ordinary least squares on untransformed counts; free intercept	True
+MB_cells	Flexiplex ED2 + poly-T	112	0.08927667494834547	800.2101463495437	0.7720245828605686	ordinary least squares on untransformed counts; free intercept	True
+MB_nuclei	RAD ED2	158	0.09419562123170401	490.5878559903922	0.9734501222212263	ordinary least squares on untransformed counts; free intercept	True
+MB_nuclei	Flexiplex ED2 + poly-T	158	0.04885980261503455	115.70911296820191	0.9507257678969935	ordinary least squares on untransformed counts; free intercept	True
+MT_nuclei	RAD ED2	298	0.09898454400147287	20.132610009623704	0.9844088216086601	ordinary least squares on untransformed counts; free intercept	True
+MT_nuclei	Flexiplex ED2 + poly-T	298	0.04567213066691465	126.90064013086555	0.9327857447295804	ordinary least squares on untransformed counts; free intercept	True

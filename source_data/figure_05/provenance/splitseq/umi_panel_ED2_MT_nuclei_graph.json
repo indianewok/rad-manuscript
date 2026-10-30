@@ -1,0 +1,15 @@
+{
+	"@class": "FENGraphSheet",
+	"$id": "sheets/graph_sheet.schema.json",
+	"uid": "D9787104-4D40-4731-A771-6CEED3B3179B",
+	"fenID": 38,
+	"title": "Primary ED2 - Myotube nuclei",
+	"isCustomTitle": true,
+	"isAutoCreated": true,
+	"inputDataSets": [
+		"1E033883-3726-449D-9DAA-AAEF393F6F77",
+		"991FCBCB-FE5E-4589-A5AB-6EEB15897C3D",
+		"DFF69351-049E-4658-9F30-60074A7B624C",
+		"408E2450-0485-4C57-831E-E734A5F7D177"
+	]
+}

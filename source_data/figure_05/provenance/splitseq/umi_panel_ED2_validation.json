@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "prism_sha256": "dca1ba208150fef5ebcb2a8dd0733d7949002ce64a618ed628c2015c3d24db03",
+  "cells_checked": 568,
+  "umi_values_checked": 1136,
+  "published_shortread_values_checked": 568,
+  "source_table_sha256": "a5830d892b4424133b568f5bcdbe817c299b54f9a40525a445bd978e1edd4ff6",
+  "layout_uid": "5D32AC1F-A6CB-47FA-929D-4FF453617D61",
+  "layout_title": "Copy of full page final figure",
+  "graph_bindings_match": true,
+  "groups": [
+    {
+      "sample": "MB_cells",
+      "cells": 112,
+      "published_sr_umis": 4032055,
+      "rad_ed2_umis": 695248,
+      "flexiplex_ed2_polyt_umis": 449592,
+      "data_sheet_uid": "C7C557A0-FF5A-4615-A08B-F9FB62200CCA",
+      "graph_uid": "238E2DC1-408E-4BA9-9C65-DC5397A1F59D",
+      "regression_uid": "73CE8768-FE13-4864-9CEE-831D5425CD07"
+    },
+    {
+      "sample": "MB_nuclei",
+      "cells": 158,
+      "published_sr_umis": 6213082,
+      "rad_ed2_umis": 662758,
+      "flexiplex_ed2_polyt_umis": 321852,
+      "data_sheet_uid": "07176A83-7755-42CA-94C8-7D766B1EFDCA",
+      "graph_uid": "FCCCEDCE-0FE1-48BE-9B33-2F5336CFDD7A",
+      "regression_uid": "156A02EA-5471-48D7-88E3-550A1868D910"
+    },
+    {
+      "sample": "MT_nuclei",
+      "cells": 298,
+      "published_sr_umis": 5331120,
+      "rad_ed2_umis": 533698,
+      "flexiplex_ed2_polyt_umis": 281300,
+      "data_sheet_uid": "A6CE2935-D8C1-4640-98A5-292ABC95F000",
+      "graph_uid": "D9787104-4D40-4731-A771-6CEED3B3179B",
+      "regression_uid": "BA5A3155-4187-464F-BF35-CFA9075DF1EF"
+    }
+  ],
+  "regressions_match": true,
+  "x_definition": "Published short-read UMI counts from GSM5169184 metadata; no downsampling",
+  "rad_total_cell_umis": 1891704,
+  "flexiplex_total_cell_umis": 1052744
+}

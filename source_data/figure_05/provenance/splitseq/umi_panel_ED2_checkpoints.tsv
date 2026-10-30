@@ -1,0 +1,3 @@
+path	bytes	sha256	role
+checkpoints/figure_05/RAD_ED2_assignments.tsv.gz	56523149	1d9baecffa853d2d5aecce18715cea5f048ef57fccea8dec08b7fce904171968	final RAD ED2 normalized assignments
+checkpoints/figure_05/component_ED2_polyT_native_stats.tsv.gz	19561568	401c5631ae19933a7b431920101fe5f1c391c23a23debf23c4d659fa77ff4295	final FLAMES/Flexiplex component ED2 + poly-T native assignments
