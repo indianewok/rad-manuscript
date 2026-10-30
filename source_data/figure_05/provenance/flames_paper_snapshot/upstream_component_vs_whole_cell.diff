@@ -1,0 +1,79 @@
+--- upstream/ChangqingW_FLAMES_figures/files/config_splitseq.json
++++ upstream/ChangqingW_FLAMES_figures/files/config_splitseq_bc.json
+@@ -19,8 +19,8 @@
+     "BLAZE": ["--10x-kit-version", "3v3"]
+   },
+   "barcode_parameters": {
+-    "max_bc_editdistance": [2],
+-    "max_flank_editdistance": [3],
++    "max_bc_editdistance": [6],
++    "max_flank_editdistance": [10],
+     "segments": [
+       {
+         "type": "RANDOM",
+@@ -28,12 +28,12 @@
+         "name": "UB"
+       },
+       {
+-        "type": "MATCHED",
++        "type": "MATCHED_SPLIT",
+         "pattern": "NNNNNNNN",
+         "name": "BC1",
+-        "bc_list_name": "bc_8nt_v1",
+-        "buffer_size": 1,
+-        "max_edit_distance": 1
++        "group": "CB",
++        "buffer_size": 2,
++        "max_edit_distance": 3
+       },
+       {
+         "type": "FIXED",
+@@ -41,12 +41,12 @@
+         "name": "linker1"
+       },
+       {
+-        "type": "MATCHED",
++        "type": "MATCHED_SPLIT",
+         "pattern": "NNNNNNNN",
+         "name": "BC2",
+-        "bc_list_name": "bc_8nt_v1",
+-        "buffer_size": 1,
+-        "max_edit_distance": 1
++        "group": "CB",
++        "buffer_size": 2,
++        "max_edit_distance": 3
+       },
+       {
+         "type": "FIXED",
+@@ -54,12 +54,12 @@
+         "name": "linker2"
+       },
+       {
+-        "type": "MATCHED",
++        "type": "MATCHED_SPLIT",
+         "pattern": "NNNNNNNN",
+         "name": "BC3",
+-        "bc_list_name": "bc_8nt_v2",
+-        "buffer_size": 1,
+-        "max_edit_distance": 1
++        "group": "CB",
++        "buffer_size": 2,
++        "max_edit_distance": 3
+       },
+       {
+         "type": "FIXED",
+@@ -67,7 +67,13 @@
+         "name": "polyT"
+       }
+     ],
+-    "barcode_groups": [],
++    "barcode_groups": [
++      {
++        "name": "CB",
++        "bc_list_name": "bc_list",
++        "max_edit_distance": 6
++      }
++    ],
+     "strand": ["+"],
+     "TSO_seq": [""],
+     "TSO_prime": [5],

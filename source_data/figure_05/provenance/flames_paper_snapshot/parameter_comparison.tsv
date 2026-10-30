@@ -1,0 +1,5 @@
+variant	artifact	segment_type	per_component_ED	component_buffer	top_level_max_bc_editdistance	barcode_groups	flank_ED	polyT_length	UB_length	whitelist_assignment	threads	notes
+upstream_component	upstream/ChangqingW_FLAMES_figures/files/config_splitseq.json	MATCHED	1	1	2	none	3	8	10	v1,v1,v2	64	Paper configuration; not a record of a local run
+upstream_whole_cell	upstream/ChangqingW_FLAMES_figures/files/config_splitseq_bc.json	MATCHED_SPLIT	3	2	6	CB max_edit_distance=6	10	8	10	bc_list group CB	64	Paper configuration; not a record of a local run
+executed_component_ED2_T8	executed/flexiplex_ed2_native/run_native_ed2.R	MATCHED	2	1	not passed to native call	none	3	8	10	v1,v1,v2	4	status=success; output FASTQ discarded
+executed_component_ED2_noT8	executed/flexiplex_no_polyt_ed2_native/run_native_ed2.R	MATCHED	2	1	not passed to native call	none	3	omitted	10	v1,v1,v2	4	status=success; output FASTQ discarded

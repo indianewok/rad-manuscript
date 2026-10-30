@@ -1,0 +1,19 @@
+{
+  "checks": [
+    {
+      "tool": "RAD",
+      "log": "execution/longbench_snont_postdemux_vireo_20260803/logs/RAD_alignment.log",
+      "all_config_values_match_executed_json": true
+    },
+    {
+      "tool": "Flexiplex",
+      "log": "execution/longbench_snont_postdemux_vireo_20260803/logs/Flexiplex_alignment.log",
+      "all_config_values_match_executed_json": true
+    },
+    {
+      "tool": "BLAZE",
+      "log": "execution/longbench_full_demux_20260730/runs/flames2.0.1_longbench_published/SN_ONT/genome_map.log",
+      "all_config_values_match_executed_json": true
+    }
+  ]
+}

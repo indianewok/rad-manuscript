@@ -38,6 +38,14 @@ hashes, and run the linked counting or metric scripts. The `scripts/revision/` c
 **Raw reads.** Follow the producing-run commands in the figure guide. Each run
 requires its specified raw input, reference, barcode list and software version.
 
+## Verify preserved configurations
+
+The [FLAMES configuration archive](docs/pinned_flames_configs.md) contains the exact LR-Split-seq and Figure 6 files, source versions and checksums. Verify the preserved copies with:
+
+```bash
+python3 scripts/verify_pinned_flames_configs.py
+```
+
 ## Restore checkpoint files
 
 Large FASTQ, BAM, assignment-ledger and sparse-matrix files are stored in

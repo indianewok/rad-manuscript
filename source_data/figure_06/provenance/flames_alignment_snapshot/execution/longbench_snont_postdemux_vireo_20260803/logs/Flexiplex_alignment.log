@@ -1,0 +1,810 @@
+FLAMES_version	2.0.1
+R_version	R version 4.4.2 (2024-10-31)
+config_file	/scratch-nfs/f005f43/longbench_full_demux_20260730/provenance/LongBench_workflow_37a9506/lr_sc_sn/config/flames_genome_map.json
+fastq	/scratch-nfs/f005f43/longbench_snont_postdemux_vireo_20260803/demux/Flexiplex/SN_ONT_flexiplex_v1026_alignment.raw.fastq.gz
+outdir	/scratch-nfs/f005f43/longbench_snont_postdemux_vireo_20260803/align/Flexiplex
+gtf	/scratch-nfs/f005f43/longbench_full_demux_20260730/references/gencode_v44/gencode.v44.annotation.gtf
+genome	/scratch-nfs/f005f43/longbench_full_demux_20260730/references/gencode_v44/GRCh38.primary_assembly.genome.fa
+minimap2	/scratch-nfs/f005f43/longbench_full_demux_20260730/tools/minimap2-2.28_x64-linux/minimap2
+k8	/scratch-nfs/f005f43/longbench_full_demux_20260730/tools/minimap2-2.28_x64-linux/k8
+01:57:05 AM Tue Aug 04 2026 Start running
+Skipping Demultiplexing step...
+Please make sure the ` /scratch-nfs/f005f43/longbench_snont_postdemux_vireo_20260803/demux/Flexiplex/SN_ONT_flexiplex_v1026_alignment.raw.fastq.gz `` is the demultiplexing output from previous FLAMES call.
+Running FLAMES pipeline...
+#### Input parameters:
+{
+  "pipeline_parameters": {
+    "seed": [2023],
+    "do_barcode_demultiplex": [false],
+    "do_genome_alignment": [true],
+    "do_gene_quantification": [false],
+    "do_isoform_identification": [false],
+    "comment": ["Config below only used when do_isoform_identification: true", "and the novel isoform discovery happens only when bambu_discovery (under 'isoform_parameters') is set to true"],
+    "bambu_isoform_identification": [false],
+    "do_read_realignment": [false],
+    "do_transcript_quantification": [false],
+    "oarfish_quantification": [true],
+    "threads": [32]
+  },
+  "barcode_parameters": {
+    "max_bc_editdistance": [2],
+    "comment": ["The following barcode parameters are only used when using flexiplex for demultiplexing."],
+    "max_flank_editdistance": [8],
+    "pattern": {
+      "primer": ["CTACACGACGCTCTTCCGATCT"],
+      "BC": ["NNNNNNNNNNNNNNNN"],
+      "UMI": ["NNNNNNNNNNNN"],
+      "polyT": ["TTTTTTTTT"]
+    },
+    "TSO_seq": ["CCCATGTACTCTGCGTTGATACCACTGCTT"],
+    "TSO_prime": [3],
+    "full_length_only": [false]
+  },
+  "isoform_parameters": {
+    "generate_raw_isoform": [false],
+    "max_dist": [10],
+    "max_ts_dist": [100],
+    "max_splice_match_dist": [10],
+    "min_fl_exon_len": [40],
+    "max_site_per_splice": [3],
+    "min_sup_cnt": [5],
+    "min_cnt_pct": [0.001],
+    "min_sup_pct": [0.2],
+    "bambu_trust_reference": [true],
+    "bambu_discovery": [false],
+    "strand_specific": [0],
+    "remove_incomp_reads": [4],
+    "downsample_ratio": [1]
+  },
+  "alignment_parameters": {
+    "use_junctions": [true],
+    "no_flank": [false]
+  },
+  "realign_parameters": {
+    "use_annotation": [true]
+  },
+  "transcript_counting": {
+    "min_tr_coverage": [0.4],
+    "min_read_coverage": [0.4]
+  }
+} 
+gene annotation: /scratch-nfs/f005f43/longbench_full_demux_20260730/references/gencode_v44/gencode.v44.annotation.gtf 
+genome fasta: /scratch-nfs/f005f43/longbench_full_demux_20260730/references/gencode_v44/GRCh38.primary_assembly.genome.fa 
+input fastq: /scratch-nfs/f005f43/longbench_snont_postdemux_vireo_20260803/demux/Flexiplex/SN_ONT_flexiplex_v1026_alignment.raw.fastq.gz 
+output directory: /scratch-nfs/f005f43/longbench_snont_postdemux_vireo_20260803/align/Flexiplex 
+minimap2 path: /scratch-nfs/f005f43/longbench_full_demux_20260730/tools/minimap2-2.28_x64-linux/minimap2 
+k8 path: /scratch-nfs/f005f43/longbench_full_demux_20260730/tools/minimap2-2.28_x64-linux/k8 
+#### Aligning reads to genome using minimap2
+01:57:05 AM Tue Aug 04 2026 minimap2_align
+trying URL 'https://github.com/conda-forge/miniforge/releases/download/24.3.0-0/Miniforge3-24.3.0-0-Linux-x86_64.sh'
+Content type 'application/octet-stream' length 82796318 bytes (79.0 MB)
+==================================================
+downloaded 79.0 MB
+
+PREFIX=/scratch/f005f43/longbench_flames201_basilisk/1.18.0/0
+Unpacking payload ...
+Extracting _libgcc_mutex-0.1-conda_forge.tar.bz2
+Extracting ca-certificates-2024.2.2-hbcca054_0.conda
+Extracting ld_impl_linux-64-2.40-h41732ed_0.conda
+Extracting libstdcxx-ng-13.2.0-h7e041cc_5.conda
+Extracting pybind11-abi-4-hd8ed1ab_3.tar.bz2
+Extracting python_abi-3.10-4_cp310.conda
+Extracting tzdata-2024a-h0c530f3_0.conda
+Extracting libgomp-13.2.0-h807b86a_5.conda
+Extracting _openmp_mutex-4.5-2_gnu.tar.bz2
+Extracting libgcc-ng-13.2.0-h807b86a_5.conda
+Extracting bzip2-1.0.8-hd590300_5.conda
+Extracting c-ares-1.28.1-hd590300_0.conda
+Extracting fmt-10.2.1-h00ab1b0_0.conda
+Extracting icu-73.2-h59595ed_0.conda
+Extracting keyutils-1.6.1-h166bdaf_0.tar.bz2
+Extracting libev-4.33-hd590300_2.conda
+Extracting libffi-3.4.2-h7f98852_5.tar.bz2
+Extracting libiconv-1.17-hd590300_2.conda
+Extracting libnsl-2.0.1-hd590300_0.conda
+Extracting libuuid-2.38.1-h0b41bf4_0.conda
+Extracting libxcrypt-4.4.36-hd590300_1.conda
+Extracting libzlib-1.2.13-hd590300_5.conda
+Extracting lz4-c-1.9.4-hcb278e6_0.conda
+Extracting lzo-2.10-h516909a_1000.tar.bz2
+Extracting ncurses-6.4.20240210-h59595ed_0.conda
+Extracting openssl-3.2.1-hd590300_1.conda
+Extracting reproc-14.2.4.post0-hd590300_1.conda
+Extracting xz-5.2.6-h166bdaf_0.tar.bz2
+Extracting yaml-cpp-0.8.0-h59595ed_0.conda
+Extracting libedit-3.1.20191231-he28a2e2_2.tar.bz2
+Extracting libnghttp2-1.58.0-h47da74e_1.conda
+Extracting libsolv-0.7.28-hfc55251_2.conda
+Extracting libsqlite-3.45.2-h2797004_0.conda
+Extracting libssh2-1.11.0-h0841786_0.conda
+Extracting libxml2-2.12.6-h232c23b_1.conda
+Extracting readline-8.2-h8228510_1.conda
+Extracting reproc-cpp-14.2.4.post0-h59595ed_1.conda
+Extracting tk-8.6.13-noxft_h4845f30_101.conda
+Extracting zstd-1.5.5-hfc55251_0.conda
+Extracting krb5-1.21.2-h659d440_0.conda
+Extracting libarchive-3.7.2-h2aa1ff5_1.conda
+Extracting python-3.10.14-hd12c33a_0_cpython.conda
+Extracting libcurl-8.7.1-hca28451_0.conda
+Extracting menuinst-2.0.2-py310hff52083_0.conda
+Extracting archspec-0.2.3-pyhd8ed1ab_0.conda
+Extracting boltons-24.0.0-pyhd8ed1ab_0.conda
+Extracting brotli-python-1.1.0-py310hc6cd4ac_1.conda
+Extracting certifi-2024.2.2-pyhd8ed1ab_0.conda
+Extracting charset-normalizer-3.3.2-pyhd8ed1ab_0.conda
+Extracting colorama-0.4.6-pyhd8ed1ab_0.tar.bz2
+Extracting distro-1.9.0-pyhd8ed1ab_0.conda
+Extracting idna-3.6-pyhd8ed1ab_0.conda
+Extracting jsonpointer-2.4-py310hff52083_3.conda
+Extracting libmamba-1.5.8-had39da4_0.conda
+Extracting packaging-24.0-pyhd8ed1ab_0.conda
+Extracting platformdirs-4.2.0-pyhd8ed1ab_0.conda
+Extracting pluggy-1.4.0-pyhd8ed1ab_0.conda
+Extracting pycosat-0.6.6-py310h2372a71_0.conda
+Extracting pycparser-2.22-pyhd8ed1ab_0.conda
+Extracting pysocks-1.7.1-pyha2e5f31_6.tar.bz2
+Extracting ruamel.yaml.clib-0.2.8-py310h2372a71_0.conda
+Extracting setuptools-69.5.1-pyhd8ed1ab_0.conda
+Extracting truststore-0.8.0-pyhd8ed1ab_0.conda
+Extracting wheel-0.43.0-pyhd8ed1ab_1.conda
+Extracting cffi-1.16.0-py310h2fee648_0.conda
+Extracting jsonpatch-1.33-pyhd8ed1ab_0.conda
+Extracting libmambapy-1.5.8-py310h39ff949_0.conda
+Extracting pip-24.0-pyhd8ed1ab_0.conda
+Extracting ruamel.yaml-0.18.6-py310h2372a71_0.conda
+Extracting tqdm-4.66.2-pyhd8ed1ab_0.conda
+Extracting urllib3-2.2.1-pyhd8ed1ab_0.conda
+Extracting requests-2.31.0-pyhd8ed1ab_0.conda
+Extracting zstandard-0.22.0-py310h1275a96_0.conda
+Extracting conda-package-streaming-0.9.0-pyhd8ed1ab_0.conda
+Extracting conda-package-handling-2.2.0-pyh38be061_0.conda
+Extracting conda-24.3.0-py310hff52083_0.conda
+Extracting conda-libmamba-solver-24.1.0-pyhd8ed1ab_0.conda
+Extracting mamba-1.5.8-py310h51d5547_0.conda
+
+Installing base environment...
+
+Transaction
+
+  Prefix: /scratch/f005f43/longbench_flames201_basilisk/1.18.0/0
+
+  Updating specs:
+
+   - conda-forge/linux-64::_libgcc_mutex==0.1=conda_forge[md5=d7c89558ba9fa0495403155b64376d81]
+   - conda-forge/linux-64::ca-certificates==2024.2.2=hbcca054_0[md5=2f4327a1cbe7f022401b236e915a5fef]
+   - conda-forge/linux-64::ld_impl_linux-64==2.40=h41732ed_0[md5=7aca3059a1729aa76c597603f10b0dd3]
+   - conda-forge/linux-64::libstdcxx-ng==13.2.0=h7e041cc_5[md5=f6f6600d18a4047b54f803cf708b868a]
+   - conda-forge/noarch::pybind11-abi==4=hd8ed1ab_3[md5=878f923dd6acc8aeb47a75da6c4098be]
+   - conda-forge/linux-64::python_abi==3.10=4_cp310[md5=26322ec5d7712c3ded99dd656142b8ce]
+   - conda-forge/noarch::tzdata==2024a=h0c530f3_0[md5=161081fc7cec0bfda0d86d7cb595f8d8]
+   - conda-forge/linux-64::libgomp==13.2.0=h807b86a_5[md5=d211c42b9ce49aee3734fdc828731689]
+   - conda-forge/linux-64::_openmp_mutex==4.5=2_gnu[md5=73aaf86a425cc6e73fcf236a5a46396d]
+   - conda-forge/linux-64::libgcc-ng==13.2.0=h807b86a_5[md5=d4ff227c46917d3b4565302a2bbb276b]
+   - conda-forge/linux-64::bzip2==1.0.8=hd590300_5[md5=69b8b6202a07720f448be700e300ccf4]
+   - conda-forge/linux-64::c-ares==1.28.1=hd590300_0[md5=dcde58ff9a1f30b0037a2315d1846d1f]
+   - conda-forge/linux-64::fmt==10.2.1=h00ab1b0_0[md5=35ef8bc24bd34074ebae3c943d551728]
+   - conda-forge/linux-64::icu==73.2=h59595ed_0[md5=cc47e1facc155f91abd89b11e48e72ff]
+   - conda-forge/linux-64::keyutils==1.6.1=h166bdaf_0[md5=30186d27e2c9fa62b45fb1476b7200e3]
+   - conda-forge/linux-64::libev==4.33=hd590300_2[md5=172bf1cd1ff8629f2b1179945ed45055]
+   - conda-forge/linux-64::libffi==3.4.2=h7f98852_5[md5=d645c6d2ac96843a2bfaccd2d62b3ac3]
+   - conda-forge/linux-64::libiconv==1.17=hd590300_2[md5=d66573916ffcf376178462f1b61c941e]
+   - conda-forge/linux-64::libnsl==2.0.1=hd590300_0[md5=30fd6e37fe21f86f4bd26d6ee73eeec7]
+   - conda-forge/linux-64::libuuid==2.38.1=h0b41bf4_0[md5=40b61aab5c7ba9ff276c41cfffe6b80b]
+   - conda-forge/linux-64::libxcrypt==4.4.36=hd590300_1[md5=5aa797f8787fe7a17d1b0821485b5adc]
+   - conda-forge/linux-64::libzlib==1.2.13=hd590300_5[md5=f36c115f1ee199da648e0597ec2047ad]
+   - conda-forge/linux-64::lz4-c==1.9.4=hcb278e6_0[md5=318b08df404f9c9be5712aaa5a6f0bb0]
+   - conda-forge/linux-64::lzo==2.10=h516909a_1000[md5=bb14fcb13341b81d5eb386423b9d2bac]
+   - conda-forge/linux-64::ncurses==6.4.20240210=h59595ed_0[md5=97da8860a0da5413c7c98a3b3838a645]
+   - conda-forge/linux-64::openssl==3.2.1=hd590300_1[md5=9d731343cff6ee2e5a25c4a091bf8e2a]
+   - conda-forge/linux-64::reproc==14.2.4.post0=hd590300_1[md5=82ca53502dfd5a64a80dee76dae14685]
+   - conda-forge/linux-64::xz==5.2.6=h166bdaf_0[md5=2161070d867d1b1204ea749c8eec4ef0]
+   - conda-forge/linux-64::yaml-cpp==0.8.0=h59595ed_0[md5=965eaacd7c18eb8361fd12bb9e7a57d7]
+   - conda-forge/linux-64::libedit==3.1.20191231=he28a2e2_2[md5=4d331e44109e3f0e19b4cb8f9b82f3e1]
+   - conda-forge/linux-64::libnghttp2==1.58.0=h47da74e_1[md5=700ac6ea6d53d5510591c4344d5c989a]
+   - conda-forge/linux-64::libsolv==0.7.28=hfc55251_2[md5=535bafe1ed0a5bdd3f4c125ca05d378c]
+   - conda-forge/linux-64::libsqlite==3.45.2=h2797004_0[md5=866983a220e27a80cb75e85cb30466a1]
+   - conda-forge/linux-64::libssh2==1.11.0=h0841786_0[md5=1f5a58e686b13bcfde88b93f547d23fe]
+   - conda-forge/linux-64::libxml2==2.12.6=h232c23b_1[md5=6853448e9ca1cfd5f15382afd2a6d123]
+   - conda-forge/linux-64::readline==8.2=h8228510_1[md5=47d31b792659ce70f470b5c82fdfb7a4]
+   - conda-forge/linux-64::reproc-cpp==14.2.4.post0=h59595ed_1[md5=715e1d720ec1a03715bebd237972fca5]
+   - conda-forge/linux-64::tk==8.6.13=noxft_h4845f30_101[md5=d453b98d9c83e71da0741bb0ff4d76bc]
+   - conda-forge/linux-64::zstd==1.5.5=hfc55251_0[md5=04b88013080254850d6c01ed54810589]
+   - conda-forge/linux-64::krb5==1.21.2=h659d440_0[md5=cd95826dbd331ed1be26bdf401432844]
+   - conda-forge/linux-64::libarchive==3.7.2=h2aa1ff5_1[md5=3bf887827d1968275978361a6e405e4f]
+   - conda-forge/linux-64::python==3.10.14=hd12c33a_0_cpython[md5=2b4ba962994e8bd4be9ff5b64b75aff2]
+   - conda-forge/linux-64::libcurl==8.7.1=hca28451_0[md5=755c7f876815003337d2c61ff5d047e5]
+   - conda-forge/linux-64::menuinst==2.0.2=py310hff52083_0[md5=4837faab0d3e665df57fef662148c6a3]
+   - conda-forge/noarch::archspec==0.2.3=pyhd8ed1ab_0[md5=192278292e20704f663b9c766909d67b]
+   - conda-forge/noarch::boltons==24.0.0=pyhd8ed1ab_0[md5=61de176bd62041f9cd5bd4fcd09eb0ff]
+   - conda-forge/linux-64::brotli-python==1.1.0=py310hc6cd4ac_1[md5=1f95722c94f00b69af69a066c7433714]
+   - conda-forge/noarch::certifi==2024.2.2=pyhd8ed1ab_0[md5=0876280e409658fc6f9e75d035960333]
+   - conda-forge/noarch::charset-normalizer==3.3.2=pyhd8ed1ab_0[md5=7f4a9e3fcff3f6356ae99244a014da6a]
+   - conda-forge/noarch::colorama==0.4.6=pyhd8ed1ab_0[md5=3faab06a954c2a04039983f2c4a50d99]
+   - conda-forge/noarch::distro==1.9.0=pyhd8ed1ab_0[md5=bbdb409974cd6cb30071b1d978302726]
+   - conda-forge/noarch::idna==3.6=pyhd8ed1ab_0[md5=1a76f09108576397c41c0b0c5bd84134]
+   - conda-forge/linux-64::jsonpointer==2.4=py310hff52083_3[md5=08ec1463dbc5c806a32fc431874032ca]
+   - conda-forge/linux-64::libmamba==1.5.8=had39da4_0[md5=def669885dc103d8acb7ac2ac35e0b2f]
+   - conda-forge/noarch::packaging==24.0=pyhd8ed1ab_0[md5=248f521b64ce055e7feae3105e7abeb8]
+   - conda-forge/noarch::platformdirs==4.2.0=pyhd8ed1ab_0[md5=a0bc3eec34b0fab84be6b2da94e98e20]
+   - conda-forge/noarch::pluggy==1.4.0=pyhd8ed1ab_0[md5=139e9feb65187e916162917bb2484976]
+   - conda-forge/linux-64::pycosat==0.6.6=py310h2372a71_0[md5=0adaac9a86d59adae2bc86b3cdef2df1]
+   - conda-forge/noarch::pycparser==2.22=pyhd8ed1ab_0[md5=844d9eb3b43095b031874477f7d70088]
+   - conda-forge/noarch::pysocks==1.7.1=pyha2e5f31_6[md5=2a7de29fb590ca14b5243c4c812c8025]
+   - conda-forge/linux-64::ruamel.yaml.clib==0.2.8=py310h2372a71_0[md5=dcf6d2535586c77b31425ed835610c54]
+   - conda-forge/noarch::setuptools==69.5.1=pyhd8ed1ab_0[md5=7462280d81f639363e6e63c81276bd9e]
+   - conda-forge/noarch::truststore==0.8.0=pyhd8ed1ab_0[md5=08316d001eca8854392cf2837828ea11]
+   - conda-forge/noarch::wheel==0.43.0=pyhd8ed1ab_1[md5=0b5293a157c2b5cd513dd1b03d8d3aae]
+   - conda-forge/linux-64::cffi==1.16.0=py310h2fee648_0[md5=45846a970e71ac98fd327da5d40a0a2c]
+   - conda-forge/noarch::jsonpatch==1.33=pyhd8ed1ab_0[md5=bfdb7c5c6ad1077c82a69a8642c87aff]
+   - conda-forge/linux-64::libmambapy==1.5.8=py310h39ff949_0[md5=37f8aa15b73c4691eeec15caf45aab25]
+   - conda-forge/noarch::pip==24.0=pyhd8ed1ab_0[md5=f586ac1e56c8638b64f9c8122a7b8a67]
+   - conda-forge/linux-64::ruamel.yaml==0.18.6=py310h2372a71_0[md5=50b7d9b39099cdbabf65bf27df73a793]
+   - conda-forge/noarch::tqdm==4.66.2=pyhd8ed1ab_0[md5=2b8dfb969f984497f3f98409a9545776]
+   - conda-forge/noarch::urllib3==2.2.1=pyhd8ed1ab_0[md5=08807a87fa7af10754d46f63b368e016]
+   - conda-forge/noarch::requests==2.31.0=pyhd8ed1ab_0[md5=a30144e4156cdbb236f99ebb49828f8b]
+   - conda-forge/linux-64::zstandard==0.22.0=py310h1275a96_0[md5=54698ba13cd3494547b289cd86a2176a]
+   - conda-forge/noarch::conda-package-streaming==0.9.0=pyhd8ed1ab_0[md5=38253361efb303deead3eab39ae9269b]
+   - conda-forge/noarch::conda-package-handling==2.2.0=pyh38be061_0[md5=8a3ae7f6318376aa08ea753367bb7dd6]
+   - conda-forge/linux-64::conda==24.3.0=py310hff52083_0[md5=4187d17c4b75d8f7757820e835c507c9]
+   - conda-forge/noarch::conda-libmamba-solver==24.1.0=pyhd8ed1ab_0[md5=304dc78ad6e52e0fd663df1d484c1531]
+   - conda-forge/linux-64::mamba==1.5.8=py310h51d5547_0[md5=3b335eaa4894cbb5379a75f83a4d6b40]
+
+
+  Package                         Version  Build               Channel         Size
+─────────────────────────────────────────────────────────────────────────────────────
+  Install:
+─────────────────────────────────────────────────────────────────────────────────────
+
+  + _libgcc_mutex                     0.1  conda_forge         conda-forge         
+  + ca-certificates              2024.2.2  hbcca054_0          conda-forge         
+  + ld_impl_linux-64                 2.40  h41732ed_0          conda-forge         
+  + libstdcxx-ng                   13.2.0  h7e041cc_5          conda-forge         
+  + pybind11-abi                        4  hd8ed1ab_3          conda-forge         
+  + python_abi                       3.10  4_cp310             conda-forge         
+  + tzdata                          2024a  h0c530f3_0          conda-forge         
+  + libgomp                        13.2.0  h807b86a_5          conda-forge         
+  + _openmp_mutex                     4.5  2_gnu               conda-forge         
+  + libgcc-ng                      13.2.0  h807b86a_5          conda-forge         
+  + bzip2                           1.0.8  hd590300_5          conda-forge         
+  + c-ares                         1.28.1  hd590300_0          conda-forge         
+  + fmt                            10.2.1  h00ab1b0_0          conda-forge         
+  + icu                              73.2  h59595ed_0          conda-forge         
+  + keyutils                        1.6.1  h166bdaf_0          conda-forge         
+  + libev                            4.33  hd590300_2          conda-forge         
+  + libffi                          3.4.2  h7f98852_5          conda-forge         
+  + libiconv                         1.17  hd590300_2          conda-forge         
+  + libnsl                          2.0.1  hd590300_0          conda-forge         
+  + libuuid                        2.38.1  h0b41bf4_0          conda-forge         
+  + libxcrypt                      4.4.36  hd590300_1          conda-forge         
+  + libzlib                        1.2.13  hd590300_5          conda-forge         
+  + lz4-c                           1.9.4  hcb278e6_0          conda-forge         
+  + lzo                              2.10  h516909a_1000       conda-forge         
+  + ncurses                  6.4.20240210  h59595ed_0          conda-forge         
+  + openssl                         3.2.1  hd590300_1          conda-forge         
+  + reproc                   14.2.4.post0  hd590300_1          conda-forge         
+  + xz                              5.2.6  h166bdaf_0          conda-forge         
+  + yaml-cpp                        0.8.0  h59595ed_0          conda-forge         
+  + libedit                  3.1.20191231  he28a2e2_2          conda-forge         
+  + libnghttp2                     1.58.0  h47da74e_1          conda-forge         
+  + libsolv                        0.7.28  hfc55251_2          conda-forge         
+  + libsqlite                      3.45.2  h2797004_0          conda-forge         
+  + libssh2                        1.11.0  h0841786_0          conda-forge         
+  + libxml2                        2.12.6  h232c23b_1          conda-forge         
+  + readline                          8.2  h8228510_1          conda-forge         
+  + reproc-cpp               14.2.4.post0  h59595ed_1          conda-forge         
+  + tk                             8.6.13  noxft_h4845f30_101  conda-forge         
+  + zstd                            1.5.5  hfc55251_0          conda-forge         
+  + krb5                           1.21.2  h659d440_0          conda-forge         
+  + libarchive                      3.7.2  h2aa1ff5_1          conda-forge         
+  + python                        3.10.14  hd12c33a_0_cpython  conda-forge         
+  + libcurl                         8.7.1  hca28451_0          conda-forge         
+  + menuinst                        2.0.2  py310hff52083_0     conda-forge         
+  + archspec                        0.2.3  pyhd8ed1ab_0        conda-forge         
+  + boltons                        24.0.0  pyhd8ed1ab_0        conda-forge         
+  + brotli-python                   1.1.0  py310hc6cd4ac_1     conda-forge         
+  + certifi                      2024.2.2  pyhd8ed1ab_0        conda-forge         
+  + charset-normalizer              3.3.2  pyhd8ed1ab_0        conda-forge         
+  + colorama                        0.4.6  pyhd8ed1ab_0        conda-forge         
+  + distro                          1.9.0  pyhd8ed1ab_0        conda-forge         
+  + idna                              3.6  pyhd8ed1ab_0        conda-forge         
+  + jsonpointer                       2.4  py310hff52083_3     conda-forge         
+  + libmamba                        1.5.8  had39da4_0          conda-forge         
+  + packaging                        24.0  pyhd8ed1ab_0        conda-forge         
+  + platformdirs                    4.2.0  pyhd8ed1ab_0        conda-forge         
+  + pluggy                          1.4.0  pyhd8ed1ab_0        conda-forge         
+  + pycosat                         0.6.6  py310h2372a71_0     conda-forge         
+  + pycparser                        2.22  pyhd8ed1ab_0        conda-forge         
+  + pysocks                         1.7.1  pyha2e5f31_6        conda-forge         
+  + ruamel.yaml.clib                0.2.8  py310h2372a71_0     conda-forge         
+  + setuptools                     69.5.1  pyhd8ed1ab_0        conda-forge         
+  + truststore                      0.8.0  pyhd8ed1ab_0        conda-forge         
+  + wheel                          0.43.0  pyhd8ed1ab_1        conda-forge         
+  + cffi                           1.16.0  py310h2fee648_0     conda-forge         
+  + jsonpatch                        1.33  pyhd8ed1ab_0        conda-forge         
+  + libmambapy                      1.5.8  py310h39ff949_0     conda-forge         
+  + pip                              24.0  pyhd8ed1ab_0        conda-forge         
+  + ruamel.yaml                    0.18.6  py310h2372a71_0     conda-forge         
+  + tqdm                           4.66.2  pyhd8ed1ab_0        conda-forge         
+  + urllib3                         2.2.1  pyhd8ed1ab_0        conda-forge         
+  + requests                       2.31.0  pyhd8ed1ab_0        conda-forge         
+  + zstandard                      0.22.0  py310h1275a96_0     conda-forge         
+  + conda-package-streaming         0.9.0  pyhd8ed1ab_0        conda-forge         
+  + conda-package-handling          2.2.0  pyh38be061_0        conda-forge         
+  + conda                          24.3.0  py310hff52083_0     conda-forge         
+  + conda-libmamba-solver          24.1.0  pyhd8ed1ab_0        conda-forge         
+  + mamba                           1.5.8  py310h51d5547_0     conda-forge         
+
+  Summary:
+
+  Install: 78 packages
+
+  Total download: 0 B
+
+─────────────────────────────────────────────────────────────────────────────────────
+
+
+
+Transaction starting
+Linking _libgcc_mutex-0.1-conda_forge
+Linking ca-certificates-2024.2.2-hbcca054_0
+Linking ld_impl_linux-64-2.40-h41732ed_0
+Linking libstdcxx-ng-13.2.0-h7e041cc_5
+Linking pybind11-abi-4-hd8ed1ab_3
+Linking python_abi-3.10-4_cp310
+Linking tzdata-2024a-h0c530f3_0
+Linking libgomp-13.2.0-h807b86a_5
+Linking _openmp_mutex-4.5-2_gnu
+Linking libgcc-ng-13.2.0-h807b86a_5
+Linking bzip2-1.0.8-hd590300_5
+Linking c-ares-1.28.1-hd590300_0
+Linking fmt-10.2.1-h00ab1b0_0
+Linking icu-73.2-h59595ed_0
+Linking keyutils-1.6.1-h166bdaf_0
+Linking libev-4.33-hd590300_2
+Linking libffi-3.4.2-h7f98852_5
+Linking libiconv-1.17-hd590300_2
+Linking libnsl-2.0.1-hd590300_0
+Linking libuuid-2.38.1-h0b41bf4_0
+Linking libxcrypt-4.4.36-hd590300_1
+Linking libzlib-1.2.13-hd590300_5
+Linking lz4-c-1.9.4-hcb278e6_0
+Linking lzo-2.10-h516909a_1000
+Linking ncurses-6.4.20240210-h59595ed_0
+Linking openssl-3.2.1-hd590300_1
+Linking reproc-14.2.4.post0-hd590300_1
+Linking xz-5.2.6-h166bdaf_0
+Linking yaml-cpp-0.8.0-h59595ed_0
+Linking libedit-3.1.20191231-he28a2e2_2
+Linking libnghttp2-1.58.0-h47da74e_1
+Linking libsolv-0.7.28-hfc55251_2
+Linking libsqlite-3.45.2-h2797004_0
+Linking libssh2-1.11.0-h0841786_0
+Linking libxml2-2.12.6-h232c23b_1
+Linking readline-8.2-h8228510_1
+Linking reproc-cpp-14.2.4.post0-h59595ed_1
+Linking tk-8.6.13-noxft_h4845f30_101
+Linking zstd-1.5.5-hfc55251_0
+Linking krb5-1.21.2-h659d440_0
+Linking libarchive-3.7.2-h2aa1ff5_1
+Linking python-3.10.14-hd12c33a_0_cpython
+Linking libcurl-8.7.1-hca28451_0
+Linking menuinst-2.0.2-py310hff52083_0
+Linking archspec-0.2.3-pyhd8ed1ab_0
+Linking boltons-24.0.0-pyhd8ed1ab_0
+Linking brotli-python-1.1.0-py310hc6cd4ac_1
+Linking certifi-2024.2.2-pyhd8ed1ab_0
+Linking charset-normalizer-3.3.2-pyhd8ed1ab_0
+Linking colorama-0.4.6-pyhd8ed1ab_0
+Linking distro-1.9.0-pyhd8ed1ab_0
+Linking idna-3.6-pyhd8ed1ab_0
+Linking jsonpointer-2.4-py310hff52083_3
+Linking libmamba-1.5.8-had39da4_0
+Linking packaging-24.0-pyhd8ed1ab_0
+Linking platformdirs-4.2.0-pyhd8ed1ab_0
+Linking pluggy-1.4.0-pyhd8ed1ab_0
+Linking pycosat-0.6.6-py310h2372a71_0
+Linking pycparser-2.22-pyhd8ed1ab_0
+Linking pysocks-1.7.1-pyha2e5f31_6
+Linking ruamel.yaml.clib-0.2.8-py310h2372a71_0
+Linking setuptools-69.5.1-pyhd8ed1ab_0
+Linking truststore-0.8.0-pyhd8ed1ab_0
+Linking wheel-0.43.0-pyhd8ed1ab_1
+Linking cffi-1.16.0-py310h2fee648_0
+Linking jsonpatch-1.33-pyhd8ed1ab_0
+Linking libmambapy-1.5.8-py310h39ff949_0
+Linking pip-24.0-pyhd8ed1ab_0
+Linking ruamel.yaml-0.18.6-py310h2372a71_0
+Linking tqdm-4.66.2-pyhd8ed1ab_0
+Linking urllib3-2.2.1-pyhd8ed1ab_0
+Linking requests-2.31.0-pyhd8ed1ab_0
+Linking zstandard-0.22.0-py310h1275a96_0
+Linking conda-package-streaming-0.9.0-pyhd8ed1ab_0
+Linking conda-package-handling-2.2.0-pyh38be061_0
+Linking conda-24.3.0-py310hff52083_0
+Linking conda-libmamba-solver-24.1.0-pyhd8ed1ab_0
+Linking mamba-1.5.8-py310h51d5547_0
+
+Transaction finished
+
+To activate this environment, use:
+
+    micromamba activate /scratch/f005f43/longbench_flames201_basilisk/1.18.0/0
+
+Or to execute a single command in this environment, use:
+
+    micromamba run -p /scratch/f005f43/longbench_flames201_basilisk/1.18.0/0 mycommand
+
+installation finished.
++ /scratch/f005f43/longbench_flames201_basilisk/1.18.0/0/bin/conda create --yes --prefix /scratch/f005f43/longbench_flames201_basilisk/1.18.0/FLAMES/2.0.1/bins_env 'python=3.8.15' --quiet -c conda-forge -c bioconda --override-channels
+Retrieving notices: ...working... done
+Channels:
+ - conda-forge
+ - bioconda
+Platform: linux-64
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... done
+
+## Package Plan ##
+
+  environment location: /scratch/f005f43/longbench_flames201_basilisk/1.18.0/FLAMES/2.0.1/bins_env
+
+  added / updated specs:
+    - python=3.8.15
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    _openmp_mutex-4.5          |           20_gnu          28 KB  conda-forge
+    bzip2-1.0.8                |       hda65f42_9         254 KB  conda-forge
+    ca-certificates-2026.7.22  |       hbd8a1cb_0         129 KB  conda-forge
+    icu-78.3                   |       h54a6638_2        13.8 MB  conda-forge
+    ld_impl_linux-64-2.46.1    |default_hbd61a6d_102         728 KB  conda-forge
+    libffi-3.7.0               |       h3435931_0          66 KB  conda-forge
+    libgcc-16.1.0              |       ha9f2e26_1         1.0 MB  conda-forge
+    libgcc-ng-16.1.0           |       h69a702a_1          28 KB  conda-forge
+    libgomp-16.1.0             |       he0feb66_1         625 KB  conda-forge
+    liblzma-5.8.3              |       hb03c661_0         111 KB  conda-forge
+    liblzma-devel-5.8.3        |       hb03c661_0         480 KB  conda-forge
+    libnsl-2.0.1               |       hb9d3cd8_1          33 KB  conda-forge
+    libsqlite-3.53.4           |       hf4e2dac_0         942 KB  conda-forge
+    libstdcxx-16.1.0           |       h934c35e_1         6.3 MB  conda-forge
+    libuuid-2.42.2             |       h5347b49_0          39 KB  conda-forge
+    libzlib-1.3.2              |       h25fd6f3_3          62 KB  conda-forge
+    ncurses-6.6                |       hdb14827_0         897 KB  conda-forge
+    openssl-3.6.3              |       h35e630c_0         3.0 MB  conda-forge
+    pip-24.3.1                 |     pyh8b19718_0         1.2 MB  conda-forge
+    python-3.8.15              |he550d4f_1_cpython        21.9 MB  conda-forge
+    readline-8.3               |       h853b02a_0         337 KB  conda-forge
+    setuptools-75.3.0          |     pyhd8ed1ab_0         761 KB  conda-forge
+    tk-8.6.13                  | noxft_hd70dff1_3         3.4 MB  conda-forge
+    wheel-0.45.1               |     pyhd8ed1ab_0          62 KB  conda-forge
+    xz-5.8.3                   |       ha02ee65_0          24 KB  conda-forge
+    xz-gpl-tools-5.8.3         |       ha02ee65_0          33 KB  conda-forge
+    xz-tools-5.8.3             |       hb03c661_0          94 KB  conda-forge
+    zstd-1.5.7                 |       hb78ec9c_6         587 KB  conda-forge
+    ------------------------------------------------------------
+                                           Total:        56.7 MB
+
+The following NEW packages will be INSTALLED:
+
+  _openmp_mutex      conda-forge/linux-64::_openmp_mutex-4.5-20_gnu 
+  bzip2              conda-forge/linux-64::bzip2-1.0.8-hda65f42_9 
+  ca-certificates    conda-forge/noarch::ca-certificates-2026.7.22-hbd8a1cb_0 
+  icu                conda-forge/linux-64::icu-78.3-h54a6638_2 
+  ld_impl_linux-64   conda-forge/linux-64::ld_impl_linux-64-2.46.1-default_hbd61a6d_102 
+  libffi             conda-forge/linux-64::libffi-3.7.0-h3435931_0 
+  libgcc             conda-forge/linux-64::libgcc-16.1.0-ha9f2e26_1 
+  libgcc-ng          conda-forge/linux-64::libgcc-ng-16.1.0-h69a702a_1 
+  libgomp            conda-forge/linux-64::libgomp-16.1.0-he0feb66_1 
+  liblzma            conda-forge/linux-64::liblzma-5.8.3-hb03c661_0 
+  liblzma-devel      conda-forge/linux-64::liblzma-devel-5.8.3-hb03c661_0 
+  libnsl             conda-forge/linux-64::libnsl-2.0.1-hb9d3cd8_1 
+  libsqlite          conda-forge/linux-64::libsqlite-3.53.4-hf4e2dac_0 
+  libstdcxx          conda-forge/linux-64::libstdcxx-16.1.0-h934c35e_1 
+  libuuid            conda-forge/linux-64::libuuid-2.42.2-h5347b49_0 
+  libzlib            conda-forge/linux-64::libzlib-1.3.2-h25fd6f3_3 
+  ncurses            conda-forge/linux-64::ncurses-6.6-hdb14827_0 
+  openssl            conda-forge/linux-64::openssl-3.6.3-h35e630c_0 
+  pip                conda-forge/noarch::pip-24.3.1-pyh8b19718_0 
+  python             conda-forge/linux-64::python-3.8.15-he550d4f_1_cpython 
+  readline           conda-forge/linux-64::readline-8.3-h853b02a_0 
+  setuptools         conda-forge/noarch::setuptools-75.3.0-pyhd8ed1ab_0 
+  tk                 conda-forge/linux-64::tk-8.6.13-noxft_hd70dff1_3 
+  wheel              conda-forge/noarch::wheel-0.45.1-pyhd8ed1ab_0 
+  xz                 conda-forge/linux-64::xz-5.8.3-ha02ee65_0 
+  xz-gpl-tools       conda-forge/linux-64::xz-gpl-tools-5.8.3-ha02ee65_0 
+  xz-tools           conda-forge/linux-64::xz-tools-5.8.3-hb03c661_0 
+  zstd               conda-forge/linux-64::zstd-1.5.7-hb78ec9c_6 
+
+
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... done
++ /scratch/f005f43/longbench_flames201_basilisk/1.18.0/0/bin/conda install --yes --prefix /scratch/f005f43/longbench_flames201_basilisk/1.18.0/FLAMES/2.0.1/bins_env 'python=3.8.15' -c conda-forge -c bioconda --override-channels
+Channels:
+ - conda-forge
+ - bioconda
+Platform: linux-64
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... done
+
+
+==> WARNING: A newer version of conda exists. <==
+    current version: 24.3.0
+    latest version: 26.7.0
+
+Please update conda by running
+
+    $ conda update -n base -c conda-forge conda
+
+
+
+# All requested packages already installed.
+
++ /scratch/f005f43/longbench_flames201_basilisk/1.18.0/0/bin/conda install --yes --prefix /scratch/f005f43/longbench_flames201_basilisk/1.18.0/FLAMES/2.0.1/bins_env -c conda-forge -c bioconda 'python=3.8.15' 'python=3.8.15' 'oarfish=0.6.2' 'minimap2=2.28' 'samtools=1.21' 'k8=1.2' --override-channels
+Channels:
+ - conda-forge
+ - bioconda
+Platform: linux-64
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... done
+
+
+==> WARNING: A newer version of conda exists. <==
+    current version: 24.3.0
+    latest version: 26.7.0
+
+Please update conda by running
+
+    $ conda update -n base -c conda-forge conda
+
+
+
+## Package Plan ##
+
+  environment location: /scratch/f005f43/longbench_flames201_basilisk/1.18.0/FLAMES/2.0.1/bins_env
+
+  added / updated specs:
+    - k8=1.2
+    - minimap2=2.28
+    - oarfish=0.6.2
+    - python[version='3.8.15.*,3.8.15.*']
+    - samtools=1.21
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    c-ares-1.34.8              |       hb03c661_0         206 KB  conda-forge
+    htslib-1.23.1              |       h633afcb_0         1.1 MB  bioconda
+    k8-1.2                     |       he8db53b_6         7.2 MB  bioconda
+    kernel-headers_linux-64-6.12.0|       he073ed8_6         1.5 MB  conda-forge
+    keyutils-1.6.3             |       hb9d3cd8_0         131 KB  conda-forge
+    krb5-1.22.2                |       hbde042b_1         1.3 MB  conda-forge
+    libcurl-8.21.0             |       heca4667_4         469 KB  conda-forge
+    libdeflate-1.25            |       h17f619e_0          72 KB  conda-forge
+    libedit-3.1.20250104       | pl5321h7949ede_0         132 KB  conda-forge
+    libnghttp2-1.68.1          |       h877daf1_0         648 KB  conda-forge
+    libpsl-0.23.0              |       hf670292_0          71 KB  conda-forge
+    libssh2-1.11.1             |       hcf80075_0         298 KB  conda-forge
+    minimap2-2.28              |       h577a1d6_4         1.2 MB  bioconda
+    oarfish-0.6.2              |       hc9368f3_0         2.5 MB  bioconda
+    samtools-1.21              |       h96c455f_1         476 KB  bioconda
+    sysroot_linux-64-2.39      |       hc4b9eeb_6        40.1 MB  conda-forge
+    tzdata-2026c               |       h151e31d_0         116 KB  conda-forge
+    zlib-1.3.2                 |       h25fd6f3_3          94 KB  conda-forge
+    ------------------------------------------------------------
+                                           Total:        57.5 MB
+
+The following NEW packages will be INSTALLED:
+
+  c-ares             conda-forge/linux-64::c-ares-1.34.8-hb03c661_0 
+  htslib             bioconda/linux-64::htslib-1.23.1-h633afcb_0 
+  k8                 bioconda/linux-64::k8-1.2-he8db53b_6 
+  kernel-headers_li~ conda-forge/noarch::kernel-headers_linux-64-6.12.0-he073ed8_6 
+  keyutils           conda-forge/linux-64::keyutils-1.6.3-hb9d3cd8_0 
+  krb5               conda-forge/linux-64::krb5-1.22.2-hbde042b_1 
+  libcurl            conda-forge/linux-64::libcurl-8.21.0-heca4667_4 
+  libdeflate         conda-forge/linux-64::libdeflate-1.25-h17f619e_0 
+  libedit            conda-forge/linux-64::libedit-3.1.20250104-pl5321h7949ede_0 
+  libev              conda-forge/linux-64::libev-4.33-hd590300_2 
+  libnghttp2         conda-forge/linux-64::libnghttp2-1.68.1-h877daf1_0 
+  libpsl             conda-forge/linux-64::libpsl-0.23.0-hf670292_0 
+  libssh2            conda-forge/linux-64::libssh2-1.11.1-hcf80075_0 
+  minimap2           bioconda/linux-64::minimap2-2.28-h577a1d6_4 
+  oarfish            bioconda/linux-64::oarfish-0.6.2-hc9368f3_0 
+  samtools           bioconda/linux-64::samtools-1.21-h96c455f_1 
+  sysroot_linux-64   conda-forge/noarch::sysroot_linux-64-2.39-hc4b9eeb_6 
+  tzdata             conda-forge/noarch::tzdata-2026c-h151e31d_0 
+  zlib               conda-forge/linux-64::zlib-1.3.2-h25fd6f3_3 
+
+
+
+Downloading and Extracting Packages: ...working... done
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... done
+[M::mm_idx_gen::81.964*1.58] collected minimizers
+[M::mm_idx_gen::94.211*3.29] sorted minimizers
+[M::main::94.211*3.29] loaded/built the index for 194 target sequence(s)
+[M::mm_mapopt_update::96.299*3.24] mid_occ = 2053
+[M::mm_idx_stat] kmer size: 14; skip: 5; is_hpc: 0; #seq: 194
+[M::mm_idx_stat::97.078*3.23] distinct minimizers: 65621209 (23.06% are singletons); average occurrences: 15.289; average spacing: 3.090; total length: 3099750718
+[M::worker_pipeline::331.199*20.85] mapped 654561 sequences
+[M::worker_pipeline::498.220*24.28] mapped 645940 sequences
+[M::worker_pipeline::652.816*25.91] mapped 639471 sequences
+[M::worker_pipeline::798.856*26.92] mapped 630216 sequences
+[M::worker_pipeline::951.581*27.64] mapped 624330 sequences
+[M::worker_pipeline::1100.970*28.15] mapped 624001 sequences
+[M::worker_pipeline::1249.271*28.54] mapped 623645 sequences
+[M::worker_pipeline::1401.024*28.85] mapped 624903 sequences
+[M::worker_pipeline::1549.997*29.10] mapped 623713 sequences
+[M::worker_pipeline::1702.273*29.29] mapped 622890 sequences
+[M::worker_pipeline::1855.491*29.40] mapped 621418 sequences
+[M::worker_pipeline::2007.367*29.55] mapped 623282 sequences
+[M::worker_pipeline::2156.552*29.67] mapped 622302 sequences
+[M::worker_pipeline::2323.519*29.59] mapped 623049 sequences
+[M::worker_pipeline::2473.205*29.70] mapped 622621 sequences
+[M::worker_pipeline::2622.991*29.80] mapped 622339 sequences
+[M::worker_pipeline::2773.087*29.88] mapped 620773 sequences
+[M::worker_pipeline::2924.573*29.95] mapped 621281 sequences
+[M::worker_pipeline::3134.773*29.52] mapped 621140 sequences
+[M::worker_pipeline::3280.432*29.61] mapped 621696 sequences
+[M::worker_pipeline::3431.082*29.68] mapped 621532 sequences
+[M::worker_pipeline::3583.554*29.76] mapped 620245 sequences
+[M::worker_pipeline::3732.238*29.82] mapped 620412 sequences
+[M::worker_pipeline::3886.896*29.84] mapped 621308 sequences
+[M::worker_pipeline::4037.470*29.90] mapped 620859 sequences
+[M::worker_pipeline::4187.378*29.96] mapped 619648 sequences
+[M::worker_pipeline::4337.551*30.00] mapped 621672 sequences
+[M::worker_pipeline::4486.160*30.05] mapped 620988 sequences
+[M::worker_pipeline::4636.547*30.10] mapped 619981 sequences
+[M::worker_pipeline::4791.831*30.10] mapped 619641 sequences
+[M::worker_pipeline::4939.256*30.15] mapped 620474 sequences
+[M::worker_pipeline::5088.508*30.19] mapped 619505 sequences
+[M::worker_pipeline::5245.918*30.21] mapped 618123 sequences
+[M::worker_pipeline::5394.954*30.24] mapped 633890 sequences
+[M::worker_pipeline::5544.355*30.27] mapped 631400 sequences
+[M::worker_pipeline::5695.717*30.30] mapped 619999 sequences
+[M::worker_pipeline::5849.297*30.33] mapped 619015 sequences
+[M::worker_pipeline::5999.046*30.36] mapped 620522 sequences
+[M::worker_pipeline::6144.485*30.39] mapped 619008 sequences
+[M::worker_pipeline::6295.871*30.41] mapped 619371 sequences
+[M::worker_pipeline::6444.448*30.44] mapped 619703 sequences
+[M::worker_pipeline::6594.263*30.46] mapped 618456 sequences
+[M::worker_pipeline::6743.451*30.48] mapped 618663 sequences
+[M::worker_pipeline::6895.591*30.51] mapped 618009 sequences
+[M::worker_pipeline::7050.217*30.53] mapped 619459 sequences
+[M::worker_pipeline::7193.091*30.55] mapped 618083 sequences
+[M::worker_pipeline::7344.354*30.57] mapped 617536 sequences
+[M::worker_pipeline::7494.498*30.58] mapped 619638 sequences
+[M::worker_pipeline::7643.553*30.60] mapped 617526 sequences
+[M::worker_pipeline::7793.699*30.62] mapped 618231 sequences
+[M::worker_pipeline::7969.515*30.55] mapped 617575 sequences
+[M::worker_pipeline::8119.846*30.56] mapped 617473 sequences
+[M::worker_pipeline::8269.566*30.58] mapped 616618 sequences
+[M::worker_pipeline::8418.228*30.60] mapped 615086 sequences
+[M::worker_pipeline::8567.000*30.61] mapped 617558 sequences
+[M::worker_pipeline::8721.087*30.63] mapped 616558 sequences
+[M::worker_pipeline::8868.266*30.64] mapped 615590 sequences
+[M::worker_pipeline::9022.100*30.66] mapped 622015 sequences
+[M::worker_pipeline::9172.378*30.67] mapped 627715 sequences
+[M::worker_pipeline::9321.967*30.68] mapped 628875 sequences
+[M::worker_pipeline::9472.638*30.69] mapped 618898 sequences
+[M::worker_pipeline::9620.681*30.70] mapped 615960 sequences
+[M::worker_pipeline::9770.875*30.71] mapped 614535 sequences
+[M::worker_pipeline::9924.015*30.72] mapped 617658 sequences
+[M::worker_pipeline::10118.398*30.73] mapped 615937 sequences
+[M::worker_pipeline::10225.636*30.73] mapped 615855 sequences
+[M::worker_pipeline::10376.307*30.74] mapped 618650 sequences
+[M::worker_pipeline::10526.713*30.75] mapped 615291 sequences
+[M::worker_pipeline::10677.282*30.76] mapped 613798 sequences
+[M::worker_pipeline::10826.429*30.77] mapped 618046 sequences
+[M::worker_pipeline::10979.749*30.77] mapped 614443 sequences
+[M::worker_pipeline::11130.726*30.78] mapped 614365 sequences
+[M::worker_pipeline::11279.089*30.79] mapped 616416 sequences
+[M::worker_pipeline::11431.132*30.80] mapped 613734 sequences
+[M::worker_pipeline::11586.625*30.79] mapped 615074 sequences
+[M::worker_pipeline::11737.218*30.80] mapped 614740 sequences
+[M::worker_pipeline::11888.987*30.80] mapped 612462 sequences
+[M::worker_pipeline::12038.383*30.81] mapped 615433 sequences
+[M::worker_pipeline::12191.245*30.82] mapped 624140 sequences
+[M::worker_pipeline::12338.359*30.82] mapped 625544 sequences
+[M::worker_pipeline::12491.819*30.83] mapped 625631 sequences
+[M::worker_pipeline::12637.860*30.84] mapped 612626 sequences
+[M::worker_pipeline::12791.795*30.84] mapped 614874 sequences
+[M::worker_pipeline::12943.792*30.85] mapped 612552 sequences
+[M::worker_pipeline::13107.179*30.83] mapped 611051 sequences
+[M::worker_pipeline::13253.488*30.84] mapped 615037 sequences
+[M::worker_pipeline::13402.253*30.84] mapped 610523 sequences
+[M::worker_pipeline::13554.060*30.85] mapped 615977 sequences
+[M::worker_pipeline::13713.584*30.86] mapped 611616 sequences
+[M::worker_pipeline::13856.517*30.86] mapped 614507 sequences
+[M::worker_pipeline::14004.526*30.87] mapped 610942 sequences
+[M::worker_pipeline::14157.422*30.88] mapped 613572 sequences
+[M::worker_pipeline::14307.409*30.88] mapped 612250 sequences
+[M::worker_pipeline::14460.302*30.88] mapped 613222 sequences
+[M::worker_pipeline::14623.839*30.86] mapped 610666 sequences
+[M::worker_pipeline::14774.130*30.87] mapped 629406 sequences
+[M::worker_pipeline::14926.420*30.87] mapped 629653 sequences
+[M::worker_pipeline::15070.999*30.88] mapped 626665 sequences
+[M::worker_pipeline::15224.959*30.89] mapped 613861 sequences
+[M::worker_pipeline::15375.599*30.89] mapped 609099 sequences
+[M::worker_pipeline::15528.266*30.90] mapped 614283 sequences
+[M::worker_pipeline::15680.369*30.90] mapped 610760 sequences
+[M::worker_pipeline::15831.395*30.91] mapped 609263 sequences
+[M::worker_pipeline::15997.813*30.90] mapped 609478 sequences
+[M::worker_pipeline::16280.282*30.89] mapped 548453 sequences
+[M::worker_pipeline::16995.300*30.84] mapped 355236 sequences
+[M::worker_pipeline::17414.015*30.83] mapped 487472 sequences
+[M::worker_pipeline::17562.076*30.83] mapped 632448 sequences
+[M::worker_pipeline::17713.841*30.84] mapped 627263 sequences
+[M::worker_pipeline::18209.378*30.81] mapped 462733 sequences
+[M::worker_pipeline::18775.006*30.77] mapped 420634 sequences
+[M::worker_pipeline::18932.061*30.77] mapped 622652 sequences
+[M::worker_pipeline::19081.126*30.78] mapped 627133 sequences
+[M::worker_pipeline::19235.393*30.78] mapped 627823 sequences
+[M::worker_pipeline::19492.285*30.78] mapped 564416 sequences
+[M::worker_pipeline::19643.258*30.79] mapped 625189 sequences
+[M::worker_pipeline::19792.316*30.79] mapped 626164 sequences
+[M::worker_pipeline::19963.499*30.79] mapped 617472 sequences
+[M::worker_pipeline::20122.604*30.79] mapped 616936 sequences
+[M::worker_pipeline::20273.813*30.80] mapped 627087 sequences
+[M::worker_pipeline::20421.227*30.80] mapped 626293 sequences
+[M::worker_pipeline::20489.954*30.77] mapped 275565 sequences
+[M::main] Version: 2.28-r1209
+[M::main] CMD: /scratch-nfs/f005f43/longbench_full_demux_20260730/tools/minimap2-2.28_x64-linux/minimap2 -ax splice -y -t 32 -k14 --secondary=no --seed 2023 --junc-bed /scratch-nfs/f005f43/longbench_snont_postdemux_vireo_20260803/align/Flexiplex/tmp_splice_anno.bed12 --junc-bonus 1 /scratch-nfs/f005f43/longbench_full_demux_20260730/references/gencode_v44/GRCh38.primary_assembly.genome.fa /scratch-nfs/f005f43/longbench_snont_postdemux_vireo_20260803/demux/Flexiplex/SN_ONT_flexiplex_v1026_alignment.raw.fastq.gz
+[M::main] Real time: 20490.512 sec; CPU: 630480.828 sec; Peak RSS: 38.990 GB
+[bam_sort_core] merging from 22 files and 1 in-memory blocks...
+#### Skip gene quantification and UMI deduplication
+#### Skip isoform identificaiton
+#### Generating transcript_assembly.fa from annotation
+Import genomic features from the file as a GRanges object ... OK
+Prepare the 'metadata' data frame ... OK
+Make the TxDb object ... OK
+#### Skip read realignment
+$inputs
+$inputs$config_file
+[1] "/scratch-nfs/f005f43/longbench_full_demux_20260730/provenance/LongBench_workflow_37a9506/lr_sc_sn/config/flames_genome_map.json"
+
+$inputs$annotation
+[1] "/scratch-nfs/f005f43/longbench_full_demux_20260730/references/gencode_v44/gencode.v44.annotation.gtf"
+
+$inputs$fastq
+[1] "/scratch-nfs/f005f43/longbench_snont_postdemux_vireo_20260803/demux/Flexiplex/SN_ONT_flexiplex_v1026_alignment.raw.fastq.gz"
+
+$inputs$outdir
+[1] "/scratch-nfs/f005f43/longbench_snont_postdemux_vireo_20260803/align/Flexiplex"
+
+$inputs$genome_fa
+[1] "/scratch-nfs/f005f43/longbench_full_demux_20260730/references/gencode_v44/GRCh38.primary_assembly.genome.fa"
+
+$inputs$barcodes_file
+[1] "not used"
+
+$inputs$minimap2
+[1] "/scratch-nfs/f005f43/longbench_full_demux_20260730/tools/minimap2-2.28_x64-linux/minimap2"
+
+$inputs$k8
+[1] "/scratch-nfs/f005f43/longbench_full_demux_20260730/tools/minimap2-2.28_x64-linux/k8"
+
+
+$results
+$results$minimap2_align
+                                                                                                  total
+/scratch-nfs/f005f43/longbench_snont_postdemux_vireo_20260803/align/Flexiplex/align2genome.bam 81787549
+                                                                                                 mapped
+/scratch-nfs/f005f43/longbench_snont_postdemux_vireo_20260803/align/Flexiplex/align2genome.bam 80759965
+                                                                                                primary
+/scratch-nfs/f005f43/longbench_snont_postdemux_vireo_20260803/align/Flexiplex/align2genome.bam 74420993
+                                                                                               secondary
+/scratch-nfs/f005f43/longbench_snont_postdemux_vireo_20260803/align/Flexiplex/align2genome.bam         0
+
+
+Warning message:
+In .get_cds_IDX(mcols0$type, mcols0$phase) :
+  The "phase" metadata column contains non-NA values for features of type
+  stop_codon. This information was ignored.

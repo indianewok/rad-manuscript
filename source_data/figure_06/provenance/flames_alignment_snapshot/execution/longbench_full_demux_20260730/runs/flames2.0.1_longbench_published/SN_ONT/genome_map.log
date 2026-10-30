@@ -1,0 +1,230 @@
+FLAMES_version	2.0.1
+R_version	R version 4.4.2 (2024-10-31)
+config_file	/scratch-nfs/f005f43/longbench_full_demux_20260730/provenance/LongBench_workflow_37a9506/lr_sc_sn/config/flames_genome_map.json
+fastq	/scratch-nfs/f005f43/longbench_full_demux_20260730/runs/blaze2_2.5.0_longbench_published/SN_ONT/matched_reads.fastq
+outdir	/scratch-nfs/f005f43/longbench_full_demux_20260730/runs/flames2.0.1_longbench_published/SN_ONT
+gtf	/scratch-nfs/f005f43/longbench_full_demux_20260730/references/gencode_v44/gencode.v44.annotation.gtf
+genome	/scratch-nfs/f005f43/longbench_full_demux_20260730/references/gencode_v44/GRCh38.primary_assembly.genome.fa
+minimap2	/scratch-nfs/f005f43/longbench_full_demux_20260730/tools/minimap2-2.28_x64-linux/minimap2
+k8	/scratch-nfs/f005f43/longbench_full_demux_20260730/tools/minimap2-2.28_x64-linux/k8
+03:07:09 AM Fri Jul 31 2026 Start running
+Skipping Demultiplexing step...
+Please make sure the ` /scratch-nfs/f005f43/longbench_full_demux_20260730/runs/blaze2_2.5.0_longbench_published/SN_ONT/matched_reads.fastq `` is the demultiplexing output from previous FLAMES call.
+Running FLAMES pipeline...
+#### Input parameters:
+{
+  "pipeline_parameters": {
+    "seed": [2023],
+    "do_barcode_demultiplex": [false],
+    "do_genome_alignment": [true],
+    "do_gene_quantification": [false],
+    "do_isoform_identification": [false],
+    "comment": ["Config below only used when do_isoform_identification: true", "and the novel isoform discovery happens only when bambu_discovery (under 'isoform_parameters') is set to true"],
+    "bambu_isoform_identification": [false],
+    "do_read_realignment": [false],
+    "do_transcript_quantification": [false],
+    "oarfish_quantification": [true],
+    "threads": [32]
+  },
+  "barcode_parameters": {
+    "max_bc_editdistance": [2],
+    "comment": ["The following barcode parameters are only used when using flexiplex for demultiplexing."],
+    "max_flank_editdistance": [8],
+    "pattern": {
+      "primer": ["CTACACGACGCTCTTCCGATCT"],
+      "BC": ["NNNNNNNNNNNNNNNN"],
+      "UMI": ["NNNNNNNNNNNN"],
+      "polyT": ["TTTTTTTTT"]
+    },
+    "TSO_seq": ["CCCATGTACTCTGCGTTGATACCACTGCTT"],
+    "TSO_prime": [3],
+    "full_length_only": [false]
+  },
+  "isoform_parameters": {
+    "generate_raw_isoform": [false],
+    "max_dist": [10],
+    "max_ts_dist": [100],
+    "max_splice_match_dist": [10],
+    "min_fl_exon_len": [40],
+    "max_site_per_splice": [3],
+    "min_sup_cnt": [5],
+    "min_cnt_pct": [0.001],
+    "min_sup_pct": [0.2],
+    "bambu_trust_reference": [true],
+    "bambu_discovery": [false],
+    "strand_specific": [0],
+    "remove_incomp_reads": [4],
+    "downsample_ratio": [1]
+  },
+  "alignment_parameters": {
+    "use_junctions": [true],
+    "no_flank": [false]
+  },
+  "realign_parameters": {
+    "use_annotation": [true]
+  },
+  "transcript_counting": {
+    "min_tr_coverage": [0.4],
+    "min_read_coverage": [0.4]
+  }
+} 
+gene annotation: /scratch-nfs/f005f43/longbench_full_demux_20260730/references/gencode_v44/gencode.v44.annotation.gtf 
+genome fasta: /scratch-nfs/f005f43/longbench_full_demux_20260730/references/gencode_v44/GRCh38.primary_assembly.genome.fa 
+input fastq: /scratch-nfs/f005f43/longbench_full_demux_20260730/runs/blaze2_2.5.0_longbench_published/SN_ONT/matched_reads.fastq 
+output directory: /scratch-nfs/f005f43/longbench_full_demux_20260730/runs/flames2.0.1_longbench_published/SN_ONT 
+minimap2 path: /scratch-nfs/f005f43/longbench_full_demux_20260730/tools/minimap2-2.28_x64-linux/minimap2 
+k8 path: /scratch-nfs/f005f43/longbench_full_demux_20260730/tools/minimap2-2.28_x64-linux/k8 
+#### Aligning reads to genome using minimap2
+03:07:09 AM Fri Jul 31 2026 minimap2_align
+[M::mm_idx_gen::71.707*1.56] collected minimizers
+[M::mm_idx_gen::200.116*1.13] sorted minimizers
+[M::main::200.117*1.13] loaded/built the index for 194 target sequence(s)
+[M::mm_mapopt_update::203.225*1.13] mid_occ = 2053
+[M::mm_idx_stat] kmer size: 14; skip: 5; is_hpc: 0; #seq: 194
+[M::mm_idx_stat::204.159*1.13] distinct minimizers: 65621209 (23.06% are singletons); average occurrences: 15.289; average spacing: 3.090; total length: 3099750718
+[M::worker_pipeline::1183.243*4.15] mapped 683655 sequences
+[M::worker_pipeline::1346.273*7.10] mapped 671699 sequences
+[M::worker_pipeline::1570.384*8.96] mapped 661222 sequences
+[M::worker_pipeline::1794.739*10.61] mapped 652333 sequences
+[M::worker_pipeline::2014.470*11.82] mapped 651537 sequences
+[M::worker_pipeline::2242.468*12.74] mapped 651805 sequences
+[M::worker_pipeline::2489.051*13.51] mapped 651642 sequences
+[M::worker_pipeline::2719.725*14.15] mapped 650272 sequences
+[M::worker_pipeline::2906.832*14.83] mapped 649937 sequences
+[M::worker_pipeline::3097.327*15.40] mapped 650647 sequences
+[M::worker_pipeline::3379.125*15.58] mapped 650130 sequences
+[M::worker_pipeline::3593.668*16.06] mapped 649691 sequences
+[M::worker_pipeline::3816.798*16.45] mapped 649570 sequences
+[M::worker_pipeline::4045.607*16.70] mapped 648587 sequences
+[M::worker_pipeline::4645.661*15.61] mapped 649190 sequences
+[M::worker_pipeline::5037.962*15.35] mapped 648668 sequences
+[M::worker_pipeline::5207.573*15.70] mapped 647970 sequences
+[M::worker_pipeline::5380.057*15.97] mapped 648539 sequences
+[M::worker_pipeline::5548.452*16.31] mapped 649227 sequences
+[M::worker_pipeline::5699.138*16.65] mapped 647041 sequences
+[M::worker_pipeline::5848.800*16.96] mapped 649889 sequences
+[M::worker_pipeline::5997.507*17.27] mapped 647937 sequences
+[M::worker_pipeline::6144.319*17.55] mapped 647333 sequences
+[M::worker_pipeline::6291.206*17.83] mapped 647691 sequences
+[M::worker_pipeline::6438.481*18.09] mapped 646722 sequences
+[M::worker_pipeline::6588.171*18.35] mapped 653492 sequences
+[M::worker_pipeline::6740.077*18.59] mapped 659934 sequences
+[M::worker_pipeline::6888.954*18.82] mapped 649627 sequences
+[M::worker_pipeline::7039.757*19.04] mapped 647086 sequences
+[M::worker_pipeline::7183.862*19.25] mapped 646897 sequences
+[M::worker_pipeline::7333.006*19.45] mapped 647274 sequences
+[M::worker_pipeline::7468.024*19.65] mapped 647321 sequences
+[M::worker_pipeline::7602.717*19.84] mapped 645649 sequences
+[M::worker_pipeline::7740.067*20.03] mapped 646164 sequences
+[M::worker_pipeline::7873.332*20.21] mapped 646107 sequences
+[M::worker_pipeline::8007.605*20.38] mapped 645607 sequences
+[M::worker_pipeline::8146.092*20.54] mapped 645810 sequences
+[M::worker_pipeline::8283.005*20.70] mapped 645841 sequences
+[M::worker_pipeline::8421.295*20.86] mapped 645452 sequences
+[M::worker_pipeline::8554.569*21.01] mapped 645589 sequences
+[M::worker_pipeline::8688.864*21.15] mapped 643820 sequences
+[M::worker_pipeline::8822.087*21.28] mapped 643519 sequences
+[M::worker_pipeline::8955.716*21.42] mapped 646284 sequences
+[M::worker_pipeline::9117.927*21.52] mapped 643616 sequences
+[M::worker_pipeline::9304.200*21.60] mapped 649114 sequences
+[M::worker_pipeline::9472.652*21.69] mapped 656959 sequences
+[M::worker_pipeline::9641.287*21.78] mapped 651678 sequences
+[M::worker_pipeline::9802.871*21.88] mapped 643471 sequences
+[M::worker_pipeline::9969.770*21.97] mapped 643105 sequences
+[M::worker_pipeline::10133.654*22.06] mapped 645124 sequences
+[M::worker_pipeline::10297.513*22.16] mapped 643305 sequences
+[M::worker_pipeline::10459.582*22.25] mapped 645342 sequences
+[M::worker_pipeline::10622.516*22.33] mapped 643155 sequences
+[M::worker_pipeline::10788.428*22.42] mapped 643732 sequences
+[M::worker_pipeline::10936.402*22.52] mapped 642087 sequences
+[M::worker_pipeline::11084.766*22.62] mapped 642979 sequences
+[M::worker_pipeline::11230.541*22.71] mapped 641702 sequences
+[M::worker_pipeline::11386.067*22.79] mapped 642210 sequences
+[M::worker_pipeline::11530.633*22.89] mapped 642126 sequences
+[M::worker_pipeline::11676.787*22.98] mapped 640707 sequences
+[M::worker_pipeline::11823.213*23.07] mapped 649958 sequences
+[M::worker_pipeline::11970.447*23.16] mapped 654298 sequences
+[M::worker_pipeline::12116.684*23.24] mapped 648993 sequences
+[M::worker_pipeline::12266.936*23.32] mapped 640114 sequences
+[M::worker_pipeline::12420.613*23.40] mapped 642653 sequences
+[M::worker_pipeline::12576.841*23.47] mapped 641653 sequences
+[M::worker_pipeline::12732.022*23.54] mapped 639497 sequences
+[M::worker_pipeline::12879.632*23.61] mapped 642118 sequences
+[M::worker_pipeline::13035.951*23.68] mapped 638456 sequences
+[M::worker_pipeline::13191.464*23.75] mapped 641971 sequences
+[M::worker_pipeline::13354.226*23.81] mapped 638274 sequences
+[M::worker_pipeline::13511.387*23.87] mapped 641394 sequences
+[M::worker_pipeline::13671.430*23.93] mapped 641648 sequences
+[M::worker_pipeline::13827.113*23.99] mapped 648964 sequences
+[M::worker_pipeline::13983.858*24.04] mapped 657291 sequences
+[M::worker_pipeline::14140.499*24.10] mapped 650110 sequences
+[M::worker_pipeline::14295.615*24.16] mapped 640196 sequences
+[M::worker_pipeline::14453.591*24.21] mapped 640901 sequences
+[M::worker_pipeline::14616.457*24.26] mapped 638873 sequences
+[M::worker_pipeline::14773.420*24.32] mapped 639534 sequences
+[M::worker_pipeline::14994.834*24.34] mapped 620271 sequences
+[M::worker_pipeline::15490.248*24.24] mapped 551595 sequences
+[M::worker_pipeline::15659.433*24.28] mapped 658836 sequences
+[M::worker_pipeline::15852.587*24.28] mapped 655500 sequences
+[M::worker_pipeline::16272.289*24.21] mapped 571713 sequences
+[M::worker_pipeline::16433.598*24.25] mapped 655386 sequences
+[M::worker_pipeline::16604.556*24.28] mapped 654208 sequences
+[M::worker_pipeline::16824.447*24.29] mapped 636730 sequences
+[M::worker_pipeline::16984.623*24.32] mapped 652984 sequences
+[M::worker_pipeline::17148.684*24.35] mapped 653088 sequences
+[M::worker_pipeline::17318.924*24.39] mapped 647549 sequences
+[M::worker_pipeline::17475.396*24.43] mapped 653577 sequences
+[M::worker_pipeline::17609.431*24.42] mapped 581023 sequences
+[M::main] Version: 2.28-r1209
+[M::main] CMD: /scratch-nfs/f005f43/longbench_full_demux_20260730/tools/minimap2-2.28_x64-linux/minimap2 -ax splice -y -t 32 -k14 --secondary=no --seed 2023 --junc-bed /scratch-nfs/f005f43/longbench_full_demux_20260730/runs/flames2.0.1_longbench_published/SN_ONT/tmp_splice_anno.bed12 --junc-bonus 1 /scratch-nfs/f005f43/longbench_full_demux_20260730/references/gencode_v44/GRCh38.primary_assembly.genome.fa /scratch-nfs/f005f43/longbench_full_demux_20260730/runs/blaze2_2.5.0_longbench_published/SN_ONT/matched_reads.fastq
+[M::main] Real time: 17610.136 sec; CPU: 430086.308 sec; Peak RSS: 36.492 GB
+[bam_sort_core] merging from 16 files and 1 in-memory blocks...
+#### Skip gene quantification and UMI deduplication
+#### Skip isoform identificaiton
+#### Generating transcript_assembly.fa from annotation
+Import genomic features from the file as a GRanges object ... OK
+Prepare the 'metadata' data frame ... OK
+Make the TxDb object ... OK
+#### Skip read realignment
+$inputs
+$inputs$config_file
+[1] "/scratch-nfs/f005f43/longbench_full_demux_20260730/provenance/LongBench_workflow_37a9506/lr_sc_sn/config/flames_genome_map.json"
+
+$inputs$annotation
+[1] "/scratch-nfs/f005f43/longbench_full_demux_20260730/references/gencode_v44/gencode.v44.annotation.gtf"
+
+$inputs$fastq
+[1] "/scratch-nfs/f005f43/longbench_full_demux_20260730/runs/blaze2_2.5.0_longbench_published/SN_ONT/matched_reads.fastq"
+
+$inputs$outdir
+[1] "/scratch-nfs/f005f43/longbench_full_demux_20260730/runs/flames2.0.1_longbench_published/SN_ONT"
+
+$inputs$genome_fa
+[1] "/scratch-nfs/f005f43/longbench_full_demux_20260730/references/gencode_v44/GRCh38.primary_assembly.genome.fa"
+
+$inputs$barcodes_file
+[1] "not used"
+
+$inputs$minimap2
+[1] "/scratch-nfs/f005f43/longbench_full_demux_20260730/tools/minimap2-2.28_x64-linux/minimap2"
+
+$inputs$k8
+[1] "/scratch-nfs/f005f43/longbench_full_demux_20260730/tools/minimap2-2.28_x64-linux/k8"
+
+
+$results
+$results$minimap2_align
+                                                                                                                   total
+/scratch-nfs/f005f43/longbench_full_demux_20260730/runs/flames2.0.1_longbench_published/SN_ONT/align2genome.bam 64563996
+                                                                                                                  mapped
+/scratch-nfs/f005f43/longbench_full_demux_20260730/runs/flames2.0.1_longbench_published/SN_ONT/align2genome.bam 63723759
+                                                                                                                 primary
+/scratch-nfs/f005f43/longbench_full_demux_20260730/runs/flames2.0.1_longbench_published/SN_ONT/align2genome.bam 59984175
+                                                                                                                secondary
+/scratch-nfs/f005f43/longbench_full_demux_20260730/runs/flames2.0.1_longbench_published/SN_ONT/align2genome.bam         0
+
+
+Warning message:
+In .get_cds_IDX(mcols0$type, mcols0$phase) :
+  The "phase" metadata column contains non-NA values for features of type
+  stop_codon. This information was ignored.

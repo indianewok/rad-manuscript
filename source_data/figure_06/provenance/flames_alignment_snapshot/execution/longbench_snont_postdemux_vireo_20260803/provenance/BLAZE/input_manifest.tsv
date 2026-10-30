@@ -1,0 +1,13 @@
+validated_utc	2026-08-03T15:15:53Z
+derivation	post-demultiplexed BLAZE FASTQ, independently aligned
+source_fastq	/scratch-nfs/f005f43/longbench_full_demux_20260730/runs/blaze2_2.5.0_longbench_published/SN_ONT/matched_reads.fastq
+source_whitelist	/scratch-nfs/f005f43/longbench_full_demux_20260730/runs/blaze2_2.5.0_longbench_published/SN_ONT/whitelist.csv
+source_bam	/scratch-nfs/f005f43/longbench_full_demux_20260730/runs/flames2.0.1_longbench_published/SN_ONT/align2genome.bam
+source_bai	/scratch-nfs/f005f43/longbench_full_demux_20260730/runs/flames2.0.1_longbench_published/SN_ONT/align2genome.bam.bai
+source_alignment_log	/scratch-nfs/f005f43/longbench_full_demux_20260730/runs/flames2.0.1_longbench_published/SN_ONT/genome_map.log
+fastq_bytes\t99727315536
+whitelist_bytes\t170017
+bam_bytes\t36413849035
+bai_bytes\t18387560
+f989d8914663d5018f3f3e67d1583e8bafeba5a8b197da6a20dbdf29c241d807  /scratch-nfs/f005f43/longbench_full_demux_20260730/runs/blaze2_2.5.0_longbench_published/SN_ONT/whitelist.csv
+22b5a0356a51f7e58b3e442f1dc5488466216ea7e75a6f1745ab994c28469ef9  /scratch-nfs/f005f43/longbench_full_demux_20260730/runs/flames2.0.1_longbench_published/SN_ONT/genome_map.log

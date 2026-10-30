@@ -1,0 +1,11 @@
+started_utc	2026-08-03T15:00:46Z
+hostname	andes8.dartmouth.edu
+source_fastq	/scratch-nfs/f005f43/longbench_full_demux_20260730/runs/rad_920adda_current/SN_ONT/demux/SN_ONT_RAD.fq.gz
+source_whitelist	/scratch-nfs/f005f43/longbench_full_demux_20260730/runs/rad_920adda_current/SN_ONT/scan_wl/SN_ONT_RAD.txt
+flames_runner	/scratch-nfs/f005f43/longbench_full_demux_20260730/scripts/run_longbench_flames_stage.sh
+flames_config	/scratch-nfs/f005f43/longbench_full_demux_20260730/provenance/LongBench_workflow_37a9506/lr_sc_sn/config/flames_genome_map.json
+input_fastq_bytes\t35945943051
+input_whitelist_bytes\t211191
+e0b8711326b82aacabe1c99d0d6819c1ea23bfe1a98ae6692b2b16f2a5eae895  /scratch-nfs/f005f43/longbench_full_demux_20260730/runs/rad_920adda_current/SN_ONT/scan_wl/SN_ONT_RAD.txt
+f4524796537aeaff231f45abb6fa0c7214e8f01edd0c8765e77c64483c138b6c  /scratch-nfs/f005f43/longbench_full_demux_20260730/scripts/run_longbench_flames_stage.sh
+18dcabed08851f25a2bf7fdf361eaa1ea238afe32e506491d3582fe92d64b2a2  /scratch-nfs/f005f43/longbench_full_demux_20260730/provenance/LongBench_workflow_37a9506/lr_sc_sn/config/flames_genome_map.json

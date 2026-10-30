@@ -1,0 +1,23 @@
+	Command being timed: "/scratch-nfs/f005f43/longbench_full_demux_20260730/scripts/run_longbench_flames_stage.sh /scratch-nfs/f005f43/longbench_full_demux_20260730/runs/rad_920adda_current/SN_ONT/demux/SN_ONT_RAD.fq.gz /scratch-nfs/f005f43/longbench_snont_postdemux_vireo_20260803/align/RAD /scratch-nfs/f005f43/longbench_full_demux_20260730/provenance/LongBench_workflow_37a9506/lr_sc_sn/config/flames_genome_map.json"
+	User time (seconds): 216956.65
+	System time (seconds): 3631.20
+	Percent of CPU this job got: 2172%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:49:12
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 29179016
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1356
+	Minor (reclaiming a frame) page faults: 1168315463
+	Voluntary context switches: 5893268
+	Involuntary context switches: 1057045
+	Swaps: 0
+	File system inputs: 283423128
+	File system outputs: 239566984
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
