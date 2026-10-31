@@ -1,15 +1,15 @@
-# Reproduce one Figure4 RAD result
+# RAD barcode discovery for Figure 4
 
 All Figure4 RAD results use source commit
 `4acbe004ba11b150d6832395452632f367a6e6c1` and an explicit maximum adapter
-error ratio of0.3. The [per-input tool table](../../source_data/figure_04/tool_parameters.tsv)
+error ratio of 0.3. The [per-input tool table](../../source_data/figure_04/tool_parameters.tsv)
 shows the RAD, BLAZE and Flexiplex versions, threads, chemistry and commands for
-each of the37 inputs. The linked current RAD receipts record executable hashes
+each of the 37 inputs. The linked current RAD receipts record executable hashes
 and input identities. BLAZE and Flexiplex settings vary by input; read their row
 before repeating a comparison.
 
 Use Linux with GNU time at `/usr/bin/time`, which records the native runtime
-and memory use. Build the exact source commit with CMake3.18 or newer, a C++17
+and memory use. Build the exact source commit with CMake 3.18 or newer, a C++17
 compiler, OpenMP, Zlib, Boost filesystem/iostreams, and `pigz` available. The small build helper
 uses a fresh build directory, rejects tracked source changes and records the
 compiler configuration, commands, logs and actual executable hash:
@@ -33,8 +33,7 @@ export PATH="$PWD/external_data/software/rad_build_4acbe00:$PATH"
 
 An executable hash can differ across compilers. The runner verifies the exact
 source commit and the build receipt, and records your actual executable hash.
-It can also enforce an optional `--rad-sha256` pin. A binary from another
-commit is not accepted as a verified 4acbe00 build.
+It can also enforce an optional `--rad-sha256` pin. The source-commit check selects the 4acbe00 implementation.
 
 Choose one JSON record from `source_data/figure_04/run_records/`, obtain its
 complete FASTQ, matched reference and pinned chemistry catalogue, and run from
@@ -54,11 +53,9 @@ python3 scripts/figure_04/run_scan.py \
 
 Use the thread count recorded for that input. The runner verifies the catalogue,
 reference and input hashes. It retains the native command and outputs and then
-scores distinct barcode sets. Reference and complete barcode-list inputs are
-kept outside Git, at the logical locations in each run record; they are not a
-new public barcode-list package. Obtain those inputs from the registered data
-source or your local data archive. Controlled spatial data require their
-registered access process. Use the matched reference definition and source accessions in the record. A reference is accepted when its file SHA256 matches, or when its canonical barcode-set SHA256 matches; the runner records the actual file hash used. Current execution records also provide `selected_barcode_sha256`, the hash of the sorted selected barcode set; `score/metrics.json` records the same output-set hash for your run. Equivalent gzip compression or row ordering does not change the canonical reference identity.
+scores distinct barcode sets. Obtain reference and complete barcode-list inputs from the registered data
+source and place them at the locations in each run record. Controlled spatial
+data use the registered access process. Use the matched reference definition and source accessions in the record. A reference is accepted when its file SHA256 matches, or when its canonical barcode-set SHA256 matches; the runner records the actual file hash used. Current execution records also provide `selected_barcode_sha256`, the hash of the sorted selected barcode set; `score/metrics.json` records the same output-set hash for your run. Equivalent gzip compression or row ordering does not change the canonical reference identity.
 
 Read the record's `input_format` before preparing the FASTQ. `fastq.gz` pins the
 compressed bytes; `fastq` pins the plain FASTQ bytes. When the record requires
@@ -75,20 +72,17 @@ For an SRA-derived input, read its `input_acquisition` object. It gives the full
 For `fastq.gz`, run the recorded `fasterq` and `pigz` argument lists as a pipeline, writing the compressed output to the record's input path. For `fastq` with compressor method `none`, run the recorded converter command with `--outfile` and move its completed output to the record's input path without compression. The recorded `.partial` output suffix is a filename; keep its bytes unchanged when moving the completed file. Check the expected read and base totals and resulting FASTQ digest before running RAD. When present, `sequence_quality_sha256` hashes each sequence followed by LF and its quality string followed by LF, in read order; it excludes FASTQ headers. These inputs retain the complete original quality strings and technical reads.
 
 For a matched official CellRanger barcode file, remove only a terminal `-1`
-suffix and retain one16-base barcode per line; a different gzip timestamp or
+suffix and retain one 16-base barcode per line; a different gzip timestamp or
 compression level is allowed when the canonical matched-set hash agrees.
-The run record retains the reference definition and existing dataset source
-accessions; it does not invent a reference download location.
+The run record provides the reference definition and dataset accession.
 
 `score/metrics.csv` contains barcode counts, TP, FP, FN, precision, recall and F1.
 `score/barcode_membership.csv` lets you inspect individual calls and reference
 membership. TP is the call/reference intersection, FP is calls outside the
-reference, and FN is reference members not called. These are reference-list
-agreement measures, not independent proof of biological cell identity.
+reference, and FN is reference members not called. These metrics measure agreement with the matched reference barcode set.
 
 The runner uses the complete input and preserves its sequences and qualities.
 It checks known input identities; where an original input digest was not
 recorded, it computes the digest before scanning and records the full-input
 selection contract. Empty sequence records are reported separately from the
-native processed nonempty-sequence count. The script runs one dataset and does
-not submit cluster jobs or change another tool's results.
+native processed nonempty-sequence count. Each invocation processes one dataset.

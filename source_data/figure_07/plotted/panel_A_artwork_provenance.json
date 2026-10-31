@@ -1,0 +1,16 @@
+{
+  "source_kind": "visual transcription of the exported Prism layout artwork",
+  "source_image": "figures/figure_07/prism/figure_07.png",
+  "source_image_sha256": "b92da6db4a7b2e08659fbbc8593f9ea79afac5d293ff0953e3c5cb73442ff188",
+  "source_prism_sha256": "9c88d619006b88ebf443c340b7866308f93a1603806ae8885bc017d41532b9c5",
+  "layout_uid": "C3B5C198-E4BA-4C34-9580-B55EA23BE9C3",
+  "layout_index": 2,
+  "regions": "panel_A_venn_regions.tsv",
+  "totals": {
+    "RAD": 668,
+    "BLAZE": 521,
+    "Flexiplex": 554
+  },
+  "gene_identifiers": "not encoded in the artwork checkpoint; region counts must not be substituted for the current common-gene memberships",
+  "current_common_gene_analysis": "Panel D uses the separate8135-gene threshold grid"
+}

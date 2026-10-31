@@ -1,0 +1,51 @@
+{
+  "panel": "Figure 6C",
+  "response": "Number of tool-selected named Vireo singlet nuclei per cell line",
+  "source_table": "source_data/figure_06/plotted_panel_c_counts.tsv",
+  "analysis": "one-way repeated-measures ANOVA",
+  "column_factor": "demultiplexing tool",
+  "columns": [
+    "RAD",
+    "BLAZE",
+    "Flexiplex"
+  ],
+  "matching_factor": "cell line",
+  "matched_rows": [
+    "H146",
+    "H1975",
+    "H211",
+    "H2228",
+    "H526",
+    "H69",
+    "HCC827",
+    "SHP77"
+  ],
+  "assume_sphericity": false,
+  "omnibus_correction": "Geisser-Greenhouse",
+  "multiple_comparisons": {
+    "method": "Dunnett",
+    "reference": "RAD",
+    "comparisons": [
+      [
+        "RAD",
+        "BLAZE"
+      ],
+      [
+        "RAD",
+        "Flexiplex"
+      ]
+    ],
+    "adjusted_p_values": true,
+    "alpha": 0.05
+  },
+  "counting_rule": "Count selected named singlet genotypes among Illumina-reference barcodes in the plotted genotype stream; exclude doublet, unassigned and not-detected rows from the ANOVA",
+  "experimental_library": "LongBench single-nucleus ONT",
+  "independent_library_count": 1,
+  "specification_confirmed": "2026-10-31",
+  "genotype_checkpoint": "source_data/figure_06/plotted_genotype_calls.tsv.gz",
+  "annotation_streams": {
+    "RAD": "rebuilt_bulk_panel_tool_postdemux",
+    "Flexiplex": "rebuilt_bulk_panel_tool_postdemux",
+    "BLAZE": "published_ONT_SN_original_bulk_panel"
+  }
+}

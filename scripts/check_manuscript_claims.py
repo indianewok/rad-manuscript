@@ -43,36 +43,35 @@ assignment = 'source_data/figure_02/assignment_states.tsv'
 assignment_rows = read(assignment)
 for tool in ('RAD', 'BLAZE', 'Flexiplex'):
     selected = [r for r in assignment_rows if r['tool'] == tool]
-    assert len(selected) == 5
+    assert len(selected) == 6
     assert sum(int(r['reads']) for r in selected) == 4993805
     for row in selected:
         add('F2_'+tool+'_'+row['state'], '2', row['reads'], 'physical reads',
             row['denominator'], assignment, 'tool='+tool+'; state='+row['state'],
             'One mutually exclusive state; tool-specific duplicate rules are documented in Figure 2.')
 
-offlist = 'source_data/figure_03/offlist_totals.tsv'
+offlist = 'source_data/figure_03/plotted_checkpoint/plotted_offlist_totals.tsv'
 offlist_rows = read(offlist)
 assert len(offlist_rows) == 27
 for dataset, denominator in (('ScTagger-L', 4993805), ('LongBench SC-ONT', 10000000), ('RAGE-seq', 20346396)):
     for tool in ('RAD', 'BLAZE', 'Flexiplex'):
         selected = [r for r in offlist_rows if r['dataset'] == dataset and r['tool'] == tool]
         assert len(selected) == 3 and {int(r['replicate']) for r in selected} == {1,2,3}
-        percentages = []
-        for row in selected:
-            assert int(row['input_reads']) == denominator
-            fraction = int(row['assigned_count'])/denominator
-            assert abs(fraction-float(row['assignment_fraction'])) < 1e-12
-            percentages.append(100*fraction)
+        assert {int(r['input_reads']) for r in selected} == {denominator}
+        units = {r['count_unit'] for r in selected}
+        assert len(units) == 1
+        unit = units.pop()
+        percentages = [100*int(r['assigned_reads'])/denominator for r in selected]
         criterion = 'dataset='+dataset+'; tool='+tool+'; replicates=1,2,3'
         for label, value in (('mean',mean(percentages)), ('minimum',min(percentages)), ('maximum',max(percentages))):
             add('F3_'+dataset+'_'+tool+'_assigned_percent_'+label, '3', value,
-                'percent of input physical reads', denominator, offlist, criterion,
-                label.capitalize()+' across three supplied-list randomizations; all multiply assigned IDs are excluded.')
-        add('F3_'+dataset+'_'+tool+'_assigned_reads_mean', '3', mean(int(r['assigned_count']) for r in selected),
-            'physical reads', '3 supplied-list randomizations', offlist, criterion,
-            'Mean strict assigned count; compare input-normalized percentages across datasets.')
+                'assignments per 100 input reads', denominator, offlist, criterion,
+                label.capitalize()+' across three supplied-list draws; counting unit: '+unit+'.')
+        add('F3_'+dataset+'_'+tool+'_assigned_reads_mean', '3', mean(int(r['assigned_reads']) for r in selected),
+            unit, '3 supplied-list draws', offlist, criterion,
+            'Mean of the three totals plotted in panel B.')
 
-discovery = 'source_data/figure_04/barcode_detection_metrics.tsv'
+discovery = 'source_data/figure_04/plotted_checkpoint/plotted_metrics.tsv'
 discovery_rows = read(discovery)
 assert len(discovery_rows) == 111
 assert len({r['canonical_id'] for r in discovery_rows}) == 37
@@ -112,13 +111,6 @@ for tool, prefix in (('RAD','rad'), ('Component Flexiplex polyT','component_poly
     add('F5_'+prefix+'_published_unique_source_reads','5',int(summary['published_unique_source_reads']),
         'distinct physical reads','568 published cells',splitseq_summary,'tool='+tool,
         'Original read identifiers counted once across the selected cells, even if a read maps to multiple cells.')
-saved_test = 'source_data/figure_05/splitseq_saved_paired_t_test.json'
-test = json.loads((ROOT/saved_test).read_text())
-assert test['n'] == 568 and test['df'] == 567 and test['test'] == 'two-sided paired t test'
-for key in ('t','df','p_value'):
-    add('F5_saved_paired_t_'+key,'5',test[key],key,'568 paired cells',saved_test,
-        'saved analysis_uid='+test['analysis_uid'],'Existing native paired t analysis; no replacement test selected.')
-
 genotypes = 'source_data/figure_06/genotype_summary.tsv'
 for row in read(genotypes):
     denominator = int(row['reference_denominator'])
@@ -142,7 +134,7 @@ for tool in ('RAD', 'BLAZE', 'Flexiplex'):
     assert sum(truth) == 1181
     criterion = 'tool='+tool+'; both BH_FDR<0.05 and abs(log2FC)>1; same direction'
     add('F7_'+tool+'_supported', '7', supported, 'genes', 1181, expression, criterion,
-        'Same-direction Illumina-supported differential-expression calls.')
+        'Updated common-gene analysis used by panel D; same-direction Illumina-supported calls.')
     add('F7_'+tool+'_called', '7', sum(called), 'genes', 8135, expression,
         'tool='+tool+'; tool BH_FDR<0.05 and abs(log2FC)>1', 'All tool calls, independent of reference support.')
     add('F7_'+tool+'_sensitivity', '7', supported/sum(truth), 'fraction', 1181,
@@ -161,12 +153,12 @@ for tool in ('RAD', 'BLAZE', 'Flexiplex'):
 destination = ROOT/'manifests/results_claims.tsv'
 destination.parent.mkdir(parents=True, exist_ok=True)
 with destination.open('w', newline='') as handle:
-    writer = csv.DictWriter(handle, fieldnames=list(claims[0]), delimiter='\t')
+    writer = csv.DictWriter(handle, fieldnames=list(claims[0]), delimiter='\t', lineterminator='\n')
     writer.writeheader()
     writer.writerows(claims)
 report_path = ROOT/'validation/manuscript_claims.json'
 report_path.parent.mkdir(parents=True, exist_ok=True)
 report_path.write_text(json.dumps(
     dict(status='passed', claims=len(claims), new_inferential_tests=0,
-         scope='Figures 1–7 selected numeric claims; raw execution is separately validated; unresolved receptor and Figure 5H claims excluded'), indent=2)+'\n')
+         scope='Selected numerical summaries from deposited figure tables; panel-specific sources retained; no raw tool execution'), indent=2)+'\n')
 print('Wrote', len(claims), 'traceable current claims to', destination)

@@ -405,12 +405,12 @@ def render(out, only=None):
         ax.set_xlabel('Fixed UMAP 1');ax.set_ylabel('Fixed UMAP 2');ax.set_title('Independent Illumina reference: all 12,012 nuclei')
         ax.legend(markerscale=3,fontsize=6,loc='upper left',bbox_to_anchor=(1,1))
         save(fig,'figure_06','A_reference_fixed_umap')
-        native=read(out/'source_data/figure_06/selected_nuclei_by_donor.tsv');donors=sorted({r['donor'] for r in native})
+        native=read(out/'source_data/figure_06/plotted_panel_c_counts.tsv');donors=sorted({r['donor'] for r in native})
         fig,ax=plt.subplots(figsize=(8,3.7))
         for i,t in enumerate(TOOLS):
             counts={r['donor']:int(r['nuclei']) for r in native if r['tool']==t}
             ax.bar(np.arange(len(donors))+(i-1)*.25,[counts.get(d,0) for d in donors],width=.25,color=colors[t],label=t)
-        ax.set_xticks(range(len(donors)));ax.set_xticklabels(donors);ax.set_ylabel('Selected nuclei with named genotype');ax.legend()
+        ax.set_xticks(range(len(donors)));ax.set_xticklabels(donors);ax.set_ylabel('Named singlet nuclei');ax.legend()
         save(fig,'figure_06','C_native_selected_nuclei_by_donor')
     if only in (None, '07'):
         # Region plot preserves exact Venn counts without requiring opaque workbook state.

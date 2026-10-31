@@ -1,6 +1,6 @@
 cff-version: 1.2.0
-message: "If you use this code, please cite the manuscript below."
-title: "RAD manuscript — current figure data and analysis"
+message: "Please cite the RAD manuscript when using these analysis workflows."
+title: "RAD manuscript analysis workflows"
 authors:
   - family-names: "Vaidya"
     given-names: "Chinmay M."

@@ -1,0 +1,21 @@
+{
+  "source_checkpoint": "all_tools.per_cell_wide.tsv",
+  "source_checkpoint_sha256": "4ce79b9d99d7393be85d0e85d829c1ea708167b1b210012364969e5c76bfd565",
+  "archived_checkpoint": "source_data/figure_06/plotted_genotype_calls.tsv.gz",
+  "archived_sha256": "8f2e474641ce702055a8fa8f37365877c880f960afc65d0d247637c493d63ae0",
+  "reference_filter": "illumina_state in singlet,doublet,unassigned; exclude not_in_illumina_reference",
+  "named_call_filter": "TOOL_selected == 1 and TOOL_state == singlet",
+  "BLAZE_annotation_stream": "published_ONT_SN_original_bulk_panel",
+  "RAD_annotation_stream": "rebuilt_bulk_panel_tool_postdemux",
+  "Flexiplex_annotation_stream": "rebuilt_bulk_panel_tool_postdemux",
+  "panel_B_BLAZE_annotation_stream": "blaze_panel_matched (separate producing checkpoint)",
+  "source_table_uid": "E248D61F-F6DA-49E0-A049-53E5EA99D0B3",
+  "plot_graph_uid": "A802F129-B689-40F8-B170-DDBCDC54A6DE",
+  "source_analysis_metadata_sha256": "35cde4b7dab4eb8178477413d3222471c18cbaf6ac653557e722b60c6ae1c8b9",
+  "source_input_manifest_sha256": "c583d787f0a23d5f659202c86d1fa328e982a208a43da2058701e693a37f8005",
+  "portable_analysis_metadata": "source_data/figure_06/provenance/plotted_panel_c_analysis_metadata.json",
+  "portable_analysis_metadata_sha256": "13b2191de700ff3f752faf0e61a0bb28eba2aa29ca8c47cd74e5241c831d81f6",
+  "portable_input_manifest": "source_data/figure_06/provenance/plotted_panel_c_input_manifest.tsv",
+  "portable_input_manifest_sha256": "404f6a5f2585b55fb226100690ea09103e344a0b711edeb5e9c0c89eabffac88",
+  "input_path_convention": "Paths in the portable metadata and input manifest are repository-relative checkpoint restore destinations; original producing-input hashes are retained."
+}

@@ -1,0 +1,1058 @@
+{
+  "source_prism_sha256": "a3252b6d571c2f5bd69d2f1b648111de6d99cea2cc89337d6164517dd53cb41d",
+  "layout_uid": "A832BFDA-4E92-4AB6-BA27-1DC54997A075",
+  "producer_metrics_sha256": "a34448631c391ce9ea594d18a6c73fd8ff53323754d08ea1a7d440a3ab5c2f02",
+  "tables": [
+    {
+      "metric": "f1",
+      "graph_uid": "467B647E-9581-43A1-8D34-EC648F3C844A",
+      "graph_title": "*F1 by dataset (per tool)",
+      "sheet_uid": "BD7ED4BE-11EA-48E9-8660-B122EC832D7E",
+      "table_uid": "D6F0E9E9-E4F0-4DC5-B4BD-B53B0C641E8D",
+      "csv_member": "data/tables/D6F0E9E9-E4F0-4DC5-B4BD-B53B0C641E8D/data.csv",
+      "csv_sha256": "bea8cb340f8bd553706a7d6bd1dacb824b5bd27faacac76db32b07b4545c1bc0",
+      "dataset_uids": [
+        "2E12DA14-D6E9-498D-979B-7097C44DBF72",
+        "18955A65-F1BB-4E11-A13E-26F36E5F5A1B",
+        "B7484867-73E4-44FE-B37B-38E56202E1CD"
+      ],
+      "rows": 37
+    },
+    {
+      "metric": "precision",
+      "graph_uid": "5977DCE9-EF13-4207-873F-147504A3586E",
+      "graph_title": "**Precision by dataset (per tool)",
+      "sheet_uid": "5A11A581-6B97-4886-B334-6ABCC9214E13",
+      "table_uid": "E681A06C-830C-41D4-ACAD-D5F70EB6328E",
+      "csv_member": "data/tables/E681A06C-830C-41D4-ACAD-D5F70EB6328E/data.csv",
+      "csv_sha256": "8af6e6d6b65ebbbc0b69926e58f5349c546e363cb9ddf8c9026e89d5dd932f9f",
+      "dataset_uids": [
+        "AF27E09D-06C9-461E-9309-8CCAE47DBF42",
+        "20ED0B9F-2A5F-4598-9A72-C943DF09A0EA",
+        "1493526B-D570-455D-A533-9041F5D5E58E"
+      ],
+      "rows": 37
+    },
+    {
+      "metric": "recall",
+      "graph_uid": "11E96F24-6450-442A-8E09-25EE32C26895",
+      "graph_title": "**Recall by dataset (per tool)",
+      "sheet_uid": "6AA76DBD-F97F-43C6-AFD7-563DDBB4364C",
+      "table_uid": "DB857D06-3C0F-4ECB-B768-59D31D6F34A4",
+      "csv_member": "data/tables/DB857D06-3C0F-4ECB-B768-59D31D6F34A4/data.csv",
+      "csv_sha256": "844706d9eab27578d60adf286311c582dc818a04b3efa89cc1b32c29a40b66e9",
+      "dataset_uids": [
+        "BA724572-4769-4D5E-BB45-E89164559BAC",
+        "66B3E06B-DE43-4A11-B08A-9D01C3C31601",
+        "0D2A9362-5A44-441D-9ADB-5146E4F348A4"
+      ],
+      "rows": 37
+    }
+  ],
+  "modality_tables": [
+    {
+      "metric": "f1",
+      "sheet_uid": "FC847A54-E694-41E4-84FE-9E8524FBCA62",
+      "table_uid": "9FD29EF2-D952-49B3-B529-129EB655F7C7",
+      "csv_member": "data/tables/9FD29EF2-D952-49B3-B529-129EB655F7C7/data.csv",
+      "csv_sha256": "05dddc954fbcc0198a37049e5068c102df87234bd1b19691f810aac22eee9e09",
+      "archived_csv": "f1_modality_native.csv",
+      "columns": [
+        {
+          "dataset_uid": "3AF29DC5-B6C6-4012-A657-D02966C047E9",
+          "modality": "Synthetic",
+          "canonical_id": "ScTagger-S_flatQ20",
+          "display_dataset": "ScTagger-S_flatQ20"
+        },
+        {
+          "dataset_uid": "851CC362-37DD-432A-9699-CD9A1F41E013",
+          "modality": "Synthetic",
+          "canonical_id": "ScTagger-L_flatQ20",
+          "display_dataset": "ScTagger-L_flatQ20"
+        },
+        {
+          "dataset_uid": "A79CE952-CB92-4A8C-A186-A8C838BA8D56",
+          "modality": "Single cell",
+          "canonical_id": "Measles-P7",
+          "display_dataset": "Measles-P7"
+        },
+        {
+          "dataset_uid": "53465527-1240-4DF8-8671-650672B91112",
+          "modality": "Targeted LR-seq",
+          "canonical_id": "Measles-P8-VDJ-enriched",
+          "display_dataset": "Measles-P8-VDJ-enriched"
+        },
+        {
+          "dataset_uid": "B2328B1C-B329-4BE9-9878-FB942A932CCF",
+          "modality": "Single cell",
+          "canonical_id": "Measles-P8-WTA",
+          "display_dataset": "Measles-P8-WTA"
+        },
+        {
+          "dataset_uid": "32BD64E6-2A3F-4F72-BC4E-36E32CF1332F",
+          "modality": "Single cell",
+          "canonical_id": "PromethION_iPSC",
+          "display_dataset": "PromethION_iPSC"
+        },
+        {
+          "dataset_uid": "A0DE886F-2BE7-4FDC-AA9C-E6C3B774466F",
+          "modality": "Targeted LR-seq",
+          "canonical_id": "RAGEseq-cell-line",
+          "display_dataset": "RAGEseq-cell-line"
+        },
+        {
+          "dataset_uid": "0763EFC2-35CB-4AFD-8CF6-9E81369C4CD4",
+          "modality": "Targeted LR-seq",
+          "canonical_id": "RAGEseq-TNBC-LN",
+          "display_dataset": "RAGEseq-TNBC-LN"
+        },
+        {
+          "dataset_uid": "2D43DA3A-1237-4B21-9D0A-2134B9A0D11A",
+          "modality": "Single cell",
+          "canonical_id": "LongBench-SC-ONT",
+          "display_dataset": "LongBench-SC-ONT"
+        },
+        {
+          "dataset_uid": "93FBECF8-9632-4354-92B0-FAE305D803A7",
+          "modality": "Single nuclei",
+          "canonical_id": "LongBench-SN-ONT",
+          "display_dataset": "LongBench-SN-ONT"
+        },
+        {
+          "dataset_uid": "E026D1A6-BB43-42AA-9148-31CF8CDB0454",
+          "modality": "Single cell",
+          "canonical_id": "LongBench-SC-PB",
+          "display_dataset": "LongBench-SC-PB"
+        },
+        {
+          "dataset_uid": "23D84597-54A8-423B-8F0C-B54FDD529073",
+          "modality": "Single nuclei",
+          "canonical_id": "LongBench-SN-PB",
+          "display_dataset": "LongBench-SN-PB"
+        },
+        {
+          "dataset_uid": "87B04613-D082-47E3-B16D-60FD39D29928",
+          "modality": "Visium",
+          "canonical_id": "LeBrigand-MOB",
+          "display_dataset": "LeBrigand-MOB"
+        },
+        {
+          "dataset_uid": "7BDAF7FC-E0B0-47B3-B16E-FEDE1940776D",
+          "modality": "Single cell",
+          "canonical_id": "Isosceles-ovarian-GSE248115",
+          "display_dataset": "Isosceles-ovarian-GSE248115"
+        },
+        {
+          "dataset_uid": "4908614D-8DD8-4C63-A511-26F98C80B3B2",
+          "modality": "Single nuclei",
+          "canonical_id": "Hipp_SN_m1_ONT_Run1",
+          "display_dataset": "Tilgner-m1-ONT-Run1"
+        },
+        {
+          "dataset_uid": "1E8D6C20-2A91-473D-AC12-225AE980390D",
+          "modality": "Single nuclei",
+          "canonical_id": "Hipp_SN_m1_ONT_Run2",
+          "display_dataset": "Tilgner-m1-ONT-Run2"
+        },
+        {
+          "dataset_uid": "6E2D63C8-8CB1-4F2F-87F9-29B0FDBA900F",
+          "modality": "Single nuclei",
+          "canonical_id": "Hipp_SN_m1_ONT_Run3",
+          "display_dataset": "Tilgner-m1-ONT-Run3"
+        },
+        {
+          "dataset_uid": "CA261F1B-F863-4F79-AF1E-8A6D7BE34BFF",
+          "modality": "Single cell",
+          "canonical_id": "ERR15095094_MPNST1_scNaUMIseq_MinION",
+          "display_dataset": "ERR15095094_MPNST1_scNaUMIseq_MinION"
+        },
+        {
+          "dataset_uid": "8B23E6C6-D025-4859-9176-D0E1824892A7",
+          "modality": "Single cell",
+          "canonical_id": "ERR15095095_MPNST1_scNaUMIseq_PromethION",
+          "display_dataset": "ERR15095095_MPNST1_scNaUMIseq_PromethION"
+        },
+        {
+          "dataset_uid": "1DA14F04-78EF-4D2F-8E4B-16D5420C989B",
+          "modality": "Single cell",
+          "canonical_id": "ERR15095096",
+          "display_dataset": "ERR15095096"
+        },
+        {
+          "dataset_uid": "B48CD545-82FE-429D-AED4-E1BEF04F72A6",
+          "modality": "Single cell",
+          "canonical_id": "ERR15095097",
+          "display_dataset": "ERR15095097"
+        },
+        {
+          "dataset_uid": "4DE5FEF3-2D93-4A5F-94FA-C7B672A9656C",
+          "modality": "Visium",
+          "canonical_id": "section12",
+          "display_dataset": "section12"
+        },
+        {
+          "dataset_uid": "1A4874E2-D17F-44A9-9E95-4244080A318D",
+          "modality": "Visium",
+          "canonical_id": "section16",
+          "display_dataset": "section16"
+        },
+        {
+          "dataset_uid": "BB0A0C29-815B-4BEC-BAB9-BECFDCEB581B",
+          "modality": "Visium",
+          "canonical_id": "section17_1T_1B",
+          "display_dataset": "section17_1T_1B"
+        },
+        {
+          "dataset_uid": "427906C3-2BA4-415C-8477-A27377D8E21E",
+          "modality": "Visium",
+          "canonical_id": "section17_4T_1B",
+          "display_dataset": "section17_4T_1B"
+        },
+        {
+          "dataset_uid": "092F4CDB-AF1D-4238-909E-C0177B356133",
+          "modality": "Visium",
+          "canonical_id": "section22",
+          "display_dataset": "section22"
+        },
+        {
+          "dataset_uid": "16B2B420-A801-4799-A4D9-9064FD1107FA",
+          "modality": "Visium",
+          "canonical_id": "section31",
+          "display_dataset": "section31"
+        },
+        {
+          "dataset_uid": "33BCF947-9CCA-449E-8D90-CC224CECF783",
+          "modality": "Visium",
+          "canonical_id": "section32_1T_1B",
+          "display_dataset": "section32_1T_1B"
+        },
+        {
+          "dataset_uid": "6CD91DE3-2A1F-4275-A5F6-18AE40BDA4BC",
+          "modality": "Visium",
+          "canonical_id": "section32_4T_1B",
+          "display_dataset": "section32_4T_1B"
+        },
+        {
+          "dataset_uid": "B24B75BE-B426-4E38-9591-5B3C21A26C16",
+          "modality": "Single nuclei",
+          "canonical_id": "Hipp_SN_f1_ONT_Run1",
+          "display_dataset": "Hipp_SN_f1_ONT_Run1"
+        },
+        {
+          "dataset_uid": "FA9DDF78-5DC0-46BD-B875-34A6393DDE9D",
+          "modality": "Single nuclei",
+          "canonical_id": "Hipp_SN_f1_ONT_Run2",
+          "display_dataset": "Hipp_SN_f1_ONT_Run2"
+        },
+        {
+          "dataset_uid": "F08CB9C1-CC59-4041-A76F-CFD61EBA61CB",
+          "modality": "Single nuclei",
+          "canonical_id": "Hipp_SN_f2_ONT",
+          "display_dataset": "Hipp_SN_f2_ONT"
+        },
+        {
+          "dataset_uid": "57DCBD29-B891-40B7-AA39-4F1519BCCC76",
+          "modality": "Single nuclei",
+          "canonical_id": "Hipp_SN_f3_ONT_Run1",
+          "display_dataset": "Hipp_SN_f3_ONT_Run1"
+        },
+        {
+          "dataset_uid": "41E20AA9-1D04-41CE-9173-C132116E5CD6",
+          "modality": "Single nuclei",
+          "canonical_id": "Hipp_SN_f3_ONT_Run2",
+          "display_dataset": "Hipp_SN_f3_ONT_Run2"
+        },
+        {
+          "dataset_uid": "C443D962-1597-45D8-9E5A-84B1D14EBC16",
+          "modality": "Single nuclei",
+          "canonical_id": "Hipp_SN_m2_ONT",
+          "display_dataset": "Hipp_SN_m2_ONT"
+        },
+        {
+          "dataset_uid": "22FB9546-2267-45C7-AB18-05BB4210A2CD",
+          "modality": "Single nuclei",
+          "canonical_id": "Hipp_SN_m3_ONT",
+          "display_dataset": "Hipp_SN_m3_ONT"
+        },
+        {
+          "dataset_uid": "7AAF89A9-8252-47B5-9439-24CCE3D3AEB6",
+          "modality": "Single cell",
+          "canonical_id": "ScMixology2",
+          "display_dataset": "ScMixology2"
+        }
+      ],
+      "graphs": [
+        {
+          "graph_uid": "964784E4-4787-4A44-BBAA-D14A068F6540",
+          "title": "*F1s new [Synthetic]",
+          "dataset_uids": [
+            "3AF29DC5-B6C6-4012-A657-D02966C047E9",
+            "851CC362-37DD-432A-9699-CD9A1F41E013"
+          ]
+        },
+        {
+          "graph_uid": "86EA0C4F-FA7A-45C4-A704-D8E2A6959389",
+          "title": "*F1s new [Targeted LR-seq]",
+          "dataset_uids": [
+            "53465527-1240-4DF8-8671-650672B91112",
+            "A0DE886F-2BE7-4FDC-AA9C-E6C3B774466F",
+            "0763EFC2-35CB-4AFD-8CF6-9E81369C4CD4"
+          ]
+        },
+        {
+          "graph_uid": "455C31CE-DB1B-418D-9655-9AB506E8A804",
+          "title": "*F1s new [Visium]",
+          "dataset_uids": [
+            "87B04613-D082-47E3-B16D-60FD39D29928",
+            "4DE5FEF3-2D93-4A5F-94FA-C7B672A9656C",
+            "1A4874E2-D17F-44A9-9E95-4244080A318D",
+            "BB0A0C29-815B-4BEC-BAB9-BECFDCEB581B",
+            "427906C3-2BA4-415C-8477-A27377D8E21E",
+            "092F4CDB-AF1D-4238-909E-C0177B356133",
+            "16B2B420-A801-4799-A4D9-9064FD1107FA",
+            "33BCF947-9CCA-449E-8D90-CC224CECF783",
+            "6CD91DE3-2A1F-4275-A5F6-18AE40BDA4BC"
+          ]
+        },
+        {
+          "graph_uid": "99C724A4-19CD-49FC-8027-342A56F2FE30",
+          "title": "*F1s new [Single nuclei]",
+          "dataset_uids": [
+            "93FBECF8-9632-4354-92B0-FAE305D803A7",
+            "23D84597-54A8-423B-8F0C-B54FDD529073",
+            "4908614D-8DD8-4C63-A511-26F98C80B3B2",
+            "1E8D6C20-2A91-473D-AC12-225AE980390D",
+            "6E2D63C8-8CB1-4F2F-87F9-29B0FDBA900F",
+            "B24B75BE-B426-4E38-9591-5B3C21A26C16",
+            "FA9DDF78-5DC0-46BD-B875-34A6393DDE9D",
+            "F08CB9C1-CC59-4041-A76F-CFD61EBA61CB",
+            "57DCBD29-B891-40B7-AA39-4F1519BCCC76",
+            "41E20AA9-1D04-41CE-9173-C132116E5CD6",
+            "C443D962-1597-45D8-9E5A-84B1D14EBC16",
+            "22FB9546-2267-45C7-AB18-05BB4210A2CD"
+          ]
+        },
+        {
+          "graph_uid": "095F148A-980C-410C-8C7C-4984A4ADFC22",
+          "title": "*F1s new [Single cell]",
+          "dataset_uids": [
+            "A79CE952-CB92-4A8C-A186-A8C838BA8D56",
+            "B2328B1C-B329-4BE9-9878-FB942A932CCF",
+            "32BD64E6-2A3F-4F72-BC4E-36E32CF1332F",
+            "2D43DA3A-1237-4B21-9D0A-2134B9A0D11A",
+            "E026D1A6-BB43-42AA-9148-31CF8CDB0454",
+            "7BDAF7FC-E0B0-47B3-B16E-FEDE1940776D",
+            "CA261F1B-F863-4F79-AF1E-8A6D7BE34BFF",
+            "8B23E6C6-D025-4859-9176-D0E1824892A7",
+            "1DA14F04-78EF-4D2F-8E4B-16D5420C989B",
+            "B48CD545-82FE-429D-AED4-E1BEF04F72A6",
+            "7AAF89A9-8252-47B5-9439-24CCE3D3AEB6"
+          ]
+        }
+      ],
+      "observations_verified_against_paired_table": 111
+    },
+    {
+      "metric": "precision",
+      "sheet_uid": "1CD75CD0-9255-4250-8746-455CBA62858E",
+      "table_uid": "C70F824A-7123-4E26-B014-62FE98D2F6D2",
+      "csv_member": "data/tables/C70F824A-7123-4E26-B014-62FE98D2F6D2/data.csv",
+      "csv_sha256": "78b53ca951a3cc8cf2107d9acd5e8b6119404d168d50aef670d102e4035347ea",
+      "archived_csv": "precision_modality_native.csv",
+      "columns": [
+        {
+          "dataset_uid": "DDE497E7-89D5-4580-9AE0-B29A3AED0A95",
+          "modality": "Synthetic",
+          "canonical_id": "ScTagger-S_flatQ20",
+          "display_dataset": "ScTagger-S_flatQ20"
+        },
+        {
+          "dataset_uid": "E7C429FC-12F0-4F66-BFC4-7705804A11A6",
+          "modality": "Synthetic",
+          "canonical_id": "ScTagger-L_flatQ20",
+          "display_dataset": "ScTagger-L_flatQ20"
+        },
+        {
+          "dataset_uid": "C784F183-BD53-4D7D-BC81-529F40A12588",
+          "modality": "Single cell",
+          "canonical_id": "Measles-P7",
+          "display_dataset": "Measles-P7"
+        },
+        {
+          "dataset_uid": "0CFD9EF4-B6A2-416C-9FD2-E3BB200C0D70",
+          "modality": "Targeted LR-seq",
+          "canonical_id": "Measles-P8-VDJ-enriched",
+          "display_dataset": "Measles-P8-VDJ-enriched"
+        },
+        {
+          "dataset_uid": "18A5B0DA-3A55-415D-9287-CDC83EDEF109",
+          "modality": "Single cell",
+          "canonical_id": "Measles-P8-WTA",
+          "display_dataset": "Measles-P8-WTA"
+        },
+        {
+          "dataset_uid": "830DC701-0D66-4E98-9DDF-A8827F67D7E4",
+          "modality": "Single cell",
+          "canonical_id": "PromethION_iPSC",
+          "display_dataset": "PromethION_iPSC"
+        },
+        {
+          "dataset_uid": "5233AB5A-F143-4F71-8052-AF606E3891E3",
+          "modality": "Targeted LR-seq",
+          "canonical_id": "RAGEseq-cell-line",
+          "display_dataset": "RAGEseq-cell-line"
+        },
+        {
+          "dataset_uid": "ECFE8D37-112F-4B37-A757-CCB0CEA48488",
+          "modality": "Targeted LR-seq",
+          "canonical_id": "RAGEseq-TNBC-LN",
+          "display_dataset": "RAGEseq-TNBC-LN"
+        },
+        {
+          "dataset_uid": "9BD53E03-63FA-4E81-AB03-EE667B83AB5D",
+          "modality": "Single cell",
+          "canonical_id": "LongBench-SC-ONT",
+          "display_dataset": "LongBench-SC-ONT"
+        },
+        {
+          "dataset_uid": "5A48AD72-AB76-4398-A9CB-34B8C0B10DA6",
+          "modality": "Single nuclei",
+          "canonical_id": "LongBench-SN-ONT",
+          "display_dataset": "LongBench-SN-ONT"
+        },
+        {
+          "dataset_uid": "A1FD61DF-8920-4BFF-BD96-7DA75670D24E",
+          "modality": "Single cell",
+          "canonical_id": "LongBench-SC-PB",
+          "display_dataset": "LongBench-SC-PB"
+        },
+        {
+          "dataset_uid": "2311F81D-0618-4F94-8899-10CE75006C6E",
+          "modality": "Single nuclei",
+          "canonical_id": "LongBench-SN-PB",
+          "display_dataset": "LongBench-SN-PB"
+        },
+        {
+          "dataset_uid": "5ADB618D-7C78-43BB-B608-8B02113033F4",
+          "modality": "Visium",
+          "canonical_id": "LeBrigand-MOB",
+          "display_dataset": "LeBrigand-MOB"
+        },
+        {
+          "dataset_uid": "8AFB6C30-CA0C-4891-9535-5CB9FC2E72B2",
+          "modality": "Single cell",
+          "canonical_id": "Isosceles-ovarian-GSE248115",
+          "display_dataset": "Isosceles-ovarian-GSE248115"
+        },
+        {
+          "dataset_uid": "42DFD3AA-DACF-42C9-BE9A-B49D707F6862",
+          "modality": "Single nuclei",
+          "canonical_id": "Hipp_SN_m1_ONT_Run1",
+          "display_dataset": "Tilgner-m1-ONT-Run1"
+        },
+        {
+          "dataset_uid": "0A03CBBE-125D-407F-95A8-031A08180DB0",
+          "modality": "Single nuclei",
+          "canonical_id": "Hipp_SN_m1_ONT_Run2",
+          "display_dataset": "Tilgner-m1-ONT-Run2"
+        },
+        {
+          "dataset_uid": "A73C1EB7-0695-453F-ADB4-EC05A276A111",
+          "modality": "Single nuclei",
+          "canonical_id": "Hipp_SN_m1_ONT_Run3",
+          "display_dataset": "Tilgner-m1-ONT-Run3"
+        },
+        {
+          "dataset_uid": "83811442-2D86-4199-89FD-6C3E90B4EF89",
+          "modality": "Single cell",
+          "canonical_id": "ERR15095094_MPNST1_scNaUMIseq_MinION",
+          "display_dataset": "ERR15095094_MPNST1_scNaUMIseq_MinION"
+        },
+        {
+          "dataset_uid": "D85AC7DE-3C04-47E9-9131-4F74C5EB599A",
+          "modality": "Single cell",
+          "canonical_id": "ERR15095095_MPNST1_scNaUMIseq_PromethION",
+          "display_dataset": "ERR15095095_MPNST1_scNaUMIseq_PromethION"
+        },
+        {
+          "dataset_uid": "256D2C40-5BFA-44DE-A1DF-F01568EB2EBD",
+          "modality": "Single cell",
+          "canonical_id": "ERR15095096",
+          "display_dataset": "ERR15095096"
+        },
+        {
+          "dataset_uid": "51D95033-7A61-4049-9061-4E04B0600E6C",
+          "modality": "Single cell",
+          "canonical_id": "ERR15095097",
+          "display_dataset": "ERR15095097"
+        },
+        {
+          "dataset_uid": "7A73E3E1-F836-422C-BB55-9BAFEDB25E07",
+          "modality": "Visium",
+          "canonical_id": "section12",
+          "display_dataset": "section12"
+        },
+        {
+          "dataset_uid": "2A5B5F9B-177E-402E-BFD4-31F9DCB435B1",
+          "modality": "Visium",
+          "canonical_id": "section16",
+          "display_dataset": "section16"
+        },
+        {
+          "dataset_uid": "5D44A92A-3AC3-4B3C-86B0-85638F6F06D3",
+          "modality": "Visium",
+          "canonical_id": "section17_1T_1B",
+          "display_dataset": "section17_1T_1B"
+        },
+        {
+          "dataset_uid": "6CE90644-FA32-451D-8699-F391C94A4426",
+          "modality": "Visium",
+          "canonical_id": "section17_4T_1B",
+          "display_dataset": "section17_4T_1B"
+        },
+        {
+          "dataset_uid": "00204405-45A8-4839-8CA9-67603B022CBA",
+          "modality": "Visium",
+          "canonical_id": "section22",
+          "display_dataset": "section22"
+        },
+        {
+          "dataset_uid": "70F3425D-29F0-4B60-BEF9-3A4D5F976DFB",
+          "modality": "Visium",
+          "canonical_id": "section31",
+          "display_dataset": "section31"
+        },
+        {
+          "dataset_uid": "64A85887-7E5F-4F70-908C-E2824EBC2D6D",
+          "modality": "Visium",
+          "canonical_id": "section32_1T_1B",
+          "display_dataset": "section32_1T_1B"
+        },
+        {
+          "dataset_uid": "23E9B8D7-DACF-4BA6-9810-D4D1A10E7B9D",
+          "modality": "Visium",
+          "canonical_id": "section32_4T_1B",
+          "display_dataset": "section32_4T_1B"
+        },
+        {
+          "dataset_uid": "15504117-7FA0-409B-9BA8-6DF5F7219FD6",
+          "modality": "Single nuclei",
+          "canonical_id": "Hipp_SN_f1_ONT_Run1",
+          "display_dataset": "Hipp_SN_f1_ONT_Run1"
+        },
+        {
+          "dataset_uid": "539DA795-D6EB-4A95-B1EF-41769169A575",
+          "modality": "Single nuclei",
+          "canonical_id": "Hipp_SN_f1_ONT_Run2",
+          "display_dataset": "Hipp_SN_f1_ONT_Run2"
+        },
+        {
+          "dataset_uid": "C17919B1-8644-4BEA-9366-7E5EC6F13BB0",
+          "modality": "Single nuclei",
+          "canonical_id": "Hipp_SN_f2_ONT",
+          "display_dataset": "Hipp_SN_f2_ONT"
+        },
+        {
+          "dataset_uid": "AC646AF1-AF4D-4F06-B9D3-AB006D6FD038",
+          "modality": "Single nuclei",
+          "canonical_id": "Hipp_SN_f3_ONT_Run1",
+          "display_dataset": "Hipp_SN_f3_ONT_Run1"
+        },
+        {
+          "dataset_uid": "25322AE5-2722-456D-8D48-05400716B628",
+          "modality": "Single nuclei",
+          "canonical_id": "Hipp_SN_f3_ONT_Run2",
+          "display_dataset": "Hipp_SN_f3_ONT_Run2"
+        },
+        {
+          "dataset_uid": "EB38A2DF-17F1-4AB2-A0B7-C21C0A86D4B0",
+          "modality": "Single nuclei",
+          "canonical_id": "Hipp_SN_m2_ONT",
+          "display_dataset": "Hipp_SN_m2_ONT"
+        },
+        {
+          "dataset_uid": "D1EC3A5B-0A60-481F-97C2-4190DAAD6187",
+          "modality": "Single nuclei",
+          "canonical_id": "Hipp_SN_m3_ONT",
+          "display_dataset": "Hipp_SN_m3_ONT"
+        },
+        {
+          "dataset_uid": "5CF3D7B3-13AF-4A4D-8DA3-BDA3B26D2D08",
+          "modality": "Single cell",
+          "canonical_id": "ScMixology2",
+          "display_dataset": "ScMixology2"
+        }
+      ],
+      "graphs": [
+        {
+          "graph_uid": "8BE8B167-74A0-4B7E-A36C-E1356C7F3800",
+          "title": "*precision [Synthetic]",
+          "dataset_uids": [
+            "DDE497E7-89D5-4580-9AE0-B29A3AED0A95",
+            "E7C429FC-12F0-4F66-BFC4-7705804A11A6"
+          ]
+        },
+        {
+          "graph_uid": "68E1B5E9-EE7E-4211-8154-C02FB818694E",
+          "title": "*precision [Single cell]",
+          "dataset_uids": [
+            "C784F183-BD53-4D7D-BC81-529F40A12588",
+            "18A5B0DA-3A55-415D-9287-CDC83EDEF109",
+            "830DC701-0D66-4E98-9DDF-A8827F67D7E4",
+            "9BD53E03-63FA-4E81-AB03-EE667B83AB5D",
+            "A1FD61DF-8920-4BFF-BD96-7DA75670D24E",
+            "8AFB6C30-CA0C-4891-9535-5CB9FC2E72B2",
+            "83811442-2D86-4199-89FD-6C3E90B4EF89",
+            "D85AC7DE-3C04-47E9-9131-4F74C5EB599A",
+            "256D2C40-5BFA-44DE-A1DF-F01568EB2EBD",
+            "51D95033-7A61-4049-9061-4E04B0600E6C",
+            "5CF3D7B3-13AF-4A4D-8DA3-BDA3B26D2D08"
+          ]
+        },
+        {
+          "graph_uid": "FDA4F2F6-85B1-44A8-B3F6-28DD26FD4E17",
+          "title": "*precision [Targeted LR-seq]",
+          "dataset_uids": [
+            "0CFD9EF4-B6A2-416C-9FD2-E3BB200C0D70",
+            "5233AB5A-F143-4F71-8052-AF606E3891E3",
+            "ECFE8D37-112F-4B37-A757-CCB0CEA48488"
+          ]
+        },
+        {
+          "graph_uid": "817B3DE8-F181-418E-A759-23B94B9FD1E7",
+          "title": "*precision [Single nuclei]",
+          "dataset_uids": [
+            "5A48AD72-AB76-4398-A9CB-34B8C0B10DA6",
+            "2311F81D-0618-4F94-8899-10CE75006C6E",
+            "42DFD3AA-DACF-42C9-BE9A-B49D707F6862",
+            "0A03CBBE-125D-407F-95A8-031A08180DB0",
+            "A73C1EB7-0695-453F-ADB4-EC05A276A111",
+            "15504117-7FA0-409B-9BA8-6DF5F7219FD6",
+            "539DA795-D6EB-4A95-B1EF-41769169A575",
+            "C17919B1-8644-4BEA-9366-7E5EC6F13BB0",
+            "AC646AF1-AF4D-4F06-B9D3-AB006D6FD038",
+            "25322AE5-2722-456D-8D48-05400716B628",
+            "EB38A2DF-17F1-4AB2-A0B7-C21C0A86D4B0",
+            "D1EC3A5B-0A60-481F-97C2-4190DAAD6187"
+          ]
+        },
+        {
+          "graph_uid": "1EC45CBD-9776-4AA6-9729-5851606E64F4",
+          "title": "*precision [Visium]",
+          "dataset_uids": [
+            "5ADB618D-7C78-43BB-B608-8B02113033F4",
+            "7A73E3E1-F836-422C-BB55-9BAFEDB25E07",
+            "2A5B5F9B-177E-402E-BFD4-31F9DCB435B1",
+            "5D44A92A-3AC3-4B3C-86B0-85638F6F06D3",
+            "6CE90644-FA32-451D-8699-F391C94A4426",
+            "00204405-45A8-4839-8CA9-67603B022CBA",
+            "70F3425D-29F0-4B60-BEF9-3A4D5F976DFB",
+            "64A85887-7E5F-4F70-908C-E2824EBC2D6D",
+            "23E9B8D7-DACF-4BA6-9810-D4D1A10E7B9D"
+          ]
+        }
+      ],
+      "observations_verified_against_paired_table": 111
+    },
+    {
+      "metric": "recall",
+      "sheet_uid": "B1DA964E-9CAE-4DD7-B33A-C2DE7FAA6111",
+      "table_uid": "BF430248-EB91-4D8F-87D8-4C42A2967FB9",
+      "csv_member": "data/tables/BF430248-EB91-4D8F-87D8-4C42A2967FB9/data.csv",
+      "csv_sha256": "30a513a525319a515ba50ac50aaf19e50948fd1d69f082d12a17cb8fdcec02ac",
+      "archived_csv": "recall_modality_native.csv",
+      "columns": [
+        {
+          "dataset_uid": "F0E6CA04-2E2E-424C-AC4F-26321B3DB927",
+          "modality": "Synthetic",
+          "canonical_id": "ScTagger-S_flatQ20",
+          "display_dataset": "ScTagger-S_flatQ20"
+        },
+        {
+          "dataset_uid": "53D88D25-241B-4804-9DBC-706BC7AA3B84",
+          "modality": "Synthetic",
+          "canonical_id": "ScTagger-L_flatQ20",
+          "display_dataset": "ScTagger-L_flatQ20"
+        },
+        {
+          "dataset_uid": "3148A4B9-2CBF-4D7D-AB81-DC941DF610D2",
+          "modality": "Single cell",
+          "canonical_id": "Measles-P7",
+          "display_dataset": "Measles-P7"
+        },
+        {
+          "dataset_uid": "911EAB88-1AA9-407E-A9DE-D8F453E8B9E5",
+          "modality": "Targeted LR-seq",
+          "canonical_id": "Measles-P8-VDJ-enriched",
+          "display_dataset": "Measles-P8-VDJ-enriched"
+        },
+        {
+          "dataset_uid": "1B216ADF-0594-4D57-8431-2A5999491332",
+          "modality": "Single cell",
+          "canonical_id": "Measles-P8-WTA",
+          "display_dataset": "Measles-P8-WTA"
+        },
+        {
+          "dataset_uid": "46DA8AB1-FEA5-45B4-9B79-552A0D8661B7",
+          "modality": "Single cell",
+          "canonical_id": "PromethION_iPSC",
+          "display_dataset": "PromethION_iPSC"
+        },
+        {
+          "dataset_uid": "DC536EDB-3DA1-4221-974A-53A173D0DC16",
+          "modality": "Targeted LR-seq",
+          "canonical_id": "RAGEseq-cell-line",
+          "display_dataset": "RAGEseq-cell-line"
+        },
+        {
+          "dataset_uid": "EF2DC0AA-4BCA-45FD-87F6-9953235F72EF",
+          "modality": "Targeted LR-seq",
+          "canonical_id": "RAGEseq-TNBC-LN",
+          "display_dataset": "RAGEseq-TNBC-LN"
+        },
+        {
+          "dataset_uid": "BD3F765A-6E30-44BE-8A45-113E6A72B1F7",
+          "modality": "Single cell",
+          "canonical_id": "LongBench-SC-ONT",
+          "display_dataset": "LongBench-SC-ONT"
+        },
+        {
+          "dataset_uid": "6D41ACF1-B4AF-4978-92AD-1E2BD90F3482",
+          "modality": "Single nuclei",
+          "canonical_id": "LongBench-SN-ONT",
+          "display_dataset": "LongBench-SN-ONT"
+        },
+        {
+          "dataset_uid": "DA128F42-3F99-47F1-95D4-25BBF39BA657",
+          "modality": "Single cell",
+          "canonical_id": "LongBench-SC-PB",
+          "display_dataset": "LongBench-SC-PB"
+        },
+        {
+          "dataset_uid": "B5305268-42A4-44D5-BF72-6C07AD0FAB3F",
+          "modality": "Single nuclei",
+          "canonical_id": "LongBench-SN-PB",
+          "display_dataset": "LongBench-SN-PB"
+        },
+        {
+          "dataset_uid": "0D126882-31D9-48F2-BCC3-71C53593FB4E",
+          "modality": "Visium",
+          "canonical_id": "LeBrigand-MOB",
+          "display_dataset": "LeBrigand-MOB"
+        },
+        {
+          "dataset_uid": "0653434D-3CAF-4BCB-9291-C80CA17CEED0",
+          "modality": "Single cell",
+          "canonical_id": "Isosceles-ovarian-GSE248115",
+          "display_dataset": "Isosceles-ovarian-GSE248115"
+        },
+        {
+          "dataset_uid": "806432CE-84AF-4727-AD1F-D0AB30CB39AF",
+          "modality": "Single nuclei",
+          "canonical_id": "Hipp_SN_m1_ONT_Run1",
+          "display_dataset": "Tilgner-m1-ONT-Run1"
+        },
+        {
+          "dataset_uid": "8F1FA0D0-C2BA-40C7-9116-B94268C04EEC",
+          "modality": "Single nuclei",
+          "canonical_id": "Hipp_SN_m1_ONT_Run2",
+          "display_dataset": "Tilgner-m1-ONT-Run2"
+        },
+        {
+          "dataset_uid": "0ED219C7-14E6-41B9-9313-F1CB4D1E9E32",
+          "modality": "Single nuclei",
+          "canonical_id": "Hipp_SN_m1_ONT_Run3",
+          "display_dataset": "Tilgner-m1-ONT-Run3"
+        },
+        {
+          "dataset_uid": "45F97569-0B88-48BB-B5C9-6D278407C663",
+          "modality": "Single cell",
+          "canonical_id": "ERR15095094_MPNST1_scNaUMIseq_MinION",
+          "display_dataset": "ERR15095094_MPNST1_scNaUMIseq_MinION"
+        },
+        {
+          "dataset_uid": "AB2B4B62-BCF9-42F1-9D67-3153449E1875",
+          "modality": "Single cell",
+          "canonical_id": "ERR15095095_MPNST1_scNaUMIseq_PromethION",
+          "display_dataset": "ERR15095095_MPNST1_scNaUMIseq_PromethION"
+        },
+        {
+          "dataset_uid": "F4EE2781-612D-4616-8C50-F34D5F8EBBA0",
+          "modality": "Single cell",
+          "canonical_id": "ERR15095096",
+          "display_dataset": "ERR15095096"
+        },
+        {
+          "dataset_uid": "D832C5B4-08F1-4C15-9778-19996C55F9C8",
+          "modality": "Single cell",
+          "canonical_id": "ERR15095097",
+          "display_dataset": "ERR15095097"
+        },
+        {
+          "dataset_uid": "683B09E6-7EBB-4796-9B2C-F5328EA830A9",
+          "modality": "Visium",
+          "canonical_id": "section12",
+          "display_dataset": "section12"
+        },
+        {
+          "dataset_uid": "3C224663-75F0-4857-B45C-C003557396D6",
+          "modality": "Visium",
+          "canonical_id": "section16",
+          "display_dataset": "section16"
+        },
+        {
+          "dataset_uid": "9EFD376D-B469-49AC-80D9-2C58AE58C08C",
+          "modality": "Visium",
+          "canonical_id": "section17_1T_1B",
+          "display_dataset": "section17_1T_1B"
+        },
+        {
+          "dataset_uid": "92739C8A-2E01-4619-8B75-86720C8786DB",
+          "modality": "Visium",
+          "canonical_id": "section17_4T_1B",
+          "display_dataset": "section17_4T_1B"
+        },
+        {
+          "dataset_uid": "D21F4CA5-599D-4ACB-B4E2-BBFDF7E6BDF1",
+          "modality": "Visium",
+          "canonical_id": "section22",
+          "display_dataset": "section22"
+        },
+        {
+          "dataset_uid": "660F981A-E05B-4120-B0EF-B2EB880E7A0E",
+          "modality": "Visium",
+          "canonical_id": "section31",
+          "display_dataset": "section31"
+        },
+        {
+          "dataset_uid": "88158821-A546-48C1-A59E-C5D67D83BE25",
+          "modality": "Visium",
+          "canonical_id": "section32_1T_1B",
+          "display_dataset": "section32_1T_1B"
+        },
+        {
+          "dataset_uid": "23D796B3-D2BA-43B0-B6A9-E3C27827E78D",
+          "modality": "Visium",
+          "canonical_id": "section32_4T_1B",
+          "display_dataset": "section32_4T_1B"
+        },
+        {
+          "dataset_uid": "2CEE9A4E-84C3-4A62-9CD3-29B823F41D7E",
+          "modality": "Single nuclei",
+          "canonical_id": "Hipp_SN_f1_ONT_Run1",
+          "display_dataset": "Hipp_SN_f1_ONT_Run1"
+        },
+        {
+          "dataset_uid": "08B6FE80-4B76-46EA-AD78-B1242E7104CA",
+          "modality": "Single nuclei",
+          "canonical_id": "Hipp_SN_f1_ONT_Run2",
+          "display_dataset": "Hipp_SN_f1_ONT_Run2"
+        },
+        {
+          "dataset_uid": "7A7D0491-E495-4CF7-BCBA-1AA236D70A0A",
+          "modality": "Single nuclei",
+          "canonical_id": "Hipp_SN_f2_ONT",
+          "display_dataset": "Hipp_SN_f2_ONT"
+        },
+        {
+          "dataset_uid": "F0F1287C-1B89-43D2-9630-A88F345FD08E",
+          "modality": "Single nuclei",
+          "canonical_id": "Hipp_SN_f3_ONT_Run1",
+          "display_dataset": "Hipp_SN_f3_ONT_Run1"
+        },
+        {
+          "dataset_uid": "F289246A-ACA6-4769-BFC5-40238AF3F081",
+          "modality": "Single nuclei",
+          "canonical_id": "Hipp_SN_f3_ONT_Run2",
+          "display_dataset": "Hipp_SN_f3_ONT_Run2"
+        },
+        {
+          "dataset_uid": "AD843F4A-54A6-4E07-AA98-515B3619C7EE",
+          "modality": "Single nuclei",
+          "canonical_id": "Hipp_SN_m2_ONT",
+          "display_dataset": "Hipp_SN_m2_ONT"
+        },
+        {
+          "dataset_uid": "BC512935-91DC-4D26-BBF4-688D91552D77",
+          "modality": "Single nuclei",
+          "canonical_id": "Hipp_SN_m3_ONT",
+          "display_dataset": "Hipp_SN_m3_ONT"
+        },
+        {
+          "dataset_uid": "9F612A1C-93B6-44C9-A321-F63932321B6B",
+          "modality": "Single cell",
+          "canonical_id": "ScMixology2",
+          "display_dataset": "ScMixology2"
+        }
+      ],
+      "graphs": [
+        {
+          "graph_uid": "5A9EC4D9-CD8E-4C64-AF60-26C461EC9223",
+          "title": "*recall [Synthetic]",
+          "dataset_uids": [
+            "F0E6CA04-2E2E-424C-AC4F-26321B3DB927",
+            "53D88D25-241B-4804-9DBC-706BC7AA3B84"
+          ]
+        },
+        {
+          "graph_uid": "90D22F3C-2B87-412F-8052-A52089B5D3BE",
+          "title": "*recall [Single cell]",
+          "dataset_uids": [
+            "3148A4B9-2CBF-4D7D-AB81-DC941DF610D2",
+            "1B216ADF-0594-4D57-8431-2A5999491332",
+            "46DA8AB1-FEA5-45B4-9B79-552A0D8661B7",
+            "BD3F765A-6E30-44BE-8A45-113E6A72B1F7",
+            "DA128F42-3F99-47F1-95D4-25BBF39BA657",
+            "0653434D-3CAF-4BCB-9291-C80CA17CEED0",
+            "45F97569-0B88-48BB-B5C9-6D278407C663",
+            "AB2B4B62-BCF9-42F1-9D67-3153449E1875",
+            "F4EE2781-612D-4616-8C50-F34D5F8EBBA0",
+            "D832C5B4-08F1-4C15-9778-19996C55F9C8",
+            "9F612A1C-93B6-44C9-A321-F63932321B6B"
+          ]
+        },
+        {
+          "graph_uid": "A04A754C-1F3D-481A-9337-A94C5818E9A9",
+          "title": "*recall [Targeted LR-seq]",
+          "dataset_uids": [
+            "911EAB88-1AA9-407E-A9DE-D8F453E8B9E5",
+            "DC536EDB-3DA1-4221-974A-53A173D0DC16",
+            "EF2DC0AA-4BCA-45FD-87F6-9953235F72EF"
+          ]
+        },
+        {
+          "graph_uid": "E04C3AA9-C407-489D-9979-1BED85C21885",
+          "title": "*recall [Single nuclei]",
+          "dataset_uids": [
+            "6D41ACF1-B4AF-4978-92AD-1E2BD90F3482",
+            "B5305268-42A4-44D5-BF72-6C07AD0FAB3F",
+            "806432CE-84AF-4727-AD1F-D0AB30CB39AF",
+            "8F1FA0D0-C2BA-40C7-9116-B94268C04EEC",
+            "0ED219C7-14E6-41B9-9313-F1CB4D1E9E32",
+            "2CEE9A4E-84C3-4A62-9CD3-29B823F41D7E",
+            "08B6FE80-4B76-46EA-AD78-B1242E7104CA",
+            "7A7D0491-E495-4CF7-BCBA-1AA236D70A0A",
+            "F0F1287C-1B89-43D2-9630-A88F345FD08E",
+            "F289246A-ACA6-4769-BFC5-40238AF3F081",
+            "AD843F4A-54A6-4E07-AA98-515B3619C7EE",
+            "BC512935-91DC-4D26-BBF4-688D91552D77"
+          ]
+        },
+        {
+          "graph_uid": "2EDF8493-88DD-496D-BEF9-11B3316EEE79",
+          "title": "*recall [Visium]",
+          "dataset_uids": [
+            "0D126882-31D9-48F2-BCC3-71C53593FB4E",
+            "683B09E6-7EBB-4796-9B2C-F5328EA830A9",
+            "3C224663-75F0-4857-B45C-C003557396D6",
+            "9EFD376D-B469-49AC-80D9-2C58AE58C08C",
+            "92739C8A-2E01-4619-8B75-86720C8786DB",
+            "D21F4CA5-599D-4ACB-B4E2-BBFDF7E6BDF1",
+            "660F981A-E05B-4120-B0EF-B2EB880E7A0E",
+            "88158821-A546-48C1-A59E-C5D67D83BE25",
+            "23D796B3-D2BA-43B0-B6A9-E3C27827E78D"
+          ]
+        }
+      ],
+      "observations_verified_against_paired_table": 111
+    }
+  ],
+  "flexiplex_variants": {
+    "table_uid": "36865BC4-70F6-5C9D-8F89-D86B82E7F4D0",
+    "csv_member": "data/tables/36865BC4-70F6-5C9D-8F89-D86B82E7F4D0/data.csv",
+    "csv_sha256": "5dab4bebd8459e41c8455241df3e2bbf6969720cfec63dabbc590ff9e0c84c4d",
+    "selection": "Choose the higher recorded F1; retain its precision and recall."
+  },
+  "saved_prism_statistics": [
+    {
+      "title": "**Friedman test of Precision by dataset (per tool):ANOVA results",
+      "file": "prism_statistics_98164537-CB2B-464A-AF22-8143A363BA31.csv",
+      "sheet_uid": "480ADDBF-F570-4ADE-A432-02C057476AA2",
+      "table_uid": "98164537-CB2B-464A-AF22-8143A363BA31",
+      "csv_sha256": "5888dcd3d47160b86a9f5e4eae36b0dd6d0df75107b483047ac7c9c75a012732"
+    },
+    {
+      "title": "**Friedman test of Precision by dataset (per tool):Multiple comparisons",
+      "file": "prism_statistics_CA0DC1D0-454C-40F3-83B8-DE1B705049F2.csv",
+      "sheet_uid": "8D0711DA-7759-4240-905B-F8338F726B53",
+      "table_uid": "CA0DC1D0-454C-40F3-83B8-DE1B705049F2",
+      "csv_sha256": "46ea0c2f8aa66aa723549a4b12c67f0e55f18f0626b798eb759d987b7e43339d"
+    },
+    {
+      "title": "*Friedman test of F1 by dataset (per tool):ANOVA results",
+      "file": "prism_statistics_C020B47C-6BF7-4A57-86D0-9DBA4460EBB2.csv",
+      "sheet_uid": "C4F8D35D-569C-4076-9DC8-F5973C18068F",
+      "table_uid": "C020B47C-6BF7-4A57-86D0-9DBA4460EBB2",
+      "csv_sha256": "0794b2e35f09bb9c5bb79acac35409b5ef4dd1f59069250205bcee586a36e2db"
+    },
+    {
+      "title": "*Friedman test of F1 by dataset (per tool):Descriptive statistics",
+      "file": "prism_statistics_8E058610-6C03-474A-9214-FA70CB389E67.csv",
+      "sheet_uid": "913BFE2D-DD3B-40BB-ACF9-EEB4AC0D6CBD",
+      "table_uid": "8E058610-6C03-474A-9214-FA70CB389E67",
+      "csv_sha256": "b025f4a91216a3fd483fe25d6d85f64674975edee9e2aaf2ba35687065fc4f3b"
+    },
+    {
+      "title": "**Friedman test of Precision by dataset (per tool):Descriptive statistics",
+      "file": "prism_statistics_A546BB84-F926-47E7-8984-1C9D59FB2812.csv",
+      "sheet_uid": "521811A0-4806-454B-B8C0-3DF009D343E5",
+      "table_uid": "A546BB84-F926-47E7-8984-1C9D59FB2812",
+      "csv_sha256": "884841dc8fad1b3e5dea9c537f684b008c25928e3f8b0d776695b506c2cf1a6b"
+    },
+    {
+      "title": "**Friedman test of Recall by dataset (per tool):Descriptive statistics",
+      "file": "prism_statistics_99BF6904-8061-422D-8D4F-03C4D44C810D.csv",
+      "sheet_uid": "C16F67A7-DC52-4058-BC78-0C439075E98B",
+      "table_uid": "99BF6904-8061-422D-8D4F-03C4D44C810D",
+      "csv_sha256": "de99c587166f3af3e1376d9ae28f0b0924e3da53ca6bae083b1aed4cdd8b3dff"
+    },
+    {
+      "title": "**Friedman test of Recall by dataset (per tool):ANOVA results",
+      "file": "prism_statistics_2000510F-2B07-4344-875F-671CAC1628B3.csv",
+      "sheet_uid": "C0AA902D-F47E-48D7-99D6-F3EF02078BAD",
+      "table_uid": "2000510F-2B07-4344-875F-671CAC1628B3",
+      "csv_sha256": "dcb6bdf70555ef53b5128ca2e6f1fb0cf1c5b27394a4ee150b6b80faeaf7d89a"
+    },
+    {
+      "title": "*Friedman test of F1 by dataset (per tool):Multiple comparisons",
+      "file": "prism_statistics_DCA0DDA1-A4FB-4CC5-A475-4B25F399CE5B.csv",
+      "sheet_uid": "D9F8A332-6DD2-4148-A56B-3BC320619640",
+      "table_uid": "DCA0DDA1-A4FB-4CC5-A475-4B25F399CE5B",
+      "csv_sha256": "739fe0d6ce46170c7cb9f1d780d6ff347b2b830f59d6789b931d3840901add9c"
+    },
+    {
+      "title": "**Friedman test of Recall by dataset (per tool):Multiple comparisons",
+      "file": "prism_statistics_11397BEA-A833-4148-BD45-0F6010E4A5E6.csv",
+      "sheet_uid": "1B4F8A3A-795C-4F2B-A54A-7CD093146D1A",
+      "table_uid": "11397BEA-A833-4148-BD45-0F6010E4A5E6",
+      "csv_sha256": "e88666608e498ae3ac8e58c60e4d8aa90786be9c9f9215ce469a0c1121bb1b2d"
+    }
+  ],
+  "outputs": {
+    "checkpoint_summary.json": "2156a8341eb6566b1f5c97daf463ba3798ecc19e7e43a4c6e939d33fad4d790c",
+    "dunn.tsv": "fd66abcff9222c5c0875af92ed5099a289a78ac37cf0ade03301f7503a0212b5",
+    "f1_modality_native.csv": "05dddc954fbcc0198a37049e5068c102df87234bd1b19691f810aac22eee9e09",
+    "f1_native.csv": "bea8cb340f8bd553706a7d6bd1dacb824b5bd27faacac76db32b07b4545c1bc0",
+    "flexiplex_selected_conditions.tsv": "053b8def5c16b0ff5412e866b785afc8c3b20102380baff23fa6b37f7a9e51b1",
+    "flexiplex_variants_native.csv": "5dab4bebd8459e41c8455241df3e2bbf6969720cfec63dabbc590ff9e0c84c4d",
+    "friedman.tsv": "b635869c82ee3304f2e3d88ee0c16bcc2c4589a5d5fe93a1455af59a57b73dff",
+    "paired_f1.tsv": "5ce3f8d1bf790f9d8b128332fbc545aabfc556073967b128f76a6fa878bf41af",
+    "paired_precision.tsv": "cc710482a3d8c02209d1b43e0224561b6bf975e5ffeed2ab2d17d271e4858a15",
+    "paired_recall.tsv": "6883726b5df1e632e12de9c5d6c6b858a0de8578850143a45d27c676115f5596",
+    "plotted_metrics.tsv": "a0875bc0d68d27f8ab98130849e02a80715279769d58eba20c4bc6b64426c579",
+    "precision_modality_native.csv": "78b53ca951a3cc8cf2107d9acd5e8b6119404d168d50aef670d102e4035347ea",
+    "precision_native.csv": "8af6e6d6b65ebbbc0b69926e58f5349c546e363cb9ddf8c9026e89d5dd932f9f",
+    "prism_statistics_11397BEA-A833-4148-BD45-0F6010E4A5E6.csv": "e88666608e498ae3ac8e58c60e4d8aa90786be9c9f9215ce469a0c1121bb1b2d",
+    "prism_statistics_2000510F-2B07-4344-875F-671CAC1628B3.csv": "dcb6bdf70555ef53b5128ca2e6f1fb0cf1c5b27394a4ee150b6b80faeaf7d89a",
+    "prism_statistics_8E058610-6C03-474A-9214-FA70CB389E67.csv": "b025f4a91216a3fd483fe25d6d85f64674975edee9e2aaf2ba35687065fc4f3b",
+    "prism_statistics_98164537-CB2B-464A-AF22-8143A363BA31.csv": "5888dcd3d47160b86a9f5e4eae36b0dd6d0df75107b483047ac7c9c75a012732",
+    "prism_statistics_99BF6904-8061-422D-8D4F-03C4D44C810D.csv": "de99c587166f3af3e1376d9ae28f0b0924e3da53ca6bae083b1aed4cdd8b3dff",
+    "prism_statistics_A546BB84-F926-47E7-8984-1C9D59FB2812.csv": "884841dc8fad1b3e5dea9c537f684b008c25928e3f8b0d776695b506c2cf1a6b",
+    "prism_statistics_C020B47C-6BF7-4A57-86D0-9DBA4460EBB2.csv": "0794b2e35f09bb9c5bb79acac35409b5ef4dd1f59069250205bcee586a36e2db",
+    "prism_statistics_CA0DC1D0-454C-40F3-83B8-DE1B705049F2.csv": "46ea0c2f8aa66aa723549a4b12c67f0e55f18f0626b798eb759d987b7e43339d",
+    "prism_statistics_DCA0DDA1-A4FB-4CC5-A475-4B25F399CE5B.csv": "739fe0d6ce46170c7cb9f1d780d6ff347b2b830f59d6789b931d3840901add9c",
+    "producer_comparison.tsv": "659e47c03ae5d64480b646a75a4ae3aaf88db9bef2e311417d06fbe8e204b5bb",
+    "recall_modality_native.csv": "30a513a525319a515ba50ac50aaf19e50948fd1d69f082d12a17cb8fdcec02ac",
+    "recall_native.csv": "844706d9eab27578d60adf286311c582dc818a04b3efa89cc1b32c29a40b66e9"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "status": "PASS",
+  "counts_verified": 24,
+  "source_sha256": "8f2e474641ce702055a8fa8f37365877c880f960afc65d0d247637c493d63ae0",
+  "totals": {
+    "RAD": 9239,
+    "BLAZE": 6495,
+    "Flexiplex": 7070
+  },
+  "input_rows": 12614,
+  "reference_barcodes": 12012,
+  "input_format": "wide producing genotype checkpoint",
+  "native_prism": {
+    "sha256": "d16679c40cb377a3f882faeb6b1e83695f92ff2464694544811b988361dd004e",
+    "all_counts_match": true,
+    "graph_uid": "A802F129-B689-40F8-B170-DDBCDC54A6DE",
+    "data_sheet_uid": "4FC888D1-8AD1-4974-929E-4116B28FB4F6",
+    "data_table_uid": "E248D61F-F6DA-49E0-A049-53E5EA99D0B3",
+    "csv_sha256": "bc55345516da193f94ba66f90ff1d370423e7edd0d746b9425fd36ffb5723b07"
+  },
+  "comparison_annotation_stream": {
+    "path": "source_data/figure_06/union_per_cell_genotype.tsv",
+    "sha256": "3a4d9e0c381505498842b8d6884ac15d7e41c6266e81b8c32c57729052d7238a",
+    "differences": [
+      {
+        "tool": "BLAZE",
+        "donor": "H146",
+        "plotted": 241,
+        "comparison": 233,
+        "difference": 8
+      },
+      {
+        "tool": "BLAZE",
+        "donor": "H1975",
+        "plotted": 1756,
+        "comparison": 1762,
+        "difference": -6
+      },
+      {
+        "tool": "BLAZE",
+        "donor": "H211",
+        "plotted": 296,
+        "comparison": 291,
+        "difference": 5
+      },
+      {
+        "tool": "BLAZE",
+        "donor": "H2228",
+        "plotted": 1901,
+        "comparison": 1907,
+        "difference": -6
+      },
+      {
+        "tool": "BLAZE",
+        "donor": "H526",
+        "plotted": 187,
+        "comparison": 185,
+        "difference": 2
+      },
+      {
+        "tool": "BLAZE",
+        "donor": "H69",
+        "plotted": 190,
+        "comparison": 185,
+        "difference": 5
+      },
+      {
+        "tool": "BLAZE",
+        "donor": "HCC827",
+        "plotted": 1200,
+        "comparison": 1193,
+        "difference": 7
+      },
+      {
+        "tool": "BLAZE",
+        "donor": "SHP77",
+        "plotted": 724,
+        "comparison": 713,
+        "difference": 11
+      }
+    ]
+  }
+}

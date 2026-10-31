@@ -1,0 +1,130 @@
+From 24d5ce47e172222c96cd7dd19e94758d32aa5009 Mon Sep 17 00:00:00 2001
+From: cmv <102934129+indianewok@users.noreply.github.com>
+Date: Mon, 17 Aug 2026 21:32:22 -0400
+Subject: [PATCH] fix adapter threshold calibration
+
+---
+ include/rad/adapter_thresholds.hpp | 30 ++++++++++++++++++++++++++++++
+ include/rad/rad_headers.h          |  1 +
+ include/rad/read_layout.hpp        | 17 +++++++++--------
+ include/rad/sigstring.hpp          |  9 +++++----
+ 4 files changed, 45 insertions(+), 12 deletions(-)
+ create mode 100644 include/rad/adapter_thresholds.hpp
+
+diff --git a/include/rad/adapter_thresholds.hpp b/include/rad/adapter_thresholds.hpp
+new file mode 100644
+index 0000000..3c6a878
+--- /dev/null
++++ b/include/rad/adapter_thresholds.hpp
+@@ -0,0 +1,30 @@
++#pragma once
++
++#include <algorithm>
++#include <cstddef>
++
++namespace adapter_thresholds {
++
++constexpr std::size_t kFallbackErrorNumerator = 3;
++constexpr std::size_t kFallbackErrorDenominator = 10;
++
++/**
++ * Return the shared fallback edit-distance limit for an uncalibrated adapter.
++ *
++ * Keep this integer-only so layout preparation and read processing cannot
++ * drift because of different rounding rules or duplicated constants.
++ */
++constexpr int fallback_max_edit_distance(std::size_t adapter_length) {
++    const auto rounded_up =
++        (adapter_length * kFallbackErrorNumerator +
++         kFallbackErrorDenominator - 1) /
++        kFallbackErrorDenominator;
++    return std::max(1, static_cast<int>(rounded_up));
++}
++
++static_assert(fallback_max_edit_distance(22) == 7,
++              "22 nt adapters must allow seven fallback edits");
++static_assert(fallback_max_edit_distance(23) == 7,
++              "23 nt adapters must allow seven fallback edits");
++
++}  // namespace adapter_thresholds
+diff --git a/include/rad/rad_headers.h b/include/rad/rad_headers.h
+index 06d4ec3..f32a5a3 100644
+--- a/include/rad/rad_headers.h
++++ b/include/rad/rad_headers.h
+@@ -81,6 +81,7 @@
+ #include "misc_utils.hpp"
+ #include "io_streaming.hpp"
+ #include "barcode_correction.hpp"
++#include "adapter_thresholds.hpp"
+ #include "read_layout.hpp"
+ #include "sigstring.hpp"
+ #include "whitelist_generator.hpp"
+diff --git a/include/rad/read_layout.hpp b/include/rad/read_layout.hpp
+index 74dc138..f9e901c 100644
+--- a/include/rad/read_layout.hpp
++++ b/include/rad/read_layout.hpp
+@@ -2930,6 +2930,7 @@ private:
+         size_t total_reads,
+         std::string direction
+     ) {
++        bool all_perfect = true;
+         // loop over adapters
+         for (const auto& [id, seq] : adapters) {
+             int max_adapter_error_permissible = static_cast<int>(seq.length()*0.25); 
+@@ -2983,9 +2984,13 @@ private:
+             }
+ 
+             edlibFreeAlignResult(result);
+-            if(!is_perfect) return false;
++            // Continue through the remaining adapters even when this adapter
++            // is not perfect.  Layout calibration needs observations for
++            // every static element; returning here previously skipped later
++            // elements such as rc_forw_primer and left their map rows blank.
++            all_perfect = all_perfect && is_perfect;
+         }
+-        return true;
++        return all_perfect;
+     }
+ 
+ /**
+@@ -3173,12 +3178,8 @@ private:
+                 auto& misalignment = misalignment_stats[adapter_id];
+                 double mean = misalignment.mean;
+                 constexpr size_t kMinMisalignmentObservations = 100;
+-                constexpr double kFallbackAdapterErrorFraction = 0.30;
+-                const int fallback_threshold = std::max(
+-                    1,
+-                    static_cast<int>(std::ceil(
+-                        static_cast<double>(seq.length()) *
+-                        kFallbackAdapterErrorFraction)));
++                const int fallback_threshold =
++                    adapter_thresholds::fallback_max_edit_distance(seq.length());
+                 const bool use_fallback_threshold =
+                     misalignment.count < kMinMisalignmentObservations ||
+                     !std::isfinite(mean) ||
+diff --git a/include/rad/sigstring.hpp b/include/rad/sigstring.hpp
+index 791a01c..36fd6a6 100644
+--- a/include/rad/sigstring.hpp
++++ b/include/rad/sigstring.hpp
+@@ -3594,13 +3594,14 @@ public:
+             continue;
+         }
+ 
+-        // Update max_distance from misalignment_threshold if available; 
+-        //if not, set to ~20% of the adapter seq length
+-        // this will be the case for R1/R2 reads
++        // Use the calibrated threshold when available.  Otherwise use the
++        // same ceil(30%) fallback as layout preparation so an omitted map row
++        // cannot silently tighten an adapter from seven edits to four.
+         if (it->misalignment_threshold) {
+             max_distance = std::get<0>(*it->misalignment_threshold);
+         } else {
+-            max_distance = static_cast<int>(it->seq.length() * 0.2);
++            max_distance =
++                adapter_thresholds::fallback_max_edit_distance(it->seq.length());
+         }
+ 
+         // poly-tail solution--importantly, only will look for poly-tails if you tell it to
+-- 
+2.43.7
+

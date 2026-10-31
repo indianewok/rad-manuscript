@@ -1,0 +1,8 @@
+{
+  "source": "Retained all-read SeqKit summary fields",
+  "quality_field": "AvgQual",
+  "original_seqkit_version": null,
+  "original_seqkit_command": null,
+  "ScTagger_S_quality": "uniform Q20",
+  "ScTagger_L_quality": "uniform Q20"
+}

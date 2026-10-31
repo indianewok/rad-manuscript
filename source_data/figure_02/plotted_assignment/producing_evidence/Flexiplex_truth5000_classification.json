@@ -1,0 +1,49 @@
+{
+  "assigned_records": 3034014,
+  "audit_binary_sha256": "38dccd37f1747e5105b62eacde572b7e4c5206fb925dc1fdbe8210ffe8b1e8c4",
+  "cpu_affinity": "32-47,96-111",
+  "fixed_whitelist_sha256": "2418b849f88ce6f28cf8c702acab795e4b483f6b2da17953675fce96b405899e",
+  "flexiplex_threads": 28,
+  "input_all_read_ids_denominator": 4993805,
+  "input_records": 4993805,
+  "input_sha256": "6f7385468b607cf86c91449b095c2968ee2a5d25ab473901102b87d141543090",
+  "maximum_rss_kbytes": 322048,
+  "pigz_compress_threads": 4,
+  "pigz_decompress_threads": 4,
+  "pristine_binary_sha256": "62a41db2407e2675b8d1bc4201839c9d47b8d102116a0f1d504346ecfc753e10",
+  "raw_row_truth_comparison": {
+    "corrected": 2175488,
+    "incorrect": 172355,
+    "native": 686171
+  },
+  "record_level": {
+    "ambiguous": 1442,
+    "corrected": 2174996,
+    "incorrect": 171592,
+    "native": 685984
+  },
+  "sidecar_conflicting_cell_read_ids": 721,
+  "sidecar_duplicate_read_ids": 721,
+  "sidecar_duplicate_rows": 1442,
+  "sidecar_rows": 3034014,
+  "sidecar_unique_read_ids": 3033293,
+  "smoke_equivalence": {
+    "audit_fastq_sha256": "73455b7356bbfb5c06b9120fcca9150f3cc0633f380817a4f9779ef6dd208afa",
+    "audit_header": "Read\tCellBarcode\tRawCellBarcode\tFlankEditDist\tBarcodeEditDist\tUMI",
+    "audit_rc": 0,
+    "fastq_byte_identical": true,
+    "pristine_fastq_sha256": "73455b7356bbfb5c06b9120fcca9150f3cc0633f380817a4f9779ef6dd208afa",
+    "pristine_rc": 0,
+    "sidecar_normalized_identical": true
+  },
+  "strict_unique_ambiguous": 721,
+  "strict_unique_denominator": 3032572,
+  "strict_unique_read": {
+    "ambiguous": 721,
+    "corrected": 2174996,
+    "incorrect": 171592,
+    "native": 685984
+  },
+  "timing_wall_clock": "12:34.80",
+  "unassigned_input_reads_estimate": 1960512
+}

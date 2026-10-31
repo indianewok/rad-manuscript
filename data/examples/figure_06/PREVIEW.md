@@ -1,4 +1,4 @@
-# Figure 6 — source-data examples
+# Figure 6 source-data examples
 
 The tables below show selected allele counts, cell-line genotypes and fixed UMAP coordinates from LongBench single nuclei. [Extraction details](extraction.json) record source paths, hashes and selected rows. The [Figure 6 guide](../../../docs/figure_06.md) gives the complete analysis.
 

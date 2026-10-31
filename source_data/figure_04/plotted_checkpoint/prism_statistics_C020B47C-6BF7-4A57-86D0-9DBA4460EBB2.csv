@@ -1,0 +1,14 @@
+Table Analyzed,*F1 by dataset (per tool)
+Distribution assumption,No assumption
+,
+Friedman test,
+  P value,<0.0001
+  Exact or approximate P value?,Approximate
+  P value summary,****
+  Are means signif. different? (P < 0.05),Yes
+  Number of groups,3
+  Friedman statistic,25.68
+,
+Data summary,
+  Number of treatments (columns),3
+  Number of subjects (rows),37

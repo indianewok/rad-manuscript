@@ -1,27 +1,24 @@
-# Figure 3: off-list assignments and barcode correction
+# Figure 3 Off-list assignments and barcode correction
 
-![Figure 3](./prism/figure_03.png)
+![Figure 3](prism/figure_03.png)
 
-This image reproduces the saved Prism layout. Panel B shows total read counts;
-the source tables below contain the updated assignment fractions and RAGE-seq
-rerun counts.
+The [legend](../../docs/current_figure_legends.md) describes the panels. The
+[analysis guide](../../docs/figure_03.md) follows the sequencing inputs through
+barcode assignment, correction classification and calculation of the plotted
+metrics. The [source tables](../../source_data/figure_03/) contain off-list
+assignment totals, per-target counts and LongBench correction categories.
 
-The [Figure 3 guide](../../docs/figure_03.md) describes the datasets, software,
-counting rules and calculations. The [source tables](../../source_data/figure_03/)
-contain the assignment fractions, per-target counts and correction categories.
+The off-list challenge counts original physical reads with exactly one
+assignment record. The LongBench correction analysis counts unique
+original-read–target-barcode pairs and summarizes them by target barcode.
 
-The off-list challenge counts physical reads with exactly one assignment row.
-Assignment fractions use all physical input reads as the denominator. The
-LongBench correction analysis counts unique original-read–target-barcode pairs
-and summarizes them by target barcode.
-
-Validate the source tables from the repository root:
+Check the source tables:
 
 ```bash
 python3 scripts/revision/figure_3.py validate
 ```
 
-Rebuild them from the retained project checkpoints:
+Build them from the project checkpoints:
 
 ```bash
 python3 scripts/revision/figure_3.py build --project-root /path/to/reviewer_comment_data

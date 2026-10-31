@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "RAD_raw_audit_records_recounted": 2822457,
+  "main_panel_points_compared_to_assignment_table": 33004,
+  "all_selected_per_target_states_match": true,
+  "input_partition": 4993805,
+  "supplied_truth5000_Flexiplex_panels": [
+    "E",
+    "G"
+  ]
+}

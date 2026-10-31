@@ -1,0 +1,50 @@
+{
+	"@class": "AnalysisSheet",
+	"uid": "9815D305-6569-48D5-8770-E47D90630040",
+	"fenID": 29,
+	"title": "Simple linear regression of Copy of Data 1",
+	"$id": "analyses/sheet.schema.json",
+	"analysisClass": "SIMPLE_LINEAR_REGRESSION",
+	"isAllDataAnalyzed": true,
+	"isCalculated": true,
+	"currentResultSheet": "32D3E7E1-7859-480F-AC7F-196FF6A4C196",
+	"preferredResultSheet": "32D3E7E1-7859-480F-AC7F-196FF6A4C196",
+	"minRequiredVersion": {
+		"major": 0,
+		"minor": 0,
+		"subminor": 0,
+		"build": 0
+	},
+	"resultSheets": [
+		{
+			"uid": "32D3E7E1-7859-480F-AC7F-196FF6A4C196",
+			"title": "Tabular results"
+		},
+		{
+			"uid": "F1A2297E-ECDA-41AB-A588-7F25F52ED4B3",
+			"title": "Line"
+		},
+		{
+			"uid": "CF3FD754-2C12-4BA7-8831-102913DCBCF2",
+			"title": "Are lines different?"
+		}
+	],
+	"inputDataSets": [
+		{
+			"uid": "D6263EB1-495A-4B44-82A9-D2C8A29E7B59",
+			"title": "RAD -log10(BHFDR)_H146_high",
+			"idx": "A"
+		},
+		{
+			"uid": "5FD3AC22-F89A-4449-A8F2-025C20F8DAC3",
+			"title": "Flexiplex -log10(BHFDR)_H146_high",
+			"idx": "B"
+		}
+	],
+	"inputSheets": [
+		{
+			"uid": "A88C95DF-CE6C-4C79-B0F8-9170C95315E7",
+			"title": "Copy of Data 1"
+		}
+	]
+}

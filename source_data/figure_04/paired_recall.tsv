@@ -1,9 +1,9 @@
 paired_input_id	RAD	BLAZE	Flexiplex	input_status	independence_note
 ScTagger-S_flatQ20	1.000000000	1.000000000	1.000000000	native	physical or technical input; not asserted independent biological replicate
 ScTagger-L_flatQ20	1.000000000	1.000000000	0.600800000	native	physical or technical input; not asserted independent biological replicate
-P7	0.950207469	0.875518672	0.844398340	native	physical or technical input; not asserted independent biological replicate
-P8-enriched	0.916788038	0.922031265	0.904165453	native	physical or technical input; not asserted independent biological replicate
-P8	0.968831925	0.983396446	0.942421594	native	physical or technical input; not asserted independent biological replicate
+Measles-P7	0.950207469	0.875518672	0.844398340	native	physical or technical input; not asserted independent biological replicate
+Measles-P8-VDJ-enriched	0.916788038	0.922031265	0.904165453	native	physical or technical input; not asserted independent biological replicate
+Measles-P8-WTA	0.968831925	0.983396446	0.942421594	native	physical or technical input; not asserted independent biological replicate
 PromethION_iPSC	0.827788650	0.781800391	0.780821918	native	physical or technical input; not asserted independent biological replicate
 RAGEseq-cell-line	0.855715871	0.635738069	0.723418424	native	physical or technical input; not asserted independent biological replicate
 RAGEseq-TNBC-LN	0.981097357	0.653730345	0.615088658	native	physical or technical input; not asserted independent biological replicate

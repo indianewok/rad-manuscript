@@ -1,0 +1,50 @@
+{
+	"@class": "AnalysisSheet",
+	"uid": "4B07E995-A1FC-488B-AFBE-223C6F4F70EC",
+	"fenID": 30,
+	"title": "Simple linear regression of Data 4",
+	"$id": "analyses/sheet.schema.json",
+	"analysisClass": "SIMPLE_LINEAR_REGRESSION",
+	"isAllDataAnalyzed": true,
+	"isCalculated": true,
+	"currentResultSheet": "D162EDDB-235B-4B76-82D6-B6B7D56056A7",
+	"preferredResultSheet": "D162EDDB-235B-4B76-82D6-B6B7D56056A7",
+	"minRequiredVersion": {
+		"major": 0,
+		"minor": 0,
+		"subminor": 0,
+		"build": 0
+	},
+	"resultSheets": [
+		{
+			"uid": "D162EDDB-235B-4B76-82D6-B6B7D56056A7",
+			"title": "Tabular results"
+		},
+		{
+			"uid": "56DD1015-96C7-40FE-A967-A4180EA10A86",
+			"title": "Line"
+		},
+		{
+			"uid": "84EC6DDB-7209-49F2-BBA3-622A9BFED8CF",
+			"title": "Are lines different?"
+		}
+	],
+	"inputDataSets": [
+		{
+			"uid": "58E20D6C-5E32-483C-9129-AA8504EF9A7E",
+			"title": "Flexiplex -log10(BHFDR)_H526_high",
+			"idx": "A"
+		},
+		{
+			"uid": "FB693D09-7686-4C91-B163-F18BBFE964F4",
+			"title": "RAD -log10(BHFDR)_H526_high",
+			"idx": "B"
+		}
+	],
+	"inputSheets": [
+		{
+			"uid": "C9EB40C2-68E8-48D6-886F-EB26AA6FF5AF",
+			"title": "Data 4"
+		}
+	]
+}

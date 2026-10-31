@@ -1,0 +1,3074 @@
+{
+  "source_prism_sha256": "9c88d619006b88ebf443c340b7866308f93a1603806ae8885bc017d41532b9c5",
+  "layout_uid": "C3B5C198-E4BA-4C34-9580-B55EA23BE9C3",
+  "tables": [
+    {
+      "name": "panel_B_RAD",
+      "file": "panel_B_RAD.csv.gz",
+      "graph_uid": "47E987CA-3F8E-471A-AC95-9D87BAA35A0A",
+      "graph_title": "RAD",
+      "graph_specification": {
+        "@class": "FENGraphSheet",
+        "$id": "sheets/graph_sheet.schema.json",
+        "uid": "47E987CA-3F8E-471A-AC95-9D87BAA35A0A",
+        "fenID": 174,
+        "title": "RAD",
+        "isCustomTitle": true,
+        "isAutoCreated": true
+      },
+      "input_graph_datasets": [],
+      "data_sheet_uid": "B6477F54-FD88-4B35-B4A3-6CF772448B29",
+      "data_sheet_title": "RAD top 1000",
+      "table": {
+        "@class": "XYDataTable",
+        "$id": "sheets/data_sheet/data_table/data_table.schema.json",
+        "uid": "EAC8CDEA-CF8E-454C-A6C9-A29FB0C40C06",
+        "format": "xy",
+        "dataFormat": "y_single",
+        "rowTitlesDataSet": "D51A6660-973E-4F67-898C-2BDC5888E935",
+        "dataSets": [
+          "FD72B6F6-F0FE-4D5E-A056-FE6618236289"
+        ],
+        "xDataSetFormat": "y_single",
+        "xDataSet": "5648E153-E334-4906-B84B-13C32CC18748"
+      },
+      "datasets": {
+        "D51A6660-973E-4F67-898C-2BDC5888E935": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "D51A6660-973E-4F67-898C-2BDC5888E935",
+          "fenID": 1747,
+          "format": "text",
+          "attributes": [
+            "DS_ATTR_RT"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "string",
+              "commonAttributes": [
+                "NUMERIC"
+              ],
+              "decimalsLength": 15,
+              "significantDigitsCount": 7,
+              "lastRow": 13504,
+              "firstRow": 0
+            }
+          ]
+        },
+        "5648E153-E334-4906-B84B-13C32CC18748": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "5648E153-E334-4906-B84B-13C32CC18748",
+          "fenID": 1748,
+          "format": "y_single",
+          "title": "avg_log2FC_H146_vs_H526",
+          "attributes": [
+            "DS_ATTR_X"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 9,
+              "significantDigitsCount": 7,
+              "cellAttributes": [
+                {
+                  "rows": "13504",
+                  "attributes": [
+                    "FLOAT",
+                    "POSITIVE",
+                    "NUMERIC"
+                  ]
+                }
+              ],
+              "lastRow": 13504,
+              "firstRow": 0
+            }
+          ]
+        },
+        "FD72B6F6-F0FE-4D5E-A056-FE6618236289": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "FD72B6F6-F0FE-4D5E-A056-FE6618236289",
+          "fenID": 1746,
+          "format": "y_single",
+          "title": "neg_log10_FDR",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 9,
+              "significantDigitsCount": 7,
+              "cellAttributes": [
+                {
+                  "rows": "13504",
+                  "attributes": [
+                    "FLOAT",
+                    "POSITIVE",
+                    "NUMERIC"
+                  ]
+                }
+              ],
+              "lastRow": 13504,
+              "firstRow": 0
+            }
+          ]
+        }
+      },
+      "csv_rows": 13505,
+      "csv_sha256": "8a683ae42f562e858a9ac2a22c5e10b1f16a6df9b771e0f3190cca89ed99c774",
+      "gzip_sha256": "93ca687120ffcc7a86ad06395a18eff3495268f4d5444eeb44f3a6bb82bc06de"
+    },
+    {
+      "name": "panel_B_Flexiplex",
+      "file": "panel_B_Flexiplex.csv.gz",
+      "graph_uid": "468DB8AA-7B62-4DDC-8A6D-F673B2FC1F9A",
+      "graph_title": "Flexi",
+      "graph_specification": {
+        "@class": "FENGraphSheet",
+        "$id": "sheets/graph_sheet.schema.json",
+        "uid": "468DB8AA-7B62-4DDC-8A6D-F673B2FC1F9A",
+        "fenID": 175,
+        "title": "Flexi",
+        "isCustomTitle": true,
+        "isAutoCreated": true,
+        "inputDataSets": [
+          "1D4C48C7-E612-49F4-AB08-3E4F1C67F9AE"
+        ]
+      },
+      "input_graph_datasets": [
+        "1D4C48C7-E612-49F4-AB08-3E4F1C67F9AE"
+      ],
+      "data_sheet_uid": "71BF5FE5-AB99-4585-A45A-4AAA6DF6A2CA",
+      "data_sheet_title": "Flexi top 1000RAD top 1000",
+      "table": {
+        "@class": "XYDataTable",
+        "$id": "sheets/data_sheet/data_table/data_table.schema.json",
+        "uid": "DB63A741-AE1F-4131-9FBF-E457DC6C1A00",
+        "format": "xy",
+        "dataFormat": "y_single",
+        "rowTitlesDataSet": "6D9F3DB4-5E91-407E-9DF2-F2A3B93CF336",
+        "dataSets": [
+          "1D4C48C7-E612-49F4-AB08-3E4F1C67F9AE"
+        ],
+        "xDataSetFormat": "y_single",
+        "xDataSet": "1BA85730-E583-416E-8747-33F1CBF32029"
+      },
+      "datasets": {
+        "6D9F3DB4-5E91-407E-9DF2-F2A3B93CF336": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "6D9F3DB4-5E91-407E-9DF2-F2A3B93CF336",
+          "fenID": 1750,
+          "format": "text",
+          "attributes": [
+            "DS_ATTR_RT"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "string",
+              "commonAttributes": [
+                "NUMERIC"
+              ],
+              "decimalsLength": 15,
+              "significantDigitsCount": 7,
+              "lastRow": 12160,
+              "firstRow": 0
+            }
+          ]
+        },
+        "1BA85730-E583-416E-8747-33F1CBF32029": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "1BA85730-E583-416E-8747-33F1CBF32029",
+          "fenID": 1751,
+          "format": "y_single",
+          "title": "avg_log2FC_H146_vs_H526",
+          "attributes": [
+            "DS_ATTR_X"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 9,
+              "significantDigitsCount": 7,
+              "cellAttributes": [
+                {
+                  "rows": "12160",
+                  "attributes": [
+                    "FLOAT",
+                    "POSITIVE",
+                    "NUMERIC"
+                  ]
+                }
+              ],
+              "lastRow": 12160,
+              "firstRow": 0
+            }
+          ]
+        },
+        "1D4C48C7-E612-49F4-AB08-3E4F1C67F9AE": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "1D4C48C7-E612-49F4-AB08-3E4F1C67F9AE",
+          "fenID": 1749,
+          "format": "y_single",
+          "title": "neg_log10_FDR",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC"
+              ],
+              "decimalsLength": 8,
+              "significantDigitsCount": 7,
+              "cellAttributes": [
+                {
+                  "rows": "12160",
+                  "attributes": [
+                    "FLOAT",
+                    "POSITIVE",
+                    "NUMERIC"
+                  ]
+                }
+              ],
+              "lastRow": 12160,
+              "firstRow": 0
+            }
+          ]
+        }
+      },
+      "csv_rows": 13505,
+      "csv_sha256": "40693a74e5f5bd54c72d494e46a03363c15f3a0240b1543248c926906598cc54",
+      "gzip_sha256": "59853731ebfca0280e17aa2b0caf8fd796fdda3b332bdf51d021e17c743b7dc7"
+    },
+    {
+      "name": "panel_B_BLAZE",
+      "file": "panel_B_BLAZE.csv.gz",
+      "graph_uid": "D85F9BC6-EB04-4C69-B70B-5269D382A31A",
+      "graph_title": "BLAZE",
+      "graph_specification": {
+        "@class": "FENGraphSheet",
+        "$id": "sheets/graph_sheet.schema.json",
+        "uid": "D85F9BC6-EB04-4C69-B70B-5269D382A31A",
+        "fenID": 176,
+        "title": "BLAZE",
+        "isCustomTitle": true,
+        "isAutoCreated": true,
+        "inputDataSets": [
+          "C117B46C-FACE-4DA4-8FD7-DA8809E66303"
+        ]
+      },
+      "input_graph_datasets": [
+        "C117B46C-FACE-4DA4-8FD7-DA8809E66303"
+      ],
+      "data_sheet_uid": "34ABB35B-AA49-41E6-89FF-6EBC4FA87D2D",
+      "data_sheet_title": "BLAZEFlexi top 1000RAD top 1000",
+      "table": {
+        "@class": "XYDataTable",
+        "$id": "sheets/data_sheet/data_table/data_table.schema.json",
+        "uid": "DB77AB14-5736-4312-92ED-41BEE2F686AC",
+        "format": "xy",
+        "dataFormat": "y_single",
+        "rowTitlesDataSet": "DDF06431-52EF-4143-A9A1-B70A96489798",
+        "dataSets": [
+          "C117B46C-FACE-4DA4-8FD7-DA8809E66303"
+        ],
+        "xDataSetFormat": "y_single",
+        "xDataSet": "17B921D2-3D3D-4141-8D35-2AEC7911BE79"
+      },
+      "datasets": {
+        "DDF06431-52EF-4143-A9A1-B70A96489798": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "DDF06431-52EF-4143-A9A1-B70A96489798",
+          "fenID": 1753,
+          "format": "text",
+          "attributes": [
+            "DS_ATTR_RT"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "string",
+              "commonAttributes": [
+                "NUMERIC"
+              ],
+              "decimalsLength": 15,
+              "significantDigitsCount": 7,
+              "lastRow": 10926,
+              "firstRow": 0
+            }
+          ]
+        },
+        "17B921D2-3D3D-4141-8D35-2AEC7911BE79": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "17B921D2-3D3D-4141-8D35-2AEC7911BE79",
+          "fenID": 1754,
+          "format": "y_single",
+          "title": "avg_log2FC_H146_vs_H526",
+          "attributes": [
+            "DS_ATTR_X"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 9,
+              "significantDigitsCount": 7,
+              "cellAttributes": [
+                {
+                  "rows": "10926",
+                  "attributes": [
+                    "FLOAT",
+                    "POSITIVE",
+                    "NUMERIC"
+                  ]
+                }
+              ],
+              "lastRow": 10926,
+              "firstRow": 0
+            }
+          ]
+        },
+        "C117B46C-FACE-4DA4-8FD7-DA8809E66303": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "C117B46C-FACE-4DA4-8FD7-DA8809E66303",
+          "fenID": 1752,
+          "format": "y_single",
+          "title": "neg_log10_FDR",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC"
+              ],
+              "decimalsLength": 8,
+              "significantDigitsCount": 7,
+              "cellAttributes": [
+                {
+                  "rows": "10926",
+                  "attributes": [
+                    "FLOAT",
+                    "POSITIVE",
+                    "NUMERIC"
+                  ]
+                }
+              ],
+              "lastRow": 10926,
+              "firstRow": 0
+            }
+          ]
+        }
+      },
+      "csv_rows": 13505,
+      "csv_sha256": "0d220ce8cbe3e2f530164699521353b0aeb74a94626a3ae48a6ce6a5d7105549",
+      "gzip_sha256": "c229bd47d123622743a8308c620b62833bf5c31f9b7d721bb627f65cf3bb759d"
+    },
+    {
+      "name": "panel_C_H146_high",
+      "file": "panel_C_H146_high.csv.gz",
+      "graph_uid": "97C1162B-73F7-4BB2-AF2A-F872C4F43B57",
+      "graph_title": "Copy of Data 1",
+      "graph_specification": {
+        "@class": "FENGraphSheet",
+        "$id": "sheets/graph_sheet.schema.json",
+        "uid": "97C1162B-73F7-4BB2-AF2A-F872C4F43B57",
+        "fenID": 177,
+        "title": "Copy of Data 1",
+        "isAutoCreated": true,
+        "floatingNotes": [
+          "08DAEEF9-8D61-4927-BA1F-AE17C6FFCCBD"
+        ],
+        "inputDataSets": [
+          "D6263EB1-495A-4B44-82A9-D2C8A29E7B59",
+          "5FD3AC22-F89A-4449-A8F2-025C20F8DAC3",
+          "1CD8B3EC-57C9-408C-8A73-5C290A0E3E68",
+          "97ED3E88-5213-4951-82E4-0EE604E8A634"
+        ]
+      },
+      "input_graph_datasets": [
+        "D6263EB1-495A-4B44-82A9-D2C8A29E7B59",
+        "5FD3AC22-F89A-4449-A8F2-025C20F8DAC3",
+        "1CD8B3EC-57C9-408C-8A73-5C290A0E3E68",
+        "97ED3E88-5213-4951-82E4-0EE604E8A634"
+      ],
+      "data_sheet_uid": "A88C95DF-CE6C-4C79-B0F8-9170C95315E7",
+      "data_sheet_title": "Copy of Data 1",
+      "table": {
+        "@class": "XYDataTable",
+        "$id": "sheets/data_sheet/data_table/data_table.schema.json",
+        "uid": "34D69E48-4E52-48D9-AAF8-4EB2BBBF36A0",
+        "format": "xy",
+        "dataFormat": "y_single",
+        "dataSets": [
+          "D6263EB1-495A-4B44-82A9-D2C8A29E7B59",
+          "5FD3AC22-F89A-4449-A8F2-025C20F8DAC3"
+        ],
+        "xDataSetFormat": "y_single",
+        "xDataSet": "9B4326C0-F90C-4D6B-966F-ECA9F8213A8C"
+      },
+      "datasets": {
+        "9B4326C0-F90C-4D6B-966F-ECA9F8213A8C": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "9B4326C0-F90C-4D6B-966F-ECA9F8213A8C",
+          "fenID": 1757,
+          "format": "y_single",
+          "title": "BLAZE -log10(BHFDR)_H146_high",
+          "attributes": [
+            "DS_ATTR_X"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 9,
+              "significantDigitsCount": 7,
+              "lastRow": 411,
+              "firstRow": 0
+            }
+          ]
+        },
+        "D6263EB1-495A-4B44-82A9-D2C8A29E7B59": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "D6263EB1-495A-4B44-82A9-D2C8A29E7B59",
+          "fenID": 1755,
+          "format": "y_single",
+          "title": "RAD -log10(BHFDR)_H146_high",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC"
+              ],
+              "decimalsLength": 9,
+              "significantDigitsCount": 7,
+              "lastRow": 411,
+              "firstRow": 0
+            }
+          ]
+        },
+        "5FD3AC22-F89A-4449-A8F2-025C20F8DAC3": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "5FD3AC22-F89A-4449-A8F2-025C20F8DAC3",
+          "fenID": 1756,
+          "format": "y_single",
+          "title": "Flexiplex -log10(BHFDR)_H146_high",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 9,
+              "significantDigitsCount": 7,
+              "lastRow": 411,
+              "firstRow": 0
+            }
+          ]
+        }
+      },
+      "csv_rows": 767,
+      "csv_sha256": "594c344773ccc8aec81e8d3a93ea8c6ed2a6f10dc4f4661b78102e667ac55a05",
+      "gzip_sha256": "e0614182dc7a7463effc9ef1cd74490d34f226f5f198e0102c7e03c06b359af2"
+    },
+    {
+      "name": "panel_C_H526_high",
+      "file": "panel_C_H526_high.csv.gz",
+      "graph_uid": "4165C95D-F3D3-4958-8E3C-163EDB7F9054",
+      "graph_title": "Data 4",
+      "graph_specification": {
+        "@class": "FENGraphSheet",
+        "$id": "sheets/graph_sheet.schema.json",
+        "uid": "4165C95D-F3D3-4958-8E3C-163EDB7F9054",
+        "fenID": 186,
+        "title": "Data 4",
+        "isAutoCreated": true,
+        "floatingNotes": [
+          "D46E8113-6E8E-4786-A518-2AC22D372247"
+        ],
+        "inputDataSets": [
+          "FB693D09-7686-4C91-B163-F18BBFE964F4",
+          "58E20D6C-5E32-483C-9129-AA8504EF9A7E",
+          "32017A48-8148-411E-93D5-EA5BAE1AB2C7",
+          "9CC95839-438D-43FB-9038-657D9D724053"
+        ]
+      },
+      "input_graph_datasets": [
+        "FB693D09-7686-4C91-B163-F18BBFE964F4",
+        "58E20D6C-5E32-483C-9129-AA8504EF9A7E",
+        "32017A48-8148-411E-93D5-EA5BAE1AB2C7",
+        "9CC95839-438D-43FB-9038-657D9D724053"
+      ],
+      "data_sheet_uid": "C9EB40C2-68E8-48D6-886F-EB26AA6FF5AF",
+      "data_sheet_title": "Data 4",
+      "table": {
+        "@class": "XYDataTable",
+        "$id": "sheets/data_sheet/data_table/data_table.schema.json",
+        "uid": "FE26630A-F8CE-4AA4-9369-5A4C34F0D309",
+        "format": "xy",
+        "dataFormat": "y_single",
+        "dataSets": [
+          "58E20D6C-5E32-483C-9129-AA8504EF9A7E",
+          "FB693D09-7686-4C91-B163-F18BBFE964F4"
+        ],
+        "xDataSetFormat": "y_single",
+        "xDataSet": "93559916-93B9-4482-B391-49093A971F2A"
+      },
+      "datasets": {
+        "93559916-93B9-4482-B391-49093A971F2A": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "93559916-93B9-4482-B391-49093A971F2A",
+          "fenID": 1864,
+          "format": "y_single",
+          "title": "BLAZE -log10(BHFDR)_H526_high",
+          "attributes": [
+            "DS_ATTR_X"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 9,
+              "significantDigitsCount": 7,
+              "lastRow": 766,
+              "firstRow": 0
+            }
+          ]
+        },
+        "58E20D6C-5E32-483C-9129-AA8504EF9A7E": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "58E20D6C-5E32-483C-9129-AA8504EF9A7E",
+          "fenID": 1862,
+          "format": "y_single",
+          "title": "Flexiplex -log10(BHFDR)_H526_high",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 9,
+              "significantDigitsCount": 7,
+              "lastRow": 766,
+              "firstRow": 0
+            }
+          ]
+        },
+        "FB693D09-7686-4C91-B163-F18BBFE964F4": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "FB693D09-7686-4C91-B163-F18BBFE964F4",
+          "fenID": 1863,
+          "format": "y_single",
+          "title": "RAD -log10(BHFDR)_H526_high",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 9,
+              "significantDigitsCount": 7,
+              "lastRow": 766,
+              "firstRow": 0
+            }
+          ]
+        }
+      },
+      "csv_rows": 767,
+      "csv_sha256": "d8033348eb9207cd53a9042fe161187c3724d6b3faebdac066a388df16ef3185",
+      "gzip_sha256": "17e5757431ccd6ab37917dfe4cb821c5b19dba942b2bd826ef12957ad65d8b0a"
+    },
+    {
+      "name": "panel_D_RAD_H146_high",
+      "file": "panel_D_RAD_H146_high.csv.gz",
+      "graph_uid": "58A38F11-631D-432F-8B24-79E308A0F714",
+      "graph_title": "*RAD F1 H146 high",
+      "graph_specification": {
+        "@class": "FENGraphSheet",
+        "$id": "sheets/graph_sheet.schema.json",
+        "uid": "58A38F11-631D-432F-8B24-79E308A0F714",
+        "fenID": 183,
+        "title": "*RAD F1 H146 high",
+        "isCustomTitle": true,
+        "isAutoCreated": true,
+        "inputDataSets": [
+          "5BFDE5DD-B92C-4972-85ED-259C4390EB4B",
+          "B0E5D93A-C8A9-42B2-805C-3E3AEF141A45",
+          "B7CF0D00-5BE7-4885-A62B-2038BD80C8A0",
+          "B4F6C560-1032-437E-9DB3-1430D3B0CDDF",
+          "0AC55C44-7704-43D3-BAF2-2BE784A9CC6D",
+          "164C0F9D-36A2-4F3E-9E11-6CAA2AFCED8B",
+          "18BD6C47-C320-41C2-8E8B-C3C0F635199F",
+          "CB81C04E-A710-490A-ADB7-871233602816",
+          "8C9907E1-9333-4A01-B0D6-BEC54C56E567",
+          "D1F36437-BA5E-44F5-B58E-B23CCD131D2E",
+          "7A86EFA6-7569-4CAF-9E84-17F33C57916B"
+        ]
+      },
+      "input_graph_datasets": [
+        "5BFDE5DD-B92C-4972-85ED-259C4390EB4B",
+        "B0E5D93A-C8A9-42B2-805C-3E3AEF141A45",
+        "B7CF0D00-5BE7-4885-A62B-2038BD80C8A0",
+        "B4F6C560-1032-437E-9DB3-1430D3B0CDDF",
+        "0AC55C44-7704-43D3-BAF2-2BE784A9CC6D",
+        "164C0F9D-36A2-4F3E-9E11-6CAA2AFCED8B",
+        "18BD6C47-C320-41C2-8E8B-C3C0F635199F",
+        "CB81C04E-A710-490A-ADB7-871233602816",
+        "8C9907E1-9333-4A01-B0D6-BEC54C56E567",
+        "D1F36437-BA5E-44F5-B58E-B23CCD131D2E",
+        "7A86EFA6-7569-4CAF-9E84-17F33C57916B"
+      ],
+      "data_sheet_uid": "12011C8C-565B-4114-87E8-101CF5F7C64B",
+      "data_sheet_title": "*RAD F1 H146 high",
+      "table": {
+        "@class": "DataTable",
+        "$id": "sheets/data_sheet/data_table/data_table.schema.json",
+        "uid": "5653B6B0-F764-409F-A28B-8AB263BE123A",
+        "format": "grouped",
+        "dataFormat": "y_single",
+        "rowTitlesDataSet": "E4936915-BAA2-4911-B7EA-FA70DB483C25",
+        "dataSets": [
+          "5BFDE5DD-B92C-4972-85ED-259C4390EB4B",
+          "B0E5D93A-C8A9-42B2-805C-3E3AEF141A45",
+          "B7CF0D00-5BE7-4885-A62B-2038BD80C8A0",
+          "B4F6C560-1032-437E-9DB3-1430D3B0CDDF",
+          "0AC55C44-7704-43D3-BAF2-2BE784A9CC6D",
+          "164C0F9D-36A2-4F3E-9E11-6CAA2AFCED8B",
+          "18BD6C47-C320-41C2-8E8B-C3C0F635199F",
+          "CB81C04E-A710-490A-ADB7-871233602816",
+          "8C9907E1-9333-4A01-B0D6-BEC54C56E567",
+          "D1F36437-BA5E-44F5-B58E-B23CCD131D2E",
+          "7A86EFA6-7569-4CAF-9E84-17F33C57916B"
+        ]
+      },
+      "datasets": {
+        "E4936915-BAA2-4911-B7EA-FA70DB483C25": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "E4936915-BAA2-4911-B7EA-FA70DB483C25",
+          "fenID": 1837,
+          "format": "text",
+          "attributes": [
+            "DS_ATTR_RT"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "string",
+              "commonAttributes": [
+                "NUMERIC"
+              ],
+              "decimalsLength": 15,
+              "significantDigitsCount": 7,
+              "cellTextFormats": {
+                "0": [
+                  {
+                    "range": "0~6",
+                    "attributes": {}
+                  },
+                  {
+                    "range": "6~8",
+                    "attributes": {
+                      "baseline": "superscript"
+                    }
+                  }
+                ],
+                "1": [
+                  {
+                    "range": "0~6",
+                    "attributes": {}
+                  },
+                  {
+                    "range": "6~8",
+                    "attributes": {
+                      "baseline": "superscript"
+                    }
+                  }
+                ],
+                "2": [
+                  {
+                    "range": "0~6",
+                    "attributes": {}
+                  },
+                  {
+                    "range": "6~8",
+                    "attributes": {
+                      "baseline": "superscript"
+                    }
+                  }
+                ],
+                "3": [
+                  {
+                    "range": "0~6",
+                    "attributes": {}
+                  },
+                  {
+                    "range": "6~8",
+                    "attributes": {
+                      "baseline": "superscript"
+                    }
+                  }
+                ],
+                "4": [
+                  {
+                    "range": "0~6",
+                    "attributes": {}
+                  },
+                  {
+                    "range": "6~8",
+                    "attributes": {
+                      "baseline": "superscript"
+                    }
+                  }
+                ],
+                "5": [
+                  {
+                    "range": "0~6",
+                    "attributes": {}
+                  },
+                  {
+                    "range": "6~8",
+                    "attributes": {
+                      "baseline": "superscript"
+                    }
+                  }
+                ],
+                "6": [
+                  {
+                    "range": "0~6",
+                    "attributes": {}
+                  },
+                  {
+                    "range": "6~8",
+                    "attributes": {
+                      "baseline": "superscript"
+                    }
+                  }
+                ],
+                "7": [
+                  {
+                    "range": "0~6",
+                    "attributes": {}
+                  },
+                  {
+                    "range": "6~8",
+                    "attributes": {
+                      "baseline": "superscript"
+                    }
+                  }
+                ],
+                "8": [
+                  {
+                    "range": "0~6",
+                    "attributes": {}
+                  },
+                  {
+                    "range": "6~8",
+                    "attributes": {
+                      "baseline": "superscript"
+                    }
+                  }
+                ]
+              },
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "5BFDE5DD-B92C-4972-85ED-259C4390EB4B": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "5BFDE5DD-B92C-4972-85ED-259C4390EB4B",
+          "fenID": 1826,
+          "format": "y_single",
+          "title": "0.10",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC"
+              ],
+              "decimalsLength": 6,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "B0E5D93A-C8A9-42B2-805C-3E3AEF141A45": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "B0E5D93A-C8A9-42B2-805C-3E3AEF141A45",
+          "fenID": 1827,
+          "format": "y_single",
+          "title": "0.25",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC"
+              ],
+              "decimalsLength": 6,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "B7CF0D00-5BE7-4885-A62B-2038BD80C8A0": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "B7CF0D00-5BE7-4885-A62B-2038BD80C8A0",
+          "fenID": 1828,
+          "format": "y_single",
+          "title": "0.50",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC"
+              ],
+              "decimalsLength": 6,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "B4F6C560-1032-437E-9DB3-1430D3B0CDDF": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "B4F6C560-1032-437E-9DB3-1430D3B0CDDF",
+          "fenID": 1829,
+          "format": "y_single",
+          "title": "0.75",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC"
+              ],
+              "decimalsLength": 6,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "0AC55C44-7704-43D3-BAF2-2BE784A9CC6D": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "0AC55C44-7704-43D3-BAF2-2BE784A9CC6D",
+          "fenID": 1830,
+          "format": "y_single",
+          "title": "1.00",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC"
+              ],
+              "decimalsLength": 6,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "164C0F9D-36A2-4F3E-9E11-6CAA2AFCED8B": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "164C0F9D-36A2-4F3E-9E11-6CAA2AFCED8B",
+          "fenID": 1831,
+          "format": "y_single",
+          "title": "1.25",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC"
+              ],
+              "decimalsLength": 6,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "18BD6C47-C320-41C2-8E8B-C3C0F635199F": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "18BD6C47-C320-41C2-8E8B-C3C0F635199F",
+          "fenID": 1832,
+          "format": "y_single",
+          "title": "1.50",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC"
+              ],
+              "decimalsLength": 6,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "CB81C04E-A710-490A-ADB7-871233602816": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "CB81C04E-A710-490A-ADB7-871233602816",
+          "fenID": 1833,
+          "format": "y_single",
+          "title": "1.75",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC"
+              ],
+              "decimalsLength": 6,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "8C9907E1-9333-4A01-B0D6-BEC54C56E567": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "8C9907E1-9333-4A01-B0D6-BEC54C56E567",
+          "fenID": 1834,
+          "format": "y_single",
+          "title": "2.00",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC"
+              ],
+              "decimalsLength": 6,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "D1F36437-BA5E-44F5-B58E-B23CCD131D2E": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "D1F36437-BA5E-44F5-B58E-B23CCD131D2E",
+          "fenID": 1835,
+          "format": "y_single",
+          "title": "2.50",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC"
+              ],
+              "decimalsLength": 6,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "7A86EFA6-7569-4CAF-9E84-17F33C57916B": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "7A86EFA6-7569-4CAF-9E84-17F33C57916B",
+          "fenID": 1836,
+          "format": "y_single",
+          "title": "3.00",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC"
+              ],
+              "decimalsLength": 6,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        }
+      },
+      "csv_rows": 9,
+      "csv_sha256": "b954d0a7af375ed59fcc3b8c299392d584997b47887de6a361bd1007ec9d811b",
+      "gzip_sha256": "ee18d0d2327d1dd85e19752c2745c2e000ff47a13c6e4dbe2d7c33a77a201109"
+    },
+    {
+      "name": "panel_D_Flexiplex_H146_high",
+      "file": "panel_D_Flexiplex_H146_high.csv.gz",
+      "graph_uid": "9B191ADC-4CE2-4D3A-9632-C0C9CE933267",
+      "graph_title": "*Flexiplex F1 H146 high",
+      "graph_specification": {
+        "@class": "FENGraphSheet",
+        "$id": "sheets/graph_sheet.schema.json",
+        "uid": "9B191ADC-4CE2-4D3A-9632-C0C9CE933267",
+        "fenID": 179,
+        "title": "*Flexiplex F1 H146 high",
+        "isCustomTitle": true,
+        "isAutoCreated": true,
+        "inputDataSets": [
+          "92278F51-F321-4B3C-BD99-D7171B126252",
+          "730626EB-5DC1-466E-AD83-87A8892444C0",
+          "E9936E44-0949-4D42-A91D-5D2E1D7BE0FF",
+          "987EA851-91AA-4750-992A-6AE6E250B8E4",
+          "445206B0-F6B2-4171-B913-777B27B60D6D",
+          "775A9056-C328-4D2F-B486-7754146AD16F",
+          "D8BE8F20-CFDC-4E88-AD4D-E834326660E3",
+          "A3FBFBC1-0CE4-4FF6-83B3-06B9C98F75E0",
+          "04C8EF6E-7F50-43BF-A0A2-04D02B1C5460",
+          "1994958E-A0EA-4B04-AAC5-1C2C81CB2556",
+          "71895206-3312-48F7-AAF1-61E1633FDF61"
+        ]
+      },
+      "input_graph_datasets": [
+        "92278F51-F321-4B3C-BD99-D7171B126252",
+        "730626EB-5DC1-466E-AD83-87A8892444C0",
+        "E9936E44-0949-4D42-A91D-5D2E1D7BE0FF",
+        "987EA851-91AA-4750-992A-6AE6E250B8E4",
+        "445206B0-F6B2-4171-B913-777B27B60D6D",
+        "775A9056-C328-4D2F-B486-7754146AD16F",
+        "D8BE8F20-CFDC-4E88-AD4D-E834326660E3",
+        "A3FBFBC1-0CE4-4FF6-83B3-06B9C98F75E0",
+        "04C8EF6E-7F50-43BF-A0A2-04D02B1C5460",
+        "1994958E-A0EA-4B04-AAC5-1C2C81CB2556",
+        "71895206-3312-48F7-AAF1-61E1633FDF61"
+      ],
+      "data_sheet_uid": "6D6F803F-C56F-4871-9A6C-92FC035C248A",
+      "data_sheet_title": "*Flexiplex F1 H146 high",
+      "table": {
+        "@class": "DataTable",
+        "$id": "sheets/data_sheet/data_table/data_table.schema.json",
+        "uid": "51B0EA91-9AF0-466E-912A-A48446792DAF",
+        "format": "grouped",
+        "dataFormat": "y_single",
+        "rowTitlesDataSet": "BF78FDC3-2BE1-4C07-AC6A-BE842CE9EF67",
+        "dataSets": [
+          "92278F51-F321-4B3C-BD99-D7171B126252",
+          "730626EB-5DC1-466E-AD83-87A8892444C0",
+          "E9936E44-0949-4D42-A91D-5D2E1D7BE0FF",
+          "987EA851-91AA-4750-992A-6AE6E250B8E4",
+          "445206B0-F6B2-4171-B913-777B27B60D6D",
+          "775A9056-C328-4D2F-B486-7754146AD16F",
+          "D8BE8F20-CFDC-4E88-AD4D-E834326660E3",
+          "A3FBFBC1-0CE4-4FF6-83B3-06B9C98F75E0",
+          "04C8EF6E-7F50-43BF-A0A2-04D02B1C5460",
+          "1994958E-A0EA-4B04-AAC5-1C2C81CB2556",
+          "71895206-3312-48F7-AAF1-61E1633FDF61"
+        ]
+      },
+      "datasets": {
+        "BF78FDC3-2BE1-4C07-AC6A-BE842CE9EF67": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "BF78FDC3-2BE1-4C07-AC6A-BE842CE9EF67",
+          "fenID": 1789,
+          "format": "text",
+          "attributes": [
+            "DS_ATTR_RT"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "string",
+              "commonAttributes": [
+                "NUMERIC"
+              ],
+              "decimalsLength": 15,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "92278F51-F321-4B3C-BD99-D7171B126252": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "92278F51-F321-4B3C-BD99-D7171B126252",
+          "fenID": 1778,
+          "format": "y_single",
+          "title": "0.10",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC"
+              ],
+              "decimalsLength": 6,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "730626EB-5DC1-466E-AD83-87A8892444C0": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "730626EB-5DC1-466E-AD83-87A8892444C0",
+          "fenID": 1779,
+          "format": "y_single",
+          "title": "0.25",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC"
+              ],
+              "decimalsLength": 6,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "E9936E44-0949-4D42-A91D-5D2E1D7BE0FF": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "E9936E44-0949-4D42-A91D-5D2E1D7BE0FF",
+          "fenID": 1780,
+          "format": "y_single",
+          "title": "0.50",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC"
+              ],
+              "decimalsLength": 6,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "987EA851-91AA-4750-992A-6AE6E250B8E4": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "987EA851-91AA-4750-992A-6AE6E250B8E4",
+          "fenID": 1781,
+          "format": "y_single",
+          "title": "0.75",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC"
+              ],
+              "decimalsLength": 6,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "445206B0-F6B2-4171-B913-777B27B60D6D": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "445206B0-F6B2-4171-B913-777B27B60D6D",
+          "fenID": 1782,
+          "format": "y_single",
+          "title": "1.00",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC"
+              ],
+              "decimalsLength": 6,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "775A9056-C328-4D2F-B486-7754146AD16F": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "775A9056-C328-4D2F-B486-7754146AD16F",
+          "fenID": 1783,
+          "format": "y_single",
+          "title": "1.25",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC"
+              ],
+              "decimalsLength": 6,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "D8BE8F20-CFDC-4E88-AD4D-E834326660E3": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "D8BE8F20-CFDC-4E88-AD4D-E834326660E3",
+          "fenID": 1784,
+          "format": "y_single",
+          "title": "1.50",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC"
+              ],
+              "decimalsLength": 6,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "A3FBFBC1-0CE4-4FF6-83B3-06B9C98F75E0": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "A3FBFBC1-0CE4-4FF6-83B3-06B9C98F75E0",
+          "fenID": 1785,
+          "format": "y_single",
+          "title": "1.75",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC"
+              ],
+              "decimalsLength": 6,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "04C8EF6E-7F50-43BF-A0A2-04D02B1C5460": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "04C8EF6E-7F50-43BF-A0A2-04D02B1C5460",
+          "fenID": 1786,
+          "format": "y_single",
+          "title": "2.00",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC"
+              ],
+              "decimalsLength": 6,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "1994958E-A0EA-4B04-AAC5-1C2C81CB2556": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "1994958E-A0EA-4B04-AAC5-1C2C81CB2556",
+          "fenID": 1787,
+          "format": "y_single",
+          "title": "2.50",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC"
+              ],
+              "decimalsLength": 6,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "71895206-3312-48F7-AAF1-61E1633FDF61": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "71895206-3312-48F7-AAF1-61E1633FDF61",
+          "fenID": 1788,
+          "format": "y_single",
+          "title": "3.00",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC"
+              ],
+              "decimalsLength": 6,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        }
+      },
+      "csv_rows": 9,
+      "csv_sha256": "d04b981213e212a1a154c4f6ca1e71cde634895f2a80a3c6e95cd05378c7f75a",
+      "gzip_sha256": "595d800e5f751b55a2571ee6270f7d9c42c0a954a6fe06badfeef6ec86749f6f"
+    },
+    {
+      "name": "panel_D_BLAZE_H146_high",
+      "file": "panel_D_BLAZE_H146_high.csv.gz",
+      "graph_uid": "8C740359-D2CE-49F6-A9C2-A495CE34B5DF",
+      "graph_title": "*BLAZE F1 H146 high",
+      "graph_specification": {
+        "@class": "FENGraphSheet",
+        "$id": "sheets/graph_sheet.schema.json",
+        "uid": "8C740359-D2CE-49F6-A9C2-A495CE34B5DF",
+        "fenID": 178,
+        "title": "*BLAZE F1 H146 high",
+        "isCustomTitle": true,
+        "isAutoCreated": true,
+        "inputDataSets": [
+          "5821054D-C3B6-4068-B278-FA403DECDDEF",
+          "5CBC939D-3D28-4683-83C3-E3089BBE1E52",
+          "B1FD7CE1-EA74-4D23-8E46-9D6E06A01BF9",
+          "CF8F3DC9-D2E0-4172-BF42-C616D1049F48",
+          "494C0242-C750-45AD-90E6-154A1C8B10F4",
+          "CD2EBAB2-F0BE-407B-8D5B-4C9A1F9FF882",
+          "251C413D-3D37-4BD5-9BCE-40E6C29E60C7",
+          "03F8B065-5093-4870-A504-52AB3ACF95F5",
+          "62B2C793-1CEF-49B7-BEB0-423FD49EDB54",
+          "21A81FB2-C4C6-4151-AF6A-49E36E2B3C3F",
+          "1A86749A-E82F-4C67-9C03-27C12560FB3A"
+        ]
+      },
+      "input_graph_datasets": [
+        "5821054D-C3B6-4068-B278-FA403DECDDEF",
+        "5CBC939D-3D28-4683-83C3-E3089BBE1E52",
+        "B1FD7CE1-EA74-4D23-8E46-9D6E06A01BF9",
+        "CF8F3DC9-D2E0-4172-BF42-C616D1049F48",
+        "494C0242-C750-45AD-90E6-154A1C8B10F4",
+        "CD2EBAB2-F0BE-407B-8D5B-4C9A1F9FF882",
+        "251C413D-3D37-4BD5-9BCE-40E6C29E60C7",
+        "03F8B065-5093-4870-A504-52AB3ACF95F5",
+        "62B2C793-1CEF-49B7-BEB0-423FD49EDB54",
+        "21A81FB2-C4C6-4151-AF6A-49E36E2B3C3F",
+        "1A86749A-E82F-4C67-9C03-27C12560FB3A"
+      ],
+      "data_sheet_uid": "5665A9B6-0090-44A3-8FEC-4241BCE65F89",
+      "data_sheet_title": "*BLAZE F1 H146 high",
+      "table": {
+        "@class": "DataTable",
+        "$id": "sheets/data_sheet/data_table/data_table.schema.json",
+        "uid": "8F280700-FFA3-43D6-A615-0032AB69E50E",
+        "format": "grouped",
+        "dataFormat": "y_single",
+        "rowTitlesDataSet": "ADB011E0-B5EF-4BE0-945C-8B706AB37D39",
+        "dataSets": [
+          "5821054D-C3B6-4068-B278-FA403DECDDEF",
+          "5CBC939D-3D28-4683-83C3-E3089BBE1E52",
+          "B1FD7CE1-EA74-4D23-8E46-9D6E06A01BF9",
+          "CF8F3DC9-D2E0-4172-BF42-C616D1049F48",
+          "494C0242-C750-45AD-90E6-154A1C8B10F4",
+          "CD2EBAB2-F0BE-407B-8D5B-4C9A1F9FF882",
+          "251C413D-3D37-4BD5-9BCE-40E6C29E60C7",
+          "03F8B065-5093-4870-A504-52AB3ACF95F5",
+          "62B2C793-1CEF-49B7-BEB0-423FD49EDB54",
+          "21A81FB2-C4C6-4151-AF6A-49E36E2B3C3F",
+          "1A86749A-E82F-4C67-9C03-27C12560FB3A"
+        ]
+      },
+      "datasets": {
+        "ADB011E0-B5EF-4BE0-945C-8B706AB37D39": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "ADB011E0-B5EF-4BE0-945C-8B706AB37D39",
+          "fenID": 1777,
+          "format": "text",
+          "attributes": [
+            "DS_ATTR_RT"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "string",
+              "commonAttributes": [
+                "NUMERIC"
+              ],
+              "decimalsLength": 15,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "5821054D-C3B6-4068-B278-FA403DECDDEF": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "5821054D-C3B6-4068-B278-FA403DECDDEF",
+          "fenID": 1766,
+          "format": "y_single",
+          "title": "0.10",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 6,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "5CBC939D-3D28-4683-83C3-E3089BBE1E52": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "5CBC939D-3D28-4683-83C3-E3089BBE1E52",
+          "fenID": 1767,
+          "format": "y_single",
+          "title": "0.25",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 6,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "B1FD7CE1-EA74-4D23-8E46-9D6E06A01BF9": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "B1FD7CE1-EA74-4D23-8E46-9D6E06A01BF9",
+          "fenID": 1768,
+          "format": "y_single",
+          "title": "0.50",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 6,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "CF8F3DC9-D2E0-4172-BF42-C616D1049F48": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "CF8F3DC9-D2E0-4172-BF42-C616D1049F48",
+          "fenID": 1769,
+          "format": "y_single",
+          "title": "0.75",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 6,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "494C0242-C750-45AD-90E6-154A1C8B10F4": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "494C0242-C750-45AD-90E6-154A1C8B10F4",
+          "fenID": 1770,
+          "format": "y_single",
+          "title": "1.00",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 6,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "CD2EBAB2-F0BE-407B-8D5B-4C9A1F9FF882": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "CD2EBAB2-F0BE-407B-8D5B-4C9A1F9FF882",
+          "fenID": 1771,
+          "format": "y_single",
+          "title": "1.25",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 6,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "251C413D-3D37-4BD5-9BCE-40E6C29E60C7": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "251C413D-3D37-4BD5-9BCE-40E6C29E60C7",
+          "fenID": 1772,
+          "format": "y_single",
+          "title": "1.50",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 6,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "03F8B065-5093-4870-A504-52AB3ACF95F5": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "03F8B065-5093-4870-A504-52AB3ACF95F5",
+          "fenID": 1773,
+          "format": "y_single",
+          "title": "1.75",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 6,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "62B2C793-1CEF-49B7-BEB0-423FD49EDB54": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "62B2C793-1CEF-49B7-BEB0-423FD49EDB54",
+          "fenID": 1774,
+          "format": "y_single",
+          "title": "2.00",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 6,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "21A81FB2-C4C6-4151-AF6A-49E36E2B3C3F": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "21A81FB2-C4C6-4151-AF6A-49E36E2B3C3F",
+          "fenID": 1775,
+          "format": "y_single",
+          "title": "2.50",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 6,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "1A86749A-E82F-4C67-9C03-27C12560FB3A": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "1A86749A-E82F-4C67-9C03-27C12560FB3A",
+          "fenID": 1776,
+          "format": "y_single",
+          "title": "3.00",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 6,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        }
+      },
+      "csv_rows": 19,
+      "csv_sha256": "2a7e4ae4f719a6489fdcc87de777ac630de914bdf7109e34598e0adea4f8a262",
+      "gzip_sha256": "3290ca86657350d1697c78cd5ec20599347cb6f382b49ceedcb5e86ea8b143c9"
+    },
+    {
+      "name": "panel_D_RAD_H526_high",
+      "file": "panel_D_RAD_H526_high.csv.gz",
+      "graph_uid": "F3C2D864-DFC0-4DEA-9F52-6190712A9E5E",
+      "graph_title": "*RAD F1 H526 high",
+      "graph_specification": {
+        "@class": "FENGraphSheet",
+        "$id": "sheets/graph_sheet.schema.json",
+        "uid": "F3C2D864-DFC0-4DEA-9F52-6190712A9E5E",
+        "fenID": 182,
+        "title": "*RAD F1 H526 high",
+        "isCustomTitle": true,
+        "isAutoCreated": true,
+        "inputDataSets": [
+          "124EA448-115C-44FE-8F17-9724F57AD349",
+          "23DD8AD6-9D9E-4DBA-B6D7-6638249CFA01",
+          "28604558-9081-45E0-8969-9EBEF3AE414E",
+          "642987EC-A22C-4DDF-B4E5-9F05BFBBBA44",
+          "EC7BA90B-53CA-4201-BC6B-5494CE4C79F4",
+          "D34FD996-4DBD-4859-BBBE-8C8CE130F4E4",
+          "626E7C68-CD58-4909-B5B8-67960438DE3B",
+          "387044E6-ED44-43BC-9680-DEE47BC7E7F8",
+          "EB656C5E-A18D-40B4-8EDD-187EE5B8346F",
+          "1ECD3D95-ACFE-47D7-9140-8DB11F3F7A99",
+          "D2F1E7BD-A394-472F-B6AA-2A281B022ACC"
+        ]
+      },
+      "input_graph_datasets": [
+        "124EA448-115C-44FE-8F17-9724F57AD349",
+        "23DD8AD6-9D9E-4DBA-B6D7-6638249CFA01",
+        "28604558-9081-45E0-8969-9EBEF3AE414E",
+        "642987EC-A22C-4DDF-B4E5-9F05BFBBBA44",
+        "EC7BA90B-53CA-4201-BC6B-5494CE4C79F4",
+        "D34FD996-4DBD-4859-BBBE-8C8CE130F4E4",
+        "626E7C68-CD58-4909-B5B8-67960438DE3B",
+        "387044E6-ED44-43BC-9680-DEE47BC7E7F8",
+        "EB656C5E-A18D-40B4-8EDD-187EE5B8346F",
+        "1ECD3D95-ACFE-47D7-9140-8DB11F3F7A99",
+        "D2F1E7BD-A394-472F-B6AA-2A281B022ACC"
+      ],
+      "data_sheet_uid": "302ED075-D851-49EE-AB9E-C2D3632115F8",
+      "data_sheet_title": "*RAD F1 H526 high",
+      "table": {
+        "@class": "DataTable",
+        "$id": "sheets/data_sheet/data_table/data_table.schema.json",
+        "uid": "32E1ACB6-6B0F-474E-9D29-2843B89FD434",
+        "format": "grouped",
+        "dataFormat": "y_single",
+        "rowTitlesDataSet": "3FD2E816-866B-4D4E-A522-AA49D314079F",
+        "dataSets": [
+          "124EA448-115C-44FE-8F17-9724F57AD349",
+          "23DD8AD6-9D9E-4DBA-B6D7-6638249CFA01",
+          "28604558-9081-45E0-8969-9EBEF3AE414E",
+          "642987EC-A22C-4DDF-B4E5-9F05BFBBBA44",
+          "EC7BA90B-53CA-4201-BC6B-5494CE4C79F4",
+          "D34FD996-4DBD-4859-BBBE-8C8CE130F4E4",
+          "626E7C68-CD58-4909-B5B8-67960438DE3B",
+          "387044E6-ED44-43BC-9680-DEE47BC7E7F8",
+          "EB656C5E-A18D-40B4-8EDD-187EE5B8346F",
+          "1ECD3D95-ACFE-47D7-9140-8DB11F3F7A99",
+          "D2F1E7BD-A394-472F-B6AA-2A281B022ACC"
+        ]
+      },
+      "datasets": {
+        "3FD2E816-866B-4D4E-A522-AA49D314079F": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "3FD2E816-866B-4D4E-A522-AA49D314079F",
+          "fenID": 1825,
+          "format": "text",
+          "attributes": [
+            "DS_ATTR_RT"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "string",
+              "commonAttributes": [
+                "NUMERIC"
+              ],
+              "decimalsLength": 15,
+              "significantDigitsCount": 7,
+              "cellTextFormats": {
+                "0": [
+                  {
+                    "range": "0~6",
+                    "attributes": {}
+                  },
+                  {
+                    "range": "6~8",
+                    "attributes": {
+                      "baseline": "superscript"
+                    }
+                  }
+                ],
+                "1": [
+                  {
+                    "range": "0~6",
+                    "attributes": {}
+                  },
+                  {
+                    "range": "6~8",
+                    "attributes": {
+                      "baseline": "superscript"
+                    }
+                  }
+                ],
+                "2": [
+                  {
+                    "range": "0~6",
+                    "attributes": {}
+                  },
+                  {
+                    "range": "6~8",
+                    "attributes": {
+                      "baseline": "superscript"
+                    }
+                  }
+                ],
+                "3": [
+                  {
+                    "range": "0~6",
+                    "attributes": {}
+                  },
+                  {
+                    "range": "6~8",
+                    "attributes": {
+                      "baseline": "superscript"
+                    }
+                  }
+                ],
+                "4": [
+                  {
+                    "range": "0~6",
+                    "attributes": {}
+                  },
+                  {
+                    "range": "6~8",
+                    "attributes": {
+                      "baseline": "superscript"
+                    }
+                  }
+                ],
+                "5": [
+                  {
+                    "range": "0~6",
+                    "attributes": {}
+                  },
+                  {
+                    "range": "6~8",
+                    "attributes": {
+                      "baseline": "superscript"
+                    }
+                  }
+                ],
+                "6": [
+                  {
+                    "range": "0~6",
+                    "attributes": {}
+                  },
+                  {
+                    "range": "6~8",
+                    "attributes": {
+                      "baseline": "superscript"
+                    }
+                  }
+                ],
+                "7": [
+                  {
+                    "range": "0~6",
+                    "attributes": {}
+                  },
+                  {
+                    "range": "6~8",
+                    "attributes": {
+                      "baseline": "superscript"
+                    }
+                  }
+                ],
+                "8": [
+                  {
+                    "range": "0~6",
+                    "attributes": {}
+                  },
+                  {
+                    "range": "6~8",
+                    "attributes": {
+                      "baseline": "superscript"
+                    }
+                  }
+                ]
+              },
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "124EA448-115C-44FE-8F17-9724F57AD349": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "124EA448-115C-44FE-8F17-9724F57AD349",
+          "fenID": 1814,
+          "format": "y_single",
+          "title": "0.10",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 14,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "23DD8AD6-9D9E-4DBA-B6D7-6638249CFA01": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "23DD8AD6-9D9E-4DBA-B6D7-6638249CFA01",
+          "fenID": 1815,
+          "format": "y_single",
+          "title": "0.25",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 14,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "28604558-9081-45E0-8969-9EBEF3AE414E": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "28604558-9081-45E0-8969-9EBEF3AE414E",
+          "fenID": 1816,
+          "format": "y_single",
+          "title": "0.50",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 14,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "642987EC-A22C-4DDF-B4E5-9F05BFBBBA44": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "642987EC-A22C-4DDF-B4E5-9F05BFBBBA44",
+          "fenID": 1817,
+          "format": "y_single",
+          "title": "0.75",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 14,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "EC7BA90B-53CA-4201-BC6B-5494CE4C79F4": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "EC7BA90B-53CA-4201-BC6B-5494CE4C79F4",
+          "fenID": 1818,
+          "format": "y_single",
+          "title": "1.00",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 14,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "D34FD996-4DBD-4859-BBBE-8C8CE130F4E4": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "D34FD996-4DBD-4859-BBBE-8C8CE130F4E4",
+          "fenID": 1819,
+          "format": "y_single",
+          "title": "1.25",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 14,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "626E7C68-CD58-4909-B5B8-67960438DE3B": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "626E7C68-CD58-4909-B5B8-67960438DE3B",
+          "fenID": 1820,
+          "format": "y_single",
+          "title": "1.50",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 14,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "387044E6-ED44-43BC-9680-DEE47BC7E7F8": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "387044E6-ED44-43BC-9680-DEE47BC7E7F8",
+          "fenID": 1821,
+          "format": "y_single",
+          "title": "1.75",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 14,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "EB656C5E-A18D-40B4-8EDD-187EE5B8346F": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "EB656C5E-A18D-40B4-8EDD-187EE5B8346F",
+          "fenID": 1822,
+          "format": "y_single",
+          "title": "2.00",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 14,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "1ECD3D95-ACFE-47D7-9140-8DB11F3F7A99": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "1ECD3D95-ACFE-47D7-9140-8DB11F3F7A99",
+          "fenID": 1823,
+          "format": "y_single",
+          "title": "2.50",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 14,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "D2F1E7BD-A394-472F-B6AA-2A281B022ACC": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "D2F1E7BD-A394-472F-B6AA-2A281B022ACC",
+          "fenID": 1824,
+          "format": "y_single",
+          "title": "3.00",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 14,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        }
+      },
+      "csv_rows": 19,
+      "csv_sha256": "7dca205618076622ec66abd0d09d46c397dcb2a966e85ffad4182207b4ff5724",
+      "gzip_sha256": "f832acfd5685485e7c0c78b4a336ee52739c7f0ea0d1c78f48d288bab839060d"
+    },
+    {
+      "name": "panel_D_Flexiplex_H526_high",
+      "file": "panel_D_Flexiplex_H526_high.csv.gz",
+      "graph_uid": "BD4FB324-5DDC-43A2-8E39-626CA2212D87",
+      "graph_title": "*Flexiplex F1 H526 high",
+      "graph_specification": {
+        "@class": "FENGraphSheet",
+        "$id": "sheets/graph_sheet.schema.json",
+        "uid": "BD4FB324-5DDC-43A2-8E39-626CA2212D87",
+        "fenID": 184,
+        "title": "*Flexiplex F1 H526 high",
+        "isCustomTitle": true,
+        "isAutoCreated": true,
+        "inputDataSets": [
+          "2F5BCDB4-8029-4CD2-B44C-612689DBF91D",
+          "E85FD145-69FE-4E53-9DF3-375F9B6ECC6D",
+          "E4D27FFE-3233-4D70-94A3-E4771CCC58B6",
+          "E4BFF664-0DDE-46A5-A5A1-9A2F94BE31FE",
+          "4D4BB95E-47CE-4537-B98C-5FCE07ECC7F5",
+          "7CFB8E2E-9664-47D7-87DB-9DDFF387B403",
+          "E9BC3F5C-3A89-46CB-8F69-F386A91BD45D",
+          "F1B9A592-FF6B-4AE5-8F33-1F1CDCD14063",
+          "39A77938-35CA-4570-A379-666C0A7F112B",
+          "9AA566F9-84C7-4C8B-ACC6-BA831228BD86",
+          "950F1DE9-A261-4CE8-8E9F-96D674012386"
+        ]
+      },
+      "input_graph_datasets": [
+        "2F5BCDB4-8029-4CD2-B44C-612689DBF91D",
+        "E85FD145-69FE-4E53-9DF3-375F9B6ECC6D",
+        "E4D27FFE-3233-4D70-94A3-E4771CCC58B6",
+        "E4BFF664-0DDE-46A5-A5A1-9A2F94BE31FE",
+        "4D4BB95E-47CE-4537-B98C-5FCE07ECC7F5",
+        "7CFB8E2E-9664-47D7-87DB-9DDFF387B403",
+        "E9BC3F5C-3A89-46CB-8F69-F386A91BD45D",
+        "F1B9A592-FF6B-4AE5-8F33-1F1CDCD14063",
+        "39A77938-35CA-4570-A379-666C0A7F112B",
+        "9AA566F9-84C7-4C8B-ACC6-BA831228BD86",
+        "950F1DE9-A261-4CE8-8E9F-96D674012386"
+      ],
+      "data_sheet_uid": "A47098EC-83DB-4141-ABA3-B4BE57A36D65",
+      "data_sheet_title": "*Flexiplex F1 H526 high",
+      "table": {
+        "@class": "DataTable",
+        "$id": "sheets/data_sheet/data_table/data_table.schema.json",
+        "uid": "F818500F-3E83-4A31-A8CB-913B3C177FAB",
+        "format": "grouped",
+        "dataFormat": "y_single",
+        "rowTitlesDataSet": "D189DC29-6955-422E-BBD2-82FF0E07F011",
+        "dataSets": [
+          "2F5BCDB4-8029-4CD2-B44C-612689DBF91D",
+          "E85FD145-69FE-4E53-9DF3-375F9B6ECC6D",
+          "E4D27FFE-3233-4D70-94A3-E4771CCC58B6",
+          "E4BFF664-0DDE-46A5-A5A1-9A2F94BE31FE",
+          "4D4BB95E-47CE-4537-B98C-5FCE07ECC7F5",
+          "7CFB8E2E-9664-47D7-87DB-9DDFF387B403",
+          "E9BC3F5C-3A89-46CB-8F69-F386A91BD45D",
+          "F1B9A592-FF6B-4AE5-8F33-1F1CDCD14063",
+          "39A77938-35CA-4570-A379-666C0A7F112B",
+          "9AA566F9-84C7-4C8B-ACC6-BA831228BD86",
+          "950F1DE9-A261-4CE8-8E9F-96D674012386"
+        ]
+      },
+      "datasets": {
+        "D189DC29-6955-422E-BBD2-82FF0E07F011": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "D189DC29-6955-422E-BBD2-82FF0E07F011",
+          "fenID": 1849,
+          "format": "text",
+          "attributes": [
+            "DS_ATTR_RT"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "string",
+              "commonAttributes": [
+                "NUMERIC"
+              ],
+              "decimalsLength": 15,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "2F5BCDB4-8029-4CD2-B44C-612689DBF91D": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "2F5BCDB4-8029-4CD2-B44C-612689DBF91D",
+          "fenID": 1838,
+          "format": "y_single",
+          "title": "0.10",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 14,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "E85FD145-69FE-4E53-9DF3-375F9B6ECC6D": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "E85FD145-69FE-4E53-9DF3-375F9B6ECC6D",
+          "fenID": 1839,
+          "format": "y_single",
+          "title": "0.25",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 14,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "E4D27FFE-3233-4D70-94A3-E4771CCC58B6": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "E4D27FFE-3233-4D70-94A3-E4771CCC58B6",
+          "fenID": 1840,
+          "format": "y_single",
+          "title": "0.50",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 14,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "E4BFF664-0DDE-46A5-A5A1-9A2F94BE31FE": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "E4BFF664-0DDE-46A5-A5A1-9A2F94BE31FE",
+          "fenID": 1841,
+          "format": "y_single",
+          "title": "0.75",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 14,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "4D4BB95E-47CE-4537-B98C-5FCE07ECC7F5": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "4D4BB95E-47CE-4537-B98C-5FCE07ECC7F5",
+          "fenID": 1842,
+          "format": "y_single",
+          "title": "1.00",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 14,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "7CFB8E2E-9664-47D7-87DB-9DDFF387B403": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "7CFB8E2E-9664-47D7-87DB-9DDFF387B403",
+          "fenID": 1843,
+          "format": "y_single",
+          "title": "1.25",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 14,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "E9BC3F5C-3A89-46CB-8F69-F386A91BD45D": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "E9BC3F5C-3A89-46CB-8F69-F386A91BD45D",
+          "fenID": 1844,
+          "format": "y_single",
+          "title": "1.50",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 14,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "F1B9A592-FF6B-4AE5-8F33-1F1CDCD14063": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "F1B9A592-FF6B-4AE5-8F33-1F1CDCD14063",
+          "fenID": 1845,
+          "format": "y_single",
+          "title": "1.75",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 14,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "39A77938-35CA-4570-A379-666C0A7F112B": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "39A77938-35CA-4570-A379-666C0A7F112B",
+          "fenID": 1846,
+          "format": "y_single",
+          "title": "2.00",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 14,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "9AA566F9-84C7-4C8B-ACC6-BA831228BD86": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "9AA566F9-84C7-4C8B-ACC6-BA831228BD86",
+          "fenID": 1847,
+          "format": "y_single",
+          "title": "2.50",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 14,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "950F1DE9-A261-4CE8-8E9F-96D674012386": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "950F1DE9-A261-4CE8-8E9F-96D674012386",
+          "fenID": 1848,
+          "format": "y_single",
+          "title": "3.00",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 14,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        }
+      },
+      "csv_rows": 19,
+      "csv_sha256": "712796c6ab30f7388da6629916894c5aa18d74da7d00c7b81136606e6e3ac8d2",
+      "gzip_sha256": "6a4fa263962e88595dad60d2ce0de9886830a3709ce301a35b019a72dfa09443"
+    },
+    {
+      "name": "panel_D_BLAZE_H526_high",
+      "file": "panel_D_BLAZE_H526_high.csv.gz",
+      "graph_uid": "FFD84336-E158-43E2-BB5D-2A60E372DA84",
+      "graph_title": "*BLAZE F1 H526 high",
+      "graph_specification": {
+        "@class": "FENGraphSheet",
+        "$id": "sheets/graph_sheet.schema.json",
+        "uid": "FFD84336-E158-43E2-BB5D-2A60E372DA84",
+        "fenID": 185,
+        "title": "*BLAZE F1 H526 high",
+        "isCustomTitle": true,
+        "isAutoCreated": true,
+        "inputDataSets": [
+          "C550EDC6-FFE7-4A45-9A0F-B4F5E39AE4F6",
+          "ED3D6C92-D83C-4A02-AF34-E995F915CF49",
+          "FCF9B97A-E28E-4143-90B4-D2D40DFD6C0E",
+          "D3418B13-C23E-4CB7-92E1-AA917AEA2028",
+          "7739359C-8215-45AE-A322-C24730E947C4",
+          "0C456402-BBFB-45A0-8CC8-839B734F41AC",
+          "441099E7-B5C1-4B1E-8DBB-BC08A8606566",
+          "64B4FD47-A4FD-45A2-8D47-01992BA9DD56",
+          "C7C54C77-BD7E-400D-AAE9-A43FF44DE445",
+          "642814BE-52EF-419D-ADFE-CA2672B28257",
+          "FB889634-FA10-4384-8BB6-B3ABD5CE1112"
+        ]
+      },
+      "input_graph_datasets": [
+        "C550EDC6-FFE7-4A45-9A0F-B4F5E39AE4F6",
+        "ED3D6C92-D83C-4A02-AF34-E995F915CF49",
+        "FCF9B97A-E28E-4143-90B4-D2D40DFD6C0E",
+        "D3418B13-C23E-4CB7-92E1-AA917AEA2028",
+        "7739359C-8215-45AE-A322-C24730E947C4",
+        "0C456402-BBFB-45A0-8CC8-839B734F41AC",
+        "441099E7-B5C1-4B1E-8DBB-BC08A8606566",
+        "64B4FD47-A4FD-45A2-8D47-01992BA9DD56",
+        "C7C54C77-BD7E-400D-AAE9-A43FF44DE445",
+        "642814BE-52EF-419D-ADFE-CA2672B28257",
+        "FB889634-FA10-4384-8BB6-B3ABD5CE1112"
+      ],
+      "data_sheet_uid": "807BA25A-B693-4A59-A62D-CC22CCD2A6A3",
+      "data_sheet_title": "*BLAZE F1 H526 high",
+      "table": {
+        "@class": "DataTable",
+        "$id": "sheets/data_sheet/data_table/data_table.schema.json",
+        "uid": "38635E20-1FC7-40DA-82DA-76A76E3B0471",
+        "format": "grouped",
+        "dataFormat": "y_single",
+        "rowTitlesDataSet": "508CBEC4-171A-4E84-BDC8-729345F95E04",
+        "dataSets": [
+          "C550EDC6-FFE7-4A45-9A0F-B4F5E39AE4F6",
+          "ED3D6C92-D83C-4A02-AF34-E995F915CF49",
+          "FCF9B97A-E28E-4143-90B4-D2D40DFD6C0E",
+          "D3418B13-C23E-4CB7-92E1-AA917AEA2028",
+          "7739359C-8215-45AE-A322-C24730E947C4",
+          "0C456402-BBFB-45A0-8CC8-839B734F41AC",
+          "441099E7-B5C1-4B1E-8DBB-BC08A8606566",
+          "64B4FD47-A4FD-45A2-8D47-01992BA9DD56",
+          "C7C54C77-BD7E-400D-AAE9-A43FF44DE445",
+          "642814BE-52EF-419D-ADFE-CA2672B28257",
+          "FB889634-FA10-4384-8BB6-B3ABD5CE1112"
+        ]
+      },
+      "datasets": {
+        "508CBEC4-171A-4E84-BDC8-729345F95E04": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "508CBEC4-171A-4E84-BDC8-729345F95E04",
+          "fenID": 1861,
+          "format": "text",
+          "attributes": [
+            "DS_ATTR_RT"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "string",
+              "commonAttributes": [
+                "NUMERIC"
+              ],
+              "decimalsLength": 15,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "C550EDC6-FFE7-4A45-9A0F-B4F5E39AE4F6": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "C550EDC6-FFE7-4A45-9A0F-B4F5E39AE4F6",
+          "fenID": 1850,
+          "format": "y_single",
+          "title": "0.10",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 14,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "ED3D6C92-D83C-4A02-AF34-E995F915CF49": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "ED3D6C92-D83C-4A02-AF34-E995F915CF49",
+          "fenID": 1851,
+          "format": "y_single",
+          "title": "0.25",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 14,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "FCF9B97A-E28E-4143-90B4-D2D40DFD6C0E": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "FCF9B97A-E28E-4143-90B4-D2D40DFD6C0E",
+          "fenID": 1852,
+          "format": "y_single",
+          "title": "0.50",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 14,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "D3418B13-C23E-4CB7-92E1-AA917AEA2028": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "D3418B13-C23E-4CB7-92E1-AA917AEA2028",
+          "fenID": 1853,
+          "format": "y_single",
+          "title": "0.75",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 14,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "7739359C-8215-45AE-A322-C24730E947C4": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "7739359C-8215-45AE-A322-C24730E947C4",
+          "fenID": 1854,
+          "format": "y_single",
+          "title": "1.00",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 14,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "0C456402-BBFB-45A0-8CC8-839B734F41AC": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "0C456402-BBFB-45A0-8CC8-839B734F41AC",
+          "fenID": 1855,
+          "format": "y_single",
+          "title": "1.25",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 14,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "441099E7-B5C1-4B1E-8DBB-BC08A8606566": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "441099E7-B5C1-4B1E-8DBB-BC08A8606566",
+          "fenID": 1856,
+          "format": "y_single",
+          "title": "1.50",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 14,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "64B4FD47-A4FD-45A2-8D47-01992BA9DD56": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "64B4FD47-A4FD-45A2-8D47-01992BA9DD56",
+          "fenID": 1857,
+          "format": "y_single",
+          "title": "1.75",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 14,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "C7C54C77-BD7E-400D-AAE9-A43FF44DE445": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "C7C54C77-BD7E-400D-AAE9-A43FF44DE445",
+          "fenID": 1858,
+          "format": "y_single",
+          "title": "2.00",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 14,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "642814BE-52EF-419D-ADFE-CA2672B28257": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "642814BE-52EF-419D-ADFE-CA2672B28257",
+          "fenID": 1859,
+          "format": "y_single",
+          "title": "2.50",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 14,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        },
+        "FB889634-FA10-4384-8BB6-B3ABD5CE1112": {
+          "@class": "DataSet",
+          "$id": "sheets/data_sheet/data_table/data_set.schema.json",
+          "uid": "FB889634-FA10-4384-8BB6-B3ABD5CE1112",
+          "fenID": 1860,
+          "format": "y_single",
+          "title": "3.00",
+          "attributes": [
+            "DS_ATTR_Y"
+          ],
+          "replicates": [
+            {
+              "@class": "DriverReplicate",
+              "valueType": "real",
+              "commonAttributes": [
+                "NUMERIC",
+                "USER"
+              ],
+              "decimalsLength": 14,
+              "significantDigitsCount": 7,
+              "lastRow": 8,
+              "firstRow": 0
+            }
+          ]
+        }
+      },
+      "csv_rows": 19,
+      "csv_sha256": "fa3277b7fbc0c9cf80fe89255980b08d9686095e895a32d82b732a0ad8ecf140",
+      "gzip_sha256": "cf330621728e050f7a4838f72f64ea4f9b9bf96f6665f2826a80a81d1c57a49b"
+    }
+  ],
+  "regressions": [
+    {
+      "panel": "panel_C_H146_high",
+      "analysis_uid": "9815D305-6569-48D5-8770-E47D90630040",
+      "files": {
+        "panel_C_H146_high_regression_sheet.json": "90114749e927eb45e4f0c04e3cc064eadd4a63bc06cbc13fe1afca3eff0e71c4",
+        "panel_C_H146_high_regression_parameters.json": "4cf78bfe6b55cdcf115c65745f2774a3d314abc95bc334c3989ca8846dcc736d",
+        "panel_C_H146_high_regression_results.json": "5c24187e3ff9053e11c0622e29d7a7962b8ccde58fea6146ab65edadda4b9357"
+      }
+    },
+    {
+      "panel": "panel_C_H526_high",
+      "analysis_uid": "4B07E995-A1FC-488B-AFBE-223C6F4F70EC",
+      "files": {
+        "panel_C_H526_high_regression_sheet.json": "d4c70cc03d21fef0710dcf6f8367526e4dc96eb7c5cb505214cae6e8e91cee1c",
+        "panel_C_H526_high_regression_parameters.json": "45d20d57d292e888d9a68d143e637eb8aa6ff28e81845c40045dc85ccc9b1335",
+        "panel_C_H526_high_regression_results.json": "e4a399d298159d4f761e2491dc4289e74bd4f39be1a1c2e662ad058fb529b033"
+      }
+    }
+  ],
+  "xy_points": 38951,
+  "common_gene_threshold_comparison": {
+    "status": "PASS",
+    "cells": 594,
+    "max_absolute_error": 6.106226635438361e-16
+  }
+}

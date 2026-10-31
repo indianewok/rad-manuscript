@@ -1,0 +1,96 @@
+{
+  "files": [
+    {
+      "file": "RAD_command.sh",
+      "sha256": "ce6221e192baa5caf5c3b4476de1b2d91b487be7ccee8587dcaf3c82fb632c39",
+      "bytes": 920,
+      "original_sha256": "39de14b9ddfdb18fafdf46e5f2348b3b483d2f5f97c9ef66b7525ddb91160118",
+      "original_bytes": 961,
+      "source_locator": "external_data/reviewer_comment_data/sctagger_L_rad_fixed5000_adapter_fix_20260817/command.sh.txt"
+    },
+    {
+      "file": "RAD_producer.sh",
+      "sha256": "f30973bbff770688c8ec4e29ff34b823878a506d96df2a5da2103fcee82629a4",
+      "bytes": 3152,
+      "original_sha256": "184db685c9088a5310513feb51359c094f811c693a6e09f8fe2d8fe56137e390",
+      "original_bytes": 3106,
+      "source_locator": "external_data/reviewer_comment_data/sctagger_L_rad_fixed5000_adapter_fix_20260817/run_rad.sh"
+    },
+    {
+      "file": "RAD_provenance.tsv",
+      "sha256": "8f46538fa24098c9422341182d50faa1526c2883557e9f3dc58ad577b3a323f5",
+      "bytes": 1298,
+      "original_sha256": "650fb5b14c27031c1fe2ab4e2448e4786a58711c37293b6add24758da880e4c5",
+      "original_bytes": 1413,
+      "source_locator": "external_data/reviewer_comment_data/sctagger_L_rad_fixed5000_adapter_fix_20260817/provenance.tsv"
+    },
+    {
+      "file": "RAD_layout.csv",
+      "sha256": "39ddcdf9a19c9724fa148f8402fe56eaa4bd49f94c71d4e0eeed096911c9026e",
+      "bytes": 1322,
+      "original_sha256": "39ddcdf9a19c9724fa148f8402fe56eaa4bd49f94c71d4e0eeed096911c9026e",
+      "original_bytes": 1322,
+      "source_locator": "external_data/reviewer_comment_data/sctagger_L_rad_fixed5000_adapter_fix_20260817/L_flatQ20_rad_adapter_fix_layout.csv"
+    },
+    {
+      "file": "RAD_commit.txt",
+      "sha256": "975413242c5fb50e60bf04a3d6e1fed3e3d00f5168ec70b3631e0150defc1b16",
+      "bytes": 301,
+      "original_sha256": "975413242c5fb50e60bf04a3d6e1fed3e3d00f5168ec70b3631e0150defc1b16",
+      "original_bytes": 301,
+      "source_locator": "external_data/reviewer_comment_data/sctagger_L_rad_fixed5000_adapter_fix_20260817/source/COMMIT.txt"
+    },
+    {
+      "file": "RAD_24d5ce4_commit.patch",
+      "sha256": "eb9c85239787b108db5f0c2a1aa143f36dd77a9d3515954366446869f3eb0363",
+      "bytes": 5128,
+      "original_sha256": "eb9c85239787b108db5f0c2a1aa143f36dd77a9d3515954366446869f3eb0363",
+      "original_bytes": 5128,
+      "source_locator": "external_data/reviewer_comment_data/sctagger_L_rad_fixed5000_adapter_fix_20260817/source/24d5ce4_fix_adapter_threshold_calibration.patch"
+    },
+    {
+      "file": "Flexiplex_truth5000_command.sh",
+      "sha256": "5bb8a4088a363b058c83e8ff45677ab4f97199e5ee8d9ead66740357c7f846b7",
+      "bytes": 1297,
+      "original_sha256": "57b2ae275e7588e6029e06d76ae9dd669d27beec3c2bbd2b8a2c99c4f4980b23",
+      "original_bytes": 1400,
+      "source_locator": "external_data/reviewer_comment_data/sctagger_L_fixed5000_three_tool_20260812/flexiplex/exact_pipeline_command.sh"
+    },
+    {
+      "file": "Flexiplex_truth5000_provenance.tsv",
+      "sha256": "c886ec07f2ce5dbbb1c53d786f8a4ec642f8bd0c03e1866bc02eaf2dfb0cfafe",
+      "bytes": 1482,
+      "original_sha256": "5a860fb49d79bf927a6f0968c4228581829a7a016fb16a5f080d92e11c2cd95c",
+      "original_bytes": 1622,
+      "source_locator": "external_data/reviewer_comment_data/sctagger_L_fixed5000_three_tool_20260812/flexiplex/commands_and_provenance.tsv"
+    },
+    {
+      "file": "Flexiplex_truth5000_classification.json",
+      "sha256": "44ec259d14a816b86fe50b3d640b812ab687b3d544556b85e37284fdff9e5638",
+      "bytes": 1753,
+      "original_sha256": "44ec259d14a816b86fe50b3d640b812ab687b3d544556b85e37284fdff9e5638",
+      "original_bytes": 1753,
+      "source_locator": "external_data/reviewer_comment_data/sctagger_L_fixed5000_three_tool_20260812/flexiplex/assignment_classification.json"
+    },
+    {
+      "file": "../L_truth_5000_barcodes.txt",
+      "sha256": "2418b849f88ce6f28cf8c702acab795e4b483f6b2da17953675fce96b405899e",
+      "original_sha256": "2418b849f88ce6f28cf8c702acab795e4b483f6b2da17953675fce96b405899e",
+      "original_bytes": 85000,
+      "source_locator": "external_data/reviewer_comment_data/sctagger_L_fixed5000_three_tool_20260812/common/L_truth_5000_barcodes.txt",
+      "bytes": 85000
+    },
+    {
+      "file": "RAD_input_layout.csv",
+      "sha256": "c5cbbb07958a9c1ca6f9c0452ad1dd01933d5a51efba6f67522897c5dd4146fb",
+      "bytes": 256,
+      "role": "Native command input layout; RAD_layout.csv is its calibrated output layout.",
+      "original_sha256": "c5cbbb07958a9c1ca6f9c0452ad1dd01933d5a51efba6f67522897c5dd4146fb",
+      "original_bytes": 256,
+      "source_locator": "external_data/reviewer_comment_data/sctagger_L_fixed5000_three_tool_20260812/rad/three_prime_10x3v3_umi12_layout.csv"
+    }
+  ],
+  "RAD_patch_role": "git-format-patch of commit24d5ce47, already included in that commit; not an additional patch",
+  "RAD_global_and_custom_list": "../L_truth_5000_barcodes.txt",
+  "path_normalization": "Project and software-build roots use external_data; run scratch roots use results. Command flags, data hashes, and original file hashes are preserved. The commit patch remains verbatim."
+}

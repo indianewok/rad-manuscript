@@ -1,0 +1,112 @@
+input_order	canonical_id	display_dataset	tool	selected_flank_distance	reference_type	precision	recall	f1
+1	ScTagger-S_flatQ20	ScTagger-S_flatQ20	RAD		exact_truth	0.943396226	1.000000000	0.970873786
+1	ScTagger-S_flatQ20	ScTagger-S_flatQ20	BLAZE		exact_truth	0.892857143	1.000000000	0.943396226
+1	ScTagger-S_flatQ20	ScTagger-S_flatQ20	Flexiplex	8	exact_truth	1.000000000	1.000000000	1
+2	ScTagger-L_flatQ20	ScTagger-L_flatQ20	RAD		exact_truth	1.000000000	1.000000000	1
+2	ScTagger-L_flatQ20	ScTagger-L_flatQ20	BLAZE		exact_truth	0.891742465	1.000000000	0.94277364
+2	ScTagger-L_flatQ20	ScTagger-L_flatQ20	Flexiplex	8	exact_truth	1.000000000	0.600800000	0.750624688
+3	Measles-P7	Measles-P7	RAD		matched_short_read_positive_proxy	0.974468085	0.950207469	0.962184874
+3	Measles-P7	Measles-P7	BLAZE		matched_short_read_positive_proxy	0.997635934	0.875518672	0.932596685
+3	Measles-P7	Measles-P7	Flexiplex	8	matched_short_read_positive_proxy	0.998776010	0.846473029	0.916339135
+4	Measles-P8-VDJ-enriched	Measles-P8-VDJ-enriched	RAD		matched_short_read_positive_proxy	0.994942044	0.916788038	0.954267522
+4	Measles-P8-VDJ-enriched	Measles-P8-VDJ-enriched	BLAZE		matched_short_read_positive_proxy	0.996327773	0.922031265	0.957740797
+4	Measles-P8-VDJ-enriched	Measles-P8-VDJ-enriched	Flexiplex	8	matched_short_read_positive_proxy	0.994921710	0.913098359	0.952255582
+5	Measles-P8-WTA	Measles-P8-WTA	RAD		matched_short_read_positive_proxy	0.987920792	0.968831925	0.978283249
+5	Measles-P8-WTA	Measles-P8-WTA	BLAZE		matched_short_read_positive_proxy	0.951879699	0.983396446	0.967381441
+5	Measles-P8-WTA	Measles-P8-WTA	Flexiplex	0	matched_short_read_positive_proxy	0.997021058	0.942421594	0.968952780
+6	PromethION_iPSC	PromethION_iPSC	RAD		matched_short_read_positive_proxy	0.941045606	0.827788650	0.880791255
+6	PromethION_iPSC	PromethION_iPSC	BLAZE		matched_short_read_positive_proxy	0.993781095	0.781800391	0.875136911
+6	PromethION_iPSC	PromethION_iPSC	Flexiplex	0	matched_short_read_positive_proxy	0.996264010	0.782778865	0.876712329
+7	RAGEseq-cell-line	RAGEseq-cell-line	RAD		matched_short_read_positive_proxy	0.997412678	0.855715871	0.921146953
+7	RAGEseq-cell-line	RAGEseq-cell-line	BLAZE		matched_short_read_positive_proxy	0.969204738	0.635738069	0.767828418
+7	RAGEseq-cell-line	RAGEseq-cell-line	Flexiplex	8	matched_short_read_positive_proxy	1.000000000	0.723418424	0.839515714
+8	RAGEseq-TNBC-LN	RAGEseq-TNBC-LN	RAD		study_deposited_named_t_b_targetable_positive_proxy	0.953193564	0.981097357	0.966944193
+8	RAGEseq-TNBC-LN	RAGEseq-TNBC-LN	BLAZE		study_deposited_named_t_b_targetable_positive_proxy	0.873491283	0.653730345	0.747799464
+8	RAGEseq-TNBC-LN	RAGEseq-TNBC-LN	Flexiplex	8	study_deposited_named_t_b_targetable_positive_proxy	0.991907203	0.615088658	0.759318534
+9	LongBench-SC-ONT	LongBench-SC-ONT	RAD		matched_short_read_positive_proxy	0.934234234	0.995010555	0.963665087
+9	LongBench-SC-ONT	LongBench-SC-ONT	BLAZE		matched_short_read_positive_proxy	0.974915389	0.939742852	0.957006058
+9	LongBench-SC-ONT	LongBench-SC-ONT	Flexiplex	8	matched_short_read_positive_proxy	0.950083503	0.982536941	0.966037736
+10	LongBench-SN-ONT	LongBench-SN-ONT	RAD		matched_short_read_positive_proxy	0.968564004	0.961871462	0.965206132
+10	LongBench-SN-ONT	LongBench-SN-ONT	BLAZE		matched_short_read_positive_proxy	0.997800220	0.830752581	0.906646073
+10	LongBench-SN-ONT	LongBench-SN-ONT	Flexiplex	0	matched_short_read_positive_proxy	0.962978266	0.970113220	0.966532576
+11	LongBench-SC-PB	LongBench-SC-PB	RAD		matched_short_read_positive_proxy	0.951908683	0.976204183	0.963903363
+11	LongBench-SC-PB	LongBench-SC-PB	BLAZE		matched_short_read_positive_proxy	0.975009996	0.935904817	0.95505728
+11	LongBench-SC-PB	LongBench-SC-PB	Flexiplex	0	matched_short_read_positive_proxy	0.882602067	0.999808098	0.937556235
+12	LongBench-SN-PB	LongBench-SN-PB	RAD		matched_short_read_positive_proxy	0.904051815	0.999333999	0.949308027
+12	LongBench-SN-PB	LongBench-SN-PB	BLAZE		matched_short_read_positive_proxy	0.997300270	0.830336330	0.906191796
+12	LongBench-SN-PB	LongBench-SN-PB	Flexiplex	0	matched_short_read_positive_proxy	0.963548602	0.963869464	0.963709006
+13	LeBrigand-MOB	LeBrigand-MOB	RAD		spatial_on_tissue_operational	1.000000000	0.996732026	0.998363339
+13	LeBrigand-MOB	LeBrigand-MOB	BLAZE		spatial_on_tissue_operational	1.000000000	0.919389978	0.95800227
+13	LeBrigand-MOB	LeBrigand-MOB	Flexiplex	8	spatial_on_tissue_operational	1.000000000	0.213507625	0.351885099
+14	Isosceles-ovarian-GSE248115	Isosceles-ovarian-GSE248115	RAD		matched_short_read_positive_proxy	0.963800905	0.951665313	0.957694666
+14	Isosceles-ovarian-GSE248115	Isosceles-ovarian-GSE248115	BLAZE		matched_short_read_positive_proxy	0.997329773	0.910235581	0.951794436
+14	Isosceles-ovarian-GSE248115	Isosceles-ovarian-GSE248115	Flexiplex	0	matched_short_read_positive_proxy	1.000000000	0.877335500	0.934660320
+15	Hipp_SN_m1_ONT_Run1	Tilgner-m1-ONT-Run1	RAD		matched_short_read_positive_proxy	0.924114166	0.986485406	0.954281736
+15	Hipp_SN_m1_ONT_Run1	Tilgner-m1-ONT-Run1	BLAZE		matched_short_read_positive_proxy	0.964658487	0.842542983	0.899474965
+15	Hipp_SN_m1_ONT_Run1	Tilgner-m1-ONT-Run1	Flexiplex	0	matched_short_read_positive_proxy	0.925798036	0.964814074	0.944903473
+16	Hipp_SN_m1_ONT_Run2	Tilgner-m1-ONT-Run2	RAD		matched_short_read_positive_proxy	0.929390792	0.958896441	0.943913095
+16	Hipp_SN_m1_ONT_Run2	Tilgner-m1-ONT-Run2	BLAZE		matched_short_read_positive_proxy	0.960376091	0.800479808	0.873168179
+16	Hipp_SN_m1_ONT_Run2	Tilgner-m1-ONT-Run2	Flexiplex	0	matched_short_read_positive_proxy	0.917814616	0.943062775	0.930267413
+17	Hipp_SN_m1_ONT_Run3	Tilgner-m1-ONT-Run3	RAD		matched_short_read_positive_proxy	0.926211370	0.970651739	0.947910972
+17	Hipp_SN_m1_ONT_Run3	Tilgner-m1-ONT-Run3	BLAZE		matched_short_read_positive_proxy	0.962374342	0.803838465	0.875991285
+17	Hipp_SN_m1_ONT_Run3	Tilgner-m1-ONT-Run3	Flexiplex	8	matched_short_read_positive_proxy	0.954326923	0.761935226	0.847347592
+18	ERR15095094_MPNST1_scNaUMIseq_MinION	ERR15095094_MPNST1_scNaUMIseq_MinION	RAD		matched_short_read_positive_proxy	0.96484038	0.971968709	0.968391427
+18	ERR15095094_MPNST1_scNaUMIseq_MinION	ERR15095094_MPNST1_scNaUMIseq_MinION	BLAZE		matched_short_read_positive_proxy	0.987149533	0.918079096	0.951362306
+18	ERR15095094_MPNST1_scNaUMIseq_MinION	ERR15095094_MPNST1_scNaUMIseq_MinION	Flexiplex	0	matched_short_read_positive_proxy	0.975631175	0.965667101	0.970623567
+19	ERR15095095_MPNST1_scNaUMIseq_PromethION	ERR15095095_MPNST1_scNaUMIseq_PromethION	RAD		matched_short_read_positive_proxy	0.969490781	0.959800087	0.964621096
+19	ERR15095095_MPNST1_scNaUMIseq_PromethION	ERR15095095_MPNST1_scNaUMIseq_PromethION	BLAZE		matched_short_read_positive_proxy	0.987049682	0.910908301	0.947451689
+19	ERR15095095_MPNST1_scNaUMIseq_PromethION	ERR15095095_MPNST1_scNaUMIseq_PromethION	Flexiplex	0	matched_short_read_positive_proxy	0.970492515	0.971968709	0.971230051
+20	ERR15095096	ERR15095096	RAD		matched_short_read_positive_proxy	0.954528408	0.99027332	0.972072373
+20	ERR15095096	ERR15095096	BLAZE		matched_short_read_positive_proxy	0.969388753	0.96410855	0.966741442
+20	ERR15095096	ERR15095096	Flexiplex	0	matched_short_read_positive_proxy	0.952736783	0.992121389	0.972030304
+21	ERR15095097	ERR15095097	RAD		matched_short_read_positive_proxy	0.960636516	0.996957844	0.978460226
+21	ERR15095097	ERR15095097	BLAZE		matched_short_read_positive_proxy	0.982697427	0.962624946	0.972557629
+21	ERR15095097	ERR15095097	Flexiplex	0	matched_short_read_positive_proxy	0.959448161	0.997392438	0.978052418
+22	section12	section12	RAD		spatial_on_tissue_operational	0.914215686	0.891633466	0.90278338
+22	section12	section12	BLAZE		spatial_on_tissue_operational	0.879356568	0.914741036	0.896699863
+22	section12	section12	Flexiplex	8	spatial_on_tissue_operational	1	0.041035857	0.078836586
+23	section16	section16	RAD		spatial_on_tissue_operational	0.929854577	0.8696	0.898718479
+23	section16	section16	BLAZE		spatial_on_tissue_operational	0.910057236	0.8904	0.90012131
+23	section16	section16	Flexiplex	8	spatial_on_tissue_operational	1	0.0796	0.147462023
+24	section17_1T_1B	section17_1T_1B	RAD		spatial_on_tissue_operational	0.845841035	0.916666667	0.879830802
+24	section17_1T_1B	section17_1T_1B	BLAZE		spatial_on_tissue_operational	0.892594197	0.825721154	0.8578564
+24	section17_1T_1B	section17_1T_1B	Flexiplex	0	spatial_on_tissue_operational	1	0.049278846	0.093928981
+25	section17_4T_1B	section17_4T_1B	RAD		spatial_on_tissue_operational	0.827049464	0.957932692	0.887692593
+25	section17_4T_1B	section17_4T_1B	BLAZE		spatial_on_tissue_operational	0.894351013	0.830929487	0.861474559
+25	section17_4T_1B	section17_4T_1B	Flexiplex	0	spatial_on_tissue_operational	1	0.066506410	0.124718257
+26	section22	section22	RAD		spatial_on_tissue_operational	0.907809984	0.912955466	0.910375454
+26	section22	section22	BLAZE		spatial_on_tissue_operational	0.904323459	0.914574899	0.90942029
+26	section22	section22	Flexiplex	8	spatial_on_tissue_operational	1	0.076923077	0.142857143
+27	section31	section31	RAD		spatial_on_tissue_operational	0.87222894	0.929154143	0.8997921
+27	section31	section31	BLAZE		spatial_on_tissue_operational	0.833522084	0.948046372	0.887103254
+27	section31	section31	Flexiplex	8	spatial_on_tissue_operational	0.995744681	0.100472306	0.182527301
+28	section32_1T_1B	section32_1T_1B	RAD		spatial_on_tissue_operational	0.706902414	0.927710843	0.802392898
+28	section32_1T_1B	section32_1T_1B	BLAZE		spatial_on_tissue_operational	0.815754339	0.81793842	0.81684492
+28	section32_1T_1B	section32_1T_1B	Flexiplex	8	spatial_on_tissue_operational	0.995708155	0.103525212	0.187550525
+29	section32_4T_1B	section32_4T_1B	RAD		spatial_on_tissue_operational	0.714765101	0.950468541	0.815935645
+29	section32_4T_1B	section32_4T_1B	BLAZE		spatial_on_tissue_operational	0.817744755	0.834895136	0.826230956
+29	section32_4T_1B	section32_4T_1B	Flexiplex	8	spatial_on_tissue_operational	0.995762712	0.1048639	0.18974566
+30	Hipp_SN_f1_ONT_Run1	Hipp_SN_f1_ONT_Run1	RAD		matched_short_read_positive_proxy	0.860188446	0.874334913	0.867203992
+30	Hipp_SN_f1_ONT_Run1	Hipp_SN_f1_ONT_Run1	BLAZE		matched_short_read_positive_proxy	0.930212856	0.849762987	0.888169869
+30	Hipp_SN_f1_ONT_Run1	Hipp_SN_f1_ONT_Run1	Flexiplex	0	matched_short_read_positive_proxy	0.851720171	0.787946213	0.818592965
+31	Hipp_SN_f1_ONT_Run2	Hipp_SN_f1_ONT_Run2	RAD		matched_short_read_positive_proxy	0.875359048	0.825481281	0.849688823
+31	Hipp_SN_f1_ONT_Run2	Hipp_SN_f1_ONT_Run2	BLAZE		matched_short_read_positive_proxy	0.931673729	0.850827126	0.889417
+31	Hipp_SN_f1_ONT_Run2	Hipp_SN_f1_ONT_Run2	Flexiplex	0	matched_short_read_positive_proxy	0.896270232	0.61603947	0.730191492
+32	Hipp_SN_f2_ONT	Hipp_SN_f2_ONT	RAD		matched_short_read_positive_proxy	0.934742268	0.92341379	0.929043496
+32	Hipp_SN_f2_ONT	Hipp_SN_f2_ONT	BLAZE		matched_short_read_positive_proxy	0.966848622	0.739586516	0.838084247
+32	Hipp_SN_f2_ONT	Hipp_SN_f2_ONT	Flexiplex	0	matched_short_read_positive_proxy	0.949903867	0.905693044	0.927271779
+33	Hipp_SN_f3_ONT_Run1	Hipp_SN_f3_ONT_Run1	RAD		matched_short_read_positive_proxy	0.939737546	0.964183007	0.951803342
+33	Hipp_SN_f3_ONT_Run1	Hipp_SN_f3_ONT_Run1	BLAZE		matched_short_read_positive_proxy	0.951065509	0.945098039	0.948072384
+33	Hipp_SN_f3_ONT_Run1	Hipp_SN_f3_ONT_Run1	Flexiplex	0	matched_short_read_positive_proxy	0.989755453	0.391503268	0.561071562
+34	Hipp_SN_f3_ONT_Run2	Hipp_SN_f3_ONT_Run2	RAD		matched_short_read_positive_proxy	0.943669184	0.963529412	0.953495893
+34	Hipp_SN_f3_ONT_Run2	Hipp_SN_f3_ONT_Run2	BLAZE		matched_short_read_positive_proxy	0.952177967	0.934379085	0.943194564
+34	Hipp_SN_f3_ONT_Run2	Hipp_SN_f3_ONT_Run2	Flexiplex	0	matched_short_read_positive_proxy	0.99083814	0.381699346	0.551099368
+35	Hipp_SN_m2_ONT	Hipp_SN_m2_ONT	RAD		matched_short_read_positive_proxy	0.932447756	0.969023569	0.950383885
+35	Hipp_SN_m2_ONT	Hipp_SN_m2_ONT	BLAZE		matched_short_read_positive_proxy	0.95776946	0.839983165	0.895017714
+35	Hipp_SN_m2_ONT	Hipp_SN_m2_ONT	Flexiplex	0	matched_short_read_positive_proxy	0.925980272	0.956144781	0.940820806
+36	Hipp_SN_m3_ONT	Hipp_SN_m3_ONT	RAD		matched_short_read_positive_proxy	0.96714922	0.966790353	0.966969753
+36	Hipp_SN_m3_ONT	Hipp_SN_m3_ONT	BLAZE		matched_short_read_positive_proxy	0.961502697	0.959183673	0.960341785
+36	Hipp_SN_m3_ONT	Hipp_SN_m3_ONT	Flexiplex	0	matched_short_read_positive_proxy	0.932520325	0.957606679	0.944897025
+37	ScMixology2	ScMixology2	RAD		matched_cellranger_positive_proxy	0.835125448	0.939516129	0.884250474
+37	ScMixology2	ScMixology2	BLAZE		matched_cellranger_positive_proxy	1	0.758064516	0.862385321
+37	ScMixology2	ScMixology2	Flexiplex	0	matched_cellranger_positive_proxy	1.000000000	0.733870968	0.846511628

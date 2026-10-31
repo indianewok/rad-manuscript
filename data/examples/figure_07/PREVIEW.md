@@ -1,4 +1,4 @@
-# Figure 7 — source-data examples
+# Figure 7 source-data examples
 
 The tables below show selected RAD assignments, molecule counts and differential-expression results from LongBench single nuclei. [Extraction details](extraction.json) record source paths, hashes and selected rows. The [Figure 7 guide](../../../docs/figure_07.md) gives the complete analysis.
 
