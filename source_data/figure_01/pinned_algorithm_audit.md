@@ -16,7 +16,7 @@ write = found_in_true || (true_wl_empty && found_in_global)
 
 The rule is implemented at `sigstring.hpp:3440–3471`. FASTQ serializers skip barcode elements with `write=false` (`4881–4884,5042–5045`); a non-bulk record with no remaining barcode is omitted (`4948–4950,5105–5107`). Permissive multi-component processing can emit the remaining accepted barcode components; strict processing requires every component to pass (`3293–3389`).
 
-With a nonempty selected set and a correctly oriented catalog identity, this path preserves selected identities and suppresses assignments for catalog-only identities. It therefore addresses both measured correction modes: reassignment from a catalog-valid source outside the matched filtered reference into a selected target (Failure Mode 1), and reassignment between two different reference-supported identities (Failure Mode 2). The classification script requires an observed source-to-target change; the [Figure 3 guide](../../docs/figure_03.md) gives the exact categories and counting units.
+With a nonempty selected set and a correctly oriented catalog identity, this path preserves selected identities and suppresses assignments for catalog-only identities. It therefore addresses both measured correction modes: reassignment between two different reference-supported identities (Failure Mode 1), and reassignment from a catalog-valid source outside the matched filtered reference into a selected target (Failure Mode 2). The classification script requires an observed source-to-target change; the [Figure 3 guide](../../docs/figure_03.md) gives the exact categories and counting units.
 
 ### Reverse-complement lookup discrepancy
 
@@ -72,4 +72,4 @@ When a saddle exists, the mixture boundary is diagnostic (`3577–3587`). Final 
 
 ## Measured correction labels
 
-The retained `update_raw_longbench_prism.py:183–202` maps Failure Mode 1 to `catalog_noncell_to_selected_A` and Failure Mode 2 to `cellranger_to_different_cellranger_K`. `analyze_correction_events.py:914–946` implements the source-membership classes. Both scripts are from `scratch_preservation_20260921/files/longbench_rad_4acbe00_raw_prism_20260827/scripts/` in the project archive. The classifier’s pair-level definitions are preserved in the [correction methods](../../docs/manuscript_figure_03.md).
+Failure Mode 1 is a reference-supported source barcode changed to a different reference-supported target selected by the tool (`cellranger_to_different_cellranger_K`). Failure Mode 2 is a catalog-valid source barcode outside the filtered reference changed to a selected target (`catalog_noncell_to_selected_A`). The [Figure 3 methods](../../docs/figure_03.md#longbench-correction-categories) define these categories and their counting units.

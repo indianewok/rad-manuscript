@@ -14,7 +14,7 @@ describe the individual panels.
 |---|---|
 | [1](docs/figure_01.md) | RAD read processing, computational performance and Visium HD spatial barcode recovery |
 | [2](docs/figure_02.md) | Barcode discovery and read assignment using the ScTagger simulation and Badread quality models |
-| [3](docs/figure_03.md) | Assignments to excluded barcode lists and correction outcomes in LongBench |
+| [3](docs/figure_03.md) | Off-list challenges in ScTagger, LongBench and RAGE-seq; FM1 and FM2 correction outcomes |
 | [4](docs/figure_04.md) | Barcode discovery across 37 sequencing inputs and their matched references |
 | [5](docs/figure_05.md) | Immune-receptor recovery and LR-Split-seq read and UMI counts |
 | [6](docs/figure_06.md) | Genotype-based cell-line assignment in LongBench single nuclei |
@@ -42,7 +42,7 @@ source-file checksums and layout IDs. Larger FASTQ, alignment and matrix files
 are restored separately at the paths used by each workflow.
 
 The [diagnostic Flexiplex source](vendor/flexiplex-audit/README.md) records the
-extracted barcode before correction. The [preserved FLAMES configurations](docs/pinned_flames_configs.md)
+extracted barcode before correction. The [pinned FLAMES configurations](docs/pinned_flames_configs.md)
 identify the LR-Split-seq and LongBench alignment settings used in Figures 5
 and 6.
 

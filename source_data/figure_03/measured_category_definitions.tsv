@@ -1,4 +1,4 @@
 category	observed_source	selected_target	condition
 Corrected off-list	Outside the full chemistry catalog	In the tool-selected set	source != target; observed source required
-Failure Mode 1	In the chemistry catalog; outside the matched filtered reference	In the tool-selected set	source != target; observed source required
-Failure Mode 2	In the matched filtered reference	In both the matched filtered reference and tool-selected set	source != target; observed source required
+Failure Mode 1	In the matched filtered reference	In both the matched filtered reference and tool-selected set	source != target; observed source required
+Failure Mode 2	In the chemistry catalog; outside the matched filtered reference	In the tool-selected set	source != target; observed source required

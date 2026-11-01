@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Turn retained per-target pair counts into the three plotted percentages."""
+"""Calculate the three correction-category percentages for each example target."""
 import csv
 import sys
 
 source, destination = sys.argv[1:]
 classes = {'noncatalog_to_selected': 'Corrected off-list',
-           'catalog_noncell_to_selected_A': 'Failure Mode 1',
-           'cellranger_to_different_cellranger_K': 'Failure Mode 2'}
+           'cellranger_to_different_cellranger_K': 'Failure Mode 1',
+           'catalog_noncell_to_selected_A': 'Failure Mode 2'}
 with open(source, newline='') as stream:
     rows = list(csv.DictReader(stream, delimiter='\t'))
 with open(destination, 'w', newline='') as stream:

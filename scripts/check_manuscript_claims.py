@@ -50,7 +50,7 @@ for tool in ('RAD', 'BLAZE', 'Flexiplex'):
             row['denominator'], assignment, 'tool='+tool+'; state='+row['state'],
             'One mutually exclusive state; tool-specific duplicate rules are documented in Figure 2.')
 
-offlist = 'source_data/figure_03/plotted_checkpoint/plotted_offlist_totals.tsv'
+offlist = 'source_data/figure_03/offlist_totals.tsv'
 offlist_rows = read(offlist)
 assert len(offlist_rows) == 27
 for dataset, denominator in (('ScTagger-L', 4993805), ('LongBench SC-ONT', 10000000), ('RAGE-seq', 20346396)):
@@ -58,16 +58,16 @@ for dataset, denominator in (('ScTagger-L', 4993805), ('LongBench SC-ONT', 10000
         selected = [r for r in offlist_rows if r['dataset'] == dataset and r['tool'] == tool]
         assert len(selected) == 3 and {int(r['replicate']) for r in selected} == {1,2,3}
         assert {int(r['input_reads']) for r in selected} == {denominator}
-        units = {r['count_unit'] for r in selected}
+        units = {r['unit'] for r in selected}
         assert len(units) == 1
         unit = units.pop()
-        percentages = [100*int(r['assigned_reads'])/denominator for r in selected]
+        percentages = [100*int(r['assigned_count'])/denominator for r in selected]
         criterion = 'dataset='+dataset+'; tool='+tool+'; replicates=1,2,3'
         for label, value in (('mean',mean(percentages)), ('minimum',min(percentages)), ('maximum',max(percentages))):
             add('F3_'+dataset+'_'+tool+'_assigned_percent_'+label, '3', value,
                 'assignments per 100 input reads', denominator, offlist, criterion,
                 label.capitalize()+' across three supplied-list draws; counting unit: '+unit+'.')
-        add('F3_'+dataset+'_'+tool+'_assigned_reads_mean', '3', mean(int(r['assigned_reads']) for r in selected),
+        add('F3_'+dataset+'_'+tool+'_assigned_reads_mean', '3', mean(int(r['assigned_count']) for r in selected),
             unit, '3 supplied-list draws', offlist, criterion,
             'Mean of the three totals plotted in panel B.')
 

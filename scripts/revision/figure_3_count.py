@@ -55,8 +55,8 @@ def pair_ledger(rows,catalog,reference,selected):
         p['sources'].add(source)
         if source==target:continue
         if source not in catalog:p['corrected_off_list']=True
-        if source in catalog and source not in reference:p['failure_mode_1']=True
-        if source in reference and target in reference:p['failure_mode_2']=True
+        if source in reference and target in reference:p['failure_mode_1']=True
+        if source in catalog and source not in reference:p['failure_mode_2']=True
     return [dict(p,sources=sorted(p['sources']),source_evidence=sorted(p['source_evidence']),conflicting_sources=len(p['sources'])>1) for p in pairs.values()]
 
 def fastq_rows(path,name):
@@ -94,7 +94,10 @@ def fixture(out):
     assert next(r for r in ledger if r['original_id']=='z')['missing_source']
     assert not next(r for r in ledger if r['original_id']=='z')['corrected_off_list']
     assert not next(r for r in ledger if r['original_id']=='n')['corrected_off_list']
-    assert next(r for r in ledger if r['original_id']=='rev')['failure_mode_1']
+    reverse=next(r for r in ledger if r['original_id']=='rev')
+    assert reverse['failure_mode_2'] and not reverse['failure_mode_1']
+    reference_change=pair_ledger([dict(original_id='reference_change',target='AAAA',source='GGGG')],{'AAAA','CCCC','GGGG'},{'AAAA','GGGG'},{'AAAA','CCCC'})[0]
+    assert reference_change['failure_mode_1'] and not reference_change['failure_mode_2']
     assert physical_id('r-R-CT','RAD')=='r' and physical_id('AAAA_UMI#read_+','BLAZE')=='read'
     assert physical_id('AAAA_UMI#read_-1of2','Flexiplex')=='read'
     for bad in [[dict(original_id='',target='AAAA')],[dict(original_id='a',target='TTTT')]]:

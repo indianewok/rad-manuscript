@@ -1,25 +1,34 @@
-# Figure 3 Off-list assignments and barcode correction
+# Figure 3 — off-list assignments and barcode correction
 
-![Figure 3](prism/figure_03.png)
+[Methods and commands](../../docs/figure_03.md) · [Source data](../../source_data/figure_03/README.md)
 
-The [legend](../../docs/current_figure_legends.md) describes the panels. The
-[analysis guide](../../docs/figure_03.md) follows the sequencing inputs through
-barcode assignment, correction classification and calculation of the plotted
-metrics. The [source tables](../../source_data/figure_03/) contain off-list
-assignment totals, per-target counts and LongBench correction categories.
+## Off-list experiments
 
-The off-list challenge counts original physical reads with exactly one
-assignment record. The LongBench correction analysis counts unique
-original-read–target-barcode pairs and summarizes them by target barcode.
+The same procedure was used for ScTagger-L, LongBench SC-ONT and RAGE-seq: three reference-excluded lists, identical input and list bytes across tools within each replicate, and strict original-read counting.
 
-Check the source tables:
+![Total assigned reads](offlist_counts.png)
+
+![Assigned reads as a percentage of the input](offlist_assignment_fraction.png)
+
+![Assignments per target barcode](offlist_per_target.png)
+
+## LongBench correction outcomes
+
+FM1 is reassignment between cell-associated reference barcodes. FM2 is reassignment from a catalog-valid barcode outside the cell reference into a selected barcode.
+
+![Correction category definitions](correction_categories.png)
+
+![Total correction-category counts](correction_totals.png)
+
+![Correction counts per target](correction_counts.png)
+
+![Correction percentages per target](correction_percentages.png)
+
+Each plot can be downloaded as PNG, PDF or SVG. Regenerate all plots from the deposited tables:
 
 ```bash
 python3 scripts/revision/figure_3.py validate
+python3 scripts/revision/figure_3.py render
 ```
 
-Build them from the project checkpoints:
-
-```bash
-python3 scripts/revision/figure_3.py build --project-root /path/to/reviewer_comment_data
-```
+The plots show the observed counts and percentages. They do not recalculate the manuscript's ANOVA tests or significance annotations.

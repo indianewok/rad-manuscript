@@ -52,28 +52,6 @@
       "copy_unchanged": true
     },
     {
-      "source_file": "Figure 3.prism",
-      "source_sha256": "6fc7d9425505268c878965536831b5eec0979a1ef917de4f9f2fc280b6504bec",
-      "layout_id": "4B74E124-3EC5-4749-A164-AA426B306E0C",
-      "layout_index": 1,
-      "layout_title": "Layout 1",
-      "image": "figures/figure_03/prism/figure_03.png",
-      "resolution_dpi": 300,
-      "linked_graphs": [
-        "73F311BA-849B-4232-BD38-50F2D99FD8C6",
-        "0416174E-A451-4CBA-9CB5-C1A776AB5A54",
-        "DB70B66D-16C4-46F5-83BB-8882EAAF2063",
-        "52B315BE-0A66-465E-8E10-8E3BAC7A476B",
-        "272D234A-2C37-4AA8-83A4-4F2E386BB040"
-      ],
-      "source_prism_version": "11.0.0.93",
-      "image_sha256": "7803cbb421b68a4f077deb8a99be5b9ae06c8b7360d63ce342956d7bbf714e69",
-      "width": 2455,
-      "height": 1609,
-      "original_unchanged": true,
-      "copy_unchanged": true
-    },
-    {
       "source_file": "Figure 4.prism",
       "source_sha256": "a3252b6d571c2f5bd69d2f1b648111de6d99cea2cc89337d6164517dd53cb41d",
       "layout_id": "A832BFDA-4E92-4AB6-BA27-1DC54997A075",

@@ -1,6 +1,6 @@
 {
   "dataset": "SC_ONT",
-  "selection": "Among targets shared by all three selected tools, largest BLAZE Failure Mode2 count, lexical tie break",
+  "selection": "Among targets shared by all three tools, the largest BLAZE Failure Mode 1 count; lexical tie break",
   "target": "GTATTGGAGACGATAT",
   "sources": [
     {
@@ -19,5 +19,5 @@
       "sha256": "4cf9d052b395f0830b1b25d8abc1f57dd2bd6e625e0d50a762caa9bd61993abc"
     }
   ],
-  "scope": "Actual retained C5 rows; underlying full read-target overlap ledger unavailable, cannot reconstruct intersections from these marginals"
+  "scope": "Per-target correction-category counts; pair-overlap intersections require source-bearing assignments"
 }

@@ -1,12 +1,12 @@
 {
+  "README.md": "d6d2e65f41a5255adb4162b9db81091a4f67913df805d8309737c24f32ec5ad2",
+  "correction_per_target.tsv.gz": "9d2a44edf7c326f4f20e5852e85a4bc98e1d433aca9934e74ab15c829054f7e4",
+  "correction_totals.tsv": "b18d63194ee83f7737d0dac02cc3b9a63c87e96cb32cf696f7199d83071bad92",
+  "measured_category_definitions.tsv": "6240ee7cd1269e555ced14ed03e17e1375827c1a7c1887721a63ecb0388ac8ff",
   "offlist_per_target.tsv.gz": "4669bc3013790a24f021844c10d38abe8862a0c850f8b7d8b8272fb9a3a91747",
-  "README.md": "66823bac8e25b7b1785b8f3abb3926daa4506439cad50704a939fe219ad3ff6a",
-  "correction_per_target.tsv.gz": "88ef055e4ad9c7003cf9f4a3076d68873b3849c6561eb9ba787736c99e0a6dce",
-  "replicate_whitelists.tsv": "9952b99b5220282dc5a0edd404bb560815bcf6182c2e1c81dba56f74b29f96b6",
-  "offlist_totals.tsv": "ae63e8b62c9aa68f98da8b5693890c7676e8da8e7b2c596f1d01a1a13118fb9b",
-  "panel_data_manifest.tsv": "037d86d78b8315c4682b54423ee6200feab02dbc4af6331e2bba4157cb8db922",
-  "schema.json": "09a381b0ab27ff7694e87582b52a0da96a53b37e5c454bfb1370f6d9803f5409",
-  "correction_totals.tsv": "e0ba8d0ef56b2ebb19b14ef834f973104f9c03ea0c901f9935b2dd3f62ee0e38",
   "offlist_read_fates.tsv": "fd60e4091f9aa1ea0f773c609765c41492583ca8e26e1458fde91772d536f467",
-  "measured_category_definitions.tsv": "45b01f76af79dd5bdf2c85d5b5b682ec9de603c09466a6c6756473b845aa1f56"
+  "offlist_totals.tsv": "ae63e8b62c9aa68f98da8b5693890c7676e8da8e7b2c596f1d01a1a13118fb9b",
+  "panel_data_manifest.tsv": "020968821742e7246eaeeeb4fc9bb99bb2f9f9110490a256a52ba0a81c465051",
+  "replicate_whitelists.tsv": "9952b99b5220282dc5a0edd404bb560815bcf6182c2e1c81dba56f74b29f96b6",
+  "schema.json": "09a381b0ab27ff7694e87582b52a0da96a53b37e5c454bfb1370f6d9803f5409"
 }

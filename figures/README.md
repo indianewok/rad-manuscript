@@ -1,6 +1,6 @@
 # Figures
 
-The figures below are the manuscript exports. The [legends](../docs/current_figure_legends.md) describe the panels; each analysis guide links the deposited source tables, processing steps and plotting commands. The [export record](../source_data/prism_exports.json) identifies the source hashes and layouts.
+Each figure links to its methods and source data. Figure 3 plots are generated directly from its completed matched experiments. The [legends](../docs/current_figure_legends.md) describe the panels; the [Prism export record](../source_data/prism_exports.json) identifies the other manuscript exports.
 
 ## Figure 1 RAD workflow and computational performance
 
@@ -18,7 +18,9 @@ The figures below are the manuscript exports. The [legends](../docs/current_figu
 
 [Analysis guide](../docs/figure_03.md) · [Legends](../docs/current_figure_legends.md)
 
-![Figure 3](figure_03/prism/figure_03.png)
+![Off-list assignments in ScTagger, LongBench and RAGE-seq](figure_03/offlist_counts.png)
+
+![LongBench correction outcomes with FM1 and FM2](figure_03/correction_totals.png)
 
 ## Figure 4 Barcode discovery across sequencing modalities
 

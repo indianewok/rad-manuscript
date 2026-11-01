@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="792pt" height="252pt" viewBox="0 0 792 252" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-01T15:36:26.325265</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.8.4, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 252
+L 792 252
+L 792 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="table_1">
+    <g id="patch_2">
+     <path d="M 3.00024 95.878886
+L 168.060139 95.878886
+L 168.060139 54.438866
+L 3.00024 54.438866
+z
+" style="fill: #e8eef4; stroke: #d4dce3; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_1">
+     <text style="font: 700 10px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="85.53019" y="77.918251" transform="rotate(-0 85.53019 77.918251)">Measured class</text>
+    </g>
+    <g id="patch_3">
+     <path d="M 168.060139 95.878886
+L 482.459947 95.878886
+L 482.459947 54.438866
+L 168.060139 54.438866
+z
+" style="fill: #e8eef4; stroke: #d4dce3; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_2">
+     <text style="font: 700 10px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="325.260043" y="77.918251" transform="rotate(-0 325.260043 77.918251)">Observed source barcode</text>
+    </g>
+    <g id="patch_4">
+     <path d="M 482.459947 95.878886
+L 788.99976 95.878886
+L 788.99976 54.438866
+L 482.459947 54.438866
+z
+" style="fill: #e8eef4; stroke: #d4dce3; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_3">
+     <text style="font: 700 10px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="635.729854" y="77.879189" transform="rotate(-0 635.729854 77.879189)">Selected target barcode</text>
+    </g>
+    <g id="patch_5">
+     <path d="M 3.00024 137.318906
+L 168.060139 137.318906
+L 168.060139 95.878886
+L 3.00024 95.878886
+z
+" style="fill: #ffffff; stroke: #d4dce3; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_4">
+     <text style="font: 10px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start" x="19.50623" y="119.358271" transform="rotate(-0 19.50623 119.358271)">Corrected off-list</text>
+    </g>
+    <g id="patch_6">
+     <path d="M 168.060139 137.318906
+L 482.459947 137.318906
+L 482.459947 95.878886
+L 168.060139 95.878886
+z
+" style="fill: #ffffff; stroke: #d4dce3; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_5">
+     <text style="font: 10px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start" x="199.50012" y="119.358271" transform="rotate(-0 199.50012 119.358271)">Outside the full chemistry catalog</text>
+    </g>
+    <g id="patch_7">
+     <path d="M 482.459947 137.318906
+L 788.99976 137.318906
+L 788.99976 95.878886
+L 482.459947 95.878886
+z
+" style="fill: #ffffff; stroke: #d4dce3; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_6">
+     <text style="font: 10px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start" x="513.113928" y="119.358271" transform="rotate(-0 513.113928 119.358271)">In the tool-selected set</text>
+    </g>
+    <g id="patch_8">
+     <path d="M 3.00024 178.758926
+L 168.060139 178.758926
+L 168.060139 137.318906
+L 3.00024 137.318906
+z
+" style="fill: #ffffff; stroke: #d4dce3; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_7">
+     <text style="font: 10px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start" x="19.50623" y="160.798291" transform="rotate(-0 19.50623 160.798291)">Failure Mode 1</text>
+    </g>
+    <g id="patch_9">
+     <path d="M 168.060139 178.758926
+L 482.459947 178.758926
+L 482.459947 137.318906
+L 168.060139 137.318906
+z
+" style="fill: #ffffff; stroke: #d4dce3; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_8">
+     <text style="font: 10px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start" x="199.50012" y="160.798291" transform="rotate(-0 199.50012 160.798291)">In the matched filtered reference</text>
+    </g>
+    <g id="patch_10">
+     <path d="M 482.459947 178.758926
+L 788.99976 178.758926
+L 788.99976 137.318906
+L 482.459947 137.318906
+z
+" style="fill: #ffffff; stroke: #d4dce3; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_9">
+     <text style="font: 10px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif" transform="translate(513.113928 155.199385)">In both the matched filtered</text>
+     <text style="font: 10px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif" transform="translate(513.113928 166.397197)">reference and tool-selected set</text>
+    </g>
+    <g id="patch_11">
+     <path d="M 3.00024 220.198946
+L 168.060139 220.198946
+L 168.060139 178.758926
+L 3.00024 178.758926
+z
+" style="fill: #ffffff; stroke: #d4dce3; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_10">
+     <text style="font: 10px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start" x="19.50623" y="202.238311" transform="rotate(-0 19.50623 202.238311)">Failure Mode 2</text>
+    </g>
+    <g id="patch_12">
+     <path d="M 168.060139 220.198946
+L 482.459947 220.198946
+L 482.459947 178.758926
+L 168.060139 178.758926
+z
+" style="fill: #ffffff; stroke: #d4dce3; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_11">
+     <text style="font: 10px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif" transform="translate(199.50012 196.639405)">In the chemistry catalog; outside</text>
+     <text style="font: 10px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif" transform="translate(199.50012 207.837217)">the matched filtered reference</text>
+    </g>
+    <g id="patch_13">
+     <path d="M 482.459947 220.198946
+L 788.99976 220.198946
+L 788.99976 178.758926
+L 482.459947 178.758926
+z
+" style="fill: #ffffff; stroke: #d4dce3; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_12">
+     <text style="font: 10px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start" x="513.113928" y="202.238311" transform="rotate(-0 513.113928 202.238311)">In the tool-selected set</text>
+    </g>
+   </g>
+   <g id="text_13">
+    <text style="font: 14px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="396" y="13.638052" transform="rotate(-0 396 13.638052)">Figure 3D · Correction categories</text>
+   </g>
+  </g>
+  <g id="text_14">
+   <text style="font: 9px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="396" y="248.22" transform="rotate(-0 396 248.22)">Each category requires a changed barcode. A read–target pair can belong to more than one category.</text>
+  </g>
+ </g>
+</svg>

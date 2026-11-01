@@ -1,6 +1,6 @@
 # Figure legends
 
-The figures are exported from the manuscript Prism projects. Each figure guide links its inputs, analysis workflow, source tables, and plotting commands.
+Each figure guide links its inputs, software settings, counting rules, source tables and plotting commands.
 
 ## Figure 1
 
@@ -17,6 +17,8 @@ Figure 2. Benchmarking performance on synthetic data. A. Schematic of synthetic 
 ## Figure 3
 
 Figure 3. Adaptive whitelisting provides high fidelity barcode identification and correction. A-C. Characterization of false positive barcode assignment rate. Using three datasets, random, size matched sets of “off-list” barcodes were provided as the whitelist to each tool and the rate at which reads were assigned to this list was assessed (A). Quantification of total read count (B) and read depth (C) assigned to false positive barcodes by each tool. Statistical significance determined by one-way ANOVA (****p < 0.0001). D-G. Barcode correction outcomes (D). Using the LongBench dataset, the total read counts (E), the read depth (F), and the percentage of reads per barcode (G) derived from corrected off-list or the two failure modes were quantified for each tool.
+
+Failure Mode 1 (FM1) is correction from a cell-associated barcode in the matched filtered reference to a different reference barcode selected by the tool. Failure Mode 2 (FM2) is correction from a catalog-valid barcode outside the filtered reference to a selected barcode, representing the ambient/empty-droplet category. All three off-list datasets, including RAGE-seq, use the same list preparation, demultiplexing and physical-read counting procedure.
 
 [Figure and methods](figure_03.md)
 

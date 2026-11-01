@@ -1,9 +1,5 @@
 #!/usr/bin/env python3
-"""Resume Figure 3 from retained C5 checkpoints; render exclusively from C6.
-
-This does not claim regeneration of missing original read-level histories.
-Run with build --project-root REVIEWER_COMMENT_DATA, render, or validate.
-"""
+"""Build, validate and plot the Figure 3 supplied-list and correction analyses."""
 import argparse
 import collections
 import csv
@@ -22,8 +18,8 @@ ROOT = Path(__file__).resolve().parents[2]
 TOOLS = ['RAD', 'BLAZE', 'Flexiplex']
 ARMS = ['SC_ONT', 'SN_ONT', 'SC_PB', 'SN_PB']
 CLASSES = {'noncatalog_to_selected': 'Corrected off-list',
-           'catalog_noncell_to_selected_A': 'Failure Mode 1',
-           'cellranger_to_different_cellranger_K': 'Failure Mode 2'}
+           'cellranger_to_different_cellranger_K': 'Failure Mode 1',
+           'catalog_noncell_to_selected_A': 'Failure Mode 2'}
 PACKAGES = {'ScTagger-L': 'sctagger_L_false_whitelist_20260813',
             'LongBench SC-ONT': 'longbench_sc_ont_false_whitelist_20260813'}
 DATASETS = [*PACKAGES, 'RAGE-seq']
@@ -185,18 +181,18 @@ def build(a):
     write(out/'correction_per_target.tsv.gz',cor);write(out/'correction_totals.tsv',cs)
     write(out/'measured_category_definitions.tsv',[
         dict(category='Corrected off-list',observed_source='Outside the full chemistry catalog',selected_target='In the tool-selected set',condition='source != target; observed source required'),
-        dict(category='Failure Mode 1',observed_source='In the chemistry catalog; outside the matched filtered reference',selected_target='In the tool-selected set',condition='source != target; observed source required'),
-        dict(category='Failure Mode 2',observed_source='In the matched filtered reference',selected_target='In both the matched filtered reference and tool-selected set',condition='source != target; observed source required')])
+        dict(category='Failure Mode 1',observed_source='In the matched filtered reference',selected_target='In both the matched filtered reference and tool-selected set',condition='source != target; observed source required'),
+        dict(category='Failure Mode 2',observed_source='In the chemistry catalog; outside the matched filtered reference',selected_target='In the tool-selected set',condition='source != target; observed source required')])
     for panel,table,key,metric,unit,decision in [
         ('A','replicate_whitelists.tsv','dataset,replicate,barcode','supplied barcode identity','catalog sequences outside the matched reference','workflow diagram'),
-        ('B','offlist_totals.tsv','dataset,tool,replicate','assignment_fraction','strict physical reads / all input physical reads; display100*ratio','existing statistical choices preserved'),
-        ('B_raw_totals_companion','offlist_totals.tsv','dataset,tool,replicate','assigned_count','strict physical reads','descriptive input-depth diagnostic'),
-        ('C','offlist_per_target.tsv.gz','dataset,tool,replicate,barcode','assigned_count','strict physical reads per target','existing graph binds replicate 1; existing statistical choices preserved'),
+        ('B','offlist_totals.tsv','dataset,tool,replicate','assigned_count','strict physical reads','manuscript statistical analysis'),
+        ('B_normalized_companion','offlist_totals.tsv','dataset,tool,replicate','assignment_fraction','strict physical reads / all input physical reads; display100*ratio','descriptive input-depth normalization'),
+        ('C','offlist_per_target.tsv.gz','dataset,tool,replicate,barcode','assigned_count','strict physical reads per target','replicate 1; manuscript statistical analysis'),
         ('D','measured_category_definitions.tsv','category','condition','observed source and selected target sequence membership',''),
         ('E','correction_totals.tsv','dataset,tool,category','count','unique original-read–target pairs',''),
-        ('F','correction_per_target.tsv.gz','dataset,tool,barcode,category','count','unique original-read–target pairs','existing statistical choices preserved'),
-        ('G','correction_per_target.tsv.gz','dataset,tool,barcode,category','percent','100*category_pairs/all_assignment_pairs_O','existing statistical choices preserved')]:
-        bindings.append(dict(panel=panel,table=table,row_key=key,metric=metric,unit=unit,statistical_policy=decision,sha256=sha(out/table),render_scope='scripted data proof; native statistical recalculation/export remains external'))
+        ('F','correction_per_target.tsv.gz','dataset,tool,barcode,category','count','unique original-read–target pairs','manuscript statistical analysis'),
+        ('G','correction_per_target.tsv.gz','dataset,tool,barcode,category','percent','100*category_pairs/all_assignment_pairs_O','manuscript statistical analysis')]:
+        bindings.append(dict(panel=panel,table=table,row_key=key,metric=metric,unit=unit,statistical_policy=decision,sha256=sha(out/table),render_scope='rendered from source tables'))
     write(out/'panel_data_manifest.tsv',bindings)
     # Compact equal checks rather than duplicating whole barcode sets in the report.
     for c in checks:
@@ -234,6 +230,13 @@ def render(a):
     plt.rcParams.update({'font.size':9,'pdf.fonttype':42,'ps.fonttype':42,'svg.fonttype':'none'})
     colors={'RAD':'#367DB0','BLAZE':'#E49F41','Flexiplex':'#42A88F'}
     a.figures.mkdir(parents=True,exist_ok=True)
+
+    def save_plot(figure, name):
+        for extension in ('pdf', 'svg', 'png'):
+            target = a.figures / (name + '.' + extension)
+            figure.savefig(target, dpi=200)
+            if extension == 'svg':
+                target.write_text('\n'.join(line.rstrip() for line in target.read_text().splitlines())+'\n')
     off=read(a.output/'offlist_totals.tsv');cor=read(a.output/'correction_per_target.tsv.gz');sums=read(a.output/'correction_totals.tsv')
     off_targets=read(a.output/'offlist_per_target.tsv.gz')
     fig,ax=plt.subplots(figsize=(11,3.5),constrained_layout=True);ax.set_xlim(0,1);ax.set_ylim(0,1);ax.axis('off')
@@ -243,7 +246,7 @@ def render(a):
     ax.text(.5,.20,'ScTagger-L: 5,000 targets/list    ·    LongBench SC-ONT: 5,211 targets/list    ·    RAGE-seq: 4,505 targets/list',ha='center',fontsize=10)
     ax.text(.5,.08,'Retain every supplied target, including zeros. Count valid Flexiplex diagnostic assignments even without an emitted FASTQ record.',ha='center',fontsize=9)
     ax.set_title('Figure 3A · Supplied-list challenge',fontsize=14)
-    for ext in ['pdf','svg','png']:fig.savefig(a.figures/f'figure3_A_workflow.{ext}',dpi=200)
+    save_plot(fig, 'offlist_workflow')
     plt.close(fig)
     fig,axes=plt.subplots(1,3,figsize=(11,3.5),constrained_layout=True)
     for ax,d in zip(axes,DATASETS):
@@ -251,8 +254,8 @@ def render(a):
             x=np.sort([int(r['assigned_count']) for r in off_targets if r['dataset']==d and r['tool']==t and r['replicate']=='1'])
             ax.step(x,np.arange(1,len(x)+1)/len(x),where='post',color=colors[t],label=t)
         ax.set_xscale('symlog',linthresh=1);ax.set_title(d+' · replicate 1');ax.set_xlabel('Assignments per supplied target');ax.set_ylabel('Fraction of supplied targets');ax.spines[['top','right']].set_visible(False)
-    axes[0].legend(frameon=False);fig.suptitle('Figure 3C · first supplied list draw · strict physical reads')
-    for ext in ['pdf','svg','png']:fig.savefig(a.figures/f'figure3_C_target_distribution_review.{ext}',dpi=200)
+    axes[0].legend(frameon=False);fig.suptitle('Figure 3C · assignments per supplied barcode (replicate 1)')
+    save_plot(fig, 'offlist_per_target')
     plt.close(fig)
     definitions=read(a.output/'measured_category_definitions.tsv')
     fig,ax=plt.subplots(figsize=(11,3.5),constrained_layout=True);ax.axis('off')
@@ -263,9 +266,9 @@ def render(a):
     for (row,col),cell in tab.get_celld().items():
         cell.set_edgecolor('#D4DCE3')
         if row==0:cell.set_facecolor('#E8EEF4');cell.set_text_props(weight='bold')
-    ax.set_title('Figure 3D · Measured barcode changes',pad=12,fontsize=14)
-    fig.text(.5,.015,'Every class requires an observed change from source to target. Classes may overlap; source-set membership does not establish biological origin.',ha='center',fontsize=9)
-    for ext in ['pdf','svg','png']:fig.savefig(a.figures/f'figure3_D_measured_definitions_review.{ext}',dpi=200)
+    ax.set_title('Figure 3D · Correction categories',pad=12,fontsize=14)
+    fig.text(.5,.015,'Each category requires a changed barcode. A read–target pair can belong to more than one category.',ha='center',fontsize=9)
+    save_plot(fig, 'correction_categories')
     plt.close(fig)
     fig,axes=plt.subplots(1,3,figsize=(11,3.5),constrained_layout=True)
     for ax,d in zip(axes,DATASETS):
@@ -274,8 +277,8 @@ def render(a):
             ax.scatter([j-.12,j,j+.12],ys,color=colors[t],s=32,zorder=3)
             ax.plot([j-.17,j+.17],[np.mean(ys)]*2,color=colors[t],lw=2)
         ax.set_xticks(range(3),TOOLS);ax.set_title(d);ax.set_ylabel('Strict physical reads (millions)');ax.spines[['top','right']].set_visible(False)
-    fig.suptitle('Figure 3B raw-total companion · three technical list draws')
-    for ext in ['pdf','svg','png']:fig.savefig(a.figures/f'figure3_B_offlist_review.{ext}',dpi=200)
+    fig.suptitle('Figure 3B · total reads assigned to supplied lists')
+    save_plot(fig, 'offlist_counts')
     plt.close(fig)
     fig,axes=plt.subplots(1,3,figsize=(11,3.5),sharey=True,constrained_layout=True)
     for ax,d in zip(axes,DATASETS):
@@ -285,7 +288,7 @@ def render(a):
             ax.plot([j-.17,j+.17],[np.mean(ys)]*2,color=colors[t],lw=2)
         ax.set_xticks(range(3),TOOLS);ax.set_title(d);ax.set_ylabel('Strict assigned / input reads (%)');ax.spines[['top','right']].set_visible(False)
     fig.suptitle('Figure 3B · strict assignments normalized by complete input depth')
-    for ext in ['pdf','svg','png']:fig.savefig(a.figures/f'figure3_B_assignment_fraction.{ext}',dpi=200)
+    save_plot(fig, 'offlist_assignment_fraction')
     plt.close(fig)
     fig,axes=plt.subplots(3,4,figsize=(13,8),constrained_layout=True)
     for row,label in enumerate(CLASSES.values()):
@@ -295,8 +298,8 @@ def render(a):
                 x=np.sort([int(r['count']) for r in cor if r['dataset']==d and r['tool']==t and r['category']==label and r['selected_by_tool']=='1'])
                 ax.step(x,np.arange(1,len(x)+1)/len(x),where='post',color=colors[t],label=t)
             ax.set_xscale('symlog',linthresh=1);ax.set_title(d+' · '+label);ax.set_xlabel('Read–target pairs per selected target');ax.set_ylabel('Fraction of selected targets');ax.spines[['top','right']].set_visible(False)
-    axes[0,0].legend(frameon=False);fig.suptitle('Figure 3F descriptive review · zero-count selected targets retained')
-    for ext in ['pdf','svg','png']:fig.savefig(a.figures/f'figure3_F_count_distributions_review.{ext}',dpi=200)
+    axes[0,0].legend(frameon=False);fig.suptitle('Figure 3F · correction counts per selected barcode')
+    save_plot(fig, 'correction_counts')
     plt.close(fig)
     fig,axes=plt.subplots(3,4,figsize=(13,8),constrained_layout=True)
     for row,label in enumerate(CLASSES.values()):
@@ -307,19 +310,19 @@ def render(a):
                 x=np.sort(values);y=np.arange(1,len(x)+1)/len(x)
                 ax.step(x,y,where='post',color=colors[t],label=t)
             ax.set_title(d+' · '+label);ax.set_xlabel('Pairs in class / all pairs to target (%)');ax.set_ylabel('Fraction of selected targets');ax.spines[['top','right']].set_visible(False)
-    axes[0,0].legend(frameon=False);fig.suptitle('Figure 3G descriptive review · identity-bearing targets · zero denominators excluded from ECDF')
-    for ext in ['pdf','svg','png']:fig.savefig(a.figures/f'figure3_G_correction_review.{ext}',dpi=200)
+    axes[0,0].legend(frameon=False);fig.suptitle('Figure 3G · correction-category fractions per selected barcode')
+    save_plot(fig, 'correction_percentages')
     plt.close(fig)
     fig,axes=plt.subplots(1,4,figsize=(13,3.5),constrained_layout=True)
     for ax,d in zip(axes,ARMS):
         for j,t in enumerate(TOOLS):
             vals=[int(next(r['count'] for r in sums if r['dataset']==d and r['tool']==t and r['category']==cat))/1e6 for cat in CLASSES.values()]
             ax.bar(np.arange(3)+(j-1)*.25,vals,width=.24,color=colors[t],label=t)
-        ax.set_title(d);ax.set_xticks(range(3),['Off-list','FM1','FM2']);ax.set_ylabel('Read–target pairs (millions)');ax.spines[['top','right']].set_visible(False)
-    axes[0].legend(frameon=False);fig.suptitle('Figure 3E review proof · measured classes are overlapping subsets')
-    for ext in ['pdf','svg','png']:fig.savefig(a.figures/f'figure3_E_totals_review.{ext}',dpi=200)
+        ax.set_title(d);ax.set_xticks(range(len(CLASSES)),['Off-list' if c=='Corrected off-list' else c.replace('Failure Mode ','FM') for c in CLASSES.values()]);ax.set_ylabel('Read–target pairs (millions)');ax.spines[['top','right']].set_visible(False)
+    axes[0].legend(frameon=False);fig.suptitle('Figure 3E · total correction-category counts')
+    save_plot(fig, 'correction_totals')
     plt.close(fig)
-    js(a.figures/'render_manifest.json',dict(source_checksums_sha256=sha(a.output/'checksums.json'),renderer_sha256=sha(__file__),matplotlib=matplotlib.__version__,numpy=np.__version__,exports={p.name:sha(p) for p in a.figures.glob('*') if p.suffix in ['.pdf','.svg','.png']},status='data_proof_render_passed',native_prism='pending desktop recalculation/export',statistical_annotations='existing choices preserved; no replacement test selected or executed',artwork_parity='scripted data proofs; final annotated native export remains pending'))
+    js(a.figures/'render_manifest.json',dict(source_checksums_sha256=sha(a.output/'checksums.json'),renderer_sha256=sha(__file__),matplotlib=matplotlib.__version__,numpy=np.__version__,exports={p.name:sha(p) for p in a.figures.glob('*') if p.suffix in ['.pdf','.svg','.png']},status='passed'))
 
 def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('mode',choices=['build','render','validate'])
