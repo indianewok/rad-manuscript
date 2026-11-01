@@ -18,6 +18,6 @@ Correction-only fractions use corrected-correct plus corrected-incorrect reads:
 
 ## Plotting and editable project
 
-The [editable Prism project](../../figures/figure_02/Figure_02.prism) contains the current data in the existing graphs and layouts. The repository plots are rendered from these source tables with [plot_data.py](../../scripts/figure_02/plot_data.py).
+The deposited source tables preserve the values used in the graphs and layouts. The repository plots are rendered from these source tables with [plot_data.py](../../scripts/figure_02/plot_data.py).
 
 Existing statistical methods and quality-sweep inputs are retained. The [Figure 2 guide](../../docs/figure_02.md) provides the experiment and reproduction commands.

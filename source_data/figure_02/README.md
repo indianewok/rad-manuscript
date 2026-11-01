@@ -1,6 +1,5 @@
 # Figure 2 source data
 
-[Editable Figure 2 Prism project](../../figures/figure_02/Figure_02.prism)
 
 The [Figure 2 guide](../../docs/figure_02.md) describes the ScTagger quality
 sweeps, barcode discovery and read-assignment analysis.

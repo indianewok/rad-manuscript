@@ -8,7 +8,7 @@
 
 ## Figure 2: Synthetic barcode discovery and read assignment
 
-[Analysis guide](../docs/figure_02.md) · [Editable Prism project](figure_02/Figure_02.prism)
+[Analysis guide](../docs/figure_02.md)
 
 ![Barcode discovery across quality conditions](figure_02/quality_discovery_sweeps.png)
 

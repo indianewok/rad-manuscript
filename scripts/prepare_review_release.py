@@ -128,7 +128,7 @@ for path in paths:
     if any(path.name.lower().endswith(s) for s in ('.fastq','.fq','.fastq.gz','.fq.gz')):
         if not path.is_relative_to(ROOT/'data/examples'):
             raise ValueError('Sequencing reads outside bounded examples: '+str(path))
-    if path.suffix.lower() in ('.rdata','.rds','.docx','.bam','.bai','.prism'):
+    if path.suffix.lower() in ('.rdata','.rds','.docx','.bam','.bai','.prism','.pzf','.pzfx','.pzt','.prismt'):
         raise ValueError('Review code archive contains excluded payload: '+str(path))
     if '__pycache__' in path.parts or path.suffix == '.pyc':
         raise ValueError('Python cache must be ignored: '+str(path))

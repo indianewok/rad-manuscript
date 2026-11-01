@@ -79,3 +79,10 @@ validation/*_[0-9]*.err
 /docs/release_review.md
 /data/README.md
 /data/figure_04/
+
+# Author Prism projects are kept outside the repository.
+*.[pP][rR][iI][sS][mM]
+*.[pP][zZ][fF]
+*.[pP][zZ][fF][xX]
+*.[pP][zZ][tT]
+*.[pP][rR][iI][sS][mM][tT]

@@ -2,7 +2,6 @@
 
 Figure 2 uses ScTagger reads with known source barcodes to examine barcode discovery as reported base quality changes, then measures correct and incorrect read assignments. The quality sweep preserves nucleotide sequences and sequencing errors across conditions.
 
-[Download the editable Figure 2 Prism project](../figures/figure_02/Figure_02.prism).
 
 ## Synthetic reads and quality scores
 

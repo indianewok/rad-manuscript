@@ -17,11 +17,11 @@ def title(value):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--identity', type=Path, default=REPO/'source_data/figure_02/producing_evidence/assignment_Prism_identity.json')
-    parser.add_argument('--prism', type=Path)
+    parser.add_argument('--prism', type=Path, required=True, help='External author Prism project')
     parser.add_argument('--output-root', type=Path, default=REPO)
     args = parser.parse_args()
     identity = json.loads(args.identity.read_text())
-    prism = args.prism or REPO/identity['repository_relative_path']
+    prism = args.prism
     if sha(prism) != identity['sha256']:
         raise ValueError('Prism SHA-256 differs from the deposited current identity')
     for name, expected_hash in identity['source_tables'].items():
