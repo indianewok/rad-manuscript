@@ -16,7 +16,7 @@ The same procedure was used for ScTagger-L, LongBench SC-ONT and RAGE-seq: three
 
 FM1 is reassignment between cell-associated reference barcodes. FM2 is reassignment from a catalog-valid barcode outside the cell reference into a selected barcode.
 
-![Correction category definitions](correction_categories.png)
+[FM1 and FM2 definitions](../../docs/figure_03.md#longbench-correction-categories)
 
 ![Total correction-category counts](correction_totals.png)
 
@@ -31,4 +31,4 @@ python3 scripts/revision/figure_3.py validate
 python3 scripts/revision/figure_3.py render
 ```
 
-The plots show the observed counts and percentages. They do not recalculate the manuscript's ANOVA tests or significance annotations.
+The plots show the observed counts and percentages. The [methods](../../docs/figure_03.md) define the statistical analysis.

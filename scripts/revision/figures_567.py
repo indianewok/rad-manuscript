@@ -1,9 +1,5 @@
 #!/usr/bin/env python3
-"""Recover C4/C5 checkpoints and rebuild auditable current-paper Figures 5–7.
-
-Build is a checkpoint-resume operation, never a raw rerun. Render needs only the
-deposited source_data directory. Pending panel decisions are recorded explicitly.
-"""
+"""Build Figures 5–7 tables from barcode assignments, matrices and gene results."""
 import argparse
 import collections
 import csv
@@ -118,44 +114,9 @@ def expression(project, out):
     by_tool = {t: [x for x in data if x['tool'] == t] for t in TOOLS}
     common = {x['gene_id'] for x in by_tool['RAD']}
     check('F7_common_genes', len(common), 8135)
-    (dest / 'matrix_production_record.md').write_text('''# Selected Figure 7 matrix and direct-contrast production record
-
-The native SN-ONT RAD matrix was produced with RAD commit
-`4acbe004ba11b150d6832395452632f367a6e6c1`, retaining all emitted records,
-including concatemer-derived `-CT` segments. The selected matrix has **45,224
-genes × 12,423 cells**, **15,772,545 nonzero coordinates** and **22,875,174
-molecules**. Each emitted segment inherits the frozen original-read gene
-assignment. Exact cell–gene–UMI keys are collapsed; records without a UMI count
-individually. This contract does not independently establish segment-specific
-gene alignments.
-
-The selected direct H146-versus-H526 comparison uses **8,135 common eligible
-genes** and **24,405 tool/gene rows**. Its raw P values and effects exactly match
-the selected native direct-test output; common-family BH adjustment, supported
-membership and all 594 threshold combinations have been independently checked.
-The direct comparison is current; it is not awaiting a separate expression
-rerun. The original emitted FASTQ and frozen read-gene file remain unavailable
-at the checked paths, so complete upstream replay is not claimed.
-
-The selected emitted-assignment checkpoint was recovered and fully verified:
-57,885,606 five-field rows cover all 12,423 selected barcodes. It retains read
-IDs, cell barcodes, UMIs, raw barcodes and correction flags. The extractor
-removed orientation/concatemer suffixes; gene IDs and segment coordinates are
-absent. This is a recovered C2 assignment source, not a complete gene/segment
-ledger.
-
-- [Current direct comparison source](direct_H146_vs_H526_plot_data.tsv.gz)
-- [Selected matrix production fields](RAD_emitted_segment_build_summary.json)
-- [Matrix and label content validation](../../validation/figures_567_checkpoint_checks.tsv)
-- [Direct P-value/effect lineage validation](../../validation/figures_567_direct_test_lineage.json)
-- [Recovered assignment validation](../../validation/figures_567_assignment_recovery.json)
-- [Recovered assignment access and hash](../../manifests/figures_567_assignment_access.tsv)
-- [Current walkthrough and exact producer parameters](../../docs/figure_07.md)
-
-The original uncurated production receipt remains in the external source
-project. Its SHA-256 is retained in the selected matrix summary and input
-manifest; superseded comparison results are not reproduced here.
-''')
+    methods_record = ROOT / 'source_data/figure_07/matrix_production_record.md'
+    if (dest / methods_record.name).resolve() != methods_record.resolve():
+        shutil.copyfile(methods_record, dest / methods_record.name)
     for t, rows in by_tool.items():
         check('F7_' + t + '_gene_identity', {x['gene_id'] for x in rows} == common and len(rows) == 8135)
         for prefix in ('tool', 'Illumina'):
@@ -216,7 +177,7 @@ manifest; superseded comparison results are not reproduced here.
     check('F7_truth_H146', len([r for r in ref.values() if float(r['Illumina_BH_FDR_common']) < .05 and float(r['Illumina_log2FC']) > 1]), 412)
     check('F7_truth_H526', len([r for r in ref.values() if float(r['Illumina_BH_FDR_common']) < .05 and float(r['Illumina_log2FC']) < -1]), 769)
     write(dest / 'threshold_grid.tsv', grid)
-    # A documented candidate fit; exact final workbook is still an author gate.
+    # Confidence concordance across directional reference DEGs in the common gene set.
     fits, fit_points = [], []
     for direction, sign in [('H146_high', 1), ('H526_high', -1)]:
         genes = [g for g, r in ref.items() if float(r['Illumina_BH_FDR_common']) < .05 and sign * float(r['Illumina_log2FC']) > 1]
@@ -225,11 +186,10 @@ manifest; superseded comparison results are not reproduced here.
             ys = [-math.log10(float(lookup[tool][g]['tool_BH_FDR_common'])) for g in genes]
             mx, my = sum(xs) / len(xs), sum(ys) / len(ys)
             slope = sum((x - mx) * (y - my) for x, y in zip(xs, ys)) / sum((x - mx) ** 2 for x in xs)
-            fits.append(dict(direction=direction, tool=tool, n=len(xs), slope=slope, intercept=my - slope * mx, method='OLS; estimated intercept; uncapped; all directional Illumina truth genes', status='candidate_requires_artwork_fit_confirmation'))
+            fits.append(dict(direction=direction, tool=tool, n=len(xs), slope=slope, intercept=my - slope * mx, method='OLS; estimated intercept; uncapped; all directional Illumina truth genes'))
             fit_points.extend(dict(gene_id=g, direction=direction, tool=tool, BLAZE_confidence=x, tool_confidence=y) for g, x, y in zip(genes, xs, ys))
-    write(dest / 'confidence_fit_candidates.tsv', fits)
-    write(dest / 'confidence_fit_points.tsv', fit_points)
-    (dest / 'panel_status.json').write_text(json.dumps({'7A': 'recomputed_from_updated_C5', '7B': 'updated_common_universe_volcano; final_annotation_selection_pending', '7C': 'candidate_fit_requires_author_confirmation', '7D': 'all_594_grid_cells_recomputed', '7E': 'removed_by_author_2026-10-23; current Figure 7 contains A-D'}, indent=2) + '\n')
+    write(dest / 'common_gene_confidence_fits.tsv', fits)
+    write(dest / 'common_gene_confidence_points.tsv', fit_points)
 
 
 def genotype(project, out):
@@ -311,7 +271,7 @@ def receptor(project, out):
     combined = []
     for tool in TOOLS:
         src = project / ('flexiplex_bcrtcr_cellline_20260811/flexiplex_per_barcode_bcrtcr.tsv' if tool == 'Flexiplex' else 'rad_blaze_bcrtcr_cellline/{}_per_barcode_bcrtcr.tsv'.format(tool))
-        record(src, 'candidate_per_cell_receptor_checkpoint')
+        record(src, 'per_cell_receptor_counts')
         rows = read(src)
         check('F5_' + tool + '_unique_barcodes', len({r['barcode'] for r in rows}), len(rows))
         for r in rows:
@@ -322,19 +282,19 @@ def receptor(project, out):
                     corrected -= native
                 if corrected < 0:
                     raise ValueError('negative exclusive corrected receptor count')
-                combined.append(dict(tool=tool, barcode=r['barcode'], celltype=r['celltype'], receptor=rec, native=native, corrected_only=corrected, assigned=native+corrected, selection='candidate_run_not_bound_to_final_artwork'))
-    write(dest / 'candidate_receptor_counts.tsv', combined)
+                combined.append(dict(tool=tool, barcode=r['barcode'], celltype=r['celltype'], receptor=rec, native=native, corrected_only=corrected, assigned=native+corrected))
+    write(dest / 'receptor_counts.tsv', combined)
     summary = []
     for t in TOOLS:
         sub = [r for r in combined if r['tool'] == t]
         summary.append(dict(tool=t, native=sum(r['native'] for r in sub), corrected_only=sum(r['corrected_only'] for r in sub), assigned=sum(r['assigned'] for r in sub)))
     check('F5_Flex_assigned', next(r['assigned'] for r in summary if r['tool']=='Flexiplex'), 6595231)
-    write(dest / 'candidate_receptor_totals.tsv', summary)
+    write(dest / 'receptor_totals.tsv', summary)
     labels = project / 'flexiplex_bcrtcr_cellline_20260811/rageseq_barcode_celltype_map.csv'
-    copy(labels, dest / 'candidate_cell_identity_map.csv')
+    copy(labels, dest / 'receptor_cell_identity_map.csv')
     label_rows=read(labels)
-    check('F5_candidate_identity_map_rows',len({r['barcode'] for r in label_rows}),3585)
-    write(dest/'candidate_identity_summary.tsv',[dict(celltype=k,cells=v,source='candidate_3585_identity_map_not_4505_discovery_reference') for k,v in sorted(collections.Counter(r['celltype'] for r in label_rows).items())])
+    check('F5_receptor_identity_map_rows',len({r['barcode'] for r in label_rows}),3585)
+    write(dest/'receptor_identity_summary.tsv',[dict(celltype=k,cells=v) for k,v in sorted(collections.Counter(r['celltype'] for r in label_rows).items())])
     split = project / 'scratch_preservation_20260921/files/splitseq_shortread_20260727/csv/called_cells_summary.csv'
     copy(split, dest / 'splitseq_reference_568_cells.csv')
     check('F5_split_reference_cells', len(read(split)), 568)
@@ -460,7 +420,7 @@ def render(out, only=None):
                 for y in range(len(ps)):
                     for x in range(len(fcs)):ax.text(x,y,siglabel(mat[y,x],1),ha='center',va='center',fontsize=5,color='white' if mat[y,x]>.6 else 'black')
         fig.tight_layout();save(fig,'figure_07','D_updated_threshold_grid')
-        points=read(out/'source_data/figure_07/confidence_fit_points.tsv');fits=read(out/'source_data/figure_07/confidence_fit_candidates.tsv')
+        points=read(out/'source_data/figure_07/common_gene_confidence_points.tsv');fits=read(out/'source_data/figure_07/common_gene_confidence_fits.tsv')
         fig,axes=plt.subplots(1,2,figsize=(9,4))
         for ax,direction in zip(axes,('H146_high','H526_high')):
             for t in ('RAD','Flexiplex'):
@@ -468,8 +428,8 @@ def render(out, only=None):
                 ax.scatter([float(r['BLAZE_confidence']) for r in rows],[float(r['tool_confidence']) for r in rows],s=3,alpha=.35,color=colors[t])
                 xs=np.array([0,max(float(r['BLAZE_confidence']) for r in rows)]);ax.plot(xs,float(fit['intercept'])+xs*float(fit['slope']),color=colors[t],label='{} slope {:.4f}'.format(t,float(fit['slope'])))
             ax.set_title(direction.replace('_',' '));ax.set_xlabel('BLAZE −log10(BH FDR)');ax.set_ylabel('Tool −log10(BH FDR)');ax.legend(fontsize=7)
-        fig.suptitle('Candidate updated confidence fit — presentation pending author review',fontsize=9)
-        fig.tight_layout(rect=(0,0,1,.93));save(fig,'figure_07','C_candidate_updated_confidence')
+        fig.suptitle('Common-gene confidence concordance',fontsize=9)
+        fig.tight_layout(rect=(0,0,1,.93));save(fig,'figure_07','common_gene_confidence_concordance')
 
 
 def main():
@@ -495,14 +455,14 @@ def main():
         checks=read(out/'validation/figures_567_checks.tsv')
         if not checks or any(r['status']!='passed' for r in checks):
             raise SystemExit('scientific checkpoint checks failed')
-        for path in ('source_data/figure_07/threshold_grid.tsv','source_data/figure_06/genotype_summary.tsv','source_data/figure_05/candidate_receptor_counts.tsv'):
+        for path in ('source_data/figure_07/threshold_grid.tsv','source_data/figure_06/genotype_summary.tsv','source_data/figure_05/receptor_counts.tsv'):
             if not (out/path).is_file():raise SystemExit('missing '+path)
         manifest=json.loads((out/'manifests/figures_567_run.json').read_text())
         for item in manifest['outputs']:
             path=out/item['path']
             if not path.is_file() or sha(path)!=item['sha256']:
                 raise SystemExit('checkpoint changed after validation: '+str(path))
-        print('{} checkpoint checks passed; raw and author gates remain explicit'.format(len(checks)))
+        print('{} source-table checks passed'.format(len(checks)))
 
 
 if __name__=='__main__':

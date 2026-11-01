@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render candidate receptor and selected Split-seq source-verification proofs."""
+"""Plot receptor-read assignments and LR-Split-seq counts."""
 import argparse
 import csv
 from pathlib import Path
@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 
 root=Path(__file__).resolve().parents[2]
 parser=argparse.ArgumentParser(description=__doc__)
-parser.add_argument('--input',type=Path,default=root/'source_data/figure_05/candidate_receptor_totals.tsv')
+parser.add_argument('--input',type=Path,default=root/'source_data/figure_05/receptor_totals.tsv')
 parser.add_argument('--output-dir',type=Path,default=root/'figures/figure_05')
 parser.add_argument('--splitseq-input',type=Path)
 parser.add_argument('--splitseq-summary',type=Path)
@@ -25,10 +25,10 @@ for i,r in enumerate(rows):
     ax.bar(i,corrected,bottom=native,color='#d7b36a',label='Corrected only' if i==0 else None)
     ax.text(i,native+corrected+.1,'{:,}'.format(int(r['assigned'])),ha='center',fontsize=8)
 ax.set_xticks(range(len(rows)));ax.set_xticklabels([r['tool'] for r in rows]);ax.set_ylabel('Assigned original reads (millions)')
-ax.set_title('Recovered receptor candidates: source verification\nFinal Figure 5 source binding remains unresolved',fontsize=10)
+ax.set_title('RAGE-seq read assignments',fontsize=10)
 ax.legend(fontsize=8);ax.set_ylim(0,10);fig.tight_layout()
 dest=args.output_dir;dest.mkdir(parents=True,exist_ok=True)
-for ext in ('png','svg','pdf'):fig.savefig(str(dest/('candidate_receptor_count_verification.'+ext)),dpi=180)
+for ext in ('png','svg','pdf'):fig.savefig(str(dest/('receptor_read_counts.'+ext)),dpi=180)
 plt.close(fig)
 
 if args.splitseq_input:
@@ -53,7 +53,7 @@ if args.splitseq_input:
                 xlabel='RAD: distinct reads per cell',ylabel='Component Flexiplex: distinct reads per cell',
                 title='568 matched physical cells; dotted line y=x')
     axes[1].legend(frameon=False,fontsize=8)
-    fig.suptitle('Selected LR-Split-seq source verification; final artwork QA remains separate',fontsize=10)
+    fig.suptitle('LR-Split-seq read assignments',fontsize=10)
     fig.tight_layout()
-    for ext in ('png','svg','pdf'):fig.savefig(str(dest/('splitseq_selected_read_verification.'+ext)),dpi=180)
+    for ext in ('png','svg','pdf'):fig.savefig(str(dest/('splitseq_read_counts.'+ext)),dpi=180)
     plt.close(fig)

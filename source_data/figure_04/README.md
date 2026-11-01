@@ -1,43 +1,36 @@
 # Figure 4 source data
 
-The [Figure 4 workflow](../../docs/figure_04.md) connects the 37 sequencing inputs, barcode references, native discovery runs, and plotted comparisons.
+Start with the [Figure 4 guide](../../docs/figure_04.md) for the 37 inputs, barcode references, software settings and read-to-score commands.
 
-## Plotted comparison
+| Step | Files | What to inspect |
+|---|---|---|
+| Identify an input | [sample_inventory.tsv](sample_inventory.tsv), [input_characteristics.tsv](input_characteristics.tsv) | Dataset, library, sequencing run and all-read SeqKit summaries; `AvgQual` is the SeqKit average-quality field. |
+| Read the command | [tool_parameters.tsv](tool_parameters.tsv), [run_records/](run_records/), [producing_evidence/](producing_evidence/) | Tool version, command flags, FASTQ, chemistry catalog, scoring reference and output barcode list. |
+| Inspect barcode-set scores | [barcode_detection_metrics.tsv](barcode_detection_metrics.tsv) | Native-run calls, reference size, TP, FP, FN, precision, recall and F1. |
+| Read the figure values | [plotted_checkpoint/plotted_metrics.tsv](plotted_checkpoint/plotted_metrics.tsv) | 111 input–tool observations: 37 matched inputs × three tools. |
+| Follow the Flexiplex selection | [flexiplex_selected_conditions.tsv](plotted_checkpoint/flexiplex_selected_conditions.tsv) | The higher recorded F1 selects f0 or f8; the same condition supplies precision and recall. There are 22 f0 and 15 f8 selections. |
+| Compare tools | [paired tables](plotted_checkpoint/), [Friedman](plotted_checkpoint/friedman.tsv), [Dunn](plotted_checkpoint/dunn.tsv) | Input-matched F1, precision and recall, followed by Friedman tests and two RAD-versus-comparator Dunn comparisons per metric. |
 
-`plotted_checkpoint/` contains the exact saved manuscript observations:
+All RAD results use **1.0.2, commit `4acbe004ba11b150d6832395452632f367a6e6c1`, adapter error 0.3 and complete inputs**. [ScMixology2](../../scripts/figure_04/scmixology2/README.md) uses complete-input native runs for all three tools. ScTagger-S/L retain uniform Q20; biological inputs retain their native qualities.
 
-- `plotted_metrics.tsv`: 111 input–tool observations and 333 precision, recall, and F1 values.
-- `paired_f1.tsv`, `paired_precision.tsv`, and `paired_recall.tsv`: the 37 matched input rows, with canonical IDs and displayed names.
-- `flexiplex_selected_conditions.tsv`: recorded f0/f8 F1 values and the condition selected for each input. The higher recorded F1 supplies the displayed condition; 22 inputs use f0 and 15 use f8.
-- `f1_native.csv`, `precision_native.csv`, `recall_native.csv`, and `flexiplex_variants_native.csv`: unchanged native Prism CSV checkpoints. The `*_modality_native.csv` tables retain the transposed values used by the fifteen modality graphs.
-- `friedman.tsv` and `dunn.tsv`: the matched comparisons recalculated from the plotted values; native Prism statistical-result CSVs are retained beside them.
-- `panel_bindings.json`: source Prism hash, layout, graph and dataset identifiers, native table hashes, and output hashes.
-- `checkpoint_summary.json`: input counts, arithmetic checks, selected conditions, medians, and statistical settings.
+TP is a selected barcode in the matched reference. FP is a selected barcode outside that reference. FN is a reference barcode absent from the selected set. Precision is `TP/(TP+FP)`, recall is `TP/(TP+FN)` and F1 is `2TP/(2TP+FP+FN)`.
 
-Validate the deposited checkpoint directly with:
+Synthetic references contain known source barcodes. Biological references use matched filtered short-read barcodes, deposited targetable-cell annotations or published spatial masks. The RAGE lymph-node reference contains 5,978 T/B-containing barcodes. ERR15095097 uses the MPNST1 reference specified in its [scoring record](reference_scoring/ERR15095097.json). The comparison includes 87 observations from public inputs and 24 from controlled-access Visium inputs.
+
+The figure's paired and modality tables contain the same 333 metric values. [Panel bindings](plotted_checkpoint/panel_bindings.json) identify the source tables and graphs; [checkpoint_summary.json](plotted_checkpoint/checkpoint_summary.json) gives the medians, selected conditions and statistical settings. The folder also includes the native Prism CSV tables.
+
+Check the figure values directly:
 
 ```bash
 python3 scripts/figure_04/extract_plotted_prism.py --validate-only \
   --output-dir source_data/figure_04/plotted_checkpoint
 ```
 
-To refresh the checkpoints from a local author project:
+To extract them from a local Prism project:
 
 ```bash
 python3 scripts/figure_04/extract_plotted_prism.py \
   --prism "external_data/prism/Figure 4.prism" \
   --producer-metrics source_data/figure_04/barcode_detection_metrics.tsv \
   --output-dir results/figure_04/plotted_checkpoint
-python3 scripts/figure_04/extract_plotted_prism.py --validate-only \
-  --output-dir results/figure_04/plotted_checkpoint
 ```
-
-## Native producing records
-
-`barcode_detection_metrics.tsv` retains the calls, reference sizes, TP, FP, and FN from its recorded producing runs. `tool_parameters.tsv`, `run_records/`, and `producing_evidence/` retain their software identities, full commands, and outputs. The top-level paired/statistical tables summarize those producing-run metrics. The manuscript layout's selected Flexiplex conditions are recorded separately in `plotted_checkpoint/`; `producer_comparison.tsv` identifies the changed metric values. Producer counts are preserved without inferring replacement counts from rounded plot values.
-
-All 37 RAD results use RAD 1.0.2 at commit `4acbe004ba11b150d6832395452632f367a6e6c1`, adapter error `0.3`, and the complete selected input. ScMixology2 uses complete-input native runs for all three tools; [its workflow](../../scripts/figure_04/scmixology2/README.md) records the pinned commands and outputs.
-
-Synthetic references contain known source barcodes. Biological references use matched filtered short-read barcodes, deposited targetable cell annotations, or published spatial masks. The RAGE lymph-node reference contains 5,978 T/B-containing barcodes. The guide identifies the MPNST1 reference used for ERR15095097.
-
-`sample_inventory.tsv` identifies all 37 inputs. `input_characteristics.tsv` supplies the saved all-read SeqKit summaries; `AvgQual` follows the source SeqKit field. ScTagger S/L use uniform Q20. The comparison includes 87 observations from public inputs and 24 from controlled-access Visium inputs; complete barcode lists remain external inputs.

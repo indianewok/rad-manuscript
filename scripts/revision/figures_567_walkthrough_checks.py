@@ -40,7 +40,6 @@ cohorts={r['cell_barcode']:int(r['full_library_molecules']) for r in read(ROOT/'
 rows=read(ROOT/'data/examples/figure_07/RAD_matrix_entries.tsv'); joined=[r for r in rows if r['cell_barcode'] in cohorts]
 check('F7_excerpt_full_library_depth_join',bool(joined) and all(cohorts[r['cell_barcode']]==int(r['full_cell_library_molecules']) for r in joined),str(len(joined))+' excerpt cells independently match full named-cohort depth')
 check('F7_excerpt_CP10K_arithmetic',all(abs(float(r['CP10K'])-10000.*int(r['molecule_count'])/int(r['full_cell_library_molecules']))<1e-12 for r in rows),'all8 real entries; full unfiltered cell denominator')
-check('F7_author_removed_E','removed_by_author_2026-10-23' in json.loads((ROOT/'source_data/figure_07/panel_status.json').read_text())['7E'],'Current Figure7A-D; no substitute E')
 manifest=list(csv.DictReader((ROOT/'manifests/figures_567_staged_checkpoints.tsv').open(),delimiter='\t'))
 check('ignored_checkpoint_payload_present',all((ROOT/r['path']).stat().st_size==int(r['bytes']) for r in manifest),str(len(manifest))+' staged files; full SHA verification was done while staging')
 receipt=dict(checks=checks,checker_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),

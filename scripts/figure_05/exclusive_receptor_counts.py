@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Convert per-barcode receptor counts to native / corrected-only / assigned.
 
-The historical Flexiplex `corrected_*` columns include native reads. RAD and
+The Flexiplex `corrected_*` columns include native reads. RAD and
 BLAZE's candidate tables already contain corrected-only reads. Require the
 caller to state this contract rather than guessing from the tool name.
 """

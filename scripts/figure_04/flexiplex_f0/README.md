@@ -1,4 +1,4 @@
-# Flexiplex whitelist detection for Measles and Isosceles
+# Flexiplex f0 discovery for P7, P8 and Isosceles
 
 **Flexiplex 1.02.6; flanking edit distance `-f 0`; barcode edit distance `-e 2`; 16 threads.** Filter 1.02 uses the complete 6,794,880-barcode 10x 3v3 catalogue.
 
@@ -47,7 +47,7 @@ python3 scripts/figure_04/flexiplex_f0/score_whitelist.py \
   --reference MATCHED_REFERENCE.txt.gz --output metrics.tsv
 ```
 
-TP is the selected/reference intersection; FP is a selected barcode outside that reference; FN is a reference barcode absent from the selected list. These measure agreement with the matched short-read reference.
+TP is the selected/reference intersection; FP is a selected barcode outside that reference; FN is a reference barcode absent from the selected list. Precision, recall and F1 use that matched short-read reference.
 
 The execution records pin these SHA-256 values:
 

@@ -1,6 +1,6 @@
 # Figure 5 source-data examples
 
-The tables below show selected RAGE-seq receptor assignments and the paired LR-Split-seq short-read reference. [Extraction details](extraction.json) record source paths, hashes and selected rows. The [Figure 5 guide](../../../docs/figure_05.md) gives the complete analysis.
+The tables below show selected RAGE-seq receptor assignments and the paired LR-Split-seq short-read reference. [Source identities](extraction.json) identify the files and selected rows. The [Figure 5 guide](../../../docs/figure_05.md) gives the complete analysis.
 
 ## Read-assignment input (first six rows)
 
@@ -23,7 +23,7 @@ The tables below show selected RAGE-seq receptor assignments and the paired LR-S
 
 The corrected columns above include native assignments. Subtract the native count to obtain corrected-only reads.
 
-## Exclusive output
+## Output: native and corrected-only counts
 
 | barcode | receptor | native | corrected_only | assigned |
 |---|---|---|---|---|

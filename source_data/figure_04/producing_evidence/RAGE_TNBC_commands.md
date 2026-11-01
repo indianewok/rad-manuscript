@@ -1,20 +1,12 @@
-# ERR3268990 comparator commands
+# RAGE-seq lymph-node commands (ERR3268990)
 
-All methods use
-10x 3' v2 structure (adapter `CTACACGACGCTCTTCCGATCT`, 16-nt cell barcode,
-10-nt UMI) and maximum correction edit distance 2 where applicable.
+Figure 4 uses BLAZE **2.6.0a0** with **10,433 expected cells** and Flexiplex **1.02.6** with **`-f 8`**. The [software record](RAGEseq-TNBC-LN_tool_provenance.tsv) identifies their executables and filter. Both use the 10x 3′ v2 structure: adapter `CTACACGACGCTCTTCCGATCT`, a 16-nt barcode, a 10-nt UMI and maximum barcode-correction distance two.
 
-## Input validation
+The complete FASTQ contains 23,044,761 records and 24,041,380,990 sequence bases. Its compressed size is 24,090,380,952 bytes and its ENA MD5 is `23177cd143a521db1d7e41fd3e7d1981`.
 
-The runner waits for exactly 24,090,380,952 bytes, checks the official ENA MD5
-`23177cd143a521db1d7e41fd3e7d1981`, copies the validated FASTQ to local NVMe,
-and requires 23,044,761 records and 24,041,380,990 bases from `seqkit stats`.
+## BLAZE
 
-## BLAZE 2.6.0a0
-
-The primary run uses the 10,433 exact deposited short-read capture list size.
-A second run uses the paper's 6,027 downstream-QC count as an explicitly
-labeled sensitivity analysis.
+The 10,433 expected cells come from the deposited short-read capture list.
 
 ```bash
 blaze --expect-cells 10433 --10x-kit-version 3v2 \
@@ -23,19 +15,11 @@ blaze --expect-cells 10433 --10x-kit-version 3v2 \
   --overwrite input/ERR3268990.fastq.gz
 ```
 
-The sensitivity run uses `--expect-cells 6027` in a separate output directory.
-Its `putative_bc.csv` is a symlink to the primary BLAZE run, and the command
-omits `--overwrite`; BLAZE therefore skips duplicate putative-barcode
-extraction and performs only sensitivity-specific whitelisting and
-demultiplexing. Its standalone timing is incremental and excludes the shared
-extraction cost.
+The 6,027-cell condition uses `--expect-cells 6027`, the downstream-QC cell count, in its own output directory. Its `putative_bc.csv` links to the 10,433-cell extraction table. Omitting `--overwrite` reuses that table for whitelisting and demultiplexing; the recorded runtime for this condition covers those two stages.
 
 ## Flexiplex
 
-The chemistry-default error-tolerant search (`-f 8`) is the primary Flexiplex
-comparator. Strict discovery (`-f 0`) is retained as a sensitivity diagnostic.
-Each setting performs discovery, whitelist filtering against the full 737,280
-10x-v2 design, and demultiplexing:
+Each flank-distance setting performs discovery, filtering against the full 737,280-barcode 10x 3v2 catalog, and selected-list demultiplexing. The commands below show the f0 condition:
 
 ```bash
 gzip -cd input/ERR3268990.fastq.gz |
@@ -54,10 +38,8 @@ gzip -cd input/ERR3268990.fastq.gz |
   pigz -p 2 > runs/flexiplex/f0_demux/matched_reads.fastq.gz
 ```
 
-The `-f 8` track uses the corresponding `f8_*` directories.
+For the f8 condition, use `-f 8` and the corresponding `f8_*` directories. Figure 4 uses f8, selected by its higher recorded F1 score.
 
-## FLAMESv2
+## FLAMESv2 workflow
 
-FLAMES 2.6.0 is run in the Bioconductor 3.23 container through
-`scripts/run_flamesv2_blaze_10x.R`. Its embedded BLAZE 2.5.1 receives
-`expect_cells=10433`, kit `3v2`, correction distance 2, and 24 threads.
+FLAMES 2.6.0 uses the Bioconductor 3.23 container and `scripts/run_flamesv2_blaze_10x.R`. Its embedded BLAZE 2.5.1 receives `expect_cells=10433`, kit `3v2`, correction distance two and 24 threads.

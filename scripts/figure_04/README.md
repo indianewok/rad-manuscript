@@ -1,12 +1,12 @@
 # RAD barcode discovery for Figure 4
 
-All Figure4 RAD results use source commit
+All Figure 4 RAD results use source commit
 `4acbe004ba11b150d6832395452632f367a6e6c1` and an explicit maximum adapter
 error ratio of 0.3. The [per-input tool table](../../source_data/figure_04/tool_parameters.tsv)
-shows the RAD, BLAZE and Flexiplex versions, threads, chemistry and commands for
-each of the 37 inputs. The linked current RAD receipts record executable hashes
-and input identities. BLAZE and Flexiplex settings vary by input; read their row
+shows each tool's version and command flags for the 37 inputs. The [RAD execution records](../../source_data/figure_04/producing_evidence/current_RAD/) identify the executable and inputs. BLAZE and Flexiplex settings vary by input; read their row
 before repeating a comparison.
+
+## Build RAD
 
 Use Linux with GNU time at `/usr/bin/time`, which records the native runtime
 and memory use. Build the exact source commit with CMake 3.18 or newer, a C++17
@@ -35,27 +35,9 @@ An executable hash can differ across compilers. The runner verifies the exact
 source commit and the build receipt, and records your actual executable hash.
 It can also enforce an optional `--rad-sha256` pin. The source-commit check selects the 4acbe00 implementation.
 
-Choose one JSON record from `source_data/figure_04/run_records/`, obtain its
-complete FASTQ, matched reference and pinned chemistry catalogue, and run from
-the manuscript repository root with a new output directory:
+## Prepare one input
 
-```bash
-python3 scripts/figure_04/run_scan.py \
-  --dataset-record source_data/figure_04/run_records/DATASET.json \
-  --input external_data/figure_04/inputs/DATASET.fastq.gz \
-  --rad external_data/software/rad_build_4acbe00/rad \
-  --rad-source external_data/software/rad \
-  --rad-build-receipt external_data/software/rad_build_4acbe00/build_receipt.json \
-  --catalogue external_data/figure_04/catalogues/CATALOGUE \
-  --threads 16 \
-  --output-dir results/figure_04/DATASET
-```
-
-Use the thread count recorded for that input. The runner verifies the catalogue,
-reference and input hashes. It retains the native command and outputs and then
-scores distinct barcode sets. Obtain reference and complete barcode-list inputs from the registered data
-source and place them at the locations in each run record. Controlled spatial
-data use the registered access process. Use the matched reference definition and source accessions in the record. A reference is accepted when its file SHA256 matches, or when its canonical barcode-set SHA256 matches; the runner records the actual file hash used. Current execution records also provide `selected_barcode_sha256`, the hash of the sorted selected barcode set; `score/metrics.json` records the same output-set hash for your run. Equivalent gzip compression or row ordering does not change the canonical reference identity.
+Choose one JSON record from `source_data/figure_04/run_records/` and obtain its complete FASTQ, matched reference and pinned chemistry catalog. The record specifies its source accession and reference definition.
 
 Read the record's `input_format` before preparing the FASTQ. `fastq.gz` pins the
 compressed bytes; `fastq` pins the plain FASTQ bytes. When the record requires
@@ -76,13 +58,34 @@ suffix and retain one 16-base barcode per line; a different gzip timestamp or
 compression level is allowed when the canonical matched-set hash agrees.
 The run record provides the reference definition and dataset accession.
 
+## Run discovery and scoring
+
+Run from the manuscript repository root with a new output directory:
+
+```bash
+python3 scripts/figure_04/run_scan.py \
+  --dataset-record source_data/figure_04/run_records/DATASET.json \
+  --input external_data/figure_04/inputs/DATASET.fastq.gz \
+  --rad external_data/software/rad_build_4acbe00/rad \
+  --rad-source external_data/software/rad \
+  --rad-build-receipt external_data/software/rad_build_4acbe00/build_receipt.json \
+  --catalogue external_data/figure_04/catalogues/CATALOGUE \
+  --threads 16 \
+  --output-dir results/figure_04/DATASET
+```
+
+Use the thread count recorded for that input. The runner verifies the catalogue,
+reference and input hashes. It writes the executed command, selected list and barcode-set scores. Obtain reference and complete barcode-list inputs from the registered data
+source and place them at the locations in each run record. Controlled spatial
+data use the registered access process. Use the matched reference definition and source accessions in the record. A reference is accepted when its file SHA256 matches, or when its canonical barcode-set SHA256 matches; the runner records the actual file hash used. Execution records also provide `selected_barcode_sha256`, the hash of the sorted selected barcode set; `score/metrics.json` records the same output-set hash for your run. Equivalent gzip compression or row ordering does not change the canonical reference identity.
+
+## Read the outputs
+
 `score/metrics.csv` contains barcode counts, TP, FP, FN, precision, recall and F1.
 `score/barcode_membership.csv` lets you inspect individual calls and reference
 membership. TP is the call/reference intersection, FP is calls outside the
 reference, and FN is reference members not called. These metrics measure agreement with the matched reference barcode set.
 
 The runner uses the complete input and preserves its sequences and qualities.
-It checks known input identities; where an original input digest was not
-recorded, it computes the digest before scanning and records the full-input
-selection contract. Empty sequence records are reported separately from the
+It checks the input identity or records the complete input digest before scanning. Empty sequence records are reported separately from the
 native processed nonempty-sequence count. Each invocation processes one dataset.

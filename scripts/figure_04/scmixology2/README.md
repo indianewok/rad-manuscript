@@ -5,7 +5,7 @@ All three tools use the complete 25,164,948-read FASTQ with its original quality
 | Tool | Version | Source commit | Settings |
 |---|---|---|---|
 | BLAZE | 2.5.1 | `9845ec129624f2210c389e67506e29fab849a23d` | expected cells 500; minimum barcode-base Q15; edit distance 2; 16 threads |
-| Flexiplex | executable 1.02.7; release v1.02.7.1 | `c85543d820030ae970d6ed8d18d6f1ad9f631911` | 10x3v3; discovery flank distance 0; barcode edit distance 2; 16 threads |
+| Flexiplex | 1.02.7 (release v1.02.7.1) | `c85543d820030ae970d6ed8d18d6f1ad9f631911` | 10x3v3; discovery flank distance 0; barcode edit distance 2; 16 threads |
 
 The [BLAZE](../../../source_data/figure_04/producing_evidence/current_ScMixology2/BLAZE.json) and [Flexiplex](../../../source_data/figure_04/producing_evidence/current_ScMixology2/Flexiplex.json) execution records include software hashes, full commands, input identities and output metrics. The software environment used Python 3.9.16 and the package versions in [requirements.txt](requirements.txt). Install the pinned [BLAZE release](https://pypi.org/project/blaze2/2.5.1/) and [Flexiplex release](https://github.com/DavidsonGroup/flexiplex/releases/tag/v1.02.7.1), and expose the executables as `blaze`, `flexiplex` and `flexiplex-filter` on `PATH`. The Flexiplex filter comes from the same source commit as its release.
 
@@ -33,4 +33,4 @@ python3 scripts/figure_04/scmixology2/score_whitelist.py \
   --output results/figure_04/ScMixology2/Flexiplex/metrics.tsv
 ```
 
-For a selected barcode set C and the reference R, TP is |C∩R|, FP is |C−R| and FN is |R−C|. The [metrics table](../../../source_data/figure_04/barcode_detection_metrics.tsv) reports those counts and precision, recall and F1. Complete barcode lists remain external inputs.
+For a selected barcode set C and the reference R, TP is |C∩R|, FP is |C−R| and FN is |R−C|. The [metrics table](../../../source_data/figure_04/barcode_detection_metrics.tsv) reports those counts and precision, recall and F1. The execution records identify the complete selected lists.

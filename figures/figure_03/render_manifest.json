@@ -1,8 +1,5 @@
 {
   "exports": {
-    "correction_categories.pdf": "e105af51766ca31d99fcdc65cc8bbd4465ddef38fb9b3dff700c799932efcc84",
-    "correction_categories.png": "04e76d9ce4b074c4e4ec11625b531b074385b2dacdbecd296d1f78a99ec588fb",
-    "correction_categories.svg": "0fb73e855d2f51540d4d2ea0b49a87dcf31bb92bcf8edf66df17962e935ab810",
     "correction_counts.pdf": "d329b3a8e4f0f7b3b56b222e440a5ac0b83511066934432b55bcd65de81e29cd",
     "correction_counts.png": "7b616a9c3714cd2156ea29e98f2f503d33c204cd619c37503fb2b818e8a98737",
     "correction_counts.svg": "6d06e522ef311b5760d07d31c941b05339b991475a776249f6d2ea0fcc226b32",
@@ -20,14 +17,11 @@
     "offlist_counts.svg": "41669278754a438051bac002e0da9875c7527035c526712fb7df0abe2be6d935",
     "offlist_per_target.pdf": "5351c7d7045995d95a3125f24b62b7ea88c4bba3c416b490658584efa0b8572c",
     "offlist_per_target.png": "ef878b48e75543c53f0564ae948ba080cc05fb3fe1257c8e13656db7c7d92623",
-    "offlist_per_target.svg": "b5eb5c67ba2f0f75635adff85057f6fe7e31f6b4ded2e4cb48dcd08213064b69",
-    "offlist_workflow.pdf": "a4a228014b2703ed872e1710907f8890307baf31129614a9beca2e2977a645e7",
-    "offlist_workflow.png": "bc6b9405e181ccee9138d57285f482008b8f859758c92ea82fe7d9633de41fcf",
-    "offlist_workflow.svg": "65fedd29816fc297a7cd958e5c0f96ef5844143392836c5250ed395928ead13b"
+    "offlist_per_target.svg": "b5eb5c67ba2f0f75635adff85057f6fe7e31f6b4ded2e4cb48dcd08213064b69"
   },
   "matplotlib": "3.8.4",
   "numpy": "1.23.5",
-  "renderer_sha256": "d7d90d4dcb2149a5995e80dfc6ad729324b1d353340a44250126e8015b6dc05a",
+  "renderer_sha256": "48861050564e50c64a3cc43c6cf776bd107f901ef4bf8a5b0d0aa1ac5a018ffe",
   "source_checksums_sha256": "1fbfb447ec57144bed6ce5a4e16f94486d619267ffc1a341e8d6c94e8fa1e1ff",
   "status": "passed"
 }

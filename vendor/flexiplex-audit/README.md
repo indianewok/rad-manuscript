@@ -1,7 +1,6 @@
 # Flexiplex with pre-correction barcode output
 
-This is the exact diagnostic source used for the manuscript's raw-to-assigned
-barcode audits. **Use this pin, not an unmodified Flexiplex release.**
+This build writes the barcode sequence extracted before correction. Use the pinned source or Linux binary below for the manuscript's raw-to-assigned barcode analyses.
 
 | Component | Pin |
 |---|---|
@@ -9,7 +8,7 @@ barcode audits. **Use this pin, not an unmodified Flexiplex release.**
 | Local change | [raw_cell_barcode_audit.patch](patches/raw_cell_barcode_audit.patch) |
 | Patch SHA-256 | `88dc9cbad139d8ac416803c19c1d4291ebb7e3159f5a1a49205aff59319f86cb` |
 | Modified source SHA-256 | `fb3f841074f39c3b56af4979adf850066d9215afe227111280ba14ed46c47541` |
-| Existing Linux x86-64 binary | [flexiplex_v1.02.6_raw_to_assigned_audit](bin/flexiplex_v1.02.6_raw_to_assigned_audit) |
+| Linux x86-64 binary | [flexiplex_v1.02.6_raw_to_assigned_audit](bin/flexiplex_v1.02.6_raw_to_assigned_audit) |
 | Binary SHA-256 | `38dccd37f1747e5105b62eacde572b7e4c5206fb925dc1fdbe8210ffe8b1e8c4` |
 | Alignment dependency | Included Edlib **1.2.7** source |
 | Build flags | `-Ofast -pthread -std=c++11` |
@@ -36,11 +35,7 @@ The output is `PREFIX_reads_barcodes.txt`, with these tab-separated columns:
 | `BarcodeEditDist` | Edit distance used for the selected barcode match |
 | `UMI` | Extracted UMI |
 
-`RawCellBarcode` comes from the observed sequence, not a supplied truth table.
-The patch also contains an optional diagnostic source-set filter. Manuscript
-assignment runs must leave that feature off. The command below unsets it.
-Read counting and pair counting are separate downstream rules; a sidecar row is
-not automatically one unique physical read.
+`RawCellBarcode` records the observed sequence. Leave the optional source-set filter `FLEXIPLEX_AUDIT_SOURCE_FILE` unset, as in the command below. Apply the figure-specific physical-read or read–target-pair counting rule to the diagnostic records.
 
 ## Build and check
 
@@ -57,8 +52,7 @@ diagnostic executables. A four-read designed fixture covers an exact barcode,
 a corrected barcode, a reverse-strand read and a read without the adapter.
 It checks that the rebuilt and pinned diagnostic binaries agree, that all common
 sidecar columns and emitted FASTQs match the upstream binary, and that the new
-column records the actual extracted sequence. This is a small behavioral test,
-not a claim of full-data equivalence.
+column records the actual extracted sequence. The build report records the fixture results and executable hashes.
 
 For a 10x 3′ v3 supplied-list assignment run:
 
@@ -69,24 +63,10 @@ env -u FLEXIPLEX_AUDIT_SOURCE_FILE \
   -k targets.txt -n sample input.fastq > sample.assigned.fastq
 ```
 
-Use the **figure-specific command table** for the actual chemistry, flank
-threshold, target list, threads and input. This example is not a universal
-parameter choice. In particular, LongBench correction runs and supplied-list
-off-list runs did not all use the same flank threshold.
+Use the **figure-specific command table** for chemistry, discovery flank threshold, target list, threads and input. The command above performs supplied-list demultiplexing with flank distance eight.
 
 ## Pinning and hosting this build
 
-Pin the manuscript repository by its full Git commit and this directory. The
-upstream commit, patch hash and binary hash make the dependency unambiguous even
-before a separate release is published. A rebuild may have a different binary
-hash when the compiler/runtime changes; the build report records both the new
-hash and behavioral comparison. Use the provided binary when exact executable
-identity is required on a compatible Linux x86-64 host.
+Pin this directory to the manuscript repository's full Git commit. Record the upstream commit, patch SHA-256 and binary SHA-256 shown above. Use the supplied binary for the recorded executable identity on compatible Linux x86-64 systems; the build report records a rebuilt executable's compiler, hash and fixture results.
 
-For publication, a GitHub Release can attach a source archive of this directory,
-the Linux binary, `SHA256SUMS`, and the build report under a distinct local tag,
-for example `flexiplex-1.02.6-rad-audit.1`. Do not reuse upstream's `v1.02.6` tag
-for modified code. A separate fork is optional: retain the upstream parent,
-commit the exact patch, tag that commit, and reference its full commit in each
-figure. Neither a mutable branch name nor the upstream version alone pins this
-custom build. Publication remains a separate release step.
+To host a separate release, tag the modified source, for example `flexiplex-1.02.6-rad-audit.1`, and attach the source archive, Linux binary, `SHA256SUMS` and build report to a GitHub Release. Use a distinct tag for this modified build. A fork can retain the upstream parent, apply the exact patch and pin the resulting full commit in each figure's command record.

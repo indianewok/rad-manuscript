@@ -1,0 +1,5 @@
+direction	tool	n	slope	intercept	method
+H146_high	RAD	412	2.258913421503297	0.3877352787243096	OLS; estimated intercept; uncapped; all directional Illumina truth genes
+H146_high	Flexiplex	412	1.2168125516524788	0.15038194805473237	OLS; estimated intercept; uncapped; all directional Illumina truth genes
+H526_high	RAD	769	2.4543216945452233	-0.398111614198573	OLS; estimated intercept; uncapped; all directional Illumina truth genes
+H526_high	Flexiplex	769	1.183511198065335	-0.07871710344290506	OLS; estimated intercept; uncapped; all directional Illumina truth genes

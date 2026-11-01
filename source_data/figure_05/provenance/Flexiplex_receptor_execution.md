@@ -1,74 +1,44 @@
-# Flexiplex BCR/TCR cell-line analysis
+# Flexiplex receptor-read processing
 
-This analysis was completed on 11 August 2026.
+**Flexiplex 1.02.5**, 10x3v2, flank distance eight, 56 threads and the 3,259-barcode selected list. **minimap2 2.26-r1175** uses `-x map-ont --secondary=no -t 20` against the TRUST4 human BCR/TCR reference. Python **3.9.16** joins barcode assignments, receptor alignments and cell-type annotations.
 
-## Inputs and integrity
+The [producing script](Flexiplex_receptor_producer.sh) streams the same RAGE-seq FASTQ to Flexiplex and minimap2, writes the barcode and alignment tables, then runs [join_flexiplex_bcrtcr.py](join_flexiplex_bcrtcr.py). It checks both stream branches and the join exit status.
 
-- WORK: `external_data/reviewer_comment_data/flexiplex_bcrtcr_cellline_20260811`
-- FASTQ: `external_data/raw_fastq_datasets/rageseq.fq.gz`
-  - 16,922,373,879 bytes; `gzip -t` exit 0 (10m26.619s)
-  - SHA-256: `cfdba50a497dd4f6b24c2a4e730e297a09498ad5fe006f65eee01fa202bcdcec`
-- selected.tsv: `external_data/reviewer_comment_data/wl_scan/20260730_rageseq_ERR3268991_cellline_control/runs/flexiplex/f8_detection/selected.tsv`
-  - 3,259 lines / unique barcodes; 2,762,471 count sum; 69,318 bytes
-  - SHA-256: `6efd9352872b06db447e540457757c3a5e50b00d654bfcd7c6e658e8786a41b9`
-- `hg38_bcrtcr.fa` SHA-256: `615152a7481d0a68557ab0a84b735d8f25fc1ee9d5076af3b8d31aa7792dc3df`
-- `rageseq_barcode_celltype_map.csv` SHA-256: `5d398b62c37b10e0a080f7e84321c11edb7fb0a1e2badef27209186e57e80f95`
-- `join_flexiplex_bcrtcr.py` SHA-256: `5486f574028de3cfd62b505c41d8de2a99ae2c509f93c73ecc314e122bef0b99`
+## Inputs
 
-## Tools and execution
+| Input | Size or identity | SHA-256 |
+|---|---|---|
+| RAGE-seq FASTQ | 20,346,396 reads; 16,922,373,879 compressed bytes | `cfdba50a497dd4f6b24c2a4e730e297a09498ad5fe006f65eee01fa202bcdcec` |
+| Selected list | 3,259 unique barcodes; count sum 2,762,471; 69,318 bytes | `6efd9352872b06db447e540457757c3a5e50b00d654bfcd7c6e658e8786a41b9` |
+| `hg38_bcrtcr.fa` | TRUST4 human receptor reference | `615152a7481d0a68557ab0a84b735d8f25fc1ee9d5076af3b8d31aa7792dc3df` |
+| Cell-type map | `rageseq_barcode_celltype_map.csv` | `5d398b62c37b10e0a080f7e84321c11edb7fb0a1e2badef27209186e57e80f95` |
+| Join script | `join_flexiplex_bcrtcr.py` | `5486f574028de3cfd62b505c41d8de2a99ae2c509f93c73ecc314e122bef0b99` |
 
-The run used Flexiplex 1.02.5 with libstdc++ 13.2.
+The producing script names the input locations under `external_data/` and the output directory. Its runtime uses libstdc++ 13.2, gzip 1.9, GNU bash 4.4.20 and GNU Awk 4.2.1.
 
-- Flexiplex 1.02.5: `external_data/software/miniconda3/pkgs/flexiplex-1.02.5-py39h2de1943_0/bin/flexiplex`
-- minimap2 2.26-r1175: `external_data/software/miniconda3/pkgs/minimap2-2.26-he4a0461_1/bin/minimap2`
-- Python 3.9.16: `external_data/software/miniconda3/bin/python3`
-- gzip 1.9 (`/usr/bin/gzip`), GNU bash 4.4.20, GNU Awk 4.2.1
-- 128 online CPUs; worker allocation: Flexiplex `-p 56`, minimap2 `-t 20` (76 workers)
+## Assignment and receptor counts
 
-The reproducible wrapper is `run_flexiplex_bcrtcr.sh`. Its pipeline is the
-gzip → tee(process-substitution Flexiplex) → minimap2 → awk stream,
-with explicit capture of both pipefail status and the asynchronous Flexiplex
-status, followed by `python3 join_flexiplex_bcrtcr.py` inside WORK.
+Flexiplex identifies barcodes in 6,665,219 original reads and emits 6,755,575 diagnostic records. The join excludes 69,988 ambiguous original read IDs and retains **6,595,231 assigned reads**. The tool log reports 45,612 reads with more than one barcode.
 
-Pipeline start: `2026-08-11T18:39:24-04:00`.
+| Receptor class | All assigned reads | Native reads |
+|---|---:|---:|
+| BCR | 2,985,039 | 1,418,603 |
+| TCR | 1,126,957 | 536,531 |
+| Unmapped | 2,483,235 | 1,097,692 |
+| Total | 6,595,231 | 3,052,826 |
 
-Streaming completion: `2026-08-11T18:49:12-04:00` (wall 588 s).
+The source summary's `corrected` columns contain all assigned reads. Subtract native counts once to obtain corrected-only counts, as shown in the [Figure 5 example](../../../data/examples/figure_05/PREVIEW.md).
 
-Join completion: `2026-08-11T18:49:48-04:00`.
+The reduced alignment table contains 16,233,872 rows for 11,467,989 unique read IDs: 10,459,673 BCR rows and 5,774,199 TCR rows. The unique alignment rate is 56.3637% of input reads; the barcode-found rate is 32.7587%, and the ambiguity-filtered assignment rate is 32.4147%.
 
-Minimap2 reported real time 587.054 s, CPU 875.318 s, peak RSS 1.337 GB.
+## Outputs
 
-Exit status: pipeline 0; Flexiplex 0; join 0.
+| File | Contents |
+|---|---|
+| `rage_flex_f8_full_reads_barcodes.txt` | Diagnostic barcode assignments |
+| `rage_bcrtcr_hits.tsv` | Read ID, receptor target and alignment-match count |
+| `flexiplex_per_barcode_bcrtcr.tsv` | Per-barcode native and cumulative receptor counts |
+| `flexiplex_bcrtcr_summary.tsv` | Receptor totals by cell type |
+| `flexiplex_bcrtcr_data11_shape.tsv` | Receptor totals in the plotting-table arrangement |
 
-## Counts and concordance
-
-- Flexiplex raw reads processed: 20,346,396
-- Flexiplex reads with a barcode: 6,665,219
-- Flexiplex reads with more than one barcode (tool log): 45,612
-- Sidecar assignment records: 6,755,575
-- Sidecar unique read IDs: 6,665,219
-- Ambiguous read IDs dropped by join: **69,988**
-- Assigned unique read IDs after ambiguity removal: **6,595,231**
-- Reduced minimap2 hits: 16,233,872 rows / 11,467,989 unique read IDs
-  - BCR target rows: 10,459,673; TCR target rows: 5,774,199; other: 0
-- Corrected summary total: 6,595,231 (BCR 2,985,039; TCR 1,126,957; unmapped 2,483,235)
-- Native summary total: 3,052,826 (BCR 1,418,603; TCR 536,531; unmapped 1,097,692)
-- Unique alignment rate: 56.3637% of raw reads
-- Barcode-found rate: 32.7587% of raw reads (assigned-unique rate 32.4147%)
-
-Validation found zero malformed sidecar/hit rows, zero nonnumeric edit or
-match fields, summary 25 lines (header + 24 cells), Data-11 shape 5 lines,
-and per-barcode table 3,260 lines (header + 3,259 selected barcodes).
-
-## Output hashes
-
-See `SHA256SUMS.txt` for the input, staged-reference, script, log, marker, and
-result hashes; `sha256sum -c SHA256SUMS.txt` passed for every listed file. Main
-result files:
-
-- `rage_flex_f8_full_reads_barcodes.txt`
-- `rage_bcrtcr_hits.tsv`
-- `flexiplex_bcrtcr_summary.tsv`
-- `flexiplex_bcrtcr_data11_shape.tsv`
-- `flexiplex_per_barcode_bcrtcr.tsv`
-- `flex_full.log`, `mm2_full.log`, `join_flexiplex_bcrtcr.stdout`
+The output tables contain 3,259 selected barcodes and 24 summary rows. The source `SHA256SUMS.txt` identifies the full input, reference, scripts and outputs. Flexiplex, the alignment stream and the join each exited with status zero.

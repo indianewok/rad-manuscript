@@ -1,10 +1,10 @@
 # Figure 6 source-data examples
 
-The tables below show selected allele counts, cell-line genotypes and fixed UMAP coordinates from LongBench single nuclei. [Extraction details](extraction.json) record source paths, hashes and selected rows. The [Figure 6 guide](../../../docs/figure_06.md) gives the complete analysis.
+Follow **variant and barcode → allele count → Vireo call → Illumina comparison → UMAP coordinate** in these LongBench single-nucleus examples. The [Figure 6 guide](../../../docs/figure_06.md) gives the software, flags and complete workflow; [source records](extraction.json) identify the example rows.
 
 ## Allele counts, genotype calls and UMAP coordinates
 
-The first eight alternate-allele molecule counts (AD) are resolved by one-based matrix row and column, then joined to genotype calls and UMAP coordinates by barcode. [Extraction details](allele_extraction.json) retain the hashes and selection rules.
+These are the first eight entries in RAD's alternate-allele molecule matrix (`AD`). One-based row and column indices identify the variant and barcode. Join that barcode to the RAD Vireo call (`query_label`), Illumina call (`reference_label`) and fixed UMAP coordinates. The [extraction record](allele_extraction.json) identifies the matrix and label files.
 
 | source_AD_entry | CHROM | POS | REF | ALT | cell_barcode | alternate_allele_molecules | query_label | reference_label | UMAP_1 | UMAP_2 |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -18,6 +18,8 @@ The first eight alternate-allele molecule counts (AD) are resolved by one-based 
 | 8 | 1 | 14464 | A | T | AGAGAGCTCGGCGATC | 1 | H2228 | unassigned | -9.68027170917974 | 3.53467945206456 |
 
 ## Five genotype outcomes
+
+These five barcodes show a matching cell-line call, an unassigned call, a doublet, a different cell-line call and a barcode absent from the selected whitelist.
 
 | cell_barcode | illumina_reference_label | rad_query_selected | rad_vireo_state | rad_vireo_label |
 |---|---|---|---|---|
@@ -48,6 +50,8 @@ The first eight alternate-allele molecule counts (AD) are resolved by one-based 
 | AATTCCTGTAACGGTG | Flexiplex | 0 | H1975 | NA | not_selected |
 
 ## Summary of the five-cell example
+
+All five Illumina-reference singlets remain in the denominator. Each tool matches one of them, giving strict identity recall `1/5 = 0.2`.
 
 | tool | reference_denominator | same | different | doublet | unassigned | not_selected | strict_recall |
 |---|---|---|---|---|---|---|---|

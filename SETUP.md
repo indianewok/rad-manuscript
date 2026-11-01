@@ -1,129 +1,59 @@
 # Setup and analysis
 
-The analysis starts from source tables, intermediate checkpoints or raw reads.
-Choose the starting point for the figure of interest, then follow its
-[figure guide](README.md). Software versions and parameters are recorded with
-each experiment.
+Choose a figure in the [repository guide](README.md). Its methods list the datasets, software versions, command-line flags and calculations.
 
-## Analysis environment
-
-Use Python 3.11 for the source-table calculations and plotting programs:
+## Install the table-analysis environment
 
 ```bash
 python3.11 -m venv .venv
 .venv/bin/pip install -r environments/render-python311.lock.txt
+source .venv/bin/activate
 ```
 
-Run commands from the repository root. Substitute `.venv/bin/python` for
-`python3` to use this environment. Limit numerical-library threads for the
-small examples and source-table calculations:
+Run commands from the repository root. The figure guides specify the separate R, demultiplexing and alignment environments used to process raw data.
+
+## Start with a small example
+
+Each `data/examples/figure_XX/` directory shows input records and expected results. For example, calculate LongBench correction percentages with:
 
 ```bash
-export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
+mkdir -p results
+python3 scripts/revision/figure_3_example_percent.py   data/examples/figure_03/correction_C5_input.tsv   results/correction_percent.tsv
 ```
 
-The figure guides identify programs that use only the Python standard library.
-RDS, Seurat and differential-expression workflows use the R packages and
-versions recorded with their producing scripts.
+Compare the result with [correction_C6_output.tsv](data/examples/figure_03/correction_C6_output.tsv). FM1 counts reassignment between cell-associated reference barcodes; FM2 counts reassignment from catalog-valid barcodes outside the cell reference.
 
-## Source tables
+## Work with the complete tables
 
-`source_data/figure_XX/` contains the tables used to calculate plotted metrics.
-`data/examples/figure_XX/` provides smaller records with the same field
-definitions, extraction rules and expected outputs. Start with an example to
-follow a calculation, then apply the same program to the complete source table.
+Open `source_data/figure_XX/README.md` for the file map, field definitions and metric denominators. Follow the corresponding figure guide to count reads, score barcode lists or calculate cell-level results. Figure images are displayed in the [gallery](figures/README.md).
 
-The [dataset registry](manifests/datasets.tsv) links inputs to their accessions.
-Check the source-data inventory with:
+## Process raw reads
 
-```bash
-python3 scripts/check_data_inventory.py
-```
+1. Download the input and references listed in the [dataset registry](manifests/datasets.tsv) and figure guide.
+2. Install the specified tool builds and dependencies.
+3. Run the recorded discovery, demultiplexing and downstream commands.
+4. Apply the counting script to the output and compare its result with the source table.
 
-This writes a file inventory and checks the 37-input, three-tool Figure 4
-table. Figure-specific commands check the calculations and table relationships.
+Keep original FASTQ identifiers, sequences, qualities and read order. The [RAGE-seq input guide](docs/rage_public_input_order.md) reconstructs the benchmark order from the public ENA reads.
 
-## Export the Prism figures
+Large inputs use `external_data/`; intermediate assignment tables, alignments and matrices use `checkpoints/`. The figure guides give their filenames and input identities. Slurm templates take the account, CPU partition, memory and time appropriate to the cluster. Computational benchmarks also record the hardware and thread count.
 
-Source-table calculations and plotting commands use the deposited tables in
-`source_data/`. Author-side figure exports use a local directory containing the
-manuscript Prism projects. The [export record](source_data/prism_exports.json)
-specifies their SHA-256 identities and the layouts used for the figures.
+<details>
+<summary>Configure external input locations</summary>
 
-Prepare an export from the local author projects:
+Scripts accept explicit input paths or these environment variables:
 
-```bash
-python3 scripts/export_prism_figures.py prepare \
-  --source-dir "/path/to/CURRENT FIGURES" \
-  --work results/prism_export
-```
-
-Use a new work directory for each export. Preparation checks the source
-identities and creates working copies, an export plan and
-`results/prism_export/export.pzc`. Open that script through Prism's
-**File → Run Script** command and run it to export the saved layouts.
-
-Check the completed export:
-
-```bash
-python3 scripts/export_prism_figures.py verify --work results/prism_export
-```
-
-The check compares source and working-copy hashes, validates the exported
-images and records their identities.
-
-## Intermediate checkpoints
-
-Restore large FASTQ, BAM, assignment-ledger and sparse-matrix files under
-`checkpoints/`, which is excluded from Git. Each workflow specifies its required
-filenames, field definitions and SHA-256 identities. Run its counting or metric
-programs after restoring those files. The `scripts/revision/` programs build
-the complete source tables from these checkpoints.
-
-For RAGE-seq, the [input-order workflow](docs/rage_public_input_order.md)
-restores the benchmark read order from the public ENA submission.
-
-## Raw-read workflows
-
-Acquire the sequencing input and references identified in the figure guide,
-install its specified software versions, and run the recorded discovery,
-demultiplexing and downstream commands. Preserve input headers, sequences,
-quality strings and read order when preparing the FASTQ.
-
-Adapt Slurm templates to the cluster's account and CPU partition. Use the
-producing run's CPU, memory and time settings, and record the hardware used for
-computational benchmarks.
-
-## External input paths
-
-Repository files use paths relative to the repository root. `external_data/`
-identifies inputs acquired separately by accession, filename and checksum.
-Scripts accept explicit input paths or the following location variables:
-
-| Variable | Default relative to the repository |
+| Variable | Default relative to this repository |
 |---|---|
 | `RAD_DATA_ROOT` | `external_data` |
 | `RAD_REVIEWER_ROOT` | `external_data/reviewer_comment_data` |
 | `RAD_SCRATCH_ROOT` | `external_data/reviewer_comment_data/scratch_preservation_20260921/files` |
 | `RAD_SCRATCH_NFS_ROOT` | Same as `RAD_SCRATCH_ROOT` |
 
-Deposited source tables and small examples use repository-relative paths.
+</details>
 
-## Preserved software and configurations
+## Pinned processing code
 
-The [FLAMES configuration archive](docs/pinned_flames_configs.md) contains the
-LR-Split-seq configurations and the exact Figure 6 genome-alignment
-configuration, with source versions and hashes. Check those files with:
-
-```bash
-python3 scripts/verify_pinned_flames_configs.py
-```
-
-ScTagger's [quality-generation record](source_data/figure_02/quality_generation_contract.json)
-contains the effective quality-sampling seeds. The
-[recorded-seed adapter](scripts/figure_02/generate_with_recorded_seed.py) preserves
-those seeds when quality-model files are stored at a different path.
-
-Build the [diagnostic Flexiplex source](vendor/flexiplex-audit/README.md) with a
-C++11 compiler. Its helper checks the patch and pre-correction barcode output.
-Leave `FLEXIPLEX_AUDIT_SOURCE_FILE` unset for manuscript assignment runs.
+- [Custom Flexiplex](vendor/flexiplex-audit/README.md): source, patch, build commands and a pre-correction barcode example.
+- [FLAMES configurations](docs/pinned_flames_configs.md): exact LR-Split-seq and LongBench alignment code.
+- [ScTagger quality generation](source_data/figure_02/quality_generation_contract.json): models and effective sampling seeds. The [recorded-seed adapter](scripts/figure_02/generate_with_recorded_seed.py) applies those seeds when model files move.

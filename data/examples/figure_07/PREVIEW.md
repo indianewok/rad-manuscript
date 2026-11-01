@@ -1,10 +1,10 @@
 # Figure 7 source-data examples
 
-The tables below show selected RAD assignments, molecule counts and differential-expression results from LongBench single nuclei. [Extraction details](extraction.json) record source paths, hashes and selected rows. The [Figure 7 guide](../../../docs/figure_07.md) gives the complete analysis.
+Follow **read → cell barcode and UMI → gene molecule count → normalized count → differential-expression result** in these LongBench single-nucleus examples. The [Figure 7 guide](../../../docs/figure_07.md) gives the software, flags, H146/H526 cohorts and tests; [source records](extraction.json) identify the example rows.
 
 ## Emitted RAD assignments
 
-These are the first ten rows of the RAD assignment checkpoint. The complete ledger contains 57,885,606 assignments across all 12,423 selected cells. The extractor normalizes orientation and `-CT` suffixes to retain original read IDs alongside barcodes, UMIs and correction flags. [Extraction details](assignment_extraction.json) record source hashes and row selection.
+These are the first ten RAD assignment rows. The complete table contains 57,885,606 assignments across 12,423 selected nuclei. Each row links an original read to a cell barcode and UMI; `corrected_flag=1` marks barcode correction. Orientation and `-CT` suffixes are normalized to the original read ID. The [extraction record](assignment_extraction.json) identifies the complete input.
 
 | source_data_row | original_read_id | cell_barcode | UMI | raw_barcode | corrected_flag |
 |---|---|---|---|---|---|
@@ -21,7 +21,7 @@ These are the first ten rows of the RAD assignment checkpoint. The complete ledg
 
 ## Molecule counts and normalization
 
-Matrix indices are one-based. Normalization uses each nucleus's complete molecule count from the source matrix.
+Join each assignment to its original read's gene, then count distinct cell–gene–UMI combinations. Matrix indices are one-based. Normalize with the nucleus's complete library: `CP10K = 10,000 × gene molecules / library molecules`, followed by `log2(1 + CP10K)`. The first example gives `10,000 × 2 / 2,400 = 8.333333333333334`.
 
 | source_entry | gene_symbol | cell_barcode | molecule_count | full_cell_library_molecules | CP10K | log2_1_plus_CP10K |
 |---|---|---|---|---|---|---|
@@ -36,7 +36,7 @@ Matrix indices are one-based. Normalization uses each nucleus's complete molecul
 
 ## Differential-expression results
 
-Benjamini–Hochberg adjusted P values use all 8,135 genes in each workflow and the reference. Positive fold change indicates higher expression in H146.
+Raw P values come from two-sided Wilcoxon rank-sum tests comparing H146 and H526 nuclei. Benjamini–Hochberg adjustment uses the same 8,135-gene family in each workflow and Illumina. Positive fold change indicates higher expression in H146; negative fold change indicates higher expression in H526.
 
 | gene_symbol | tool | tool_log2FC | tool_p_value | tool_BH_FDR_common | Illumina_log2FC | Illumina_BH_FDR_common |
 |---|---|---|---|---|---|---|

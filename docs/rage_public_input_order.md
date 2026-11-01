@@ -6,16 +6,6 @@ The ENA submission for **ERR3268991** contains the reads used in the manuscript'
 
 Download the public FASTQ and restore the selected-order checkpoint and its `input_id_validation.json` receipt under `checkpoints/figure_03/rage_matched/counts/`.
 
-| File or fingerprint | Expected identity |
-|---|---|
-| ENA `ramos_nanopore.fastq.gz` | 16,675,472,857 bytes; MD5 `93bdd7b64877d96f38720aea13c92bdc` |
-| Public compressed FASTQ | SHA-256 `61e883cac86d9d49d89bc7650db0674de89cd2938b253773c1b30bb973409023` |
-| `input_original_ids.txt.gz` | 432,145,969 bytes; SHA-256 `e4831a95828b65f21253c9f1058f1af9ef2fa7abe286321d88aaffba12ab2952` |
-| Ordered canonical records | SHA-256 `a5f866d6180b46e0acbd3aa2526364060c152380714b00ec0ed74b8c1e8c24af` |
-| Exact decompressed FASTQ | SHA-256 `2f4f7e469795b23c15209547909ec791e937058497328ba69d0855274eb380f7` |
-
-The [identity script](../scripts/revision/figure_3_fastq_identity.py) defines the canonical and decompressed FASTQ fingerprints.
-
 ## Download the public FASTQ
 
 Run from the repository root:
@@ -30,7 +20,7 @@ The downloader retrieves [ENA's submitted file](https://ftp.sra.ebi.ac.uk/vol1/r
 
 ## Restore the benchmark read order
 
-The reconstruction requires Python 3, GNU `sort` and `pigz`. Allow 24 GB RAM and at least 100 GB of temporary disk space. The [cluster template](../scripts/revision/rage_public_reorder.sbatch) requests six CPUs for verification. The complete verification took about 11 minutes with Python 3.6.8, GNU sort 8.30 and pigz 2.4; writing and compressing the output requires additional time.
+The reconstruction requires Python 3, GNU `sort` and `pigz`. Allow 24 GB RAM and at least 100 GB of temporary disk space. The [cluster template](../scripts/revision/rage_public_reorder.sbatch) requests six CPUs for verification. The recorded environment used Python 3.6.8, GNU sort 8.30 and pigz 2.4.
 
 ```bash
 python3 scripts/figure_03/reorder_public_fastq.py \
@@ -63,3 +53,18 @@ python3 scripts/revision/rage_public_reorder_fixtures.py
 ```
 
 The complete dataset is checked against the fingerprints above before demultiplexing.
+
+<details>
+<summary>Input fingerprints and record encoding</summary>
+
+| File or fingerprint | Expected identity |
+|---|---|
+| ENA `ramos_nanopore.fastq.gz` | 16,675,472,857 bytes; MD5 `93bdd7b64877d96f38720aea13c92bdc` |
+| Public compressed FASTQ | SHA-256 `61e883cac86d9d49d89bc7650db0674de89cd2938b253773c1b30bb973409023` |
+| `input_original_ids.txt.gz` | 432,145,969 bytes; SHA-256 `e4831a95828b65f21253c9f1058f1af9ef2fa7abe286321d88aaffba12ab2952` |
+| Ordered canonical records | SHA-256 `a5f866d6180b46e0acbd3aa2526364060c152380714b00ec0ed74b8c1e8c24af` |
+| Exact decompressed FASTQ | SHA-256 `2f4f7e469795b23c15209547909ec791e937058497328ba69d0855274eb380f7` |
+
+The [identity script](../scripts/revision/figure_3_fastq_identity.py) defines the canonical and decompressed FASTQ fingerprints.
+
+</details>

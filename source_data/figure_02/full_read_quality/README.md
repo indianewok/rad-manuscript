@@ -2,9 +2,23 @@
 
 The [complete-dataset table](full_quality_with_blaze_f1.tsv) combines mean
 barcode quality with BLAZE discovery F1 for each selected shift. The scan covers
-all 4,993,805 reads in the retained Nanopore2023 FASTQ: 879,860 contain a correct
+all 4,993,805 reads in the Nanopore2023 FASTQ: 879,860 contain a correct
 barcode window, 4,096,300 contain an incorrect window, and 17,645 have no located
 barcode. Unlocated reads are excluded from both quality means.
+
+## Software and input settings
+
+The quality scores were generated with Badread 0.4.1, the pinned Nanopore2023
+model and seed `20260731`. The scan uses edlib 1.3.9 and the [barcode locator](../../../scripts/figure_02/barcode_locator.py). It searches both orientations for adapter `CTACACGACGCTCTTCCGATCT`,
+using a maximum adapter edit distance of 7 and boundary slop of 8. Each barcode
+window contains 16 bases. The known source barcode in the read header resolves
+its location.
+
+BLAZE 2.6.0a0 discovery used `--expect-cells 5000`, `--10x-kit-version 3v3` and
+`--minQ 15`, with empty-droplet output and demultiplexing disabled. F1 is calculated from the complete-dataset discovery results. The
+[Figure 2 guide](../../../docs/figure_02.md) gives the build hashes and commands.
+
+## Quality means and BLAZE F1
 
 | Quality shift | Correct barcode mean Q | Incorrect barcode mean Q | Q difference | BLAZE F1 |
 |---|---:|---:|---:|---:|
@@ -20,20 +34,6 @@ barcode. Unlocated reads are excluded from both quality means.
 | −5 | 27.69 | 14.63 | 13.06 | 0.9984 |
 | −4 | 28.65 | 15.51 | 13.14 | 0.9980 |
 | Unshifted | 33.61 | 19.78 | 13.83 | 0.9985 |
-
-## Input and software
-
-The quality scores were generated with Badread 0.4.1, the pinned Nanopore2023
-model and seed `20260731`. The scan uses edlib 1.3.9 and the original barcode
-locator. It searches both orientations for adapter `CTACACGACGCTCTTCCGATCT`,
-using a maximum adapter edit distance of 7 and boundary slop of 8. Each barcode
-window contains 16 bases. The known source barcode in the read header resolves
-its location.
-
-BLAZE 2.6.0a0 discovery used `--expect-cells 5000`, `--10x-kit-version 3v3` and
-`--minQ 15`, with empty-droplet output and demultiplexing disabled. F1 values are
-calculated from the retained complete-dataset discovery results. The
-[Figure 2 guide](../../../docs/figure_02.md) gives the build hashes and commands.
 
 ## Calculation
 
@@ -57,7 +57,7 @@ records the integer sums and denominators. The
 [joined results](full_quality_with_blaze_f1.tsv) add BLAZE TP, FP, FN, precision,
 recall and `F1 = 2 × TP / (2 × TP + FP + FN)`.
 
-The paired distribution panel uses the retained 50,000-read sample. Its edit
+The paired distribution panel uses the 50,000-read sample. Its edit
 distances and all 12 quality conditions are checked against the complete scan.
 
 ## Reproduce the analysis
@@ -75,7 +75,7 @@ python scripts/figure_02/summarize_full_barcode_quality.py \
 
 The [scanner](../../../scripts/figure_02/summarize_full_barcode_quality.py)
 streams the FASTQ once. The [locator](../../../scripts/figure_02/barcode_locator.py)
-records its original source and function hashes. The [run record](run.json)
+defines the adapter search and barcode-window extraction. The [run record](run.json)
 contains input identities, versions, counts and sample checks. The
 [Dartmouth submission script](../../../scripts/figure_02/summarize_full_barcode_quality.sbatch)
 requests eight CPUs.
@@ -83,7 +83,7 @@ requests eight CPUs.
 The [validator](../../../scripts/figure_02/validate_full_barcode_quality.py)
 recalculates group means from integer histograms, compares complete quality
 histograms and read counts with the
-[original generation summary](source_generation_summary.tsv), and joins the
+[generation summary](source_generation_summary.tsv), and joins the
 BLAZE discovery results:
 
 ```bash

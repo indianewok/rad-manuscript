@@ -5,6 +5,25 @@ and incorrect barcode-window counts, mean quality scores and BLAZE discovery
 F1 for each selected condition. The scan covers all 4,993,805 reads. The
 17,645 reads without a located barcode are excluded from both quality groups.
 
+## Software and input settings
+
+The quality scores were generated with Badread 0.4.1, its pinned
+[Nanopore2018 model](../models/nanopore2018.gz) and seed `20260731`. The model
+produces scores from Q1 to Q28. The input FASTQ is the +1 condition,
+with scores from Q2 to Q29. Subtracting one recovers the native scores exactly.
+
+The scan uses edlib 1.3.9 and the [barcode locator](../../../scripts/figure_02/barcode_locator.py). It searches both
+orientations for adapter `CTACACGACGCTCTTCCGATCT`, with a maximum adapter edit
+distance of 7 and boundary slop of 8. Each window contains 16 bases. The known
+source barcode in the read header resolves its location.
+
+BLAZE 2.6.0a0 discovery used `--expect-cells 5000`, `--10x-kit-version 3v3` and
+`--minQ 15`, with empty-droplet output and demultiplexing disabled. F1 values
+come from the complete-dataset discovery results. The
+[Figure 2 guide](../../../docs/figure_02.md) gives the build hashes and commands.
+
+## Quality means and BLAZE F1
+
 | Quality shift | Correct reads | Incorrect reads | Correct mean Q | Incorrect mean Q | Q difference | BLAZE F1 |
 |---|---:|---:|---:|---:|---:|---:|
 | +1 | 879,860 | 4,096,300 | 16.465 | 13.635 | 2.830 | 0.0854 |
@@ -20,26 +39,7 @@ F1 for each selected condition. The scan covers all 4,993,805 reads. The
 | +13 | 879,860 | 4,096,300 | 28.465 | 25.635 | 2.830 | 0.9428 |
 | Unshifted | 879,860 | 4,096,300 | 15.465 | 12.635 | 2.830 | — |
 
-Sequences and error patterns are retained across all shifts, so the group
-counts remain fixed. Quality differences are calculated before rounding. The
-unshifted BLAZE result is unrecorded and its metric fields are blank.
-
-## Input and software
-
-The quality scores were generated with Badread 0.4.1, its pinned
-[Nanopore2018 model](../models/nanopore2018.gz) and seed `20260731`. The model
-produces scores from Q1 to Q28. The retained complete FASTQ is the +1 condition,
-with scores from Q2 to Q29. Subtracting one recovers the native scores exactly.
-
-The scan uses edlib 1.3.9 and the original barcode locator. It searches both
-orientations for adapter `CTACACGACGCTCTTCCGATCT`, with a maximum adapter edit
-distance of 7 and boundary slop of 8. Each window contains 16 bases. The known
-source barcode in the read header resolves its location.
-
-BLAZE 2.6.0a0 discovery used `--expect-cells 5000`, `--10x-kit-version 3v3` and
-`--minQ 15`, with empty-droplet output and demultiplexing disabled. F1 values
-come from the retained complete-dataset discovery results. The
-[Figure 2 guide](../../../docs/figure_02.md) gives the build hashes and commands.
+Sequences and error patterns are identical across shifts, so the group counts remain fixed. Quality differences are calculated before rounding. The unshifted row reports quality statistics with blank BLAZE metric fields.
 
 ## Calculation
 
@@ -89,8 +89,7 @@ checks the [generation counts](source_generation_summary.tsv),
 [complete-stream identities](source_variant_invariants.tsv),
 [native minimum-score histogram](source_native_barcode_min_q.tsv), shifted
 minimum-Q15 pass counts, pooled means and all 600,000 quality values in the
-retained paired sample. Comparisons with original pooled means allow their
-recorded six-decimal rounding. Base-score counts are checked for conservation
+paired sample. Pooled means are compared at their stored six-decimal precision. Base-score counts are checked for conservation
 and agreement with these independent summaries.
 
 ```bash

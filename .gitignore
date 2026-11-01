@@ -86,3 +86,8 @@ validation/*_[0-9]*.err
 *.[pP][zZ][fF][xX]
 *.[pP][zZ][tT]
 *.[pP][rR][iI][sS][mM][tT]
+
+# Display native Prism figures for Figures 1, 2 and 4–7.
+/figures/figure_0[124567]/*.png
+/figures/figure_0[124567]/*.pdf
+/figures/figure_0[124567]/*.svg

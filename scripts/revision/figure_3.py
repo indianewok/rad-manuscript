@@ -239,15 +239,6 @@ def render(a):
                 target.write_text('\n'.join(line.rstrip() for line in target.read_text().splitlines())+'\n')
     off=read(a.output/'offlist_totals.tsv');cor=read(a.output/'correction_per_target.tsv.gz');sums=read(a.output/'correction_totals.tsv')
     off_targets=read(a.output/'offlist_per_target.tsv.gz')
-    fig,ax=plt.subplots(figsize=(11,3.5),constrained_layout=True);ax.set_xlim(0,1);ax.set_ylim(0,1);ax.axis('off')
-    boxes=[(.12,.58,'Raw reads\n+ matched reference'),(.37,.58,'Three supplied lists\nCatalog minus reference'),(.62,.58,'RAD · BLAZE · Flexiplex\nSame input + same list'),(.87,.58,'Strict physical reads\nExclude multiply assigned IDs')]
-    for x,y,label in boxes:ax.text(x,y,label,ha='center',va='center',fontsize=10,bbox=dict(boxstyle='round,pad=.6',facecolor='#E8EEF4',edgecolor='#98AABD'))
-    for x in [.23,.48,.73]:ax.annotate('',xy=(x+.04,.58),xytext=(x,.58),arrowprops=dict(arrowstyle='->',color='#425466',lw=1.5))
-    ax.text(.5,.20,'ScTagger-L: 5,000 targets/list    ·    LongBench SC-ONT: 5,211 targets/list    ·    RAGE-seq: 4,505 targets/list',ha='center',fontsize=10)
-    ax.text(.5,.08,'Retain every supplied target, including zeros. Count valid Flexiplex diagnostic assignments even without an emitted FASTQ record.',ha='center',fontsize=9)
-    ax.set_title('Figure 3A · Supplied-list challenge',fontsize=14)
-    save_plot(fig, 'offlist_workflow')
-    plt.close(fig)
     fig,axes=plt.subplots(1,3,figsize=(11,3.5),constrained_layout=True)
     for ax,d in zip(axes,DATASETS):
         for t in TOOLS:
@@ -256,19 +247,6 @@ def render(a):
         ax.set_xscale('symlog',linthresh=1);ax.set_title(d+' · replicate 1');ax.set_xlabel('Assignments per supplied target');ax.set_ylabel('Fraction of supplied targets');ax.spines[['top','right']].set_visible(False)
     axes[0].legend(frameon=False);fig.suptitle('Figure 3C · assignments per supplied barcode (replicate 1)')
     save_plot(fig, 'offlist_per_target')
-    plt.close(fig)
-    definitions=read(a.output/'measured_category_definitions.tsv')
-    fig,ax=plt.subplots(figsize=(11,3.5),constrained_layout=True);ax.axis('off')
-    import textwrap
-    data=[[r['category'],textwrap.fill(r['observed_source'],34),textwrap.fill(r['selected_target'],34)] for r in definitions]
-    tab=ax.table(cellText=data,colLabels=['Measured class','Observed source barcode','Selected target barcode'],cellLoc='left',loc='center',colWidths=[.21,.40,.39])
-    tab.auto_set_font_size(False);tab.set_fontsize(10);tab.scale(1,3.0)
-    for (row,col),cell in tab.get_celld().items():
-        cell.set_edgecolor('#D4DCE3')
-        if row==0:cell.set_facecolor('#E8EEF4');cell.set_text_props(weight='bold')
-    ax.set_title('Figure 3D · Correction categories',pad=12,fontsize=14)
-    fig.text(.5,.015,'Each category requires a changed barcode. A read–target pair can belong to more than one category.',ha='center',fontsize=9)
-    save_plot(fig, 'correction_categories')
     plt.close(fig)
     fig,axes=plt.subplots(1,3,figsize=(11,3.5),constrained_layout=True)
     for ax,d in zip(axes,DATASETS):

@@ -1,6 +1,6 @@
 # LR-Split-seq assignment examples
 
-These examples follow the first two published physical cells through RAD and component Flexiplex/poly-T assignments. Each tool contributes eight records. [Extraction details](extraction.json) give the source hashes and original row numbers.
+These examples follow the first two published physical cells through RAD and FLAMESv2 component assignments with poly-T. Each tool contributes eight records. [Source identities](extraction.json) identify the input records.
 
 ## Native component records
 
@@ -10,18 +10,18 @@ These examples follow the first two published physical cells through RAD and com
 | SRR13948564.1893980 | AAGAGATC | TCTTCACA | GGTGGAGC | GGTCATAGTA |
 | SRR13948564.2011980 | AAGAGATC | TCTTCACA | GGTGGAGC | TGGTACCTCG |
 
-The normalization script writes `BC3_BC2_BC1` and reverse-complements `UB`. RT primer variants then map to the T primer of the same physical well; exact read IDs and UMI strings are counted within that cell. The [full selected table](../../../../source_data/figure_05/splitseq_reads_umis_568.tsv) contains the complete 568-cell counts.
+The normalization script writes `BC3_BC2_BC1` and reverse-complements `UB`. RT primer variants then map to the T primer of the same physical well; exact read IDs and UMI strings are counted within that cell. The [per-cell example table](../../../../source_data/figure_05/splitseq_reads_umis_568.tsv) contains the 568-cell counts for this component configuration. Panel H uses the [ED2 per-cell table](../../../../source_data/figure_05/splitseq_umi_panel_ED2_568.tsv).
 
 ## Physical-cell identities
 
-| Original Prism row | Published ID | Canonical RT_BC2_BC3 | Sample |
+| Row | Published ID | Canonical RT_BC2_BC3 | Sample |
 |---|---|---|---|
 | 1 | CAAGGAGCATAGCGAC_22 | TACGGTTA_ATAGCGAC_CAAGGAGC | MB_nuclei |
 | 2 | AAGAGATCTCTTCACA_39 | GGTGGAGC_TCTTCACA_AAGAGATC | MT_nuclei |
 
 ## UMI inclusion
 
-| Original RAD read | Saved normalized barcode | Canonical physical cell | Exact UMI | Bases |
+| RAD read | Normalized barcode | Physical-cell barcode | Exact UMI | Bases |
 |---|---|---|---|---|
 | SRR13948564.2239534 | TACGGTTA_ATAGCGAC_CAAGGAGC | TACGGTTA_ATAGCGAC_CAAGGAGC | GGATTAGAA | 9 |
 
