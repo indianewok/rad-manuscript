@@ -7,7 +7,7 @@ from pathlib import Path
 import tempfile
 
 TOOLS = ('RAD', 'BLAZE', 'Flexiplex')
-STATES = ('native_correct', 'corrected_correct', 'corrected_incorrect', 'native_incorrect', 'unassigned')
+STATES = ('native_correct', 'corrected_correct', 'corrected_incorrect', 'native_incorrect', 'multiple_outputs_excluded', 'unassigned')
 COLORS = {'RAD':'#A3392C', 'BLAZE':'#336B87', 'Flexiplex':'#568A55',
           'Flexiplex_f0':'#94A66F', 'Flexiplex_f8':'#568A55'}
 NREADS = 4993805
@@ -27,8 +27,8 @@ def render(source_dir, output_dir):
         raise ValueError('Expected the complete 144-row discovery grid')
     for tool in TOOLS:
         group = [row for row in states if row['tool'] == tool]
-        if len(group) != 5 or {row['state'] for row in group} != set(STATES):
-            raise ValueError('Expected five assignment states for '+tool)
+        if len(group) != len(STATES) or {row['state'] for row in group} != set(STATES):
+            raise ValueError('Expected six assignment states for '+tool)
         if sum(int(row['reads']) for row in group) != NREADS:
             raise ValueError('Assignment states do not conserve all input reads')
         for row in group:
@@ -74,7 +74,7 @@ def render(source_dir, output_dir):
     save(fig, 'quality_discovery_sweeps')
 
     fig, axes = plt.subplots(1, 2, figsize=(9,4), constrained_layout=True)
-    state_colors = ['#4A6F91','#74A889','#C78350','#B64A49','#DDDDDD']
+    state_colors = ['#4A6F91','#74A889','#C78350','#B64A49','#A7A7A7','#DDDDDD']
     bottom = np.zeros(3)
     for state, color in zip(STATES, state_colors):
         values = np.array([float(next(row['fraction'] for row in states if row['tool'] == tool and row['state'] == state)) for tool in TOOLS])

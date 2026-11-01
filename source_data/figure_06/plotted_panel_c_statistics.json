@@ -1,0 +1,283 @@
+{
+  "source_prism_sha256": "d16679c40cb377a3f882faeb6b1e83695f92ff2464694544811b988361dd004e",
+  "analysis_uid": "0D003962-8F17-4702-8B53-5D0C6AE0020D",
+  "analysis_title": "RM one-way ANOVA of Data 99",
+  "parameters": {
+    "experimentalDesign": "REPEATED_MEASURES_ANOVA",
+    "calc": {
+      "modelComparisonAIC": false
+    },
+    "repeatedMeasures": {
+      "method": "OPTIONAL",
+      "assumeSphericity": false,
+      "removeNonPositiveRandomEffects": true,
+      "useInitialValuesFromGLM": true
+    },
+    "postTests": {
+      "type": "PAIRWISE_TESTS",
+      "pairwiseTests": {
+        "pairwiseDesign": {
+          "type": "CONTROL_VS_ALL",
+          "controlID": {
+            "col": {
+              "idx": 0,
+              "title": "RAD",
+              "uid": "B0BECAAF-2CD8-4D28-8E95-284EBD0B1818"
+            }
+          },
+          "selectedPairIDList": []
+        },
+        "multipleComparisons": {
+          "type": "STATISTICAL",
+          "statistical": {
+            "test": "DUNNET",
+            "report": {
+              "adjustedPValues": true
+            },
+            "options": {
+              "significanceLevel": 0.05
+            }
+          },
+          "fdr": {
+            "test": "BENJAMINI_KRIEGER_YEKUTIELI",
+            "options": {
+              "discoveryLevel": 0.05
+            }
+          },
+          "noCorrection": {
+            "options": {
+              "significanceLevel": 0.05
+            }
+          }
+        },
+        "graph": {
+          "differences": false,
+          "confidenceIntervals": false
+        },
+        "options": {
+          "swapDirection": false
+        }
+      }
+    },
+    "residuals": {
+      "diagnostics": {
+        "normalityTests": false,
+        "heteroscedasticityTests": true
+      },
+      "graphs": {
+        "residualsPlot": false,
+        "homoscedasticityPlot": false,
+        "qqPlot": false,
+        "heatMapPlot": false
+      }
+    },
+    "report": {
+      "descriptiveStatistics": false,
+      "goodnessOfFit": false,
+      "effectSizes": false
+    },
+    "graph": {
+      "ranks": false
+    },
+    "output": {
+      "significantDigitCount": 4,
+      "pValueStyle": {
+        "type": "P_VALUE_STYLE_GP",
+        "decimalDigitCount": 6
+      }
+    }
+  },
+  "results": {
+    "status": "VALID",
+    "anovaTable": {
+      "colFactor": {
+        "ss": 523530.0833333334,
+        "df": 2.0,
+        "ms": 261765.0416666667,
+        "r2": 0.8403363131767666,
+        "ggEpsilon": 0.5234487951217953,
+        "fTest": {
+          "status": "VALID",
+          "f": 36.842154338762256,
+          "dfNumerator": 1.0468975902435906,
+          "dfDenominator": 7.328283131705135,
+          "pValue": {
+            "value": 0.00039418366549261847,
+            "level": 0.05,
+            "isSignificant": true,
+            "state": "P_VALUE_EQUAL"
+          }
+        }
+      },
+      "matchedFactor": {
+        "ss": 10219890.666666668,
+        "df": 7.0,
+        "ms": 1459984.380952381,
+        "r2": 0.9425429391926644,
+        "fTest": {
+          "status": "VALID",
+          "f": 205.48568881755082,
+          "dfNumerator": 7.0,
+          "dfDenominator": 14.0,
+          "pValue": {
+            "value": 5.121857117872665e-13,
+            "level": 0.05,
+            "isSignificant": true,
+            "state": "P_VALUE_EQUAL"
+          }
+        }
+      },
+      "residual": {
+        "ss": 99470.58333333209,
+        "df": 14.0,
+        "ms": 7105.041666666578
+      },
+      "total": {
+        "ss": 10842891.333333334,
+        "df": 23.0
+      }
+    },
+    "matchingTest": {
+      "status": "VALID",
+      "f": 205.48568881755082,
+      "dfNumerator": 7.0,
+      "dfDenominator": 14.0,
+      "pValue": {
+        "value": 5.121857117872665e-13,
+        "level": 0.05,
+        "isSignificant": true,
+        "state": "P_VALUE_EQUAL"
+      }
+    },
+    "multipleComparisons": {
+      "status": "VALID",
+      "method": "Dunnett",
+      "comparisonCount": 2,
+      "significantCount": 2,
+      "tests": {
+        "78d12368-82d8-55cf-aa9f-7283a85293af": {
+          "id": {
+            "col": {
+              "uid": "B0BECAAF-2CD8-4D28-8E95-284EBD0B1818",
+              "title": "RAD",
+              "idx": 0
+            }
+          },
+          "value": {
+            "8f9daeac-a4e5-59c5-b861-596e9446de58": {
+              "id": {
+                "col": {
+                  "uid": "7A7A8C8E-2E57-4E15-80D2-56BE51497A4C",
+                  "title": "Flexiplex",
+                  "idx": 1
+                }
+              },
+              "value": {
+                "status": "VALID",
+                "meansDifference": 271.125,
+                "meansDifferenceSE": 51.469282621495985,
+                "meansDifferenceCI": {
+                  "lower": 129.48416278629153,
+                  "upper": 412.76583721370844,
+                  "level": 95.0
+                },
+                "statistic": 5.267705050288878,
+                "df": 7.0,
+                "pValueAdjusted": {
+                  "value": 0.0021239748956650706,
+                  "level": 0.05,
+                  "isSignificant": true,
+                  "state": "P_VALUE_EQUAL"
+                },
+                "sample1": {
+                  "id": {
+                    "col": {
+                      "uid": "B0BECAAF-2CD8-4D28-8E95-284EBD0B1818",
+                      "title": "RAD",
+                      "idx": 0
+                    }
+                  },
+                  "value": {
+                    "mean": 1154.875,
+                    "n": 8
+                  }
+                },
+                "sample2": {
+                  "id": {
+                    "col": {
+                      "uid": "7A7A8C8E-2E57-4E15-80D2-56BE51497A4C",
+                      "title": "Flexiplex",
+                      "idx": 1
+                    }
+                  },
+                  "value": {
+                    "mean": 883.75,
+                    "n": 8
+                  }
+                }
+              }
+            },
+            "7a166559-2119-5503-b983-ec0101db2be3": {
+              "id": {
+                "col": {
+                  "uid": "78C7C613-447C-4C94-8E6A-7C6019BF9DF1",
+                  "title": "BLAZE",
+                  "idx": 2
+                }
+              },
+              "value": {
+                "status": "VALID",
+                "meansDifference": 343.0,
+                "meansDifferenceSE": 50.97057974949863,
+                "meansDifferenceCI": {
+                  "lower": 202.7315676210363,
+                  "upper": 483.26843237896367,
+                  "level": 95.0
+                },
+                "statistic": 6.7293721532248,
+                "df": 7.0,
+                "pValueAdjusted": {
+                  "value": 0.0004962046338015114,
+                  "level": 0.05,
+                  "isSignificant": true,
+                  "state": "P_VALUE_EQUAL"
+                },
+                "sample1": {
+                  "id": {
+                    "col": {
+                      "uid": "B0BECAAF-2CD8-4D28-8E95-284EBD0B1818",
+                      "title": "RAD",
+                      "idx": 0
+                    }
+                  },
+                  "value": {
+                    "mean": 1154.875,
+                    "n": 8
+                  }
+                },
+                "sample2": {
+                  "id": {
+                    "col": {
+                      "uid": "78C7C613-447C-4C94-8E6A-7C6019BF9DF1",
+                      "title": "BLAZE",
+                      "idx": 2
+                    }
+                  },
+                  "value": {
+                    "mean": 811.875,
+                    "n": 8
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "dataSummary": {
+      "levelCount": 3,
+      "matchedCount": 8,
+      "missingCount": 0
+    }
+  }
+}

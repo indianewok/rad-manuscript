@@ -1,0 +1,7 @@
+commit 24d5ce47e172222c96cd7dd19e94758d32aa5009
+Author:     cmv <102934129+indianewok@users.noreply.github.com>
+AuthorDate: Mon Aug 17 21:32:22 2026 -0400
+Commit:     cmv <102934129+indianewok@users.noreply.github.com>
+CommitDate: Mon Aug 17 21:32:22 2026 -0400
+
+    fix adapter threshold calibration

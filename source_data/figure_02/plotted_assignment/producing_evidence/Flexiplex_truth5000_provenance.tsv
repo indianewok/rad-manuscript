@@ -1,0 +1,20 @@
+run_tag	20260812T160000Z_v1
+date_start	2026-08-12T16:03:59-04:00
+input	external_data/reviewer_comment_data/wl_scan/20260731_sctagger_badread_quality_full/inputs/L/flatQ20.fq.gz
+input_sha256	6f7385468b607cf86c91449b095c2968ee2a5d25ab473901102b87d141543090
+input_expected_reads	4993805
+fixed_whitelist	external_data/reviewer_comment_data/sctagger_L_fixed5000_three_tool_20260812/common/L_truth_5000_barcodes.txt
+fixed_whitelist_sha256	2418b849f88ce6f28cf8c702acab795e4b483f6b2da17953675fce96b405899e
+fixed_whitelist_rows	5000
+binary	external_data/reviewer_comment_data/software_pins_20260810/flexiplex_raw_to_assigned_audit/bin/flexiplex_v1.02.6_raw_to_assigned_audit
+binary_sha256	38dccd37f1747e5105b62eacde572b7e4c5206fb925dc1fdbe8210ffe8b1e8c4
+binary_version	1.02.6
+cpu_affinity	32-47,96-111
+pigz_decompress_threads	4
+flexiplex_threads	28
+pigz_compress_threads	4
+command	pigz -dc -p 4 INPUT.fastq.gz | flexiplex_v1.02.6_raw_to_assigned_audit -d 10x3v3 -k L_truth_5000_barcodes.txt -f 8 -e 2 -p 28 -n flexiplex_L_flatQ20_fixed5000_audit | pigz -p 4 > flexiplex_L_flatQ20_fixed5000_audit.fastq.gz
+audit_sidecar_header	Read\tCellBarcode\tRawCellBarcode\tFlankEditDist\tBarcodeEditDist\tUMI
+source_readme	external_data/reviewer_comment_data/software_pins_20260810/flexiplex_raw_to_assigned_audit/README.md
+source_patch	external_data/reviewer_comment_data/software_pins_20260810/flexiplex_raw_to_assigned_audit/patches/raw_cell_barcode_audit.patch
+date_launch	2026-08-12T16:03:59-04:00

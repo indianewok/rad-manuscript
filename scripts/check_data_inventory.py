@@ -51,8 +51,17 @@ def main():
         registered_ids = [row['dataset_id'] for row in inventory]
         assert len(registered_ids) == len(set(registered_ids)), 'Dataset IDs must be unique'
         benchmark_labels = {row.get('display_dataset', row['canonical_id']) for row in metrics}
-        assert benchmark_labels.issubset(set(registered_ids)), 'Every benchmark input must be registered'
+        registered_labels = set(registered_ids) | {row.get('display_dataset') or row['dataset_id'] for row in inventory}
+        assert benchmark_labels.issubset(registered_labels), 'Every benchmark input must be registered by its displayed identity'
         assert all(row['accessions'] for row in inventory)
+    plotted_path = root / 'source_data/figure_04/plotted_checkpoint/plotted_metrics.tsv'
+    plotted = rows(plotted_path) if plotted_path.exists() else []
+    if plotted:
+        assert len(plotted) == 111
+        assert len({r['canonical_id'] for r in plotted}) == 37
+        assert len({(r['canonical_id'], r['tool']) for r in plotted}) == 111
+        if inventory is not None:
+            assert {r['display_dataset'] for r in plotted}.issubset(registered_labels)
     ids = sorted(benchmark_ids)
     assert len(ids) == 37, 'Figure 4 must retain exactly 37 distinct input identities'
     assert len(metrics) == 111
@@ -80,13 +89,14 @@ def main():
     destination = root / 'manifests/data_files.tsv'
     destination.parent.mkdir(parents=True, exist_ok=True)
     with destination.open('w', newline='') as handle:
-        writer = csv.DictWriter(handle, fieldnames=['file','bytes','sha256','rows','columns','header_present'], delimiter='\t')
+        writer = csv.DictWriter(handle, fieldnames=['file','bytes','sha256','rows','columns','header_present'], delimiter='\t', lineterminator='\n')
         writer.writeheader()
         writer.writerows(files)
     report = {'status': 'passed', 'figure_04_inputs': len(ids), 'tool_rows': len(metrics),
               'all_registered_inputs': len(inventory) if inventory is not None else None,
               'local_dataset_registry': 'checked' if inventory is not None else 'not supplied',
               'source_data_files': len(files),
+              'plotted_metric_values': 3*len(plotted),
               'scope': 'inventory, schema discovery and byte identity; scientific validation is figure-specific'}
     report_path = root / 'validation/data_inventory.json'
     report_path.parent.mkdir(parents=True, exist_ok=True)

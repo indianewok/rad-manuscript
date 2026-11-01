@@ -1,34 +1,24 @@
-# Figure 5 — receptor recovery and LR-Split-seq
+# Figure 5 Receptor recovery and LR-Split-seq
 
-Figure 5 compares recovery of receptor reads from a mixture of Ramos B cells, Jurkat T cells and monocytes, then tests demultiplexing of the three-component LR-Split-seq barcode. The receptor experiment uses RAGE-seq accession **ERR3268991**. The LR-Split-seq comparison pairs long-read **SRR13948564** with short-read **SRR13948565** and follows the same 568 published physical cells through both workflows.
+Figure 5 tests demultiplexing in two read architectures. Panels A–F measure recovery of B-cell and T-cell receptor reads from the RAGE-seq mixture of Ramos B cells, Jurkat T cells and monocytes. Panels G–H compare barcode assignment and per-cell UMI recovery in the three-component LR-Split-seq library.
 
 ![Figure 5](../figures/figure_05/prism/figure_05.png)
 
-The [preserved FLAMES configurations](pinned_flames_configs.md) include the authors' [component layout](https://github.com/indianewok/rad-manuscript/blob/flames-configs-2026-10-30/source_data/figure_05/provenance/flames_paper_snapshot/upstream/ChangqingW_FLAMES_figures/files/config_splitseq.json), [complete-cell layout](https://github.com/indianewok/rad-manuscript/blob/flames-configs-2026-10-30/source_data/figure_05/provenance/flames_paper_snapshot/upstream/ChangqingW_FLAMES_figures/files/config_splitseq_bc.json), full LR-Split-seq target, and both executed ED2 variants. Their original source versions and checksums are retained with the copies.
+## Figure legend
 
-## Software and inputs
+Figure 5. Benchmarking RAD performance on data with complex read structures. A-F. Performance of each tool in demultiplexing and mapping RAGE-seq-derived immune cell receptor reads when applied to a mixed pool of immune cells with distinct receptors. Composition of input cells (A). Comparison of total cells detected by RAD (R, green), Flexiplex (F, light gray), and BLAZE (B, dark gray) (B), number and identity of cell of each type (C), and the number of BCR and TCR reads mapped (D) by each tool. Number of reads with native or corrected barcodes (E) and read counts per barcode (F) mapped to each cell population by each tool. Statistical significance by paired two-tailed t-test (****p<0.0001). G-H. Performance of RAD (green) and FLAMESv2 (gray) in demultiplexing LR-Split-seq data. Number of assigned reads in the LR-Split-seq dataset, requiring all three whitelist-matched barcode components per read (G). Long read and short-read UMI counts per cell were compared for myoblast cells, myoblast nuclei, and myotube nuclei, separately for each tool (H). Dotted lines represent identity (x = y).
 
-| Analysis | Software and settings | Code and command |
-|---|---|---|
-| RAD receptor counts | Intended settings: 10x 3′ layout, offensive correction, generated/whitelist edit distance 2, chunk size 10,000, 32 threads. The successful producing run is still needed. | [Retained execution log](../source_data/figure_05/provenance/RAD_candidate_producer_failure.txt) |
-| BLAZE receptor counts | BLAZE 2.6.0a0; 4,505 expected cells, 10x 3v2, 32 threads, edit distance 2 | [Executed command](../source_data/figure_05/provenance/BLAZE_receptor_command.txt) |
-| Flexiplex receptor counts | Flexiplex 1.02.5; 10x3v2, flank edit distance 8, 56 threads, 3,259 selected barcodes. Barcode discovery used 1.02.6. | [Wrapper](../source_data/figure_05/provenance/Flexiplex_receptor_producer.sh), [execution and input hashes](../source_data/figure_05/provenance/Flexiplex_receptor_execution.md) |
-| Receptor alignment | minimap2 2.26-r1175, `-x map-ont --secondary=no -t 20`; TRUST4 human BCR/TCR reference | Reference SHA-256 `615152a7481d0a68557ab0a84b735d8f25fc1ee9d5076af3b8d31aa7792dc3df` |
-| LR-Split-seq RAD | RAD 1.0.2, commit `b6853a3d3d1818130ac364f7937bd0690ae9e385`; `--joint-bc-mode strict`, defensive correction, generated/whitelist edit distance 2, minimum read length 0, chunk size 5,000, four threads | [Barcode processing and strict component acceptance](https://github.com/indianewok/rad/blob/b6853a3d3d1818130ac364f7937bd0690ae9e385/include/rad/sigstring.hpp#L3173-L3288), [barcode/UMI output](https://github.com/indianewok/rad/blob/b6853a3d3d1818130ac364f7937bd0690ae9e385/include/rad/sigstring.hpp#L4377-L4519), [command](../source_data/figure_05/provenance/splitseq/RAD_time.txt), [layout](../data/figure_05/splitseq_reverse_complemented_whitelist_layout.csv) |
-| Earlier LR-Split-seq read-count comparison | FLAMES 2.7.1, commit `bf2211a8da1e1c7327370ab12479ae70e1d37cd8`, embedded Flexiplex 1.02.6; three separately matched 8-nt barcode components, barcode edit distance 1 and buffer 1, flank edit distance 3, 10-nt UMI template, terminal fixed eight-thymidine segment, `reverse_complement=FALSE`, four threads | [Executed layout and processing call](https://github.com/indianewok/rad-manuscript/blob/90f819fde9bdf7cf72cb965ff9a9c386c9f588a7/source_data/figure_05/provenance/splitseq/component_runner.R#L67-L107), [FLAMES segment definitions](https://github.com/indianewok/rad-manuscript/blob/flames-configs-2026-10-30/source_data/figure_05/provenance/splitseq/find_barcode.R#L87-L143), [component matching](https://github.com/indianewok/rad-manuscript/blob/flames-configs-2026-10-30/source_data/figure_05/provenance/splitseq/flexiplex.cpp#L305-L362), [command](../source_data/figure_05/provenance/splitseq/component_time.txt) |
-| Figure 5G–H component workflow | FLAMES 2.7.1, commit `bf2211a8da1e1c7327370ab12479ae70e1d37cd8`, embedded Flexiplex 1.02.6; per-component barcode edit distance **2**, buffer 1, flank edit distance 3, 10-nt UMI template, terminal eight-thymidine segment, `reverse_complement=FALSE`, four threads | [Executed ED2 wrapper](https://github.com/indianewok/rad-manuscript/blob/flames-configs-2026-10-30/source_data/figure_05/provenance/flames_paper_snapshot/executed/flexiplex_ed2_native/run_native_ed2.R), [run manifest](../source_data/figure_05/provenance/splitseq/component_ED2_run_manifest.txt) |
+## RAGE-seq receptor recovery
 
-The component catalogs contain [96 ligation sequences](../data/figure_05/bc_8nt_v1.csv) and [96 reverse-transcription sequences](../data/figure_05/bc_8nt_v2.csv). The two reverse-transcription primers from each well map to one of 48 physical wells. The long-read input SHA-256 is `62acb6d466c37ba89632081526410bdc3ef73c0c68d778d40e05f03181f2a4f7`.
+The receptor analysis uses the RAGE-seq cell-line mixture **ERR3268991**. Demultiplexer assignments are joined to receptor alignments by original read ID and to cell-type annotations by barcode. The annotated population contains 1,993 Ramos cells, 1,572 Jurkat cells and 20 monocytes; the barcode-discovery reference contains 4,505 cells.
 
-The LR-Split-seq wrapper calls the FLAMES [C++ demultiplexing entrypoint](https://github.com/indianewok/rad-manuscript/blob/flames-configs-2026-10-30/source_data/figure_05/provenance/splitseq/flexiplex.cpp#L955-L981) through its [Rcpp binding](https://github.com/indianewok/rad-manuscript/blob/90f819fde9bdf7cf72cb965ff9a9c386c9f588a7/source_data/figure_05/provenance/splitseq/component_runner.R#L41-L65).
+Reads are aligned to the TRUST4 human BCR/TCR reference with minimap2 2.26-r1175 using `-x map-ont --secondary=no -t 20`. Receptor identity follows the reference sequence of the selected alignment. The reference SHA-256 is `615152a7481d0a68557ab0a84b735d8f25fc1ee9d5076af3b8d31aa7792dc3df`.
 
-## Receptor-read counts
+The archived [per-cell receptor counts](../source_data/figure_05/candidate_receptor_counts.tsv) and [receptor totals](../source_data/figure_05/candidate_receptor_totals.tsv) provide the input for panels B–F. The [Flexiplex join script](../source_data/figure_05/provenance/join_flexiplex_bcrtcr.py) removes ambiguous read assignments, applies the BCR/TCR alignment rule and aggregates counts by barcode. The BLAZE assignment run used version 2.6.0a0, the 10x 3v2 layout, 4,505 expected cells, edit distance two and 32 threads; its [command](../source_data/figure_05/provenance/BLAZE_receptor_command.txt) records the invocation. Flexiplex receptor assignments used version 1.02.5 with the 10x3v2 layout, flank edit distance eight, 56 threads and 3,259 selected barcodes; barcode discovery used version 1.02.6. Its [wrapper](../source_data/figure_05/provenance/Flexiplex_receptor_producer.sh) and [execution record](../source_data/figure_05/provenance/Flexiplex_receptor_execution.md) identify the inputs and settings.
 
-Demultiplexer assignments are joined to receptor alignments by original read ID and to cell annotations by barcode. The [Flexiplex join script](../source_data/figure_05/provenance/join_flexiplex_bcrtcr.py) removes ambiguous read assignments, applies the BCR/TCR alignment rule and aggregates counts by barcode. The cell-identity map contains 1,993 Ramos cells, 1,572 Jurkat cells and 20 monocytes; the discovery reference contains 4,505 cells.
+Each receptor class is divided into native and corrected-only reads. The Flexiplex source column named `corrected` contains native plus corrected reads, so native counts are subtracted once to obtain corrected-only counts. The RAD and BLAZE columns already contain corrected-only counts. For example, Ramos barcode `AAACCTGAGAATCTCC` has 713 native and 1,413 cumulative Flexiplex BCR reads, giving 700 corrected-only reads.
 
-Each receptor class has native and corrected-only counts. In the Flexiplex source table, the column named `corrected` contains native plus corrected reads, so the native count is subtracted to obtain corrected-only reads. The RAD and BLAZE source columns already contain corrected-only counts. For Ramos barcode `AAACCTGAGAATCTCC`, Flexiplex BCR counts are 713 native and 1,413 cumulative, giving 700 corrected-only reads and 1,413 assigned reads.
-
-Run this transformation on the [example input](../data/examples/figure_05/flexiplex_receptor_input.tsv):
+Reproduce this conversion on the supplied example:
 
 ```bash
 mkdir -p results
@@ -38,103 +28,65 @@ python3 scripts/figure_05/exclusive_receptor_counts.py \
   --tool Flexiplex --corrected-column cumulative
 ```
 
-The [expected output](../data/examples/figure_05/flexiplex_receptor_output.tsv) contains nine receptor-class rows. Use `--corrected-column exclusive` for the RAD and BLAZE tables. The complete [per-cell table](../source_data/figure_05/candidate_receptor_counts.tsv) and [totals](../source_data/figure_05/candidate_receptor_totals.tsv) retain the source selection labels. Their assigned-read totals are 7,808,411 for RAD, 5,588,936 for BLAZE and 6,595,231 for Flexiplex. [Example records and extraction details](../data/examples/figure_05/PREVIEW.md) connect individual assignments to these tables.
+The [expected output](../data/examples/figure_05/flexiplex_receptor_output.tsv) contains one row per cell and receptor class. Use `--corrected-column exclusive` for RAD and BLAZE. The [record examples](../data/examples/figure_05/PREVIEW.md) connect the source assignments to the per-cell tables. Panel F uses paired, two-sided t-tests on barcode-matched cell counts, as specified in the figure legend.
 
-## Map LR-Split-seq records to physical cells
+## LR-Split-seq demultiplexing
 
-The [cell list](../data/figure_05/splitseq_cells.tsv) identifies all 568 published cells. Each cell is defined by its round-3 barcode, round-2 barcode and reverse-transcription well. The published ID concatenates round 3 and round 2, followed by `_` and a zero-based row-major well index: A1 = 0, B11 = 22 and D12 = 47. The [primer map](../data/figure_05/rt_primer_well_map.csv) converts both reverse-transcription primer variants from a well to its T-primer sequence.
+The C2C12 LR-Split-seq comparison uses long-read library **SRR13948564**, containing 5,764,421 original reads, and paired short-read library **SRR13948565**. Both demultiplexers receive the complete component catalogs: [96 ligation barcodes](../data/figure_05/bc_8nt_v1.csv) for each ligation round and [96 reverse-transcription barcodes](../data/figure_05/bc_8nt_v2.csv). The two reverse-transcription primers from each well identify one of 48 physical wells. The 568 published cell identities define the cell-level comparison after demultiplexing.
 
-| Source field | Conversion |
+| Workflow | Version and settings | Configuration and execution |
+|---|---|---|
+| RAD | Version 1.0.2, commit `b6853a3d3d1818130ac364f7937bd0690ae9e385`; strict joint-barcode mode, defensive correction, generated and whitelist edit distances two, minimum read length zero, chunk size 5,000, four threads | [Command](../source_data/figure_05/provenance/splitseq/RAD_time.txt), [read layout](../data/figure_05/splitseq_reverse_complemented_whitelist_layout.csv) |
+| FLAMESv2 component workflow | FLAMES 2.7.1, commit `bf2211a8da1e1c7327370ab12479ae70e1d37cd8`, containing Flexiplex 1.02.6; three 8-nt barcode components, per-component edit distance two and buffer one, flank edit distance three, 10-nt UMI, terminal T8 segment, `reverse_complement=FALSE`, four threads | [Executed ED2 wrapper](https://github.com/indianewok/rad-manuscript/blob/flames-configs-2026-10-30/source_data/figure_05/provenance/flames_paper_snapshot/executed/flexiplex_ed2_native/run_native_ed2.R), [run manifest](../source_data/figure_05/provenance/splitseq/component_ED2_run_manifest.txt) |
+
+The long-read input SHA-256 is `62acb6d466c37ba89632081526410bdc3ef73c0c68d778d40e05f03181f2a4f7`. The [preserved configuration archive](pinned_flames_configs.md) contains the FLAMES authors’ [component layout](https://github.com/indianewok/rad-manuscript/blob/flames-configs-2026-10-30/source_data/figure_05/provenance/flames_paper_snapshot/upstream/ChangqingW_FLAMES_figures/files/config_splitseq.json) and the executed ED2 wrapper, together with their source versions. Panels G–H use the ED2 component workflow above.
+
+## Physical-cell and UMI counting
+
+The [published cell map](../source_data/figure_05/provenance/splitseq/published_568_barcode_map.csv) links all 568 cells to the short-read UMI counts and the sample classes `MB_cells`, `MB_nuclei` and `MT_nuclei`. Cell identity combines the round-3 barcode, round-2 barcode and reverse-transcription well. Published IDs concatenate the first two barcodes and append a zero-based row-major well index: A1 is zero, B11 is 22 and D12 is 47. The [primer map](../data/figure_05/rt_primer_well_map.csv) converts both reverse-transcription primer variants from a well to its T-primer sequence.
+
+| Component output | Normalized field |
 |---|---|
-| Component `Read` | Original `read_id` |
-| Component `BC1`, `BC2`, `BC3` | Assignment barcode `BC3_BC2_BC1` |
-| Component `UB` | UMI = reverse complement of `UB` |
-| Component `FlankEditDist` | Retained flank distance |
-| RAD `normalized_barcode`, `umi`, `read_id` | Saved normalized assignments |
-| `prism_row_1based`, `sample` | Original Prism row and published sample annotation |
+| `Read` | Original read ID |
+| `BC1`, `BC2`, `BC3` | Assignment barcode `BC3_BC2_BC1` |
+| `UB` | Reverse-complemented UMI |
+| `FlankEditDist` | Flank edit distance |
 
-Records with a nonempty barcode and UMI contribute to the comparison. The [normalization code](../scripts/figure_05/normalize_component_stats.py#L17-L24) constructs the barcode and UMI fields; the [cell-level aggregation code](../scripts/figure_05/aggregate_splitseq.py#L30-L67) counts distinct original read IDs and exact UMI strings within each physical cell. Thus, summed read counts represent read–cell pairs. UMI inclusion uses the saved nonempty-string rule.
+The [normalizer](../scripts/figure_05/normalize_component_stats.py) performs these conversions. The [aggregation script](../scripts/figure_05/aggregate_splitseq.py) counts distinct original read IDs and distinct exact UMI strings within each physical cell. A record contributes when its barcode and UMI are nonempty; all retained UMI lengths contribute. Summed per-cell read counts therefore represent read–cell pairs. Panel G instead uses original read IDs deduplicated across the full input.
 
-Normalize the [component example records](../data/examples/figure_05/splitseq/component_native_stats.tsv), then aggregate them by cell:
+Normalize and count the supplied records:
 
 ```bash
 python3 scripts/figure_05/normalize_component_stats.py \
   --input data/examples/figure_05/splitseq/component_native_stats.tsv \
   --output results/figure05_component_assignments.tsv
-cmp results/figure05_component_assignments.tsv data/examples/figure_05/splitseq/component_assignments.tsv
-
 python3 scripts/figure_05/aggregate_splitseq.py \
   --assignments results/figure05_component_assignments.tsv \
   --cells data/examples/figure_05/splitseq/cells.tsv \
   --rt-primers data/figure_05/rt_primer_well_map.csv --format component \
-  --output results/figure05_component_cells.tsv --report results/figure05_component_cells.json
+  --output results/figure05_component_cells.tsv \
+  --report results/figure05_component_cells.json
 ```
 
-The [expected component counts](../data/examples/figure_05/splitseq/component_bounded_counts.tsv) and [RAD counts](../data/examples/figure_05/splitseq/rad_bounded_counts.tsv) cover the example records. For RAD, use `--format rad` and its [assignment file](../data/examples/figure_05/splitseq/rad_assignments.tsv). The [record preview](../data/examples/figure_05/splitseq/PREVIEW.md) and [extraction receipt](../data/examples/figure_05/splitseq/extraction.json) preserve the original source rows.
+Use `--format rad` for the [RAD example assignments](../data/examples/figure_05/splitseq/rad_assignments.tsv). The [example counts](../data/examples/figure_05/splitseq/component_bounded_counts.tsv) and [record description](../data/examples/figure_05/splitseq/PREVIEW.md) show the transformation from assignment records to physical-cell counts.
 
-## Figure 5G–H: final ED2 assignments and UMI counts
+## Panels G and H
 
-Figure 5H uses the final RAD ED2 run and the native FLAMES/Flexiplex component workflow with edit distance two for each barcode component. The [568-cell source table](../source_data/figure_05/splitseq_umi_panel_ED2_568.tsv) includes the published short-read UMI count, both tools' read counts and both tools' UMI counts, keyed by the original physical-cell ID.
+Panel G reports the fraction of input reads assigned with three valid barcode components. RAD assigns 2,498,488 distinct original reads, and the FLAMESv2 component workflow assigns 1,346,238, corresponding to 43.34% and 23.35% of the full input.
 
-The X axis uses `published_sr_umi_cts` from the [published cell metadata](../source_data/figure_05/provenance/splitseq/published_568_barcode_map.csv). The Y axis counts distinct exact nonempty long-read UMI strings within each physical cell after the two reverse-transcription primer variants are combined by well. Both read and UMI counts require a nonempty barcode and UMI. All retained UMI lengths contribute. Each tool retains its native read depth.
+Panel H uses `published_sr_umi_cts` on the X axis and the exact long-read UMI count for the same physical cell on the Y axis. Each workflow retains its native read depth. Ordinary least-squares fits use untransformed UMI counts and a free intercept; both display axes are logarithmic. The [568-cell source table](../source_data/figure_05/splitseq_umi_panel_ED2_568.tsv), separate [myoblast-cell](../source_data/figure_05/splitseq_umi_panel_ED2_MB_cells.tsv), [myoblast-nucleus](../source_data/figure_05/splitseq_umi_panel_ED2_MB_nuclei.tsv) and [myotube-nucleus](../source_data/figure_05/splitseq_umi_panel_ED2_MT_nuclei.tsv) tables, and [regression coefficients](../source_data/figure_05/splitseq_umi_panel_ED2_regressions.tsv) supply the panel values.
 
-| Sample | Cells | RAD ED2 UMIs | Flexiplex ED2 + poly-T UMIs |
+| Sample | Physical cells | RAD UMIs | FLAMESv2 component UMIs |
 |---|---:|---:|---:|
 | Myoblast cells | 112 | 695,248 | 449,592 |
 | Myoblast nuclei | 158 | 662,758 | 321,852 |
 | Myotube nuclei | 298 | 533,698 | 281,300 |
 | Total | 568 | 1,891,704 | 1,052,744 |
 
-The three panel tables are supplied separately for [myoblast cells](../source_data/figure_05/splitseq_umi_panel_ED2_MB_cells.tsv), [myoblast nuclei](../source_data/figure_05/splitseq_umi_panel_ED2_MB_nuclei.tsv) and [myotube nuclei](../source_data/figure_05/splitseq_umi_panel_ED2_MT_nuclei.tsv). Their values and graph bindings match the current Figure 5 Prism project. The saved regressions fit `long-read UMIs = slope × short-read UMIs + intercept` to the untransformed counts with a free intercept. Both display axes use logarithmic scales. The [fit table](../source_data/figure_05/splitseq_umi_panel_ED2_regressions.tsv) reproduces all six saved slopes, intercepts and R² values; the [validation record](../source_data/figure_05/provenance/splitseq/umi_panel_ED2_validation.json) identifies the Prism tables, graphs and layout.
-
-Restore the two files listed in the [checkpoint manifest](../source_data/figure_05/provenance/splitseq/umi_panel_ED2_checkpoints.tsv) under `checkpoints/figure_05/`, then run:
+Restore the files in the [checkpoint manifest](../source_data/figure_05/provenance/splitseq/umi_panel_ED2_checkpoints.tsv) under `checkpoints/figure_05/`, then regenerate the complete per-cell table:
 
 ```bash
 python3 scripts/figure_05/replay_splitseq_umi_panel.py --output-dir results/figure05_ED2
 ```
 
-This recounts the complete RAD normalized assignments and final component ED2 native statistics, then checks every cell ID and all 2,272 per-cell read/UMI values against the source table. The [input manifest](../source_data/figure_05/splitseq_umi_panel_ED2_files.tsv) records file sizes and SHA-256 values. The replay uses the Python standard library.
-
-The same ED2 runs give the assignment fractions in Figure 5G:
-
-| Quantity | RAD ED2 | Component Flexiplex ED2 + poly-T |
-|---|---:|---:|
-| Full-input assignment rows | 2,536,299 | 1,353,290 |
-| Distinct assigned original reads | 2,498,488 | 1,346,238 |
-| Fraction of 5,764,421 input reads | 43.34% | 23.35% |
-| Read–cell pairs across 568 cells | 2,078,171 | 1,158,825 |
-| Distinct reads among those cells | 2,063,573 | 1,154,817 |
-| Exact cell–UMI pairs | 1,891,704 | 1,052,744 |
-| Median reads per cell | 1,979.5 | 1,104 |
-| Median UMIs per cell | 1,866 | 1,044.5 |
-
-## Earlier paired read-count comparison
-
-The earlier comparison used component barcode edit distance **one**, with the same RAD ED2 run. Its saved read-count table and paired t-test remain available below. Restore its RAD and component ED1 assignment checkpoints under `checkpoints/figure_05/`, then run:
-
-```bash
-python3 scripts/figure_05/replay_splitseq.py --root .
-```
-
-This recounts the complete RAD and component assignment ledgers and compares every read and UMI count with the [568-cell source table](../source_data/figure_05/splitseq_reads_umis_568.tsv). All 2,272 counts match.
-
-| Quantity | RAD ED2 | Component Flexiplex + poly-T |
-|---|---:|---:|
-| Full-input assignment rows | 2,536,299 | 1,345,255 |
-| Distinct original reads across the full input | 2,498,488 | 1,338,285 |
-| Fraction of 5,764,421 input reads | 43.34% | 23.22% |
-| Read–cell pairs across 568 published cells | 2,078,171 | 1,156,252 |
-| Distinct reads among those cells | 2,063,573 | 1,152,260 |
-| Median reads per cell | 1,979.5 | 1,102.5 |
-| Exact cell–UMI pairs | 1,891,704 | 1,050,292 |
-| Median UMIs per cell | 1,866 | 1,042 |
-
-The [earlier summary table](../source_data/figure_05/splitseq_summary.tsv) retains the component ED1 numerators and denominators. The final ED2 run shown in Figure 5G gives 23.35% from globally distinct assigned reads.
-
-The saved read-count comparison uses a [two-sided paired t-test](../source_data/figure_05/splitseq_saved_paired_t_test.json): 568 cell pairs, t = 14.959474687143327, df = 567 and P = 6.890554214980993e-43.
-
-To extract the examples again, run `python3 scripts/figure_05/extract_splitseq_examples.py`.
-
-## Additional source records
-
-Complete reconstruction of the receptor panels requires the successful RAD producing run and the mapping between the retained receptor tables and the plotted datasets. Figure 5H is reproduced by the final ED2 workflow above, using the published short-read UMI counts.
+The replay checks each cell ID and per-cell read and UMI count against the source table. [Input hashes](../source_data/figure_05/splitseq_umi_panel_ED2_files.tsv) identify the assignment files, and the [Prism validation record](../source_data/figure_05/provenance/splitseq/umi_panel_ED2_validation.json) identifies the data tables, graphs and layout used for panel H.

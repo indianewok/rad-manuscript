@@ -1,0 +1,8 @@
+region	tools	genes
+RAD_only	RAD	126
+BLAZE_only	BLAZE	26
+Flexiplex_only	Flexiplex	24
+RAD_BLAZE_only	RAD,BLAZE	32
+RAD_Flexiplex_only	RAD,Flexiplex	67
+BLAZE_Flexiplex_only	BLAZE,Flexiplex	20
+all_three	RAD,BLAZE,Flexiplex	443

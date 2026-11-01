@@ -1,0 +1,55 @@
+{
+	"@class": "AnalysisParameters",
+	"$id": "analyses/simple_linear_regression/parameters.schema.json",
+	"version": "0.0.0",
+	"analysisClass": "SIMPLE_LINEAR_REGRESSION",
+	"content": {
+		"data": {
+			"handleReplicatesAs": "AVERAGE"
+		},
+		"model": {
+			"constrainLineToFixedPoint": false,
+			"fixedPoint": {
+				"x": 0.0,
+				"y": 0.0
+			}
+		},
+		"calc": {
+			"xCI": {
+				"enabled": true,
+				"y": 0.0
+			},
+			"yCI": {
+				"enabled": true,
+				"x": 0.0
+			},
+			"interpolation": false,
+			"modelComparisonTest": true,
+			"departureFromLinearityTest": false
+		},
+		"graph": {
+			"residualPlot": false,
+			"regressionLineRange": {
+				"minX": {
+					"isAuto": true,
+					"value": 0.0045497
+				},
+				"maxX": {
+					"isAuto": true,
+					"value": 62.82733832
+				}
+			},
+			"regressionLineBands": {
+				"type": "NONE",
+				"level": 95.0
+			}
+		},
+		"output": {
+			"significantDigitCount": 4,
+			"pValueStyle": {
+				"type": "P_VALUE_STYLE_GP",
+				"decimalDigitCount": 6
+			}
+		}
+	}
+}

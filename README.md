@@ -1,45 +1,53 @@
 # RAD manuscript analyses
 
-This repository contains the data, code and figures for the RAD manuscript. The
-analyses compare barcode detection, read assignment and downstream biological
-measurements across long-read sequencing datasets. The RAD software is available
-at [indianewok/rad](https://github.com/indianewok/rad).
+This repository describes how the figures in the RAD manuscript were generated.
+The workflows follow long-read sequencing data through barcode discovery,
+demultiplexing, read assignment and downstream cell-level analysis. The RAD
+software is maintained at [indianewok/rad](https://github.com/indianewok/rad).
 
-Each figure guide describes the experiment, its inputs, software versions and
-analysis steps. Source tables and intermediate files link the plotted values to
-the calculations that produced them.
+Each figure guide brings together its inputs, software versions, commands,
+counting rules and source tables. The [figure gallery](figures/README.md) provides
+the exported figures; the [legends](docs/current_figure_legends.md)
+describe the individual panels.
 
-| Figure | Analysis |
+| Figure | Experiment and workflow |
 |---|---|
-| [1](docs/figure_01.md) | RAD workflow, computational efficiency and Visium HD |
-| [2](docs/figure_02.md) | Barcode discovery and read assignment in the ScTagger simulation |
-| [3](docs/figure_03.md) | Off-list barcode challenges and barcode correction in LongBench |
-| [4](docs/figure_04.md) | Barcode detection across 37 inputs; RAD `4acbe00`, error `0.3`; [tool versions and commands](source_data/figure_04/tool_parameters.tsv) |
-| [5](docs/figure_05.md) | Receptor recovery and LR-Split-seq read and molecule counts |
-| [6](docs/figure_06.md) | Genotype analysis in LongBench single-nucleus data |
-| [7](docs/figure_07.md) | Differential cell-line expression in LongBench single-nucleus data |
+| [1](docs/figure_01.md) | RAD read processing, computational performance and Visium HD spatial barcode recovery |
+| [2](docs/figure_02.md) | Barcode discovery and read assignment using the ScTagger simulation and Badread quality models |
+| [3](docs/figure_03.md) | Assignments to excluded barcode lists and correction outcomes in LongBench |
+| [4](docs/figure_04.md) | Barcode discovery across 37 sequencing inputs and their matched references |
+| [5](docs/figure_05.md) | Immune-receptor recovery and LR-Split-seq read and UMI counts |
+| [6](docs/figure_06.md) | Genotype-based cell-line assignment in LongBench single nuclei |
+| [7](docs/figure_07.md) | Differential cell-line expression in LongBench single nuclei |
 
-[View the figures](figures/README.md).
+## Reproduce an analysis
 
-## Data and analysis
+[SETUP.md](SETUP.md) describes the analysis environment and the three starting
+points: deposited source tables, intermediate checkpoints and raw sequencing
+reads. Follow the corresponding figure guide for the experiment-specific
+commands and parameters.
 
-[SETUP.md](SETUP.md) gives installation instructions and commands for working
-from source tables, saved checkpoints or raw reads. The figure guides specify
-the software versions and parameters used for each experiment.
+| Directory | Contents |
+|---|---|
+| `scripts/figure_XX/` | Counting, scoring and plotting programs |
+| `source_data/figure_XX/` | Tables used in the figures, with software and input records |
+| `data/examples/figure_XX/` | Small source records that illustrate the calculations |
+| `figures/figure_XX/` | Exported figures and plotting outputs |
+| `environments/` | Pinned analysis dependencies |
 
-- [Dataset registry](manifests/datasets.tsv): dataset IDs, families and accessions.
-- [Examples](data/examples/): selected source records with extraction rules and expected outputs.
-- [Source tables](source_data/): complete tables used to calculate the plotted metrics.
+The [dataset registry](manifests/datasets.tsv) identifies the sequencing inputs
+and their accessions. Figure images are provided with their legends and source
+tables. The [export record](source_data/prism_exports.json) identifies the
+source-file checksums and layout IDs. Larger FASTQ, alignment and matrix files
+are restored separately at the paths used by each workflow.
 
-The [diagnostic Flexiplex build](vendor/flexiplex-audit/README.md) records the
-barcode sequence before correction. Its source, patch, build instructions and
-checks are included with the analysis code.
+The [diagnostic Flexiplex source](vendor/flexiplex-audit/README.md) records the
+extracted barcode before correction. The [preserved FLAMES configurations](docs/pinned_flames_configs.md)
+identify the LR-Split-seq and LongBench alignment settings used in Figures 5
+and 6.
 
-## Manuscript text
+## Citation and license
 
-Methods and figure descriptions are grouped by analysis: [Figures 1, 2 and 4](docs/manuscript_figures_124.md),
-[Figure 3](docs/manuscript_figure_03.md), and [Figures 5–7](docs/manuscript_figures_567.md).
-The [figure legends](docs/current_figure_legends.md) describe each panel.
-
-Citation information is in [CITATION.cff](CITATION.cff). Repository code is
-covered by the [MIT license](LICENSE).
+[CITATION.cff](CITATION.cff) gives the manuscript citation. Repository analysis
+code is covered by the [MIT license](LICENSE); copied third-party software
+retains its accompanying license.

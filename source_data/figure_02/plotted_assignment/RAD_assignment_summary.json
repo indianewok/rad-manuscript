@@ -1,0 +1,20 @@
+{
+  "tool": "RAD",
+  "input_reads": 4993805,
+  "emitted_records": 2822457,
+  "distinct_emitted_input_ids": 2813409,
+  "assigned_unambiguous": 2804361,
+  "assignment_states": {
+    "corrected_incorrect": 191519,
+    "corrected_correct": 1944306,
+    "native_correct": 667965,
+    "native_incorrect": 571,
+    "multiple_outputs_excluded": 9048,
+    "unassigned": 2180396
+  },
+  "global_whitelist": "truth5000",
+  "custom_whitelist": "truth5000",
+  "counting_unit": "original input read with exactly one emitted record",
+  "audit_sha256": "44c381cc8eeb4130a7eea73e604940d454b47a4cf0f167c916485c577961b7e0",
+  "truth_sha256": "2418b849f88ce6f28cf8c702acab795e4b483f6b2da17953675fce96b405899e"
+}

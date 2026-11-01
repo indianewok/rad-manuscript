@@ -1,16 +1,19 @@
 tool	state	reads	denominator	fraction	count_unit
-RAD	native_correct	667984	4993805	0.13376253177687156	unique physical read
-RAD	corrected_correct	1846854	4993805	0.3698290181534922	unique physical read
-RAD	corrected_incorrect	179509	4993805	0.03594633751217759	unique physical read
+RAD	native_correct	667965	4993805	0.13375872706283085	unique physical read
+RAD	corrected_correct	1944306	4993805	0.3893435967163315	unique physical read
+RAD	corrected_incorrect	191519	4993805	0.03835131728211254	unique physical read
 RAD	native_incorrect	571	4993805	0.00011434166932829776	unique physical read
-RAD	unassigned	2298887	4993805	0.4603477708881304	unique physical read
+RAD	multiple_outputs_excluded	9048	4993805	0.0018118448758011176	unique physical read
+RAD	unassigned	2180396	4993805	0.4366201723935957	unique physical read
 BLAZE	native_correct	640957	4993805	0.12835042617803458	unique physical read
 BLAZE	corrected_correct	1881358	4993805	0.3767383788513969	unique physical read
 BLAZE	corrected_incorrect	133074	4993805	0.026647816644822936	unique physical read
 BLAZE	native_incorrect	764	4993805	0.00015298955405747722	unique physical read
+BLAZE	multiple_outputs_excluded	0	4993805	0.0	unique physical read
 BLAZE	unassigned	2337652	4993805	0.46811038877168815	unique physical read
 Flexiplex	native_correct	463613	4993805	0.09283762581838899	unique physical read
 Flexiplex	corrected_correct	1398700	4993805	0.28008702782747824	unique physical read
 Flexiplex	corrected_incorrect	281696	4993805	0.05640909086357997	unique physical read
 Flexiplex	native_incorrect	381	4993805	7.629452892133353e-05	unique physical read
-Flexiplex	unassigned	2849415	4993805	0.5705899609616315	unique physical read
+Flexiplex	multiple_outputs_excluded	364	4993805	7.289031109544726e-05	unique physical read
+Flexiplex	unassigned	2849051	4993805	0.570517070650536	unique physical read

@@ -16,9 +16,9 @@ across the two phases, converted from KiB to decimal GB as `KiB × 1024 / 1e9`.
 `timing_summary.tsv` reports the mean and sample standard deviation across the
 three repetitions. Runs used AMD EPYC 7543 hardware with 4, 16 or 64 requested
 threads. SN-ONT denotes single-nucleus ONT; SC-PB denotes single-cell PacBio.
-The RAD parser recorded one fewer SC-PB read than the input reference count.
+Per-run records retain the input and processed-read counts.
 
-`algorithm_crosswalk.tsv` and `pinned_algorithm_audit.md` describe RAD commit
+`algorithm_crosswalk.tsv` and `pinned_algorithm_audit.md` describe the barcode-processing implementation at RAD commit
 `cb699170`. The timing experiments retain their own software versions, including
 RAD `4acbe00`.
 
@@ -35,5 +35,4 @@ match the saved raw and filtered 16-µm barcode sets. Their sources are recorded
 in `hd_grid_reference_sources.json`. Nonpositive counts have empty transformed
 values and are omitted from logarithmic plots.
 
-A complete spatial-count reconstruction also requires the original positions
-file, count-to-bin generation code and selected Seurat count values. The [Figure 1 guide](../../docs/figure_01.md) describes those input requirements.
+The spatial-count workflow joins the positions file, count-to-bin mapping and Seurat count values to the same spatial bins. The [Figure 1 guide](../../docs/figure_01.md) specifies the inputs and processing steps.

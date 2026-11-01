@@ -31,7 +31,7 @@ TOOLS = ('RAD', 'BLAZE', 'Flexiplex')
 COLORS = {'RAD':'#A3392C', 'BLAZE':'#336B87', 'Flexiplex':'#568A55',
           'Flexiplex_f0':'#94A66F', 'Flexiplex_f8':'#568A55'}
 STATES = ('native_correct', 'corrected_correct', 'corrected_incorrect',
-          'native_incorrect', 'unassigned')
+          'native_incorrect', 'multiple_outputs_excluded', 'unassigned')
 NREADS = 4993805
 TIMING = 'scratch_preservation_20260921/files/three_tool_phase_benchmark_20260902_parallel_epyc7543'
 SWEEP = 'LongBench_comps/ScTagger_quality_sweep_20260731'
@@ -42,15 +42,11 @@ REVISION = 'paper_revision_20261022'
 
 
 def assignment_state_counts(raw_counts):
-    """Combine discarded multiple-output reads with other unassigned reads.
-
-    Producer checkpoints call discarded reads ``ambiguous``; the independent
-    read-table audit calls them ``excluded_multiple_outputs``. Neither is a
-    separate plotted state. Their tool-specific duplicate rules are unchanged.
-    """
+    """Normalize producer counts to the explicit six-state input partition."""
     counts = {state: int(raw_counts.get(state, 0)) for state in STATES}
-    counts['unassigned'] += int(raw_counts.get('excluded_multiple_outputs', 0))
-    counts['unassigned'] += int(raw_counts.get('ambiguous', 0))
+    if 'multiple_outputs_excluded' not in raw_counts:
+        counts['multiple_outputs_excluded'] = int(raw_counts.get(
+            'excluded_multiple_outputs', raw_counts.get('ambiguous', 0)))
     return counts
 
 
@@ -315,7 +311,7 @@ class Build:
         source_arrays={t:REVISION+'/evidence/figure2_canonical_rad_flex/'+t+'_selected_per_barcode.csv' for t in ('RAD','Flexiplex')}
         source_arrays['BLAZE']=REVISION+'/prism/blaze2023_assignment_replay/BLAZE_selected_per_barcode.csv'
         source_arrays['RAD']=str(REPO/'source_data/figure_02/assignment_per_target.tsv')
-        current_rad=json.loads((REPO/'source_data/figure_02/assignment_RAD_summary.json').read_text())
+        current_rad=json.loads((REPO/'source_data/figure_02/plotted_assignment/RAD_assignment_summary.json').read_text())
         current_rad_outside=rows(REPO/'source_data/figure_02/assignment_RAD_outside_custom_per_target.tsv')
         truth_path=self.source('sctagger_L_fixed5000_three_tool_20260812/common/L_truth_5000_barcodes.txt','independent_header_derived_truth')
         truth={x.strip() for x in truth_path.read_text().splitlines() if x.strip()}
@@ -323,15 +319,15 @@ class Build:
                    'exact truth target set equality',len(truth),truth_path)
         self.check('sctagger_L_truth_size',len(truth)==5000,5000,len(truth),source_arrays['RAD'])
         arrays=[];states=[];correction=[]
-        expected={'RAD':[current_rad['states'][state] for state in STATES],
-                  'Flexiplex':[463613,1398700,281696,381,2849415],
-                  'BLAZE':[640957,1881358,133074,764,2337652]}
+        expected={'RAD':[current_rad['assignment_states'][state] for state in STATES],
+                  'Flexiplex':[463613,1398700,281696,381,364,2849051],
+                  'BLAZE':[640957,1881358,133074,764,0,2337652]}
         for tool in TOOLS:
             source=rows(self.source(source_arrays[tool]))
             if tool=='RAD':source=[r for r in source if r['tool']=='RAD']
             self.check(tool+'_unique_selected_targets',len({r['barcode'] for r in source})==len(source),
                        len(source),len({r['barcode'] for r in source}),source_arrays[tool])
-            d=current_rad['states'] if tool=='RAD' else canonical[tool]['counts'] if tool!='BLAZE' else blaze
+            d=current_rad['assignment_states'] if tool=='RAD' else canonical[tool]['counts'] if tool!='BLAZE' else blaze
             counts=assignment_state_counts(d)
             self.check(tool+'_assignment_states',list(counts.values())==expected[tool] and sum(counts.values())==NREADS,
                        expected[tool],list(counts.values()),source_arrays[tool])
@@ -367,8 +363,8 @@ class Build:
                          all(sha(self.out/p)==h for p,h in report.get('expected_table_hashes',{}).items()) and
                          all(r['status']=='passed' for r in report.get('tools',{}).values()) and len(report.get('tools',{}))==3)
         self.task('F2-03','passed' if full_resume else 'ready',
-                  'Complete read-table resumption and all 52,076 selected-target category values match; five-state totals/missingness reconcile.' if full_resume else
-                  'All five-state totals, selected-target arrays, missing-target policy and BLAZE extra targets independently reconcile.',
+                  'Complete read-table resumption and all 52,076 selected-target category values match; six-state totals/missingness reconcile.' if full_resume else
+                  'All six-state totals, selected-target arrays, missing-target policy and BLAZE extra targets independently reconcile.',
                   'Current RAD native output was rescored; native Prism recalculation remains separate.' if full_resume else
                   'Current RAD native output was independently rescored; existing complete competing-tool audits remain separate.')
         contract=dict(seeds={'nanopore2018_S':20260727,'nanopore2018_L':20260731,'nanopore2023_L':20260731},

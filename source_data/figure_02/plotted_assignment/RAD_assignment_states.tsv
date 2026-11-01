@@ -1,0 +1,7 @@
+tool	state	reads	input_reads
+RAD	native_correct	667965	4993805
+RAD	corrected_correct	1944306	4993805
+RAD	native_incorrect	571	4993805
+RAD	corrected_incorrect	191519	4993805
+RAD	multiple_outputs_excluded	9048	4993805
+RAD	unassigned	2180396	4993805

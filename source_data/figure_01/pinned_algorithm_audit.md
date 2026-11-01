@@ -1,6 +1,6 @@
-# RAD algorithm at commit cb699170
+# RAD barcode processing at commit cb699170
 
-This record links the correction and discovery mechanisms to RAD commit `cb6991705ac0e9c93a108fd439aa0357834cc701`. Source paths and line numbers refer to that commit. Benchmark-specific versions are listed in the [figure guides](../../README.md).
+The correction and discovery mechanisms below refer to RAD commit `cb6991705ac0e9c93a108fd439aa0357834cc701`. Source paths and line numbers refer to that commit. Benchmark-specific versions are listed in the [figure guides](../../README.md).
 
 ## Exact barcode identity and assignment output
 

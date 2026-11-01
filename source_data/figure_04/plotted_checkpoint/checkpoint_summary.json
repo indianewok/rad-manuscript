@@ -1,0 +1,98 @@
+{
+  "inputs": 37,
+  "tool_observations": 111,
+  "metric_values": 333,
+  "modality_metric_values_verified": 333,
+  "modality_graphs_verified": 15,
+  "maximum_P_R_F1_rounding_error": 2e-09,
+  "selected_flexiplex_flanks": {
+    "0": 22,
+    "8": 15
+  },
+  "medians": {
+    "f1": {
+      "RAD": 0.951803342,
+      "BLAZE": 0.906191796,
+      "Flexiplex": 0.876712329
+    },
+    "precision": {
+      "RAD": 0.939737546,
+      "BLAZE": 0.961502697,
+      "Flexiplex": 0.991907203
+    },
+    "recall": {
+      "RAD": 0.959800087,
+      "BLAZE": 0.8904,
+      "Flexiplex": 0.787946213
+    }
+  },
+  "producer_metric_differences": 19,
+  "native_statistics_checks": [
+    {
+      "metric": "f1",
+      "check": "Friedman statistic",
+      "saved": 25.68,
+      "recalculated": 25.675675675675677
+    },
+    {
+      "metric": "f1",
+      "check": "Dunn ranks and Z",
+      "comparator": "BLAZE",
+      "status": "matches saved Prism rounding"
+    },
+    {
+      "metric": "f1",
+      "check": "Dunn ranks and Z",
+      "comparator": "Flexiplex",
+      "status": "matches saved Prism rounding"
+    },
+    {
+      "metric": "precision",
+      "check": "Friedman statistic",
+      "saved": 11.54,
+      "recalculated": 11.535211267605634
+    },
+    {
+      "metric": "precision",
+      "check": "Dunn ranks and Z",
+      "comparator": "BLAZE",
+      "status": "matches saved Prism rounding"
+    },
+    {
+      "metric": "precision",
+      "check": "Dunn ranks and Z",
+      "comparator": "Flexiplex",
+      "status": "matches saved Prism rounding"
+    },
+    {
+      "metric": "recall",
+      "check": "Friedman statistic",
+      "saved": 24.71,
+      "recalculated": 24.713286713286713
+    },
+    {
+      "metric": "recall",
+      "check": "Dunn ranks and Z",
+      "comparator": "BLAZE",
+      "status": "matches saved Prism rounding"
+    },
+    {
+      "metric": "recall",
+      "check": "Dunn ranks and Z",
+      "comparator": "Flexiplex",
+      "status": "matches saved Prism rounding"
+    }
+  ],
+  "statistics": {
+    "matched_inputs": 37,
+    "test": "Friedman with two Dunn comparisons per metric against RAD",
+    "adjustment": "min(1,2*P_raw)",
+    "alpha": 0.05,
+    "implementation_sha256": "ab70632f941d7d6bfd97b12799d693ed257e976fc2999122683afa1362155ae4"
+  },
+  "highest_F1_counts": {
+    "RAD": 25,
+    "BLAZE": 6,
+    "Flexiplex": 6
+  }
+}

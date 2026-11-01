@@ -1,33 +1,31 @@
 # Figure 3 source data
 
-The [Figure 3 guide](../../docs/figure_03.md) follows the off-list challenges and
-LongBench barcode-correction analysis from read assignments to these tables.
-RAGE-seq was rerun in all nine tool–replicate combinations. Retained ScTagger and
-LongBench assignments were recounted across their 18 combinations.
+Figure 3 measures assignments to excluded barcode lists and classifies barcode changes in LongBench. The [Figure 3 workflow](../../docs/figure_03.md) defines the input lists, counting units, correction classes, and percentage denominators.
 
-| File | Row key and measurement |
+## Off-list assignments in panels B and C
+
+| File | Content |
 |---|---|
-| [offlist_totals.tsv](offlist_totals.tsv) | Dataset, tool and replicate: strict physical-read total, input denominator, assignment fraction, target count and mean assignments per target. Panel B uses `100 × assignment_fraction`. |
-| [offlist_per_target.tsv.gz](offlist_per_target.tsv.gz) | Dataset, tool, replicate and supplied barcode: 132,444 rows, including zero-count targets. Panel C uses replicate 1. |
-| [offlist_read_fates.tsv](offlist_read_fates.tsv) | Dataset, tool and replicate: assigned, ambiguous-excluded and unassigned read counts, which sum to the input total. |
-| [replicate_whitelists.tsv](replicate_whitelists.tsv) | Dataset, replicate, rank, barcode and list hash. Each replicate supplies the same list to all three tools. |
-| [measured_category_definitions.tsv](measured_category_definitions.tsv) | Panel D source-to-target barcode categories. |
-| [correction_totals.tsv](correction_totals.tsv) | Dataset, tool and category: unique original-read–target pairs for panel E. `O` denotes all assigned pairs. |
-| [correction_per_target.tsv.gz](correction_per_target.tsv.gz) | Dataset, tool, target and category: 340,317 rows for panels F/G. Unselected targets are marked; percentages are null when `O = 0`. |
-| [panel_data_manifest.tsv](panel_data_manifest.tsv) | Panel-to-table mapping, row keys, units, metrics and table hashes. |
+| `plotted_checkpoint/plotted_offlist_totals.tsv` | Twenty-seven plotted totals: three datasets × three tools × three target-list draws |
+| `plotted_checkpoint/plotted_offlist_per_target.tsv.gz` | The 44,148 target-count observations selected in panel C, identified by dataset, tool, draw, and Prism row |
+| `plotted_checkpoint/plotted_offlist_provenance.json` | Source Prism hash, layout and graph bindings, native table hashes, count units, and total-to-target checks |
 
-TSV files use UTF-8, one header row and empty fields for null numeric values.
-The [schema](schema.json) defines the columns; [checksums](checksums.json) identify
-the files.
+ScTagger-L and LongBench SC-ONT use strict single-output original-read counts. RAGE-seq uses historical tool-assignment tables. Panel B displays the total counts for all three list draws. Panel C displays per-target observations from the first draw. The totals and target distributions are preserved as separate plotted tables.
 
-Off-list counting retains a physical read only when it has exactly one
-assignment row. The correction analysis deduplicates `(original_id, target)`
-pairs within each category and allows category overlap. Complete retained C5
-tables supply the marginal counts for panels D–G; reconstructing intersections
-between categories requires the source-bearing assignment streams.
-
-Validate the tables from the repository root:
+The deposited checkpoint can be used directly. To refresh it from a local author project:
 
 ```bash
-python3 scripts/revision/figure_3.py validate
+python3 scripts/figure_03/extract_plotted_offlist.py \
+  --prism "external_data/prism/Figure 3.prism" \
+  --output-dir results/figure_03/plotted_checkpoint
 ```
+
+The extractor follows the graph-to-dataset references in the saved manuscript layout. Each target observation retains its original Prism row order.
+
+## LongBench correction in panels E–G
+
+`correction_totals.tsv` contains category totals. `correction_per_target.tsv.gz` contains target-level category counts, assignment denominators, and percentages. `panel_data_manifest.tsv` binds the tables to the panels, and `schema.json` defines the fields and keys.
+
+The chemistry catalog defines valid barcode sequences; the matched Cell Ranger filtered set defines the reference cell population. Corrected off-list assignments change a source outside the catalog to a selected target. Failure Mode 1 changes a catalog-valid source outside the filtered reference to a selected target. Failure Mode 2 changes a reference-supported source to a different reference-supported target selected by the tool.
+
+Counts use unique original-read–target-barcode pairs. Each category percentage is its count divided by all unique assignments to the same target. The [worked examples](../../data/examples/figure_03/) connect source fields, category counts, and denominator calculations.

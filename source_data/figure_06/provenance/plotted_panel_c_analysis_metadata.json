@@ -1,0 +1,39 @@
+{
+  "completed_utc": "2026-08-04T10:02:56.061063+00:00",
+  "donor_order": [
+    "H146",
+    "H1975",
+    "H211",
+    "H2228",
+    "H526",
+    "H69",
+    "HCC827",
+    "SHP77"
+  ],
+  "interpretation": {
+    "different_donor": "both calls are named singlets but donor names differ",
+    "merged_caveat": "merged labels include long-read votes and are not independent",
+    "not_selected": "barcode absent from the tool CellSNP whitelist",
+    "selected_no_vireo_call": "barcode selected but absent from donor_ids.tsv"
+  },
+  "primary_reference": "published Illumina-SN Vireo labels",
+  "secondary_reference": "published majority-vote merged SN named labels",
+  "tools": {
+    "BLAZE": {
+      "query_provenance": "published_ONT_SN_original_bulk_panel",
+      "query_vireo": "checkpoints/figure_06/panel_c_inputs/BLAZE/donor_ids.tsv",
+      "whitelist": "checkpoints/figure_06/panel_c_inputs/BLAZE/cellSNP.samples.tsv"
+    },
+    "Flexiplex": {
+      "query_provenance": "rebuilt_bulk_panel_tool_postdemux",
+      "query_vireo": "checkpoints/figure_06/panel_c_inputs/Flexiplex/donor_ids.tsv",
+      "whitelist": "checkpoints/figure_06/panel_c_inputs/Flexiplex/cellSNP.samples.tsv"
+    },
+    "RAD": {
+      "query_provenance": "rebuilt_bulk_panel_tool_postdemux",
+      "query_vireo": "checkpoints/figure_06/panel_c_inputs/RAD/donor_ids.tsv",
+      "whitelist": "checkpoints/figure_06/panel_c_inputs/RAD/cellSNP.samples.tsv"
+    }
+  },
+  "input_path_convention": "Repository-relative checkpoint restore destinations. Input contents, byte sizes and SHA-256 values are unchanged; roles are defined by plotted_panel_c_input_manifest.tsv."
+}

@@ -1,0 +1,163 @@
+{
+	"@class": "AnalysisResults",
+	"$id": "analyses/simple_linear_regression/results.schema.json",
+	"version": "0.0.0",
+	"content": {
+		"status": {
+			"error": "VALID",
+			"warning": []
+		},
+		"modelComparisonTests": {
+			"slopeTest": {
+				"pooledSlope": 1.8381543495783272,
+				"f": 3799.16983869525,
+				"dfNumerator": 1.0,
+				"dfDenominator": 1530.0,
+				"pValue": {
+					"value": 0.0,
+					"level": 0.05,
+					"isSignificant": true,
+					"state": "P_VALUE_EQUAL"
+				}
+			}
+		},
+		"models": {
+			"bc670488-f89f-5d97-8a7d-30e22dd3e0d9": {
+				"id": {
+					"col": {
+						"uid": "58E20D6C-5E32-483C-9129-AA8504EF9A7E",
+						"title": "Flexiplex -log10(BHFDR)_H526_high",
+						"idx": 0
+					}
+				},
+				"value": {
+					"model": {
+						"status": "COMPLETED",
+						"equation": "Y = 1.184*X - 0.07903",
+						"parameters": {
+							"Slope": {
+								"estimate": 1.183517901554171,
+								"se": 0.00829877117352821,
+								"ci": {
+									"lower": 1.1672268343093266,
+									"upper": 1.1998089687990154,
+									"level": 95.0
+								},
+								"significanceTest": {
+									"status": "VALID",
+									"f": 20338.648147728134,
+									"dfNumerator": 1.0,
+									"dfDenominator": 765.0,
+									"pValue": {
+										"value": 0.0,
+										"level": 0.05,
+										"isSignificant": true,
+										"state": "P_VALUE_EQUAL"
+									}
+								}
+							},
+							"Y-intercept": {
+								"estimate": -0.0790349303169009,
+								"se": 0.04163296217866408,
+								"ci": {
+									"lower": -0.16076334194224823,
+									"upper": 0.0026934813084464326,
+									"level": 95.0
+								}
+							},
+							"X-intercept": {
+								"estimate": 0.06677966612343918,
+								"se": "undefined",
+								"ci": {
+									"lower": -0.0022914997727535996,
+									"upper": 0.1349316421602231,
+									"level": 95.0
+								}
+							}
+						},
+						"goodnessOfFit": {
+							"df": 765.0,
+							"lfv": 766.0870505337261,
+							"r2": 0.9637503433224006,
+							"syx": 1.0007102383256794
+						}
+					},
+					"dataSummary": {
+						"xValues": 767,
+						"yReplicates": 1,
+						"pointsAnalyzed": 767,
+						"pointsSkipped": 0
+					}
+				}
+			},
+			"63cbd2d6-3fd6-5abb-8493-fe83812a57df": {
+				"id": {
+					"col": {
+						"uid": "FB693D09-7686-4C91-B163-F18BBFE964F4",
+						"title": "RAD -log10(BHFDR)_H526_high",
+						"idx": 1
+					}
+				},
+				"value": {
+					"model": {
+						"status": "COMPLETED",
+						"equation": "Y = 2.493*X - 0.3884",
+						"parameters": {
+							"Slope": {
+								"estimate": 2.4927907976024835,
+								"se": 0.019553338629630018,
+								"ci": {
+									"lower": 2.4544062286324864,
+									"upper": 2.5311753665724805,
+									"level": 95.0
+								},
+								"significanceTest": {
+									"status": "VALID",
+									"f": 16252.861046608969,
+									"dfNumerator": 1.0,
+									"dfDenominator": 765.0,
+									"pValue": {
+										"value": 0.0,
+										"level": 0.05,
+										"isSignificant": true,
+										"state": "P_VALUE_EQUAL"
+									}
+								}
+							},
+							"Y-intercept": {
+								"estimate": -0.3884117434313712,
+								"se": 0.09809445164974949,
+								"ci": {
+									"lower": -0.5809780011045289,
+									"upper": -0.19584548575821348,
+									"level": 95.0
+								}
+							},
+							"X-intercept": {
+								"estimate": 0.15581401528156227,
+								"se": "undefined",
+								"ci": {
+									"lower": 0.07916294255206661,
+									"upper": 0.231357000406693,
+									"level": 95.0
+								}
+							}
+						},
+						"goodnessOfFit": {
+							"df": 765.0,
+							"lfv": 4252.970644175584,
+							"r2": 0.9550472296192337,
+							"syx": 2.357846210115562
+						}
+					},
+					"dataSummary": {
+						"xValues": 767,
+						"yReplicates": 1,
+						"pointsAnalyzed": 767,
+						"pointsSkipped": 0
+					}
+				}
+			}
+		}
+	}
+}

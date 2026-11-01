@@ -1,0 +1,11 @@
+Number of families,1,,,,,
+Number of comparisons per family,2,,,,,
+Alpha,0.05,,,,,
+,,,,,,
+Dunn's multiple comparisons test,Rank sum diff.,Significant?,Summary,Adjusted P Value,A-?,
+  RAD vs. BLAZE,-24.00,Yes,*,0.0105,B,BLAZE
+  RAD vs. Flexiplex,-25.50,Yes,**,0.0061,C,Flexiplex
+,,,,,,
+Test details,Rank sum 1,Rank sum 2,Rank sum diff.,n1,n2,Z
+  RAD vs. BLAZE,57.50,81.50,-24.00,37,37,2.790
+  RAD vs. Flexiplex,57.50,83.00,-25.50,37,37,2.964

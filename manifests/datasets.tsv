@@ -1,40 +1,40 @@
-dataset_id	family	accessions
-ScTagger-S_flatQ20	ScTagger	10.6084/m9.figshare.19740475.v1
-ScTagger-L_flatQ20	ScTagger	10.6084/m9.figshare.19740475.v1
-P7	Measles	PRJNA1087553
-P8-enriched	Measles	PRJNA1087553
-P8	Measles	PRJNA1087553
-PromethION_iPSC	PromethION iPSC	PRJEB54718/ERR9958135; 10.26188/20335203.v1
-RAGEseq-cell-line	RAGE-seq	PRJEB28878
-RAGEseq-TNBC-LN	RAGE-seq	PRJEB28878
-LongBench-SC-ONT	LongBench	GSE303762; PRJNA1171488; https://mritchielab.github.io/LongBench.io/
-LongBench-SN-ONT	LongBench	GSE303762; PRJNA1171488; https://mritchielab.github.io/LongBench.io/
-LongBench-SC-PB	LongBench	GSE303762; PRJNA1171488; https://mritchielab.github.io/LongBench.io/
-LongBench-SN-PB	LongBench	GSE303762; PRJNA1171488; https://mritchielab.github.io/LongBench.io/
-LeBrigand-MOB	Le Brigand MOB	GSE153859; PRJNA644362
-Isosceles-ovarian-GSE248115	Isosceles ovarian	GSE248115; PRJNA1041796
-Hipp_SN_m1_ONT_Run1	Tilgner hippocampus	NeMO dat-717krsa; https://data.nemoarchive.org/biccn/grant/rf1_tilgner/tilgner/transcriptome/sncell/
-Hipp_SN_m1_ONT_Run2	Tilgner hippocampus	NeMO dat-717krsa; https://data.nemoarchive.org/biccn/grant/rf1_tilgner/tilgner/transcriptome/sncell/
-Hipp_SN_m1_ONT_Run3	Tilgner hippocampus	NeMO dat-717krsa; https://data.nemoarchive.org/biccn/grant/rf1_tilgner/tilgner/transcriptome/sncell/
-ERR15095094_MPNST1_scNaUMIseq_MinION	MPNST	E-MTAB-15190/PRJEB90127; E-MTAB-14222/PRJEB77277
-ERR15095095_MPNST1_scNaUMIseq_PromethION	MPNST	E-MTAB-15190/PRJEB90127; E-MTAB-14222/PRJEB77277
-ERR15095096	MPNST	E-MTAB-15190/PRJEB90127; E-MTAB-14222/PRJEB77277
-ERR15095097	MPNST	E-MTAB-15190/PRJEB90127; E-MTAB-14222/PRJEB77277
-section12	Swedish Visium tonsil	EGAD00001011062; EGAS00001007337; EGAC00001003294; 10.5281/zenodo.7961605
-section16	Swedish Visium tonsil	EGAD00001011062; EGAS00001007337; EGAC00001003294; 10.5281/zenodo.7961605
-section17_1T_1B	Swedish Visium tonsil	EGAD00001011062; EGAS00001007337; EGAC00001003294; 10.5281/zenodo.7961605
-section17_4T_1B	Swedish Visium tonsil	EGAD00001011062; EGAS00001007337; EGAC00001003294; 10.5281/zenodo.7961605
-section22	Swedish Visium tonsil	EGAD00001011062; EGAS00001007337; EGAC00001003294; 10.5281/zenodo.7961605
-section31	Swedish Visium tonsil	EGAD00001011062; EGAS00001007337; EGAC00001003294; 10.5281/zenodo.7961605
-section32_1T_1B	Swedish Visium tonsil	EGAD00001011062; EGAS00001007337; EGAC00001003294; 10.5281/zenodo.7961605
-section32_4T_1B	Swedish Visium tonsil	EGAD00001011062; EGAS00001007337; EGAC00001003294; 10.5281/zenodo.7961605
-Hipp_SN_f1_ONT_Run1	Tilgner hippocampus	NeMO dat-717krsa; https://data.nemoarchive.org/biccn/grant/rf1_tilgner/tilgner/transcriptome/sncell/
-Hipp_SN_f1_ONT_Run2	Tilgner hippocampus	NeMO dat-717krsa; https://data.nemoarchive.org/biccn/grant/rf1_tilgner/tilgner/transcriptome/sncell/
-Hipp_SN_f2_ONT	Tilgner hippocampus	NeMO dat-717krsa; https://data.nemoarchive.org/biccn/grant/rf1_tilgner/tilgner/transcriptome/sncell/
-Hipp_SN_f3_ONT_Run1	Tilgner hippocampus	NeMO dat-717krsa; https://data.nemoarchive.org/biccn/grant/rf1_tilgner/tilgner/transcriptome/sncell/
-Hipp_SN_f3_ONT_Run2	Tilgner hippocampus	NeMO dat-717krsa; https://data.nemoarchive.org/biccn/grant/rf1_tilgner/tilgner/transcriptome/sncell/
-Hipp_SN_m2_ONT	Tilgner hippocampus	NeMO dat-717krsa; https://data.nemoarchive.org/biccn/grant/rf1_tilgner/tilgner/transcriptome/sncell/
-Hipp_SN_m3_ONT	Tilgner hippocampus	NeMO dat-717krsa; https://data.nemoarchive.org/biccn/grant/rf1_tilgner/tilgner/transcriptome/sncell/
-ScMixology2	ScMixology2	GSE154870; PRJEB54718/ERR9958136; 10.26188/20335203.v1
-Visium-HD-3p-mouse-brain	Visium HD	https://epi2me.nanoporetech.com/visium_hd_2025.06/
-LR-Split-seq	LR-Split-seq	GSE168776; PRJNA713904; SRR13948564; SRR13948565
+dataset_id	display_dataset	family	accessions
+ScTagger-S_flatQ20	ScTagger-S_flatQ20	ScTagger	10.6084/m9.figshare.19740475.v1
+ScTagger-L_flatQ20	ScTagger-L_flatQ20	ScTagger	10.6084/m9.figshare.19740475.v1
+P7	Measles-P7	Measles	PRJNA1087553
+P8-enriched	Measles-P8-VDJ-enriched	Measles	PRJNA1087553
+P8	Measles-P8-WTA	Measles	PRJNA1087553
+PromethION_iPSC	PromethION_iPSC	PromethION iPSC	PRJEB54718/ERR9958135; 10.26188/20335203.v1
+RAGEseq-cell-line	RAGEseq-cell-line	RAGE-seq	PRJEB28878
+RAGEseq-TNBC-LN	RAGEseq-TNBC-LN	RAGE-seq	PRJEB28878
+LongBench-SC-ONT	LongBench-SC-ONT	LongBench	GSE303762; PRJNA1171488; https://mritchielab.github.io/LongBench.io/
+LongBench-SN-ONT	LongBench-SN-ONT	LongBench	GSE303762; PRJNA1171488; https://mritchielab.github.io/LongBench.io/
+LongBench-SC-PB	LongBench-SC-PB	LongBench	GSE303762; PRJNA1171488; https://mritchielab.github.io/LongBench.io/
+LongBench-SN-PB	LongBench-SN-PB	LongBench	GSE303762; PRJNA1171488; https://mritchielab.github.io/LongBench.io/
+LeBrigand-MOB	LeBrigand-MOB	Le Brigand MOB	GSE153859; PRJNA644362
+Isosceles-ovarian-GSE248115	Isosceles-ovarian-GSE248115	Isosceles ovarian	GSE248115; PRJNA1041796
+Hipp_SN_m1_ONT_Run1	Tilgner-m1-ONT-Run1	Tilgner hippocampus	NeMO dat-717krsa; https://data.nemoarchive.org/biccn/grant/rf1_tilgner/tilgner/transcriptome/sncell/
+Hipp_SN_m1_ONT_Run2	Tilgner-m1-ONT-Run2	Tilgner hippocampus	NeMO dat-717krsa; https://data.nemoarchive.org/biccn/grant/rf1_tilgner/tilgner/transcriptome/sncell/
+Hipp_SN_m1_ONT_Run3	Tilgner-m1-ONT-Run3	Tilgner hippocampus	NeMO dat-717krsa; https://data.nemoarchive.org/biccn/grant/rf1_tilgner/tilgner/transcriptome/sncell/
+ERR15095094_MPNST1_scNaUMIseq_MinION	ERR15095094_MPNST1_scNaUMIseq_MinION	MPNST	E-MTAB-15190/PRJEB90127; E-MTAB-14222/PRJEB77277
+ERR15095095_MPNST1_scNaUMIseq_PromethION	ERR15095095_MPNST1_scNaUMIseq_PromethION	MPNST	E-MTAB-15190/PRJEB90127; E-MTAB-14222/PRJEB77277
+ERR15095096	ERR15095096	MPNST	E-MTAB-15190/PRJEB90127; E-MTAB-14222/PRJEB77277
+ERR15095097	ERR15095097	MPNST	E-MTAB-15190/PRJEB90127; E-MTAB-14222/PRJEB77277
+section12	section12	Swedish Visium tonsil	EGAD00001011062; EGAS00001007337; EGAC00001003294; 10.5281/zenodo.7961605
+section16	section16	Swedish Visium tonsil	EGAD00001011062; EGAS00001007337; EGAC00001003294; 10.5281/zenodo.7961605
+section17_1T_1B	section17_1T_1B	Swedish Visium tonsil	EGAD00001011062; EGAS00001007337; EGAC00001003294; 10.5281/zenodo.7961605
+section17_4T_1B	section17_4T_1B	Swedish Visium tonsil	EGAD00001011062; EGAS00001007337; EGAC00001003294; 10.5281/zenodo.7961605
+section22	section22	Swedish Visium tonsil	EGAD00001011062; EGAS00001007337; EGAC00001003294; 10.5281/zenodo.7961605
+section31	section31	Swedish Visium tonsil	EGAD00001011062; EGAS00001007337; EGAC00001003294; 10.5281/zenodo.7961605
+section32_1T_1B	section32_1T_1B	Swedish Visium tonsil	EGAD00001011062; EGAS00001007337; EGAC00001003294; 10.5281/zenodo.7961605
+section32_4T_1B	section32_4T_1B	Swedish Visium tonsil	EGAD00001011062; EGAS00001007337; EGAC00001003294; 10.5281/zenodo.7961605
+Hipp_SN_f1_ONT_Run1	Hipp_SN_f1_ONT_Run1	Tilgner hippocampus	NeMO dat-717krsa; https://data.nemoarchive.org/biccn/grant/rf1_tilgner/tilgner/transcriptome/sncell/
+Hipp_SN_f1_ONT_Run2	Hipp_SN_f1_ONT_Run2	Tilgner hippocampus	NeMO dat-717krsa; https://data.nemoarchive.org/biccn/grant/rf1_tilgner/tilgner/transcriptome/sncell/
+Hipp_SN_f2_ONT	Hipp_SN_f2_ONT	Tilgner hippocampus	NeMO dat-717krsa; https://data.nemoarchive.org/biccn/grant/rf1_tilgner/tilgner/transcriptome/sncell/
+Hipp_SN_f3_ONT_Run1	Hipp_SN_f3_ONT_Run1	Tilgner hippocampus	NeMO dat-717krsa; https://data.nemoarchive.org/biccn/grant/rf1_tilgner/tilgner/transcriptome/sncell/
+Hipp_SN_f3_ONT_Run2	Hipp_SN_f3_ONT_Run2	Tilgner hippocampus	NeMO dat-717krsa; https://data.nemoarchive.org/biccn/grant/rf1_tilgner/tilgner/transcriptome/sncell/
+Hipp_SN_m2_ONT	Hipp_SN_m2_ONT	Tilgner hippocampus	NeMO dat-717krsa; https://data.nemoarchive.org/biccn/grant/rf1_tilgner/tilgner/transcriptome/sncell/
+Hipp_SN_m3_ONT	Hipp_SN_m3_ONT	Tilgner hippocampus	NeMO dat-717krsa; https://data.nemoarchive.org/biccn/grant/rf1_tilgner/tilgner/transcriptome/sncell/
+ScMixology2	ScMixology2	ScMixology2	GSE154870; PRJEB54718/ERR9958136; 10.26188/20335203.v1
+Visium-HD-3p-mouse-brain	Visium-HD-3p-mouse-brain	Visium HD	https://epi2me.nanoporetech.com/visium_hd_2025.06/
+LR-Split-seq	LR-Split-seq	LR-Split-seq	GSE168776; PRJNA713904; SRR13948564; SRR13948565

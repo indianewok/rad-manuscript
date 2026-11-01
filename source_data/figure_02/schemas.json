@@ -18,7 +18,7 @@
     "delimiter": "tab",
     "missing_value": "empty field; not zero",
     "hash_scope": "plain file bytes",
-    "RAD_row_scope": "The 5000 supplied custom truth targets; outside-custom targets are in assignment_RAD_outside_custom_per_target.tsv"
+    "RAD_row_scope": "The 5,000 truth targets supplied as both global and custom lists in the plotted run."
   },
   "assignment_states.tsv": {
     "fields": [
@@ -37,18 +37,20 @@
     "delimiter": "tab",
     "missing_value": "empty field; not zero",
     "hash_scope": "plain file bytes",
-    "rows": 15,
-    "rows_per_tool": 5,
+    "rows": 18,
+    "rows_per_tool": 6,
     "state_values": [
       "native_correct",
       "corrected_correct",
       "corrected_incorrect",
       "native_incorrect",
+      "multiple_outputs_excluded",
       "unassigned"
     ],
     "count_unit": "unique physical read",
     "denominator": 4993805,
-    "unassigned_definition": "Reads without a retained assignment, including reads excluded for multiple output assignments."
+    "unassigned_definition": "Input reads with no emitted output; original reads with multiple outputs are counted separately in multiple_outputs_excluded.",
+    "multiple_outputs_excluded_definition": "An original read with more than one emitted record, including repeated records to the same target; all its records are excluded from the four assigned states."
   },
   "correction_only.tsv": {
     "fields": [
