@@ -16,7 +16,6 @@
         "5489FAA8-BC66-497C-B04E-C4A6B1489E8E",
         "9E11669E-3492-4F47-95A1-9BF53A7437E5"
       ],
-      "repository_source": "figures/figure_01/Figure_01.prism",
       "source_prism_version": "11.0.0.93",
       "image_sha256": "8db85e7523231aae0131aae8e473cbc30d283f3f3c052d946992838a195e76b8",
       "width": 3280,
@@ -45,7 +44,6 @@
         "83474767-C51C-4BC1-B6AB-E18E9B70436B",
         "98FF29A5-EA42-4F66-9919-ABA4DD8B11C4"
       ],
-      "repository_source": "figures/figure_02/Figure_02.prism",
       "source_prism_version": "11.0.0.93",
       "image_sha256": "2162c00745e7789a868e0b71ed20201781b1a86a1d59923194a3dbee310b9aff",
       "width": 2371,
@@ -68,7 +66,6 @@
         "52B315BE-0A66-465E-8E10-8E3BAC7A476B",
         "272D234A-2C37-4AA8-83A4-4F2E386BB040"
       ],
-      "repository_source": "figures/figure_03/Figure_03.prism",
       "source_prism_version": "11.0.0.93",
       "image_sha256": "7803cbb421b68a4f077deb8a99be5b9ae06c8b7360d63ce342956d7bbf714e69",
       "width": 2455,
@@ -109,7 +106,6 @@
         "6F77BF85-5FA4-4F34-822A-5E9AC6D6F80B",
         "9A364874-9402-42C0-8C3B-6104B2EDF10A"
       ],
-      "repository_source": "figures/figure_04/Figure_04.prism",
       "source_prism_version": "11.0.0.93",
       "image_sha256": "bd0bfefd30a7f794eb2492385a041bbb1d47d4c94284100a54a0d70b14d94982",
       "width": 2288,
@@ -138,7 +134,6 @@
         "D9787104-4D40-4731-A771-6CEED3B3179B",
         "963F2B95-8690-4864-B04C-2A41B69FA01B"
       ],
-      "repository_source": "figures/figure_05/Figure_05.prism",
       "source_prism_version": "11.0.0.93",
       "image_sha256": "8c04134713a56989c77f43818f83365d87291fb5b4f10bec6bb25bd3c92f8459",
       "width": 2667,
@@ -160,7 +155,6 @@
         "CF6A3C30-0EA7-4A1C-B56E-473EAC3936AF",
         "DC1371DD-F48A-426E-BA20-92CBB1F45FBB"
       ],
-      "repository_source": "figures/figure_06/Figure_06.prism",
       "source_prism_version": "11.0.0.93",
       "image_sha256": "581d78ff8fd9d200f9fd083e8a27cca3d418283fd7244a62f918be4b26968f2a",
       "width": 1384,
@@ -189,7 +183,6 @@
         "BD4FB324-5DDC-43A2-8E39-626CA2212D87",
         "FFD84336-E158-43E2-BB5D-2A60E372DA84"
       ],
-      "repository_source": "figures/figure_07/Figure_07.prism",
       "source_prism_version": "11.0.0.93",
       "image_sha256": "b92da6db4a7b2e08659fbbc8593f9ea79afac5d293ff0953e3c5cb73442ff188",
       "width": 2167,
@@ -210,7 +203,6 @@
         "22835443-ED6D-4A75-BF76-D0D65E3C3F52",
         "683FE7CC-C0F4-47C8-908B-15890ECBC43A"
       ],
-      "repository_source": "figures/figure_02/Figure_02_supplement.prism",
       "source_prism_version": "11.0.0.93",
       "image_sha256": "78a2f4942c62addcb1b684cd7c72edf5ddb5edcc8b8027096528b40f0ea4b0bf",
       "width": 2246,
@@ -240,7 +232,6 @@
         "B46F84DF-3ACD-41AD-997B-59AE1991E026",
         "DEB38BA7-887B-43C6-8D5A-ABCA08829497"
       ],
-      "repository_source": "figures/figure_04/Figure_04_supplement.prism",
       "source_prism_version": "11.0.0.93",
       "image_sha256": "06ece560ab0f8587a1bab6bcff33b4577e9ca8c72061fc62f9e3d37c85bcacc2",
       "width": 2180,

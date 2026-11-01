@@ -8,8 +8,6 @@ Figure 6 measures recovery of cell-line identities after demultiplexing the Long
 
 Figure 6. Improved single nuclei data depth and cell line annotation. A. Uniform Manifold Approximation and Projection (UMAP) plot of LongBench single nuclei dataset depicting short-read unassigned (orange), and short read annotated (other colors) nuclei per cell line. B. Performance of each tool in identifying short read-annotated (left) and short read-un-annotated (center) nuclei, with quantification of each cell line or failure mode (right). C. Total number of nuclei identified by each tool per cell line. Statistical significance was assessed by one-way repeated-measures ANOVA, matched by cell line, with Geisser–Greenhouse correction and Dunnett comparisons against RAD.
 
-[Editable Prism project](../figures/figure_06/Figure_06.prism)
-
 ## Demultiplexing and genome alignment
 
 | Stage | Software and parameters | Command or source |

@@ -7,7 +7,7 @@ software is maintained at [indianewok/rad](https://github.com/indianewok/rad).
 
 Each figure guide brings together its inputs, software versions, commands,
 counting rules and source tables. The [figure gallery](figures/README.md) provides
-the Prism exports and editable projects; the [legends](docs/current_figure_legends.md)
+the exported figures; the [legends](docs/current_figure_legends.md)
 describe the individual panels.
 
 | Figure | Experiment and workflow |
@@ -32,15 +32,14 @@ commands and parameters.
 | `scripts/figure_XX/` | Counting, scoring and plotting programs |
 | `source_data/figure_XX/` | Tables used in the figures, with software and input records |
 | `data/examples/figure_XX/` | Small source records that illustrate the calculations |
-| `figures/figure_XX/` | Editable Prism projects, exported figures and plotting outputs |
+| `figures/figure_XX/` | Exported figures and plotting outputs |
 | `environments/` | Pinned analysis dependencies |
 
 The [dataset registry](manifests/datasets.tsv) identifies the sequencing inputs
-and their accessions. The nine saved Prism projects are included with the
-figures. Their [export record](source_data/prism_exports.json) identifies the
-source-file checksums and layout IDs. [SETUP.md](SETUP.md#export-the-prism-figures)
-gives the commands for exporting those layouts. Larger FASTQ, alignment and
-matrix files are restored separately at the paths used by each workflow.
+and their accessions. Figure images are provided with their legends and source
+tables. The [export record](source_data/prism_exports.json) identifies the
+source-file checksums and layout IDs. Larger FASTQ, alignment and matrix files
+are restored separately at the paths used by each workflow.
 
 The [diagnostic Flexiplex source](vendor/flexiplex-audit/README.md) records the
 extracted barcode before correction. The [preserved FLAMES configurations](docs/pinned_flames_configs.md)

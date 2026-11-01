@@ -1,14 +1,12 @@
 # Figure 7 Differential expression in LongBench single nuclei
 
-Figure 7 compares differential-expression signals between H146 and H526 nuclei with the matched Illumina reference. Panels A–C use the native call, volcano and confidence tables stored in the Prism project. Panel D evaluates directional call recovery over a common family of 8,135 eligible genes. The molecule-counting workflow below defines that common-gene analysis and retains all emitted RAD concatemer segments.
+Figure 7 compares differential-expression signals between H146 and H526 nuclei with the matched Illumina reference. Panels A–C use the deposited native call, volcano and confidence tables. Panel D evaluates directional call recovery over a common family of 8,135 eligible genes. The molecule-counting workflow below defines that common-gene analysis and retains all emitted RAD concatemer segments.
 
 ![Figure 7](../figures/figure_07/prism/figure_07.png)
 
 ## Figure legend
 
 Figure 7. Faithful and confident identification of differentially-expressed genes. A. Venn diagram depicting the overlap between Illumina-reference-supported differentially expressed genes recovered by each tool. B. Volcano plot depicting the fold change and confidence (FDR, False Discovery Rate) of differences in gene expression between H526 and H146 cell lines. Genes identified with greatest confidence (FDR < 10⁻²⁰) in Flexiplex or BLAZE are identified by name. Genes identified as key markers of small cell lung cancer (SCLC) types -A and SCLC-P, are distinguished by transcriptional regulators, ASCL1 and POU2F3 (red). C. Scatterplot of confidence in expression differences between BLAZE (x-axis) other tools (y-axis) for genes that are overexpressed in H146 (top) and H526 (bottom) nuclei, respectively. Red line indicates unity and slopes of best fit lines for RAD and Flexiplex are listed in inset. D. Accuracy of differentially expressed gene identification for each tool (F1 scores) as compared to ground truth, as defined by short read data across a sweep of fold-change (x-axis) and FDR (y-axis) cutoff thresholds.
-
-[Editable Prism project](../figures/figure_07/Figure_07.prism)
 
 ## Inputs and software
 
@@ -98,19 +96,24 @@ python3 scripts/figure_07/score_directional_calls.py \
 python3 scripts/figure_07/render_source_proofs.py
 ```
 
-The adjustment produces 24,405 gene–workflow rows. Directional scoring produces 594 threshold rows. The [direct-test provenance check](../scripts/figure_07/check_direct_test_provenance.py) accepts the complete native test table through `--native-tests` and compares its direct P values and effects with the common-gene table. The plotting script reads the portable source tables with matplotlib and numpy. Final panel assembly is stored in the Figure 7 Prism project.
+The adjustment produces 24,405 gene–workflow rows. Directional scoring produces 594 threshold rows. The [direct-test provenance check](../scripts/figure_07/check_direct_test_provenance.py) accepts the complete native test table through `--native-tests` and compares its direct P values and effects with the common-gene table. The plotting script reads the portable source tables with matplotlib and numpy. The assembled manuscript figure is provided in the image above.
 
 ## Reproduce the native plotting tables and confidence fits
 
-Extract the exact plotting tables from the saved project, then recalculate the four confidence fits:
+Recalculate the four confidence fits from the deposited plotting tables:
+
+```bash
+python3 scripts/figure_07/replay_prism_scatter_fits.py \
+  --source-dir source_data/figure_07/plotted
+```
+
+To refresh the native plotting checkpoint from a local author project:
 
 ```bash
 python3 scripts/figure_07/extract_prism_panel_tables.py \
-  --prism "figures/figure_07/Figure_07.prism" \
+  --prism "external_data/prism/Figure 7.prism" \
   --output-dir results/figure07_native_tables \
   --threshold-grid source_data/figure_07/threshold_grid.tsv
-python3 scripts/figure_07/replay_prism_scatter_fits.py \
-  --source-dir source_data/figure_07/plotted
 ```
 
 The extractor preserves the CSV values, dataset row bounds and exclusions, graph bindings, and native regression settings and results. With `--threshold-grid`, it also checks all 594 plotted heatmap values against the common-gene F1 table. The fit replay checks the point counts, slopes, intercepts and R² against the saved Prism regressions. The [validation record](../source_data/figure_07/plotted/panel_C_regression_validation.json) records the numerical agreement.

@@ -99,9 +99,8 @@ def prepare(args, root):
     rows, commands = [], []
     for expected in manifest['exports']:
         row = dict(expected)
-        source = ((args.source_dir / row['source_file']).resolve() if args.source_dir
-                  else repository_path(root, row['repository_source']))
-        copied = copies / Path(row['repository_source']).name
+        source = (args.source_dir / row['source_file']).resolve()
+        copied = copies / Path(row['source_file']).name
         shutil.copyfile(source, copied)
         source_hash = sha256(copied)
         if sha256(source) != source_hash:
@@ -136,7 +135,7 @@ def verify(args, root):
     plan = json.loads((work / 'plan.json').read_text())
     manifest = json.loads((root / 'source_data/prism_exports.json').read_text())
     def identity(row):
-        return row['repository_source'], row['image'], row['layout_id']
+        return row['source_file'], row['image'], row['layout_id']
     expected = {identity(row): row for row in manifest['exports']}
     inventory = [identity(row) for row in plan['exports']]
     if not inventory or len(set(inventory)) != len(inventory) or set(inventory) != set(expected):
@@ -155,8 +154,7 @@ def verify(args, root):
         width, height = png_dimensions(data)
         row.update(image_sha256=hashlib.sha256(data).hexdigest(), width=width, height=height,
                    resolution_dpi=300, original_unchanged=True, copy_unchanged=True)
-        for field in ['repository_source', 'image']:
-            repository_path(root, row[field])
+        repository_path(root, row['image'])
         rows.append(row)
     public = []
     for row in rows:
@@ -164,12 +162,8 @@ def verify(args, root):
             destination = repository_path(root, row['image'])
             destination.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(row['staged_image'], destination)
-            if plan.get('update_sources'):
-                destination = repository_path(root, row['repository_source'])
-                destination.parent.mkdir(parents=True, exist_ok=True)
-                shutil.copyfile(row['copy_path'], destination)
         public.append({key: value for key, value in row.items()
-                       if key not in ['source_path', 'copy_path', 'staged_image']})
+                       if key not in ['source_path', 'copy_path', 'staged_image', 'repository_source']})
     report = dict(exporter='GraphPad Prism', exporter_version=version, format='PNG',
                   export_script_sha256=sha256(work / 'export.pzc'), exports=public)
     (work / 'verification.json').write_text(json.dumps(report, indent=2) + '\n')
@@ -183,9 +177,10 @@ def main():
     sub = parser.add_subparsers(dest='command', required=True)
     first = sub.add_parser('prepare', help='Copy figure sources and write a Prism export script')
     first.add_argument('--work', type=Path, required=True)
-    first.add_argument('--source-dir', type=Path, help='Optional external CURRENT FIGURES directory')
+    first.add_argument('--source-dir', type=Path, required=True,
+                       help='External CURRENT FIGURES directory containing the author Prism projects')
     first.add_argument('--allow-source-updates', action='store_true',
-                       help='Accept explicitly updated sources and preserve them during verification')
+                       help='Accept updated external source hashes and export metadata')
     first.set_defaults(func=prepare)
     second = sub.add_parser('verify', help='Check Prism exports and update the figure files')
     second.add_argument('--work', type=Path, required=True)

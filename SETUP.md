@@ -45,15 +45,17 @@ table. Figure-specific commands check the calculations and table relationships.
 
 ## Export the Prism figures
 
-The repository includes editable Prism projects for Figures 1–7 and the two
-supplementary figures. The [figure gallery](figures/README.md) links each
-project. The [export record](source_data/prism_exports.json) specifies its
-SHA-256 identity and the layout used for the figure.
+Source-table calculations and plotting commands use the deposited tables in
+`source_data/`. Author-side figure exports use a local directory containing the
+manuscript Prism projects. The [export record](source_data/prism_exports.json)
+specifies their SHA-256 identities and the layouts used for the figures.
 
-Prepare an export from the included projects:
+Prepare an export from the local author projects:
 
 ```bash
-python3 scripts/export_prism_figures.py prepare --work results/prism_export
+python3 scripts/export_prism_figures.py prepare \
+  --source-dir "/path/to/CURRENT FIGURES" \
+  --work results/prism_export
 ```
 
 Use a new work directory for each export. Preparation checks the source
@@ -68,8 +70,7 @@ python3 scripts/export_prism_figures.py verify --work results/prism_export
 ```
 
 The check compares source and working-copy hashes, validates the exported
-images and records their identities. To use a separately saved source directory,
-pass `--source-dir "/path/to/CURRENT FIGURES"` to the preparation command.
+images and records their identities.
 
 ## Intermediate checkpoints
 

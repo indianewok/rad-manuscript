@@ -23,7 +23,7 @@ Panel E and panel G use the supplied-5,000-target Flexiplex run; panel H and the
 
 The complete RAD audit is summarized by `scripts/figure_02/summarize_plotted_rad_audit.py`. Its outputs are `RAD_assignment_states.tsv`, `RAD_assignment_per_target.tsv`, and `RAD_assignment_summary.json` under `plotted_assignment/`. `checkpoint_validation.json` records comparison of the recomputed counts with the plotted series.
 
-Regenerate the panel checkpoint from the saved Prism project:
+The deposited panel checkpoint supplies the plotted observations. To refresh it from a local author project:
 
 ```bash
 python3 scripts/figure_02/extract_plotted_prism.py \

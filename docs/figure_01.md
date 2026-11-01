@@ -8,8 +8,6 @@ Figure 1 introduces RAD's read-layout model, measures the time and memory requir
 
 Figure 1. RAD is a flexible, efficient, and broadly applicable tool for demultiplexing single-cell long read sequencing data. A. A schematic of RAD workflow. B-C. Total processing time (B) and maximum memory usage (C) for single-nucleus Oxford Nanopore Technologies (ONT) and single-cell Pacific Biosciences (PB, PacBio) LongBench datasets. D. Visualization of valid barcode spots (gray) determined by SpaceRanger (in_tissue metadata of gene expression output) from Visium HD spatial transcriptomic data (left) and log-transformed normalized read counts (log10 ncpm) per 16-µm bin for Seurat (center) and RAD (right) processed data.
 
-[Editable Prism project](../figures/figure_01/Figure_01.prism)
-
 ## Read processing workflow
 
 RAD reads a layout CSV that specifies static sequences, barcodes, UMIs, and transcript segments in their 5′-to-3′ order. Static sequences anchor extraction in both read orientations. Dataset-specific alignment thresholds and relative element positions support reads with missing terminal adapters or poly-tails. Barcode discovery selects a cell-barcode shortlist from the count distribution. Demultiplexing then extracts the barcode and UMI, applies barcode correction, and writes the annotated transcript sequence.
@@ -71,7 +69,7 @@ python3 scripts/revision/figures_124_steps/recover_hd_grid.py \
   --report results/figure1_grid_receipt.json
 ```
 
-[Example bins](../data/examples/figure_01/hd_grid_example.tsv) show the coordinate, count, and tissue-mask fields. The saved Prism figure contains the assembled tissue-reference, Seurat, and RAD spatial panels; the portable grid workflow reconstructs the RAD bins and tissue reference.
+[Example bins](../data/examples/figure_01/hd_grid_example.tsv) show the coordinate, count, and tissue-mask fields. The exported figure contains the assembled tissue-reference, Seurat, and RAD spatial panels; the portable grid workflow reconstructs the RAD bins and tissue reference.
 
 ## Generate the source tables
 

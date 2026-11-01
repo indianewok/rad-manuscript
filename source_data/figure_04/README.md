@@ -14,7 +14,14 @@ The [Figure 4 workflow](../../docs/figure_04.md) connects the 37 sequencing inpu
 - `panel_bindings.json`: source Prism hash, layout, graph and dataset identifiers, native table hashes, and output hashes.
 - `checkpoint_summary.json`: input counts, arithmetic checks, selected conditions, medians, and statistical settings.
 
-Regenerate these checkpoints and statistics with:
+Validate the deposited checkpoint directly with:
+
+```bash
+python3 scripts/figure_04/extract_plotted_prism.py --validate-only \
+  --output-dir source_data/figure_04/plotted_checkpoint
+```
+
+To refresh the checkpoints from a local author project:
 
 ```bash
 python3 scripts/figure_04/extract_plotted_prism.py \

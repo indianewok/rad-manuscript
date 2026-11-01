@@ -8,8 +8,6 @@ Figure 4 compares barcode discovery across 37 inputs spanning synthetic reads, s
 
 Figure 4. High performance across diverse datasets and read architectures. Long read data generated from 37 samples were chosen from a variety of experimental protocols, sample types, and read architectures (A). Input characteristics are shown in B–E to illustrate the diversity of the datasets. This characterization included valid whitelist barcodes (B), total read count (C), GC content (D), and average Q (E). The long-read demultiplexing performance of each tool using RAD (R, green), Flexiplex (F, light grey), and BLAZE (B, dark grey), was characterized using F1 scores (F), precision (G), and recall (H) for all 37 samples. The distributions and medians of F1 scores (I), precision (J), and recall (K) across all 37 samples are shown as box-and-whisker plots, with whiskers indicating the minimum and maximum values.  Statistical significance determined by Friedman Test.
 
-[Editable Prism project](../figures/figure_04/Figure_04.prism)
-
 ## Inputs and barcode references
 
 The [sample inventory](../source_data/figure_04/sample_inventory.tsv) identifies each input, donor, library, and sequencing run. P8 denotes the whole-transcriptome library; P8-enriched denotes the corresponding VDJ-enriched library. Individual libraries and flow-cell runs retain separate input identifiers throughout scoring.
@@ -112,11 +110,11 @@ python3 scripts/revision/figures_124_steps/rescore_immune_reference.py \
   data/examples/figure_04/immune_reference_annotation_example.tsv \
   results/figure4_immune_example.tsv
 python3 scripts/figure_04/extract_plotted_prism.py \
-  --prism "figures/figure_04/Figure_04.prism" \
+  --prism "external_data/prism/Figure 4.prism" \
   --producer-metrics source_data/figure_04/barcode_detection_metrics.tsv \
   --output-dir results/figure_04/plotted_checkpoint
 python3 scripts/figure_04/extract_plotted_prism.py --validate-only \
   --output-dir results/figure_04/plotted_checkpoint
 ```
 
-The extractor follows the selected layout, checks all 333 metric values and their F1 arithmetic, verifies each Flexiplex selection against its recorded f0/f8 values, and recalculates the matched Friedman/Dunn comparisons. [Schemas](../source_data/figure_04/schemas.json) define the producing-run fields. The manuscript panels are exported directly from the saved Prism project.
+The extractor follows the selected layout, checks all 333 metric values and their F1 arithmetic, verifies each Flexiplex selection against its recorded f0/f8 values, and recalculates the matched Friedman/Dunn comparisons. [Schemas](../source_data/figure_04/schemas.json) define the producing-run fields. The assembled manuscript figure is provided in the image above. The optional extraction step uses a local author project; the deposited checkpoint can be checked directly with `--validate-only`.

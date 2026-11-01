@@ -8,8 +8,6 @@ Figure 3 tests how often tools assign reads to supplied target lists that exclud
 
 Figure 3. Adaptive whitelisting provides high fidelity barcode identification and correction. A-C. Characterization of false positive barcode assignment rate. Using three datasets, random, size matched sets of “off-list” barcodes were provided as the whitelist to each tool and the rate at which reads were assigned to this list was assessed (A). Quantification of total read count (B) and read depth (C) assigned to false positive barcodes by each tool. Statistical significance determined by one-way ANOVA (****p < 0.0001). D-G. Barcode correction outcomes (D). Using the LongBench dataset, the total read counts (E), the read depth (F), and the percentage of reads per barcode (G) derived from corrected off-list or the two failure modes were quantified for each tool.
 
-[Editable Prism project](../figures/figure_03/Figure_03.prism)
-
 ## Supplied-list challenges
 
 Three target lists were sampled independently for each dataset after removing its matched reference from the chemistry catalog. Every tool received the same complete input and target list within a replicate. Each target-list draw forms one technical replicate.
@@ -91,11 +89,11 @@ For the example BLAZE target, 1,861 Failure Mode 2 pairs among 13,809 total pair
 
 ## Generate the plotted checkpoint tables
 
-Extract the total and target-level observations used by the saved manuscript layout:
+Use the deposited checkpoint tables for the plotted observations. To refresh them from a local author project:
 
 ```bash
 python3 scripts/figure_03/extract_plotted_offlist.py \
-  --prism "figures/figure_03/Figure_03.prism" \
+  --prism "external_data/prism/Figure 3.prism" \
   --output-dir results/figure_03/plotted_checkpoint
 ```
 

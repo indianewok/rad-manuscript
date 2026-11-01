@@ -12,7 +12,7 @@ Figure 3 measures assignments to excluded barcode lists and classifies barcode c
 
 ScTagger-L and LongBench SC-ONT use strict single-output original-read counts. RAGE-seq uses historical tool-assignment tables. Panel B displays the total counts for all three list draws. Panel C displays per-target observations from the first draw. The totals and target distributions are preserved as separate plotted tables.
 
-Extract the checkpoint with:
+The deposited checkpoint can be used directly. To refresh it from a local author project:
 
 ```bash
 python3 scripts/figure_03/extract_plotted_offlist.py \

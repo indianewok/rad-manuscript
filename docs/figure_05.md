@@ -8,8 +8,6 @@ Figure 5 tests demultiplexing in two read architectures. Panels A–F measure re
 
 Figure 5. Benchmarking RAD performance on data with complex read structures. A-F. Performance of each tool in demultiplexing and mapping RAGE-seq-derived immune cell receptor reads when applied to a mixed pool of immune cells with distinct receptors. Composition of input cells (A). Comparison of total cells detected by RAD (R, green), Flexiplex (F, light gray), and BLAZE (B, dark gray) (B), number and identity of cell of each type (C), and the number of BCR and TCR reads mapped (D) by each tool. Number of reads with native or corrected barcodes (E) and read counts per barcode (F) mapped to each cell population by each tool. Statistical significance by paired two-tailed t-test (****p<0.0001). G-H. Performance of RAD (green) and FLAMESv2 (gray) in demultiplexing LR-Split-seq data. Number of assigned reads in the LR-Split-seq dataset, requiring all three whitelist-matched barcode components per read (G). Long read and short-read UMI counts per cell were compared for myoblast cells, myoblast nuclei, and myotube nuclei, separately for each tool (H). Dotted lines represent identity (x = y).
 
-[Editable Prism project](../figures/figure_05/Figure_05.prism)
-
 ## RAGE-seq receptor recovery
 
 The receptor analysis uses the RAGE-seq cell-line mixture **ERR3268991**. Demultiplexer assignments are joined to receptor alignments by original read ID and to cell-type annotations by barcode. The annotated population contains 1,993 Ramos cells, 1,572 Jurkat cells and 20 monocytes; the barcode-discovery reference contains 4,505 cells.
