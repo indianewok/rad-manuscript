@@ -52,6 +52,15 @@
       "copy_unchanged": true
     },
     {
+      "source_image": "103126_Figure_3.png",
+      "image": "figures/figure_03/prism/figure_03.png",
+      "image_sha256": "2038f47c989aa5b28234526fce4cd1c984e8fa763dc308b9198d11b520f39abd",
+      "width": 9817,
+      "height": 6434,
+      "import_method": "author-supplied saved PNG",
+      "original_unchanged": true
+    },
+    {
       "source_file": "Figure 4.prism",
       "source_sha256": "a3252b6d571c2f5bd69d2f1b648111de6d99cea2cc89337d6164517dd53cb41d",
       "layout_id": "A832BFDA-4E92-4AB6-BA27-1DC54997A075",

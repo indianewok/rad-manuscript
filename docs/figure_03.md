@@ -2,7 +2,9 @@
 
 Figure 3 measures assignments to supplied barcode lists that exclude the reference cells, then examines source-to-target barcode changes in the four LongBench datasets.
 
-[Figure legend](current_figure_legends.md) · [Source tables](../source_data/figure_03/) · [Worked read examples](../data/examples/figure_03/)
+[Figure legend](current_figure_legends.md#figure-3) · [Source tables](../source_data/figure_03/) · [Worked read examples](../data/examples/figure_03/)
+
+![Figure 3](../figures/figure_03/prism/figure_03.png)
 
 [Shared off-list procedure](#supplied-list-challenges) · [Tool versions and flags](#software-and-parameters) · [FM1 and FM2 definitions](#longbench-correction-categories) · [Run from raw reads](#reproduce-the-rage-seq-experiment)
 

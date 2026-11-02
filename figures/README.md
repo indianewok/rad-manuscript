@@ -16,7 +16,9 @@ The manuscript images below were exported from GraphPad Prism. Each figure links
 
 ## Figure 3 Off-list assignments and barcode correction
 
-[Analysis guide](../docs/figure_03.md) · [Legends](../docs/current_figure_legends.md)
+[Analysis guide](../docs/figure_03.md) · [Legends](../docs/current_figure_legends.md#figure-3)
+
+![Figure 3](figure_03/prism/figure_03.png)
 
 [Off-list assignment and barcode-correction source tables](../source_data/figure_03/README.md)
 

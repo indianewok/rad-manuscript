@@ -2,6 +2,8 @@
 
 [Methods and commands](../../docs/figure_03.md) · [Figure legend](../../docs/current_figure_legends.md#figure-3) · [Source data](../../source_data/figure_03/README.md)
 
+![Figure 3](prism/figure_03.png)
+
 ## Off-list experiments
 
 ScTagger-L, LongBench SC-ONT and RAGE-seq use three reference-excluded target lists, identical inputs and target lists across tools within each replicate, and strict original-read counting. [Totals](../../source_data/figure_03/offlist_totals.tsv) give assigned-read counts and input fractions across all three lists. [Per-target counts](../../source_data/figure_03/offlist_per_target.tsv.gz) include every supplied barcode; the per-target distribution uses replicate 1.
