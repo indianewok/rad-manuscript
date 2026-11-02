@@ -100,14 +100,24 @@ for row in render_report['source_files']:
 for row in render_report['runs']:
     if sha(ROOT/row['command'][1]) != row['renderer_sha256']:
         raise ValueError('Renderer changed after clean rendering: '+row['command'][1])
-expected_exports = {row['path'] for row in render_report['exports']}
-current_exports = {str(p.relative_to(ROOT)) for p in (ROOT/'figures').rglob('*')
-                   if p.suffix in ('.png','.pdf','.svg')}
+prism_record = json.loads((ROOT/'source_data/prism_exports.json').read_text())
+if prism_record.get('exporter') != 'GraphPad Prism' or not prism_record.get('exports'):
+    raise ValueError('A GraphPad Prism export record is required')
+expected_exports = {row['image'] for row in prism_record['exports']}
+if len(expected_exports) != len(prism_record['exports']):
+    raise ValueError('Duplicate images in the Prism export record')
+tracked_figures = subprocess.check_output(
+    ['git', 'ls-files', '-z', '--', 'figures'], cwd=str(ROOT)).decode().split('\0')
+current_exports = {path for path in tracked_figures
+                   if Path(path).suffix.lower() in ('.png', '.pdf', '.svg', '.jpg', '.jpeg', '.tif', '.tiff', '.eps', '.webp')}
 if current_exports != expected_exports:
-    raise ValueError('Current figure exports differ from the complete clean-render inventory')
-for row in render_report['exports']:
-    if sha(ROOT/row['path']) != row['sha256']:
-        raise ValueError('Current figure differs from verified export: '+row['path']+'; use clean rendering with --promote')
+    raise ValueError('Tracked figure images differ from the Prism export record')
+for row in prism_record['exports']:
+    image = Path(row['image'])
+    if len(image.parts) != 4 or image.parts[0] != 'figures' or image.parts[2] != 'prism':
+        raise ValueError('Prism image must be inside a figure Prism directory: '+row['image'])
+    if sha(ROOT/image) != row['image_sha256']:
+        raise ValueError('Prism figure differs from its recorded export: '+row['image'])
 paths = [ROOT/name for name in FILES if (ROOT/name).is_file()]
 for directory in DIRECTORIES:
     paths.extend(p for p in (ROOT/directory).rglob('*') if p.is_file() and not p.is_symlink())

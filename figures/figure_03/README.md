@@ -1,34 +1,11 @@
 # Figure 3 — off-list assignments and barcode correction
 
-[Methods and commands](../../docs/figure_03.md) · [Source data](../../source_data/figure_03/README.md)
+[Methods and commands](../../docs/figure_03.md) · [Figure legend](../../docs/current_figure_legends.md#figure-3) · [Source data](../../source_data/figure_03/README.md)
 
 ## Off-list experiments
 
-The same procedure was used for ScTagger-L, LongBench SC-ONT and RAGE-seq: three reference-excluded lists, identical input and list bytes across tools within each replicate, and strict original-read counting.
-
-![Total assigned reads](offlist_counts.png)
-
-![Assigned reads as a percentage of the input](offlist_assignment_fraction.png)
-
-![Assignments per target barcode](offlist_per_target.png)
+ScTagger-L, LongBench SC-ONT and RAGE-seq use three reference-excluded target lists, identical inputs and target lists across tools within each replicate, and strict original-read counting. [Totals](../../source_data/figure_03/offlist_totals.tsv) give assigned-read counts and input fractions across all three lists. [Per-target counts](../../source_data/figure_03/offlist_per_target.tsv.gz) include every supplied barcode; the per-target distribution uses replicate 1.
 
 ## LongBench correction outcomes
 
-FM1 is reassignment between cell-associated reference barcodes. FM2 is reassignment from a catalog-valid barcode outside the cell reference into a selected barcode.
-
-[FM1 and FM2 definitions](../../docs/figure_03.md#longbench-correction-categories)
-
-![Total correction-category counts](correction_totals.png)
-
-![Correction counts per target](correction_counts.png)
-
-![Correction percentages per target](correction_percentages.png)
-
-Each plot can be downloaded as PNG, PDF or SVG. Regenerate all plots from the deposited tables:
-
-```bash
-python3 scripts/revision/figure_3.py validate
-python3 scripts/revision/figure_3.py render
-```
-
-The plots show the observed counts and percentages. The [methods](../../docs/figure_03.md) define the statistical analysis.
+Failure Mode 1 is reassignment between reference-supported cell or nucleus barcodes. Failure Mode 2 is reassignment from a catalog-valid barcode outside that reference into a selected barcode. The [category definitions](../../docs/figure_03.md#longbench-correction-categories), [totals](../../source_data/figure_03/correction_totals.tsv) and [per-target counts and percentages](../../source_data/figure_03/correction_per_target.tsv.gz) describe the measured outcomes.

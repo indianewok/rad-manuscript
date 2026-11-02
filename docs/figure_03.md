@@ -79,11 +79,7 @@ input reads = strict assigned reads + excluded ambiguous reads + unassigned read
 
 ## Off-list results
 
-[Off-list totals](../source_data/figure_03/offlist_totals.tsv) contain assigned-read counts and fractions of all input reads. [Per-target counts](../source_data/figure_03/offlist_per_target.tsv.gz) include every supplied barcode. The plots below read these tables directly. The total-count plot uses all three target lists; the per-target plot uses replicate 1.
-
-![Off-list assigned-read totals](../figures/figure_03/offlist_counts.png)
-
-![Off-list counts per target](../figures/figure_03/offlist_per_target.png)
+[Off-list totals](../source_data/figure_03/offlist_totals.tsv) contain assigned-read counts and fractions of all input reads. [Per-target counts](../source_data/figure_03/offlist_per_target.tsv.gz) include every supplied barcode. The total-count comparison uses all three target lists; the per-target distribution uses replicate 1.
 
 ## LongBench correction categories
 
@@ -156,13 +152,12 @@ The [scheduler array](../scripts/revision/figure_3_rage_array.sbatch) runs these
 
 </details>
 
-## Recreate source-table plots
+## Validate the source tables
 
 From the repository root:
 
 ```bash
 python3 scripts/revision/figure_3.py validate
-python3 scripts/revision/figure_3.py render
 ```
 
-The [schema](../source_data/figure_03/schema.json) defines table keys and units. [Checksums](../source_data/figure_03/checksums.json) identify the files. The plotting command reads the deposited source tables and processes no raw FASTQ files. The source-data plots are descriptive; the manuscript uses the one-way ANOVA method specified in its figure legend.
+The [schema](../source_data/figure_03/schema.json) defines table keys and units. [Checksums](../source_data/figure_03/checksums.json) identify the files. The [figure legend](current_figure_legends.md#figure-3) specifies the manuscript's one-way ANOVA analysis. Optional source-table plots can be generated locally with `python3 scripts/revision/figure_3.py render`; these are written to `results/figure_03/`.

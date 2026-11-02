@@ -87,7 +87,8 @@ validation/*_[0-9]*.err
 *.[pP][zZ][tT]
 *.[pP][rR][iI][sS][mM][tT]
 
-# Display native Prism figures for Figures 1, 2 and 4–7.
-/figures/figure_0[124567]/*.png
-/figures/figure_0[124567]/*.pdf
-/figures/figure_0[124567]/*.svg
+# Keep manuscript images in the native Prism export directories.
+/figures/figure_0[1-7]/*.png
+/figures/figure_0[1-7]/*.pdf
+/figures/figure_0[1-7]/*.svg
+/figures/figure_0[1-7]/render_manifest.json

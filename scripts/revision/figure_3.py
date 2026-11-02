@@ -305,7 +305,7 @@ def render(a):
 def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('mode',choices=['build','render','validate'])
     p.add_argument('--project-root',type=Path);p.add_argument('--output',type=Path,default=ROOT/'source_data/figure_03')
-    p.add_argument('--figures',type=Path,default=ROOT/'figures/figure_03');p.add_argument('--report',type=Path,default=ROOT/'validation/figure_3_resume.json')
+    p.add_argument('--figures',type=Path,default=ROOT/'results/figure_03');p.add_argument('--report',type=Path,default=ROOT/'validation/figure_3_resume.json')
     a=p.parse_args()
     if a.mode=='build' and not a.project_root:p.error('build requires --project-root; render and validate use deposited source tables only')
     {'build':build,'render':render,'validate':validate}[a.mode](a)

@@ -4,6 +4,8 @@
 This is a validation check, not the reader's analysis entry point. Use the
 figure walkthroughs for the individual transformations. Linux strace records
 file access so accidental reads of the HPC raw-data project are detectable.
+Generated plots remain in the temporary validation directory; manuscript figures
+are the native Prism exports recorded in source_data/prism_exports.json.
 """
 import argparse
 import hashlib
@@ -45,7 +47,6 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--python', required=True, type=Path)
     parser.add_argument('--groups', nargs='+', choices=['124','3','5','567'], default=['124','3','5','567'])
-    parser.add_argument('--promote', action='store_true', help='Copy all successfully verified exports into the repository figures directory.')
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
     work = Path(tempfile.mkdtemp(prefix='rad-source-only-render-'))
@@ -112,17 +113,8 @@ def main():
             raise SystemExit('Render isolation failed; inspect ' + str(log))
     files = [{'path': str(path.relative_to(work)), 'sha256': digest(path)}
              for path in sorted((work / 'figures').rglob('*')) if path.suffix in ('.png','.pdf','.svg')]
-    if args.promote:
-        for path in sorted((work/'figures').rglob('*')):
-            if path.is_file():
-                destination = root/path.relative_to(work)
-                destination.parent.mkdir(parents=True, exist_ok=True)
-                shutil.copy2(str(path), str(destination))
-        for row in files:
-            assert digest(root/row['path']) == row['sha256'], row['path']
     report = {'status': 'passed', 'scope': 'render only; no raw or matrix producer rerun',
               'temporary_tree': str(work), 'environment': env, 'runs': reports, 'exports': files,
-              'promoted_verified_exports': args.promote,
               'source_files': [{'path': str(path.relative_to(work)), 'sha256': digest(path)}
                                for path in sorted((work/'source_data').rglob('*')) if path.is_file()],
               'script_sha256': digest(Path(__file__))}

@@ -13,7 +13,7 @@ RAGE-seq, ScTagger-L and LongBench SC-ONT used the same off-list procedure: thre
 | [offlist_per_target.tsv.gz](offlist_per_target.tsv.gz) | Counts for every supplied target in every run, including zero-count targets |
 | [offlist_read_fates.tsv](offlist_read_fates.tsv) | Assigned, multiple-output-excluded and unassigned counts, which sum to the input-read total |
 
-The [total-count plot](../../figures/figure_03/offlist_counts.png) uses all three target lists. The [per-target plot](../../figures/figure_03/offlist_per_target.png) uses replicate 1. Both plots are generated from these source tables.
+The total-count comparison uses all three target lists. The per-target distribution uses replicate 1.
 
 ## Barcode correction: panels D–G
 
