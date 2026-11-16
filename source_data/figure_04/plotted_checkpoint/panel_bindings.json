@@ -1,7 +1,7 @@
 {
   "source_prism_sha256": "a3252b6d571c2f5bd69d2f1b648111de6d99cea2cc89337d6164517dd53cb41d",
   "layout_uid": "A832BFDA-4E92-4AB6-BA27-1DC54997A075",
-  "producer_metrics_sha256": "a34448631c391ce9ea594d18a6c73fd8ff53323754d08ea1a7d440a3ab5c2f02",
+  "producer_metrics_sha256": "c60ad82a3939df66b1c7e0329bc5d901b7ae4c2296472b653d0f02979f901060",
   "tables": [
     {
       "metric": "f1",

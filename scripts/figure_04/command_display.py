@@ -201,7 +201,7 @@ def recorded_threads(command, tool):
 def display_version(value):
     """Keep the software version alone when projecting a supported input table."""
     match = re.search(r'\b\d+\.\d+(?:\.\d+)+(?:[a-z]+\d*)?\b', value)
-    return match.group(0) if match else 'NA'
+    return match.group(0) if match else ''
 
 
 def main():

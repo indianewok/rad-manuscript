@@ -5,7 +5,8 @@ Start with the [Figure 4 guide](../../docs/figure_04.md) for the 37 inputs, barc
 | Step | Files | What to inspect |
 |---|---|---|
 | Identify an input | [sample_inventory.tsv](sample_inventory.tsv), [input_characteristics.tsv](input_characteristics.tsv) | Dataset, library, sequencing run and all-read SeqKit summaries; `AvgQual` is the SeqKit average-quality field. |
-| Read the command | [tool_parameters.tsv](tool_parameters.tsv), [run_records/](run_records/), [producing_evidence/](producing_evidence/) | Tool version, command flags, FASTQ, chemistry catalog, scoring reference and output barcode list. |
+| Read the command | [tool_parameters.tsv](tool_parameters.tsv), [run_records/](run_records/), [producing_evidence/](producing_evidence/) | Tool versions and flags, input FASTQs, chemistry catalogs, and scoring references. Blank version cells indicate an unavailable version. |
+| Locate the run output | [producing_run_evidence.tsv](producing_run_evidence.tsv) | Source tables and paths to selected barcode lists, where available. |
 | Inspect barcode-set scores | [barcode_detection_metrics.tsv](barcode_detection_metrics.tsv) | Native-run calls, reference size, TP, FP, FN, precision, recall and F1. |
 | Read the figure values | [plotted_checkpoint/plotted_metrics.tsv](plotted_checkpoint/plotted_metrics.tsv) | 111 input–tool observations: 37 matched inputs × three tools. |
 | Follow the Flexiplex selection | [flexiplex_selected_conditions.tsv](plotted_checkpoint/flexiplex_selected_conditions.tsv) | The higher recorded F1 selects f0 or f8; the same condition supplies precision and recall. There are 22 f0 and 15 f8 selections. |

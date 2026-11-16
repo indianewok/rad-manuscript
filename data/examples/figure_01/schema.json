@@ -6,9 +6,6 @@
         "dataset": {
           "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
         },
-        "raw_dataset": {
-          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
-        },
         "phase": {
           "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
         },
@@ -30,19 +27,7 @@
         "accepted_pointer_path": {
           "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
         },
-        "accepted_pointer_value": {
-          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
-        },
-        "expected_key": {
-          "units_or_semantics": "literal source acceptance/completion boolean; never inferred from file size"
-        },
         "accepted": {
-          "units_or_semantics": "literal source acceptance/completion boolean; never inferred from file size"
-        },
-        "record_status": {
-          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
-        },
-        "complete_marker": {
           "units_or_semantics": "literal source acceptance/completion boolean; never inferred from file size"
         },
         "user_seconds": {
@@ -95,9 +80,6 @@
         },
         "metrics_sha256": {
           "units_or_semantics": "SHA256 of exact named file bytes"
-        },
-        "metrics_extra_json": {
-          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
         },
         "component_discovery_user_seconds": {
           "units_or_semantics": "seconds"
@@ -160,9 +142,6 @@
           "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
         },
         "slurm_job_id": {
-          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
-        },
-        "slurm_cpus_per_task": {
           "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
         },
         "input_fastq": {

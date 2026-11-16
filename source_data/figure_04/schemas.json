@@ -1,7 +1,6 @@
 {
   "barcode_detection_metrics.tsv": {
     "fields": [
-      "score_panel",
       "display_dataset",
       "canonical_id",
       "dataset_family",
@@ -15,13 +14,7 @@
       "recall",
       "f1",
       "reference_type",
-      "reference_description",
-      "validation_tier",
-      "source_path",
-      "source_method",
-      "input_status",
-      "paired_input_id",
-      "inferential_status"
+      "source_path"
     ],
     "primary_key": [
       "canonical_id",
@@ -50,8 +43,7 @@
       "Q30(%)",
       "AvgQual",
       "GC(%)",
-      "canonical_id",
-      "summary_origin"
+      "canonical_id"
     ],
     "primary_key": [
       "canonical_id"
@@ -66,9 +58,7 @@
       "paired_input_id",
       "RAD",
       "BLAZE",
-      "Flexiplex",
-      "input_status",
-      "independence_note"
+      "Flexiplex"
     ],
     "primary_key": [],
     "encoding": "UTF-8",
@@ -81,9 +71,7 @@
       "paired_input_id",
       "RAD",
       "BLAZE",
-      "Flexiplex",
-      "input_status",
-      "independence_note"
+      "Flexiplex"
     ],
     "primary_key": [],
     "encoding": "UTF-8",
@@ -96,9 +84,7 @@
       "paired_input_id",
       "RAD",
       "BLAZE",
-      "Flexiplex",
-      "input_status",
-      "independence_note"
+      "Flexiplex"
     ],
     "primary_key": [],
     "encoding": "UTF-8",
@@ -113,8 +99,7 @@
       "display_dataset",
       "dataset_family",
       "unit_type",
-      "reference_type",
-      "validation_tier"
+      "reference_type"
     ],
     "primary_key": [
       "canonical_id"

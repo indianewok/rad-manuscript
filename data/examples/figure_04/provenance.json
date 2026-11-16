@@ -3,7 +3,6 @@
   "sources": [
     {
       "columns": [
-        "score_panel",
         "display_dataset",
         "canonical_id",
         "dataset_family",
@@ -17,19 +16,13 @@
         "recall",
         "f1",
         "reference_type",
-        "reference_description",
-        "validation_tier",
-        "source_path",
-        "source_method",
-        "input_status",
-        "paired_input_id",
-        "inferential_status"
+        "source_path"
       ],
-      "excerpt_sha256": "55741ee5e9c11c56eac300c7a5cdf2d37ae5c8b3a782b5e9d297c4db87a3854a",
+      "excerpt_sha256": "ffe215a2628356191a888f3c2c05bd4a168b06284b7d6ce25203cf669e8f58ab",
       "file": "three_input_metrics_example.tsv",
       "header_excluded_from_row_count": true,
       "scope": "bounded actual source excerpt; not a representative statistical sample",
-      "source_bytes": 71661,
+      "source_bytes": 27200,
       "source_data_row_numbers_1_based": [
         1,
         2,
@@ -42,7 +35,7 @@
         24
       ],
       "source_path": "source_data/figure_04/barcode_detection_metrics.tsv",
-      "source_sha256": "a34448631c391ce9ea594d18a6c73fd8ff53323754d08ea1a7d440a3ab5c2f02"
+      "source_sha256": "c60ad82a3939df66b1c7e0329bc5d901b7ae4c2296472b653d0f02979f901060"
     },
     {
       "columns": [

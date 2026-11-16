@@ -78,7 +78,7 @@ def build(a):
             if count<0:raise ValueError('Negative off-list assignment count')
             rank=int(r.get('whitelist_row_index',r.get('rank')))
             row=dict(dataset=dataset,tool=t,replicate=rep,original_row_index=rank,
-                     barcode=bc,identity_status='verified_supplied_list_identity',
+                     barcode=bc,
                      assigned_count=count,unit='strict_physical_reads',
                      source_sha256=digest)
             off.append(row);grouped[t,rep].append(row)
@@ -127,7 +127,7 @@ def build(a):
         for t in TOOLS:
             rr=[r for r in rows if r['tool']==t and int(r['replicate'])==rep]
             check(f'offlist/RAGE-seq/{t}/rep{rep}/target_identity',sorted(r['barcode'] for r in rr),sorted(targets))
-            for r in rr:off.append(dict(dataset='RAGE-seq',tool=t,replicate=rep,original_row_index=int(r['rank']),barcode=r['barcode'],identity_status='verified_supplied_list_identity',assigned_count=int(r['count']),unit='strict_physical_reads',source_sha256=digest))
+            for r in rr:off.append(dict(dataset='RAGE-seq',tool=t,replicate=rep,original_row_index=int(r['rank']),barcode=r['barcode'],assigned_count=int(r['count']),unit='strict_physical_reads',source_sha256=digest))
     for r in read(current/'per_run_summary.tsv'):
         t=r['tool'];rep=int(r['replicate']);strict=int(r['strict_unique_assigned_total']);amb=int(r['ambiguous_physical_read_ids']);inp=int(r['input_reads']);unassigned=int(r['unassigned'])
         observed=sum(x['assigned_count'] for x in off if x['dataset']=='RAGE-seq' and x['tool']==t and x['replicate']==rep)
@@ -192,7 +192,7 @@ def build(a):
         ('E','correction_totals.tsv','dataset,tool,category','count','unique original-read–target pairs',''),
         ('F','correction_per_target.tsv.gz','dataset,tool,barcode,category','count','unique original-read–target pairs','manuscript statistical analysis'),
         ('G','correction_per_target.tsv.gz','dataset,tool,barcode,category','percent','100*category_pairs/all_assignment_pairs_O','manuscript statistical analysis')]:
-        bindings.append(dict(panel=panel,table=table,row_key=key,metric=metric,unit=unit,statistical_policy=decision,sha256=sha(out/table),render_scope='rendered from source tables'))
+        bindings.append(dict(panel=panel,table=table,row_key=key,metric=metric,unit=unit,statistical_policy=decision,sha256=sha(out/table)))
     write(out/'panel_data_manifest.tsv',bindings)
     # Compact equal checks rather than duplicating whole barcode sets in the report.
     for c in checks:

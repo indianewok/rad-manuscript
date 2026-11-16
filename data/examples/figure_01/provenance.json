@@ -68,7 +68,6 @@
     {
       "columns": [
         "dataset",
-        "raw_dataset",
         "phase",
         "tool",
         "threads",
@@ -76,11 +75,7 @@
         "attempt",
         "attempt_dir",
         "accepted_pointer_path",
-        "accepted_pointer_value",
-        "expected_key",
         "accepted",
-        "record_status",
-        "complete_marker",
         "user_seconds",
         "system_seconds",
         "cpu_seconds",
@@ -98,7 +93,6 @@
         "exit_status",
         "metrics_path",
         "metrics_sha256",
-        "metrics_extra_json",
         "component_discovery_user_seconds",
         "component_discovery_system_seconds",
         "component_discovery_cpu_seconds",
@@ -120,7 +114,6 @@
         "hostname",
         "cpu_model",
         "slurm_job_id",
-        "slurm_cpus_per_task",
         "input_fastq",
         "input_size_bytes",
         "input_sha256_preverified",
@@ -139,11 +132,11 @@
         "output_metadata_json",
         "warnings"
       ],
-      "excerpt_sha256": "4f0350e3b206e034331435ce517fe77e5e2350662e3267c6cb596e70d0dd3579",
+      "excerpt_sha256": "f837b30fd11812d56e7fed650d3fe7a0c980141f740f0f2cf9856941587c2030",
       "file": "accepted_phase_example.tsv",
       "header_excluded_from_row_count": true,
       "scope": "bounded actual source excerpt; not a representative statistical sample",
-      "source_bytes": 467257,
+      "source_bytes": 447700,
       "source_data_row_numbers_1_based": [
         19,
         20,
@@ -159,7 +152,7 @@
         78
       ],
       "source_path": "source_data/figure_01/accepted_phase_records.tsv",
-      "source_sha256": "dfb29b8ac39abfc9e496c33fcf5e310bd5f63f17155bf7dbd1ea2fd60a48b78b"
+      "source_sha256": "cfde1bd29d0177d471999314419cf254e14f5ab882215e3f615d547f0ce13d68"
     },
     {
       "columns": [

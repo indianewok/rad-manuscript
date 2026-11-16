@@ -27,8 +27,7 @@
       "metric",
       "unit",
       "statistical_policy",
-      "sha256",
-      "render_scope"
+      "sha256"
     ],
     "correction_totals.tsv": [
       "dataset",
@@ -64,7 +63,6 @@
       "replicate",
       "original_row_index",
       "barcode",
-      "identity_status",
       "assigned_count",
       "unit",
       "source_sha256"
@@ -84,7 +82,7 @@
   },
   "contracts": {
     "offlist": "All three datasets count strict physical reads. A physical ID with multiple assignment rows is wholly excluded, including identical duplicates.",
-    "correction": "Within each class collapse original-read\u2013target pairs; classes can overlap. No source means unknown, not noncatalog. Percent denominator O includes all pairs to target.",
+    "correction": "Within each class collapse original-read–target pairs; classes can overlap. No source means unknown, not noncatalog. Percent denominator O includes all pairs to target.",
     "identity": "Each offlist target is the actual supplied nucleotide barcode; pairing requires dataset,replicate,barcode.",
     "zero": "Targets with zero assignments retained; percent is null when O=0. Tool-unselected targets explicitly selected_by_tool=0."
   }

@@ -87,7 +87,6 @@
       "model",
       "condition",
       "tool",
-      "original_path",
       "resolved_path",
       "sha256",
       "calls"

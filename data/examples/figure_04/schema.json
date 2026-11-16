@@ -54,9 +54,6 @@
     "three_input_metrics_example.tsv": {
       "rows": 9,
       "columns": {
-        "score_panel": {
-          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
-        },
         "display_dataset": {
           "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
         },
@@ -96,25 +93,7 @@
         "reference_type": {
           "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
         },
-        "reference_description": {
-          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
-        },
-        "validation_tier": {
-          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
-        },
         "source_path": {
-          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
-        },
-        "source_method": {
-          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
-        },
-        "input_status": {
-          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
-        },
-        "paired_input_id": {
-          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
-        },
-        "inferential_status": {
           "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
         }
       },
@@ -127,9 +106,6 @@
           "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
         },
         "tool": {
-          "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
-        },
-        "input_status": {
           "units_or_semantics": "as recorded in producing evidence; categorical/string unless source schema specifies units"
         },
         "reference_type": {

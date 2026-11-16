@@ -176,7 +176,13 @@ class Build:
         self.check('timing_raw_logs_equal_archived', not diffs, 'all accepted measured fields equal', diffs, TIMING)
         self.check('timing_hardware_stratum', all('EPYC 7543' in r['cpu_model'] and r['exit_status']=='0' for r in accepted),
                    'AMD EPYC 7543 and zero exits', sorted(set(r['cpu_model'] for r in accepted)), TIMING)
-        write_rows(self.out/'source_data/figure_01/accepted_phase_records.tsv', accepted)
+        collector_fields = {
+            'raw_dataset', 'accepted_pointer_value', 'expected_key', 'record_status',
+            'complete_marker', 'slurm_cpus_per_task', 'metrics_extra_json',
+        }
+        published_phases = [{key: value for key, value in row.items() if key not in collector_fields}
+                            for row in accepted]
+        write_rows(self.out/'source_data/figure_01/accepted_phase_records.tsv', published_phases)
         groups = defaultdict(list)
         for r in accepted:
             groups[tuple(r[x] for x in ('dataset','tool','threads','replicate'))].append(r)
@@ -253,13 +259,11 @@ class Build:
                     w.writerow(['dataset','model','condition','tool','barcode','classification'])
                     for r in normalized:
                         if r['model']=='nanopore2023':
-                            original=source2023[(r['condition'],r['tool'])]
-                            source=resolve_source(original,base=self.base)
+                            source=resolve_source(source2023[(r['condition'],r['tool'])],base=self.base)
                         else:
                             filename={'RAD':'rad/scanwl.txt','BLAZE':'blaze/whitelist.csv',
                                       'Flexiplex_f0':'flex_f0/selected.txt','Flexiplex_f8':'flex_f8/selected.txt'}[r['tool']]
                             source=scratch_root() / 'sctagger_sl_three_tool_quality_20260731/runs'/r['dataset']/r['condition']/filename
-                            original=str(source)
                         source=self.source(source,'selected_discovery_whitelist')
                         calls=set()
                         for line in source.read_text().splitlines():
@@ -273,7 +277,7 @@ class Build:
                             label='TP' if bc in calls and bc in truthset else ('FP' if bc in calls else 'FN')
                             w.writerow([r[k] for k in ('dataset','model','condition','tool')]+[bc,label])
                         callmanifest.append(dict(dataset=r['dataset'],model=r['model'],condition=r['condition'],tool=r['tool'],
-                                                 original_path=original,resolved_path=str(source),sha256=sha(source),calls=len(calls)))
+                                                 resolved_path=str(source),sha256=sha(source),calls=len(calls)))
         write_rows(folder/'discovery_callset_manifest.tsv',callmanifest)
         paired_path=self.source(EXTENDED+'/quality/paired_50000_barcode_mean_Q.csv')
         paired=rows(paired_path)

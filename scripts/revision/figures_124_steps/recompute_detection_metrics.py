@@ -21,7 +21,7 @@ for row in rows:
     for key,value in metrics.items():
         if abs(value-float(row[key]))>1e-9:raise ValueError('Stored metric differs: '+key)
     out.append(dict(canonical_id=row['canonical_id'],tool=row['tool'],
-                    input_status=row['input_status'],reference_type=row['reference_type'],
+                    reference_type=row['reference_type'],
                     calls=calls,reference_n=ref,tp=tp,fp=fp,fn=fn,**metrics))
 if len(tools)!=a.expected_inputs or any(t!={'RAD','BLAZE','Flexiplex'} for t in tools.values()):
     raise ValueError('Input count or matched tool triple failed')

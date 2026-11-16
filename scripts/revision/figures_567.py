@@ -164,8 +164,6 @@ def expression(project, out):
             if abs(float(old[k]) - v) > 1e-12:
                 raise ValueError('F7 grid mismatch {} {} {} {} {}'.format(t, direction, p, fc, k))
         row = dict(tool=t, direction=direction, tool_BH_FDR_cutoff=p, tool_abs_log2FC_cutoff=fc, **values)
-        # Historical table stores two significant digits; artwork uses one.
-        row['display_label_2sig'] = siglabel(row['F1'])
         row['display_label_1sig'] = siglabel(row['F1'], 1)
         grid.append(row)
     check('F7_threshold_grid_exact_integer_and_metric_comparison', len(grid), 594)
@@ -232,7 +230,7 @@ def genotype(project, out):
         for donor in sorted(set(r['reference_label'] for r in sub)):
             rows = [r for r in sub if r['reference_label'] == donor]
             c = collections.Counter(r['outcome'] for r in rows)
-            per_donor.append(dict(tool=t, donor=donor, library='LongBench_SN_ONT', independent_libraries=1, reference_cells=len(rows), same=c['same'], different=c['different'], doublet=c['doublet'], unassigned=c['unassigned'], not_selected=c['not_selected'], strict_recall=c['same']/float(len(rows))))
+            per_donor.append(dict(tool=t, donor=donor, reference_cells=len(rows), same=c['same'], different=c['different'], doublet=c['doublet'], unassigned=c['unassigned'], not_selected=c['not_selected'], strict_recall=c['same']/float(len(rows))))
     dest = out / 'source_data/figure_06'
     preserved=project/'scratch_preservation_20260921/files/longbench_snont_postdemux_vireo_20260803'
     commands=[]
