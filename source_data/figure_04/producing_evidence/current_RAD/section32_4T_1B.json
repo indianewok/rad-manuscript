@@ -7,16 +7,6 @@
   "threads": 4,
   "chemistry": "10x_Vis_V1",
   "command": "rad scan-wl --input external_data/figure_04/inputs/section32_4T_1B.fastq --output-prefix results/figure_04/section32_4T_1B/rad --adapter_seq CTACACGACGCTCTTCCGATCT --barcode-length 16 --left-margin 0 --right-margin 0 --max-error 0.3 --whitelist external_data/figure_04/catalogues/visium-v1_v2_bitlist.csv.gz --threads 4 --chunk-size 10000",
-  "input_acquisition": {
-    "method": "complete_fastq_input",
-    "source": "Controlled EGA file EGAF00008107345",
-    "output": {
-      "input_format": "fastq",
-      "bytes": 687299108,
-      "sha256": "dba6c5b2963f97baf7bf9b8f49a9bf9f6bf98b56521cee4ccc1af5e40181fee7",
-      "md5": "b340e46dc532088ce5e6c4da3df68974"
-    }
-  },
   "adapter_seq": "CTACACGACGCTCTTCCGATCT",
   "barcode_length": 16,
   "left_margin": 0,
@@ -34,5 +24,6 @@
   "reference_barcodes": 2241,
   "native_receipt_sha256": "ae4c4ab0b8aec9d8c304a0c3d020813ca6e5ee655a4f5393ced1f2f61ee9d471",
   "reference_sha256": "dbec6540264f0d867b390028447e84b6cb1a9df4ddee40427a42d5fc5816ac35",
-  "reference_barcode_sha256": "dbec6540264f0d867b390028447e84b6cb1a9df4ddee40427a42d5fc5816ac35"
+  "reference_barcode_sha256": "dbec6540264f0d867b390028447e84b6cb1a9df4ddee40427a42d5fc5816ac35",
+  "input_record": "source_data/figure_04/run_records/section32_4T_1B.json"
 }

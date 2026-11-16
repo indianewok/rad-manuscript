@@ -7,16 +7,6 @@
   "threads": 20,
   "chemistry": "10x_3v3",
   "command": "rad scan-wl -i external_data/figure_04/inputs/ERR15095097.fastq.gz -p CTACACGACGCTCTTCCGATCT -n 16 -w 10x_3v3 -e 0.3 -t 20 -k 10000 --hs-bcs -v -o results/figure_04/ERR15095097/rad",
-  "input_acquisition": {
-    "method": "complete_fastq_input",
-    "source": "ENA ERR15095097",
-    "output": {
-      "input_format": "fastq.gz",
-      "bytes": 21179623060,
-      "sha256": null,
-      "md5": "b6af595a902ccf05d168c8225914a968"
-    }
-  },
   "adapter_seq": "CTACACGACGCTCTTCCGATCT",
   "barcode_length": 16,
   "left_margin": 0,
@@ -48,5 +38,6 @@
       "recall": 0.9969578444154715,
       "f1": 0.9784602260609938
     }
-  }
+  },
+  "input_record": "source_data/figure_04/run_records/ERR15095097.json"
 }

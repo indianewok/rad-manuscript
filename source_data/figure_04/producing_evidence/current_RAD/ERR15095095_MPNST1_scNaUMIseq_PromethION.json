@@ -7,16 +7,6 @@
   "threads": 16,
   "chemistry": "10x_3v3.1",
   "command": "rad scan-wl -i external_data/figure_04/inputs/ERR15095095_MPNST1_scNaUMIseq_PromethION.fastq.gz -o results/figure_04/ERR15095095_MPNST1_scNaUMIseq_PromethION/rad -p CTACACGACGCTCTTCCGATCT -n 16 -e 0.3 -w 10x_3v3.1 -t 16 -k 10000",
-  "input_acquisition": {
-    "method": "complete_fastq_input",
-    "source": "ENA ERR15095095",
-    "output": {
-      "input_format": "fastq.gz",
-      "bytes": 203690681410,
-      "sha256": null,
-      "md5": null
-    }
-  },
   "adapter_seq": "CTACACGACGCTCTTCCGATCT",
   "barcode_length": 16,
   "left_margin": 0,
@@ -34,5 +24,6 @@
   "reference_barcodes": 4602,
   "native_receipt_sha256": "9daa26adf0db8b364a76fd836b33f034a6a5f9451ce1478eb79f3b227612ef4e",
   "reference_sha256": "3c9d29a0a4cc1b5a1360ec98557f72fee9404d805f78ec7dbfed339dda2f9896",
-  "reference_barcode_sha256": "999dbf531a350fab6219f1b9331dc915fb33b1beadb04886a62bc1f897e9ea08"
+  "reference_barcode_sha256": "999dbf531a350fab6219f1b9331dc915fb33b1beadb04886a62bc1f897e9ea08",
+  "input_record": "source_data/figure_04/run_records/ERR15095095_MPNST1_scNaUMIseq_PromethION.json"
 }

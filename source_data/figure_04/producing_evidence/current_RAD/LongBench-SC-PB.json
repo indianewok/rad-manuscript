@@ -7,16 +7,6 @@
   "threads": 64,
   "chemistry": "10x_3v3.1",
   "command": "rad scan-wl --input external_data/figure_04/inputs/LongBench-SC-PB.fastq.gz --output-prefix results/figure_04/LongBench-SC-PB/rad --adapter_seq CTACACGACGCTCTTCCGATCT --barcode-length 16 --max-error 0.3 --whitelist external_data/figure_04/catalogues/3M-february-2018-3v3.txt_bitlist.csv.gz --threads 64 --chunk-size 10000",
-  "input_acquisition": {
-    "method": "complete_fastq_input",
-    "source": "https://longbench-data.s3.ap-southeast-2.amazonaws.com/raw/fastq/SC_PB.fastq.gz",
-    "output": {
-      "input_format": "fastq.gz",
-      "bytes": 79878370809,
-      "sha256": "68e818fdd9d329e56fd159ac90befba8350d30a4eaa959610fe03fd4484d07d4",
-      "md5": null
-    }
-  },
   "adapter_seq": "CTACACGACGCTCTTCCGATCT",
   "barcode_length": 16,
   "left_margin": 0,
@@ -34,5 +24,6 @@
   "reference_barcodes": 5211,
   "native_receipt_sha256": "7f322bd254ad9185ac43e84c5129763cdf1338a251825a7cf4a815c88e640985",
   "reference_sha256": "487437a2846e1e49d4434c8d237bee62574e5011f22de7446a808e04b1f48ca7",
-  "reference_barcode_sha256": "a91808ee31395ed98a9b7dbbce398d7a71776d7ec0e61a10e003979ca0339187"
+  "reference_barcode_sha256": "a91808ee31395ed98a9b7dbbce398d7a71776d7ec0e61a10e003979ca0339187",
+  "input_record": "source_data/figure_04/run_records/LongBench-SC-PB.json"
 }

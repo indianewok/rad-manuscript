@@ -7,16 +7,6 @@
   "threads": 16,
   "chemistry": "10x_3v2",
   "command": "rad scan-wl --input external_data/figure_04/inputs/RAGEseq-TNBC-LN.fastq.gz --output-prefix results/figure_04/RAGEseq-TNBC-LN/rad --adapter_seq CTACACGACGCTCTTCCGATCT --barcode-length 16 --left-margin 0 --right-margin 0 --max-error 0.3 --whitelist external_data/figure_04/catalogues/737K-august-2016.txt --threads 16 --chunk-size 10000",
-  "input_acquisition": {
-    "method": "complete_fastq_input",
-    "source": "PRJEB28878",
-    "output": {
-      "input_format": "fastq.gz",
-      "bytes": 24090380952,
-      "sha256": "ffa2403ea0a870cf01e0f80c451aa831fb79f56714d67f7e589ff6e20997669a",
-      "md5": "23177cd143a521db1d7e41fd3e7d1981"
-    }
-  },
   "adapter_seq": "CTACACGACGCTCTTCCGATCT",
   "barcode_length": 16,
   "left_margin": 0,
@@ -34,5 +24,6 @@
   "reference_barcodes": 5978,
   "native_receipt_sha256": "52c65f2e37ca22e8aee3084ad46c41fcee69731e82ee60ebfea6e2cdfe268473",
   "reference_sha256": "95e4d81c69b55a673aeaea8955693ab27e6b8b53fc95a29355fc6f13fd4be898",
-  "reference_barcode_sha256": "6b858038b0807a61acce0ad66a9f920df42cf140582040d07fa0d9dc99595f70"
+  "reference_barcode_sha256": "6b858038b0807a61acce0ad66a9f920df42cf140582040d07fa0d9dc99595f70",
+  "input_record": "source_data/figure_04/run_records/RAGEseq-TNBC-LN.json"
 }

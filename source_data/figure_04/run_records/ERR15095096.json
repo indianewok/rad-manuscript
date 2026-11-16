@@ -11,16 +11,6 @@
   "input_records": null,
   "input_format": "fastq.gz",
   "reference_barcode_sha256": "b63e5a89df2457f853d386d132636c67c3bead75f53b6e874a6977d6a84eba7d",
-  "input_acquisition": {
-    "method": "complete_fastq_input",
-    "source": "ENA ERR15095096",
-    "output": {
-      "input_format": "fastq.gz",
-      "bytes": 83325551299,
-      "sha256": null,
-      "md5": "680c4cda0770944eb4dcd3a2683fe201"
-    }
-  },
   "reference_source": "Matched Illumina 10x 3' v3 MPNST2 (2022_26) Cell Ranger 9.0.0 GRCm39 filtered cell barcodes using default cell calling; positive-proxy reference, not literal biological ground truth.",
   "dataset_source_accessions": "E-MTAB-15190/PRJEB90127; E-MTAB-14222/PRJEB77277",
   "chemistry": "10x_3v3",

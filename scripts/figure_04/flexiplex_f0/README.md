@@ -23,9 +23,9 @@ ln -sfn flexiplex-linux external_data/software/flexiplex/bin/flexiplex
 export PATH="$PWD/external_data/software/flexiplex/bin:$PATH"
 ```
 
-Use Python 3.9.16 and install the [pinned dependencies](requirements.txt) with `python3 -m pip install -r scripts/figure_04/flexiplex_f0/requirements.txt`. SRA inputs use the pinned `fasterq-dump-orig.3.4.1` converter described in their acquisition records. The per-input scripts stream the complete input with its native sequences and quality strings into discovery, then filter the barcode-count table. Converter temporary files are removed when each script exits.
+Use Python 3.9.16 and install the [pinned dependencies](requirements.txt) with `python3 -m pip install -r scripts/figure_04/flexiplex_f0/requirements.txt`. The per-input scripts stream the complete input with its native sequences and quality strings into discovery, then filter the barcode-count table. SRA inputs use the same [pinned converter](../README.md#sra-inputs) as the RAD input preparation.
 
-P8 streams its compressed FASTQ with [rapidgzip 0.16.0](https://github.com/mxmlnkn/rapidgzip), included in the pinned dependencies. Its execution record identifies the exact decoder wheel and command.
+P8 streams its compressed FASTQ with [rapidgzip 0.16.0](https://github.com/mxmlnkn/rapidgzip), included in the pinned dependencies. Its execution record identifies the exact decoder wheel and links to the script.
 
 The common analysis flags are:
 

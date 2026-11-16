@@ -57,15 +57,6 @@
     "role": "Scoring only"
   },
   "commands": {
-    "input_stream": [
-      "rapidgzip",
-      "-d",
-      "-c",
-      "-P",
-      "16",
-      "--verify",
-      "external_data/figure_04/inputs/Measles-P8-WTA.fastq.gz"
-    ],
     "discovery": [
       "flexiplex",
       "-d",
@@ -89,7 +80,6 @@
       "results/figure_04/Measles-P8-WTA/Flexiplex/barcodes_barcodes_counts.txt"
     ]
   },
-  "command": "rapidgzip -d -c -P 16 --verify external_data/figure_04/inputs/Measles-P8-WTA.fastq.gz | flexiplex -d 10x3v3 -f 0 -e 2 -p 16 -n results/figure_04/Measles-P8-WTA/Flexiplex/barcodes; python3 external_data/software/flexiplex/scripts/flexiplex_filter/main.py --whitelist external_data/figure_04/catalogues/3M-february-2018-3v3.txt --outfile results/figure_04/Measles-P8-WTA/Flexiplex/selected_native.tsv results/figure_04/Measles-P8-WTA/Flexiplex/barcodes_barcodes_counts.txt",
   "environment": {
     "PYTHONHASHSEED": "0",
     "OMP_NUM_THREADS": "1",
@@ -118,5 +108,6 @@
   "native_receipt_sha256": "278bc07411f4f56ad0ea9f905f90ade2d9ca0a009ef5b9c99f5badd072e3141b",
   "dependency_lock": "scripts/figure_04/flexiplex_f0/requirements.txt",
   "scope": "Whitelist detection and filtering",
-  "display_dataset": "P8"
+  "display_dataset": "P8",
+  "execution_script": "scripts/figure_04/flexiplex_f0/run_Measles-P8-WTA.sh"
 }

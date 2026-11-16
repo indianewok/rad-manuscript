@@ -19,13 +19,7 @@
       "md5": "bf0cfb8981b87a6cea8857263c01a851",
       "sha256": "08ef3b9d25459762ddce6f9977415b1aeb6822a9e0be248c21046421f9f41a8d"
     },
-    "member": "Hipp_SN_m1_ONT_Run2/Hipp_SN_m1_ONT_Run2.fastq.gz",
-    "output": {
-      "input_format": "fastq.gz",
-      "bytes": 16929288910,
-      "sha256": "15d37c4ad40ff80c7fc9f5708d6b3eadd70efed156f5b8459fad74f18e8b6229",
-      "md5": "9979d69a881dacd5899f51c34822383e"
-    }
+    "member": "Hipp_SN_m1_ONT_Run2/Hipp_SN_m1_ONT_Run2.fastq.gz"
   },
   "reference_source": "Released matched Cell Ranger 3.1.0 filtered-MEX barcodes are a positive proxy, not literal biological ground truth.",
   "dataset_source_accessions": "NeMO dat-717krsa; https://data.nemoarchive.org/biccn/grant/rf1_tilgner/tilgner/transcriptome/sncell/",

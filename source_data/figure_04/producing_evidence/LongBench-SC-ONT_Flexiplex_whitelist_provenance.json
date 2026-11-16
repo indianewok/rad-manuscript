@@ -2,7 +2,6 @@
   "dataset": "LongBench-SC-ONT",
   "tool": "Flexiplex",
   "version": "1.02.6",
-  "source_commit": "not_recorded",
   "selected_barcodes": 5907,
   "selected_set_sha256": "74c934a536a8d323029d4c2a88ede029d6acc1ee24ea34caf247defeb928e8ff",
   "selected_set_matches_current_figure4": true,

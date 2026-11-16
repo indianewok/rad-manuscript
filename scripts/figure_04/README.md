@@ -48,15 +48,54 @@ read order, headers, bases or quality strings:
 gzip -dc official_input.fastq.gz > external_data/figure_04/inputs/DATASET.fastq
 ```
 
-Then pass that `.fastq` file to `--input`. Do not recompress it for that record.
-For an SRA-derived input, read its `input_acquisition` object. It gives the full-quality archive URL, exact archive basename, byte count, MD5 and SHA256; the converter and any compressor versions and executable hashes; and their literal argument lists. Download that archive and keep the recorded `.sra` basename, because the converter uses it in FASTQ read headers. Create the temporary directory named by `--temp` first.
-
-For `fastq.gz`, run the recorded `fasterq` and `pigz` argument lists as a pipeline, writing the compressed output to the record's input path. For `fastq` with compressor method `none`, run the recorded converter command with `--outfile` and move its completed output to the record's input path without compression. The recorded `.partial` output suffix is a filename; keep its bytes unchanged when moving the completed file. Check the expected read and base totals and resulting FASTQ digest before running RAD. When present, `sequence_quality_sha256` hashes each sequence followed by LF and its quality string followed by LF, in read order; it excludes FASTQ headers. These inputs retain the complete original quality strings and technical reads.
+Pass that plain FASTQ to `--input`. For a tar archive, extract the exact member
+listed in `input_acquisition.member`. For Le Brigand MOB, concatenate the gzip
+files in the order listed in `input_acquisition.components`.
 
 For a matched official CellRanger barcode file, remove only a terminal `-1`
 suffix and retain one 16-base barcode per line; a different gzip timestamp or
 compression level is allowed when the canonical matched-set hash agrees.
 The run record provides the reference definition and dataset accession.
+
+### SRA inputs
+
+Use the full-quality archive listed in the input record. Keep the recorded
+`.sra` basename because it contributes to the FASTQ headers. The benchmark used
+SRA Toolkit 3.4.1 and, for P8 whole-transcriptome, pigz 2.4.
+[Pinned SRA Toolkit distribution](https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/3.4.1/sratoolkit.3.4.1-alma_linux64.tar.gz)
+
+| SRA Toolkit artifact | SHA-256 |
+|---|---|
+| `sratoolkit.3.4.1-alma_linux64.tar.gz` | `f4850a32975596ca0755d928b166ecb0095918284ea992fba10f1acb3fcff64d` |
+| `fasterq-dump-orig.3.4.1` | `b3a4dcd4078c1867bc980fecde4333efadd435e5867d7a834cd3b0a40c419d9f` |
+
+Run the command for the selected input in the directory containing its archive.
+
+```bash
+set -o pipefail
+mkdir -p tmp fasterq_tmp
+
+# Measles P7
+fasterq-dump-orig.3.4.1 SRR28349077.sra --split-spot --include-technical --min-read-len 0 \
+  --threads 16 --mem 256M --temp tmp --outfile Measles-P7.local3.4.1.fastq.partial
+
+# Measles P8 V(D)J-enriched
+fasterq-dump-orig.3.4.1 SRR28349076.sra --split-spot --include-technical --min-read-len 0 \
+  --threads 16 --mem 256M --temp tmp --outfile Measles-P8-VDJ-enriched.local3.4.1.fastq.partial
+
+# Measles P8 whole-transcriptome
+fasterq-dump-orig.3.4.1 SRR28349078.sra --split-spot --include-technical --min-read-len 0 \
+  --stdout --threads 16 --mem 256M --temp fasterq_tmp | pigz -n -c -p 8 > Measles-P8-WTA.fastq.gz
+
+# Isosceles ovarian
+fasterq-dump-orig.3.4.1 SRR26865982.sra --split-spot --include-technical --min-read-len 0 \
+  --threads 16 --mem 256M --temp tmp --outfile Isosceles-ovarian-GSE248115.local3.4.1.fastq.partial
+```
+
+Move each completed output to its FASTQ input path and check it against the
+record's read count, base count and digests. Where present,
+`sequence_quality_sha256` hashes the sequence and quality lines with LF endings
+in read order, with FASTQ headers omitted.
 
 ## Run discovery and scoring
 

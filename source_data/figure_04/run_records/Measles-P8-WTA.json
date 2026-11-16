@@ -21,49 +21,7 @@
       "basename": "SRR28349078.sra",
       "quality": "full"
     },
-    "converter": {
-      "executable": "fasterq-dump-orig.3.4.1",
-      "version": "3.4.1",
-      "binary_sha256": "b3a4dcd4078c1867bc980fecde4333efadd435e5867d7a834cd3b0a40c419d9f",
-      "distribution_url": "https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/3.4.1/sratoolkit.3.4.1-alma_linux64.tar.gz",
-      "distribution_sha256": "f4850a32975596ca0755d928b166ecb0095918284ea992fba10f1acb3fcff64d"
-    },
-    "compressor": {
-      "executable": "pigz",
-      "version": "pigz 2.4"
-    },
-    "commands": {
-      "fasterq": [
-        "fasterq-dump-orig.3.4.1",
-        "SRR28349078.sra",
-        "--split-spot",
-        "--include-technical",
-        "--min-read-len",
-        "0",
-        "--stdout",
-        "--threads",
-        "16",
-        "--mem",
-        "256M",
-        "--temp",
-        "fasterq_tmp"
-      ],
-      "pigz": [
-        "pigz",
-        "-n",
-        "-c",
-        "-p",
-        "8"
-      ]
-    },
-    "expected_records": 270994675,
-    "expected_bases": 218767452454,
-    "output": {
-      "input_format": "fastq.gz",
-      "bytes": 197324862394,
-      "sha256": "2b3816937fb8182d484f8682935687d7207752e3707bcde251632082de1f9f38",
-      "md5": "d16d4a10d29f54c062b4dfd262d0b7c8"
-    }
+    "expected_bases": 218767452454
   },
   "reference_source": "Matched short-read retained barcodes are a positive proxy, not literal biological ground truth.",
   "dataset_source_accessions": "PRJNA1087553",

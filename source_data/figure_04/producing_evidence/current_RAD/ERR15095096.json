@@ -7,16 +7,6 @@
   "threads": 20,
   "chemistry": "10x_3v3",
   "command": "rad scan-wl -i external_data/figure_04/inputs/ERR15095096.fastq.gz -p CTACACGACGCTCTTCCGATCT -n 16 -w 10x_3v3 -e 0.3 -t 20 -k 10000 --hs-bcs -v -o results/figure_04/ERR15095096/rad",
-  "input_acquisition": {
-    "method": "complete_fastq_input",
-    "source": "ENA ERR15095096",
-    "output": {
-      "input_format": "fastq.gz",
-      "bytes": 83325551299,
-      "sha256": null,
-      "md5": "680c4cda0770944eb4dcd3a2683fe201"
-    }
-  },
   "adapter_seq": "CTACACGACGCTCTTCCGATCT",
   "barcode_length": 16,
   "left_margin": 0,
@@ -34,5 +24,6 @@
   "reference_barcodes": 10281,
   "native_receipt_sha256": "aa87f9eba6dcdaec1962660ab2037522fd6b791f88a1b431299e2d7ef39ab662",
   "reference_sha256": "5f1d2aeb0c1261e2092e1069e34a8de7af96cdc4da197241e23ee8ffd6224bf7",
-  "reference_barcode_sha256": "b63e5a89df2457f853d386d132636c67c3bead75f53b6e874a6977d6a84eba7d"
+  "reference_barcode_sha256": "b63e5a89df2457f853d386d132636c67c3bead75f53b6e874a6977d6a84eba7d",
+  "input_record": "source_data/figure_04/run_records/ERR15095096.json"
 }

@@ -11,16 +11,6 @@
   "input_records": 119016231,
   "input_format": "fastq.gz",
   "reference_barcode_sha256": "fc0cd1bed64e1daa374237cfd03c95707ec6f2eacd7bc277b6ee9a0484e8eaa1",
-  "input_acquisition": {
-    "method": "complete_fastq_input",
-    "source": "https://longbench-data.s3.ap-southeast-2.amazonaws.com/raw/fastq/SN_ONT.fastq.gz",
-    "output": {
-      "input_format": "fastq.gz",
-      "bytes": 90056019300,
-      "sha256": "62e75b222c7046cfa0297ca59f56a26fdb923e3307edda0bb69701713719801a",
-      "md5": "6d5a73fbb1434b570d82df91d4d59d6a"
-    }
-  },
   "reference_source": "Matched short-read retained barcodes are a positive proxy, not literal biological ground truth.",
   "dataset_source_accessions": "GSE303762; PRJNA1171488; https://mritchielab.github.io/LongBench.io/",
   "chemistry": "10x_3v3.1",

@@ -7,16 +7,6 @@
   "threads": 20,
   "chemistry": "10x_3v3.1",
   "command": "rad scan-wl -i external_data/figure_04/inputs/Hipp_SN_m3_ONT.fastq.gz -o results/figure_04/Hipp_SN_m3_ONT/rad -p CTACACGACGCTCTTCCGATCT -n 16 -e 0.3 -w 10x_3v3.1 -t 20 -k 10000",
-  "input_acquisition": {
-    "method": "complete_fastq_input",
-    "source": "https://data.nemoarchive.org/biccn/grant/rf1_tilgner/tilgner/transcriptome/sncell/oxford_nanopore/human/raw/Hipp_SN_m3_ONT.fastq.tar",
-    "output": {
-      "input_format": "fastq.gz",
-      "bytes": 70307578698,
-      "sha256": null,
-      "md5": "418b120ebada8172b8740a4741a64eb1"
-    }
-  },
   "adapter_seq": "CTACACGACGCTCTTCCGATCT",
   "barcode_length": 16,
   "left_margin": 0,
@@ -34,5 +24,6 @@
   "reference_barcodes": 10780,
   "native_receipt_sha256": "d39d87898f0749cacb2a985c17d06e1037d6c9470c3db5fdb1b70bb6e16dd1e9",
   "reference_sha256": "d2e95471d8eeb7368a9b093a03cfc92e2c96bb97c7fd995406c2174162f77b73",
-  "reference_barcode_sha256": "8a807e9368d30aaf2aa9e952ea789d72dc2b3575fb9b4e64b8d12f5d87bd9312"
+  "reference_barcode_sha256": "8a807e9368d30aaf2aa9e952ea789d72dc2b3575fb9b4e64b8d12f5d87bd9312",
+  "input_record": "source_data/figure_04/run_records/Hipp_SN_m3_ONT.json"
 }

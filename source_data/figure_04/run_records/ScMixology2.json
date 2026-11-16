@@ -11,16 +11,6 @@
   "input_records": 25164948,
   "input_format": "fastq.gz",
   "reference_barcode_sha256": "f9db9041753aabdde48539845174b5b299c0725c5f846df3d0ee35b424d56c50",
-  "input_acquisition": {
-    "method": "complete_fastq_input",
-    "source": "GSE154870; PRJEB54718/ERR9958136; 10.26188/20335203.v1",
-    "output": {
-      "input_format": "fastq.gz",
-      "bytes": 25955360585,
-      "sha256": "97c03138bd24d33ee63df5ea7a3aadef1b14b4a8271c87e232065363c88107ae",
-      "md5": "484ecae82cebc65584f844c7714566de"
-    }
-  },
   "reference_source": "Matched Cell Ranger whitelist of 248 retained barcodes is a positive proxy, not exhaustive biological negative truth. Metrics are an operational concordance comparison, and tool execution sources are heterogeneous; see validation_tier and source_method.",
   "dataset_source_accessions": "GSE154870; PRJEB54718/ERR9958136; 10.26188/20335203.v1",
   "chemistry": "10x_3v3",

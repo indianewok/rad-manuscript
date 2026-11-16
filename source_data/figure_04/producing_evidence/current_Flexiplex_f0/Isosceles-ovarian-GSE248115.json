@@ -50,21 +50,6 @@
     "role": "Scoring only"
   },
   "commands": {
-    "input_stream": [
-      "fasterq-dump-orig.3.4.1",
-      "external_data/figure_04/inputs/SRR26865982.sra",
-      "--split-spot",
-      "--include-technical",
-      "--min-read-len",
-      "0",
-      "--threads",
-      "16",
-      "--mem",
-      "256M",
-      "--temp",
-      "results/figure_04/Isosceles-ovarian-GSE248115/Flexiplex/converter_tmp",
-      "--stdout"
-    ],
     "discovery": [
       "flexiplex",
       "-d",
@@ -88,7 +73,6 @@
       "results/figure_04/Isosceles-ovarian-GSE248115/Flexiplex/Isosceles_barcodes_counts.txt"
     ]
   },
-  "command": "fasterq-dump-orig.3.4.1 external_data/figure_04/inputs/SRR26865982.sra --split-spot --include-technical --min-read-len 0 --threads 16 --mem 256M --temp results/figure_04/Isosceles-ovarian-GSE248115/Flexiplex/converter_tmp --stdout | flexiplex -d 10x3v3 -f 0 -e 2 -p 16 -n results/figure_04/Isosceles-ovarian-GSE248115/Flexiplex/Isosceles; python3 external_data/software/flexiplex/scripts/flexiplex_filter/main.py --whitelist external_data/figure_04/catalogues/3M-february-2018-3v3.txt --outfile results/figure_04/Isosceles-ovarian-GSE248115/Flexiplex/selected_native.tsv results/figure_04/Isosceles-ovarian-GSE248115/Flexiplex/Isosceles_barcodes_counts.txt",
   "environment": {
     "PYTHONHASHSEED": "0",
     "OMP_NUM_THREADS": "1",
@@ -117,5 +101,6 @@
   "native_receipt_sha256": "338c0f4e04231ea1508da57efa250b23a7d686ebc033633128dff78f047d21d3",
   "dependency_lock": "scripts/figure_04/flexiplex_f0/requirements.txt",
   "scope": "Whitelist detection and filtering",
-  "display_dataset": "Isosceles-ovarian-GSE248115"
+  "display_dataset": "Isosceles-ovarian-GSE248115",
+  "execution_script": "scripts/figure_04/flexiplex_f0/run_Isosceles-ovarian-GSE248115.sh"
 }

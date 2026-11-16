@@ -50,21 +50,6 @@
     "role": "Scoring only"
   },
   "commands": {
-    "input_stream": [
-      "fasterq-dump-orig.3.4.1",
-      "external_data/figure_04/inputs/SRR28349076.sra",
-      "--split-spot",
-      "--include-technical",
-      "--min-read-len",
-      "0",
-      "--stdout",
-      "--threads",
-      "16",
-      "--mem",
-      "256M",
-      "--temp",
-      "results/figure_04/Measles-P8-VDJ-enriched/Flexiplex/converter_tmp"
-    ],
     "discovery": [
       "flexiplex",
       "-d",
@@ -88,7 +73,6 @@
       "results/figure_04/Measles-P8-VDJ-enriched/Flexiplex/barcodes_barcodes_counts.txt"
     ]
   },
-  "command": "fasterq-dump-orig.3.4.1 external_data/figure_04/inputs/SRR28349076.sra --split-spot --include-technical --min-read-len 0 --stdout --threads 16 --mem 256M --temp results/figure_04/Measles-P8-VDJ-enriched/Flexiplex/converter_tmp | flexiplex -d 10x3v3 -f 0 -e 2 -p 16 -n results/figure_04/Measles-P8-VDJ-enriched/Flexiplex/barcodes; python3 external_data/software/flexiplex/scripts/flexiplex_filter/main.py --whitelist external_data/figure_04/catalogues/3M-february-2018-3v3.txt --outfile results/figure_04/Measles-P8-VDJ-enriched/Flexiplex/selected_native.tsv results/figure_04/Measles-P8-VDJ-enriched/Flexiplex/barcodes_barcodes_counts.txt",
   "environment": {
     "PYTHONHASHSEED": "0",
     "OMP_NUM_THREADS": "1",
@@ -117,5 +101,6 @@
   "native_receipt_sha256": "89b420b835bf3d331163ded2e925700d7a11db55ece14efcfcad8c77cb4262e9",
   "dependency_lock": "scripts/figure_04/flexiplex_f0/requirements.txt",
   "scope": "Whitelist detection and filtering",
-  "display_dataset": "P8-enriched"
+  "display_dataset": "P8-enriched",
+  "execution_script": "scripts/figure_04/flexiplex_f0/run_Measles-P8-VDJ-enriched.sh"
 }

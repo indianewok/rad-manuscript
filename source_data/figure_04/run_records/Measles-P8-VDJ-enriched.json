@@ -21,45 +21,8 @@
       "basename": "SRR28349076.sra",
       "quality": "full"
     },
-    "converter": {
-      "executable": "fasterq-dump-orig.3.4.1",
-      "version": "3.4.1",
-      "binary_sha256": "b3a4dcd4078c1867bc980fecde4333efadd435e5867d7a834cd3b0a40c419d9f",
-      "distribution_url": "https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/3.4.1/sratoolkit.3.4.1-alma_linux64.tar.gz",
-      "distribution_sha256": "f4850a32975596ca0755d928b166ecb0095918284ea992fba10f1acb3fcff64d"
-    },
-    "compressor": {
-      "method": "none",
-      "version": "none; plain FASTQ"
-    },
-    "commands": {
-      "fasterq": [
-        "fasterq-dump-orig.3.4.1",
-        "SRR28349076.sra",
-        "--split-spot",
-        "--include-technical",
-        "--min-read-len",
-        "0",
-        "--threads",
-        "16",
-        "--mem",
-        "256M",
-        "--temp",
-        "tmp",
-        "--outfile",
-        "Measles-P8-VDJ-enriched.local3.4.1.fastq.partial"
-      ],
-      "pigz": []
-    },
-    "expected_records": 92337198,
     "expected_bases": 98723180989,
-    "sequence_quality_sha256": "96e83a36acf7c43abaeef5f4b3c40d682ece1417e812f96996dc3d00ac0e6969",
-    "output": {
-      "input_format": "fastq",
-      "bytes": 211042427474,
-      "sha256": "dfcbd0e59e1f8fb4fe5e3e2346239a73c790a8e11cbc4720777c7605c91c4034",
-      "md5": null
-    }
+    "sequence_quality_sha256": "96e83a36acf7c43abaeef5f4b3c40d682ece1417e812f96996dc3d00ac0e6969"
   },
   "reference_source": "Matched short-read retained barcodes are a positive proxy, not literal biological ground truth.",
   "dataset_source_accessions": "PRJNA1087553",

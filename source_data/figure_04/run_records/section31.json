@@ -11,16 +11,6 @@
   "input_records": 377043,
   "input_format": "fastq",
   "reference_barcode_sha256": "56f4277e3bb23849ad8d64b489c846e16b25edd82bb076ba0919eff03dff30fd",
-  "input_acquisition": {
-    "method": "complete_fastq_input",
-    "source": "Controlled EGA file EGAF00008107351",
-    "output": {
-      "input_format": "fastq",
-      "bytes": 758841767,
-      "sha256": "c2e48c75a86fad2925f4c61317ce03a1050a582a24e48efeb75c3e4e3298b187",
-      "md5": "8638fffcdb88b35cde5306422a47c8f2"
-    }
-  },
   "reference_source": "Author Seurat/on-tissue mask within the complete 4,992-barcode Visium-v1 design; off-mask does not prove biological emptiness.",
   "dataset_source_accessions": "EGAD00001011062; EGAS00001007337; EGAC00001003294; 10.5281/zenodo.7961605",
   "chemistry": "10x_Vis_V1",
