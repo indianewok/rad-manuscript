@@ -2,13 +2,13 @@
 
 The Figure 5 guide covers receptor recovery in RAGE-seq and the three-component barcode comparison in LR-Split-seq. [Methods, commands and examples](../../docs/figure_05.md).
 
-## RAGE-seq receptor reads
+## RAGE-seq receptor counts
 
 | Table | Contents |
 |---|---|
 | [Per-cell receptor counts](receptor_counts.tsv) | Native, corrected-only and total assigned reads by tool, barcode, cell type and receptor class |
 | [Receptor totals](receptor_totals.tsv) | The same counts summed by tool |
-| [Cell-type totals](receptor_identity_summary.tsv), [cell-type labels](receptor_cell_identity_map.csv) | Counts and barcode identities for each cell type |
+| [Cell-type totals](receptor_identity_summary.tsv), [cell-type labels](receptor_cell_identity_map.csv) | Cell-type annotations and their totals for the receptor-count table |
 
 Total assigned reads equal native plus corrected-only reads. [Worked example](../../data/examples/figure_05/PREVIEW.md), [Flexiplex execution](provenance/Flexiplex_receptor_execution.md).
 

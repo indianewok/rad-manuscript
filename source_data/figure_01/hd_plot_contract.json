@@ -7,7 +7,5 @@
   "other_RAD_source_stage": "retained rad_demux column; not an identity-equivalent count source",
   "per_bin_creation_provenance": "unrecovered; total equality alone does not prove barcode-to-bin mapping",
   "required_grid_columns": "reconstructed with exact raw/filtered reference identity",
-  "shared_color_range": "pending Seurat nCount_Spatial metadata",
-  "status": "partial; triptych not rendered",
   "transformation": "log10(count*1e6/total), no pseudocount"
 }

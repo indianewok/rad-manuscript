@@ -71,7 +71,7 @@ python3 scripts/figure_07/extract_examples.py \
 
 ## 4. Plot gene calls, fold changes and confidence: panels A–C
 
-**Panel A** uses seven [Venn-region counts](../source_data/figure_07/plotted/panel_A_venn_regions.tsv): 126 RAD-only, 26 BLAZE-only, 24 Flexiplex-only, 32 RAD–BLAZE-only, 67 RAD–Flexiplex-only, 20 BLAZE–Flexiplex-only and 443 shared by all three. These total 668 RAD, 521 BLAZE and 554 Flexiplex reference-supported calls.
+**Panel A** uses seven [Venn-region counts](../source_data/figure_07/plotted/panel_A_venn_regions.tsv): 126 RAD-only, 26 BLAZE-only, 24 Flexiplex-only, 32 RAD–BLAZE-only, 67 RAD–Flexiplex-only, 20 BLAZE–Flexiplex-only and 443 shared by all three. These total 668 RAD, 521 BLAZE and 554 Flexiplex reference-supported calls. Applying the reference thresholds to the common-gene analysis yields 654 RAD, 522 BLAZE and 556 Flexiplex calls. [Common-gene Venn counts](../source_data/figure_07/venn_regions.tsv) · [Directional membership](../source_data/figure_07/directional_membership.tsv)
 
 **Panel B** plots signed log2 fold change against `−log10(FDR)`. The [RAD](../source_data/figure_07/plotted/panel_B_RAD.csv.gz), [Flexiplex](../source_data/figure_07/plotted/panel_B_Flexiplex.csv.gz) and [BLAZE](../source_data/figure_07/plotted/panel_B_BLAZE.csv.gz) tables give the coordinates and gene labels.
 

@@ -28,7 +28,7 @@ python3 scripts/figure_05/exclusive_receptor_counts.py \
   --tool Flexiplex --corrected-column cumulative
 ```
 
-Use `--corrected-column exclusive` for RAD and BLAZE. Panel F uses paired, two-sided t-tests on barcode-matched cell counts. [Expected output](../data/examples/figure_05/flexiplex_receptor_output.tsv), [worked examples](../data/examples/figure_05/PREVIEW.md).
+Use `--corrected-column exclusive` for RAD and BLAZE. Panel F shows total assigned reads per barcode, including reads without a receptor alignment. The paired, two-sided t-tests compare shared barcodes within each cell type. [Expected output](../data/examples/figure_05/flexiplex_receptor_output.tsv), [worked examples](../data/examples/figure_05/PREVIEW.md).
 
 ## LR-Split-seq demultiplexing
 
@@ -40,6 +40,8 @@ The C2C12 LR-Split-seq comparison uses long-read library **SRR13948564**, contai
 | FLAMESv2 component workflow | FLAMES 2.7.1, commit `bf2211a8da1e1c7327370ab12479ae70e1d37cd8`, containing Flexiplex 1.02.6; three 8-nt barcode components, per-component edit distance two and buffer one, flank edit distance three, 10-nt UMI, terminal T8 segment, `reverse_complement=FALSE`, four threads | [Executed ED2 wrapper](https://github.com/indianewok/rad-manuscript/blob/flames-configs-2026-10-30/source_data/figure_05/provenance/flames_paper_snapshot/executed/flexiplex_ed2_native/run_native_ed2.R), [run manifest](../source_data/figure_05/provenance/splitseq/component_ED2_run_manifest.txt) |
 
 The long-read input SHA-256 is `62acb6d466c37ba89632081526410bdc3ef73c0c68d778d40e05f03181f2a4f7`. The FLAMESv2 benchmark used the published component layout and increased each barcode component's edit-distance limit from one to two. [Published layout](https://github.com/indianewok/rad-manuscript/blob/flames-configs-2026-10-30/source_data/figure_05/provenance/flames_paper_snapshot/upstream/ChangqingW_FLAMES_figures/files/config_splitseq.json) · [Pinned configuration release](pinned_flames_configs.md)
+
+The archived RAD layout uses the original catalog paths. To run from this repository, make a copy of the layout and point the `whitelist` cells for `barcode_1` to [the reverse-complemented reverse-transcription catalog](../data/figure_05/splitseq_bc2_reverse_complement.txt), and for `barcode_2` and `barcode_3` to [the reverse-complemented ligation catalog](../data/figure_05/splitseq_bc1_reverse_complement.txt). Run the recorded RAD command with the local FASTQ, layout and output paths. [Calibrated layout](../source_data/figure_05/provenance/splitseq/RAD_executed_layout.csv)
 
 ## Physical-cell and UMI counting
 
@@ -74,7 +76,7 @@ Use `--format rad` for the RAD example. [RAD assignments](../data/examples/figur
 
 Panel G reports the fraction of input reads assigned with three valid barcode components. RAD assigns 2,498,488 distinct original reads, and the FLAMESv2 component workflow assigns 1,346,238, corresponding to 43.34% and 23.35% of the full input.
 
-Panel H plots the published short-read UMI count (`published_sr_umi_cts`) on the x-axis and the long-read UMI count for the same cell on the y-axis. Each workflow retains its read depth. Ordinary least squares uses untransformed counts and a free intercept. Both plot axes use a logarithmic scale. [Per-cell table](../source_data/figure_05/splitseq_umi_panel_ED2_568.tsv), [sample-specific tables](../source_data/figure_05/README.md#lr-split-seq-panels-g-and-h), [regression coefficients](../source_data/figure_05/splitseq_umi_panel_ED2_regressions.tsv).
+Panel H plots the published short-read UMI count (`published_sr_umi_cts`) on the x-axis and the long-read UMI count for the same cell on the y-axis. Each workflow retains its read depth. Ordinary least squares uses untransformed counts and a free intercept. Both plot axes use a logarithmic scale. Spearman correlations for myoblast cells, myoblast nuclei and myotube nuclei are 0.9823, 0.9798 and 0.9340 for RAD and 0.9038, 0.9426 and 0.8380 for FLAMESv2. [Per-cell table](../source_data/figure_05/splitseq_umi_panel_ED2_568.tsv), [sample-specific tables](../source_data/figure_05/README.md#lr-split-seq-panels-g-and-h), [regression coefficients](../source_data/figure_05/splitseq_umi_panel_ED2_regressions.tsv).
 
 | Sample | Physical cells | RAD UMIs | FLAMESv2 component UMIs |
 |---|---:|---:|---:|

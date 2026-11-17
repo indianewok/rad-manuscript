@@ -4,9 +4,6 @@
   "version": "1.02.6",
   "selected_barcodes": 5907,
   "selected_set_sha256": "74c934a536a8d323029d4c2a88ede029d6acc1ee24ea34caf247defeb928e8ff",
-  "selected_set_matches_current_figure4": true,
-  "current_callset_path": "data/figure_04/identifier_sets/LongBench-SC-ONT.Flexiplex.txt.gz",
-  "current_callset_sha256": "2602cb69d3e7a28b56f3310630afa1571f6ca3b64a1c5d381874b6567c658abd",
   "source_selected_list": {
     "path": "external_data/reviewer_comment_data/LongBench_comps/full_A_to_B_audit_20260731/provenance/selected_whitelists/flex_v1026/SC_ONT/SC_flexiplex_whitelist.txt",
     "sha256": "74c934a536a8d323029d4c2a88ede029d6acc1ee24ea34caf247defeb928e8ff"
@@ -26,5 +23,9 @@
   "recorded_discovery_flank_edit_distance": 0,
   "recorded_producer_threads": 16,
   "demultiplexing_binary_sha256": "38dccd37f1747e5105b62eacde572b7e4c5206fb925dc1fdbe8210ffe8b1e8c4",
-  "demultiplexing_flank_edit_distance": 8
+  "demultiplexing_flank_edit_distance": 8,
+  "selected_set_matches_recorded_flank_zero_run": true,
+  "recorded_flank_zero_callset_path": "data/figure_04/identifier_sets/LongBench-SC-ONT.Flexiplex.txt.gz",
+  "recorded_flank_zero_callset_sha256": "2602cb69d3e7a28b56f3310630afa1571f6ca3b64a1c5d381874b6567c658abd",
+  "plotted_discovery_flank_edit_distance": 8
 }

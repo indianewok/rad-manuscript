@@ -152,4 +152,4 @@ From the repository root:
 python3 scripts/revision/figure_3.py validate
 ```
 
-The figure uses one-way ANOVA. To render the source tables locally, run `python3 scripts/revision/figure_3.py render`. The command writes plots to `results/figure_03/`. [Table schema](../source_data/figure_03/schema.json) · [Checksums](../source_data/figure_03/checksums.json)
+The validator checks the deposited counts and their denominators. [Table schema](../source_data/figure_03/schema.json) · [Checksums](../source_data/figure_03/checksums.json)

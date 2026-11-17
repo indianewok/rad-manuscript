@@ -43,7 +43,7 @@ F1        = 2TP / (2TP + FP + FN)
 
 The figure uses 111 input–tool observations. The paired and modality tables organize the same 333 metric values. [Plotted metrics](../source_data/figure_04/plotted_checkpoint/plotted_metrics.tsv) · [F1](../source_data/figure_04/plotted_checkpoint/paired_f1.tsv) · [Precision](../source_data/figure_04/plotted_checkpoint/paired_precision.tsv) · [Recall](../source_data/figure_04/plotted_checkpoint/paired_recall.tsv) · [Panel sources](../source_data/figure_04/plotted_checkpoint/panel_bindings.json)
 
-The barcode-count table gives the number of calls, reference size, TP, FP, and FN for each run. [Barcode counts](../source_data/figure_04/barcode_detection_metrics.tsv) · [Run and plot comparison](../source_data/figure_04/plotted_checkpoint/producer_comparison.tsv)
+Use the plotted metrics for comparisons across the 37 inputs. RAD has the highest F1 on 25 inputs, and BLAZE and Flexiplex each lead on six. The barcode-count table gives the number of calls, reference size, TP, FP, and FN for the recorded runs. For LongBench SC-ONT, it gives the Flexiplex flank-distance-zero result. The figure uses flank distance eight, which gives Flexiplex the highest F1 on that input. [Barcode counts](../source_data/figure_04/barcode_detection_metrics.tsv) · [Differences between the run and plot tables](../source_data/figure_04/plotted_checkpoint/producer_comparison.tsv) · [LongBench SC-ONT flank-distance-zero run](../source_data/figure_04/producing_evidence/LongBench-SC-ONT_Flexiplex_whitelist_provenance.json)
 
 ERR15095097 is deposited under the MPNST2 sample label. Its raw-read barcode identities match the 4,602-barcode MPNST1 (2020_23) short-read reference used for scoring. ERR15095096 uses the MPNST2 reference. [Deposited sample metadata](https://www.ebi.ac.uk/biostudies/files/E-MTAB-15190/E-MTAB-15190.sdrf.txt) · [ERR15095097 scoring record](../source_data/figure_04/reference_scoring/ERR15095097.json)
 
@@ -101,7 +101,7 @@ python3 scripts/revision/figures_124_steps/recompute_detection_metrics.py \
   results/figure4_example.tsv --expected-inputs 3
 ```
 
-Use `source_data/figure_04/barcode_detection_metrics.tsv` and `--expected-inputs 37` to recalculate scores for the full benchmark. [Expected example output](../data/examples/figure_04/three_input_metrics_recomputed.tsv)
+Use `source_data/figure_04/barcode_detection_metrics.tsv` and `--expected-inputs 37` to recalculate scores from the recorded barcode counts. [Expected example output](../data/examples/figure_04/three_input_metrics_recomputed.tsv)
 
 The next commands show how to apply the lymph-node reference annotations and check the plotted metrics. [Lymph-node annotations](../data/examples/figure_04/immune_reference_annotation_example.tsv)
 

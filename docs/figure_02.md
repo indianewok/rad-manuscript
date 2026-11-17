@@ -4,7 +4,7 @@ Figure 2 compares barcode discovery and assignment on 4,993,805 ScTagger-L reads
 
 ![Figure 2](../figures/figure_02/prism/figure_02.png)
 
-[Figure legend](current_figure_legends.md) · [Source tables](../source_data/figure_02/) · [Worked examples](../data/examples/figure_02/) · [Nanopore2023 quality sweep](../source_data/figure_02/full_read_quality/) · [Nanopore2018 quality sweep](../source_data/figure_02/full_read_quality_2018/)
+[Figure legend](current_figure_legends.md#figure-2) · [Source tables](../source_data/figure_02/) · [Worked examples](../data/examples/figure_02/) · [Nanopore2023 quality sweep](../source_data/figure_02/full_read_quality/) · [Nanopore2018 quality sweep](../source_data/figure_02/full_read_quality_2018/)
 
 ## Discovery software and parameters
 
@@ -56,7 +56,7 @@ For each Nanopore2023 quality shift, BLAZE recalculated how many extracted barco
 
 [RAD command](../source_data/figure_02/plotted_assignment/producing_evidence/RAD_command.sh) · [RAD layout](../source_data/figure_02/plotted_assignment/producing_evidence/RAD_input_layout.csv) · [RAD and Flexiplex runs](../source_data/figure_02/plotted_assignment/producing_evidence/) · [Flexiplex diagnostic build](../vendor/flexiplex-audit/) · [BLAZE assignment record](../source_data/figure_02/producing_evidence/assignment_BLAZE_provenance.json)
 
-Panel D reports native-correct reads from the detected-list runs; its red Flexiplex increment is the additional native-correct recovery when the complete truth list is supplied. Panels E and G display per-barcode counts for the 5,000 truth targets. Their Flexiplex distributions use the supplied-truth-list run. Panel H uses the discovered Flexiplex list and the truth-supported BLAZE targets. The [per-panel tables](../source_data/figure_02/plotted_assignment/) identify each graph's assignment condition and barcode identities.
+Panel D reports native-correct reads from the assignment runs listed above. The red Flexiplex increment is the additional native-correct recovery when the complete truth list is supplied. Panels E and G display per-barcode counts for the 5,000 truth targets. Their Flexiplex distributions use the supplied-truth-list run. Panel H uses the discovered Flexiplex list and the truth-supported BLAZE targets. The [per-panel tables](../source_data/figure_02/plotted_assignment/) identify each graph's assignment condition and barcode identities.
 
 ## Read classification
 
@@ -73,7 +73,7 @@ An original read contributes to assignment counts when it has exactly one emitte
 | Multiple outputs excluded | 9,048 | 0 | 364 |
 | Unassigned | 2,180,396 | 2,337,652 | 2,849,051 |
 
-Each column partitions all 4,993,805 input reads. Panel F's correction-only pies use corrected-correct plus corrected-incorrect assignments as their denominator. The total bars in panels G and H use the corresponding corrected category. Per-barcode distributions retain zero counts for selected targets and blank entries for targets absent from a detected list. BLAZE's panel H distribution covers its 5,000 truth targets; assignments to its fifteen additional selected targets contribute to the total bar separately.
+Each column partitions all 4,993,805 input reads. The [full-catalog RAD run](../source_data/figure_02/producing_evidence/assignment_RAD_run.json) used the 3v3 catalog as the global list and the source barcodes as the custom list. Its counts are reported in a [separate assignment summary](../source_data/figure_02/assignment_RAD_summary.json). Panel F's correction-only pies use corrected-correct plus corrected-incorrect assignments as their denominator. The total bars in panels G and H use the corresponding corrected category. Per-barcode distributions retain zero counts for selected targets and blank entries for targets absent from a detected list. BLAZE's panel H distribution covers its 5,000 truth targets; assignments to its fifteen additional selected targets contribute to the total bar separately.
 
 ## Reproduce the RAD assignment table
 
