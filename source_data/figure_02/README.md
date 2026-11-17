@@ -16,6 +16,10 @@ The complete quality-sweep calculations are described in the [Nanopore2023](full
 
 ## Read assignment: panels D–H
 
+The November figure uses the [full-catalog RAD run](producing_evidence/assignment_RAD_run.json) and the 3,004-barcode Flexiplex detected list. [RAD assignment summary](assignment_RAD_summary.json) · [November run definitions](../../docs/figure_02.md#assignment-runs-and-plotted-barcode-sets)
+
+## Earlier supplied-list comparison
+
 | File | Contents |
 |---|---|
 | [assignment_states.tsv](assignment_states.tsv) | Six-state partition of all input reads for each tool |

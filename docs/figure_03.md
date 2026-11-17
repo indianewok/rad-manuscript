@@ -6,6 +6,8 @@ Figure 3 measures assignments to supplied barcode lists that exclude the referen
 
 ![Figure 3](../figures/figure_03/prism/figure_03.png)
 
+The November artwork uses different RAGE-seq results in panels B–C and different LongBench counts in several E–G series. The linked tables and commands describe the deposited runs.
+
 ## Supplied-list challenges
 
 ScTagger-L, LongBench SC-ONT and RAGE-seq used the same procedure.

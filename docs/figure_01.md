@@ -33,7 +33,7 @@ wall hours = (discovery seconds + demultiplexing seconds) / 3,600
 peak GB = max(discovery maxRSS, demultiplexing maxRSS) × 1,024 / 1,000,000,000
 ```
 
-The [phase table](../source_data/figure_01/accepted_phase_records.tsv) contains 108 measurements that form 54 paired repetitions. The memory plot uses the raw KiB numbers divided by one million. Multiply its coordinates by 1.024 to obtain decimal GB. Means and sample standard deviations use the three repetitions in each dataset–tool–thread condition. The [combined repetitions](../source_data/figure_01/combined_replicates.tsv) and [summary table](../source_data/figure_01/timing_summary.tsv) supply panels B and C.
+The [phase table](../source_data/figure_01/accepted_phase_records.tsv) contains 108 measurements that form 54 paired repetitions. The memory plot uses the raw KiB numbers divided by one million. Multiply its coordinates by 1.024 to obtain decimal GB. Means and sample standard deviations use the three repetitions in each dataset–tool–thread condition. The [combined repetitions](../source_data/figure_01/combined_replicates.tsv) and [summary table](../source_data/figure_01/timing_summary.tsv) supply panels C and D.
 
 The [SN-ONT/RAD/four-thread example](../data/examples/figure_01/) includes the commands and GNU-time logs for one complete repetition. Parse its measurements and combine the complete phase table with:
 
@@ -52,7 +52,7 @@ python3 scripts/revision/figures_124_steps/combine_timing.py \
 
 ## Visium HD barcode counts
 
-Panel D displays the Space Ranger `in_tissue` mask, Percula counts visualized in Seurat and RAD counts on a common 16-µm grid. RAD barcode pairs are mapped to spatial coordinates, then eight adjacent 2-µm positions along each axis are combined into one 16-µm bin. The RAD matrix contains barcode-discovery counts. [Count definition](../source_data/figure_01/producing_evidence/HD_selected_count_definition.json) · [Stage-count comparison](../source_data/figure_01/hd_stage_counts.tsv)
+Panel B displays the Space Ranger `in_tissue` mask, Percula counts visualized in Seurat and RAD counts on a common 16-µm grid. RAD barcode pairs are mapped to spatial coordinates, then eight adjacent 2-µm positions along each axis are combined into one 16-µm bin. The RAD matrix contains barcode-discovery counts. [Count definition](../source_data/figure_01/producing_evidence/HD_selected_count_definition.json) · [Stage-count comparison](../source_data/figure_01/hd_stage_counts.tsv)
 
 The complete grid contains 175,561 bins arranged as 419 × 419 positions. For PBC44593, the plotted value is `log10(RAD_count × 1,000,000 / 45,979,761)` for bins with positive counts. Its 123,658 in-tissue bin identifiers match the Space Ranger filtered barcode set. The count matrix is stored at `checkpoints/figure_01/sample_bin_matrix_16um.csv.gz`; [reference hashes](../source_data/figure_01/hd_grid_reference_sources.json) identify the raw and filtered coordinate sets.
 

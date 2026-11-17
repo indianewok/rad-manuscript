@@ -49,14 +49,13 @@ For each Nanopore2023 quality shift, BLAZE recalculated how many extracted barco
 
 | Plotted data | Tool and version | Input and assignment settings |
 |---|---|---|
-| RAD assignment panels | RAD 1.0.2; `24d5ce47e172222c96cd7dd19e94758d32aa5009` | Uniform Q20; 3v3 layout with a 12-base UMI; the same 5,000 truth barcodes supplied as both the global and custom lists; offensive correction, mutation limits 2/2, chunks of 5,000, 64 threads. |
+| RAD assignment panels | RAD 1.0.2; `24d5ce47e172222c96cd7dd19e94758d32aa5009` | Uniform Q20; 3v3 layout with a 12-base UMI; the complete 3v3 catalog supplied as the global list and the 5,000 source barcodes supplied as the custom list; offensive correction, mutation limits 2/2, chunks of 5,000, 64 threads. |
 | BLAZE assignment panels | BLAZE 2.6.0a0 | Previously extracted Nanopore2023 barcodes were matched with barcode distance 2, minimum Q0 and 5,015 selected targets. New candidates were appended in lexical order to the seed-0 candidate order. |
-| Flexiplex detected-list totals, correction pie, and panel H distribution | Flexiplex 1.02.6 with raw-barcode diagnostic output | Uniform Q20; 3v3, flank distance 8, barcode distance 2, 16 tool threads; 3,004 discovered targets and four compression threads. |
-| Flexiplex per-barcode distributions in panels E and G | Flexiplex 1.02.6 with raw-barcode diagnostic output | Uniform Q20; `-d 10x3v3 -f 8 -e 2 -k TRUTH5000 -p 28`; all 5,000 source barcodes supplied, with four decompression and four compression threads. |
+| Flexiplex assignment panels | Flexiplex 1.02.6 with raw-barcode diagnostic output | Uniform Q20; 3v3, flank distance 8, barcode distance 2, 16 tool threads; 3,004 discovered targets and four compression threads. |
 
-[RAD command](../source_data/figure_02/plotted_assignment/producing_evidence/RAD_command.sh) · [RAD layout](../source_data/figure_02/plotted_assignment/producing_evidence/RAD_input_layout.csv) · [RAD and Flexiplex runs](../source_data/figure_02/plotted_assignment/producing_evidence/) · [Flexiplex diagnostic build](../vendor/flexiplex-audit/) · [BLAZE assignment record](../source_data/figure_02/producing_evidence/assignment_BLAZE_provenance.json)
+[RAD command](../source_data/figure_02/producing_evidence/assignment_RAD_run.json) · [RAD layout](../source_data/figure_02/producing_evidence/assignment_RAD_input_layout.csv) · [Flexiplex assignment command](../source_data/figure_02/producing_evidence/assignment_Flexiplex_command.sh) · [Flexiplex diagnostic build](../vendor/flexiplex-audit/) · [BLAZE assignment record](../source_data/figure_02/producing_evidence/assignment_BLAZE_provenance.json)
 
-Panel D reports native-correct reads from the assignment runs listed above. The red Flexiplex increment is the additional native-correct recovery when the complete truth list is supplied. Panels E and G display per-barcode counts for the 5,000 truth targets. Their Flexiplex distributions use the supplied-truth-list run. Panel H uses the discovered Flexiplex list and the truth-supported BLAZE targets. The [per-panel tables](../source_data/figure_02/plotted_assignment/) identify each graph's assignment condition and barcode identities.
+Panel D reports native-correct reads. The distributions in E, G and H contain 5,000 truth targets each for RAD and BLAZE and 3,004 discovered targets for Flexiplex. Panel G’s per-barcode medians are 371 for RAD, 466 for Flexiplex and 378 for BLAZE.
 
 ## Read classification
 
@@ -66,16 +65,20 @@ An original read contributes to assignment counts when it has exactly one emitte
 
 | Assignment state | RAD | BLAZE | Flexiplex detected list |
 |---|---:|---:|---:|
-| Native correct | 667,965 | 640,957 | 463,613 |
-| Corrected correct | 1,944,306 | 1,881,358 | 1,398,700 |
-| Corrected incorrect | 191,519 | 133,074 | 281,696 |
+| Native correct | 667,984 | 640,957 | 463,613 |
+| Corrected correct | 1,846,854 | 1,881,358 | 1,398,700 |
+| Corrected incorrect | 179,509 | 133,074 | 281,696 |
 | Native incorrect | 571 | 764 | 381 |
-| Multiple outputs excluded | 9,048 | 0 | 364 |
-| Unassigned | 2,180,396 | 2,337,652 | 2,849,051 |
+| Multiple outputs excluded | 8,653 | 0 | 364 |
+| No emitted record | 2,290,234 | 2,337,652 | 2,849,051 |
 
-Each column partitions all 4,993,805 input reads. The [full-catalog RAD run](../source_data/figure_02/producing_evidence/assignment_RAD_run.json) used the 3v3 catalog as the global list and the source barcodes as the custom list. Its counts are reported in a [separate assignment summary](../source_data/figure_02/assignment_RAD_summary.json). Panel F's correction-only pies use corrected-correct plus corrected-incorrect assignments as their denominator. The total bars in panels G and H use the corresponding corrected category. Per-barcode distributions retain zero counts for selected targets and blank entries for targets absent from a detected list. BLAZE's panel H distribution covers its 5,000 truth targets; assignments to its fifteen additional selected targets contribute to the total bar separately.
+Each column partitions all 4,993,805 input reads. The [RAD assignment summary](../source_data/figure_02/assignment_RAD_summary.json) combines reads without an output and reads with multiple outputs under `unassigned`. Panel F's correction-only pies use corrected-correct plus corrected-incorrect assignments as their denominator. The total bars in panels G and H use the corresponding corrected category. Per-barcode distributions retain zero counts for selected targets and blank entries for targets absent from a detected list. BLAZE's panel H distribution covers its 5,000 truth targets; assignments to its fifteen additional selected targets contribute to the total bar separately.
 
-## Reproduce the RAD assignment table
+## Reproduce the full-catalog RAD assignment table
+
+Use the [RAD command](../source_data/figure_02/producing_evidence/assignment_RAD_run.json) to assign reads. Pass the input and resulting FASTQs, the 5,000 truth barcodes and the global catalog to the [assignment scorer](../scripts/figure_02/score_rad_assignments.py).
+
+## Earlier supplied-list comparison
 
 The fixed-5,000 RAD run supplies a `record_audit.tsv.gz` table with the original read ID, known source barcode, observed barcode and assigned barcode. Recalculate the strict assignment states and all 5,000 target rows with:
 
@@ -88,7 +91,7 @@ python3 scripts/figure_02/summarize_plotted_rad_audit.py \
 
 [RAD summary](../source_data/figure_02/plotted_assignment/RAD_assignment_summary.json) · [State counts](../source_data/figure_02/plotted_assignment/RAD_assignment_states.tsv) · [Per-target counts](../source_data/figure_02/plotted_assignment/RAD_assignment_per_target.tsv)
 
-Extract the plotted tables from the Prism project.
+Extract the earlier layout with the supplied-list distributions from its Prism project.
 
 ```bash
 python3 scripts/figure_02/extract_plotted_prism.py \

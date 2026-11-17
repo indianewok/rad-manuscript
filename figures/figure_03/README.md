@@ -6,7 +6,7 @@
 
 ## Off-list experiments
 
-The totals cover all three target lists for each dataset. The per-target distribution uses replicate 1. [Totals](../../source_data/figure_03/offlist_totals.tsv) · [Per-target counts](../../source_data/figure_03/offlist_per_target.tsv.gz)
+The deposited totals cover all three target lists for each dataset. The November artwork uses different RAGE-seq values in panels B–C and different counts in several LongBench series in panels E–G. The per-target distribution uses replicate 1. [Totals](../../source_data/figure_03/offlist_totals.tsv) · [Per-target counts](../../source_data/figure_03/offlist_per_target.tsv.gz)
 
 ## LongBench correction outcomes
 

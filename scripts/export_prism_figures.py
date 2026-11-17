@@ -98,7 +98,7 @@ def prepare(args, root):
     images.mkdir()
     rows, commands = [], []
     for expected in manifest['exports']:
-        if expected.get('import_method') == 'author-supplied saved PNG':
+        if expected.get('import_method'):
             continue
         row = dict(expected)
         source = (args.source_dir / row['source_file']).resolve()
@@ -139,13 +139,13 @@ def verify(args, root):
     def identity(row):
         return row['source_file'], row['image'], row['layout_id']
     retained = [dict(row) for row in manifest['exports']
-                if row.get('import_method') == 'author-supplied saved PNG']
+                if row.get('import_method')]
     for row in retained:
         image = repository_path(root, row['image'])
         if sha256(image) != row['image_sha256']:
-            raise ValueError('Saved PNG changed: ' + row['image'])
+            raise ValueError('Imported PNG changed: ' + row['image'])
     expected = {identity(row): row for row in manifest['exports']
-                if row.get('import_method') != 'author-supplied saved PNG'}
+                if not row.get('import_method')}
     inventory = [identity(row) for row in plan['exports']]
     if not inventory or len(set(inventory)) != len(inventory) or set(inventory) != set(expected):
         raise ValueError('The export plan must contain every re-exportable Prism figure exactly once')
@@ -174,14 +174,14 @@ def verify(args, root):
         public.append({key: value for key, value in row.items()
                        if key not in ['source_path', 'copy_path', 'staged_image', 'repository_source']})
     by_image = {row['image']: row for row in public}
-    public = [row if row.get('import_method') == 'author-supplied saved PNG'
+    public = [row if row.get('import_method')
               else by_image[row['image']] for row in manifest['exports']]
     report = dict(exporter='GraphPad Prism', exporter_version=version, format='PNG',
                   export_script_sha256=sha256(work / 'export.pzc'), exports=public)
     (work / 'verification.json').write_text(json.dumps(report, indent=2) + '\n')
     if not args.check_only:
         (root / 'source_data/prism_exports.json').write_text(json.dumps(report, indent=2) + '\n')
-    print('Verified {} Prism exports and preserved {} saved PNGs; all hashes match'.format(len(rows), len(retained)))
+    print('Verified {} Prism exports and preserved {} imported PNGs; all hashes match'.format(len(rows), len(retained)))
 
 
 def main():
