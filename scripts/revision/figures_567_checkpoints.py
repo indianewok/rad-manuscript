@@ -92,7 +92,7 @@ def main():
                     assert len(r)==17 and int(r[1])>0 and len(r[3])==len(r[4])==1
                     key=tuple(r[i] for i in (0,1,3,4))
                     if key in variants:
-                        # Preserve the historical panel; row identity includes ordinal.
+                        # Keep identical variants at their original row positions.
                         assert variant_lines[key][1]==line, ('conflicting duplicate variant',key)
                         duplicate_rows.append(dict(chrom=key[0],position=key[1],ref=key[2],alt=key[3],first_record=variant_lines[key][0],duplicate_record=n,identical_record=True,policy='retained unchanged; historical panel identity includes record ordinal'))
                     else:variant_lines[key]=(n,line)
@@ -109,7 +109,6 @@ def main():
         test('F6_all_Illumina_hard_calls_reproduced',ref==new and len(ref)==12012,{'released':len(ref),'rebuilt':len(new),'different':sum(ref.get(k)!=new.get(k) for k in set(ref)|set(new))})
         asset(reference,'released_Illumina_labels');asset(rebuilt,'reconstructed_panel_Illumina_labels')
         write(out/'source_data/figure_06/donor_panel_validation.tsv',[dict(donor_order=i+1,donor=t,panel_sites=n,Illumina_exact_hard_calls=12012) for i,t in enumerate(donors)])
-        # Validate CellSNP dimensions, positive integer counts and variant identities.
         scratch=project/'scratch_preservation_20260921/files/longbench_snont_postdemux_vireo_20260803'
         dirs={'RAD':panelbase/'RAD/cellsnp','Flexiplex':scratch/'cellsnp/Flexiplex','BLAZE':scratch/'rebuilds/BLAZE_rebuilt_bulk_panel_tool_postdemux_20260804T135956Z/cellsnp'}
         records=[]

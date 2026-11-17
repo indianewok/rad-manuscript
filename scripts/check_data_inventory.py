@@ -13,8 +13,7 @@ import json
 from pathlib import Path
 from published_files import published_source_files
 
-# These native exports have no header row. Their first record is data, and the
-# column labels below describe the source format rather than changing the file.
+# These exports start with data, so supply their column labels here.
 HEADERLESS_COLUMNS = {
     'source_data/figure_01/hd_16um_filtered_barcodes.tsv.gz': ['barcode'],
     'source_data/figure_01/hd_16um_raw_barcodes.tsv.gz': ['barcode'],

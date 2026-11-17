@@ -1,6 +1,5 @@
 #!/usr/bin/env Rscript
-# Inventory a saved workspace without restoring it into the global environment.
-# No saved function or plotting expression is called and no package is attached.
+# Load the saved objects into an isolated environment for inspection.
 args <- commandArgs(trailingOnly = TRUE)
 if (length(args) != 2L) stop("Usage: Rscript --vanilla figures_124_inventory_workspace.R INPUT.RData OUTPUT.tsv")
 workspace <- new.env(parent = emptyenv())
@@ -18,11 +17,11 @@ describe <- function(name, x) {
 }
 inventory <- list()
 for (name in sort(loaded)) {
-  # Active bindings are reported without evaluating their getter.
+  # Skip active bindings to avoid invoking their getters.
   if (bindingIsActive(name, workspace)) next
   x <- get(name, envir = workspace, inherits = FALSE)
   inventory[[length(inventory) + 1L]] <- describe(name, x)
-  # Metadata slots can be inspected as stored attributes, without Seurat methods.
+  # Inspect stored attributes directly.
   for (slot in intersect(names(attributes(x)), c("meta.data", "images", "assays"))) {
     inventory[[length(inventory) + 1L]] <- describe(paste(name, slot, sep = "@"), attr(x, slot))
   }

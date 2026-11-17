@@ -54,7 +54,7 @@ def copy(i,source,name,**extra):
  provenance[i].append(dict(file=name,source_path=source_label(source),source_sha256=sha(source),source_bytes=source.stat().st_size,excerpt_sha256=sha(dest),scope='complete compact input, copied byte-identically',**extra))
  return dest
 
-# Timing logs are small real root evidence; the COMPLETE marker may be empty.
+# The COMPLETE marker can be empty.
 registry=rows(R/'source_data/figure_01/timing_raw_source_registry.tsv')
 for phase in ('whitelist_detection','demultiplexing'):
  for suffix in ('metrics.tsv','command.sh','status.tsv','COMPLETE'):
@@ -69,11 +69,10 @@ def grid_examples(r,n):
  if hd_seen[state]>=4:return False
  hd_seen[state]+=1;return True
 excerpt(1,R/'source_data/figure_01/hd_RAD_bins.tsv','hd_grid_example.tsv',grid_examples,fields=['bin_id','array_row','array_col','in_tissue'],limit=8)
-# Discovery preview has every barcode for one small public synthetic case.
 copy(2,scratch_root()/'sctagger_sl_three_tool_quality_20260731/inputs/S_truth_barcodes.txt','S_truth_barcodes.txt')
 for tool,sub in [('RAD','rad/scanwl.txt'),('BLAZE','blaze/whitelist.csv'),('Flexiplex_f0','flex_f0/selected.txt'),('Flexiplex_f8','flex_f8/selected.txt')]:
  copy(2,scratch_root()/f'sctagger_sl_three_tool_quality_20260731/runs/S/shift_p01/{sub}',f'S_shift_p01_{tool}.txt')
-# Two actual synthetic reads; no real/controlled FASTQ material enters GitHub.
+# Publish FASTQ examples only from the synthetic input.
 audit=json.loads((R/'validation/figures_124_fastq_identity.json').read_text())
 for key,name in [('L_flatQ20','L_flatQ20_first2.fastq'),('L_native2023','L_native2023_first2.fastq')]:
  if key not in audit['sources']:key=next(k for k in audit['sources'] if 'native' in k.lower())
@@ -85,7 +84,6 @@ excerpt(2,B/'Figure2_RAD_full_global_20261029/runs/RAD_full_global/scoring/recor
 excerpt(2,B/'sctagger_flexiplex_audit_20260812/L_flatQ20_audit_reads_barcodes.txt','Flexiplex_assignment_records_example.tsv',delimiter='\t')
 excerpt(2,B/'paper_revision_20261022/prism/blaze2023_assignment_replay/assignment_records.tsv.gz','BLAZE_assignment_records_example.tsv')
 excerpt(2,R/'source_data/figure_02/paired_50000_barcode_mean_Q.csv.gz','paired_quality_example.tsv')
-# Only public/synthetic entries in root-data examples. Complete output has all37.
 excerpt(4,R/'source_data/figure_04/barcode_detection_metrics.tsv','three_input_metrics_example.tsv',lambda r,n:r['canonical_id'] in ('ScTagger-S_flatQ20','ScTagger-L_flatQ20','RAGEseq-TNBC-LN'))
 source=B/'wl_scan/20260730_rageseq_ERR3268990_tnbc_lymphnode_four_tool/analysis/barcode_level_annotations.tsv'
 seen=set()

@@ -21,8 +21,7 @@ INTERNAL_ROOT = re.compile(
 
 
 def main():
-    # Archived execution records retain their original machine paths. Verify the
-    # sealed source before exempting those exact bytes, including duplicate copies.
+    # Exempt original machine paths only in checksum-verified archived records.
     from verify_pinned_flames_configs import verify
     archive_validation = verify(ROOT)
     with (ROOT / 'source_data/pinned_flames_configs/files.tsv').open() as handle:

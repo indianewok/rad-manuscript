@@ -82,7 +82,7 @@ def main():
             report['tables'].append(dict(name=stem, file=path.name, graph_uid=graph_id, graph_title=graph['title'],
                 graph_specification=graph, input_graph_datasets=graph.get('inputDataSets', []), data_sheet_uid=sheet_id, data_sheet_title=sheet['title'],
                 table=table, datasets=datasets, csv_rows=len(rows), csv_sha256=sha(raw), gzip_sha256=sha(path.read_bytes())))
-            # Preserve the actual plotted XY points, honoring each Y dataset's row bounds.
+            # Apply each Y series' row bounds and exclusions.
             if stem.startswith(('panel_B_', 'panel_C_')):
                 if table['format'] != 'xy' or table['dataFormat'] != 'y_single':
                     raise ValueError('Unexpected XY format: ' + stem)

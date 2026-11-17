@@ -95,7 +95,6 @@ def main():
                  yticks=[0, 0.25, 0.5, 0.75, 1], xlim=(-0.45, 2.45), ylabel=title)
     save(figure, 'barcode_discovery_paired')
 
-    # The displayed values make individual datasets inspectable in GitHub.
     figure, axes = plt.subplots(1, 3, figsize=(12.5, 12), constrained_layout=True)
     for index, (axis, (key, title)) in enumerate(zip(axes, METRICS)):
         values = np.array([[float(by_key[dataset, tool][key]) for tool in TOOLS] for dataset in datasets])

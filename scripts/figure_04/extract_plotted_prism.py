@@ -188,7 +188,7 @@ def main():
         (args.output_dir/'flexiplex_variants_native.csv').write_bytes(variant_data)
         provenance['flexiplex_variants']={'table_uid':VARIANTS_TABLE,'csv_member':member,
              'csv_sha256':sha(variant_data),'selection':'Choose the higher recorded F1; retain its precision and recall.'}
-        # Retain the saved Prism statistical-result tables as native checkpoints.
+        # Export the saved Prism statistical tables.
         result_tables=[]
         for sheet in sheets:
             title=sheet.get('title','')

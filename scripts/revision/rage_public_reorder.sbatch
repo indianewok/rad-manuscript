@@ -9,9 +9,8 @@
 #SBATCH --gres=gpu:0
 #SBATCH --output=validation/rage_public_reorder_job_%j.log
 set -euo pipefail
-# Allocation basis: the real 100k-prefix verify-only benchmark took 3.472 s
-# with one sort/pigz worker; scaling by bases gives about 13 min before large
-# input/shared-I/O overhead. One hour provides approximately 4x headroom.
+# Verifying the first 100,000 reads took 3.472 s with one sort/pigz worker.
+# Scaling by bases gives about 13 min. The one-hour request allows for shared I/O.
 cd "${RAD_REPO_ROOT:-${SLURM_SUBMIT_DIR:?Submit this script from the repository root}}"
 export RAD_REVIEWER_ROOT="${RAD_REVIEWER_ROOT:-${RAD_DATA_ROOT:-external_data}/reviewer_comment_data}"
 export RAD_WORK_ROOT="${RAD_WORK_ROOT:-${TMPDIR:-validation/work}}"

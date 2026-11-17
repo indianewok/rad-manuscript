@@ -144,7 +144,6 @@ def _script_commands(script, tool, overrides=None, flank=None, discovery_only=Fa
         if re.match(r'(?:local )?[A-Za-z_]\w*=', line) and not re.search(r'\s(?:/usr/bin/time|\S+/bin/|"?\$)', line):
             continue
         if not any(re.search(r'\$\{?'+re.escape(alias)+r'\b', line) for alias in aliases):
-            # Commands with literal executable paths rather than variables.
             if not any(re.search(r'(?:/|\b)'+re.escape(alias)+r'(?:[ _-]|$)', line)
                        for alias in aliases if alias.islower()):
                 continue
@@ -190,7 +189,6 @@ def _evidence_command(row, root):
                         if fields.get('PN') in ('minimap2', 'samtools') and fields.get('CL'):
                             commands.append(fields['CL'])
         return '; '.join(commands) or None
-    # The extended-quality replay has an explicitly retained batch command.
     if row.get('figure') == '02' and 'exact executed replay source' in row.get('exact_command_or_recorded_settings', ''):
         path = root/'source_data/figure_02/producing_evidence/discovery_blaze_replay_commands.txt'
         if path.is_file():
@@ -231,8 +229,7 @@ def _evidence_command(row, root):
                 continue
             overrides = {}
             if 'PromethION_iPSC|Flexiplex' == run:
-                # The selected row is the f8 arm; its filter runs after f8
-                # discovery, not the otherwise identical earlier f0 filter.
+                # Select the filter command from the f8 arm.
                 header = text.split('while true;', 1)[0]
                 marker = text.find('flexiplex-f8-discovery')
                 if marker >= 0:
@@ -266,8 +263,6 @@ def _command(row, root):
     if row.get('command'):
         return _text(row['command'])
     value = row.get('argv', row.get('exact_command_or_recorded_settings', ''))
-    # Desktop installation location is represented by the same documented root
-    # as the deposited LR-Split checkpoint metadata.
     value = re.sub(r'/[U]sers/[^/]+/Desktop/rad/', 'external_data/workstation/', value)
     direct = _direct(value)
     if direct:
@@ -319,8 +314,7 @@ def project_parameters(rows, family, repo_root):
             result['threads'] = 'not_recorded'
         if family == '124' and row['tool'] == 'BLAZE' and row['producing_run'].startswith(
                 ('Measles-P7|', 'Measles-P8-VDJ-enriched|', 'P7|', 'P8-enriched|')):
-            # The executed run_sample.sh sets threads=24. Older summary rows
-            # incorrectly said 32; their original values remain in evidence.
+            # The recorded Measles command takes precedence over the summary.
             if re.search(r'--threads\s+"?24\b', result['command']):
                 result['threads'] = '24'
         output.append({key: result[key] for key in FIELDS})

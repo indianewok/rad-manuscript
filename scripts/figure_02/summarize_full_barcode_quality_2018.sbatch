@@ -2,9 +2,6 @@
 # Submit from the repository root. The input is the retained shift+1 FASTQ.
 # RAD_PYTHON=/path/to/python sbatch scripts/figure_02/summarize_full_barcode_quality_2018.sbatch \
 #   /path/to/shuffled_L_lr_synth.badread2018_truthbc.shift_p01.fq.gz OUTPUT_DIRECTORY
-#
-# CPU-only standard placement was verified on 2026-10-24. The lsonglab account
-# inherits its allowed QoS; do not place this job on a GPU-equipped node.
 #SBATCH --job-name=rad-full-q2018
 #SBATCH --account=lsonglab
 #SBATCH --partition=standard

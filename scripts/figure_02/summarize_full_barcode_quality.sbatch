@@ -2,9 +2,6 @@
 # Submit from the repository root with the native FASTQ and output directory:
 # RAD_PYTHON=/path/to/python sbatch scripts/figure_02/summarize_full_barcode_quality.sbatch \
 #   /path/to/native_unadjusted.fq.gz source_data/figure_02/full_read_quality
-#
-# Dartmouth CPU-only placement was verified on 2026-10-24. The lsonglab account
-# inherits its allowed QoS; the CPU-only standard partition prevents GPU-node use.
 #SBATCH --job-name=rad-full-barcode-q
 #SBATCH --account=lsonglab
 #SBATCH --partition=standard

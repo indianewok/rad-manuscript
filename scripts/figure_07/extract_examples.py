@@ -30,8 +30,8 @@ with gzip.open(str(paths['matrix.mtx']),'rt') as f:
         if len(entries)<8:entries.append((gene,cell,count));totals.setdefault(cell,0)
         if cell in totals:totals[cell]+=count
 assert dims==(45224,12423,15772545)
-# Every selected cell appears in the first eight entries; its preceding entries
-# were already counted while the selection was being assembled.
+# Count full library totals for the cells in the first eight matrix entries.
+
 rows=[]
 for ordinal,(g,c,n) in enumerate(entries,1):
     cp10k=10000.*n/totals[c]
