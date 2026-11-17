@@ -1,7 +1,5 @@
 # Figure legends
 
-Each figure guide links its inputs, software settings, counting rules, source tables and plotting commands.
-
 ## Figure 1
 
 Figure 1. RAD is a flexible, efficient, and broadly applicable tool for demultiplexing single-cell long read sequencing data. A. A schematic of RAD workflow. B-C. Total processing time (B) and maximum memory usage (C) for single-nucleus Oxford Nanopore Technologies (ONT) and single-cell Pacific Biosciences (PB, PacBio) LongBench datasets. D. Visualization of valid barcode spots (gray) determined by SpaceRanger (in_tissue metadata of gene expression output) from Visium HD spatial transcriptomic data (left) and log-transformed normalized read counts (log10 ncpm) per 16-µm bin for Seurat (center) and RAD (right) processed data.

@@ -1,6 +1,6 @@
 # Setup and analysis
 
-Choose a figure in the [repository guide](README.md). Its methods list the datasets, software versions, command-line flags and calculations.
+Use the [figure guides](README.md) for the inputs and settings for each analysis.
 
 ## Install the table-analysis environment
 
@@ -21,7 +21,7 @@ mkdir -p results
 python3 scripts/revision/figure_3_example_percent.py   data/examples/figure_03/correction_C5_input.tsv   results/correction_percent.tsv
 ```
 
-Compare the result with [correction_C6_output.tsv](data/examples/figure_03/correction_C6_output.tsv). FM1 counts reassignment between cell-associated reference barcodes; FM2 counts reassignment from catalog-valid barcodes outside the cell reference.
+Compare the result with [correction_C6_output.tsv](data/examples/figure_03/correction_C6_output.tsv). The [Figure 3 guide](docs/figure_03.md#longbench-correction-categories) defines the correction categories.
 
 ## Work with the complete tables
 
@@ -29,19 +29,14 @@ Open `source_data/figure_XX/README.md` for the file map, field definitions and m
 
 ## Process raw reads
 
-1. Download the input and references listed in the [dataset registry](manifests/datasets.tsv) and figure guide.
-2. Install the specified tool builds and dependencies.
-3. Run the recorded discovery, demultiplexing and downstream commands.
-4. Apply the counting script to the output and compare its result with the source table.
+Place raw inputs and references under `external_data/`, and assignment tables, alignments and matrices under `checkpoints/`. Use the paths in the figure commands and the accessions in the [dataset registry](manifests/datasets.tsv).
 
-Keep original FASTQ identifiers, sequences, qualities and read order. The [RAGE-seq input guide](docs/rage_public_input_order.md) reconstructs the benchmark order from the public ENA reads.
-
-Large inputs use `external_data/`; intermediate assignment tables, alignments and matrices use `checkpoints/`. The figure guides give their filenames and input identities. Slurm templates take the account, CPU partition, memory and time appropriate to the cluster. Computational benchmarks also record the hardware and thread count.
+Preserve FASTQ identifiers, sequences, qualities and read order. The [RAGE-seq input guide](docs/rage_public_input_order.md) gives the commands to restore the benchmark order. Set the Slurm account, partition, memory and time for your cluster when using a submission script.
 
 <details>
 <summary>Configure external input locations</summary>
 
-Scripts accept explicit input paths or these environment variables:
+Scripts accept explicit input paths or these environment variables.
 
 | Variable | Default relative to this repository |
 |---|---|
@@ -54,6 +49,6 @@ Scripts accept explicit input paths or these environment variables:
 
 ## Pinned processing code
 
-- [Custom Flexiplex](vendor/flexiplex-audit/README.md): source, patch, build commands and a pre-correction barcode example.
-- [FLAMES configurations](docs/pinned_flames_configs.md): exact LR-Split-seq and LongBench alignment code.
-- [ScTagger quality generation](source_data/figure_02/quality_generation_contract.json): models and effective sampling seeds. The [recorded-seed adapter](scripts/figure_02/generate_with_recorded_seed.py) applies those seeds when model files move.
+- Flexiplex source, patch, build commands and pre-correction barcode output. [Custom Flexiplex](vendor/flexiplex-audit/README.md)
+- LR-Split-seq demultiplexing and LongBench alignment. [FLAMES configurations](docs/pinned_flames_configs.md)
+- Badread models and effective sampling seeds. Use the seed adapter when the model files move. [ScTagger quality generation](source_data/figure_02/quality_generation_contract.json) · [Recorded-seed adapter](scripts/figure_02/generate_with_recorded_seed.py)

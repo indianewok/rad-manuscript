@@ -1,6 +1,6 @@
 # Figure 2 source data
 
-The [Figure 2 guide](../../docs/figure_02.md) lists the software versions and commands, then follows the ScTagger-L reads through quality generation, discovery, assignment and counting. There are 4,993,805 input reads from 5,000 known source barcodes.
+[Methods and commands](../../docs/figure_02.md) · [Worked read examples](../../data/examples/figure_02/) · [Table schemas](schemas.json)
 
 ## Inputs and barcode discovery
 
@@ -24,15 +24,13 @@ The complete quality-sweep calculations are described in the [Nanopore2023](full
 | [plotted_assignment/panel_per_target.tsv.gz](plotted_assignment/panel_per_target.tsv.gz) | The 43,004 observations selected for panels E, G and H, with barcode identity and assignment condition |
 | [plotted_assignment/panel_bindings.json](plotted_assignment/panel_bindings.json) | Graph and dataset identities, native CSV hashes and series totals |
 
-Native-correct, corrected-correct, native-incorrect and corrected-incorrect reads each require exactly one emitted record for the original read. `multiple_outputs_excluded` counts original reads with more than one output. `unassigned` counts input reads without an emitted output. The six states sum to 4,993,805.
-
-Flexiplex panels E/G use all 5,000 supplied truth targets. Its panel H distribution and total bars use the 3,004-target detected list. The `condition` field identifies each series. BLAZE per-barcode distributions use its 5,000 truth targets; total assignment counts also include its fifteen additional selected targets.
+The `condition` column distinguishes supplied-list and discovered-list assignments. Flexiplex panels E and G use the 5,000 supplied targets. Panel H uses its 3,004 discovered targets.
 
 ## Commands and table generation
 
-The [run files](plotted_assignment/producing_evidence/) contain RAD's native command, source commit, binary and input hashes, supplied lists and layouts, plus the fixed-list Flexiplex command. RAD received the same 5,000 truth barcodes as its global and custom lists. `RAD_input_layout.csv` is the command input; `RAD_layout.csv` is the calibrated output. Command paths use `external_data` and `results` roots.
+`RAD_input_layout.csv` is the supplied layout. `RAD_layout.csv` contains the calibrated layout. [RAD and Flexiplex commands and layouts](plotted_assignment/producing_evidence/)
 
-[Summarize the RAD read audit](../../scripts/figure_02/summarize_plotted_rad_audit.py) to produce [RAD_assignment_states.tsv](plotted_assignment/RAD_assignment_states.tsv), [RAD_assignment_per_target.tsv](plotted_assignment/RAD_assignment_per_target.tsv) and [RAD_assignment_summary.json](plotted_assignment/RAD_assignment_summary.json). [checkpoint_validation.json](plotted_assignment/checkpoint_validation.json) compares those counts with the plotted series.
+[RAD counting script](../../scripts/figure_02/summarize_plotted_rad_audit.py) · [State counts](plotted_assignment/RAD_assignment_states.tsv) · [Per-target counts](plotted_assignment/RAD_assignment_per_target.tsv) · [RAD summary](plotted_assignment/RAD_assignment_summary.json) · [Comparison with plotted data](plotted_assignment/checkpoint_validation.json)
 
 Extract the panel tables from a Prism project with:
 
@@ -41,5 +39,3 @@ python3 scripts/figure_02/extract_plotted_prism.py \
   --prism "external_data/prism/Figure 2.prism" \
   --output-dir results/figure_02/plotted_assignment
 ```
-
-The [worked read examples](../../data/examples/figure_02/) show the raw barcode fields and their classifications. [Table schemas](schemas.json) define the metrics and counting units.

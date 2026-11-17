@@ -1,10 +1,6 @@
 # RAGE-seq reference barcodes
 
-The off-list challenge uses the matched short-read reference and the complete
-10x 3′ v2 chemistry catalog to sample three target lists. Each list contains
-4,505 catalog barcodes after exclusion of the reference set. All three tools
-receive the same list within each replicate. The [Figure 3 guide](../../docs/figure_03.md)
-describes the sampling and assignment analysis.
+For the off-list challenge, exclude the matched short-read reference from the complete 10x 3′ v2 catalog and sample three lists of 4,505 barcodes. All three tools receive the same list within each replicate. [Figure 3 guide](../../docs/figure_03.md)
 
 | File | Contents | Rows |
 |---|---|---:|
@@ -22,6 +18,4 @@ The first five barcodes in each file are:
 | `AAACCTGAGTGGGCTA` | `AAACCTGAGAAACGAG` |
 | `AAACCTGCAAACGTGG` | `AAACCTGAGAAACGCC` |
 
-Obtain the raw FASTQ and restore the benchmark read order using the
-[public-input guide](../../docs/rage_public_input_order.md). That procedure
-verifies read identifiers, sequences, qualities and order.
+Download the raw FASTQ and restore the benchmark order. Verify the read identifiers, sequences, qualities and order with the [public-input guide](../../docs/rage_public_input_order.md).

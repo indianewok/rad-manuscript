@@ -34,25 +34,18 @@ python3 scripts/figure_03/reorder_public_fastq.py \
   --sort-threads 3 --sort-memory 6G --pigz-threads 2
 ```
 
-For verification alone, replace `--output /path/to/public/rageseq_selected_order.fq.gz` with `--verify-only`. This checks the complete ordered stream and records the result without writing a recompressed FASTQ.
+For verification alone, replace `--output /path/to/public/rageseq_selected_order.fq.gz` with `--verify-only`.
 
-The reconstruction proceeds as follows:
-
-1. Verify the public-file hash and the saved-order checksum.
-2. Assign each saved read ID its integer position, rejecting duplicate IDs.
-3. Read the public FASTQ once. Match each read to its position and send that position plus a lossless encoding of the four original FASTQ lines to external sort. Reject repeated, extra or missing IDs.
-4. Decode the sorted records and verify consecutive positions, read and base counts, ordered IDs, sequence/quality content and the complete canonical hash.
-5. Publish the compressed output after all checks pass, write the JSON report and remove temporary sort files.
-
-Canonical records are encoded as `uint64be(ID byte length) + ID + uint64be(sequence length) + sequence + quality`, concatenated in the saved order. The ID is the first header token without `@`; CR/LF line endings are removed. The canonical fingerprint measures ID, sequence and quality identity. The separate decompressed-byte fingerprint also checks full headers, plus-line annotations and line endings. The output preserves the original public record bytes.
+The script verifies the input hashes, joins reads to the ordered IDs and sorts
+the original four-line records by saved position. It rejects repeated, extra or
+missing reads and checks the ordered IDs, sequences, qualities and counts before
+writing the compressed FASTQ.
 
 ## Check the reconstruction code
 
 ```bash
 python3 scripts/revision/rage_public_reorder_fixtures.py
 ```
-
-The complete dataset is checked against the fingerprints above before demultiplexing.
 
 <details>
 <summary>Input fingerprints and record encoding</summary>
@@ -64,6 +57,8 @@ The complete dataset is checked against the fingerprints above before demultiple
 | `input_original_ids.txt.gz` | 432,145,969 bytes; SHA-256 `e4831a95828b65f21253c9f1058f1af9ef2fa7abe286321d88aaffba12ab2952` |
 | Ordered canonical records | SHA-256 `a5f866d6180b46e0acbd3aa2526364060c152380714b00ec0ed74b8c1e8c24af` |
 | Exact decompressed FASTQ | SHA-256 `2f4f7e469795b23c15209547909ec791e937058497328ba69d0855274eb380f7` |
+
+The canonical stream encodes each read as `uint64be(ID byte length) + ID + uint64be(sequence length) + sequence + quality` in the saved order. The ID is the first header token without `@`. CR/LF line endings are removed for this fingerprint. The decompressed-byte fingerprint also covers full headers, plus lines and line endings.
 
 The [identity script](../scripts/revision/figure_3_fastq_identity.py) defines the canonical and decompressed FASTQ fingerprints.
 

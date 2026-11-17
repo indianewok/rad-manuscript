@@ -35,7 +35,7 @@ The output is `PREFIX_reads_barcodes.txt`, with these tab-separated columns:
 | `BarcodeEditDist` | Edit distance used for the selected barcode match |
 | `UMI` | Extracted UMI |
 
-`RawCellBarcode` records the observed sequence. Leave the optional source-set filter `FLEXIPLEX_AUDIT_SOURCE_FILE` unset, as in the command below. Apply the figure-specific physical-read or read–target-pair counting rule to the diagnostic records.
+Apply the figure-specific physical-read or read–target-pair counting rule to the diagnostic records.
 
 ## Build and check
 
@@ -46,13 +46,11 @@ mkdir -p results
 python3 vendor/flexiplex-audit/build_and_check.py --output results/flexiplex-audit-build
 ```
 
-The script checks pinned source hashes, reapplies the patch, checks that the
-result equals the pinned modified source, and compiles both upstream and
-diagnostic executables. A four-read designed fixture covers an exact barcode,
-a corrected barcode, a reverse-strand read and a read without the adapter.
-It checks that the rebuilt and pinned diagnostic binaries agree, that all common
-sidecar columns and emitted FASTQs match the upstream binary, and that the new
-column records the actual extracted sequence. The build report records the fixture results and executable hashes.
+The script verifies source hashes, applies the patch and builds both executables.
+It tests exact, corrected and reverse-strand barcodes, plus a read without the adapter.
+The test checks pre-correction barcode output and verifies that FASTQs and shared
+diagnostic columns match the upstream build. The report records fixture results
+and executable hashes.
 
 For a 10x 3′ v3 supplied-list assignment run:
 
@@ -64,9 +62,3 @@ env -u FLEXIPLEX_AUDIT_SOURCE_FILE \
 ```
 
 Use the **figure-specific command table** for chemistry, discovery flank threshold, target list, threads and input. The command above performs supplied-list demultiplexing with flank distance eight.
-
-## Pinning and hosting this build
-
-Pin this directory to the manuscript repository's full Git commit. Record the upstream commit, patch SHA-256 and binary SHA-256 shown above. Use the supplied binary for the recorded executable identity on compatible Linux x86-64 systems; the build report records a rebuilt executable's compiler, hash and fixture results.
-
-To host a separate release, tag the modified source, for example `flexiplex-1.02.6-rad-audit.1`, and attach the source archive, Linux binary, `SHA256SUMS` and build report to a GitHub Release. Use a distinct tag for this modified build. A fork can retain the upstream parent, apply the exact patch and pin the resulting full commit in each figure's command record.

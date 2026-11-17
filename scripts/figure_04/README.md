@@ -1,18 +1,14 @@
 # RAD barcode discovery for Figure 4
 
-All Figure 4 RAD results use source commit
-`4acbe004ba11b150d6832395452632f367a6e6c1` and an explicit maximum adapter
-error ratio of 0.3. The [per-input tool table](../../source_data/figure_04/tool_parameters.tsv)
-shows each tool's version and command flags for the 37 inputs. The [RAD execution records](../../source_data/figure_04/producing_evidence/current_RAD/) identify the executable and inputs. BLAZE and Flexiplex settings vary by input; read their row
-before repeating a comparison.
+Figure 4 uses RAD commit `4acbe004ba11b150d6832395452632f367a6e6c1` with
+`scan-wl --max-error 0.3`. BLAZE and Flexiplex settings vary by input.
+[Per-input tool settings](../../source_data/figure_04/tool_parameters.tsv) · [RAD commands](../../source_data/figure_04/producing_evidence/current_RAD/)
 
 ## Build RAD
 
-Use Linux with GNU time at `/usr/bin/time`, which records the native runtime
-and memory use. Build the exact source commit with CMake 3.18 or newer, a C++17
-compiler, OpenMP, Zlib, Boost filesystem/iostreams, and `pigz` available. The small build helper
-uses a fresh build directory, rejects tracked source changes and records the
-compiler configuration, commands, logs and actual executable hash:
+Use Linux with GNU time at `/usr/bin/time` to record runtime and memory use.
+The build requires CMake 3.18 or newer, a C++17 compiler, OpenMP, Zlib, Boost
+filesystem and iostreams, and `pigz`. Use a fresh build directory.
 
 ```bash
 git clone https://github.com/indianewok/rad.git external_data/software/rad
@@ -22,27 +18,25 @@ python3 scripts/figure_04/build_rad.py \
   --build-dir external_data/software/rad_build_4acbe00 --threads 8
 ```
 
-From the manuscript repository root, set these variables before copying a
-recorded native command. `PATH` selects the pinned build; `RAD_RESOURCES`
-lets catalogue aliases such as `10x_3v3` find its matching source resources:
+From the repository root, set `PATH` to select this RAD build and
+`RAD_RESOURCES` to resolve catalog aliases such as `10x_3v3`.
 
 ```bash
 export RAD_RESOURCES="$PWD/external_data/software/rad/resources"
 export PATH="$PWD/external_data/software/rad_build_4acbe00:$PATH"
 ```
 
-An executable hash can differ across compilers. The runner verifies the exact
-source commit and the build receipt, and records your actual executable hash.
-It can also enforce an optional `--rad-sha256` pin. The source-commit check selects the 4acbe00 implementation.
+The runner checks the source commit and build record. Use `--rad-sha256` to
+require a particular executable hash.
 
 ## Prepare one input
 
-Choose one JSON record from `source_data/figure_04/run_records/` and obtain its complete FASTQ, matched reference and pinned chemistry catalog. The record specifies its source accession and reference definition.
-
-Read the record's `input_format` before preparing the FASTQ. `fastq.gz` pins the
-compressed bytes; `fastq` pins the plain FASTQ bytes. When the record requires
-plain FASTQ and the official source is a gzip file, decompress without changing
-read order, headers, bases or quality strings:
+Use the [input record](../../source_data/figure_04/run_records/) to locate
+the complete FASTQ, matched reference and chemistry catalog. Obtain access to
+controlled spatial inputs through their data repository. Match the recorded
+`input_format`. If the source is compressed and the record specifies plain
+FASTQ, decompress it directly to retain the read order, headers, bases, and
+quality strings.
 
 ```bash
 gzip -dc official_input.fastq.gz > external_data/figure_04/inputs/DATASET.fastq
@@ -52,10 +46,9 @@ Pass that plain FASTQ to `--input`. For a tar archive, extract the exact member
 listed in `input_acquisition.member`. For Le Brigand MOB, concatenate the gzip
 files in the order listed in `input_acquisition.components`.
 
-For a matched official CellRanger barcode file, remove only a terminal `-1`
-suffix and retain one 16-base barcode per line; a different gzip timestamp or
-compression level is allowed when the canonical matched-set hash agrees.
-The run record provides the reference definition and dataset accession.
+For a matched Cell Ranger barcode file, remove the terminal `-1` suffix and
+retain one 16-base barcode per line. The input check accepts the recorded file
+hash or the same sorted barcode set, so gzip metadata and row order can differ.
 
 ### SRA inputs
 
@@ -99,7 +92,8 @@ in read order, with FASTQ headers omitted.
 
 ## Run discovery and scoring
 
-Run from the manuscript repository root with a new output directory:
+Run from the repository root. Use the thread count in the RAD execution
+record and a new output directory.
 
 ```bash
 python3 scripts/figure_04/run_scan.py \
@@ -113,18 +107,13 @@ python3 scripts/figure_04/run_scan.py \
   --output-dir results/figure_04/DATASET
 ```
 
-Use the thread count recorded for that input. The runner verifies the catalogue,
-reference and input hashes. It writes the executed command, selected list and barcode-set scores. Obtain reference and complete barcode-list inputs from the registered data
-source and place them at the locations in each run record. Controlled spatial
-data use the registered access process. Use the matched reference definition and source accessions in the record. A reference is accepted when its file SHA256 matches, or when its canonical barcode-set SHA256 matches; the runner records the actual file hash used. Execution records also provide `selected_barcode_sha256`, the hash of the sorted selected barcode set; `score/metrics.json` records the same output-set hash for your run. Equivalent gzip compression or row ordering does not change the canonical reference identity.
+The runner checks input, reference, and catalog identities before discovery.
+`command.json` records the executed command. `score/metrics.json` includes the
+hash of the sorted selected barcode set.
 
 ## Read the outputs
 
-`score/metrics.csv` contains barcode counts, TP, FP, FN, precision, recall and F1.
-`score/barcode_membership.csv` lets you inspect individual calls and reference
-membership. TP is the call/reference intersection, FP is calls outside the
-reference, and FN is reference members not called. These metrics measure agreement with the matched reference barcode set.
-
-The runner uses the complete input and preserves its sequences and qualities.
-It checks the input identity or records the complete input digest before scanning. Empty sequence records are reported separately from the
-native processed nonempty-sequence count. Each invocation processes one dataset.
+`score/metrics.csv` gives barcode counts, TP, FP, FN, precision, recall, and F1.
+`score/barcode_membership.csv` gives each barcode’s call and reference status.
+The output distinguishes empty sequence records from the nonempty sequences
+processed by RAD. [Scoring definitions](../../docs/figure_04.md#barcode-scoring-and-panel-tables)

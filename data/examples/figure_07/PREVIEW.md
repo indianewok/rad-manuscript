@@ -1,10 +1,10 @@
 # Figure 7 source-data examples
 
-Follow **read → cell barcode and UMI → gene molecule count → normalized count → differential-expression result** in these LongBench single-nucleus examples. The [Figure 7 guide](../../../docs/figure_07.md) gives the software, flags, H146/H526 cohorts and tests; [source records](extraction.json) identify the example rows.
+These LongBench single-nucleus examples connect read assignments to molecule counts and differential expression between H146 and H526. [Figure 7 guide](../../../docs/figure_07.md) · [Source records](extraction.json)
 
 ## Emitted RAD assignments
 
-These are the first ten RAD assignment rows. The complete table contains 57,885,606 assignments across 12,423 selected nuclei. Each row links an original read to a cell barcode and UMI; `corrected_flag=1` marks barcode correction. Orientation and `-CT` suffixes are normalized to the original read ID. The [extraction record](assignment_extraction.json) identifies the complete input.
+The first ten rows come from 57,885,606 RAD assignments across 12,423 selected nuclei. Each row links an original read to a cell barcode and UMI. `corrected_flag=1` marks barcode correction. Removing orientation and `-CT` suffixes gives the original read ID. [Complete input record](assignment_extraction.json)
 
 | source_data_row | original_read_id | cell_barcode | UMI | raw_barcode | corrected_flag |
 |---|---|---|---|---|---|

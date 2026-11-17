@@ -1,6 +1,6 @@
 # Figure 7 — H146-versus-H526 differential expression
 
-Figure 7 compares long-read differential-expression signals with paired Illumina data in the LongBench single-nucleus ONT library. Cell-line labels come from the Vireo analysis in [Figure 6](figure_06.md).
+Figure 7 compares differential expression between H146 and H526 in the LongBench single-nucleus ONT library and its paired Illumina data. Cell-line labels come from Vireo. [Genotype assignment](figure_06.md).
 
 [Source tables](../source_data/figure_07/) · [Read-to-molecule examples](../data/examples/figure_07/PREVIEW.md) · [Figure legend](current_figure_legends.md#figure-7)
 
@@ -24,9 +24,9 @@ Figure 7 compares long-read differential-expression signals with paired Illumina
 
 ## 1. Join barcode assignments to genes
 
-The [assignment extractor](../source_data/figure_07/provenance/extract_assignments.py) links each tool's cell-barcode and UMI assignments to original read IDs. A common raw-read alignment supplies the gene assignment for all three tools. The aligner searches both transcript-strand orientations. The [gene-assignment script](../source_data/figure_07/provenance/assign_genes.py) uses primary alignments with MAPQ at least one, sums unstranded overlap with annotated exons, and chooses the gene with the largest overlap. Reads without exon overlap or with tied best genes are excluded.
+Use the same raw-read alignment to assign genes for all three tools. Allow alignments on either transcript strand. For each primary alignment with MAPQ ≥1, sum unstranded exon overlap by gene and select the gene with the largest overlap. Exclude reads with no exon overlap or a tie. Join the resulting gene assignments to each tool’s cell barcodes and UMIs by original read ID. [Gene assignment script](../source_data/figure_07/provenance/assign_genes.py), [barcode and UMI extraction](../source_data/figure_07/provenance/extract_assignments.py).
 
-Each emitted RAD concatemer segment inherits its original read's gene assignment. The [matrix builder](../source_data/figure_07/provenance/build_matrices.py) counts each exact cell–gene–UMI combination once; records without a UMI count individually. The [assignment examples](../data/examples/figure_07/RAD_emitted_assignment_rows.tsv) show original read ID, cell barcode, 12-base UMI, raw barcode and correction flag. The [input manifest](../source_data/figure_07/RAD_emitted_segment_source_manifest.tsv) and [matrix production record](../source_data/figure_07/matrix_production_record.md) identify the complete inputs.
+Each RAD concatemer segment inherits the original read’s gene assignment. Count each exact cell–gene–UMI combination once and count each record without a UMI separately. [Matrix builder](../source_data/figure_07/provenance/build_matrices.py), [assignment examples](../data/examples/figure_07/RAD_emitted_assignment_rows.tsv), [input identities](../source_data/figure_07/RAD_emitted_segment_source_manifest.tsv), [matrix construction](../source_data/figure_07/matrix_production_record.md).
 
 ## 2. Build molecule matrices and select H146/H526 nuclei
 
@@ -39,7 +39,7 @@ Matrix Market files store one-based gene and cell indices with integer molecule 
 | Flexiplex | 45,939 × 12,101 | 21,582,352 | 35,106,495 |
 
 
-The matrices and labels are under `checkpoints/figure_07/`. The [cohort table](../source_data/figure_07/native_positive_depth_cohorts.tsv) lists cell IDs, Vireo labels and complete-library molecule totals. Include positive-depth H146 or H526 singlets:
+Restore the matrices and labels under `checkpoints/figure_07/`. Select H146 and H526 singlets with at least one counted molecule in each workflow. [Cell barcodes, Vireo labels and library totals](../source_data/figure_07/native_positive_depth_cohorts.tsv).
 
 | Workflow | H146 nuclei | H526 nuclei |
 |---|---:|---:|
@@ -47,9 +47,6 @@ The matrices and labels are under `checkpoints/figure_07/`. The [cohort table](.
 | BLAZE | 234 | 185 |
 | Flexiplex | 290 | 219 |
 | Illumina | 263 | 195 |
-
-
-Each workflow contributes its recovered nuclei and their sequencing depths. Gene eligibility is evaluated within these cohorts.
 
 ## 3. Normalize counts and test genes
 
@@ -61,7 +58,7 @@ Normalize each nucleus to 10,000 molecules using its complete-library total befo
 log2 fold change = log2[(mean H146 CP10K + 0.1) / (mean H526 CP10K + 0.1)]
 ```
 
-Positive effects indicate higher expression in H146; negative effects indicate higher expression in H526. [Benjamini–Hochberg adjustment](https://doi.org/10.1111/j.2517-6161.1995.tb02031.x) is applied separately to each workflow and the Illumina reference over the same 8,135-gene family. The [gene-level table](../source_data/figure_07/direct_H146_vs_H526_plot_data.tsv.gz) supplies raw P values, adjusted P values and signed effects.
+Positive effects indicate higher expression in H146 and negative effects indicate higher expression in H526. Apply Benjamini–Hochberg adjustment separately to each long-read workflow and Illumina over the same 8,135 genes. [Benjamini–Hochberg method](https://doi.org/10.1111/j.2517-6161.1995.tb02031.x), [gene-level effects and P values](../source_data/figure_07/direct_H146_vs_H526_plot_data.tsv.gz).
 
 The [matrix examples](../data/examples/figure_07/PREVIEW.md) follow PTPRJ in barcode `CATACCCAGCGTGAGT`: two molecules in a 2,400-molecule library give CP10K = 8.333333333333334 and `log2(1 + CP10K)` = 3.222392421336448.
 
@@ -92,7 +89,7 @@ recall = TP / (TP + FN)
 F1 = 2TP / (2TP + FP + FN)
 ```
 
-A zero F1 denominator gives zero. The [threshold grid](../source_data/figure_07/threshold_grid.tsv) contains 594 rows: three tools × two directions × 99 threshold combinations. Display labels are rounded half-up to one significant digit.
+When a denominator is zero, the corresponding score is zero. The grid contains 594 rows across three tools, two directions and 99 threshold combinations. The heatmap rounds F1 half-up to one significant digit. [Threshold grid](../source_data/figure_07/threshold_grid.tsv).
 
 Reproduce the common-family adjustment and directional scores:
 
@@ -105,7 +102,7 @@ python3 scripts/figure_07/score_directional_calls.py \
   --output results/figure07_thresholds.tsv
 ```
 
-The adjustment produces 24,405 gene–tool rows. The [direct-test checker](../scripts/figure_07/check_direct_test_provenance.py) accepts the complete test table through `--native-tests` and compares its raw P values and effects with the common-gene table.
+The adjustment produces 24,405 gene–tool rows. Use `--native-tests` to compare their raw P values and effects with the complete test table. [Comparison script](../scripts/figure_07/check_direct_test_provenance.py).
 
 ## Reproduce the confidence fits and plotting tables
 
@@ -114,7 +111,9 @@ python3 scripts/figure_07/replay_prism_scatter_fits.py \
   --source-dir source_data/figure_07/plotted
 ```
 
-The [fit validation](../source_data/figure_07/plotted/panel_C_regression_validation.json) compares point counts, slopes, intercepts and R² with the Prism results. To extract panel tables and check the 594 heatmap values from the Prism project:
+The comparison records the point count, slope, intercept and R² for each Prism fit. [Fit comparison](../source_data/figure_07/plotted/panel_C_regression_validation.json).
+
+Extract the panel tables from the Prism project and compare the 594 heatmap values:
 
 ```bash
 python3 scripts/figure_07/extract_prism_panel_tables.py \

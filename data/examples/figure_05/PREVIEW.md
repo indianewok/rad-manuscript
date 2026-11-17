@@ -1,6 +1,6 @@
 # Figure 5 source-data examples
 
-The tables below show selected RAGE-seq receptor assignments and the paired LR-Split-seq short-read reference. [Source identities](extraction.json) identify the files and selected rows. The [Figure 5 guide](../../../docs/figure_05.md) gives the complete analysis.
+These examples show RAGE-seq receptor assignments and the paired LR-Split-seq short-read reference. [Figure 5 guide](../../../docs/figure_05.md) · [Source files and rows](extraction.json)
 
 ## Read-assignment input (first six rows)
 

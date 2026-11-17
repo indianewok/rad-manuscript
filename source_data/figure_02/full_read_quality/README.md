@@ -1,10 +1,8 @@
 # Nanopore2023 barcode quality
 
-The [complete-dataset table](full_quality_with_blaze_f1.tsv) combines mean
-barcode quality with BLAZE discovery F1 for each selected shift. The scan covers
-all 4,993,805 reads in the Nanopore2023 FASTQ: 879,860 contain a correct
-barcode window, 4,096,300 contain an incorrect window, and 17,645 have no located
-barcode. Unlocated reads are excluded from both quality means.
+Of 4,993,805 Nanopore2023 reads, 879,860 contain a correct barcode window,
+4,096,300 contain an incorrect window and 17,645 have no located barcode.
+Quality means use reads with a located barcode. [Complete dataset](full_quality_with_blaze_f1.tsv)
 
 ## Software and input settings
 
@@ -15,8 +13,7 @@ window contains 16 bases. The known source barcode in the read header resolves
 its location.
 
 BLAZE 2.6.0a0 discovery used `--expect-cells 5000`, `--10x-kit-version 3v3` and
-`--minQ 15`, with empty-droplet output and demultiplexing disabled. F1 is calculated from the complete-dataset discovery results. The
-[Figure 2 guide](../../../docs/figure_02.md) gives the build hashes and commands.
+`--minQ 15`, with empty-droplet output and demultiplexing disabled. [Figure 2 discovery commands](../../../docs/figure_02.md#discovery-software-and-parameters)
 
 ## Quality means and BLAZE F1
 
@@ -73,18 +70,11 @@ python scripts/figure_02/summarize_full_barcode_quality.py \
   --sample-csv source_data/figure_02/paired_50000_barcode_mean_Q.csv.gz
 ```
 
-The [scanner](../../../scripts/figure_02/summarize_full_barcode_quality.py)
-streams the FASTQ once. The [locator](../../../scripts/figure_02/barcode_locator.py)
-defines the adapter search and barcode-window extraction. The [run record](run.json)
-contains input identities, versions, counts and sample checks. The
-[Dartmouth submission script](../../../scripts/figure_02/summarize_full_barcode_quality.sbatch)
-requests eight CPUs.
+The scan streams the FASTQ once. [Run record](run.json) · [Eight-CPU submission script](../../../scripts/figure_02/summarize_full_barcode_quality.sbatch)
 
-The [validator](../../../scripts/figure_02/validate_full_barcode_quality.py)
-recalculates group means from integer histograms, compares complete quality
-histograms and read counts with the
-[generation summary](source_generation_summary.tsv), and joins the
-BLAZE discovery results:
+Recalculate group means from integer histograms, check the histograms and read
+counts against the generation summary, then join the BLAZE discovery results.
+[Generation summary](source_generation_summary.tsv)
 
 ```bash
 python scripts/figure_02/validate_full_barcode_quality.py \

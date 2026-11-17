@@ -1,10 +1,10 @@
 # Figure 6 source-data examples
 
-Follow **variant and barcode → allele count → Vireo call → Illumina comparison → UMAP coordinate** in these LongBench single-nucleus examples. The [Figure 6 guide](../../../docs/figure_06.md) gives the software, flags and complete workflow; [source records](extraction.json) identify the example rows.
+These LongBench single-nucleus examples connect allele counts to Vireo calls, Illumina labels and UMAP coordinates. [Figure 6 guide](../../../docs/figure_06.md) · [Source records](extraction.json)
 
 ## Allele counts, genotype calls and UMAP coordinates
 
-These are the first eight entries in RAD's alternate-allele molecule matrix (`AD`). One-based row and column indices identify the variant and barcode. Join that barcode to the RAD Vireo call (`query_label`), Illumina call (`reference_label`) and fixed UMAP coordinates. The [extraction record](allele_extraction.json) identifies the matrix and label files.
+In the first eight entries of RAD's alternate-allele molecule matrix (`AD`), one-based row and column indices identify the variant and barcode. Use the barcode to join the RAD Vireo call (`query_label`), Illumina call (`reference_label`) and fixed UMAP coordinates. [Matrix and label files](allele_extraction.json)
 
 | source_AD_entry | CHROM | POS | REF | ALT | cell_barcode | alternate_allele_molecules | query_label | reference_label | UMAP_1 | UMAP_2 |
 |---|---|---|---|---|---|---|---|---|---|---|

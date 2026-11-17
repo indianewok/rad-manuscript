@@ -1,6 +1,6 @@
 # LR-Split-seq assignment examples
 
-These examples follow the first two published physical cells through RAD and FLAMESv2 component assignments with poly-T. Each tool contributes eight records. [Source identities](extraction.json) identify the input records.
+The examples use eight assignments per tool for the first two published physical cells. FLAMESv2 uses component matching with poly-T. [Source records](extraction.json)
 
 ## Native component records
 
@@ -27,6 +27,6 @@ The normalization script writes `BC3_BC2_BC1` and reverse-complements `UB`. RT p
 
 This nine-base UMI passes the nonempty-UMI inclusion rule and contributes to both the read and exact-UMI counts.
 
-The eight RAD example rows give five read–cell pairs for the first cell and three for the second; see [example counts](rad_bounded_counts.tsv).
+The eight RAD rows give five read–cell pairs for the first cell and three for the second. [Example counts](rad_bounded_counts.tsv)
 
 Follow [Figure 5](../../../../docs/figure_05.md) for exact normalization and aggregation commands.

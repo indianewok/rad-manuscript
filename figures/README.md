@@ -1,6 +1,6 @@
 # Figures
 
-The manuscript images below were exported from GraphPad Prism. Each figure links to its methods and source data. The [legends](../docs/current_figure_legends.md) describe the panels, and the [Prism export record](../source_data/prism_exports.json) identifies the source projects and layouts.
+[Figure legends](../docs/current_figure_legends.md) · [Image sources](../source_data/prism_exports.json)
 
 ## Figure 1 RAD workflow and computational performance
 
@@ -19,8 +19,6 @@ The manuscript images below were exported from GraphPad Prism. Each figure links
 [Analysis guide](../docs/figure_03.md) · [Legends](../docs/current_figure_legends.md#figure-3)
 
 ![Figure 3](figure_03/prism/figure_03.png)
-
-[Off-list assignment and barcode-correction source tables](../source_data/figure_03/README.md)
 
 ## Figure 4 Barcode discovery across sequencing modalities
 

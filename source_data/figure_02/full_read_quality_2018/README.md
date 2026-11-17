@@ -1,9 +1,7 @@
 # Nanopore2018 barcode quality
 
-The [complete-dataset table](full_quality_with_blaze_f1.tsv) combines correct
-and incorrect barcode-window counts, mean quality scores and BLAZE discovery
-F1 for each selected condition. The scan covers all 4,993,805 reads. The
-17,645 reads without a located barcode are excluded from both quality groups.
+The scan covers all 4,993,805 Nanopore2018 reads. Quality means use reads
+with a located barcode and exclude 17,645 reads. [Complete dataset](full_quality_with_blaze_f1.tsv)
 
 ## Software and input settings
 
@@ -18,9 +16,7 @@ distance of 7 and boundary slop of 8. Each window contains 16 bases. The known
 source barcode in the read header resolves its location.
 
 BLAZE 2.6.0a0 discovery used `--expect-cells 5000`, `--10x-kit-version 3v3` and
-`--minQ 15`, with empty-droplet output and demultiplexing disabled. F1 values
-come from the complete-dataset discovery results. The
-[Figure 2 guide](../../../docs/figure_02.md) gives the build hashes and commands.
+`--minQ 15`, with empty-droplet output and demultiplexing disabled. [Figure 2 discovery commands](../../../docs/figure_02.md#discovery-software-and-parameters)
 
 ## Quality means and BLAZE F1
 
@@ -77,20 +73,12 @@ python scripts/figure_02/summarize_full_barcode_quality_2018.py \
   --sample-csv source_data/figure_02/paired_50000_barcode_mean_Q.csv.gz
 ```
 
-The [scanner](../../../scripts/figure_02/summarize_full_barcode_quality_2018.py)
-reads the FASTQ once, checks every input score and records separate hashes for
-the stored and recovered native qualities. The [run record](run.json) contains
-counts, versions, source identities and sample checks. The
-[Dartmouth submission script](../../../scripts/figure_02/summarize_full_barcode_quality_2018.sbatch)
-requests eight CPUs.
+The scan reads the FASTQ once, checks every score and records separate hashes for
+the stored and recovered native qualities. [Run record](run.json) · [Eight-CPU submission script](../../../scripts/figure_02/summarize_full_barcode_quality_2018.sbatch)
 
-The [validator](../../../scripts/figure_02/validate_full_barcode_quality_2018.py)
-checks the [generation counts](source_generation_summary.tsv),
-[complete-stream identities](source_variant_invariants.tsv),
-[native minimum-score histogram](source_native_barcode_min_q.tsv), shifted
-minimum-Q15 pass counts, pooled means and all 600,000 quality values in the
-paired sample. Pooled means are compared at their stored six-decimal precision. Base-score counts are checked for conservation
-and agreement with these independent summaries.
+Verify the stream fingerprints, base-score totals, shifted Q15 pass counts and
+all 600,000 quality values in the paired sample. Pooled means are checked to six
+decimal places. [Generation counts](source_generation_summary.tsv) · [Stream fingerprints](source_variant_invariants.tsv) · [Native minimum-score histogram](source_native_barcode_min_q.tsv)
 
 ```bash
 python scripts/figure_02/validate_full_barcode_quality_2018.py \

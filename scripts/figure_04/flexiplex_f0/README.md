@@ -1,8 +1,6 @@
 # Flexiplex f0 discovery for P7, P8 and Isosceles
 
-**Flexiplex 1.02.6; flanking edit distance `-f 0`; barcode edit distance `-e 2`; 16 threads.** Filter 1.02 uses the complete 6,794,880-barcode 10x 3v3 catalogue.
-
-Choose the script for the complete input:
+These runs use Flexiplex 1.02.6 with flank edit distance `-f 0`, barcode edit distance `-e 2`, and 16 threads. Filter 1.02 uses the complete 6,794,880-barcode 10x 3v3 catalog.
 
 | Input | Command | Execution record and count-table preview |
 |---|---|---|
@@ -11,7 +9,7 @@ Choose the script for the complete input:
 | P8 | [run_Measles-P8-WTA.sh](run_Measles-P8-WTA.sh) | [Record](../../../source_data/figure_04/producing_evidence/current_Flexiplex_f0/Measles-P8-WTA.json), [counts](../../../source_data/figure_04/producing_evidence/current_Flexiplex_f0/Measles-P8-WTA.counts_preview.tsv) |
 | Isosceles ovarian | [run_Isosceles-ovarian-GSE248115.sh](run_Isosceles-ovarian-GSE248115.sh) | [Record](../../../source_data/figure_04/producing_evidence/current_Flexiplex_f0/Isosceles-ovarian-GSE248115.json), [counts](../../../source_data/figure_04/producing_evidence/current_Flexiplex_f0/Isosceles-ovarian-GSE248115.counts_preview.tsv) |
 
-Run from the repository root. Obtain the input described in the linked record. Download the official [Flexiplex v1.02.6 release](https://github.com/DavidsonGroup/flexiplex/releases/tag/v1.02.6), verify the archive and extract its executable and filter:
+Run from the repository root with the complete input in the run record. Install the executable and filter from the [Flexiplex v1.02.6 release](https://github.com/DavidsonGroup/flexiplex/releases/tag/v1.02.6).
 
 ```bash
 mkdir -p external_data/software
@@ -23,11 +21,7 @@ ln -sfn flexiplex-linux external_data/software/flexiplex/bin/flexiplex
 export PATH="$PWD/external_data/software/flexiplex/bin:$PATH"
 ```
 
-Use Python 3.9.16 and install the [pinned dependencies](requirements.txt) with `python3 -m pip install -r scripts/figure_04/flexiplex_f0/requirements.txt`. The per-input scripts stream the complete input with its native sequences and quality strings into discovery, then filter the barcode-count table. SRA inputs use the same [pinned converter](../README.md#sra-inputs) as the RAD input preparation.
-
-P8 streams its compressed FASTQ with [rapidgzip 0.16.0](https://github.com/mxmlnkn/rapidgzip), included in the pinned dependencies. Its execution record identifies the exact decoder wheel and links to the script.
-
-The common analysis flags are:
+Install the [Python 3.9.16 dependencies](requirements.txt) with `python3 -m pip install -r scripts/figure_04/flexiplex_f0/requirements.txt`. The scripts stream the original reads and qualities, then filter the barcode-count table. P8 uses [rapidgzip 0.16.0](https://github.com/mxmlnkn/rapidgzip) to decompress its FASTQ. [SRA converter settings](../README.md#sra-inputs)
 
 ```bash
 flexiplex -d 10x3v3 -f 0 -e 2 -p 16 -n OUTPUT_PREFIX
@@ -37,9 +31,7 @@ python3 external_data/software/flexiplex/scripts/flexiplex_filter/main.py \
   --outfile selected_native.tsv OUTPUT_PREFIX_barcodes_counts.txt
 ```
 
-The native count table contains a barcode and its extracted-read count per row. `selected_native.tsv` contains selected barcodes and their counts. The five-row previews add selected-list and matched-reference membership. Complete selected lists and count tables remain in the run output directories.
-
-Use the matched short-read cell list to score the selected identities:
+The count table gives extracted-read counts by barcode. `selected_native.tsv` gives selected barcodes and their counts. The five-row previews show selected-list and reference membership. Score the selected barcodes against the matched short-read list.
 
 ```bash
 python3 scripts/figure_04/flexiplex_f0/score_whitelist.py \
@@ -47,9 +39,7 @@ python3 scripts/figure_04/flexiplex_f0/score_whitelist.py \
   --reference MATCHED_REFERENCE.txt.gz --output metrics.tsv
 ```
 
-TP is the selected/reference intersection; FP is a selected barcode outside that reference; FN is a reference barcode absent from the selected list. Precision, recall and F1 use that matched short-read reference.
-
-The execution records pin these SHA-256 values:
+Use these checksums to identify the release, filter, and chemistry catalog.
 
 | Artifact | SHA-256 |
 |---|---|
